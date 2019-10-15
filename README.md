@@ -1,2 +1,2 @@
 # ia-ccd-definitions
-Repo to hold json ccd definition files
+Repo to hold json ccd definition files for IA Team
