@@ -21,6 +21,11 @@ Clone project to your local
 git clone git@github.com:hmcts/ia-ccd-definitions.git
 ```
 
+change folder
+```
+cd ia-ccd-definitions
+```
+
 Install needed yarn libs
 ```
 yarn install
@@ -33,7 +38,7 @@ yarn setup
 
 ### Usages
 
-#####Excel to JSON
+##### Excel to JSON
 
 put your Excel file as `definitions/appeal/xlsx/ccd-appeal-config-base.xlsx`
 
@@ -44,7 +49,7 @@ yarn generate-json
 
 your generated JSON files are put to `definitions/appeal/json` folder
 
-#####JSON to Excel
+##### JSON to Excel
 
 make your desired changes in `definitions/appeal/json/*.json` files
 
