@@ -11,6 +11,11 @@ Helpful link to set up specific Node version:
 https://davidwalsh.name/upgrade-nodejs
 Use `latest` instead of `stable`
 
+yarn command to upgrade version
+```
+yarn upgrade --latest
+```
+
 Remove Node version from your local in case you have got conflicts
 
 ### Settings
