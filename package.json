@@ -1,0 +1,30 @@
+{
+  "name": "ia-ccd-definitions",
+  "version": "0.1",
+  "private": true,
+  "config": {
+    "local": {
+      "iaCaseUrl": "http://ia-case-api:8090"
+    },
+    "demo": {
+      "iaCaseUrl": "http://ia-case-api:8090"
+    },
+    "aat": {
+      "iaCaseUrl": "http://ia-case-api:8090"
+    },
+    "prod": {
+      "iaCaseUrl": "http://ia-case-api:8090"
+    }
+  },
+  "scripts": {
+    "reset-ccd-submodule": "git submodule update --init --recursive && git submodule foreach --recursive git pull origin master && yarn --cwd ccd-definition-processor install",
+    "setup": "git submodule update --init --recursive && yarn --cwd ccd-definition-processor install",
+    "generate-json": "yarn --cwd ccd-definition-processor xlsx2json -D ../definitions/appeal/json -i ../definitions/appeal/xlsx/ccd-appeal-config-base.xlsx && pretty-quick --pattern 'appeal/**/json/**.json'",
+    "generate-excel": "yarn --cwd ccd-definition-processor json2xlsx -D ../definitions/appeal/json -o ../definitions/appeal/xlsx/ccd-appeal-config-dev.xlsx"
+  },
+  "dependencies": {
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.17.0",
+    "pretty-quick": "^1.10.0"
+  }
+}
