@@ -9,7 +9,7 @@ Repo to hold json ccd definition files for IA Team
 
 Helpful link to set up specific Node version:
 https://davidwalsh.name/upgrade-nodejs
-Use latest instead of stable
+Use `latest` instead of `stable`
 
 Remove Node version from your local in case you have got conflicts
 
@@ -21,7 +21,7 @@ Clone project to your local
 git clone git@github.com:hmcts/ia-ccd-definitions.git
 ```
 
-change folder
+Change folder
 ```
 cd ia-ccd-definitions
 ```
@@ -38,24 +38,24 @@ yarn setup
 
 ### Usages
 
-##### Excel to JSON
+#### Excel to JSON
 
-put your Excel file as `definitions/appeal/xlsx/ccd-appeal-config-base.xlsx`
+Put your Excel file as `definitions/appeal/xlsx/ccd-appeal-config-base.xlsx`
 
-run command
+Run command
 ```
 yarn generate-json
 ```
 
-your generated JSON files are put to `definitions/appeal/json` folder
+Your generated JSON files are put to `definitions/appeal/json` folder
 
-##### JSON to Excel
+#### JSON to Excel
 
-make your desired changes in `definitions/appeal/json/*.json` files
+Make your desired changes in `definitions/appeal/json/*.json` files
 
-run command
+Run command
 ```
 yarn generate-excel
 ```
 
-your generated Excel file is put to `definitions/appeal/xlsx` folder
+Your generated Excel file is put to `definitions/appeal/xlsx` folder
