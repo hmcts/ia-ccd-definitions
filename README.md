@@ -19,7 +19,7 @@ yarn upgrade --latest
 Remove Node version from your local in case you have got conflicts
 
 ### Settings
-There are a few command to run setup ia-definitions converter:
+There are a few commands to run setup ia-definitions converter:
 
 Clone project to your local
 ```
