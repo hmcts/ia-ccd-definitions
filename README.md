@@ -61,7 +61,7 @@ Make your desired changes in `definitions/appeal/json/*.json` files
 
 Run command
 ```
-yarn generate-excel
+yarn generate-dev
 ```
 
 Your generated Excel file is put to `definitions/appeal/xlsx` folder
