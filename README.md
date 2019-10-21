@@ -6,6 +6,7 @@ Repo to hold json ccd definition files for IA Team
 ### Prerequisites
 - Node version >=11.x
 - yarn version >=1.19.x
+- `CCD_DOCKER_PATH` environment variable. It is needed only for `upload` task
 
 Helpful link to set up specific Node version:
 https://davidwalsh.name/upgrade-nodejs
@@ -64,3 +65,8 @@ yarn generate-excel
 ```
 
 Your generated Excel file is put to `definitions/appeal/xlsx` folder
+
+You can run upload task to generate excel based on JSON files and upload the file directly to dev environment. The task needs to have `CCD_DOCKER_PATH` pre-set.
+```
+yarn upload
+```
