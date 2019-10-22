@@ -6,7 +6,8 @@ Repo to hold json ccd definition files for IA Team
 ### Prerequisites
 - Node version >=11.x
 - yarn version >=1.19.x
-- `CCD_DOCKER_PATH` environment variable. It is needed only for `upload` task
+- `CCD_DOCKER_PATH` environment variable. Only for `upload` task.
+- `IA_CCD_SECRET_KEY` environment variable. Only for generating CCD Definitions for PROD.
 
 Helpful link to set up specific Node version:
 https://davidwalsh.name/upgrade-nodejs
@@ -75,3 +76,5 @@ If you need CCD Definitions Excel files for environments other than DEV,
 there are specific tasks to use:
 
 `yarn generate-demo`, `yarn generate-aat` `yarn generate-prod` or `yarn generate-all`
+
+Tasks `yarn generate-prod` and `yarn generate-all` need additional environment variable called `IA_CCD_SECRET_KEY` to decrypt UserProfile tab. Ask someone from IA Team to get correct value.
