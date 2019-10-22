@@ -17,11 +17,16 @@
     }
   },
   "scripts": {
+    "clean": "rm -rf target/",
     "setup": "git submodule update --init --recursive && yarn --cwd ccd-definition-processor install",
-    "generate-json": "yarn --cwd ccd-definition-processor xlsx2json -D ../definitions/appeal/json -i ../definitions/appeal/xlsx/ccd-appeal-config-base.xlsx && pretty-quick --pattern 'appeal/**/json/**.json' && sed -i 's+http://ia-case-api:8090+${CCD_DEF_IA_URL}+g' ./definitions/appeal/json/*.json",
-    "generate-excel": "yarn --cwd ccd-definition-processor json2xlsx -D ../definitions/appeal/json -o ../definitions/appeal/xlsx/ccd-appeal-config-${CCD_ENV:-dev}.xlsx",
+    "generate-json": "yarn --cwd ccd-definition-processor xlsx2json -D ../definitions/appeal/json -i ../definitions/appeal/xlsx/ccd-appeal-config-base.xlsx && pretty-quick --pattern 'appeal/**/json/**.json' && sed -i 's+http://ia-case-api:8090+${CCD_DEF_IA_URL}+g' ./definitions/appeal/json/*.json && mv definitions/appeal/json/UserProfile.json definitions/appeal/env/${CCD_ENV:-dev}/UserProfile.json",
+    "generate-excel": "mkdir -p target/appeal/json && mkdir -p target/appeal/xlsx && cp definitions/appeal/json/*.json target/appeal/json/ && cp definitions/appeal/env/${CCD_ENV:-dev}/*.json target/appeal/json/ && yarn --cwd ccd-definition-processor json2xlsx -D ../target/appeal/json -o ../target/appeal/xlsx/ccd-appeal-config-${CCD_ENV:-dev}.xlsx",
     "generate-dev": "CCD_ENV=dev CCD_DEF_IA_URL=$npm_package_config_dev_iaCaseUrl yarn generate-excel",
-    "upload": "yarn generate-dev && USER_TOKEN=$(${CCD_DOCKER_PATH}/bin/idam-user-token.sh) && SERVICE_TOKEN=$(${CCD_DOCKER_PATH}/bin/idam-service-token.sh) && curl --silent http://127.0.0.1:4451/import -H \"Authorization: Bearer ${USER_TOKEN}\" -H \"ServiceAuthorization: Bearer ${SERVICE_TOKEN}\" -F file=\"@definitions/appeal/xlsx/ccd-appeal-config-dev.xlsx\""
+    "generate-demo": "CCD_ENV=demo CCD_DEF_IA_URL=$npm_package_config_demo_iaCaseUrl yarn generate-excel",
+    "generate-aat": "CCD_ENV=aat CCD_DEF_IA_URL=$npm_package_config_aat_iaCaseUrl yarn generate-excel",
+    "generate-prod": "CCD_ENV=prod CCD_DEF_IA_URL=$npm_package_config_prod_iaCaseUrl yarn generate-excel",
+    "generate-all": "yarn generate-dev && yarn generate-demo && yarn generate-aat && yarn generate-prod",
+    "upload": "yarn generate-dev && USER_TOKEN=$(${CCD_DOCKER_PATH}/bin/idam-user-token.sh) && SERVICE_TOKEN=$(${CCD_DOCKER_PATH}/bin/idam-service-token.sh) && curl --silent http://127.0.0.1:4451/import -H \"Authorization: Bearer ${USER_TOKEN}\" -H \"ServiceAuthorization: Bearer ${SERVICE_TOKEN}\" -F file=\"@target/appeal/xlsx/ccd-appeal-config-dev.xlsx\""
   },
   "dependencies": {
     "pre-commit": "^1.2.2",

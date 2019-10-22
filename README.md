@@ -64,9 +64,14 @@ Run command
 yarn generate-dev
 ```
 
-Your generated Excel file is put to `definitions/appeal/xlsx` folder
+Your generated Excel file is put to `target/appeal/xlsx` folder
 
 You can run upload task to generate excel based on JSON files and upload the file directly to dev environment. The task needs to have `CCD_DOCKER_PATH` pre-set.
 ```
 yarn upload
 ```
+
+If you need CCD Definitions Excel files for environments other than DEV,
+there are specific tasks to use:
+
+`yarn generate-demo`, `yarn generate-aat` `yarn generate-prod` or `yarn generate-all`
