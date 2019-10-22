@@ -45,17 +45,6 @@ yarn setup
 
 ### Usages
 
-#### Excel to JSON
-
-Put your Excel file as `definitions/appeal/xlsx/ccd-appeal-config-base.xlsx`
-
-Run command
-```
-yarn generate-json
-```
-
-Your generated JSON files are put to `definitions/appeal/json` folder
-
 #### JSON to Excel
 
 Make your desired changes in `definitions/appeal/json/*.json` files
@@ -78,3 +67,14 @@ there are specific tasks to use:
 `yarn generate-demo`, `yarn generate-aat` `yarn generate-prod` or `yarn generate-all`
 
 Tasks `yarn generate-prod` and `yarn generate-all` need additional environment variable called `IA_CCD_SECRET_KEY` to decrypt UserProfile tab. Ask someone from IA Team to get correct value.
+
+#### Excel to JSON
+
+Put your Excel file as `definitions/appeal/xlsx/ccd-appeal-config-base.xlsx`
+
+Run command
+```
+yarn generate-json
+```
+
+Your generated JSON files are put to `definitions/appeal/json` folder
