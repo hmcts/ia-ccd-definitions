@@ -1,7 +1,7 @@
 var CryptoJS = require("crypto-js");
 var fs = require('fs');
 
-var content = fs.readFileSync('definitions/appeal/env/prod/UserProfile.json', 'utf8');
+var content = fs.readFileSync('target/appeal/json/UserProfile.json', 'utf8');
 
 // Decrypt
 var bytes  = CryptoJS.AES.decrypt(content.toString(), process.env.IA_CCD_SECRET_KEY);
