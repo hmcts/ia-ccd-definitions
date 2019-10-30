@@ -46,5 +46,7 @@
   {"LiveFrom": "01/01/2018", "ID": "application", "ListElementCode": "applicationDateOfDecision", "FieldType": "Date", "ElementLabel": "Date of decision", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "application", "ListElementCode": "applicationStatus", "FieldType": "Text", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hoursAndMinutes", "ListElementCode": "hours", "FieldType": "Text", "ElementLabel": "Hours", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "hoursAndMinutes", "ListElementCode": "minutes", "FieldType": "Text", "ElementLabel": "Minutes", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "hoursAndMinutes", "ListElementCode": "minutes", "FieldType": "Text", "ElementLabel": "Minutes", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "additionalEvidenceHomeOfficeDocument", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "additionalEvidenceHomeOfficeDocument", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Why it was late", "SecurityClassification": "PUBLIC"}
 ]
