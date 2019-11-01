@@ -5,7 +5,7 @@ Repo to hold json ccd definition files for IA Team
 
 ### Prerequisites
 - Node version >=11.x
-- yarn version >=1.19.x
+- yarn version >=1.16.x
 - `CCD_DOCKER_PATH` environment variable. Only for `upload` task.
 - `IA_CCD_SECRET_KEY` environment variable. Only for generating CCD Definitions for PROD.
 
