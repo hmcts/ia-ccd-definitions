@@ -328,7 +328,7 @@
     "Description": "Request hearing requirements",
     "DisplayOrder": 18,
     "PreConditionState(s)": "respondentReview",
-    "PostConditionState": "listing",
+    "PostConditionState": "submitHearingRequirements",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
     "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
@@ -612,5 +612,26 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Upload"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "draftHearingRequirements",
+    "Name": "Draft hearing requirements",
+    "Description": "Submit hearing requirements",
+    "DisplayOrder": 34,
+    "PreConditionState(s)": "submitHearingRequirements",
+    "PostConditionState": "listing",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
+    "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit"
   }
 ]

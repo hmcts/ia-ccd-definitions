@@ -48,5 +48,9 @@
   {"LiveFrom": "01/01/2018", "ID": "hoursAndMinutes", "ListElementCode": "hours", "FieldType": "Text", "ElementLabel": "Hours", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hoursAndMinutes", "ListElementCode": "minutes", "FieldType": "Text", "ElementLabel": "Minutes", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "additionalEvidenceHomeOfficeDocument", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "additionalEvidenceHomeOfficeDocument", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Why it was late", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "additionalEvidenceHomeOfficeDocument", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Why it was late", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "witnessDetails", "ListElementCode": "value", "FieldType": "Text", "ElementLabel": "Name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "code", "FieldType": "FixedList", "FieldTypeParameter": "isoLanguages", "ElementLabel": "Language", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "interpreterDialect", "FieldType": "Text", "ElementLabel": "Dialect (Optional)   ", "SecurityClassification": "PUBLIC"}
 ]
