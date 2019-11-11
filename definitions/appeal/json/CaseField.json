@@ -784,7 +784,6 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalEvidenceHomeOffice", "Label": "Additional evidence", "FieldType": "Collection", "FieldTypeParameter": "additionalEvidenceHomeOfficeDocument", "SecurityClassification": "PUBLIC"},
-
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -869,8 +868,167 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRep_submitHearingRequirements",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Submit hearing requirements](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.png)\r\n\r\n## Do this next\r\nYou can submit the hearing requirements using the below link\n\n[Submit hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitHearingRequirements).",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Submit hearing requirements](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.png)\r\n\r\n## Do this next\r\nYou can submit the hearing requirements using the below link\n\n[Submit hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/draftHearingRequirements).",
     "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "hearingRequirementsAdditionalRequestsTitle",
+    "Label": "You can request additional adjustments based on the appellant's personal circumstances. The Tribunal will review the information you provide and decide whether a request can be granted.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "physicalOrMentalHealthIssues",
+    "Label": "Does the appellant have any physical or mental health issues that may impact them during the hearing?",
+    "FieldType": "YesOrNo",
+    "FieldTypeParameter": "physicalOrMentalHealthIssues",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "physicalOrMentalHealthIssuesDescription",
+    "Label": "Explain in detail how any physical or mental health issues may affect them during the hearing.",
+    "FieldType": "TextArea",
+    "FieldTypeParameter": "physicalOrMentalHealthIssuesDescription",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "pastExperiences",
+    "Label": "Has the appellant had any past experiences that may impact them during the hearing?",
+    "FieldType": "YesOrNo",
+    "FieldTypeParameter": "pastExperiences",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "pastExperiencesDescription",
+    "Label": "Explain in detail how past experiences may affect them during the hearing.",
+    "FieldType": "TextArea",
+    "FieldTypeParameter": "pastExperiencesDescription",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "multimediaEvidence",
+    "Label": "Do you have multimedia evidence?",
+    "HintText": "For example, video or sound recordings.",
+    "FieldType": "YesOrNo",
+    "FieldTypeParameter": "multimediaEvidence",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "multimediaEvidenceDescription",
+    "Label": "You should provide the equipment to play this evidence. If this is not possible, explain why and what equipment you'll need to play it.",
+    "FieldType": "TextArea",
+    "FieldTypeParameter": "multimediaEvidenceDescription",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "singleSexCourt",
+    "Label": "Does the appellant need a single-sex court?",
+    "FieldType": "YesOrNo",
+    "FieldTypeParameter": "singleSexCourt",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "singleSexCourtType",
+    "Label": "What type of court do they need?",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "singleSexCourtType",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "singleSexCourtTypeDescription",
+    "Label": "Explain in detail why the appellant needs a single-sex court.",
+    "FieldType": "TextArea",
+    "FieldTypeParameter": "singleSexCourtTypeDescription",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "inCameraCourt",
+    "Label": "Does the appellant need an in camera court?",
+    "FieldType": "YesOrNo",
+    "FieldTypeParameter": "inCameraCourt",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "inCameraCourtDescription",
+    "Label": "Explain in detail why the appellant needs a private hearing.",
+    "FieldType": "TextArea",
+    "FieldTypeParameter": "inCameraCourtDescription",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "additionalRequests",
+    "Label": "Is there anything else you wold like to request?",
+    "FieldType": "YesOrNo",
+    "FieldTypeParameter": "additionalRequests",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "additionalRequestsDescription",
+    "Label": "Provide details of any additional requests and why they are necessary.",
+    "FieldType": "TextArea",
+    "FieldTypeParameter": "additionalRequestsDescription",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "datesToAvoidTitle",
+    "Label": "## Hearing dates to avoid",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "datesToAvoidDescription",
+    "Label": "Tell us if there are any dates that the appellant or their on-day representation cannot attend a hearing. You must explain why the case cannot be heard on these dates.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "hearingDateRangeDescription",
+    "Label": " ",
+    "FieldType": "Text",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "hearingDateRange",
+    "Label": "Dates to avoid",
+    "FieldType": "Collection",
+    "FieldTypeParameter": "hearingDateRange",
     "SecurityClassification": "PUBLIC"
   }
 ]

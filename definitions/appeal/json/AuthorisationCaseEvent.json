@@ -13,10 +13,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitCase", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestCaseEdit", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestRespondentReview", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestRespondentReview", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestRespondentReview", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestRespondentReview", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestRespondentReview", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "addAppealResponse", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestResponseReview", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestResponseAmend", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
@@ -43,5 +39,5 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadAdditionalEvidenceHomeOffice", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadAdditionalEvidenceHomeOffice", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "CRUD"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitHearingRequirements", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "draftHearingRequirements", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"}
 ]

@@ -52,5 +52,7 @@
 
   {"LiveFrom": "01/01/2018", "ID": "witnessDetails", "ListElementCode": "value", "FieldType": "Text", "ElementLabel": "Name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "code", "FieldType": "FixedList", "FieldTypeParameter": "isoLanguages", "ElementLabel": "Language", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "interpreterDialect", "FieldType": "Text", "ElementLabel": "Dialect (Optional)   ", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "interpreterDialect", "FieldType": "Text", "ElementLabel": "Dialect", "HintText": "Enter N/A if no dialect required", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingDateRange", "ListElementCode": "datesToAvoid", "FieldType": "Date", "ElementLabel": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingDateRange", "ListElementCode": "datesToAvoidReason", "FieldType": "TextArea", "ElementLabel": "Reason", "HintText": "You must provide a valid reason or the Tribunal cannot consider your request.", "SecurityClassification": "PUBLIC"}
 ]
