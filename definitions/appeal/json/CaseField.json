@@ -868,7 +868,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRep_submitHearingRequirements",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Submit hearing requirements](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.png)\r\n\r\n## Do this next\r\nYou can submit the hearing requirements using the below link\n\n[Submit hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/draftHearingRequirements).",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Submit hearing requirements](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.png)\r\n\r\n## Do this next\r\nYou can submit the hearing requirements using the below link\n\n[Submit hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitHearingRequirements).",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1010,7 +1010,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "datesToAvoidDescription",
-    "Label": "Tell us if there are any dates that the appellant or their on-day representation cannot attend a hearing. You must explain why the case cannot be heard on these dates.\n\nOnly include dates between ${[CASE_REFERENCE]} and [12 weeks time].",
+    "Label": "Tell us if there are any dates that the appellant or their on-day representation cannot attend a hearing. You must explain why the case cannot be heard on these dates.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1018,7 +1018,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "hearingDateRange",
-    "Label": "Test",
+    "Label": " ",
     "FieldType": "Text",
     "SecurityClassification": "PUBLIC"
   },
