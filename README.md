@@ -78,3 +78,9 @@ yarn generate-json
 ```
 
 Your generated JSON files are put to `definitions/appeal/json` folder
+
+#### Callback urls
+
+In dev the callback url will default to http://ia-case-api:8090. If you want to set your own value set an environment 
+variable called IA_CASE_URL pointing to the value you want. On some OS's this can be set to 
+http://host.docker.internal:8090 rather than setting up ia-case-api to point to the host machine.

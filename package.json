@@ -23,7 +23,7 @@
     "setup": "git submodule update --init --recursive && yarn --cwd ccd-definition-processor install",
     "generate-json": "yarn --cwd ccd-definition-processor xlsx2json -D ../definitions/appeal/json -i ../definitions/appeal/xlsx/ccd-appeal-config-base.xlsx && pretty-quick --pattern 'appeal/**/json/**.json' && sed -e 's+http://ia-case-api:8090+${CCD_DEF_IA_URL}+g' ./definitions/appeal/json/CaseEvent.json  > ./definitions/appeal/json/CaseEvent.json.new && mv ./definitions/appeal/json/CaseEvent.json.new ./definitions/appeal/json/CaseEvent.json && mv definitions/appeal/json/UserProfile.json definitions/appeal/env/${CCD_ENV:-dev}/UserProfile.json",
     "generate-excel": "yarn --cwd ccd-definition-processor json2xlsx -D ../target/appeal/json -o ../target/appeal/xlsx/ccd-appeal-config-${CCD_ENV:-dev}.xlsx",
-    "generate-dev": "CCD_ENV=dev yarn copy-json && CCD_DEF_VERSION=`git branch | grep '* '` CCD_ENV=dev CCD_DEF_IA_URL=$npm_package_config_dev_iaCaseUrl yarn generate-excel",
+    "generate-dev": "CCD_ENV=dev yarn copy-json && CCD_DEF_VERSION=`git branch | grep '* '` CCD_ENV=dev CCD_DEF_IA_URL=${IA_CASE_URL:-$npm_package_config_dev_iaCaseUrl} yarn generate-excel",
     "generate-demo": "CCD_ENV=demo yarn copy-json && CCD_DEF_VERSION=`git branch | grep '* '` CCD_ENV=demo CCD_DEF_IA_URL=$npm_package_config_demo_iaCaseUrl yarn generate-excel",
     "generate-aat": "CCD_ENV=aat yarn copy-json && CCD_DEF_VERSION=`git branch | grep '* '` CCD_ENV=aat CCD_DEF_IA_URL=$npm_package_config_aat_iaCaseUrl yarn generate-excel",
     "generate-prod": "CCD_ENV=prod yarn copy-json && yarn decrypt && CCD_DEF_VERSION='' CCD_ENV=prod CCD_DEF_IA_URL=$npm_package_config_prod_iaCaseUrl yarn generate-excel",
