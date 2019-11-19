@@ -690,12 +690,22 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addendumEvidenceDocuments", "Label": "Evidence supplied after the hearing bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadAddendumEvidenceAction", "Label": "[Add additional evidence as an addendum](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadAddendumEvidence)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadAddendumEvidenceLegalRepActionAvailable", "Label": "Internal flag managed by API to enable/disable uploadAddendumEvidenceLegalRepAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadAddendumEvidenceLegalRepAction", "Label": "[Add additional evidence as an addendum](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadAddendumEvidenceLegalRep)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addendumEvidencePageTitle", "Label": "Add the evidence and the context. This evidence will not be included in the hearing bundle, it will be added as an addendum.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "addendumEvidencePageTitle2",
     "Label": "If you have evidence from both the appellant and the respondent, submit these seperately.\r\n\r\n#### Advice on uploads\r\n- Files must be no more than 100MB in size.\r\n- You can upload jpg, png, svg, gif, doc and PDF files.\r\n- Before uploading a file, give it a meaningful file name. For example, health-report-Jsmith.pdf.\r\n\r\n#### Upload evidence",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addendumEvidenceLegalRepPageTitle", "Label": "Add the evidence and the context. This evidence will not be included in the hearing bundle, it will be added as an addendum.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "addendumEvidenceLegalRepPageTitle2",
+    "Label": "#### Advice on uploads\r\n- Files must be no more than 100MB in size.\r\n- You can upload jpg, png, svg, gif, doc and PDF files.\r\n- Before uploading a file, give it a meaningful file name. For example, health-report-Jsmith.pdf.\r\n\r\n#### Upload evidence",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
