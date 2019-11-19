@@ -694,5 +694,23 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "removeAppealFromOnline",
+    "Name": "Move appeal offline",
+    "Description": "Move appeal offline",
+    "DisplayOrder": 37,
+    "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision",
+    "PostConditionState": "appealTakenOffline",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Remove appeal"
   }
 ]
