@@ -689,6 +689,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadAddendumEvidenceActionAvailable", "Label": "Internal flag managed by API to enable/disable uploadAddendumEvidenceAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addendumEvidenceDocuments", "Label": "Evidence supplied after the hearing bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadAddendumEvidenceAction", "Label": "[Add additional evidence as an addendum](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadAddendumEvidence)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadAddendumEvidenceLegalRepActionAvailable", "Label": "Internal flag managed by API to enable/disable uploadAddendumEvidenceLegalRepAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addendumEvidencePageTitle", "Label": "Add the evidence and the context. This evidence will not be included in the hearing bundle, it will be added as an addendum.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
