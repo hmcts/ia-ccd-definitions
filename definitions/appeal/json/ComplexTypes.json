@@ -48,5 +48,10 @@
   {"LiveFrom": "01/01/2018", "ID": "hoursAndMinutes", "ListElementCode": "hours", "FieldType": "Text", "ElementLabel": "Hours", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hoursAndMinutes", "ListElementCode": "minutes", "FieldType": "Text", "ElementLabel": "Minutes", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "additionalEvidenceHomeOfficeDocument", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "additionalEvidenceHomeOfficeDocument", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Why it was late", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "additionalEvidenceHomeOfficeDocument", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Why it was late", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "subscriber", "FieldType": "FixedList", "FieldTypeParameter": "subscribers", "ElementLabel": "Subscriber", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "email", "FieldType": "Text", "ElementLabel": "Email", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "mobileNumber", "FieldType": "Text", "ElementLabel": "Mobile Number", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "wantsEmail", "FieldType": "YesOrNo", "ElementLabel": "Whether the user wants emails", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "wantsSms", "FieldType": "YesOrNo", "ElementLabel": "Whether the user wants sms", "SecurityClassification": "PUBLIC"}
 ]
