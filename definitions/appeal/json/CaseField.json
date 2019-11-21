@@ -801,5 +801,6 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalEvidenceHomeOffice", "Label": "Additional evidence", "FieldType": "Collection", "FieldTypeParameter": "additionalEvidenceHomeOfficeDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "subscriptions", "Label": "Subscriptions", "FieldType": "Collection", "FieldTypeParameter": "subscription", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journeyType", "Label": "Type of Journey", "FieldType": "FixedList", "FieldTypeParameter": "journeyTypes", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journeyType", "Label": "Type of Journey", "FieldType": "FixedList", "FieldTypeParameter": "journeyTypes", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "directionList", "Label": "Direction to be updated", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"}
 ]
