@@ -188,6 +188,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentCaseStateVisibleToHomeOfficePou", "Label": "Internal flag managed by API to show correct case state for home office pou", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentCaseStateVisibleToHomeOfficeGeneric", "Label": "Internal flag managed by API to show correct case state for home office generic", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentCaseStateVisibleToHomeOfficeAll", "Label": "Internal flag managed by API to show correct case state for home office all", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewHomeOfficeResponseByLegalRep", "Label": "Internal flag managed by API to show correct case state for home office and legal rep", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submissionOutOfTime", "Label": "Was the appeal submission late?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseArgumentAvailable", "Label": "Internal flag managed by API to enable/disable case argument in appeal tab", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealResponseAvailable", "Label": "Internal flag managed by API to enable/disable appeal response in appeal tab", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -281,6 +282,14 @@
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Respondent review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_respondentReview.png)\r\n\r\n## Do this next\r\nThe case has now been sent to the respondent for review.\r\n\r\nWhen they've reviewed the case, we'll add their response to the documents tab. You'll get an email letting you know when it's there.\r\n\r\nIf you want to reply to the response, you should contact the case officer within 5 days. If you don't respond within 5 days, the case will proceed to a hearing.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
+  },
+  {
+  "LiveFrom": "01/01/2018",
+  "CaseTypeID": "Asylum",
+  "ID": "progress_legalRepresentative_respondentReview_appeal_response",
+  "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Respondent review appeal response](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/RIA-2048-legal-rep-image/app/assets/images/legalRep_respondentReview_appeal_response.png)\r\n\r\n## Do this next\r\nThe Home Office is proceeding with the case and you've been directed to review their response in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#documents).\r\n\r\n If you want to respond to the Home Office, you should contact The Tribunal within 5 working days or the case will automatically proceed to a hearing.\r\n\r\nIf you want to continue the appeal without responding, you can [proceed to a hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature). If not, you should apply to the Tribunal to withdraw the appeal.",
+  "FieldType": "Label",
+  "SecurityClassification": "PUBLIC"
   },
   {
     "LiveFrom": "01/01/2018",
