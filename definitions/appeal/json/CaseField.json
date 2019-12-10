@@ -597,6 +597,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_reviewHearingRequirements",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Listing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_reviewHearingRequirements.png)\r\n\r\n## Do this next\r\nYou can view the hearing requirements and any requests for additional adjustments in the [Hearing tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#hearing).<br><br>You should contact the appellant if you need more information.<br><br>You should then [review and submit](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewHearingRequirements) the hearing requirements and any additional adjustments.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_prepareForHearing",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_prepareForHearing.png)\r\n\r\n## Do this next\r\nYou must create a case summary for the judge to use at the hearing.\r\n\r\n[Create case summary](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/createCaseSummary)",
     "FieldType": "Label",
@@ -905,5 +913,27 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "datesToAvoidTabTitle", "Label": "![]()\r\n## Dates to avoid\r\nThese dates are only visible to the appellant and the Tribunal. When listing the case, take these dates into consideration where possible.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "recordOfHearingTitle", "Label": "![]()\r\n## Record of hearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRequirements", "Label": "Hearing requirements and requests", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submitHearingRequirementsAvailable", "Label": "Internal flag managed by API to enable/disable Hearing tab (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submitHearingRequirementsAvailable", "Label": "Internal flag managed by API to enable/disable Hearing tab (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewedHearingRequirements", "Label": "Internal flag managed by API to show correct case state for case officer", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewHearingRequirementsTitle", "Label": "Review the appellant's hearing requirements and select length of hearing.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "witnessDetailsReadonly", "Label": "Witness details", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "interpreterLanguageReadonly",  "Label": "Interpreter details", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "continueToSeeAdditionalAdjustments", "Label": "Continue to see requests for additional adjustments.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewAdjustmentsTitle", "Label": "![]()\r\n## Additional adjustments", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalAdjustmentsDescription", "Label": "Check if the appellant has requested any additional adjustments and record your response in the relavent field. Do not enter the reason the appellant made the request. The respondent will be able to see this information and must not be informed of the appellant's personal circumstances.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "vulnerabilitiesAdjustmentRequestTitle", "Label": "![]()\r\n## Adjustment request", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "vulnerabilitiesTribunalResponseTitle", "Label": "![]()\r\n## Tribunal response", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "vulnerabilitiesTribunalResponse", "Label": "Adjustments to accommodate vulnerabilities", "FieldType": "TextArea", "HintText": "Sate what adjustments the Tribunal will provide, or explain why this request cannot be fulfilled.", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "multimediaAdjustmentRequestTitle", "Label": "![]()\r\n## Adjustment request", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "multimediaTribunalResponseTitle", "Label": "![]()\r\n## Tribunal response", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "multimediaTribunalResponse", "Label": "Multimedia equipment", "FieldType": "TextArea", "HintText": "Sate what adjustments the Tribunal will provide, or explain why this request cannot be fulfilled.", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "singleSexCourtAdjustmentRequestTitle", "Label": "![]()\r\n## Adjustment request", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "singleSexCourtTribunalResponseTitle", "Label": "![]()\r\n## Tribunal response", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "singleSexCourtTribunalResponse", "Label": "Single-sex court", "FieldType": "TextArea", "HintText": "State the gender requested and whether the Tribunal can accommodate this. If not, explain why this request cannot be fulfilled.", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "inCameraCourtAdjustmentRequestTitle", "Label": "![]()\r\n## Adjustment request", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "inCameraCourtTribunalResponseTitle", "Label": "![]()\r\n## Tribunal response", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "inCameraCourtTribunalResponse", "Label": "In camera court", "FieldType": "TextArea", "HintText": "State whether the Tribunal can accommodate this, or explain why this request cannot be fulfilled.", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalAdjustmentRequestTitle", "Label": "![]()\r\n## Adjustment request", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalTribunalResponseTitle", "Label": "![]()\r\n## Tribunal response", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalTribunalResponse", "Label": "Other adjustments", "FieldType": "TextArea", "HintText": "State what adjustments the Tribunal will provide, or explain why their request's cannot be fulfilled.", "SecurityClassification": "PUBLIC"}
 ]
