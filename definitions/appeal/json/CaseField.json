@@ -905,5 +905,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "datesToAvoidTabTitle", "Label": "![]()\r\n## Dates to avoid\r\nThese dates are only visible to the appellant and the Tribunal. When listing the case, take these dates into consideration where possible.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "recordOfHearingTitle", "Label": "![]()\r\n## Record of hearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRequirements", "Label": "Hearing requirements and requests", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submitHearingRequirementsAvailable", "Label": "Internal flag managed by API to enable/disable Hearing tab (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submitHearingRequirementsAvailable", "Label": "Internal flag managed by API to enable/disable Hearing tab (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "shareACaseTitle", "Label": "Choose colleague from below list to share the case", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "orgListOfUsers", "Label": "Colleague", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "shareACaseUserList", "Label": "Colleagues", "FieldType": "Collection", "FieldTypeParameter": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "shareACaseUserListReadOnly", "Label": "Case has already been shared with Users:", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
 ]
