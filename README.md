@@ -84,3 +84,16 @@ Your generated JSON files are put to `definitions/appeal/json` folder
 In dev the callback url will default to http://ia-case-api:8090. If you want to set your own value set an environment 
 variable called IA_CASE_URL pointing to the value you want. On some OS's this can be set to 
 http://host.docker.internal:8090 rather than setting up ia-case-api to point to the host machine.
+
+#### Creatde state diagram
+
+To create a state diagram based on the CCD definition run
+
+```
+yarn create-state-diagram
+```
+
+This will generate an image target/state_diagram.png
+
+NB. State diagram is produced using plantUml which needs Graphviz see this pages for details and to troubleshoot
+https://plantuml.com/graphviz-dot
