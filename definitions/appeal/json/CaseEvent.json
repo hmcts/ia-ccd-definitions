@@ -76,8 +76,8 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "changeDirectionDueDate",
-    "Name": "Change the direction due date",
-    "Description": "Change the direction due date",
+    "Name": "Change a direction due date",
+    "Description": "Change a direction due date",
     "DisplayOrder": 5,
     "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision",
     "PostConditionState": "*",
@@ -90,7 +90,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Update direction"
+    "EndButtonLabel": "Send direction"
   },
   {
     "LiveFrom": "01/01/2018",
