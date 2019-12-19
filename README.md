@@ -93,7 +93,12 @@ To create a state diagram based on the CCD definition run
 yarn create-state-diagram
 ```
 
-This will generate an image target/state_diagram.png
+This will generate an image target/state_diagram.png. If you just want to generate a state diagram for a set of roles
+set the environment variable ROLES and a comma separated list of roles.
+
+```
+ROLES=role1,role2 yarn create-state-diagram
+```
 
 NB. State diagram is produced using plantUml which needs Graphviz see this pages for details and to troubleshoot
 https://plantuml.com/graphviz-dot
