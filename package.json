@@ -9,6 +9,9 @@
     "demo": {
       "iaCaseUrl": "http://ia-case-api-demo.service.core-compute-demo.internal"
     },
+    "ithc": {
+      "iaCaseUrl": "http://ia-case-api-ithc.service.core-compute-ithc.internal"
+    },
     "aat": {
       "iaCaseUrl": "http://ia-case-api-aat.service.core-compute-aat.internal"
     },
@@ -25,9 +28,10 @@
     "generate-excel": "yarn --cwd ccd-definition-processor json2xlsx -D ../target/appeal/json -o ../target/appeal/xlsx/ccd-appeal-config-${CCD_ENV:-dev}.xlsx",
     "generate-dev": "CCD_ENV=dev yarn copy-json && CCD_DEF_VERSION=`git branch | grep '* '` CCD_ENV=dev CCD_DEF_IA_URL=${IA_CASE_URL:-$npm_package_config_dev_iaCaseUrl} yarn generate-excel",
     "generate-demo": "CCD_ENV=demo yarn copy-json && CCD_DEF_VERSION=`git branch | grep '* '` CCD_ENV=demo CCD_DEF_IA_URL=$npm_package_config_demo_iaCaseUrl yarn generate-excel",
+    "generate-ithc": "CCD_ENV=ithc yarn copy-json && CCD_DEF_VERSION=`git branch | grep '* '` CCD_ENV=ithc CCD_DEF_IA_URL=$npm_package_config_ithc_iaCaseUrl yarn generate-excel",
     "generate-aat": "CCD_ENV=aat yarn copy-json && CCD_DEF_VERSION=`git branch | grep '* '` CCD_ENV=aat CCD_DEF_IA_URL=$npm_package_config_aat_iaCaseUrl yarn generate-excel",
     "generate-prod": "CCD_ENV=prod yarn copy-json && yarn decrypt && CCD_DEF_VERSION='' CCD_ENV=prod CCD_DEF_IA_URL=$npm_package_config_prod_iaCaseUrl yarn generate-excel",
-    "generate-all": "yarn generate-dev && yarn generate-demo && yarn generate-aat && yarn generate-prod",
+    "generate-all": "yarn generate-dev && yarn generate-demo && yarn generate-ithc && yarn generate-aat && yarn generate-prod",
     "upload": "yarn generate-dev && USER_TOKEN=$(${CCD_DOCKER_PATH}/bin/idam-user-token.sh) && SERVICE_TOKEN=$(${CCD_DOCKER_PATH}/bin/idam-service-token.sh) && curl http://127.0.0.1:4451/import -H \"Authorization: Bearer ${USER_TOKEN}\" -H \"ServiceAuthorization: Bearer ${SERVICE_TOKEN}\" -F file=\"@target/appeal/xlsx/ccd-appeal-config-dev.xlsx\" && echo ''",
     "create-state-diagram": "node bin/generate_state_diagram.js && java -jar lib/plantuml.jar target/state_diagram.txt"
   },
