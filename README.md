@@ -64,7 +64,7 @@ yarn upload
 If you need CCD Definitions Excel files for environments other than DEV,
 there are specific tasks to use:
 
-`yarn generate-demo`, `yarn generate-aat` `yarn generate-prod` or `yarn generate-all`
+`yarn generate-demo`, `yarn generate-ithc`, `yarn generate-aat`, `yarn generate-prod` or `yarn generate-all`
 
 Tasks `yarn generate-prod` and `yarn generate-all` need additional environment variable called `IA_CCD_SECRET_KEY` to decrypt UserProfile tab. Ask someone from IA Team to get correct value.
 
@@ -85,7 +85,7 @@ In dev the callback url will default to http://ia-case-api:8090. If you want to 
 variable called IA_CASE_URL pointing to the value you want. On some OS's this can be set to 
 http://host.docker.internal:8090 rather than setting up ia-case-api to point to the host machine.
 
-#### Creatde state diagram
+#### Create state diagram
 
 To create a state diagram based on the CCD definition run
 
