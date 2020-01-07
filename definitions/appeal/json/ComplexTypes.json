@@ -61,5 +61,5 @@
   {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "language", "FieldType": "FixedList", "FieldTypeParameter": "isoLanguages", "ElementLabel": "Language", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "languageDialect", "FieldType": "Text", "ElementLabel": "Dialect", "HintText": "Enter N/A if no dialect required", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "datesToAvoid", "ListElementCode": "dateToAvoid", "FieldType": "Date", "ElementLabel": "Date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "datesToAvoid", "ListElementCode": "dateToAvoidReason", "FieldType": "TextArea", "ElementLabel": "Reason", "HintText": "You must provide a valid reason or the Tribunal cannot consider your request.", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "datesToAvoid", "ListElementCode": "dateToAvoidReason", "FieldType": "TextArea", "ElementLabel": "Reason", "SecurityClassification": "PUBLIC"}
 ]
