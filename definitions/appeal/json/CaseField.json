@@ -805,7 +805,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_applicationTimeExtension",
-    "Label": "# Overview\r\n## Do this next\r\nThe application decision has been recorded and is now available in the applications tab. You must change the direction due date to send an updated direction. You will need to find the direction in the list of directions and only edit the due date.",
+    "Label": "# Overview\r\n## Do this next\r\nYou must now [change the direction due date](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/changeDirectionDueDate). You can also view the application decision in the Applications tab.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
