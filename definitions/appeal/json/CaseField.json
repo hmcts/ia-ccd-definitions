@@ -687,6 +687,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_listing_submitted_requirements",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Listing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/adminOfficer_listing_submittedRequirements.png)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will agree what adjustments the Tribunal will make.\r\n\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_listing_feature",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Listing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_listing.png)\r\n\r\n## Do this next\r\nThe agreed hearing requirements and dates to avoid are available to view in the [Hearing tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#hearing). When the case has been listed in Aria, you should [list the case here](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/listCase).\r\n\r\n",
     "FieldType": "Label",
