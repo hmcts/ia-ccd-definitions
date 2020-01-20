@@ -271,6 +271,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_listing_without_hearing_req",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Listing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_listing.png)\r\n\r\n## Do this next\r\nYou have not submitted any hearing requirements on behalf of the appellant.\r\n\r\nThe case is now being listed without hearing requirements and the Notice of Hearing will be sent to both parties.\n\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_prepareForHearing",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_listed.png)\r\n\r\n## Do this next\r\n<p>The case has now been listed. Go to the documents tab to see the hearing notice, which includes the hearing details.</p><p>The case officer will prepare the hearing bundle. You'll receive a notification when it is available to view in the documents tab.</p>\r\n\r\n[Go to the documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#documents)",
     "FieldType": "Label",
@@ -584,7 +592,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_submitHearingRequirements",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Submit hearing requirements](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.png)\r\n\r\n## What happens next\r\nThe appellant has been directed to submit their hearing requirements.<br/><br/><br/>",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Submit hearing requirements](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.png)\r\n\r\n## What happens next\r\nThe appellant has been directed to submit their hearing requirements.\r\n\r\nIf the appellant does not comply within 5 days of the direction, you can proceed to a hearing without the requirements by using 'Next steps' menu above.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -947,7 +955,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewHearingRequirementsTitle", "Label": "Review the appellant's hearing requirements and select length of hearing.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "witnessDetailsReadonly", "Label": "Witness details", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "shareACaseUserListReadOnly", "Label": "Case has already been shared with Users:", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewedHearingRequirements", "Label": "Internal flag managed by API to show correct case state for case officer", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewedHearingRequirements", "Label": "Internal flag managed by API to show correct case state for Legal representative", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseListedWithoutHearingRequirements", "Label": "Internal flag managed by API to show correct case state for case officer", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "interpreterLanguageReadonly",  "Label": "Interpreter details", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "continueToSeeAdditionalAdjustments", "Label": "Continue to see requests for additional adjustments.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewAdjustmentsTitle", "Label": "\r\n## Additional adjustments", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
