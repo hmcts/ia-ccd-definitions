@@ -188,6 +188,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentCaseStateVisibleToHomeOfficePou", "Label": "Internal flag managed by API to show correct case state for home office pou", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentCaseStateVisibleToHomeOfficeGeneric", "Label": "Internal flag managed by API to show correct case state for home office generic", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentCaseStateVisibleToHomeOfficeAll", "Label": "Internal flag managed by API to show correct case state for home office all", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateHearingRequirementsExists", "Label": "Internal flag managed by API to show correct case state for case officers", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submissionOutOfTime", "Label": "Was the appeal submission late?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseArgumentAvailable", "Label": "Internal flag managed by API to enable/disable case argument in appeal tab", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealResponseAvailable", "Label": "Internal flag managed by API to enable/disable appeal response in appeal tab", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -940,5 +941,13 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalAdjustmentRequestTitle", "Label": "\r\n## Adjustment request", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalTribunalResponseTitle", "Label": "\r\n## Tribunal response", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalTribunalResponse", "Label": "Other adjustments", "FieldType": "TextArea", "HintText": "State what adjustments the Tribunal will provide, or explain why their request's cannot be fulfilled.", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "agreedAdditionalAdjustmentsTitle", "Label": "![]()\r\n## Agreed additional adjustments", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "agreedAdditionalAdjustmentsTitle", "Label": "![]()\r\n## Agreed additional adjustments", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_updateHearingRequirements",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Update hearing requirements](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_updateHearingRequirements.png)\r\n\r\n## Do this next\r\nIn order for the case to proceed you must now [update the hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateHearingRequirements).",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  }
 ]
