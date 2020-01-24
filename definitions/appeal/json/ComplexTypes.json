@@ -1,5 +1,5 @@
 [
-  {"LiveFrom": "01/01/2018", "ID": "appealNumber", "ListElementCode": "value", "FieldType": "Text", "ElementLabel": " ", "RegularExpression": "^((?i)RP|PA|EA|HU|DC|DA|AA|IA|OA|VA)\\/[0-9]{5}\\/[0-9]{4}$", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "appealNumber", "ListElementCode": "value", "FieldType": "Text", "ElementLabel": " ", "RegularExpression": "^[A-Za-z]{1,}[0-9]{7,10}(|/[0-9]{3}?)", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsProtection", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsProtection", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsHumanRights", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsHumanRights", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsRevocation", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsRevocation", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
