@@ -13,5 +13,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decision", "Name": "Decision", "Description": "Decision", "DisplayOrder": 12, "TitleDisplay": "# ${appealReferenceNumber}"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decided", "Name": "Decided", "Description": "Decided", "DisplayOrder": 13, "TitleDisplay": "# ${appealReferenceNumber}"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ended", "Name": "Ended", "Description": "Ended", "DisplayOrder": 14, "TitleDisplay": "# ${appealReferenceNumber}"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTakenOffline", "Name": "Appeal taken offline", "Description": "Appeal taken offline", "DisplayOrder": 15, "TitleDisplay": "# ${appealReferenceNumber}"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTakenOffline", "Name": "Appeal taken offline", "Description": "Appeal taken offline", "DisplayOrder": 15, "TitleDisplay": "# ${appealReferenceNumber}"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "awaitingReasonsForAppeal", "Name": "Awaiting reasons for appeal", "Description": "Awaiting the appellant entering reasons for appeal", "DisplayOrder": 16, "TitleDisplay": "# ${appealReferenceNumber}"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonsForAppealSubmitted", "Name": "Reasons for appeal submitted", "Description": "The appellant has entered their reasons for appeal", "DisplayOrder": 17, "TitleDisplay": "# ${appealReferenceNumber}"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "awaitingClarifyingAnswers", "Name": "Awaiting clarifying answered", "Description": "Awaiting the appellant has entering their answers to clarifying questions", "DisplayOrder": 18, "TitleDisplay": "# ${appealReferenceNumber}"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "clarifyingAnswersSubmitted", "Name": "Clarifying answers submitted", "Description": "The appellant has entered their answers to clarifying questions", "DisplayOrder": 19, "TitleDisplay": "# ${appealReferenceNumber}"}
 ]

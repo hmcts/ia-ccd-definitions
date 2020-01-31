@@ -392,6 +392,22 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_requestAppellantReasonsForAppeal",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Respondent evidence uploaded](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_awaitingRespondentEvidence_postUpload.png)\r\n\r\n## Do this next\nThe respondent has submitted their evidence.\r\n\r\nIf it complies with the procedure rules and practice directions, [direct the appellant to submit their Appeal Reasons](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestReasonsForAppeal).\r\n\r\nIf it does not comply, [direct the respondent to make the appropriate changes](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestResponseAmend).<br><br><br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_awaitingAppellantReasonsForAppeal",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Respondent evidence uploaded](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_caseBuilding.png)\r\n\r\n## Do this next\r\nThe appellant has been directed to submit their Appeal Reasons. You will be notified when it is ready to review.<br><br><br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeApc_homeOfficeBundleUploaded",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Respondent evidence uploaded](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_awaitAppealSkeletonArgument.png)\r\n\r\n## Do this next\r\nThe Tribunal will: \r\n- check that the bundle complies with the Procedural Rules and Practice Directions\r\n- inform you of any issues\r\n\r\nThe Home Office will be notified when the Appeal Skeleton Argument is ready to review.<br><br><br>",
     "FieldType": "Label",
