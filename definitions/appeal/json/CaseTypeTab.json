@@ -205,7 +205,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseNotes", "CaseFieldID": "caseNotes", "TabFieldDisplayOrder": 4},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "TabLabel": "Applications", "TabDisplayOrder": 7, "CaseFieldID": "applicationsTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "recordApplicationActionDisabled", "TabFieldDisplayOrder": 2, "FieldShowCondition": "recordApplicationActionDisabled=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "applicationLink", "TabFieldDisplayOrder": 3, "FieldShowCondition": "recordApplicationActionDisabled!=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "applicationLink", "TabFieldDisplayOrder": 3, "FieldShowCondition": "recordApplicationActionDisabled!=\"Yes\" AND appealMovedOffline!=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "applications", "TabFieldDisplayOrder": 4},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRep_submitHearingRequirements", "TabFieldDisplayOrder": 19, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"submitHearingRequirements\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_exit_appeal", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"appealTakenOffline\""},
@@ -257,5 +257,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "recordOfHearingTitle", "TabFieldDisplayOrder": 41, "FieldShowCondition": "hearingRequirements=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "hearingRequirements", "TabFieldDisplayOrder": 42, "FieldShowCondition": "hearingRequirements=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "submitHearingRequirementsAvailable", "TabFieldDisplayOrder": 43, "FieldShowCondition": "submitHearingRequirementsAvailable=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "caseListedWithoutHearingRequirements", "TabFieldDisplayOrder": 44, "FieldShowCondition": "caseListedWithoutHearingRequirements=\"DUMMY_VALUE_TO_HIDE_FIELD\""}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "caseListedWithoutHearingRequirements", "TabFieldDisplayOrder": 44, "FieldShowCondition": "caseListedWithoutHearingRequirements=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "appealMovedOffline", "TabFieldDisplayOrder": 45, "FieldShowCondition": "appealMovedOffline=\"DUMMY_VALUE_TO_HIDE_FIELD\""}
 ]

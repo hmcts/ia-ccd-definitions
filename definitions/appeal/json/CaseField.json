@@ -990,5 +990,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "directionEditExplanation", "Label": "Explanation", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "directionEditParties", "Label": "Parties", "FieldType": "FixedList", "FieldTypeParameter": "parties", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "directionEditDateDue", "Label": "Date due", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "directionEditDateSent", "Label": "Date sent", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "directionEditDateSent", "Label": "Date sent", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealMovedOffline", "Label": "Internal flag managed by API to show link for case officer", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+
 ]
