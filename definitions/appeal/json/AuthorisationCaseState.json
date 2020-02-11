@@ -1,9 +1,11 @@
 [
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealStarted", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealStarted", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealStarted", "UserRole": "citizen", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealSubmitted", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealSubmitted", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealSubmitted", "UserRole": "caseworker-ia-system", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealSubmitted", "UserRole": "citizen", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingRespondentEvidence", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingRespondentEvidence", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingRespondentEvidence", "UserRole": "caseworker-ia-system", "CRUD": "R"},
@@ -11,6 +13,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingRespondentEvidence", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingRespondentEvidence", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingRespondentEvidence", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingRespondentEvidence", "UserRole": "citizen", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "caseBuilding", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "caseBuilding", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "caseBuilding", "UserRole": "caseworker-ia-system", "CRUD": "R"},
@@ -99,5 +102,13 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingReasonsForAppeal", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingReasonsForAppeal", "UserRole": "citizen", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "reasonsForAppealSubmitted", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "reasonsForAppealSubmitted", "UserRole": "citizen", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingClarifyingAnswers", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingClarifyingAnswers", "UserRole": "citizen", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "clarifyingAnswersSubmitted", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "clarifyingAnswersSubmitted", "UserRole": "citizen", "CRUD": "R"}
 ]
