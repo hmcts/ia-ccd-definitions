@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const output = [];
 
-const ignoredStates = [ 'ended', 'appealTakenOffline'];
+const ignoredStates = [ ];
 const ignoredEvents = [ 'shareACase' ]; //'sendDirection', 'changeDirectionDueDate', 'addCaseNote', 'recordApplication'];
 const roles = process.env.ROLES ? process.env.ROLES.split(',') : [];
 
