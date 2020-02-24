@@ -191,6 +191,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentCaseStateVisibleToHomeOfficeGeneric", "Label": "Internal flag managed by API to show correct case state for home office generic", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentCaseStateVisibleToHomeOfficeAll", "Label": "Internal flag managed by API to show correct case state for home office all", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewHomeOfficeResponseByLegalRep", "Label": "Internal flag managed by API to show correct case state for home office and legal rep", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationUpdateHearingRequirementsExists", "Label": "Internal flag managed by API to show correct case state for case officers", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateHearingRequirementsExists", "Label": "Internal flag managed by API to show correct case state for case officers", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submissionOutOfTime", "Label": "Was the appeal submission late?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseArgumentAvailable", "Label": "Internal flag managed by API to enable/disable case argument in appeal tab", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealResponseAvailable", "Label": "Internal flag managed by API to enable/disable appeal response in appeal tab", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -281,7 +283,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_prepareForHearing",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_listed.png)\r\n\r\n## Do this next\r\n<p>The case has now been listed. Go to the documents tab to see the hearing notice, which includes the hearing details.</p><p>The case officer will prepare the hearing bundle. You'll receive a notification when it is available to view in the documents tab.</p>\r\n\r\n[Go to the documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#documents)",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_listed.png)\r\n\r\n## Do this next\r\nThe case has now been listed and the hearing details are ready to view in the [Hearing tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#hearing).\r\n\r\n The Tribunal will generate the hearing bundle, you'll be notified when this is ready to view.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -569,7 +571,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_listed",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Listed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_listed.png)\r\n\r\n## Do this next\r\nThe case has now been listed and the Hearing Notice is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#documents).</br>\r\n\r\nThe Tribunal will generate the hearing bundle, you'll be notified when this is ready to view.\r\n</br></br>",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Listed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_listed.png)\r\n\r\n## Do this next\r\nThe case has now been listed and the hearing details are ready to view in the [Hearing tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#hearing).</br>\r\n\r\nThe Tribunal will generate the hearing bundle, you'll be notified when this is ready to view.\r\n</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -721,7 +723,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_prepareForHearing",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_prepareForHearing.png)\r\n\r\n## Do this next\r\nThe hearing notice will be sent to all parties.<br>\r\nYou don’t need to do any more on this case.",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_prepareForHearing.png)\r\n\r\n## What happens next\r\nThe Notice of Hearing will be sent to all parties.<br>\r\n\r\n<br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -822,6 +824,14 @@
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_applicationTimeExtension",
     "Label": "# Overview\r\n## Do this next\r\nYou must now [change the direction due date](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/changeDirectionDueDate). You can also view the application decision in the Applications tab.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_updateHearingRequirements",
+    "Label": "# Overview\n\n## Current progress of the case\n\n![Update hearing requirements](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_updateHearingAdjustments.png)\n\n## Do this next\r\nYou must now [update the hearing adjustments or confirm they haven't changed.](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateHearingAdjustments)",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -974,6 +984,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "recordOfHearingTitle", "Label": "![]()\r\n## Record of hearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRequirements", "Label": "Hearing requirements and requests", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submitHearingRequirementsAvailable", "Label": "Internal flag managed by API to enable/disable Hearing tab (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updatedHearingRequirements", "Label": "Internal flag managed by API to manage validation", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "shareACaseTitle", "Label": "Choose colleague from below list to share the case", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "orgListOfUsers", "Label": "Colleague", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "shareACaseUserList", "Label": "Colleagues", "FieldType": "Collection", "FieldTypeParameter": "Text", "SecurityClassification": "PUBLIC"},
@@ -1008,5 +1019,13 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "directionEditDateDue", "Label": "Date due", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "directionEditDateSent", "Label": "Date sent", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonsForAppealDecision", "Label": "Reasons For Appeal Decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonsForAppealDocuments", "Label": "Reasons For Appeal Documents", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonsForAppealDocuments", "Label": "Reasons For Appeal Documents", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_applicationUpdateHearingRequirements",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Update hearing requirements](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_updateHearingRequirements.png)\r\n\r\n## Do this next\r\nIn order for the case to proceed you must now [update the hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateHearingRequirements).",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  }
 ]
