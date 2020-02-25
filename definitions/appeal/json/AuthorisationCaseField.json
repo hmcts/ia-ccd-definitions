@@ -1699,5 +1699,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "reasonsForAppealDecision", "UserRole": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "reasonsForAppealDocuments", "UserRole": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "applicationUpdateHearingRequirementsExists", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_caseOfficer_updateHearingRequirements", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_caseOfficer_updateHearingRequirements", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "journey_type_aip", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "journey_type_aip", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "journey_type_legal_rep", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "journey_type_legal_rep", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"}
 ]
