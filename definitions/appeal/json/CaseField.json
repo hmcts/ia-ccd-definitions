@@ -731,6 +731,30 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_listing_updateHearing",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/adminOfficer_listing_postRecordUpdatedRequirements.png)\r\n\r\n## Do this next\r\nThe hearing requirements and dates to avoid have been updated. They are now available to view in the [Hearing tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#hearing). \r\n\r\n You must update the hearing requirements in Aria and relist if necessary. You should then [relist the case or confirm the original listing here](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editCaseListing).\r\n\r\n<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_finalBundling",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Final bundling](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.png)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will generate a hearing bundle for all parties to use at the hearing.\r\n\r\n<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_preHearing",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Pre hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_preHearing.png)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will generate the Decision and Reasons document.\r\n\r\n<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_pre_hearing_details_recorded_admin_decision",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.png)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
     "FieldType": "Label",
