@@ -303,5 +303,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "recordOfHearingTitle", "TabFieldDisplayOrder": 41, "FieldShowCondition": "hearingRequirements=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "hearingRequirements", "TabFieldDisplayOrder": 42, "FieldShowCondition": "hearingRequirements=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "submitHearingRequirementsAvailable", "TabFieldDisplayOrder": 43, "FieldShowCondition": "submitHearingRequirementsAvailable=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "caseListedWithoutHearingRequirements", "TabFieldDisplayOrder": 44, "FieldShowCondition": "caseListedWithoutHearingRequirements=\"DUMMY_VALUE_TO_HIDE_FIELD\""}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "caseListedWithoutHearingRequirements", "TabFieldDisplayOrder": 44, "FieldShowCondition": "caseListedWithoutHearingRequirements=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "journey_type_aip", "TabFieldDisplayOrder": 7, "FieldShowCondition": "journeyType=\"aip\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "journey_type_legal_rep", "TabFieldDisplayOrder": 7, "FieldShowCondition": "journeyType!=\"aip\""}
 ]
