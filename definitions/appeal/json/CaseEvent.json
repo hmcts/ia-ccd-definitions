@@ -918,5 +918,21 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Upload"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "sendToPreHearing",
+    "Name": "Send to pre hearing",
+    "Description": "Send to pre hearing",
+    "DisplayOrder": 44,
+    "PreConditionState(s)": "finalBundling",
+    "PostConditionState": "preHearing",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit"
   }
 ]
