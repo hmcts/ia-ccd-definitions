@@ -1666,5 +1666,7 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaTabTitle", "Label": "# FTPA", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDetailsTitle", "Label": "## Appellant: application for permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDetailsTitle", "Label": "## Respondent: application for permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDetailsTitle", "Label": "## Respondent: application for permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonsForAppealDueDate", "Label": "Reasons for appeal due date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "timeExtensions", "Label": "Time extensions", "FieldType": "Collection", "FieldTypeParameter": "timeExtension", "SecurityClassification": "PUBLIC"}
 ]
