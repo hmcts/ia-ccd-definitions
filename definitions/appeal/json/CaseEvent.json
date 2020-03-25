@@ -994,7 +994,7 @@
     "Name": "Change hearing centre",
     "Description": "Change hearing centre",
     "DisplayOrder": 45,
-    "PreConditionState(s)": "awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing",
+    "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
