@@ -1377,5 +1377,13 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRecordingDocuments", "Label": "Hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRecordingDocuments", "Label": "Hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "applicationChangeDesignatedHearingCentre",
+    "Label": "Designated hearing centre",
+    "FieldType": "FixedList",
+    "FieldTypeParameter": "hearingCentre",
+    "SecurityClassification": "PUBLIC"
+  }
 ]
