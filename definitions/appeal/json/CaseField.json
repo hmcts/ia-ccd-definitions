@@ -1394,5 +1394,21 @@
     "Label": "# Overview\n\n## Current progress of the case\n\n![Change hearing centre](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_changeHearingCentre.png)\n\n## Do this next\r\nYou must now [change the designated hearing centre](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/changeHearingCentre) based on the new information provided in the application.\r\nThe application decision has been recorded and is available in the applications tab.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "reasonToForceRequestCaseBuilding",
+    "Label": "Reasons to force the case progression",
+    "FieldType": "TextArea",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "showPageFlag",
+    "Label": "show page based on flag",
+    "FieldType": "YesOrNo",
+    "SecurityClassification": "PUBLIC"
   }
 ]
