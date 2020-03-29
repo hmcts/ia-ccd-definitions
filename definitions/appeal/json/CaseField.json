@@ -2296,5 +2296,21 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaDesc", "Label": "Add the attendees and case duration below. If someone didn't attend. leave it blank.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendingTCW", "Label": "The Tribunal Caseworker", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appointmentSummary", "Label": "Appointment summary", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appointments", "Label": "Appointment", "FieldTypeParameter": "appointment", "FieldType": "Collection", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appointments", "Label": "Appointment", "FieldTypeParameter": "appointment", "FieldType": "Collection", "SecurityClassification": "PUBLIC"},
+  
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "applicationEditAppealAfterSubmitExists",
+    "Label": "Internal flag managed by API to show correct message for case officers",
+    "FieldType": "Text",
+    "SecurityClassification": "PUBLIC"
+  }, {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "doThisNext_caseOfficer_editAppealAfterSubmit",
+    "Label": "## Do this next\r\nThe application decision has been recorded and is available in the applications tab.\r\n\r\nYou must now [edit the appeal details](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppealAfterSubmit) based on the new information provided in the application.\r\n\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  }
 ]
