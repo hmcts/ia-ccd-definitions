@@ -2353,5 +2353,22 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appointmentSummary", "Label": "Summary", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appointmentDetailsTitle", "Label": "Appointment details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "progress_caseOfficer_readyToBeRelisted", "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Hearing adjourned](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_caseOfficer_readyToBeRelisted.png)\r\n\r\n## Do this next\r\nThe case is now ready to be relisted. Review the hearing requirements in the 'Hearing' tab then relist the case in Aria.\r\n\r\nYou should then [relist the case here.](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editCaseListing)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCmaHearingTitle", "Label": "Add the hearing details below.", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCmaHearingTitle", "Label": "Add the hearing details below.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "applicationEditAppealAfterSubmitExists",
+    "Label": "Internal flag managed by API to show correct message for case officers",
+    "FieldType": "Text",
+    "SecurityClassification": "PUBLIC"
+  }, 
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "doThisNext_caseOfficer_editAppealAfterSubmit",
+    "Label": "## Do this next\r\nThe application decision has been recorded and is available in the applications tab.\r\n\r\nYou must now [edit the appeal details](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppealAfterSubmit) based on the new information provided in the application.\r\n\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  }
 ]
