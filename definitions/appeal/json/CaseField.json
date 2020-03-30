@@ -99,7 +99,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentGroundsDocuments", "Label": "Grounds of the application", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentEvidenceUploadTitle", "Label": "## Upload any other evidence that supports this application (Optional)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentEvidenceDocuments", "Label": "Supporting evidence", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDocuments", "Label": "FTPA Respondent documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDocuments", "Label": "FTPA Home Office documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentApplicationDate", "Label": "Application date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingCentre", "Label": "Hearing centre", "FieldType": "FixedList", "FieldTypeParameter": "hearingCentre", "SecurityClassification": "PUBLIC"},
@@ -2025,8 +2025,8 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaTabTitle", "Label": "# FTPA", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDetailsTitle", "Label": "## Appellant: application for permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDetailsTitle", "Label": "## Respondent: application for permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDetailsTitle", "Label": "## Appellant: Application for permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDetailsTitle", "Label": "## Home Office: Application for permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicantType", "Label": "Who made the application?", "HintText": "If you are recording a decision based on two applications, select the party that has had the biggest impact on your decision.", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaApplicantType", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionOutcomeType", "Label": "The outcome of the application", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaDecisionOutcomeType", "SecurityClassification": "PUBLIC"},
   {
@@ -2064,7 +2064,7 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionDocument", "Label": "FTPA Decision and Reasons document", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allFtpaRespondentDecisionDocs", "Label": "FTPA Respondent Decision and Reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allFtpaRespondentDecisionDocs", "Label": "FTPA Home Office Decision and Reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -2077,7 +2077,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionNotesPoints", "Label": "Tick any applicable points", "FieldType": "ftpaDecisionCheckList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionNotesDescription", "Label": "Provide any information that may be helpful to the Upper Tribunal judge",  "FieldType": "TextArea", "FieldTypeParameter": "ftpaDecisionReason", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentDecided", "Label": "Internal flag managed by API for ftpa respondent decided by leadership judge", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionDetails", "Label": "![]()\r\n## Respondent: Decision on permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionDetails", "Label": "![]()\r\n## Home Office: Decision on permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionDate", "Label": "Decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAppellantFtpaDecisionVisibleToRespondent", "Label": "Internal flag managed by API for leadership judge appellant ftpa decision visible to respondent", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isRespondentFtpaDecisionVisibleToAppellant", "Label": "Internal flag managed by API for leadership judge respondent ftpa decision visible to appellant", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
