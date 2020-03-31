@@ -45,6 +45,35 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationOutOfTimeText", "Label": "## You've missed the deadline for appealing.\r\n\r\nYou can ask for permission to appeal outside of the deadline.\r\n\r\nExplain why you believe your late appeal should be allowed to proceed.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationOutOfTimeExplanation", "Label": "Reasons for late appeal submission", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationOutOfTimeDocument", "Label": "Late submission supporting document", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantSubmissionOutOfTime", "Label": "Internal flag managed by API to enable/disable out of time submission page", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantOutOfTimeText", "Label": "This application is late. You must provide full reasons why it is being submitted more than 14 days after the Decision and Reasons document was uploaded. \r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantOutOfTimeExplanation", "Label": "Reasons why the application is late", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantOutOfTimeDocuments", "Label": "Documents supporting late application", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "ftpaAppellantFileUploadAdvice",
+    "Label": "Upload any evidence that supports the fact your application is late.\r\n#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, application-to-appeal-Jsmith.pdf\r\n\r\n## Upload any documents supporting late application (Optional)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "ftpaAppellantApplicationTitle",
+    "Label": "## Your application\r\nUpload a document that explains the grounds of your application: \r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, application-to-appeal-Jsmith.pdf\r\n\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantGroundsUploadTitle", "Label": "## Upload the grounds of your application", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantGroundsDocuments", "Label": "Grounds of the application", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantEvidenceUploadTitle", "Label": "## Upload any other evidence that supports this application (Optional)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantEvidenceDocuments", "Label": "Supporting evidence", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDocuments", "Label": "FTPA Appellant documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantApplicationDate", "Label": "Application date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingCentre", "Label": "Hearing centre", "FieldType": "FixedList", "FieldTypeParameter": "hearingCentre", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTabTitle", "Label": "# Appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTabResponseTitle", "Label": "![]()\r\n## Home Office response to the appeal argument", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -199,6 +228,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseArgumentAvailable", "Label": "Internal flag managed by API to enable/disable case argument in appeal tab", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealResponseAvailable", "Label": "Internal flag managed by API to enable/disable appeal response in appeal tab", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionAndReasonsAvailable", "Label": "Internal flag managed by API to enable/disable appeal response in appeal tab", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantSubmitted", "Label": "Internal flag managed by API to enable appellant fields in FTPA tab", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionAllowedTitle", "Label": "## What is your decision?  \r\n\r\nIf the appeal is dismissed on all grounds, select 'Dismissed on all grounds'. If the appeal is allowed on any grounds, you must select 'Allowed'.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionAllowed", "Label": "Decision", "FieldType": "FixedRadioList", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadDecisionAndReasonsTitle", "Label": "## Upload your decision and reasons  ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -309,7 +339,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_decided_allowed",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Respondent review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe case has been decided. You can now view the decision and reasons in the documents tab.<br/><br/>\r\nEither party can appeal the decision by making an application to the Upper Tribunal. If you decide to appeal, you must do this within 14 days of the judge’s signature on the decision.<br/><br/>\r\nTo submit an appeal, you will need to complete form IAFT-4: First-tier Tribunal Application for Permission to Appeal to Upper Tribunal.<br/><br/><br/>",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Respondent review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -317,7 +347,23 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_decided_dismissed",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Respondent review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe case has been decided. You can now view the decision and reasons in the documents tab.<br/><br/>\r\nEither party can appeal the decision by making an application to the Upper Tribunal. If you decide to appeal, you must do this within 14 days of the judge’s signature on the decision.<br/><br/>\r\nTo submit an appeal, you will need to complete form IAFT-4: First-tier Tribunal Application for Permission to Appeal to Upper Tribunal.<br/><br/><br/>",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Respondent review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_ftpa_in_progress",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Respondent review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaInProgress.png)\r\n\r\n## What happens next\r\nThe First-tier Tribunal will consider the application and make a decision shortly. The application is available to view in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa).<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_ftpa_in_progress",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Respondent review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaInProgress.png)\r\n\r\n## What happens next\r\nA judge will be assigned to consider the application, they'll then record their decision.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -812,6 +858,22 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_ftpa_submitted_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Decided](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe appeal has been dismissed. The Decision and Reasons document is available in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#documents).</br></br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_ftpa_submitted_allowed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Decided](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe appeal has been allowed. The Decision and Reasons document is available in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#documents).</br></br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_judge_decided_dismissed",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Decided](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.",
     "FieldType": "Label",
@@ -1093,6 +1155,38 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_post_hearing_details_recorded_admin_decided_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 14 days from the date of decision to do this.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_pre_hearing_details_recorded_admin_ftpa_submitted_allowed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_pre_hearing_details_recorded_admin_ftpa_submitted_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_post_hearing_details_recorded_admin_ftpa_submitted_allowed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 14 days from the date of decision to do this.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_post_hearing_details_recorded_admin_ftpa_submitted_dismissed",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 14 days from the date of decision to do this.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -1402,5 +1496,7 @@
     "Label": "Select the new hearing centre.\r\n",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
-  }
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaTabTitle", "Label": "# FTPA", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDetailsTitle", "Label": "## Appellant: application for permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 ]
