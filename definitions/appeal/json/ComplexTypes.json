@@ -66,6 +66,7 @@
   {"LiveFrom": "01/01/2018", "ID": "hearingRecordingDocument", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Describe the file", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "dateRequested", "FieldType": "Date", "ElementLabel": "Date requested", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "reason", "FieldType": "TextArea", "ElementLabel": "Reason for time extension", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "evidence", "FieldType": "Document", "ElementLabel": "Reason for time extension evidence", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "type", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionType", "ElementLabel": "Time extension requested for", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Reason for time extension evidence", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "state", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionType", "ElementLabel": "Time extension requested for", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "status", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionStatus", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"}
 ]
