@@ -8,6 +8,7 @@ Repo to hold json ccd definition files for IA Team
 - yarn version >=1.16.x
 - `CCD_DOCKER_PATH` environment variable. Only for `upload` task.
 - `IA_CCD_SECRET_KEY` environment variable. Only for generating CCD Definitions for PROD.
+- `IA_CASE_API_DIR` environment variable. Only for validating CCD Definitions with ia-case-api code changes. Default value is: `../ia-case-api/`
 
 Helpful link to set up specific Node version:
 https://davidwalsh.name/upgrade-nodejs
@@ -102,3 +103,24 @@ ROLES=role1,role2 yarn create-state-diagram
 
 NB. State diagram is produced using plantUml which needs Graphviz see this pages for details and to troubleshoot
 https://plantuml.com/graphviz-dot
+
+#### Validate CCD definitions and ia-case-api compatibility
+
+There is a need to check compatibility of ia-case-api Pull Request code changes and existing CCD definitions imported to Production before every release. We can't release changes to ia-case-api where there is a writing to non-existing case data fields. Depends on the event scope it could block case data progress for particular event or for all events.
+
+Script has been prepared to identify approx. 95% potential issues by scanning local ia-case-api git repository and existing CCD definitions. The script can't reduce the risk of eliminating braking change to none. If you do complex refactoring, it is always good to ask your colleagues for advice.
+
+Before running the script make sure you setup correct branches on your local:
+- ia-ccd-definitions -> master branch
+- ia-case-api -> RIA-* feature branch
+
+Run the script
+```
+yarn validate
+```
+
+Standard output will show INFOs, WARNs and ERRORs logs. There is a need to check all WARNs places, they are potential compatibility issues. Any ERROR tells that there is a need for intermediate CCD definitions which should include missing field definitions.
+
+Intermediate CCD definitions must be imported to Production before any ia-case-api braking code changes is merged to master. Once it is done you can re-run validation script.
+
+There is `IGNORED` array defined in `validate_case_api.js` script. If you think validation script gives you false positives, please add new entry to the array.
