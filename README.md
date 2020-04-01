@@ -64,7 +64,7 @@ yarn upload
 If you need CCD Definitions Excel files for environments other than DEV,
 there are specific tasks to use:
 
-`yarn generate-demo`, `yarn generate-ithc`, `yarn generate-aat`, `yarn generate-prod` or `yarn generate-all`
+`yarn generate-demo`, `yarn generate-ithc`, `yarn generate-perftest`, `yarn generate-aat`, `yarn generate-prod` or `yarn generate-all`
 
 Tasks `yarn generate-prod` and `yarn generate-all` need additional environment variable called `IA_CCD_SECRET_KEY` to decrypt UserProfile tab. Ask someone from IA Team to get correct value.
 
