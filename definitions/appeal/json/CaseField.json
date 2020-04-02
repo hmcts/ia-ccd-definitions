@@ -2288,5 +2288,21 @@
     "Label": "Reasons to force the case progression",
     "FieldType": "TextArea",
     "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "forceCaseToSubmitHearingRequirementsTitle",
+    "Label": "# Force case to submit hearing requirements\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  }, 
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "reasonToForceCaseToSubmitHearingRequirements",
+    "Label": "Reasons to force the case progression",
+    "FieldType": "TextArea",
+    "SecurityClassification": "PUBLIC"
   }
 ]
