@@ -1631,15 +1631,6 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRecordingDocuments", "Label": "Hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonsForAppealDueDate", "Label": "Reasons for appeal due date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "timeExtensions", "Label": "Time extensions", "FieldType": "Collection", "FieldTypeParameter": "timeExtension", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionRequired", "Label": "review time extension required", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDate", "Label": "Date application was made", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionParty", "Label": "Party", "FieldType": "FixedList", "FieldTypeParameter": "parties", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionReason", "Label": "Why do you need more time?", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDecision", "Label": "Decision", "FieldType": "FixedRadioList", "FieldTypeParameter": "timeExtensionDecision", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDecisionReason", "Label": "Reason for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRecordingDocuments", "Label": "Hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "applicationChangeDesignatedHearingCentre",
@@ -1669,6 +1660,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDetailsTitle", "Label": "## Respondent: application for permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonsForAppealDueDate", "Label": "Reasons for appeal due date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "timeExtensions", "Label": "Time extensions", "FieldType": "Collection", "FieldTypeParameter": "timeExtension", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionRequired", "Label": "review time extension required", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDate", "Label": "Date application was made", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionParty", "Label": "Party", "FieldType": "FixedList", "FieldTypeParameter": "parties", "SecurityClassification": "PUBLIC"},
