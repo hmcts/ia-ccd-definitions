@@ -524,5 +524,8 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestCmaRequirements", "CaseFieldID": "requestCmaRequirementsTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "requestCmaRequirements","PageDisplayOrder": 1,"ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestCmaRequirements", "CaseFieldID": "requestCmaRequirementsReasons", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "requestCmaRequirements","PageDisplayOrder": 1,"ShowSummaryChangeOption": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestCmaRequirements", "CaseFieldID": "sendDirectionDateDue", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "requestCmaRequirements", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestCmaRequirements", "CaseFieldID": "sendDirectionDateDue", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "requestCmaRequirements", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "recordLengthOfHearing", "CaseFieldID": "recordLengthOfHearingTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "recordLengthOfHearing", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "recordLengthOfHearing", "CaseFieldID": "recordedLengthOfHearing", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "recordLengthOfHearing", "PageDisplayOrder": 2, "ShowSummaryChangeOption": "Y"}
 ]

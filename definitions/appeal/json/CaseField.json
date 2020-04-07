@@ -2943,5 +2943,17 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonsForAppealDateUploaded", "Label": "Date uploaded", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCmaRequirementsTitle", "Label": "Direct the appellant to submit requirements for a case management appointment", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCmaRequirementsReasons", "Label": "Reasons for appointment", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCmaRequirementsReasons", "Label": "Reasons for appointment", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "recordLengthOfHearingTitle", "Label": "#### Length of hearing", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "recordedLengthOfHearing", "Label": "Length of hearing", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reheardActionExists", "Label": "Internal flag managed by API to show re-heard action has been done", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_listing_reheard",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Listing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe case will be reheard. Review any Tribunal notes in [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and check [Hearing tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#hearing) for any previously agreed hearing requirements. When the case has been listed in Aria, you should [list the case here](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/listCase).\r\n\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  }
 ]
