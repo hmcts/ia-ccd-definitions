@@ -86,5 +86,7 @@
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "state", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionType", "ElementLabel": "Time extension requested for", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "status", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionStatus", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decision", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionDecision", "ElementLabel": "Decision", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decisionReason", "FieldType": "TextArea", "ElementLabel": "Decision reason", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decisionReason", "FieldType": "TextArea", "ElementLabel": "Decision reason", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "caseFlag", "ListElementCode": "caseFlagType", "FieldType": "FixedList", "FieldTypeParameter": "caseFlags", "ElementLabel": "Flag type", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "caseFlag", "ListElementCode": "caseFlagAdditionalInformation", "FieldType": "TextArea", "ElementLabel": "Additional information", "SecurityClassification": "PUBLIC"}
 ]
