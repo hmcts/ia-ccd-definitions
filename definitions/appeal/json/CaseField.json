@@ -2196,6 +2196,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionParty", "Label": "Party", "FieldType": "FixedList", "FieldTypeParameter": "parties", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionReason", "Label": "Why do you need more time?", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDecision", "Label": "Decision", "FieldType": "FixedRadioList", "FieldTypeParameter": "timeExtensionDecision", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDecisionReason", "Label": "Reason for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDecisionReason", "Label": "Reason for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDueDate", "Label": "Due Date", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
 
 ]
