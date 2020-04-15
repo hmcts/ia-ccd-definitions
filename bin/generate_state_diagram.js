@@ -16,12 +16,13 @@ events.forEach(event => {
   const preConditionSatesArray = preConditionStates ? preConditionStates.split(';') : [ '[*]' ];
 
   preConditionSatesArray.forEach(preConditionState => {
-    const postConditionState = postConditionStates === '*' ? preConditionState : postConditionStates;
+    const newPreConditionState = preConditionState === '*' ? 'allStates' : preConditionState;
+    const postConditionState = postConditionStates === '*' ? newPreConditionState : postConditionStates;
 
-    if (ignoredStates.indexOf(preConditionState) === -1 && ignoredStates.indexOf(postConditionState) === -1) {
+    if (ignoredStates.indexOf(newPreConditionState) === -1 && ignoredStates.indexOf(postConditionState) === -1) {
       if (ignoredEvents.indexOf(eventName) === -1) {
         output.push({
-          "from": preConditionState,
+          "from": newPreConditionState,
           "to": postConditionState,
           "text": eventName
         })
@@ -46,6 +47,11 @@ outputForRole.forEach(link => {
 
 var plantUmlString = '@startuml\n';
 plantUmlString += 'hide empty description\n';
+plantUmlString += 'skinparam state {\n' +
+  '  BackgroundColor<<allStates>> DeepSkyBlue\n' +
+  '}\n' +
+  'state "All states" as allStates <<allStates>>\n';
+
 if (roles.length > 0) {
   plantUmlString += `state "State diagram for ${roles.join(", ")}"\n`; // force this to be a state diagram
 }

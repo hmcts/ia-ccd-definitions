@@ -1074,7 +1074,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_aip_caseUnderReview",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Case under review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_caseUnderReview.png)\r\n\r\n## Do this next\r\n\r\nReview the appellant's case in [the documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\n If you believe the case is ready to proceed you should [direct the respondent to review it](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview).",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Case under review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_caseUnderReview.png)\r\n\r\n## Do this next\r\n\r\nReview the appellant's case in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\n If you believe the case is ready to proceed you should [direct the respondent to review it](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview).\r\n\r\n If you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\n You can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1804,6 +1804,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationsTabTitle", "Label": "## Applications", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationLink", "Label": "[Record an application](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordApplication)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "timeExtensionLink", "Label": "[Review a time extension application](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewTimeExtension)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sendDirectionWithQuestionsLink", "Label": "[Direct the appellant to answer clarifying questions](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/sendDirectionWithQuestions)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationSupplier", "Label": "Application from", "FieldType": "FixedRadioList", "FieldTypeParameter": "applicationSupplier", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationType", "Label": "Type of application", "FieldType": "FixedList", "FieldTypeParameter": "applicationType", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationReason", "Label": "Reason for application", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
@@ -2158,6 +2159,11 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionParty", "Label": "Party", "FieldType": "FixedList", "FieldTypeParameter": "parties", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionReason", "Label": "Why do you need more time?", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDecision", "Label": "Decision", "FieldType": "FixedRadioList", "FieldTypeParameter": "timeExtensionDecision", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDecisionReason", "Label": "Reason for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDecisionReason", "Label": "Reason for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "draftClarifyingQuestionsAnswers", "Label": "Draft Clarifying Questions and Answers", "FieldType": "Collection", "FieldTypeParameter": "clarifyingQuestionAnswer", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAnsweringClarifyingQuestions", "Label": "Is the appellant answering clarifying questions?", "FieldType": "YesOrNo","SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "clarifyingQuestionsAnswers", "Label": "Clarifying Questions and Answers", "FieldType": "Collection", "FieldTypeParameter": "clarifyingQuestionAnswer", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "directionEditQuestion", "Label": "Questions", "FieldType": "Collection", "FieldTypeParameter": "clarifyingQuestion", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "clarifyingQuestionsTitle", "Label": "![]()\n## Clarifying Questions", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 ]
