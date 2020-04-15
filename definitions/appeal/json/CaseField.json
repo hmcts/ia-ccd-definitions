@@ -2218,6 +2218,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionReason", "Label": "Why do you need more time?", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDecision", "Label": "Decision", "FieldType": "FixedRadioList", "FieldTypeParameter": "timeExtensionDecision", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDecisionReason", "Label": "Reason for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+<<<<<<< HEAD
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDueDate", "Label": "Due Date", "HintText": "The new direction due date must be at least one day after the original direction due date" ,"FieldType": "Date", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "draftClarifyingQuestionsAnswers", "Label": "Draft Clarifying Questions and Answers", "FieldType": "Collection", "FieldTypeParameter": "clarifyingQuestionAnswer", "SecurityClassification": "PUBLIC"},
@@ -2397,4 +2398,8 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   }
+=======
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adjournHearingWithoutDateReasonsTitle", "Label": "The hearing will be adjourned and a new hearing date can be added in the future.\r\nBoth parties will be notified and a Notice of Adjournment will be generated.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adjournHearingWithoutDateReasons", "Label": "Reasons for adjournment", "HintText": "This will be visible to both parties", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+>>>>>>> add adjourn event and pages for event
 ]
