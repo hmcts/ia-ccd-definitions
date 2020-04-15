@@ -802,7 +802,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "submissionOutOfTime", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "submissionOutOfTime", "UserRole": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "submissionOutOfTime", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "ftpaAppellantSubmissionOutOfTime", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "ftpaAppellantOutOfTimeText", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "ftpaAppellantOutOfTimeExplanation", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
@@ -2328,5 +2327,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "judgeAllocationExists", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "previousJudgeAllocations", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "previousJudgeAllocations", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "previousJudgeAllocations", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "previousJudgeAllocations", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "adjournHearingWithoutDateReasons", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "adjournHearingWithoutDateReasonsTitle", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"}
 ]
