@@ -2263,6 +2263,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submitTimeExtensionEvidence", "Label": "Time Extension Evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCmaRequirementsTitle", "Label": "Direct the appellant to submit requirements for a case management appointment", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCmaRequirementsReasons", "Label": "Reasons for appointment", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
-
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCmaRequirementsReasons", "Label": "Reasons for appointment", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adjournHearingWithoutDateReasonsTitle", "Label": "The hearing will be adjourned and a new hearing date can be added in the future.\r\nBoth parties will be notified and a Notice of Adjournment will be generated.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adjournHearingWithoutDateReasons", "Label": "Reasons for adjournment", "HintText": "This will be visible to both parties", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
 ]
