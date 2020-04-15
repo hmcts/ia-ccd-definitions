@@ -497,15 +497,15 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestCmaRequirements", "CaseFieldID": "sendDirectionDateDue", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "requestCmaRequirements", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceCaseToCaseUnderReview", "CaseFieldID": "forceCaseToCaseUnderReviewTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "forceCase", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceCaseToCaseUnderReview", "CaseFieldID": "reasonToForceCaseToCaseUnderReview", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "forceCase", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
-  
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceCaseToSubmitHearingRequirements", "CaseFieldID": "forceCaseToSubmitHearingRequirementsTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "forceCase", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceCaseToSubmitHearingRequirements", "CaseFieldID": "reasonToForceCaseToSubmitHearingRequirements", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "forceCase", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
-  
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateLegalRepDetails", "CaseFieldID": "updateLegalRepCompany", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "updateLegalRepDetails", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateLegalRepDetails", "CaseFieldID": "updateLegalRepName", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "updateLegalRepDetails", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateLegalRepDetails", "CaseFieldID": "updateLegalRepEmailAddress", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "updateLegalRepDetails", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateLegalRepDetails", "CaseFieldID": "updateLegalRepReferenceNumber", "PageFieldDisplayOrder": 4, "DisplayContext": "MANDATORY", "PageID": "updateLegalRepDetails", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
-  
+
   {"LiveFrom": "07/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "adjournHearingWithoutDate", "CaseFieldID": "adjournHearingWithoutDateReasonsTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "adjournHearingPage1", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "07/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "adjournHearingWithoutDate", "CaseFieldID": "adjournHearingWithoutDateReasons", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "adjournHearingPage1", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "07/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "adjournHearingWithoutDate", "CaseFieldID": "stateBeforeAdjournWithoutDate", "PageFieldDisplayOrder": 3, "DisplayContext": "READONLY", "PageID": "adjournHearingPage1", "PageDisplayOrder": 1, "FieldShowCondition": "adjournHearingWithoutDateReasonsTitle=\"DUMMY_FIELD_TO_HIDE\"", "ShowSummaryChangeOption": "N"},
