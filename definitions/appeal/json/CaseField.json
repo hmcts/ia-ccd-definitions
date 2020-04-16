@@ -99,7 +99,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentGroundsDocuments", "Label": "Grounds of the application", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentEvidenceUploadTitle", "Label": "## Upload any other evidence that supports this application (Optional)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentEvidenceDocuments", "Label": "Supporting evidence", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDocuments", "Label": "FTPA Respondent documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDocuments", "Label": "FTPA Home Office documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentApplicationDate", "Label": "Application date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingCentre", "Label": "Hearing centre", "FieldType": "FixedList", "FieldTypeParameter": "hearingCentre", "SecurityClassification": "PUBLIC"},
@@ -429,6 +429,383 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_appellant_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_ftpa_appellant_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_ftpa_appellant_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nThe Upper Tribunal will review the application and make a decision.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_ftpa_appellant_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nThe Upper Tribunal will review the application and make a decision.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_ftpa_appellant_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\r\nSend all information and documents related to this case to the Upper Tribunal.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_respondent_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_ftpa_respondent_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_ftpa_respondent_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nThe Upper Tribunal will review the application and make a decision.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_ftpa_respondent_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nThe Upper Tribunal will review the application and make a decision.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_ftpa_respondent_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\r\nSend all information and documents related to this case to the Upper Tribunal.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_appellant_part_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_ftpa_appellant_part_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_ftpa_appellant_part_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nThe Upper Tribunal will review the application and make a decision.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_ftpa_appellant_part_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nThe Upper Tribunal will review the application and make a decision.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_ftpa_appellant_part_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\r\nSend all information and documents related to this case to the Upper Tribunal.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_respondent_part_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_ftpa_respondent_part_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_ftpa_respondent_part_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nThe Upper Tribunal will review the application and make a decision.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_ftpa_respondent_part_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nThe Upper Tribunal will review the application and make a decision.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_ftpa_respondent_part_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\r\nSend all information and documents related to this case to the Upper Tribunal.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_appellant_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_ftpa_appellant_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_ftpa_appellant_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_ftpa_appellant_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe application for permission to appeal to the Upper Tribunal was refused. You can apply to the Upper Tribunal directly.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficePou_ftpa_appellant_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeGeneric_ftpa_appellant_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeApc_ftpa_appellant_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeLart_ftpa_appellant_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_respondent_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_ftpa_respondent_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_ftpa_respondent_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_ftpa_respondent_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_ftpa_respondent_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe application for permission to appeal to the Upper Tribunal was refused. You can apply to the Upper Tribunal directly.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_appellant_not_admitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_ftpa_appellant_not_admitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_ftpa_appellant_not_admitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_ftpa_appellant_not_admitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe application for permission to appeal to the Upper Tribunal was not admitted. You can apply to the Upper Tribunal directly.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficePou_ftpa_appellant_not_admitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeGeneric_ftpa_appellant_not_admitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeApc_ftpa_appellant_not_admitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeLart_ftpa_appellant_not_admitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_respondent_not_admitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_ftpa_respondent_not_admitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_ftpa_respondent_not_admitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_ftpa_respondent_not_admitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_ftpa_respondent_not_admitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe application for permission to appeal to the Upper Tribunal was not admitted. You can apply to the Upper Tribunal directly.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -1673,8 +2050,8 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaTabTitle", "Label": "# FTPA", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDetailsTitle", "Label": "## Respondent: application for permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDetailsTitle", "Label": "## Appellant: application for permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDetailsTitle", "Label": "## Appellant: Application for permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDetailsTitle", "Label": "## Home Office: Application for permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -1720,7 +2097,7 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionDocument", "Label": "FTPA Decision and Reasons document", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allFtpaRespondentDecisionDocs", "Label": "FTPA Respondent Decision and Reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allFtpaRespondentDecisionDocs", "Label": "FTPA Home Office Decision and Reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -1733,7 +2110,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionNotesPoints", "Label": "Tick any applicable points", "FieldType": "ftpaDecisionCheckList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionNotesDescription", "Label": "Provide any information that may be helpful to the Upper Tribunal judge",  "FieldType": "TextArea", "FieldTypeParameter": "ftpaDecisionReason", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentDecided", "Label": "Internal flag managed by API for ftpa respondent decided by leadership judge", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionDetails", "Label": "![]()\r\n## Respondent: Decision on permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionDetails", "Label": "![]()\r\n## Home Office: Decision on permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionDate", "Label": "Decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAppellantFtpaDecisionVisibleToAll", "Label": "Internal flag managed by API for leadership judge appellant ftpa decision visible to all", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isRespondentFtpaDecisionVisibleToAll", "Label": "Internal flag managed by API for leadership judge respondent ftpa decision visible to all", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -1761,5 +2138,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allocatedJudgeTitle", "Label": "Only record this after the Judge has been notified.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allocatedJudge", "Label": "Judge assigned to the application", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allocatedJudgeEdit", "Label": "Judge assigned to the application", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousJudgeAllocations", "Label": "Previous judges", "FieldType": "Collection", "FieldTypeParameter": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousJudgeAllocations", "Label": "Previous judges", "FieldType": "Collection", "FieldTypeParameter": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAppellantFtpaDecisionVisibleToRespondent", "Label": "Internal flag managed by API for leadership judge appellant ftpa decision visible to respondent", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isRespondentFtpaDecisionVisibleToAppellant", "Label": "Internal flag managed by API for leadership judge respondent ftpa decision visible to appellant", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionTitle", "Label": "![]()\r\n## FTPA decision", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionTitle", "Label": "![]()\r\n## FTPA decision", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 ]
