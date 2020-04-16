@@ -2400,6 +2400,18 @@
   }
 =======
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adjournHearingWithoutDateReasonsTitle", "Label": "The hearing will be adjourned and a new hearing date can be added in the future.\r\nBoth parties will be notified and a Notice of Adjournment will be generated.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+<<<<<<< HEAD
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adjournHearingWithoutDateReasons", "Label": "Reasons for adjournment", "HintText": "This will be visible to both parties", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
 >>>>>>> add adjourn event and pages for event
+=======
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adjournHearingWithoutDateReasons", "Label": "Reasons for adjournment", "HintText": "This will be visible to both parties", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_adjourned",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Hearing adjourned](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_hearing_adjourned.png)\r\n\r\n## Do this next\r\nThe hearing has been adjourned and there is no scheduled date for the hearing. You can view the reasons for this in the  [Hearing tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#hearing)\r\n\r\nWhen the appeal is ready to go to hearing click [here](https://raw.githubusercontent.com/iguannago/playground/master/vault/how-to-create-a-coming-soon-page-in-wordpress.png)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  }
+>>>>>>> configure the overview page for adjourned cases
 ]
