@@ -334,10 +334,14 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "legalRepresentativeEmailAddress", "TabFieldDisplayOrder": 68},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "legalRepReferenceNumber", "TabFieldDisplayOrder": 69},
 <<<<<<< HEAD
+<<<<<<< HEAD
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_adjourned", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"adjourned\" OR currentCaseStateVisibleToAdminOfficer=\"adjourned\""},
 =======
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_adjourned", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"adjourned\""},
 >>>>>>> configure the overview page for adjourned cases
+=======
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_adjourned", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"adjourned\" OR currentCaseStateVisibleToAdminOfficer=\"adjourned\""},
+>>>>>>> add AO role to use this feature
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "TabLabel": "Appeal", "TabDisplayOrder": 2, "CaseFieldID": "appealTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealTitle", "TabFieldDisplayOrder": 10, "FieldShowCondition": "reasonsForAppealDateUploaded=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealDateUploaded", "TabFieldDisplayOrder": 20, "FieldShowCondition": "reasonsForAppealDateUploaded=\"*\""},
