@@ -178,8 +178,11 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalEvidence", "Label": "Upload documents", "FieldType": "Collection", "FieldTypeParameter": "additionalEvidenceDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingTitle", "Label": "Add the hearing details below.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingCentre", "Label": "Hearing centre", "FieldType": "FixedList", "FieldTypeParameter": "hearingCentre", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addListCaseHearingCentre", "Label": "Hearing centre", "FieldType": "FixedList", "FieldTypeParameter": "hearingCentre", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingLength", "Label": "Length of hearing", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addListCaseHearingLength", "Label": "Length of hearing", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingDate", "Label": "Hearing date and time", "FieldType": "DateTime", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addListCaseHearingDate", "Label": "Hearing date and time", "FieldType": "DateTime", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseRequirementsTitle", "Label": "Enter the agreed hearing requirements in the fields below.<br>\r\nDon’t enter the reason the appellant made the request. The respondent will be shown this information and they must not be told of the appellant’s personal circumstances.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseRequirementsVulnerabilities", "Label": "Adjustments to accommodate vulnerabilities", "HintText": "If the appellant says they have any personal vulnerabilities, state what adjustments the Tribunal will offer.", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseRequirementsMultimedia", "Label": "Multimedia equipment", "HintText": "If the appellant needs multimedia equipment, state what the Tribunal will provide.", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
@@ -1797,6 +1800,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addendumEvidenceTitle", "Label": "You’ll need to explain why this evidence is being submitted after the hearing bundle has been produced.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addendumEvidence", "Label": "Evidence", "FieldType": "Collection", "FieldTypeParameter": "additionalAddendumDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ariaListingReference", "Label": "Listing reference", "HintText": "Example: LP/12345/2019", "FieldType": "Text", "RegularExpression": "[A-Za-z]{2}\\/[0-9]{5}\\/[0-9]{4}", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addAriaListingReference", "Label": "Listing reference", "HintText": "Example: LP/12345/2019", "FieldType": "Text", "RegularExpression": "[A-Za-z]{2}\\/[0-9]{5}\\/[0-9]{4}", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applications", "Label": "Applications", "FieldType": "Collection", "FieldTypeParameter": "application", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationsTitle", "Label": "The appellant or the respondent has made an application. Record the reasons and the outcome of the application. If the application has been granted, you may need to edit listing, edit direction due date or end the appeal.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationsTitle2", "Label": "Attach a copy of the application email and any other communication.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -1835,10 +1839,15 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "haveHearingAttendeesAndDurationBeenRecorded", "Label": "Internal flag managed by API", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "recordAttendeesAndDurationTitle", "Label": "Add the attendees and case duration below. If someone didn't attend, leave it blank.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendingJudge", "Label": "The judge", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addAttendingJudge", "Label": "The judge", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendingAppellant", "Label": "The appellant", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addAttendingAppellant", "Label": "The appellant", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendingAppellantsLegalRepresentative", "Label": "The appellant's legal representative", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addAttendingAppellantsLegalRepresentative", "Label": "The appellant's legal representative", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendingHomeOfficeLegalRepresentative", "Label": "The Home Office representative", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addAttendingHomeOfficeLegalRepresentative", "Label": "The Home Office representative", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "actualCaseHearingLength", "Label": "Duration", "FieldType": "hoursAndMinutes", "FieldTypeParameter": "hearingLength", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addActualCaseHearingLength", "Label": "Duration", "FieldType": "hoursAndMinutes", "FieldTypeParameter": "hearingLength", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealDecisionTitle", "Label": "![]()\r\n## Appeal decision", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealDecision", "Label": "Decision of appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealDate", "Label": "Decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
@@ -1973,6 +1982,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingTabTitle", "Label": "# Hearing", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "witnessCount", "Label": "How many witnesses will attend?", "FieldType": "Number", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRequirementsTabTitle", "Label": "![]()\r\n## Hearing requirements", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousHearingsTabTitle", "Label": "![]()\r\n## Previous hearings", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalAdjustmentsTitle", "Label": "![]()\r\n## Requests for additional adjustments\r\nThese requests are only visible to the Tribunal and appellant.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "datesToAvoidTabTitle", "Label": "![]()\r\n## Dates to avoid\r\nThese dates are only visible to the appellant and the Tribunal. When listing the case, take these dates into consideration where possible.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "recordOfHearingTitle", "Label": "![]()\r\n## Record of hearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -2034,6 +2045,7 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRecordingDocuments", "Label": "Hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addHearingRecordingDocuments", "Label": "Hearing recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "applicationChangeDesignatedHearingCentre",
@@ -2158,6 +2170,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionParty", "Label": "Party", "FieldType": "FixedList", "FieldTypeParameter": "parties", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionReason", "Label": "Why do you need more time?", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDecision", "Label": "Decision", "FieldType": "FixedRadioList", "FieldTypeParameter": "timeExtensionDecision", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDecisionReason", "Label": "Reason for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDecisionReason", "Label": "Reason for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousHearings", "Label": "Previous hearings", "FieldType": "Collection", "FieldTypeParameter": "hearing", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingType", "Label": "Hearing type", "FieldType": "FixedList", "FieldTypeParameter": "hearingType", "SecurityClassification": "PUBLIC"}
 ]

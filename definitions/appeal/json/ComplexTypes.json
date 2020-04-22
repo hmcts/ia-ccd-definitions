@@ -73,5 +73,18 @@
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "state", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionType", "ElementLabel": "Time extension requested for", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "status", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionStatus", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decision", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionDecision", "ElementLabel": "Decision", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decisionReason", "FieldType": "TextArea", "ElementLabel": "Decision reason", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decisionReason", "FieldType": "TextArea", "ElementLabel": "Decision reason", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "hearing", "ListElementCode": "hearingType", "FieldType": "FixedList", "FieldTypeParameter": "hearingType", "ElementLabel": "Hearing type", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearing", "ListElementCode": "attendingJudge", "FieldType": "Text", "ElementLabel": "The judge", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearing", "ListElementCode": "attendingAppellant", "FieldType": "Text", "ElementLabel": "The appellant", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearing", "ListElementCode": "attendingAppellantsLegalRepresentative", "FieldType": "Text", "ElementLabel": "The appellant's legal representative", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearing", "ListElementCode": "attendingHomeOfficeLegalRepresentative", "FieldType": "Text", "ElementLabel": "The Home Office representative", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearing", "ListElementCode": "actualCaseHearingLength", "FieldType": "hoursAndMinutes", "ElementLabel": "Actual length", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearing", "ListElementCode": "ariaListingReference", "FieldType": "Text", "ElementLabel": "Listing reference", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearing", "ListElementCode": "listCaseHearingCentre", "FieldType": "FixedList", "FieldTypeParameter": "hearingCentre", "ElementLabel": "Hearing centre", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearing", "ListElementCode": "listCaseHearingLength", "FieldType": "Text", "ElementLabel": "Length of hearing", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearing", "ListElementCode": "listCaseHearingDate", "FieldType": "Text", "ElementLabel": "Hearing date and time", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearing", "ListElementCode": "recordingDocuments", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "ElementLabel": "Recordings", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearing", "ListElementCode": "dateAdded", "FieldType": "Date", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC"}
 ]
