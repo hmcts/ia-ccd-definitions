@@ -985,6 +985,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_awaitingClarifyingQuestions",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Respondent evidence uploaded](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_caseBuilding.png)\r\n\r\n## Do this next\r\nThe appellant has been directed to answer clarifying questions. You will be notified when their answers are ready to review.<br><br><br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_timeExtensionRequested",
     "Label": "The appellant has requested a time extension. Review the request in the [applications tab](/cases/case-details/${[CASE_REFERENCE]}/#applications)",
     "FieldType": "Label",
@@ -2165,5 +2173,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAnsweringClarifyingQuestions", "Label": "Is the appellant answering clarifying questions?", "FieldType": "YesOrNo","SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "clarifyingQuestionsAnswers", "Label": "Clarifying Questions and Answers", "FieldType": "Collection", "FieldTypeParameter": "clarifyingQuestionAnswer", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sendDirectionQuestions", "Label": "Questions", "FieldType": "Collection", "FieldTypeParameter": "clarifyingQuestion", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "clarifyingQuestionsTitle", "Label": "![]()\n## Clarifying Questions", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "clarifyingQuestionsTitle", "Label": "![]()\n## Clarifying Questions", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sendDirectionWithQuestionsTitle", "Label": "![]()\n## Direct the appellant to answer clarifying questions", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 ]
