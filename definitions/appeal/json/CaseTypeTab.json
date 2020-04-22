@@ -382,7 +382,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "TabLabel": "Applications", "TabDisplayOrder": 7, "CaseFieldID": "applicationsTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "recordApplicationActionDisabled", "TabFieldDisplayOrder": 2, "FieldShowCondition": "recordApplicationActionDisabled=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "applicationLink", "TabFieldDisplayOrder": 3, "FieldShowCondition": "recordApplicationActionDisabled!=\"Yes\" AND currentCaseStateVisibleToCaseOfficer!=\"ftpaSubmitted\" AND currentCaseStateVisibleToCaseOfficer!=\"ftpaDecided\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "timeExtensionLink", "TabFieldDisplayOrder": 4},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "timeExtensionLink", "TabFieldDisplayOrder": 4, "FieldShowCondition": "journeyType=\"aip\" AND reviewTimeExtensionRequired=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "applications", "TabFieldDisplayOrder": 5},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "timeExtensions", "TabFieldDisplayOrder": 6},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRep_submitHearingRequirements", "TabFieldDisplayOrder": 19, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"submitHearingRequirements\""},
