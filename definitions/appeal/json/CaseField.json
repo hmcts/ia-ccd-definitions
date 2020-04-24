@@ -18,13 +18,43 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantHasFixedAddressLabel", "Label": "**We will use the address of your legal practice.**", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantAddress", "Label": "Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "searchPostcode", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTypeTitle", "Label": "# What type of decision is your client appealing against?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "appellantContactPreferenceTitle",
+    "Label": "# The appellant's contact preference\r\nSelect the communication method which best suits the appellant. \r\n\r\n The Tribunal needs this to: \r\n- provide standard guidance on the appeal process\r\n- update the appellant at key points in the appeal\r\n- send the Hearing Notice and guidance on what to expect at hearing\r\n- contact the appellant if, for any reason, your representation ends",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "contactPreference", "Label": "Communication Preference", "FieldType": "FixedRadioList", "FieldTypeParameter": "contactPreference","SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "email", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "mobileNumber", "Label": "Mobile phone number", "FieldType": "Text", "RegularExpression": "^((\\+44(\\s\\(0\\)\\s|\\s0\\s|\\s)?)|0)7\\d{3}(\\s)?\\d{6}$", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTypeTitle", "Label": "# Type of appeal\r\nSelect the appeal type that best fits your case. If you want to raise something relating to another appeal type, you can do this latter.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealType", "Label": "Type of appeal", "FieldType": "FixedRadioList", "FieldTypeParameter": "appealType", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsProtectionTitle", "Label": "# On which grounds will you build your appeal?\r\n\r\nYou'll be able to explain your grounds later.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsEuRefusalTitle", "Label": "# The grounds of your appeal\r\n\r\nYou'll be able to explain your grounds in more detail later.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsEuRefusal", "Label": "The decision breaches the appellant's rights under the EEA regulations / EU settlement scheme(in respect of entry to or residence in the United Kingdom)", "FieldType": "appealGroundsEuRefusal", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsHumanRightsRefusalTitle", "Label": "# The grounds of your appeal\r\n\r\nYou'll be able to explain your grounds in more detail later.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsHumanRightsRefusal", "Label": "The decision is unlawful under section 6 of the Human Rights Act", "FieldType": "appealGroundsHumanRightsRefusal", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsDeprivationTitle", "Label": "# The grounds of your appeal\r\n\r\nYou'll be able to explain your grounds in more detail later.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsDeprivation", "Label": "Appeal grounds", "FieldType": "appealGroundsDeprivation", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsDeprivationHumanRightsTitle", "Label": "## Human rights grounds", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsDeprivationHumanRights", "Label": "Appeal grounds", "FieldType": "appealGroundsHumanRights", "SecurityClassification": "PUBLIC"},
+
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsProtectionTitle", "Label": "# The grounds of your appeal\r\n\r\nYou'll be able to explain your grounds in more detail later.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsProtection", "Label": "Appeal grounds", "FieldType": "appealGroundsProtection", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsHumanRights", "Label": "Appeal grounds (Human Rights Act 1998)", "FieldType": "appealGroundsHumanRights", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsRevocationTitle", "Label": "# On which grounds will you build your appeal?\r\n\r\nYou'll be able to explain your grounds later.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsProtectionHumanRightsTitle", "Label": "## Human rights grounds", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsHumanRights", "Label": "Appeal grounds", "FieldType": "appealGroundsHumanRights", "SecurityClassification": "PUBLIC"},
+
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsRevocationTitle", "Label": "# The grounds of your appeal\r\n\r\nYou'll be able to explain your grounds later.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsRevocation", "Label": "Appeal grounds", "FieldType": "appealGroundsRevocation", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "newMattersTitle", "Label": "# New matters", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasNewMatters", "Label": "Are there any new reasons your client wishes to remain in the UK or any new grounds on which they should be permitted to stay?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "newMatters", "Label": "Explain these new matters and their relevance to the appeal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
