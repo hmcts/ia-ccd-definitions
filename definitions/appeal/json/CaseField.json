@@ -2205,6 +2205,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sendDirectionQuestions", "Label": "Questions", "FieldType": "Collection", "FieldTypeParameter": "clarifyingQuestion", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "clarifyingQuestionsTitle", "Label": "![]()\n## Clarifying Questions", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sendDirectionWithQuestionsTitle", "Label": "![]()\n## Direct the appellant to answer clarifying questions", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAppellantMinor", "Label": "Appellant is under the age of 18", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "flagCaseDescription", "Label": "This flag will only be visible to the Tribunal.\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "flagCaseTypeOfFlag", "Label": "Type of flag", "FieldType": "FixedList", "FieldTypeParameter": "caseFlags", "SecurityClassification": "PUBLIC"},
