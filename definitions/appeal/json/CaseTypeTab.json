@@ -481,5 +481,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "ftpaRespondentDecisionNotesDescription", "TabFieldDisplayOrder": 27, "FieldShowCondition": "ftpaRespondentDecisionNotesDescription!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "tribunalNotesTitle", "TabFieldDisplayOrder": 28, "FieldShowCondition": "allocatedJudge=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "allocatedJudge", "TabFieldDisplayOrder": 29, "FieldShowCondition": "allocatedJudge=\"*\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "previousJudgeAllocations", "TabFieldDisplayOrder": 30, "FieldShowCondition": "previousJudgeAllocations=\"*\""}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "previousJudgeAllocations", "TabFieldDisplayOrder": 30, "FieldShowCondition": "previousJudgeAllocations=\"*\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "links", "TabLabel": "Linked cases", "TabDisplayOrder": 10, "CaseFieldID": "testCaseLink", "TabFieldDisplayOrder": 1}
 ]

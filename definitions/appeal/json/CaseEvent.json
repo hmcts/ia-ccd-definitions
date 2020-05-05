@@ -1100,5 +1100,21 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit"
+  },
+  {
+    "LiveFrom": "27/04/2020",
+    "CaseTypeID": "Asylum",
+    "ID": "addCaseLink",
+    "Name": "Add case link",
+    "Description": "Adding a link to another case",
+    "DisplayOrder": 46,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLSubmittedEvent": "",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Link"
   }
 ]
