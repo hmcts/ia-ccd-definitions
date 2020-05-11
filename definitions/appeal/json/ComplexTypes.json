@@ -80,13 +80,15 @@
   {"LiveFrom": "01/01/2018", "ID": "ftpaDecisionCheckList", "ListElementCode": "specialDifficulty", "FieldType": "MultiSelectList", "FieldTypeParameter": "specialDifficulty", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaDecisionCheckList", "ListElementCode": "specialReasons", "FieldType": "MultiSelectList", "FieldTypeParameter": "specialReasons", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaDecisionCheckList", "ListElementCode": "countryGuidance", "FieldType": "MultiSelectList", "FieldTypeParameter": "countryGuidance", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "requestedDate", "FieldType": "Date", "ElementLabel": "Date requested", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "requestDate", "FieldType": "Date", "ElementLabel": "Date requested", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "reason", "FieldType": "TextArea", "ElementLabel": "Reason for time extension", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Reason for time extension evidence", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "state", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionType", "ElementLabel": "Time extension requested for", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "status", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionStatus", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decision", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionDecision", "ElementLabel": "Decision", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decisionReason", "FieldType": "TextArea", "ElementLabel": "Decision reason", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decisionOutcomeDate", "FieldType": "Date", "ElementLabel": "Decision outcome due date reason", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "caseFlag", "ListElementCode": "caseFlagType", "FieldType": "FixedList", "FieldTypeParameter": "caseFlags", "ElementLabel": "Flag type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "caseFlag", "ListElementCode": "caseFlagAdditionalInformation", "FieldType": "TextArea", "ElementLabel": "Additional information", "SecurityClassification": "PUBLIC"}
+
 ]
