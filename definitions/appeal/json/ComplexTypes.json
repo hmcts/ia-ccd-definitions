@@ -10,7 +10,7 @@
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsProtection", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsProtection", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsHumanRights", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsHumanRights", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsRevocation", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsRevocation", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist1", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist1", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist1", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist1", "ElementLabel": " ", "FieldShowCondition": "checklist1=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist2", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist2", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist3", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist3", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist4", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist4", "ElementLabel": " ", "FieldShowCondition": "checklist4=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
@@ -87,5 +87,8 @@
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "status", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionStatus", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decision", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionDecision", "ElementLabel": "Decision", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decisionReason", "FieldType": "TextArea", "ElementLabel": "Decision reason", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decisionOutcomeDate", "FieldType": "Date", "ElementLabel": "Decision outcome due date reason", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decisionOutcomeDate", "FieldType": "Date", "ElementLabel": "Decision outcome due date reason", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "caseFlag", "ListElementCode": "caseFlagType", "FieldType": "FixedList", "FieldTypeParameter": "caseFlags", "ElementLabel": "Flag type", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "caseFlag", "ListElementCode": "caseFlagAdditionalInformation", "FieldType": "TextArea", "ElementLabel": "Additional information", "SecurityClassification": "PUBLIC"}
+
 ]
