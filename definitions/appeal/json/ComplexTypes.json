@@ -1,20 +1,18 @@
 [
   {"LiveFrom": "01/01/2018", "ID": "appealNumber", "ListElementCode": "value", "FieldType": "Text", "ElementLabel": " ", "RegularExpression": "^(RP|PA|EA|HU|DC|DA|AA|IA|OA|VA)\\/[0-9]{5}\\/[0-9]{4}$", "SecurityClassification": "PUBLIC"},
-
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsDeprivation", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsDeprivation", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsDeprivationHumanRights", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsDeprivationHumanRights", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
-
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsHumanRightsRefusal", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsHumanRightsRefusal", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsEuRefusal", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsEuRefusal", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
-
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsProtection", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsProtection", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsHumanRights", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsHumanRights", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsRevocation", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsRevocation", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist5", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist5", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist1", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist1", "ElementLabel": " ", "FieldShowCondition": "checklist1=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist2", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist2", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist7", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist7", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist3", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist3", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist4", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist4", "ElementLabel": " ", "FieldShowCondition": "checklist4=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist5", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist5", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist6", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist6", "ElementLabel": " ", "FieldShowCondition": "checklist6=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "previousDates", "ListElementCode": "dateDue", "FieldType": "Date", "ElementLabel": "Date due", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "previousDates", "ListElementCode": "dateSent", "FieldType": "Date", "ElementLabel": "Date sent", "SecurityClassification": "PUBLIC"},
@@ -77,7 +75,7 @@
   {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "languageDialect", "FieldType": "Text", "ElementLabel": "Dialect", "HintText": "Enter N/A if no dialect required", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "datesToAvoid", "ListElementCode": "dateToAvoid", "FieldType": "Date", "ElementLabel": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "datesToAvoid", "ListElementCode": "dateToAvoidReason", "FieldType": "TextArea", "ElementLabel": "Reason", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "hearingRecordingDocument", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Audio file", "RegularExpression": ".mp3" ,"SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingRecordingDocument", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Audio file", "RegularExpression": ".mp3", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingRecordingDocument", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Describe the file", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaDecisionCheckList", "ListElementCode": "specialDifficulty", "FieldType": "MultiSelectList", "FieldTypeParameter": "specialDifficulty", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaDecisionCheckList", "ListElementCode": "specialReasons", "FieldType": "MultiSelectList", "FieldTypeParameter": "specialReasons", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
@@ -92,5 +90,4 @@
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decisionOutcomeDate", "FieldType": "Date", "ElementLabel": "Decision outcome due date reason", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "caseFlag", "ListElementCode": "caseFlagType", "FieldType": "FixedList", "FieldTypeParameter": "caseFlags", "ElementLabel": "Flag type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "caseFlag", "ListElementCode": "caseFlagAdditionalInformation", "FieldType": "TextArea", "ElementLabel": "Additional information", "SecurityClassification": "PUBLIC"}
-
 ]
