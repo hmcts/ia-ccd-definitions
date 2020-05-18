@@ -34,11 +34,13 @@
   {"LiveFrom": "01/01/2018", "ID": "contactPreference", "ListElementCode": "wantsEmail", "ListElement": "Email"},
 
   {"LiveFrom": "01/01/2018", "ID": "checklist1", "ListElementCode": "isAdult", "ListElement": "My client is at least 18 years old"},
-  {"LiveFrom": "01/01/2018", "ID": "checklist2", "ListElementCode": "isNotDetained", "ListElement": "My client is not currently in detention"},
-  {"LiveFrom": "01/01/2018", "ID": "checklist3", "ListElementCode": "isNotFamilyAppeal", "ListElement": "My client isn't appealing with other people as part of a family appeal"},
   {"LiveFrom": "01/01/2018", "ID": "checklist4", "ListElementCode": "isWithinPostcode", "ListElement": "My client is located in one of these postcodes: BN, CB, CM, HP, IP, ME, N, NR, RH, SE, TN, W, L, LA, M, OL, PR, SK, WA, WN"},
-  {"LiveFrom": "01/01/2018", "ID": "checklist5", "ListElementCode": "isResidingInUK", "ListElement": "My client is presently in the UK"},
+  {"LiveFrom": "01/01/2018", "ID": "checklist5", "ListElementCode": "isResidingInUK", "ListElement": "My client is living in the UK"},
+  {"LiveFrom": "01/01/2018", "ID": "checklist2", "ListElementCode": "isNotDetained", "ListElement": "My client is not in detention"},
+  {"LiveFrom": "01/01/2018", "ID": "checklist7", "ListElementCode": "isNotEUDecision", "ListElement": "My client is not appealing an EU Settlement Scheme decision"},
+  {"LiveFrom": "01/01/2018", "ID": "checklist3", "ListElementCode": "isNotFamilyAppeal", "ListElement": "My client is not appealing with anyone else as part of a linked or grouped appeal"},
   {"LiveFrom": "01/01/2018", "ID": "checklist6", "ListElementCode": "isNotStateless", "ListElement": "My client is not stateless"},
+  
   {"LiveFrom": "01/01/2018", "ID": "directionStatus", "ListElementCode": "outstanding", "ListElement": "Outstanding"},
   {"LiveFrom": "01/01/2018", "ID": "directionStatus", "ListElementCode": "completed", "ListElement": "Completed"},
   {"LiveFrom": "01/01/2018", "ID": "hearingCentre", "ListElementCode": "newport", "ListElement": "Newport"},
