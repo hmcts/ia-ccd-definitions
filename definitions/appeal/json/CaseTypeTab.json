@@ -257,6 +257,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_ftpa_appellant_in_progress", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"ftpaSubmitted\" AND ftpaAppellantSubmitted=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_ftpa_in_progress", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ftpaSubmitted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeAll_ftpa_respondent_in_progress", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeAll=\"ftpaSubmitted\" AND ftpaRespondentSubmitted=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_aip_awaitingCmaRequirements", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"awaitingCmaRequirements\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagAnonymityExists", "TabFieldDisplayOrder": 50, "FieldShowCondition": "caseFlagAnonymityExists=\"DUMMY_VALUE\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagComplexCaseExists", "TabFieldDisplayOrder": 51, "FieldShowCondition": "caseFlagComplexCaseExists=\"DUMMY_VALUE\""},
@@ -411,7 +412,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "directions", "CaseFieldID": "sendDirectionAction", "TabFieldDisplayOrder": 4, "FieldShowCondition": "sendDirectionActionAvailable=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "directions", "CaseFieldID": "changeDirectionDueDateAction", "TabFieldDisplayOrder": 5, "FieldShowCondition": "changeDirectionDueDateActionAvailable=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "directions", "CaseFieldID": "sendDirectionWithQuestionsLink", "TabFieldDisplayOrder": 6, "FieldShowCondition": "journeyType=\"aip\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "directions", "CaseFieldID": "directions", "TabFieldDisplayOrder": 7},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "directions", "CaseFieldID": "requestCmaRequirementsLink", "TabFieldDisplayOrder": 7, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"respondentReview\" OR currentCaseStateVisibleToCaseOfficer=\"reasonsForAppealSubmitted\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "directions", "CaseFieldID": "directions", "TabFieldDisplayOrder": 8},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseNotes", "TabLabel": "Case notes", "TabDisplayOrder": 6, "CaseFieldID": "caseNotesTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseNotes", "CaseFieldID": "addCaseNoteActionDisabled", "TabFieldDisplayOrder": 2, "FieldShowCondition": "addCaseNoteActionDisabled=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseNotes", "CaseFieldID": "addCaseNoteLink", "TabFieldDisplayOrder": 3, "FieldShowCondition": "addCaseNoteActionDisabled!=\"Yes\""},

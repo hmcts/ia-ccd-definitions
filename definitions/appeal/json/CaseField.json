@@ -1,5 +1,13 @@
 [
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistTitle", "Label": "# Tell us about your client", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "checklistTitle2",
+    "Label": "If you cannot use the new online service due to your client's circumstances, you can <a href=\"https://immigrationappealsonline.justice.gov.uk/IACFees\" target=\"_blank\">appeal using the current online service</a> or appeal by post or fax using <a href=\"https://www.gov.uk/government/publications/appeal-a-visa-or-immigration-decision-within-the-uk-form-iaft-5\" target=\"_blank\">form IAFT-5</a>.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklist", "Label": " ", "FieldType": "checklist", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeDecisionTitle", "Label": "# Home office details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeReferenceNumber", "Label": "Home Office reference", "FieldType": "Text", "RegularExpression": "^[A-Za-z][0-9]{6}[0-9]?(|\\/[0-9][0-9]?[0-9]?)$", "SecurityClassification": "PUBLIC"},
@@ -1788,6 +1796,14 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_aip_awaitingCmaRequirements",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Case under review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_caseUnderReview.png)\r\n\r\n## What happens next\r\n\r\nThe appellant will be directed to submit requirements for a case management appointment. You will be notified when they are ready to review.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseDetailsTitle", "Label": "![]()\r\n## Case details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingDetailsTitle", "Label": "![]()\r\n## Hearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingAttendanceTitle", "Label": "![]()\r\n## Hearing attendance", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -1843,6 +1859,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationLink", "Label": "[Record an application](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordApplication)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "timeExtensionLink", "Label": "[Review a time extension application](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewTimeExtension)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sendDirectionWithQuestionsLink", "Label": "[Direct the appellant to answer clarifying questions](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/sendDirectionWithQuestions)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCmaRequirementsLink", "Label": "[Direct the appellant to submit requirements for a case management appointment](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestCmaRequirements)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationSupplier", "Label": "Application from", "FieldType": "FixedRadioList", "FieldTypeParameter": "applicationSupplier", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationType", "Label": "Type of application", "FieldType": "FixedList", "FieldTypeParameter": "applicationType", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationReason", "Label": "Reason for application", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
@@ -2241,6 +2258,11 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonsForAppealTitle", "Label": "![]()\n## Reason for appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonsForAppealDateUploaded", "Label": "Date uploaded", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submitTimeExtensionReason", "Label": "Time Extension Reason", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submitTimeExtensionEvidence", "Label": "Time Extension Evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submitTimeExtensionEvidence", "Label": "Time Extension Evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCmaRequirementsTitle", "Label": "Direct the appellant to submit requirements for a case management appointment", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCmaRequirementsReasons", "Label": "Reasons for appointment", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+
 ]
