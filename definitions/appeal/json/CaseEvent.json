@@ -1187,7 +1187,7 @@
     "Description": "Edit CMA requirements",
     "DisplayOrder": 47,
     "PreConditionState(s)": "awaitingCmaRequirements",
-    "PostConditionState": "awaitingCmaRequirements",
+    "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
