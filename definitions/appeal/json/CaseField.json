@@ -39,7 +39,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "email", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "mobileNumber", "Label": "Mobile phone number", "FieldType": "Text", "RegularExpression": "^((\\+44(\\s\\(0\\)\\s|\\s0\\s|\\s)?)|0)7\\d{3}(\\s)?\\d{6}$", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTypeTitle", "Label": "# Type of appeal\r\nSelect the appeal type that best fits your case. If you want to raise something relating to another appeal type, you can do this latter.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTypeTitle", "Label": "# Type of appeal\r\nSelect the appeal type that best fits your case. If you want to raise something relating to another appeal type, you can do this later.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealType", "Label": "Type of appeal", "FieldType": "FixedRadioList", "FieldTypeParameter": "appealType", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsEuRefusalTitle", "Label": "# The grounds of your appeal\r\n\r\nYou'll be able to explain your grounds in more detail later.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -396,12 +396,12 @@
     "SecurityClassification": "PUBLIC"
   },
   {
-  "LiveFrom": "01/01/2018",
-  "CaseTypeID": "Asylum",
-  "ID": "progress_legalRepresentative_respondentReview_appeal_response",
-  "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Respondent review appeal response](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/RIA-2048-legal-rep-image/app/assets/images/legalRep_respondentReview_appeal_response.png)\r\n\r\n## Do this next\r\nThe Home Office is proceeding with the case and you've been directed to review their response in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#documents).\r\n\r\n If you want to respond to the Home Office, you should contact The Tribunal within 5 working days or the case will automatically proceed to a hearing.\r\n\r\nIf you want to continue the appeal without responding, you can [proceed to a hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature). If not, you should apply to the Tribunal to withdraw the appeal.",
-  "FieldType": "Label",
-  "SecurityClassification": "PUBLIC"
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_respondentReview_appeal_response",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Respondent review appeal response](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/RIA-2048-legal-rep-image/app/assets/images/legalRep_respondentReview_appeal_response.png)\r\n\r\n## Do this next\r\nThe Home Office is proceeding with the case and you've been directed to review their response in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#documents).\r\n\r\n If you want to respond to the Home Office, you should contact The Tribunal within 5 working days or the case will automatically proceed to a hearing.\r\n\r\nIf you want to continue the appeal without responding, you can [proceed to a hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature). If not, you should apply to the Tribunal to withdraw the appeal.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
   },
   {
     "LiveFrom": "01/01/2018",
