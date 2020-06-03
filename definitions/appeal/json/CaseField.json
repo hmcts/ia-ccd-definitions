@@ -299,6 +299,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionAndReasonsAvailable", "Label": "Internal flag managed by API to enable/disable appeal response in appeal tab", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantSubmitted", "Label": "Internal flag managed by API to enable appellant fields in FTPA tab", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentSubmitted", "Label": "Internal flag managed by API to enable appellant fields in FTPA tab", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stitchingStatus", "Label": "Internal flag managed by API to identify if final bundling stitching is complete", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "bundleFileNamePrefix", "Label": "Internal flag managed by API to identify final bundling file name prefix", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionAllowedTitle", "Label": "## What is your decision?  \r\n\r\nIf the appeal is dismissed on all grounds, select 'Dismissed on all grounds'. If the appeal is allowed on any grounds, you must select 'Allowed'.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionAllowed", "Label": "Decision", "FieldType": "FixedRadioList", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadDecisionAndReasonsTitle", "Label": "## Upload your decision and reasons  ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -2452,6 +2454,22 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_stitching_failed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.png)\r\n\r\n## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing.\r\n\r\n[Generate hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_finalBundling_in_progress",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.png)\r\n\r\n## What to do next\r\nThe hearing bundle is being generated. You will soon be able to view the hearing bundle in the documents tab.\r\n\r\nYou and the other parties will be notified when the hearing bundle is available.\r\n\r\nIf the bundle fails to generate, you will be notified and need to generate the bundle again.</br></br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_judge_finalBundling",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.png)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will generate a hearing bundle for all parties to use at the hearing.",
     "FieldType": "Label",
@@ -3250,6 +3268,8 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCmaRequirementsTitle", "Label": "Direct the appellant to submit requirements for a case management appointment", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCmaRequirementsReasons", "Label": "Reasons for appointment", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "bundleConfiguration", "Label": "Bundle Configuration", "FieldType": "Text", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseBundles", "Label": "Case bundles", "HintText": "Bundle to hold documents", "FieldType": "Collection", "FieldTypeParameter": "Bundle", "SecurityClassification": "Public"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewCmaRequirementsTitle", "Label": "Review the appellant's case management appointment requirements and select length of appointment.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "pastExperiencesAdjustmentRequestTitle", "Label": "\n## Adjustment request", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
