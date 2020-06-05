@@ -953,7 +953,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeApc_awaitingRespondentEvidence",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Submit evidence](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_uploadBundle.png)\r\n\r\n## Do this next\r\nAn appeal against the Home Office decision in this case has been submitted. You can view the appeal form in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#documents).\r\n\r\nIf you accept that there is a right of appeal you should [upload the Home Office bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadHomeOfficeBundle).\r\n\r\nIf you consider the appeal is not valid, you should contact the Tribunal and the appellant with your reasons.<br><br><br>",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Submit evidence](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_uploadBundle.png)\r\n\r\n## Do this next\r\nAn appeal against the Home Office decision in this case has been submitted. You can view the appeal form in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#documents).\r\n\r\nIf you accept that there is a right of appeal you should [upload the Home Office bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadRespondentBundle).\r\n\r\nIf you consider the appeal is not valid, you should contact the Tribunal and the appellant with your reasons.<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -977,7 +977,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeGeneric_awaitingRespondentEvidence",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Submit evidence](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_uploadBundle.png)\r\n\r\n## Do this next\r\nAn appeal against the Home Office decision in this case has been submitted. You can view the appeal form in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#documents).\r\n\r\nIf you accept that there is a right of appeal you should [upload the Home Office bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadHomeOfficeBundle).\r\n\r\nIf you consider the appeal is not valid, you should contact the Tribunal and the appellant with your reasons.<br><br><br>",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Submit evidence](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_uploadBundle.png)\r\n\r\n## Do this next\r\nAn appeal against the Home Office decision in this case has been submitted. You can view the appeal form in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#documents).\r\n\r\nIf you accept that there is a right of appeal you should [upload the Home Office bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadRespondentBundle).\r\n\r\nIf you consider the appeal is not valid, you should contact the Tribunal and the appellant with your reasons.<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -2232,7 +2232,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "flagCaseAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagsTitle", "Label": "## Flags\r\n\r\nThese flags are only visible to the Tribunal.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlags", "Label": "Directions", "FieldType": "Collection", "FieldTypeParameter": "caseFlag", "SecurityClassification": "PUBLIC"},
-  
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAnonymityExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagComplexCaseExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagDeportExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -2241,7 +2241,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagPotentiallyViolentPersonExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnacceptableCustomerBehaviourExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnaccompaniedMinorExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAnonymityAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagComplexCaseAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagDeportAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
@@ -2250,7 +2250,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagPotentiallyViolentPersonAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnacceptableCustomerBehaviourAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnaccompaniedMinorAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAnonymityImage", "Label": "![Image of Anonymity flag](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagAnonymity.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagComplexCaseImage", "Label": "![Image of Complex case flag](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagComplexCase.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagDeportImage", "Label": "![Image of Complex case flag](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagDeport.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -2270,6 +2270,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submitTimeExtensionEvidence", "Label": "Time Extension Evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCmaRequirementsTitle", "Label": "Direct the appellant to submit requirements for a case management appointment", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCmaRequirementsReasons", "Label": "Reasons for appointment", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCmaRequirementsReasons", "Label": "Reasons for appointment", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseHistory", "Label": "History", "FieldType": "CaseHistoryViewer", "SecurityClassification": "PUBLIC"}
 
 ]
