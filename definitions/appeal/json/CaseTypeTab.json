@@ -391,8 +391,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantAddress", "TabFieldDisplayOrder": 10},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "contactPreference", "TabFieldDisplayOrder": 10},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "email", "TabFieldDisplayOrder": 10},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "mobileNumber", "TabFieldDisplayOrder": 10},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "email", "TabFieldDisplayOrder": 10, "FieldShowCondition": "contactPreference=\"wantsEmail\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "mobileNumber", "TabFieldDisplayOrder": 10, "FieldShowCondition": "contactPreference=\"wantsSms\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepresentativeDetailsTitle", "TabFieldDisplayOrder": 11},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepDetailsUpdateLink", "TabFieldDisplayOrder": 12, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative!=\"appealStarted\""},
