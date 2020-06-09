@@ -281,7 +281,7 @@
     "TabID": "overview",
     "CaseFieldID": "caseFlagsTitle",
     "TabFieldDisplayOrder": 100,
-    "FieldShowCondition": "caseFlagAnonymityExists=\"Yes\" OR caseFlagComplexCaseExists=\"Yes\" OR caseFlagDetainedImmigrationAppealExists=\"Yes\" OR caseFlagForeignNationalOffenderExists=\"Yes\" OR caseFlagPotentiallyViolentPersonExists=\"Yes\" OR caseFlagUnacceptableCustomerBehaviourExists=\"Yes\" OR caseFlagUnaccompaniedMinorExists=\"Yes\""
+    "FieldShowCondition": "caseFlagDeportExists=\"Yes\" OR caseFlagAnonymityExists=\"Yes\" OR caseFlagComplexCaseExists=\"Yes\" OR caseFlagDetainedImmigrationAppealExists=\"Yes\" OR caseFlagForeignNationalOffenderExists=\"Yes\" OR caseFlagPotentiallyViolentPersonExists=\"Yes\" OR caseFlagUnacceptableCustomerBehaviourExists=\"Yes\" OR caseFlagUnaccompaniedMinorExists=\"Yes\""
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagAnonymityImage", "TabFieldDisplayOrder": 101, "FieldShowCondition": "caseFlagAnonymityExists=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagAnonymityAdditionalInformation", "TabFieldDisplayOrder": 102, "FieldShowCondition": "caseFlagAnonymityExists=\"Yes\" AND caseFlagAnonymityAdditionalInformation!=\"\""},
