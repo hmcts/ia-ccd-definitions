@@ -578,12 +578,18 @@
   {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "anonymity", "ListElement": "Anonymity"},
   {"LiveFrom": "01/01/2018", "ID": "hearingTypes", "ListElementCode": "hearing", "ListElement": "Hearing"},
   {"LiveFrom": "01/01/2018", "ID": "hearingTypes", "ListElementCode": "appointment", "ListElement": "Appointment"},
-  
+
   {"LiveFrom": "01/01/2018", "ID": "reasonForLinkAppealOptions", "ListElementCode": "Other appeal decided", "ListElement": "Other appeal decided"},
   {"LiveFrom": "01/01/2018", "ID": "reasonForLinkAppealOptions", "ListElementCode": "Other appeal pending", "ListElement": "Other appeal pending"},
   {"LiveFrom": "01/01/2018", "ID": "reasonForLinkAppealOptions", "ListElementCode": "Home Office request", "ListElement": "Home Office request"},
   {"LiveFrom": "01/01/2018", "ID": "reasonForLinkAppealOptions", "ListElementCode": "Bail", "ListElement": "Bail"},
   {"LiveFrom": "01/01/2018", "ID": "reasonForLinkAppealOptions", "ListElementCode": "Guardian", "ListElement": "Guardian"},
   {"LiveFrom": "01/01/2018", "ID": "reasonForLinkAppealOptions", "ListElementCode": "Shared evidence", "ListElement": "Shared evidence"},
-  {"LiveFrom": "01/01/2018", "ID": "reasonForLinkAppealOptions", "ListElementCode": "Familial", "ListElement": "Familial"}
+  {"LiveFrom": "01/01/2018", "ID": "reasonForLinkAppealOptions", "ListElementCode": "Familial", "ListElement": "Familial"},
+
+  {"LiveFrom": "01/01/2018", "ID": "paymentPreference", "ListElementCode": "payNow", "ListElement": "Pay and submit the appeal now"},
+  {"LiveFrom": "01/01/2018", "ID": "paymentPreference", "ListElementCode": "payLater", "ListElement": "Submit the appeal now and pay within 14 days"},
+  {"LiveFrom": "01/01/2018", "ID": "decisionHearingFeeOption", "ListElementCode": "decisionWithoutHearing", "ListElement": "Decision without a hearing. The fee for this type of appeal is £80"},
+  {"LiveFrom": "01/01/2018", "ID": "decisionHearingFeeOption", "ListElementCode": "decisionWithHearing", "ListElement": "Decision with a hearing. The fee for this type of appeal is £140"}
+
 ]
