@@ -2288,5 +2288,13 @@
     "Label": "Reasons to force the case progression",
     "FieldType": "TextArea",
     "SecurityClassification": "PUBLIC"
-  }
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaTitle", "Label": "![]()\n## Attendees", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaDurationTitle", "Label": "![]()\n## Duration", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaAppRecordingsTitle", "Label": "![]()\n## Appointment recordings (optional)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmAppSummaryTitle", "Label": "![]()\n## Appointment summary", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaDesc", "Label": "Add the attendees and case duration below. If someone didn't attend. leave it blank.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendingTCW", "Label": "The Tribunal Caseworker", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appointmentSummary", "Label": "Appointment summary", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appointments", "Label": "Appointment", "FieldTypeParameter": "appointment", "FieldType": "Collection", "SecurityClassification": "PUBLIC"}
 ]
