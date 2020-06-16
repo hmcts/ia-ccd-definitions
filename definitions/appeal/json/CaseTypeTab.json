@@ -379,11 +379,12 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "mobileNumber", "TabFieldDisplayOrder": 10},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepresentativeDetailsTitle", "TabFieldDisplayOrder": 11},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepName", "TabFieldDisplayOrder": 12},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepCompany", "TabFieldDisplayOrder": 13},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepresentativeEmailAddress", "TabFieldDisplayOrder": 14},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepReferenceNumber", "TabFieldDisplayOrder": 15},
-
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepDetailsUpdateLink", "TabFieldDisplayOrder": 12, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative!=\"appealStarted\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepName", "TabFieldDisplayOrder": 13},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepCompany", "TabFieldDisplayOrder": 14},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepresentativeEmailAddress", "TabFieldDisplayOrder": 15},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepReferenceNumber", "TabFieldDisplayOrder": 16},
+  
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "TabLabel": "Documents", "TabDisplayOrder": 4, "CaseFieldID": "documentsTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "allFtpaAppellantDecisionDocs", "TabFieldDisplayOrder": 2, "FieldShowCondition": "isFtpaAppellantDecided=\"Yes\" OR isAppellantFtpaDecisionVisibleToAll=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "ftpaAppellantDocuments", "TabFieldDisplayOrder": 3, "FieldShowCondition": "isFtpaAppellantDocsVisibleInSubmitted=\"Yes\" OR isFtpaAppellantDocsVisibleInDecided=\"Yes\""},

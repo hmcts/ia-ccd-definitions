@@ -1809,7 +1809,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingDetailsTitle", "Label": "![]()\r\n## Hearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingAttendanceTitle", "Label": "![]()\r\n## Hearing attendance", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeTitle", "Label": "![]()\r\n## Legal representative", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeDetailsTitle", "Label": "![]()\r\n## Legal representative's details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeDetailsTitle", "Label": "![]()\r\n## Legal representative's details\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDetailsUpdateLink", "Label": "[Update representative's details](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateLegalRepDetails)\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealDetailsTitle", "Label": "![]()\r\n## Appeal details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submissionDetailsTitle", "Label": "![]()\r\n## Submission details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantDetailsTitle", "Label": "![]()\r\n## Appellant's details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -2303,6 +2304,39 @@
     "ID": "reasonToForceCaseToSubmitHearingRequirements",
     "Label": "Reasons to force the case progression",
     "FieldType": "TextArea",
+    "SecurityClassification": "PUBLIC"
+  }, 
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "updateLegalRepCompany",
+    "Label": "Company",
+    "FieldType": "Text",
+    "SecurityClassification": "PUBLIC"
+  }, 
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "updateLegalRepName",
+    "Label": "Name",
+    "FieldType": "Text",
+    "SecurityClassification": "PUBLIC"
+  }, 
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "updateLegalRepEmailAddress",
+    "Label": "Email",
+    "HintText": "This is for correspondence only. You cannot change your sign-in email.",
+    "FieldType": "Text",
+    "SecurityClassification": "PUBLIC"
+  }, 
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "updateLegalRepReferenceNumber",
+    "Label": "Own reference",
+    "FieldType": "Text",
     "SecurityClassification": "PUBLIC"
   }
 ]
