@@ -1290,24 +1290,6 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Adjourn"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "adjournHearingWithoutDate",
-    "Name": "Adjourn hearing without a date",
-    "Description": "Adjourn hearing without a date",
-    "DisplayOrder": 47,
-    "PreConditionState(s)": "preHearing;finalBundling;prepareForHearing;decision",
-    "PostConditionState": "adjourned",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
-    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
-    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N",
-    "EndButtonLabel": "Adjourn"
   }, {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
