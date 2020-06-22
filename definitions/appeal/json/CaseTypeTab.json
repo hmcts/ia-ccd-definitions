@@ -695,5 +695,15 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "ftpaRespondentRjDecisionNotesDescription", "TabFieldDisplayOrder": 32, "FieldShowCondition": "ftpaRespondentRjDecisionNotesDescription!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "tribunalNotesTitle", "TabFieldDisplayOrder": 33, "FieldShowCondition": "allocatedJudge=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "allocatedJudge", "TabFieldDisplayOrder": 34, "FieldShowCondition": "allocatedJudge=\"*\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "previousJudgeAllocations", "TabFieldDisplayOrder": 35, "FieldShowCondition": "previousJudgeAllocations=\"*\""}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "previousJudgeAllocations", "TabFieldDisplayOrder": 35, "FieldShowCondition": "previousJudgeAllocations=\"*\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "TabLabel": "Validation", "TabDisplayOrder": 10, "CaseFieldID": "validationTabTitle", "TabFieldDisplayOrder": 1, "TabShowCondition": "currentCaseStateVisibleToCaseOfficer=\"appealSubmitted\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "validation_caseOfficer_appealSubmitted", "TabFieldDisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "contactPreferenceDescription", "TabFieldDisplayOrder": 3, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "appealTypeDescription", "TabFieldDisplayOrder": 3, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "homeOfficeCaseStatusData", "TabFieldDisplayOrder": 3, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "validationAppellantDetailsTitle", "TabFieldDisplayOrder": 4},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "validationAppealData", "TabFieldDisplayOrder": 5},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "appellantNationalities", "TabFieldDisplayOrder": 6},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "validationApplicationDetailsTitle", "TabFieldDisplayOrder": 7},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "validationApplicationData", "TabFieldDisplayOrder": 8}
 ]
