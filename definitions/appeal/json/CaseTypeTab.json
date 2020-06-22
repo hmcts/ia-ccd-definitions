@@ -136,31 +136,26 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficePou_ftpa_appellant_submitted_allowed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficePou=\"ftpaSubmitted\" AND appealDecision=\"Allowed\" AND ftpaAppellantSubmitted=\"Yes\" AND ftpaRespondentSubmitted!=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeGeneric_ftpa_appellant_submitted_dismissed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeGeneric=\"ftpaSubmitted\" AND appealDecision=\"Dismissed\" AND ftpaAppellantSubmitted=\"Yes\" AND ftpaRespondentSubmitted!=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeGeneric_ftpa_appellant_submitted_allowed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeGeneric=\"ftpaSubmitted\" AND appealDecision=\"Allowed\" AND ftpaAppellantSubmitted=\"Yes\" AND ftpaRespondentSubmitted!=\"Yes\""},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_ftpa_appellant_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"granted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_ftpa_appellant_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"granted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_adminOfficer_ftpa_appellant_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToAdminOfficer=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"granted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_ftpa_appellant_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"granted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeAll_ftpa_appellant_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeAll=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"granted\""},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_ftpa_respondent_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"granted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_ftpa_respondent_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"granted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_adminOfficer_ftpa_respondent_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToAdminOfficer=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"granted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_ftpa_respondent_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"granted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeAll_ftpa_respondent_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeAll=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"granted\""},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_ftpa_appellant_part_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"partiallyGranted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_ftpa_appellant_part_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"partiallyGranted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_adminOfficer_ftpa_appellant_part_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToAdminOfficer=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"partiallyGranted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_ftpa_appellant_part_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"partiallyGranted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeAll_ftpa_appellant_part_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeAll=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"partiallyGranted\""},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_ftpa_respondent_part_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"partiallyGranted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_ftpa_respondent_part_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"partiallyGranted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_adminOfficer_ftpa_respondent_part_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToAdminOfficer=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"partiallyGranted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_ftpa_respondent_part_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"partiallyGranted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeAll_ftpa_respondent_part_granted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeAll=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"partiallyGranted\""},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_ftpa_appellant_dismissed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"refused\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_ftpa_appellant_dismissed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"refused\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_admin_ftpa_appellant_dismissed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToAdminOfficer=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"refused\""},
@@ -169,13 +164,11 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeGeneric_ftpa_appellant_dismissed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeGeneric=\"ftpaDecided\" AND ftpaAppellantSubmitted=\"Yes\" AND ftpaRespondentSubmitted!=\"Yes\" AND ftpaAppellantDecisionOutcomeType=\"refused\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeApc_ftpa_appellant_dismissed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeApc=\"ftpaDecided\" AND ftpaAppellantSubmitted=\"Yes\" AND ftpaRespondentSubmitted!=\"Yes\" AND ftpaAppellantDecisionOutcomeType=\"refused\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeLart_ftpa_appellant_dismissed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeLart=\"ftpaDecided\" AND ftpaAppellantSubmitted=\"Yes\" AND ftpaRespondentSubmitted!=\"Yes\" AND ftpaAppellantDecisionOutcomeType=\"refused\""},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_ftpa_respondent_dismissed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"refused\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_ftpa_respondent_dismissed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"refused\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_admin_ftpa_respondent_dismissed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToAdminOfficer=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"refused\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_ftpa_respondent_dismissed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType!=\"Yes\" AND ftpaRespondentSubmitted=\"Yes\"  AND ftpaRespondentDecisionOutcomeType=\"refused\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeAll_ftpa_respondent_dismissed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeAll=\"ftpaDecided\" AND ftpaAppellantSubmitted!=\"Yes\" AND ftpaRespondentSubmitted=\"Yes\" AND ftpaRespondentDecisionOutcomeType=\"refused\""},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_ftpa_appellant_not_admitted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"notAdmitted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_ftpa_appellant_not_admitted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"notAdmitted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_admin_ftpa_appellant_not_admitted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToAdminOfficer=\"ftpaDecided\" AND ftpaAppellantDecisionOutcomeType=\"notAdmitted\""},
@@ -184,13 +177,11 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeGeneric_ftpa_appellant_not_admitted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeGeneric=\"ftpaDecided\" AND ftpaAppellantSubmitted=\"Yes\" AND ftpaRespondentSubmitted!=\"Yes\" AND ftpaAppellantDecisionOutcomeType=\"notAdmitted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeApc_ftpa_appellant_not_admitted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeApc=\"ftpaDecided\" AND ftpaAppellantSubmitted=\"Yes\" AND ftpaRespondentSubmitted!=\"Yes\" AND ftpaAppellantDecisionOutcomeType=\"notAdmitted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeLart_ftpa_appellant_not_admitted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeLart=\"ftpaDecided\" AND ftpaAppellantSubmitted=\"Yes\" AND ftpaRespondentSubmitted!=\"Yes\" AND ftpaAppellantDecisionOutcomeType=\"notAdmitted\""},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_ftpa_respondent_not_admitted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"notAdmitted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_ftpa_respondent_not_admitted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"notAdmitted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_admin_ftpa_respondent_not_admitted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToAdminOfficer=\"ftpaDecided\" AND ftpaRespondentDecisionOutcomeType=\"notAdmitted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_ftpa_respondent_not_admitted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"ftpaDecided\" AND ftpaAppellantSubmitted!=\"Yes\" AND ftpaRespondentSubmitted=\"Yes\"  AND ftpaRespondentDecisionOutcomeType=\"notAdmitted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeAll_ftpa_respondent_not_admitted", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeAll=\"ftpaDecided\" AND ftpaAppellantSubmitted!=\"Yes\" AND ftpaRespondentSubmitted=\"Yes\" AND ftpaRespondentDecisionOutcomeType=\"notAdmitted\""},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_decided_dismissed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"decided\" AND appealDecision=\"Dismissed\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_decided_allowed", "TabFieldDisplayOrder": 20, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"decided\" AND appealDecision=\"Allowed\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_respondentReviewStarted", "TabFieldDisplayOrder": 18, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"respondentReview\"  AND respondentReviewAppealResponseAdded=\"No\""},
@@ -278,8 +269,14 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagPotentiallyViolentPersonExists", "TabFieldDisplayOrder": 54, "FieldShowCondition": "caseFlagPotentiallyViolentPersonExists=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagUnacceptableCustomerBehaviourExists", "TabFieldDisplayOrder": 55, "FieldShowCondition": "caseFlagUnacceptableCustomerBehaviourExists=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagUnaccompaniedMinorExists", "TabFieldDisplayOrder": 56, "FieldShowCondition": "caseFlagUnaccompaniedMinorExists=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagsTitle", "TabFieldDisplayOrder": 22, "FieldShowCondition": "caseFlagAnonymityExists=\"Yes\" OR caseFlagComplexCaseExists=\"Yes\" OR caseFlagDetainedImmigrationAppealExists=\"Yes\" OR caseFlagForeignNationalOffenderExists=\"Yes\" OR caseFlagPotentiallyViolentPersonExists=\"Yes\" OR caseFlagUnacceptableCustomerBehaviourExists=\"Yes\" OR caseFlagUnaccompaniedMinorExists=\"Yes\""},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "TabID": "overview",
+    "CaseFieldID": "caseFlagsTitle",
+    "TabFieldDisplayOrder": 22,
+    "FieldShowCondition": "caseFlagAnonymityExists=\"Yes\" OR caseFlagComplexCaseExists=\"Yes\" OR caseFlagDetainedImmigrationAppealExists=\"Yes\" OR caseFlagForeignNationalOffenderExists=\"Yes\" OR caseFlagPotentiallyViolentPersonExists=\"Yes\" OR caseFlagUnacceptableCustomerBehaviourExists=\"Yes\" OR caseFlagUnaccompaniedMinorExists=\"Yes\""
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagAnonymityImage", "TabFieldDisplayOrder": 23, "FieldShowCondition": "caseFlagAnonymityExists=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagAnonymityAdditionalInformation", "TabFieldDisplayOrder": 24, "FieldShowCondition": "caseFlagAnonymityExists=\"Yes\" AND caseFlagAnonymityAdditionalInformation!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagComplexCaseImage", "TabFieldDisplayOrder": 25, "FieldShowCondition": "caseFlagComplexCaseExists=\"Yes\""},
@@ -296,7 +293,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagUnacceptableCustomerBehaviourAdditionalInformation", "TabFieldDisplayOrder": 36, "FieldShowCondition": "caseFlagUnacceptableCustomerBehaviourExists=\"Yes\" AND caseFlagUnacceptableCustomerBehaviourAdditionalInformation!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagUnaccompaniedMinorImage", "TabFieldDisplayOrder": 37, "FieldShowCondition": "caseFlagUnaccompaniedMinorExists=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagUnaccompaniedMinorAdditionalInformation", "TabFieldDisplayOrder": 38, "FieldShowCondition": "caseFlagUnaccompaniedMinorExists=\"Yes\" AND caseFlagUnaccompaniedMinorAdditionalInformation!=\"\""},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "ftpaAppellantDecisionTitle", "TabFieldDisplayOrder": 37, "FieldShowCondition": "isFtpaAppellantDecided=\"Yes\" OR isAppellantFtpaDecisionVisibleToAll=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "ftpaAppellantDecisionOutcomeType", "TabFieldDisplayOrder": 38, "FieldShowCondition": "isFtpaAppellantDecided=\"Yes\" OR isAppellantFtpaDecisionVisibleToAll=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "ftpaAppellantDecisionDocument", "TabFieldDisplayOrder": 39, "FieldShowCondition": "isFtpaAppellantDecided=\"Yes\" OR isAppellantFtpaDecisionVisibleToAll=\"Yes\""},
@@ -305,11 +301,38 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "ftpaRespondentDecisionOutcomeType", "TabFieldDisplayOrder": 42, "FieldShowCondition": "isFtpaRespondentDecided=\"Yes\" OR isRespondentFtpaDecisionVisibleToAll=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "ftpaRespondentDecisionDocument", "TabFieldDisplayOrder": 43, "FieldShowCondition": "isFtpaRespondentDecided=\"Yes\" OR isRespondentFtpaDecisionVisibleToAll=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "ftpaRespondentDecisionDate", "TabFieldDisplayOrder": 44, "FieldShowCondition": "isFtpaRespondentDecided=\"Yes\" OR isRespondentFtpaDecisionVisibleToAll=\"Yes\""},
-
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "appealDecisionTitle", "TabFieldDisplayOrder": 35, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\" OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "appealDecision", "TabFieldDisplayOrder": 36, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\" OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "finalDecisionAndReasonsPdf", "TabFieldDisplayOrder": 37, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\"  OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "appealDate", "TabFieldDisplayOrder": 38, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\" OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "TabID": "overview",
+    "CaseFieldID": "appealDecisionTitle",
+    "TabFieldDisplayOrder": 35,
+    "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\" OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "TabID": "overview",
+    "CaseFieldID": "appealDecision",
+    "TabFieldDisplayOrder": 36,
+    "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\" OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "TabID": "overview",
+    "CaseFieldID": "finalDecisionAndReasonsPdf",
+    "TabFieldDisplayOrder": 37,
+    "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\"  OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "TabID": "overview",
+    "CaseFieldID": "appealDate",
+    "TabFieldDisplayOrder": 38,
+    "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\" OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "endAppealDetailsTitle", "TabFieldDisplayOrder": 41, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ended\" OR currentCaseStateVisibleToLegalRepresentative=\"ended\" OR currentCaseStateVisibleToHomeOfficeAll=\"ended\" OR currentCaseStateVisibleToAdminOfficer=\"ended\" OR currentCaseStateVisibleToJudge=\"ended\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "endAppealOutcome", "TabFieldDisplayOrder": 42, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ended\" OR currentCaseStateVisibleToLegalRepresentative=\"ended\" OR currentCaseStateVisibleToHomeOfficeAll=\"ended\" OR currentCaseStateVisibleToAdminOfficer=\"ended\" OR currentCaseStateVisibleToJudge=\"ended\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "endAppealOutcomeReason", "TabFieldDisplayOrder": 43, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ended\" OR currentCaseStateVisibleToLegalRepresentative=\"ended\" OR currentCaseStateVisibleToHomeOfficeAll=\"ended\" OR currentCaseStateVisibleToAdminOfficer=\"ended\" OR currentCaseStateVisibleToJudge=\"ended\""},
@@ -335,6 +358,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "appealType", "TabFieldDisplayOrder": 62},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "hearingCentre", "TabFieldDisplayOrder": 63},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "homeOfficeReferenceNumber", "TabFieldDisplayOrder": 64},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "reasonForLinkAppeal", "TabFieldDisplayOrder": 65},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "[CREATED_DATE]", "TabFieldDisplayOrder": 65},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "legalRepresentativeTitle", "TabFieldDisplayOrder": 66},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "legalRepCompany", "TabFieldDisplayOrder": 67},
@@ -346,8 +370,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "TabLabel": "Appeal", "TabDisplayOrder": 2, "CaseFieldID": "appealTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealTitle", "TabFieldDisplayOrder": 10, "FieldShowCondition": "reasonsForAppealDateUploaded=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealDateUploaded", "TabFieldDisplayOrder": 20, "FieldShowCondition": "reasonsForAppealDateUploaded=\"*\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealDecision", "TabFieldDisplayOrder": 30,"FieldShowCondition": "reasonsForAppealDateUploaded=\"*\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealDocuments", "TabFieldDisplayOrder": 40,"FieldShowCondition": "reasonsForAppealDateUploaded=\"*\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealDecision", "TabFieldDisplayOrder": 30, "FieldShowCondition": "reasonsForAppealDateUploaded=\"*\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealDocuments", "TabFieldDisplayOrder": 40, "FieldShowCondition": "reasonsForAppealDateUploaded=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "clarifyingQuestionsTitle", "TabFieldDisplayOrder": 50, "FieldShowCondition": "clarifyingQuestionsAnswers=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "clarifyingQuestionsAnswers", "TabFieldDisplayOrder": 60, "FieldShowCondition": "clarifyingQuestionsAnswers=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "appealDetailsTitle", "TabFieldDisplayOrder": 70},
@@ -388,7 +412,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantNationalities", "TabFieldDisplayOrder": 8},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantHasFixedAddress", "TabFieldDisplayOrder": 9},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantAddress", "TabFieldDisplayOrder": 10},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "contactPreference", "TabFieldDisplayOrder": 10},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "email", "TabFieldDisplayOrder": 10, "FieldShowCondition": "contactPreference=\"wantsEmail\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "mobileNumber", "TabFieldDisplayOrder": 10, "FieldShowCondition": "contactPreference=\"wantsSms\""},
@@ -399,7 +422,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepCompany", "TabFieldDisplayOrder": 14},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepresentativeEmailAddress", "TabFieldDisplayOrder": 15},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepReferenceNumber", "TabFieldDisplayOrder": 16},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "TabLabel": "Documents", "TabDisplayOrder": 4, "CaseFieldID": "documentsTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "allFtpaAppellantDecisionDocs", "TabFieldDisplayOrder": 2, "FieldShowCondition": "isFtpaAppellantDecided=\"Yes\" OR isAppellantFtpaDecisionVisibleToAll=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "ftpaAppellantDocuments", "TabFieldDisplayOrder": 3, "FieldShowCondition": "isFtpaAppellantDocsVisibleInSubmitted=\"Yes\" OR isFtpaAppellantDocsVisibleInDecided=\"Yes\""},
@@ -425,7 +447,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "draftDecisionAndReasonsDocuments", "TabFieldDisplayOrder": 17},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "finalDecisionAndReasonsDocuments", "TabFieldDisplayOrder": 17},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "appellantDocuments", "TabFieldDisplayOrder": 18, "FieldShowCondition": "journeyType=\"aip\""},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "directions", "TabLabel": "Directions", "TabDisplayOrder": 5, "CaseFieldID": "directionsTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "directions", "CaseFieldID": "changeDirectionDueDateActionAvailable", "TabFieldDisplayOrder": 2, "FieldShowCondition": "changeDirectionDueDateActionAvailable=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "directions", "CaseFieldID": "sendDirectionActionAvailable", "TabFieldDisplayOrder": 3, "FieldShowCondition": "sendDirectionActionAvailable=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
