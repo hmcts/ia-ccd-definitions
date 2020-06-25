@@ -9,7 +9,7 @@
 
   {"LiveFrom": "01/01/2018", "ID": "appealGrounds", "ListElementCode": "disproportionateDeprivation", "ListElement": "Deprivation would have a disproportionate effect"},
   {"LiveFrom": "01/01/2018", "ID": "appealGrounds", "ListElementCode": "unlawfulDeprivation", "ListElement": "The decision is unlawful because discretion should have been exercised differently"},
-  {"LiveFrom": "01/01/2018", "ID": "appealGrounds", "ListElementCode": "appealGroundsEuRefusal", "ListElement": "The decision breaches the appellant's rights under the EEA regulations / EU settlement scheme(in respect of entry to or residence in the United Kingdom)"},
+  {"LiveFrom": "01/01/2018", "ID": "appealGrounds", "ListElementCode": "appealGroundsEuRefusal", "ListElement": "The decision breaches the appellant's rights under the EEA regulations"},
 
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsProtection", "ListElementCode": "protectionHumanitarianProtection", "ListElement": "Removing the appellant from the UK would breach the UK's obligation in relation to persons eligible for a grant of humanitarian protection"},
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsProtection", "ListElementCode": "protectionRefugeeConvention", "ListElement": "Removing the appellant from the UK would breach the UK's obligation under the Refugee Convention"},
@@ -18,7 +18,7 @@
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsRevocation", "ListElementCode": "revocationRefugeeConvention", "ListElement": "Revocation of the appellant's protection status breaches the United Kingdom's obligations under the Refugee Convention"},
 
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsHumanRightsRefusal", "ListElementCode": "protectionHumanRights", "ListElement": "Removing the appellant from the UK would be unlawful under section 6 of the Human Rights Act 1998"},
-  {"LiveFrom": "01/01/2018", "ID": "appealGroundsEuRefusal", "ListElementCode": "appealGroundsEuRefusal", "ListElement": "The decision breaches the appellant's rights under the EEA regulations / EU settlement scheme(in respect of entry to or residence in the United Kingdom)"},
+  {"LiveFrom": "01/01/2018", "ID": "appealGroundsEuRefusal", "ListElementCode": "appealGroundsEuRefusal", "ListElement": "The decision breaches the appellant's rights under the EEA regulations"},
 
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsDeprivation", "ListElementCode": "disproportionateDeprivation", "ListElement": "Deprivation would have a disproportionate effect"},
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsDeprivation", "ListElementCode": "unlawfulDeprivation", "ListElement": "The decision is unlawful because discretion should have been exercised differently"},
@@ -27,7 +27,7 @@
   {"LiveFrom": "01/01/2018", "ID": "appealType", "ListElementCode": "revocationOfProtection", "ListElement": "Revocation of a protection status"},
   {"LiveFrom": "01/01/2018", "ID": "appealType", "ListElementCode": "protection", "ListElement": "Refusal of protection claim"},
   {"LiveFrom": "01/01/2018", "ID": "appealType", "ListElementCode": "deprivation", "ListElement": "Deprivation of citizenship"},
-  {"LiveFrom": "01/01/2018", "ID": "appealType", "ListElementCode": "refusalOfEu", "ListElement": "Refusal of application under the EEA regulations / EU settlement scheme"},
+  {"LiveFrom": "01/01/2018", "ID": "appealType", "ListElementCode": "refusalOfEu", "ListElement": "Refusal of application under the EEA regulations"},
   {"LiveFrom": "01/01/2018", "ID": "appealType", "ListElementCode": "refusalOfHumanRights", "ListElement": "Refusal of a human rights claim"},
 
   {"LiveFrom": "01/01/2018", "ID": "contactPreference", "ListElementCode": "wantsSms", "ListElement": "Text message"},
@@ -40,7 +40,7 @@
   {"LiveFrom": "01/01/2018", "ID": "checklist7", "ListElementCode": "isNotEUDecision", "ListElement": "My client is not appealing an EU Settlement Scheme decision"},
   {"LiveFrom": "01/01/2018", "ID": "checklist3", "ListElementCode": "isNotFamilyAppeal", "ListElement": "My client is not appealing with anyone else as part of a linked or grouped appeal"},
   {"LiveFrom": "01/01/2018", "ID": "checklist6", "ListElementCode": "isNotStateless", "ListElement": "My client is not stateless"},
-  
+
   {"LiveFrom": "01/01/2018", "ID": "directionStatus", "ListElementCode": "outstanding", "ListElement": "Outstanding"},
   {"LiveFrom": "01/01/2018", "ID": "directionStatus", "ListElementCode": "completed", "ListElement": "Completed"},
   {"LiveFrom": "01/01/2018", "ID": "hearingCentre", "ListElementCode": "newport", "ListElement": "Newport"},
@@ -558,18 +558,21 @@
   {"LiveFrom": "01/01/2018", "ID": "specialReasons", "ListElementCode": "specialReasons", "ListElement": "There are special reasons, such as the need to request the First-tier Tribunal to provide observations on the grounds of appeal"},
   {"LiveFrom": "01/01/2018", "ID": "countryGuidance", "ListElementCode": "countryGuidance", "ListElement": "It's clear at this stage that the issue is likely to be used for giving country guidance"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtensionType", "ListElementCode": "awaitingReasonsForAppeal", "ListElement": "Reasons for appeal"},
+  {"LiveFrom": "01/01/2018", "ID": "timeExtensionType", "ListElementCode": "awaitingClarifyingQuestionsAnswers", "ListElement": "Awaiting Clarifying questions"},
+  {"LiveFrom": "01/01/2018", "ID": "timeExtensionType", "ListElementCode": "awaitingCmaRequirements", "ListElement": "Awaiting CMA requirements"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtensionStatus", "ListElementCode": "inProgress", "ListElement": "In progress"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtensionStatus", "ListElementCode": "submitted", "ListElement": "Submitted"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtensionStatus", "ListElementCode": "refused", "ListElement": "Refused"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtensionStatus", "ListElementCode": "granted", "ListElement": "Granted"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtensionDecision", "ListElementCode": "granted", "ListElement": "Application granted"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtensionDecision", "ListElementCode": "refused", "ListElement": "Application refused"},
-  
+
   {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "unaccompaniedMinor", "ListElement": "Unaccompanied minor"},
   {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "unacceptableCustomerBehaviour", "ListElement": "Unacceptable customer behaviour"},
   {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "potentiallyViolentPerson", "ListElement": "Potentially violent person"},
   {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "foreignNationalOffender", "ListElement": "Foreign national offender"},
   {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "detainedImmigrationAppeal", "ListElement": "Detained immigration appeal"},
+  {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "deport", "ListElement": "Deport"},
   {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "complexCase", "ListElement": "Complex case"},
   {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "anonymity", "ListElement": "Anonymity"}
 ]
