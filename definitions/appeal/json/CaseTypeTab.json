@@ -262,7 +262,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_ftpa_in_progress", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ftpaSubmitted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_homeOfficeAll_ftpa_respondent_in_progress", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToHomeOfficeAll=\"ftpaSubmitted\" AND ftpaRespondentSubmitted=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_aip_awaitingCmaRequirements", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"awaitingCmaRequirements\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_aip_cmaRequirementsSubmitted", "TabFieldDisplayOrder": 23, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"cmaRequirementsSubmitted\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_aip_cmaRequirementsSubmitted", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"cmaRequirementsSubmitted\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagAnonymityExists", "TabFieldDisplayOrder": 50, "FieldShowCondition": "caseFlagAnonymityExists=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagComplexCaseExists", "TabFieldDisplayOrder": 51, "FieldShowCondition": "caseFlagComplexCaseExists=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
