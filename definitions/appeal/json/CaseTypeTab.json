@@ -68,6 +68,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "paAppealTypePaymentOption", "TabFieldDisplayOrder": 7, "FieldShowCondition": "paAppealTypePaymentOption=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "eaHuAppealTypePaymentOption", "TabFieldDisplayOrder": 7, "FieldShowCondition": "eaHuAppealTypePaymentOption=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "paymentStatus", "TabFieldDisplayOrder": 7, "FieldShowCondition": "paymentStatus=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "paymentErrorCode", "TabFieldDisplayOrder": 7, "FieldShowCondition": "paymentErrorCode=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "paymentErrorMessage", "TabFieldDisplayOrder": 7, "FieldShowCondition": "paymentErrorMessage=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_appealStarted", "TabFieldDisplayOrder": 7, "FieldShowCondition": "isFeePaymentEnabled!=\"Yes\" AND currentCaseStateVisibleToLegalRepresentative=\"appealStarted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_appealStarted_new", "TabFieldDisplayOrder": 7, "FieldShowCondition": "isFeePaymentEnabled=\"Yes\" AND currentCaseStateVisibleToLegalRepresentative=\"appealStarted\" AND appealType!=\"protection\" AND appealType!=\"refusalOfEu\" AND appealType!=\"refusalOfHumanRights\""},
 
@@ -519,7 +521,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "paymentDate", "TabFieldDisplayOrder": 346, "FieldShowCondition": "isFeePaymentEnabled=\"Yes\" AND appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hearingDecisionSelected", "TabFieldDisplayOrder": 350, "FieldShowCondition": "isFeePaymentEnabled=\"Yes\" AND appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "feeAmountForDisplay", "TabFieldDisplayOrder": 360, "FieldShowCondition": "isFeePaymentEnabled=\"Yes\" AND appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "paymentStatus", "TabFieldDisplayOrder": 380, "FieldShowCondition": "isFeePaymentEnabled=\"Yes\" AND appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "paymentStatus", "TabFieldDisplayOrder": 380, "FieldShowCondition": "isFeePaymentEnabled=\"Yes\" AND paymentStatus!=\"Failed\" AND appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "paymentFailedForDisplay", "TabFieldDisplayOrder": 380, "FieldShowCondition": "paymentStatus=\"Failed\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "feePaymentAppealType", "TabFieldDisplayOrder": 390, "FieldShowCondition": "feePaymentAppealType=\"DUMMY_FIELD_TO_HIDE\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "isFeePaymentEnabled", "TabFieldDisplayOrder": 400, "FieldShowCondition": "isFeePaymentEnabled=\"DUMMY_FIELD_TO_HIDE\""},
 
