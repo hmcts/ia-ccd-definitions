@@ -83,10 +83,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editClarifyingQuestionAnswers", "UserRole": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitClarifyingQuestionAnswers", "UserRole": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "sendDirectionWithQuestions", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "flagCase", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "flagCase", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "removeFlag", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "removeFlag", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestCmaRequirements", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
@@ -94,16 +92,12 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editCmaRequirements", "UserRole": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitCmaRequirements", "UserRole": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceCaseToCaseUnderReview", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
-  
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceCaseToSubmitHearingRequirements", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
-  
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateLegalRepDetails", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
-  
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "adjournHearingWithoutDate", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "adjournHearingWithoutDate", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "restoreStateFromAdjourn", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "restoreStateFromAdjourn", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadSensitiveDocuments", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadSensitiveDocuments", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadSensitiveDocuments", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"}
