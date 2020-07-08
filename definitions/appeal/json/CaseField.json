@@ -1831,12 +1831,12 @@
     "SecurityClassification": "PUBLIC"
   },
   {
-  "LiveFrom": "01/01/2018",
-  "CaseTypeID": "Asylum",
-  "ID": "progress_caseOfficer_aip_cmaListed",
-  "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Case under review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/aip_case_under_review.png)\r\n\r\n## What happens next\r\n The Notice of Case Management Appointment will be sent to all parties.",
-  "FieldType": "Label",
-  "SecurityClassification": "PUBLIC"
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_aip_cmaListed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Case under review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/aip_case_under_review.png)\r\n\r\n## What happens next\r\n The Notice of Case Management Appointment will be sent to all parties.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2325,7 +2325,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewCmaRequirementsTitle", "Label": "Review the appellant's case management appointment requirements and select length of appointment.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "pastExperiencesAdjustmentRequestTitle", "Label": "\n## Adjustment request", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "pastExperiencesResponseTitle", "Label": "\r\n## Tribunal response", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "pastExperiencesResponse", "Label": "Past experiences", "FieldType": "TextArea", "HintText": "State what adjustments the Tribunal will provide, or explain why their request's cannot be fulfilled.", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "pastExperiencesTribunalResponse", "Label": "Past experiences", "FieldType": "TextArea", "HintText": "State what adjustments the Tribunal will provide, or explain why their request's cannot be fulfilled.", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantDocuments", "Label": "Appellant documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "forceCaseToCaseUnderReviewTitle", "Label": "# Force case to case under review\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonToForceCaseToCaseUnderReview", "Label": "Reasons to force the case progression", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
