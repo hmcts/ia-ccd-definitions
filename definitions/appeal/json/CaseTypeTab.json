@@ -266,6 +266,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_aip_cmaRequirementsSubmitted", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"cmaRequirementsSubmitted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_aip_cmaAdjustmentsAgreed", "TabFieldDisplayOrder": 23, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"cmaAdjustmentsAgreed\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_adminOfficer_aip_cmaAdjustmentsAgreed", "TabFieldDisplayOrder": 23, "FieldShowCondition": "currentCaseStateVisibleToAdminOfficer=\"cmaAdjustmentsAgreed\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_aip_cmaListed", "TabFieldDisplayOrder": 24, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"cmaListed\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_adminOfficer_aip_cmaListed", "TabFieldDisplayOrder": 24, "FieldShowCondition": "currentCaseStateVisibleToAdminOfficer=\"cmaListed\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagAnonymityExists", "TabFieldDisplayOrder": 50, "FieldShowCondition": "caseFlagAnonymityExists=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagComplexCaseExists", "TabFieldDisplayOrder": 51, "FieldShowCondition": "caseFlagComplexCaseExists=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
