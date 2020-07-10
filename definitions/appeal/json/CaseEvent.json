@@ -1265,7 +1265,7 @@
     "ID": "updateDetailsAfterCma",
     "Name": "Update details after CMA",
     "Description": "Update details after CMA",
-    "DisplayOrder": 49,
+    "DisplayOrder": 51,
     "PreConditionState(s)": "cmaListed",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
@@ -1350,7 +1350,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Adjourn"
-  }, {
+  },
+  {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "restoreStateFromAdjourn",
