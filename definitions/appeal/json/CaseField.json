@@ -3354,13 +3354,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dontHavePaymentByAccount", "Label": "### Don't have Payment by Account?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyLinkToUsePba", "Label": "<a href=\"https://immigrationappealsonline.justice.gov.uk/IACFees\" target=\"_blank\">Apply to use Payment by Account</a>", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentSuccessful", "Label": "## Payment successful", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "reasonToForceRequestCaseBuilding",
-    "Label": "Reasons to force the case progression",
-    "FieldType": "TextArea",
-    "SecurityClassification": "PUBLIC"
-  }
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonToForceRequestCaseBuilding", "Label": "Reasons to force the case progression", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentSuccessful", "Label": "## Payment successful", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hmcts", "Label": "# cover sheet page logo", "FieldType": "Text", "SecurityClassification": "PUBLIC" }
 ]
