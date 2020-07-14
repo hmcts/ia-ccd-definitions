@@ -1262,6 +1262,26 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "updateDetailsAfterCma",
+    "Name": "Update details after CMA",
+    "Description": "Update details after CMA",
+    "DisplayOrder": 51,
+    "PreConditionState(s)": "cmaListed",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
+    "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Update"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "forceCaseToCaseUnderReview",
     "Name": "Force case - case under review",
     "Description": "Force case to case under review",
@@ -1330,7 +1350,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Adjourn"
-  }, {
+  },
+  {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "restoreStateFromAdjourn",
