@@ -2354,7 +2354,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "doesTheCaseNeedToBeRelisted", "Label": "Internal flag managed by API used for display logic.", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCmaHearingCentre", "Label": "Hearing centre", "FieldType": "FixedList", "FieldTypeParameter": "hearingCentre", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCmaHearingLength", "Label": "Length of appointment", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCmaHearingDate", "Label": "Appointment date and time", "FieldType": "DateTime", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCmaHearingDate", "Label": "Appointment date and time", "FieldType": "DateTime", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaTitle", "Label": "![]()\n## Attendees", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaDurationTitle", "Label": "![]()\n## Duration", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
