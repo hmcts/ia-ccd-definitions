@@ -2149,7 +2149,7 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRecordingDocuments", "Label": "Recordings (optional)", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRecordingDocuments", "Label": "Recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "applicationChangeDesignatedHearingCentre",
@@ -2358,7 +2358,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaTitle", "Label": "![]()\n## Attendees", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaDurationTitle", "Label": "![]()\n## Duration", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaAppRecordingsTitle", "Label": "![]()\n## Appointment recordings (optional)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaAppRecordingsTitle", "Label": "![]()\n## Appointment recordings", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmAppSummaryTitle", "Label": "![]()\n## Appointment summary", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaDesc", "Label": "Add the attendees and case duration below. If someone didn't attend. leave it blank.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendingTCW", "Label": "The Tribunal Caseworker", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
