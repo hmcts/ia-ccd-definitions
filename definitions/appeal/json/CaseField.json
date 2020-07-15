@@ -1833,6 +1833,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_aip_cmaListed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Case under review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/aip_case_under_review.png)\r\n\r\n## What happens next\r\n The Notice of Case Management Appointment will be sent to all parties.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_aip_cmaListed",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Case under review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/aip_case_under_review.png)\r\n\r\n## What happens next\r\n The Notice of Case Management Appointment will be sent to all parties.\r\n\r\n Once the case management appointment has taken place, you need to [record the details](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateDetailsAfterCma)",
     "FieldType": "Label",
@@ -2098,7 +2106,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalAdjustmentsDescription", "Label": "Check if the appellant has requested any additional adjustments and record your response in the relevant field. Do not enter the reason the appellant made the request. The respondent will be able to see this information and must not be informed of the appellant's personal circumstances.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "vulnerabilitiesAdjustmentRequestTitle", "Label": "\r\n## Adjustment request", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "vulnerabilitiesTribunalResponseTitle", "Label": "\r\n## Tribunal response", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "vulnerabilitiesTribunalResponse", "Label": "Physical or mental health conditions", "FieldType": "TextArea", "HintText": "State what adjustments the Tribunal will provide, or explain why this request cannot be fulfilled.", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "vulnerabilitiesTribunalResponse", "Label": "Adjustments to accommodate vulnerabilities", "FieldType": "TextArea", "HintText": "State what adjustments the Tribunal will provide, or explain why this request cannot be fulfilled.", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "multimediaAdjustmentRequestTitle", "Label": "\r\n## Adjustment request", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "multimediaTribunalResponseTitle", "Label": "\r\n## Tribunal response", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "multimediaTribunalResponse", "Label": "Multimedia equipment", "FieldType": "TextArea", "HintText": "State what adjustments the Tribunal will provide, or explain why this request cannot be fulfilled.", "SecurityClassification": "PUBLIC"},
@@ -2141,7 +2149,7 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRecordingDocuments", "Label": "Recordings (optional)", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRecordingDocuments", "Label": "Recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "applicationChangeDesignatedHearingCentre",
@@ -2344,9 +2352,13 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stateBeforeAdjournWithoutDate", "Label": "The state before adjourn without a date event.", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateBeforeAdjournWithoutDate", "Label": "The hearing date before adjourn without a date event.", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "doesTheCaseNeedToBeRelisted", "Label": "Internal flag managed by API used for display logic.", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCmaHearingCentre", "Label": "Hearing centre", "FieldType": "FixedList", "FieldTypeParameter": "hearingCentre", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCmaHearingLength", "Label": "Length of appointment", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCmaHearingDate", "Label": "Appointment date and time", "FieldType": "DateTime", "SecurityClassification": "PUBLIC"}
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaTitle", "Label": "![]()\n## Attendees", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaDurationTitle", "Label": "![]()\n## Duration", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaAppRecordingsTitle", "Label": "![]()\n## Appointment recordings (optional)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaAppRecordingsTitle", "Label": "![]()\n## Appointment recordings", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmAppSummaryTitle", "Label": "![]()\n## Appointment summary", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateDetailsAfterCmaDesc", "Label": "Add the attendees and case duration below. If someone didn't attend. leave it blank.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendingTCW", "Label": "The Tribunal Caseworker", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
