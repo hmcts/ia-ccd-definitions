@@ -97,6 +97,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateDetailsAfterCma", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "reviewCmaRequirements", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceCaseToCaseUnderReview", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceCaseToSubmitHearingRequirements", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateLegalRepDetails", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
@@ -110,5 +111,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "decisionWithoutHearing", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "decisionWithoutHearing", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "linkAppeal", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "linkAppeal", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "unlinkAppeal", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "unlinkAppeal", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"}
 ]

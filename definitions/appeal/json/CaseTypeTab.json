@@ -335,6 +335,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "appealType", "TabFieldDisplayOrder": 62},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "hearingCentre", "TabFieldDisplayOrder": 63},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "homeOfficeReferenceNumber", "TabFieldDisplayOrder": 64},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "reasonForLinkAppeal", "TabFieldDisplayOrder": 65},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "[CREATED_DATE]", "TabFieldDisplayOrder": 65},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "legalRepresentativeTitle", "TabFieldDisplayOrder": 66},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "legalRepCompany", "TabFieldDisplayOrder": 67},
@@ -399,7 +400,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepCompany", "TabFieldDisplayOrder": 14},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepresentativeEmailAddress", "TabFieldDisplayOrder": 15},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepReferenceNumber", "TabFieldDisplayOrder": 16},
-
+  
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "TabLabel": "Documents", "TabDisplayOrder": 4, "CaseFieldID": "documentsTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "allFtpaAppellantDecisionDocs", "TabFieldDisplayOrder": 2, "FieldShowCondition": "isFtpaAppellantDecided=\"Yes\" OR isAppellantFtpaDecisionVisibleToAll=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "ftpaAppellantDocuments", "TabFieldDisplayOrder": 3, "FieldShowCondition": "isFtpaAppellantDocsVisibleInSubmitted=\"Yes\" OR isFtpaAppellantDocsVisibleInDecided=\"Yes\""},
