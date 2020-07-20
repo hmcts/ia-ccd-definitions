@@ -2439,5 +2439,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyLinkToUsePba", "Label": "<a href=\"https://immigrationappealsonline.justice.gov.uk/IACFees\" target=\"_blank\">Apply to use Payment by Account</a>", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentSuccessful", "Label": "## Payment successful", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentHistoryTabTitle", "Label": "# Payment history", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentHistoryViewer", "Label": " ", "FieldType": "CasePaymentHistoryViewer", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentHistoryViewer", "Label": " ", "FieldType": "CasePaymentHistoryViewer", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submitNotificationStatus", "Label": "Internal flag managed by API for appeal submit notification status", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
 ]
