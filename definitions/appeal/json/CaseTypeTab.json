@@ -307,38 +307,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "ftpaRespondentDecisionOutcomeType", "TabFieldDisplayOrder": 42, "FieldShowCondition": "isFtpaRespondentDecided=\"Yes\" OR isRespondentFtpaDecisionVisibleToAll=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "ftpaRespondentDecisionDocument", "TabFieldDisplayOrder": 43, "FieldShowCondition": "isFtpaRespondentDecided=\"Yes\" OR isRespondentFtpaDecisionVisibleToAll=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "ftpaRespondentDecisionDate", "TabFieldDisplayOrder": 44, "FieldShowCondition": "isFtpaRespondentDecided=\"Yes\" OR isRespondentFtpaDecisionVisibleToAll=\"Yes\""},
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "TabID": "overview",
-    "CaseFieldID": "appealDecisionTitle",
-    "TabFieldDisplayOrder": 35,
-    "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\" OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "TabID": "overview",
-    "CaseFieldID": "appealDecision",
-    "TabFieldDisplayOrder": 36,
-    "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\" OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "TabID": "overview",
-    "CaseFieldID": "finalDecisionAndReasonsPdf",
-    "TabFieldDisplayOrder": 37,
-    "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\"  OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "TabID": "overview",
-    "CaseFieldID": "appealDate",
-    "TabFieldDisplayOrder": 38,
-    "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\" OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""
-  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "appealDecisionTitle", "TabFieldDisplayOrder": 35, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\" OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "appealDecision", "TabFieldDisplayOrder": 36, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\" OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "finalDecisionAndReasonsPdf", "TabFieldDisplayOrder": 37, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\"  OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "appealDate", "TabFieldDisplayOrder": 38, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToLegalRepresentative=\"decided\" OR currentCaseStateVisibleToHomeOfficeAll=\"decided\" OR currentCaseStateVisibleToJudge=\"decided\" OR appealDecisionAvailable=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "endAppealDetailsTitle", "TabFieldDisplayOrder": 41, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ended\" OR currentCaseStateVisibleToLegalRepresentative=\"ended\" OR currentCaseStateVisibleToHomeOfficeAll=\"ended\" OR currentCaseStateVisibleToAdminOfficer=\"ended\" OR currentCaseStateVisibleToJudge=\"ended\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "endAppealOutcome", "TabFieldDisplayOrder": 42, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ended\" OR currentCaseStateVisibleToLegalRepresentative=\"ended\" OR currentCaseStateVisibleToHomeOfficeAll=\"ended\" OR currentCaseStateVisibleToAdminOfficer=\"ended\" OR currentCaseStateVisibleToJudge=\"ended\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "endAppealOutcomeReason", "TabFieldDisplayOrder": 43, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ended\" OR currentCaseStateVisibleToLegalRepresentative=\"ended\" OR currentCaseStateVisibleToHomeOfficeAll=\"ended\" OR currentCaseStateVisibleToAdminOfficer=\"ended\" OR currentCaseStateVisibleToJudge=\"ended\""},
