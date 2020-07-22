@@ -513,5 +513,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateDetailsAfterCma", "CaseFieldID": "updateDetailsAfterCmAppSummaryTitle", "PageFieldDisplayOrder": 12, "DisplayContext": "READONLY", "PageID": "updateDetailsAfterCma", "PageDisplayOrder": 12, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateDetailsAfterCma", "CaseFieldID": "appointmentSummary", "PageFieldDisplayOrder": 13, "DisplayContext": "MANDATORY", "PageID": "updateDetailsAfterCma", "PageDisplayOrder": 13, "ShowSummaryChangeOption": "N"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "assignToTcw", "CaseFieldID": "assignedTo", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "assignToTcw", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "assignToTcw", "CaseFieldID": "assignedTo", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "assignToTcw", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "referTask", "CaseFieldID": "assignedTaskTo", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "referTask", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "referTask", "CaseFieldID": "taskId", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "referTask", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"}
 ]

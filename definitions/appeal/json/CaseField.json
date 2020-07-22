@@ -2298,5 +2298,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appointmentSummary", "Label": "Appointment summary", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appointments", "Label": "Appointment", "FieldTypeParameter": "appointment", "FieldType": "Collection", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "assignedTo", "Label": "Assigned to", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "assignedTo", "Label": "Assigned to", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "taskId", "Label": "Task ID", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "assignedTaskTo", "Label": "Assigned task to", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
 ]

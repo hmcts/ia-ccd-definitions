@@ -2616,5 +2616,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "assignedTo", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "assignedTo", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "assignedTo", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "assignedTo", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "R"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "assignedTo", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "R"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "taskId", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "assignedTaskTo", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"}
 ]
