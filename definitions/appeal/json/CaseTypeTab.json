@@ -461,6 +461,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_adjourned", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"adjourned\" OR currentCaseStateVisibleToAdminOfficer=\"adjourned\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_others_adjourned", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"adjourned\" OR currentCaseStateVisibleToHomeOfficeApc=\"adjourned\" OR currentCaseStateVisibleToHomeOfficeAll=\"adjourned\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_adjourned", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"adjourned\""},
+  
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "TabLabel": "Appeal", "TabDisplayOrder": 2, "CaseFieldID": "appealTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealTitle", "TabFieldDisplayOrder": 10, "FieldShowCondition": "reasonsForAppealDateUploaded=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealDateUploaded", "TabFieldDisplayOrder": 20, "FieldShowCondition": "reasonsForAppealDateUploaded=\"*\""},
@@ -478,6 +479,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "newMatters", "TabFieldDisplayOrder": 140},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hasOtherAppeals", "TabFieldDisplayOrder": 150},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "otherAppeals", "TabFieldDisplayOrder": 160},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "deportationOrderOptions", "TabFieldDisplayOrder": 161, "FieldShowCondition": "deportationOrderOptions!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "submissionDetailsTitle", "TabFieldDisplayOrder": 170},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "homeOfficeDecisionDate", "TabFieldDisplayOrder": 180},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "appealSubmissionDate", "TabFieldDisplayOrder": 190},
