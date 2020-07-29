@@ -1451,8 +1451,8 @@
     "Name": "Make a payment",
     "Description": "Make a payment",
     "DisplayOrder": 51,
-    "PreConditionState(s)": "appealStarted",
-    "PostConditionState": "appealStarted",
+    "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided",
+    "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
@@ -1463,5 +1463,25 @@
     "ShowSummary": "N",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Pay now"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "payAndSubmitAppeal",
+    "Name": "Pay and submit",
+    "Description": "Pay and submit",
+    "DisplayOrder": 52,
+    "PreConditionState(s)": "appealStarted",
+    "PostConditionState": "appealSubmitted",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
+    "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Pay and submit now"
   }
 ]
