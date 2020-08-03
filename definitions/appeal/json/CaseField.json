@@ -3414,5 +3414,10 @@
     "Label": "Reasons to force the case progression",
     "FieldType": "TextArea",
     "SecurityClassification": "PUBLIC"
-  }
+  },
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionTitle", "Label": "# Upload the Notice of Decision\r\nYou must upload the Notice of Decision. If it is not possible, you must provide a valid reason.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionDocument", "Label": "Notice of Decision", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionExplanation", "Label": "Reason you cannot provide the Notice of Decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+
 ]
