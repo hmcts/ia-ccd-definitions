@@ -415,7 +415,7 @@
     "Name": "List without requirements",
     "Description": "List without requirements",
     "DisplayOrder": 20,
-    "PreConditionState(s)": "submitHearingRequirements;ftpaDecided",
+    "PreConditionState(s)": "submitHearingRequirements",
     "PostConditionState": "listing",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
