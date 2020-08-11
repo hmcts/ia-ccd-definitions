@@ -572,6 +572,7 @@
   {"LiveFrom": "07/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "adjournHearingWithoutDate", "CaseFieldID": "adjournHearingWithoutDateReasons", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "adjournHearingPage1", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "07/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "adjournHearingWithoutDate", "CaseFieldID": "stateBeforeAdjournWithoutDate", "PageFieldDisplayOrder": 3, "DisplayContext": "READONLY", "PageID": "adjournHearingPage1", "PageDisplayOrder": 1, "FieldShowCondition": "adjournHearingWithoutDateReasonsTitle=\"DUMMY_FIELD_TO_HIDE\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "07/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "adjournHearingWithoutDate", "CaseFieldID": "dateBeforeAdjournWithoutDate", "PageFieldDisplayOrder": 4, "DisplayContext": "READONLY", "PageID": "adjournHearingPage1", "PageDisplayOrder": 1, "FieldShowCondition": "adjournHearingWithoutDateReasonsTitle=\"DUMMY_FIELD_TO_HIDE\"", "ShowSummaryChangeOption": "N"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateDetailsAfterCma", "CaseFieldID": "updateDetailsAfterCmaDesc", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "updateDetailsAfterCma", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateDetailsAfterCma", "CaseFieldID": "updateDetailsAfterCmaTitle", "PageFieldDisplayOrder": 2, "DisplayContext": "READONLY", "PageID": "updateDetailsAfterCma", "PageDisplayOrder": 2, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateDetailsAfterCma", "CaseFieldID": "attendingJudge", "CaseEventFieldLabel":"The judge","PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "updateDetailsAfterCma", "PageDisplayOrder": 3, "ShowSummaryChangeOption": "Y"},
@@ -688,5 +689,13 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "linkAppeal", "CaseFieldID": "reasonForLinkAppeal", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "reasonForLinkAppealPageId", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y", "CaseEventFieldLabel": "Reason for link"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "unlinkAppeal", "CaseFieldID": "unlinkAppealReasonForLink", "PageFieldDisplayOrder": 3, "DisplayContext": "READONLY", "PageID": "reasonForUnlinkAppealPageId", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "unlinkAppeal", "CaseFieldID": "unlinkAppeaTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "reasonForUnlinkAppealPageId", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "unlinkAppeal", "CaseFieldID": "unlinkAppeaTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "reasonForUnlinkAppealPageId", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
+
+
+
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "customiseHearingBundle", "CaseFieldID": "customHearingDocuments", "PageFieldDisplayOrder": 1, "DisplayContext": "OPTIONAL", "PageID": "customiseBundle", "PageDisplayOrder": 24, "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "04/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "customiseHearingBundle", "CaseFieldID": "customLegalRepDocuments", "PageFieldDisplayOrder": 2, "DisplayContext": "OPTIONAL", "PageID": "customiseBundle", "PageDisplayOrder": 24, "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "customiseHearingBundle", "CaseFieldID": "customAdditionalEvidenceDocuments", "PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "customiseBundle", "PageDisplayOrder": 24, "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "05/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "customiseHearingBundle", "CaseFieldID": "customRespondentDocuments", "PageFieldDisplayOrder": 4, "DisplayContext": "OPTIONAL", "PageID": "customiseBundle", "PageDisplayOrder": 24, "ShowSummaryChangeOption": "N"}
 ]
