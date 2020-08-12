@@ -592,6 +592,12 @@
   {"LiveFrom": "01/01/2018", "ID": "decisionHearingFeeOption", "ListElementCode": "decisionWithoutHearing", "ListElement": "Decision without a hearing. The fee for this type of appeal is £80"},
   {"LiveFrom": "01/01/2018", "ID": "decisionHearingFeeOption", "ListElementCode": "decisionWithHearing", "ListElement": "Decision with a hearing. The fee for this type of appeal is £140"},
 
+  {"LiveFrom": "01/01/2018", "ID": "paAppealTypePaymentOptions", "ListElementCode": "payNow", "ListElement": "Pay now using Payment by Account"},
+  {"LiveFrom": "01/01/2018", "ID": "paAppealTypePaymentOptions", "ListElementCode": "payLater", "ListElement": "Pay after submitting the appeal using Payment by Account"},
+  {"LiveFrom": "01/01/2018", "ID": "paAppealTypePaymentOptions", "ListElementCode": "payOffline", "ListElement": "Pay after submitting the appeal by card"},
+
+  {"LiveFrom": "01/01/2018", "ID": "eaHuAppealTypePaymentOptions", "ListElementCode": "payNow", "ListElement": "Pay now using Payment by Account"},
+  {"LiveFrom": "01/01/2018", "ID": "eaHuAppealTypePaymentOptions", "ListElementCode": "payOffline", "ListElement": "Pay by card"},
   {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "anonymity", "ListElement": "Anonymity"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "granted", "ListElement": "Permission granted"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "partiallyGranted", "ListElement": "Permission partially granted"},
