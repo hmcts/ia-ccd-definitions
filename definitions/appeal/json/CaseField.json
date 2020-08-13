@@ -3446,6 +3446,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentReference", "Label": "Payment reference number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentDescription", "Label": "Payment description", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentDate", "Label": "Payment date", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentErrorCode", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentErrorMessage", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feePaymentAppealType", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionHearingFeeDesc", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionWithoutHearingFeeDesc", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -3458,6 +3460,11 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "supportPaymentAccount", "Label": "Email MyHMCTSsupport@justice.gov.uk to ask for your Payment by Account number to be registered with your MyHMCTS account. You will be able to see your Payment by Account number once the is done. It usually takes 3 days.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "editYourAppeal", "Label": "If you need to submit the appeal urgently, you can [edit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal) and change the payment method.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dontHavePaymentByAccount", "Label": "### Don't have Payment by Account?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "howToPayLabel", "Label": "How to pay", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paAppealTypePaymentOption", "Label": "Select a payment method", "FieldType": "FixedRadioList", "FieldTypeParameter": "paAppealTypePaymentOptions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "eaHuAppealTypePaymentOption", "Label": "Select a payment method", "FieldType": "FixedRadioList", "FieldTypeParameter": "eaHuAppealTypePaymentOptions", "SecurityClassification": "PUBLIC"},
+
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -3466,7 +3473,6 @@
     "FieldType": "TextArea",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "howToPayLabel", "Label": "How to pay", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paAppealTypePaymentOption", "Label": "Select a payment method", "FieldType": "FixedRadioList", "FieldTypeParameter": "paAppealTypePaymentOptions", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "eaHuAppealTypePaymentOption", "Label": "Select a payment method", "FieldType": "FixedRadioList", "FieldTypeParameter": "eaHuAppealTypePaymentOptions", "SecurityClassification": "PUBLIC"}
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentFailedForDisplay", "Label": "Payment status", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
 ]
