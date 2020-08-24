@@ -24,5 +24,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "cmaRequirementsSubmitted", "Name": "Submitted CMA requirements", "Description": "Submitted CMA requirements from appellant or legal rep", "DisplayOrder": 25, "TitleDisplay": "# ${appealReferenceNumber}"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "cmaAdjustmentsAgreed", "Name": "CMA requirements agreed", "Description": "CMA requirements reviewed by tcw", "DisplayOrder": 26, "TitleDisplay": "# ${appealReferenceNumber}"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "cmaListed", "Name": "CMA listed", "Description": "CMA listed", "DisplayOrder": 27, "TitleDisplay": "# ${appealReferenceNumber}"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adjourned", "Name": "Adjourned", "Description": "Appeal adjourned", "DisplayOrder": 22, "TitleDisplay": "# ${appealReferenceNumber}"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adjourned", "Name": "Adjourned", "Description": "Appeal adjourned", "DisplayOrder": 22, "TitleDisplay": "# ${appealReferenceNumber}"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "pendingPayment", "Name": "Pending payment", "Description": "Pending payment", "DisplayOrder": 2, "TitleDisplay": "# ${appealReferenceNumber}"}
 ]
