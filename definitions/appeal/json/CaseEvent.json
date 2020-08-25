@@ -485,7 +485,7 @@
     "Name": "Stitching bundle complete",
     "Description": "Stitching bundle complete",
     "DisplayOrder": 23,
-    "PreConditionState(s)": "*",
+    "PreConditionState(s)": "finalBundling;preHearing",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
