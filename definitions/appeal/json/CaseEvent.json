@@ -203,7 +203,7 @@
     "Name": "Build your case",
     "Description": "Build your case",
     "DisplayOrder": 10,
-    "PreConditionState(s)": "awaitingRespondentEvidence;caseBuilding",
+    "PreConditionState(s)": "caseBuilding",
     "PostConditionState": "caseUnderReview",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",

@@ -371,7 +371,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_awaitingRespondentEvidence",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Awaiting respondent evidence](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_awaitingRespondentEvidence.png)\r\n\r\n## Do this next\r\nYou'll get an email when the respondent evidence is available in the documents tab. You can start gathering your evidence now and building your case.\r\n\r\n[Build your case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/buildCase)",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Awaiting respondent evidence](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_awaitingRespondentEvidence.png)\r\n\r\n## What happens next\r\nYou'll get an email when the respondent evidence is available in the documents tab.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1665,7 +1665,66 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaFinalDecisionForDisplay", "Label": "Internal flag managed by API to show correct final display for ftpa decision", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaFirstDecision", "Label": "Internal flag managed by API to store the first ftpa decision", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaSecondDecision", "Label": "Internal flag managed by API to store the second ftpa decision", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaFinalDecisionRemadeRule32", "Label": "Internal flag managed by API to store the final ftpa remade rule 32 decision", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_final_decision_granted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_final_decision_refused_not_admitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA refused](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_final_decision_reheard",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_final_decision_remade_allowed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA remade allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_final_decision_remade_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA remade dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_final_decision_allowed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_final_decision_dismissed",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![FTPA dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -3129,6 +3188,19 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentEvidenceDocsVisibleInDecided", "Label": "Internal flag managed by API for ftpa respondent evidence docs visible in ftpa decided state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentOotDocsVisibleInDecided", "Label": "Internal flag managed by API for ftpa respondent out of time docs visible in ftpa decided state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentOotExplanationVisibleInDecided", "Label": "Internal flag managed by API for ftpa respondent out of time explanation visible in ftpa decided state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionReasonsVisible", "Label": "Internal flag managed by API for ftpa appellant decision reasons page visibility in ftpa decided state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionReasonsVisible", "Label": "Internal flag managed by API for ftpa appellant decision reasons page visibility in ftpa decided state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionObjectionsVisible", "Label": "Internal flag managed by API for ftpa appellant decision objections page visibility in ftpa decided state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionObjectionsVisible", "Label": "Internal flag managed by API for ftpa appellant decision objections page visibility ftpa decided state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionListingVisible", "Label": "Internal flag managed by API for ftpa appellant decision listing page visibility in ftpa decided state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionListingVisible", "Label": "Internal flag managed by API for ftpa respondent decision objections page visibility in ftpa decided state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantNoticeOfDecisionSetAsideVisible", "Label": "Internal flag managed by API ftpa appellant decision objections page visibility in ftpa decided state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentNoticeOfDecisionSetAsideVisible", "Label": "Internal flag managed by API for ftpa respondent decision objections page visibility in ftpa decided state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionReasonsNotesVisible", "Label": "Internal flag managed by API for ftpa appellant decision reasons notes page visibility in ftpa decided state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionReasonsNotesVisible", "Label": "Internal flag managed by API for ftpa respondent decision reasons notes page visibility in ftpa decided state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "tribunalNotesTitle", "Label": "## Tribunal notes\r\nThese notes are only visible to the Tribunal.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allocatedJudgeTitle", "Label": "Only record this after the Judge has been notified.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allocatedJudge", "Label": "Judge assigned to the application", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -3363,7 +3435,6 @@
     "FieldType": "TextArea",
     "SecurityClassification": "PUBLIC"
   },
-
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -3375,5 +3446,12 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customAdditionalEvidenceDocuments", "Label": "Additional evidence from appellant", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customHearingDocuments", "Label": "Hearing documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customLegalRepDocuments", "Label": "Legal representative documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customRespondentDocuments", "Label": "Respondent documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customRespondentDocuments", "Label": "Respondent documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionTitle", "Label": "# Upload the Notice of Decision\r\nYou must upload the Notice of Decision. If it is not possible, you must provide a valid reason.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionDocument", "Label": "Notice of Decision", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionExplanation", "Label": "Reason you cannot provide the Notice of Decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "deportationOrderTitle", "Label": "# Deportation order", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "deportationOrderOptions", "Label": "Has a deportation order been made against the appellant?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  
 ]
