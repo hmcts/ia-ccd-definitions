@@ -346,8 +346,32 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_legalRepresentative_appealStartedPayNow",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal started](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_appealStarted.png)\r\n\r\n## Do this next\r\nYou still need to submit your appeal.\r\n\r\n[Pay for and submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/paymentAppeal)\r\n\r\nYou can also review and edit your appeal.\r\n\r\n[Edit appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal)",
+    "ID": "progress_legalRepresentative_appealStartedPayLater_pa",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal started](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_appealStarted.png)\r\n\r\n## Do this next\r\nYou still need to submit your appeal.\r\n\r\n[Submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitAppeal)\r\n\r\nYou can also review and edit your appeal.\r\n\r\n[Edit appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_appealStartedPayLater_eaHu",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal started](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_appealStarted.png)\r\n\r\n## Do this next\r\nYou still need to submit your appeal.\r\n\r\n[Submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitAppeal)\r\n\r\nYou can also review and edit your appeal.\r\n\r\n[Edit appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_appealStartedPayNow_pa",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal started](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_appealStarted.png)\r\n\r\n## Do this next\r\nYou still need to [pay and submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/payAndSubmitAppeal).\r\n\r\nYou can also review and [edit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal).",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_appealStartedPayNow_eaHu",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal started](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_appealStarted.png)\r\n\r\n## Do this next\r\nYou still need to [pay and submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/payAndSubmitAppeal).\r\n\r\nYou can also review and [edit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal).",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -363,7 +387,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_appealSubmitted",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_appealSubmitted.png)\r\n\r\n## Do this next\r\nYou have submitted your appeal. A case officer will now review your appeal. You don't need to do anything else right now.",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_appealSubmitted.png)\r\n\r\n## Do this next\r\nYou have submitted your appeal. A Tribunal Caseworker will now review your appeal. You don't need to do anything else right now.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1777,6 +1801,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_appealSubmitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.png)\r\n\r\n## What happens next\r\nA new appeal has been submitted. A Tribunal Caseworker is reviewing the appeal and will be in touch if further action is required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_judge_appealSubmitted",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.png)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will review the appeal and decide if it's valid.",
     "FieldType": "Label",
@@ -1811,6 +1843,14 @@
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_outOfTime_appealSubmitted",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.png)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will review the appeal and decide if it's valid.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_outOfTime_appealSubmitted",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.png)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will review the appeal and decide if it's valid.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3418,14 +3458,15 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentReference", "Label": "Payment reference number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentDescription", "Label": "Payment description", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentDate", "Label": "Payment date", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentErrorCode", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentErrorMessage", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feePaymentAppealType", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionHearingFeeDesc", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionWithoutHearingFeeDesc", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentByAccountReferenceNumberLabel", "Label": "### Payment by Account reference number", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "pbaNumber", "Label": "Enter your Payment by Account reference number", "HintText": "For example, PBA1234567", "FieldType": "Text", "RegularExpression": "PBA[0-9]{7}", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dontHavePaymentByAccount", "Label": "### Don't have Payment by Account?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "cantSeePaymentByAccount", "Label": "### Can’t see your Payment by Account number?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyLinkToUsePba", "Label": "<a href=\"https://immigrationappealsonline.justice.gov.uk/IACFees\" target=\"_blank\">Apply to use Payment by Account</a>", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentSuccessful", "Label": "## Payment successful", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
 
   {
     "LiveFrom": "01/01/2018",
@@ -3450,8 +3491,19 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionTitle", "Label": "# Upload the Notice of Decision\r\nYou must upload the Notice of Decision. If it is not possible, you must provide a valid reason.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionDocument", "Label": "Notice of Decision", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionExplanation", "Label": "Reason you cannot provide the Notice of Decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "deportationOrderTitle", "Label": "# Deportation order", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "deportationOrderOptions", "Label": "Has a deportation order been made against the appellant?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
-  
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "deportationOrderOptions", "Label": "Has a deportation order been made against the appellant?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentSuccessful", "Label": "## Payment successful", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentAccountList", "Label": "Select a Payment by Account number from the list", "Value": "Select a number", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "supportPaymentAccount", "Label": "Email MyHMCTSsupport@justice.gov.uk to ask for your Payment by Account number to be registered with your MyHMCTS account. You will be able to see your Payment by Account number once the is done. It usually takes 3 days.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "editYourAppeal", "Label": "If you need to submit the appeal urgently, you can [edit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal) and change the payment method.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dontHavePaymentByAccount", "Label": "### Don't have Payment by Account?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "howToPayLabel", "Label": "How to pay", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paAppealTypePaymentOption", "Label": "Select a payment method", "FieldType": "FixedRadioList", "FieldTypeParameter": "paAppealTypePaymentOptions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "eaHuAppealTypePaymentOption", "Label": "Select a payment method", "FieldType": "FixedRadioList", "FieldTypeParameter": "eaHuAppealTypePaymentOptions", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentFailedForDisplay", "Label": "Payment status", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
 ]
