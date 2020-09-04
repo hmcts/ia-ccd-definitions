@@ -362,16 +362,8 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_legalRepresentative_appealStartedPayNow",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal started](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_appealStarted.png)\r\n\r\n## Do this next\r\nYou still need to submit your appeal.\r\n\r\n[Pay for and submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/payAndSubmitAppeal)\r\n\r\nYou can also review and edit your appeal.\r\n\r\n[Edit appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal)",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_appealStartedPayNow_pa",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal started](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_appealStarted.png)\r\n\r\n## Do this next\r\nYou still need to submit your appeal.\r\n\r\n[Pay for and submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/payAndSubmitAppeal)\r\n\r\nYou can also review and edit your appeal.\r\n\r\n[Edit appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal)",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal started](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_appealStarted.png)\r\n\r\n## Do this next\r\nYou still need to [pay and submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/payAndSubmitAppeal).\r\n\r\nYou can also review and [edit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal).",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -379,7 +371,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_appealStartedPayNow_eaHu",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal started](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_appealStarted.png)\r\n\r\n## Do this next\r\nYou still need to [pay for and submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/payAndSubmitAppeal).\r\n\r\nYou can also review and [edit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal).",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal started](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_appealStarted.png)\r\n\r\n## Do this next\r\nYou still need to [pay and submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/payAndSubmitAppeal).\r\n\r\nYou can also review and [edit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal).",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
