@@ -476,7 +476,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_adjourned", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"adjourned\" OR currentCaseStateVisibleToAdminOfficer=\"adjourned\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_others_adjourned", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"adjourned\" OR currentCaseStateVisibleToHomeOfficeApc=\"adjourned\" OR currentCaseStateVisibleToHomeOfficeAll=\"adjourned\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_adjourned", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"adjourned\""},
-  
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "TabLabel": "Appeal", "TabDisplayOrder": 2, "CaseFieldID": "appealTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealTitle", "TabFieldDisplayOrder": 10, "FieldShowCondition": "reasonsForAppealDateUploaded=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealDateUploaded", "TabFieldDisplayOrder": 20, "FieldShowCondition": "reasonsForAppealDateUploaded=\"*\""},
@@ -701,6 +701,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "tribunalNotesTitle", "TabFieldDisplayOrder": 33, "FieldShowCondition": "allocatedJudge=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "allocatedJudge", "TabFieldDisplayOrder": 34, "FieldShowCondition": "allocatedJudge=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "previousJudgeAllocations", "TabFieldDisplayOrder": 35, "FieldShowCondition": "previousJudgeAllocations=\"*\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "paymentHistory", "TabLabel": "Payment history", "TabDisplayOrder": 10, "CaseFieldID": "paymentHistoryTabTitle", "TabFieldDisplayOrder": 1,  "TabShowCondition": "currentCaseStateVisibleToLegalRepresentative!=\"appealStarted\" AND currentCaseStateVisibleToCaseOfficer!=\"appealStarted\" AND currentCaseStateVisibleToAdminOfficer!=\"appealStarted\" AND isFeePaymentEnabled=\"Yes\"" },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "paymentHistory", "TabLabel": "Payment history", "TabDisplayOrder": 10, "CaseFieldID": "paymentHistoryViewer", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "TabLabel": "Validation", "TabDisplayOrder": 10, "CaseFieldID": "validationTabTitle", "TabFieldDisplayOrder": 1, "TabShowCondition": "currentCaseStateVisibleToCaseOfficer=\"appealSubmitted\" AND isHomeOfficeIntegrationEnabled=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "validation_caseOfficer_appealSubmitted", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "contactPreferenceDescription", "TabFieldDisplayOrder": 3, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
