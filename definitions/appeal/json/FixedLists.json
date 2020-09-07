@@ -617,6 +617,13 @@
   {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "reheardRule32", "ListElement": "Decision set aside and to be reheard in the First-tier under rule 32"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "remadeRule32", "ListElement": "Decision set aside and remade in the First-tier under rule 32"},
 
+  {"LiveFrom": "01/01/2018", "ID": "hearingConductionOptions", "ListElementCode": "decisionWithouHearing", "ListElement": "Decision without a hearing"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingConductionOptions", "ListElementCode": "videoWithNoParticipants", "ListElement": "Video with no participants at a hearing centre"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingConductionOptions", "ListElementCode": "videoWithAtLeastOne", "ListElement": "Video with at least one participant at a hearing centre"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingConductionOptions", "ListElementCode": "audioWithNoParticipants", "ListElement": "Audio with no participants at a hearing centre"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingConductionOptions", "ListElementCode": "audioWithAtLeastOne", "ListElement": "Audio with at least one participant at a hearing centre"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingConductionOptions", "ListElementCode": "allParticipants", "ListElement": "All participants at the hearing centre"},
+
   {"LiveFrom": "01/01/2018", "ID": "paAppealTypePaymentOptions", "ListElementCode": "payNow", "ListElement": "Pay now using Payment by Account"},
   {"LiveFrom": "01/01/2018", "ID": "paAppealTypePaymentOptions", "ListElementCode": "payLater", "ListElement": "Pay after submitting the appeal using Payment by Account"},
   {"LiveFrom": "01/01/2018", "ID": "paAppealTypePaymentOptions", "ListElementCode": "payOffline", "ListElement": "Pay after submitting the appeal by card"},

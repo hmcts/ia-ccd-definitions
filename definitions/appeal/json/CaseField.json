@@ -2706,7 +2706,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_post_hearing_details_recorded_admin_decision",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.png)\r\n\r\n## Do this next\r\nThe Judge will record the decision and reasons.\r\nYou don’t need to do any more on this case.",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Prepare for hearing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.png)\r\n\r\n## Do this next\r\nYou don’t need to do any more on this case.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3505,5 +3505,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paAppealTypePaymentOption", "Label": "Select a payment method", "FieldType": "FixedRadioList", "FieldTypeParameter": "paAppealTypePaymentOptions", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "eaHuAppealTypePaymentOption", "Label": "Select a payment method", "FieldType": "FixedRadioList", "FieldTypeParameter": "eaHuAppealTypePaymentOptions", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentFailedForDisplay", "Label": "Payment status", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentFailedForDisplay", "Label": "Payment status", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingConductionOptions", "Label": "How the hearing was conducted", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingConductionOptions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "recordAttendeesTitle", "Label": "## Attendees", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 ]
