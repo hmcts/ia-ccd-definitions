@@ -3534,6 +3534,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentFailedForDisplay", "Label": "Payment status", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingConductionOptions", "Label": "How the hearing was conducted", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingConductionOptions", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "recordAttendeesTitle", "Label": "## Attendees", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "validationTabTitle", "Label": "## Appeal validation", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -3557,5 +3558,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "validationApplicationData", "Label": "|**HO reference**|**${homeOfficeReferenceNumber}**|**${homeOfficeCaseStatusData.applicationStatus.documentReference}** \r\n| ------------- |:------------- |:------------- |\r\n|HO decision||${homeOfficeCaseStatusData.applicationStatus.decisionType.description}|\r\n|HO decision date|${homeOfficeDecisionDate}|${homeOfficeCaseStatusData.displayDecisionDate}|\r\n|HO decision sent|${homeOfficeDecisionDate}|${homeOfficeCaseStatusData.displayDecisionSentDate}|\r\n|HO decision communication|${contactPreferenceDescription}|${homeOfficeCaseStatusData.applicationStatus.decisionCommunication.type}|\r\n|HO application|${appealTypeDescription}|${homeOfficeCaseStatusData.applicationStatus.applicationType.description}|\r\n|HO claim reason|| ${homeOfficeCaseStatusData.applicationStatus.claimReasonType.description}|\r\n|HO rejection reason||${homeOfficeCaseStatusData.displayRejectionReasons}|\r\n|HO appealable||${homeOfficeCaseStatusData.displayMetadataValueBoolean}|", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentHistoryTabTitle", "Label": "# Payment history", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentHistoryViewer", "Label": " ", "FieldType": "CasePaymentHistoryViewer", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentHistoryViewer", "Label": " ", "FieldType": "CasePaymentHistoryViewer", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "staffLocation", "Label": "Staff Location", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "staffLocationId", "Label": "Staff Location Id", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+
 ]
