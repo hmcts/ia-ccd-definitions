@@ -1801,6 +1801,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_appealSubmitted_home_office",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.png)\r\n\r\n## Do this next\r\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\r\n\r\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_appealSubmitted",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.png)\r\n\r\n## What happens next\r\nA new appeal has been submitted. A Tribunal Caseworker is reviewing the appeal and will be in touch if further action is required.<br/><br/><br/>",
     "FieldType": "Label",
@@ -1827,6 +1835,14 @@
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted",
     "Label": " ![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_outOfTimeBox.png)\r\n\r\n# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.png)\r\n\r\n## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\r\n\r\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_outOfTime_appealSubmitted_home_office",
+    "Label": " ![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_outOfTimeBox.png)\r\n\r\n# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.png)\r\n\r\n## Do this next\r\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\r\n\r\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3508,5 +3524,25 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentFailedForDisplay", "Label": "Payment status", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingConductionOptions", "Label": "How the hearing was conducted", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingConductionOptions", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "recordAttendeesTitle", "Label": "## Attendees", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "recordAttendeesTitle", "Label": "## Attendees", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "validationTabTitle", "Label": "## Appeal validation", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isHomeOfficeIntegrationEnabled", "Label": "## Home Office integration enabled flag", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "validation_caseOfficer_appealSubmitted",
+    "Label": "Review the appeal application form data and cross reference it with Home Office data. If the appeal looks valid, you must tell the respondent to supply their evidence.\r\n\r\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)\r\n\r\nThe first column of information is sourced from the appeal application form, the second column of information is from Home Office records",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "contactPreferenceDescription", "Label": "Contact preference description", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTypeDescription", "Label": "Appeal type description", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeCaseStatusData", "Label": "Home Office Data", "FieldType": "hoCaseData", "FieldTypeParameter": "hoCaseData", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeSearchStatus", "Label": "Search status", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeInstructStatus", "Label": "Instruct status", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "validationAppellantDetailsTitle", "Label": "## Appellant details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "validationApplicationDetailsTitle", "Label": "## Application details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "validationAppealData", "Label": "|**Given name**|**${appellantGivenNames}**|**${homeOfficeCaseStatusData.person.givenName}** \r\n| ------------- |:------------- |:------------- |\r\n|Family name|${appellantFamilyName}|${homeOfficeCaseStatusData.person.familyName}| \r\n|Full name|${appellantGivenNames} ${appellantFamilyName}|${homeOfficeCaseStatusData.person.fullName}| \r\n|Gender||${homeOfficeCaseStatusData.person.gender.description}| \r\n|Date of birth|${appellantDateOfBirth}|${homeOfficeCaseStatusData.displayDateOfBirth}| \r\n|HO role||${homeOfficeCaseStatusData.applicationStatus.roleType.description}| \r\n|HO sub-role||${homeOfficeCaseStatusData.applicationStatus.roleSubType.description}| \r\n|HO nationality||${homeOfficeCaseStatusData.person.nationality.description}|", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "validationApplicationData", "Label": "|**HO reference**|**${homeOfficeReferenceNumber}**|**${homeOfficeCaseStatusData.applicationStatus.documentReference}** \r\n| ------------- |:------------- |:------------- |\r\n|HO decision||${homeOfficeCaseStatusData.applicationStatus.decisionType.description}|\r\n|HO decision date|${homeOfficeDecisionDate}|${homeOfficeCaseStatusData.displayDecisionDate}|\r\n|HO decision sent|${homeOfficeDecisionDate}|${homeOfficeCaseStatusData.displayDecisionSentDate}|\r\n|HO decision communication|${contactPreferenceDescription}|${homeOfficeCaseStatusData.applicationStatus.decisionCommunication.type}|\r\n|HO application|${appealTypeDescription}|${homeOfficeCaseStatusData.applicationStatus.applicationType.description}|\r\n|HO claim reason|| ${homeOfficeCaseStatusData.applicationStatus.claimReasonType.description}|\r\n|HO rejection reason||${homeOfficeCaseStatusData.displayRejectionReasons}|\r\n|HO appealable||${homeOfficeCaseStatusData.displayMetadataValueBoolean}|", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 ]
