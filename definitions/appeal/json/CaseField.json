@@ -444,14 +444,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_legalRepresentative_appealSubmittedPayOffline_pa",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_appealSubmitted.png)\r\n\r\n## Do this next\r\nYou have submitted your appeal. A Tribunal Caseworker will now review your appeal.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_awaitingRespondentEvidence",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 3 of 11 stages - the Awaiting respondent evidence stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_awaitingRespondentEvidence.png)\r\n\r\n## What happens next\r\nYou'll get an email when the respondent evidence is available in the documents tab.",
     "FieldType": "Label",
@@ -3610,8 +3602,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dontHavePaymentByAccount", "Label": "### Don't have Payment by Account?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "howToPayLabel", "Label": "How to pay", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paAppealTypePaymentOption", "Label": "Select a payment method", "FieldType": "FixedRadioList", "FieldTypeParameter": "paAppealTypePaymentOptions", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "eaHuAppealTypePaymentOption", "Label": "Select a payment method", "FieldType": "FixedRadioList", "FieldTypeParameter": "eaHuAppealTypePaymentOptions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paAppealTypePaymentOption", "Label": "Payment method", "FieldType": "FixedRadioList", "FieldTypeParameter": "paAppealTypePaymentOptions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "eaHuAppealTypePaymentOption", "Label": "Payment method", "FieldType": "FixedRadioList", "FieldTypeParameter": "eaHuAppealTypePaymentOptions", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentFailedForDisplay", "Label": "Payment status", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
@@ -3642,8 +3634,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentHistoryViewer", "Label": " ", "FieldType": "CasePaymentHistoryViewer", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "staffLocation", "Label": "Staff Location", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "staffLocationId", "Label": "Staff Location Id", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentOfflineForDisplay", "Label": "Payment status", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadSensitiveDocsHeaderDescription", "Label": "Uploaded sensitive documents appear in the documents tab and are only visible to HMCTS and judicial users.  \r\nNo users are notified when these are added. These documents are not addded to the hearing bundle. ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadSensitiveDocsIsAppellantRespondent", "Label": "Document supplied by", "FieldType": "FixedRadioList", "FieldTypeParameter": "uploadSensitiveDocsIsAppellantRespondentOptions", "SecurityClassification": "PUBLIC"},
