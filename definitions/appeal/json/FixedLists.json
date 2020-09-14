@@ -280,6 +280,7 @@
   {"LiveFrom": "01/01/2018", "ID": "isoCountries", "ListElementCode": "SS", "ListElement": "South Sudan"},
   {"LiveFrom": "01/01/2018", "ID": "isoCountries", "ListElementCode": "ES", "ListElement": "Spain"},
   {"LiveFrom": "01/01/2018", "ID": "isoCountries", "ListElementCode": "LK", "ListElement": "Sri Lanka"},
+  {"LiveFrom": "01/01/2018", "ID": "isoCountries", "ListElementCode": "ZZ", "ListElement": "Stateless"},
   {"LiveFrom": "01/01/2018", "ID": "isoCountries", "ListElementCode": "SD", "ListElement": "Sudan"},
   {"LiveFrom": "01/01/2018", "ID": "isoCountries", "ListElementCode": "SR", "ListElement": "Suriname *"},
   {"LiveFrom": "01/01/2018", "ID": "isoCountries", "ListElementCode": "SJ", "ListElement": "Svalbard and Jan Mayen Islands"},
@@ -629,5 +630,8 @@
   {"LiveFrom": "01/01/2018", "ID": "paAppealTypePaymentOptions", "ListElementCode": "payOffline", "ListElement": "Pay after submitting the appeal by card"},
 
   {"LiveFrom": "01/01/2018", "ID": "eaHuAppealTypePaymentOptions", "ListElementCode": "payNow", "ListElement": "Pay now using Payment by Account"},
-  {"LiveFrom": "01/01/2018", "ID": "eaHuAppealTypePaymentOptions", "ListElementCode": "payOffline", "ListElement": "Pay by card"}
+  {"LiveFrom": "01/01/2018", "ID": "eaHuAppealTypePaymentOptions", "ListElementCode": "payOffline", "ListElement": "Pay by card"},
+
+  {"LiveFrom": "01/01/2018", "ID": "appellantStateless", "ListElementCode": "hasNationality", "ListElement": "Has a nationality"},
+  {"LiveFrom": "01/01/2018", "ID": "appellantStateless", "ListElementCode": "isStateless", "ListElement": "Stateless"}
 ]
