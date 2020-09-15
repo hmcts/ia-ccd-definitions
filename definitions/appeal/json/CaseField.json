@@ -3623,7 +3623,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "validation_caseOfficer_requestHomeOfficeData",
-    "Label": "### There is a problem\r\n\r\n${homeOfficeSearchStatusMessage}\r\n\r\n[Request the Home Office information](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHomeOfficeData) to try again. This may take a few minutes.",
+    "Label": "${homeOfficeSearchStatusMessage}",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
