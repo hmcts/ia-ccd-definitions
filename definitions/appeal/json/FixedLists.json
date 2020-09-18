@@ -633,5 +633,8 @@
   {"LiveFrom": "01/01/2018", "ID": "eaHuAppealTypePaymentOptions", "ListElementCode": "payOffline", "ListElement": "Pay by card"},
 
   {"LiveFrom": "01/01/2018", "ID": "appellantStateless", "ListElementCode": "hasNationality", "ListElement": "Has a nationality"},
-  {"LiveFrom": "01/01/2018", "ID": "appellantStateless", "ListElementCode": "isStateless", "ListElement": "Stateless"}
+  {"LiveFrom": "01/01/2018", "ID": "appellantStateless", "ListElementCode": "isStateless", "ListElement": "Stateless"},
+
+  {"LiveFrom": "01/01/2018", "ID": "allocateCaseOptions", "ListElementCode": "Allocate to me", "ListElement": "Allocate to me", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "allocateCaseOptions", "ListElementCode": "Allocate to a colleague", "ListElement": "Allocate to a colleague", "DisplayOrder": 2}
 ]
