@@ -3564,6 +3564,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "staffLocationId", "Label": "Staff Location Id", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allocationType", "Label": "Allocation type", "FieldType": "FixedRadioList", "FieldTypeParameter": "allocateCaseOptions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allocationColleague", "Label": "Colleague", "FieldType": "FixedList", "FieldTypeParameter": "allocateCaseColleagueOptions", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadSensitiveDocsHeaderDescription", "Label": "Uploaded sensitive documents appear in the documents tab and are only visible to HMCTS and judicial users.  \r\nNo users are notified when these are added. These documents are not addded to the hearing bundle. ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadSensitiveDocsIsAppellantRespondent", "Label": "Document supplied by", "FieldType": "FixedRadioList", "FieldTypeParameter": "uploadSensitiveDocsIsAppellantRespondentOptions", "SecurityClassification": "PUBLIC"},
