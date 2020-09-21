@@ -3563,6 +3563,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "staffLocation", "Label": "Staff Location", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "staffLocationId", "Label": "Staff Location Id", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allocationType", "Label": "Allocation type", "FieldType": "FixedRadioList", "FieldTypeParameter": "allocateCaseOptions", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allocationType", "Label": "Allocation type", "FieldType": "FixedRadioList", "FieldTypeParameter": "allocateCaseOptions", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadSensitiveDocs", "Label": "Sensitive documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"}
 
 ]
