@@ -174,7 +174,7 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "respondentEvidence", "Label": "Upload case documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadHomeOfficeBundleTitle", "Label": "#### Files should be:\r\n- a maximum of 100MB in size (larger files must be split)\r\n- labelled clearly, e.g. HObundle.pdf\r\n- in Word or PDF format - other file formats must be sent to both the appellant and Tribunal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeBundle", "Label": "Upload Home Office bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeBundle", "Label": "Upload Home Office bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithUpload", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCaseBuildingTitle", "Label": "You must now build your case by uploading your appeal argument and evidence.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestResponseReviewTitle", "Label": "Request to review the Home Office response", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {
