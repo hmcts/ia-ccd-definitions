@@ -169,6 +169,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealPaid", "CaseFieldID": "markAppealPaidDesc", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "markAppealPaid","PageDisplayOrder": 1,"ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealPaid", "CaseFieldID": "paidDate", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "markAppealPaid", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealPaid", "CaseFieldID": "paidAmount", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "markAppealPaid", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealPaid", "CaseFieldID": "additionalPaymentInfo", "PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "markAppealPaid", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "submissionOutOfTime", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "submissionOutOfTimePage", "PageDisplayOrder": 1, "FieldShowCondition": "applicationOutOfTimeText=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "PageShowCondition": "submissionOutOfTime=\"Yes\"", "ShowSummaryChangeOption": "N"},
   {
