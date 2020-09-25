@@ -177,5 +177,14 @@
   {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "displayAppellantDetailsTitle", "FieldType": "Text", "ElementLabel": "HO appellant details title", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "displayApplicationDetailsTitle", "FieldType": "Text", "ElementLabel": "HO application details title", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "person", "FieldType": "hoPerson", "FieldTypeParameter": "hoPerson", "ElementLabel": "HO person", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "applicationStatus", "FieldType": "hoApplication", "FieldTypeParameter": "hoApplication", "ElementLabel": "HO application", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "applicationStatus", "FieldType": "hoApplication", "FieldTypeParameter": "hoApplication", "ElementLabel": "HO application", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "applicant", "FieldType": "Text", "ElementLabel": "Applicant", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "type", "FieldType": "Text", "ElementLabel": "Type of application", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "details", "FieldType": "TextArea", "ElementLabel": "Application details", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Documents supporting application", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "date", "FieldType": "Date", "ElementLabel": "Date application was made", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "decision", "FieldType": "Text", "ElementLabel": "Decision", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "state", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "state=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "applicantRole", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "applicantRole=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"}
 ]
