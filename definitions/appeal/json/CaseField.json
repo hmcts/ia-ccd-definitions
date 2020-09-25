@@ -3601,7 +3601,6 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingConductionOptions", "Label": "How the hearing was conducted", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingConductionOptions", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "recordAttendeesTitle", "Label": "## Attendees", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "validationTabTitle", "Label": "## Appeal validation", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isHomeOfficeIntegrationEnabled", "Label": "## Home Office integration enabled flag", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {
@@ -3621,7 +3620,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "validationApplicationDetailsTitle", "Label": "## Application details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "validationAppealData", "Label": "|**Given name**|**${appellantGivenNames}**|**${homeOfficeCaseStatusData.person.givenName}** \r\n| ------------- |:------------- |:------------- |\r\n|Family name|${appellantFamilyName}|${homeOfficeCaseStatusData.person.familyName}| \r\n|Full name|${appellantGivenNames} ${appellantFamilyName}|${homeOfficeCaseStatusData.person.fullName}| \r\n|Gender||${homeOfficeCaseStatusData.person.gender.description}| \r\n|Date of birth|${appellantDateOfBirth}|${homeOfficeCaseStatusData.displayDateOfBirth}| \r\n|HO role||${homeOfficeCaseStatusData.applicationStatus.roleType.description}| \r\n|HO sub-role||${homeOfficeCaseStatusData.applicationStatus.roleSubType.description}| \r\n|HO nationality||${homeOfficeCaseStatusData.person.nationality.description}|", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "validationApplicationData", "Label": "|**HO reference**|**${homeOfficeReferenceNumber}**|**${homeOfficeCaseStatusData.applicationStatus.documentReference}** \r\n| ------------- |:------------- |:------------- |\r\n|HO decision||${homeOfficeCaseStatusData.applicationStatus.decisionType.description}|\r\n|HO decision date|${homeOfficeDecisionDate}|${homeOfficeCaseStatusData.displayDecisionDate}|\r\n|HO decision sent|${homeOfficeDecisionDate}|${homeOfficeCaseStatusData.displayDecisionSentDate}|\r\n|HO decision communication|${contactPreferenceDescription}|${homeOfficeCaseStatusData.applicationStatus.decisionCommunication.type}|\r\n|HO application|${appealTypeDescription}|${homeOfficeCaseStatusData.applicationStatus.applicationType.description}|\r\n|HO claim reason|| ${homeOfficeCaseStatusData.applicationStatus.claimReasonType.description}|\r\n|HO rejection reason||${homeOfficeCaseStatusData.displayRejectionReasons}|\r\n|HO appealable||${homeOfficeCaseStatusData.displayMetadataValueBoolean}|", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentHistoryTabTitle", "Label": "# Payment history", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentHistoryViewer", "Label": " ", "FieldType": "CasePaymentHistoryViewer", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "staffLocation", "Label": "Staff Location", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -3638,5 +3636,22 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "markAppealPaidDesc", "Label": "Include the date the payment was made, the amount paid and any other relevant information.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paidDate", "Label": "Payment date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paidAmount", "Label": "Amount paid (£)", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalPaymentInfo", "Label": "Additional payment information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalPaymentInfo", "Label": "Additional payment information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationLink", "Label": "[Make an application](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/makeAnApplication)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationTypes", "Label": "Type of application", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationHelp", "Label": "Provide any further details and evidence that may help your application.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationType", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationDescLabel", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationDesc", "Label": " ", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "makeAnApplicationUploadEvidenceAdvice",
+    "Label": "#### Upload any evidence that supports your application\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, application-evidence.pdf",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationEvidence", "Label": "Supporting evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplications", "Label": "Applications", "FieldType": "Collection", "FieldTypeParameter": "makeAnApplication", "SecurityClassification": "PUBLIC"}
 ]
