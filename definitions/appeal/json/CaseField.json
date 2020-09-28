@@ -1405,13 +1405,19 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
-
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_rj_ftpa_appellant_reheard_rule_32",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nA Caseworker will review any Tribunal instructions and then relist the case.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_appellant_reheard_rule_32_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1426,8 +1432,24 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_admin_rj_ftpa_appellant_reheard_rule_32_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case is ready to be listed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_appellant_reheard_rule_32",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nCheck the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the judge has made to the Tribunal. Once you've done this you should record the length of the hearing.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_rj_ftpa_appellant_reheard_rule_32_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to submit any new requirements.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1442,17 +1464,40 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_rj_ftpa_appellant_reheard_rule_32_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified if you need to do anything.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_rj_ftpa_appellant_reheard_rule_32",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nA Caseworker will review any Tribunal instructions and then relist the case.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_rj_ftpa_appellant_reheard_rule_32_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case has been listed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_rj_ftpa_respondent_reheard_rule_32",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nA Caseworker will review any Tribunal instructions and then relist the case.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_respondent_reheard_rule_32_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1467,8 +1512,24 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_admin_rj_ftpa_respondent_reheard_rule_32_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case is ready to be listed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_respondent_reheard_rule_32",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nCheck the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the judge has made to the Tribunal. Once you've done this you should record the length of the hearing.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_rj_ftpa_respondent_reheard_rule_32_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to submit any new requirements.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1483,18 +1544,40 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_rj_ftpa_respondent_reheard_rule_32_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified if you need to do anything.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_rj_ftpa_respondent_reheard_rule_32",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nA Caseworker will review any Tribunal instructions and then relist the case.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_rj_ftpa_respondent_reheard_rule_32_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case has been listed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_rj_ftpa_appellant_reheard_rule_35",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nA Caseworker will review any Tribunal instructions and then relist the case.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_appellant_reheard_rule_35_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1509,8 +1592,24 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_admin_rj_ftpa_appellant_reheard_rule_35_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case is ready to be listed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_appellant_reheard_rule_35",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nCheck the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the judge has made to the Tribunal. Once you've done this you should record the length of the hearing.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_rj_ftpa_appellant_reheard_rule_35_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to submit any new requirements.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1525,17 +1624,40 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_rj_ftpa_appellant_reheard_rule_35_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified if you need to do anything.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_rj_ftpa_appellant_reheard_rule_35",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nA Caseworker will review any Tribunal instructions and then relist the case.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_rj_ftpa_appellant_reheard_rule_35_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case has been listed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_rj_ftpa_respondent_reheard_rule_35",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nA Caseworker will review any Tribunal instructions and then relist the case.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_respondent_reheard_rule_35_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1550,8 +1672,24 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_admin_rj_ftpa_respondent_reheard_rule_35_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case is ready to be listed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_respondent_reheard_rule_35",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nCheck the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the judge has made to the Tribunal. Once you've done this you should record the length of the hearing.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_rj_ftpa_respondent_reheard_rule_35_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to submit any new requirements.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1566,15 +1704,27 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_rj_ftpa_respondent_reheard_rule_35_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified if you need to do anything.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_rj_ftpa_respondent_reheard_rule_35",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nA Caseworker will review any Tribunal instructions and then relist the case.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
-
-
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_rj_ftpa_respondent_reheard_rule_35_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case has been listed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -1762,8 +1912,96 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_final_decision_reheard",
+    "ID": "progress_caseOfficer_final_decision_reheard_rule_32",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_final_decision_reheard_rule_35",
+    "Label": "# Overview\r\n\r\n## 20. Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_final_decision_reheard_rule_32_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to submit any new requirements.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_final_decision_reheard_rule_35_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to submit any new requirements.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRep_final_decision_reheard_rule_32_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified if you need to do anything.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRep_final_decision_reheard_rule_35_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified if you need to do anything.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_final_decision_reheard_rule_32_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_final_decision_reheard_rule_35_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_final_decision_reheard_rule_32_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case is ready to be listed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_final_decision_reheard_rule_35_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case is ready to be listed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_final_decision_reheard_rule_32_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case has been listed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_final_decision_reheard_rule_35_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case has been listed.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3456,6 +3694,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagPotentiallyViolentPersonExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnacceptableCustomerBehaviourExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnaccompaniedMinorExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagSetAsideReheardExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAnonymityAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagComplexCaseAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
@@ -3465,6 +3704,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagPotentiallyViolentPersonAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnacceptableCustomerBehaviourAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnaccompaniedMinorAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagSetAsideReheardAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAnonymityImage", "Label": "![This appellant in this case has an anonymity order](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagAnonymity.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagComplexCaseImage", "Label": "![This appeal has been marked as complex case](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagComplexCase.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -3474,6 +3714,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagPotentiallyViolentPersonImage", "Label": "![The appellant in this case is a potentially violent person](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagPotentiallyViolentPerson.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnacceptableCustomerBehaviourImage", "Label": "![The appellant in this case has displayed unacceptable customer behaviour](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagUnacceptableCustomerBehaviour.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnaccompaniedMinorImage", "Label": "![The appellant in this case is an unaccompanied minor](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagUnaccompaniedMinor.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagSetAsideReheardImage", "Label": "![The decision has been set aside and this case will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagSetAsideReheard.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeFlagDescription", "Label": "Select a flag to remove from the case\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeFlagTypeOfFlag", "Label": "Type of flag", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
@@ -3546,6 +3787,7 @@
   {"LiveFrom": "02/01/2018", "CaseTypeID": "Asylum", "ID": "unlinkAppeaTitle", "Label": "## Review the link you want to remove", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submitNotificationStatus", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFeePaymentEnabled", "Label": "isFeePaymentEnabled", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isReheardAppealEnabled", "Label": "isReheardAppealEnabled", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionHearingFeeOptionTitle", "Label": "# How do you want the appeal to be decided?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionHearingFeeOption", "Label": "How do you want the appeal to be decided?", "FieldType": "FixedRadioList", "FieldTypeParameter": "decisionHearingFeeOption", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingDecisionSelected", "Label": "How do you want the appeal to be decided?", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
