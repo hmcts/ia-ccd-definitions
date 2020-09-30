@@ -36,8 +36,10 @@
   {"LiveFrom": "01/01/2018", "ID": "editableDirection", "ListElementCode": "explanation", "FieldType": "TextArea", "ElementLabel": "Explanation", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "editableDirection", "ListElementCode": "parties", "FieldType": "FixedList", "FieldTypeParameter": "parties", "ElementLabel": "Parties", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "editableDirection", "ListElementCode": "dateDue", "FieldType": "Date", "ElementLabel": "By what date must they comply?", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "documentWithDescription", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "documentWithUpload", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Upload a file", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "documentWithUpload", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Describe the document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "documentWithMetadata", "ListElementCode": "suppliedBy", "FieldType": "Text", "ElementLabel": "Supplied by", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "documentWithDescription", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "documentWithDescription", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Describe the document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "documentWithMetadata", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "documentWithMetadata", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Description", "SecurityClassification": "PUBLIC"},
@@ -174,4 +176,4 @@
   {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "displayMetadataValueDateTime", "FieldType": "Text", "ElementLabel": "HO dispatch date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "person", "FieldType": "hoPerson", "FieldTypeParameter": "hoPerson", "ElementLabel": "HO person", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "applicationStatus", "FieldType": "hoApplication", "FieldTypeParameter": "hoApplication", "ElementLabel": "HO application", "SecurityClassification": "PUBLIC"}
-  ]
+]
