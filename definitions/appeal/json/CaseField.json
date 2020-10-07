@@ -478,7 +478,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_listing",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Listing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_listing.png)\r\n\r\n## Do this next\r\nThe case officer is reviewing the hearing requirements. Once the requirements have been agreed with the Tribunal, the case will be listed and you will receive a notification with the hearing notice.\n\n",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Listing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_listing.png)\r\n\r\n## Do this next\r\nThe case officer is reviewing the hearing requirements. Once the requirements have been agreed with the Tribunal, the case will be listed and you will receive a notification with the hearing notice.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -2898,6 +2898,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_reviewHearingRequirements_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_listing.png)\r\n\r\n## Do this next\r\nYou can view the hearing requirements and any requests for additional adjustments in the [hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#hearing).<br><br>You should contact the appellant if you need more information.<br><br>You should then review and submit the hearing requirements and any additional adjustments.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_judge_reviewHearingRequirements",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_reviewHearingRequirements.png)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will agree what adjustments the Tribunal will make.",
     "FieldType": "Label",
@@ -3028,6 +3036,14 @@
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_listing_submitted_requirements",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/adminOfficer_listing_submittedRequirements.png)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will agree what adjustments the Tribunal will make.\r\n\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_listing_submitted_requirements_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_listing.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case is ready to be listed.<br/></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3363,7 +3379,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAppellantGivingOralEvidence", "Label": "Will the appellant give oral evidence at the hearing?", "FieldType": "YesOrNo", "FieldTypeParameter": "isAppellantGivingOralEvidence", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isWitnessesAttending", "Label": "Will any witnesses attend the hearing?", "FieldType": "YesOrNo", "FieldTypeParameter": "isWitnessesAttending", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "witnessDetails", "Label": "Witness details", "FieldType": "Collection", "FieldTypeParameter": "witnessDetails", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isInterpreterServicesNeeded", "Label": "Do you need interpreter services at the hearing?", "FieldType": "YesOrNo", "FieldTypeParameter": "isInterpreterServicesNeeded", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isInterpreterServicesNeeded", "Label": "Do you need interpreter services on the day?", "FieldType": "YesOrNo", "FieldTypeParameter": "isInterpreterServicesNeeded", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "interpreterLanguage", "Label": "Interpreter details", "FieldType": "Collection", "FieldTypeParameter": "interpreterLanguage", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isHearingRoomNeeded", "Label": "Do you need a hearing room with step-free access?", "FieldType": "YesOrNo", "FieldTypeParameter": "isHearingRoomNeeded", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isHearingLoopNeeded", "Label": "Do you need a hearing loop?", "FieldType": "YesOrNo", "FieldTypeParameter": "isHearingLoopNeeded", "SecurityClassification": "PUBLIC"},
@@ -3379,27 +3395,27 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRep_submitHearingRequirements_ra",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_submitHearingRequirements.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. If the appellant's hearing requirements have changed, you should submit new requirements.<br><br><br>",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_submitHearingRequirements.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. If the appellant's hearing requirements have changed, you should [submit new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/draftHearingRequirements).<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRequirementsAdditionalRequestsTitle", "Label": "## Additional requests", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRequirementsAdditionalRequestsText", "Label": "You can request additional adjustments based on the appellant's personal circumstances. The Tribunal will review the information you provide and decide whether a request can be granted.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "physicalOrMentalHealthIssues", "Label": "Does the appellant have any physical or mental health issues that may impact them during the hearing?", "FieldType": "YesOrNo", "FieldTypeParameter": "physicalOrMentalHealthIssues", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "physicalOrMentalHealthIssuesDescription", "Label": "Explain in detail how any physical or mental health issues may affect them during the hearing.",  "FieldType": "TextArea", "FieldTypeParameter": "physicalOrMentalHealthIssuesDescription", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "pastExperiences", "Label": "Has the appellant had any past experiences that may impact them during the hearing?",  "FieldType": "YesOrNo",  "FieldTypeParameter": "pastExperiences", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "pastExperiencesDescription", "Label": "Explain in detail how any past experiences may affect them during the hearing.", "FieldType": "TextArea", "FieldTypeParameter": "pastExperiencesDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "physicalOrMentalHealthIssues", "Label": "Does the appellant have any physical or mental health issues that may impact them on the day?", "FieldType": "YesOrNo", "FieldTypeParameter": "physicalOrMentalHealthIssues", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "physicalOrMentalHealthIssuesDescription", "Label": "Explain in detail how any physical or mental health issues may affect them on the day.",  "FieldType": "TextArea", "FieldTypeParameter": "physicalOrMentalHealthIssuesDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "pastExperiences", "Label": "Has the appellant had any past experiences that may impact them on the day?",  "FieldType": "YesOrNo",  "FieldTypeParameter": "pastExperiences", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "pastExperiencesDescription", "Label": "Explain in detail how any past experiences may affect them on the day?", "FieldType": "TextArea", "FieldTypeParameter": "pastExperiencesDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "multimediaEvidence", "Label": "Do you have multimedia evidence?", "HintText": "For example, video or sound recordings.", "FieldType": "YesOrNo", "FieldTypeParameter": "multimediaEvidence", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "multimediaEvidenceDescription", "Label": "You should provide the equipment to play this evidence. If this is not possible, explain why and what equipment you'll need to play it.", "FieldType": "TextArea", "FieldTypeParameter": "multimediaEvidenceDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "singleSexCourt", "Label": "Does the appellant need a single-sex court?", "FieldType": "YesOrNo", "FieldTypeParameter": "singleSexCourt", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "singleSexCourtType", "Label": "What type of court do they need?", "FieldType": "FixedRadioList", "FieldTypeParameter": "singleSexCourtType", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "singleSexCourtTypeDescription", "Label": "Explain in detail why the appellant needs a single-sex court.", "FieldType": "TextArea", "FieldTypeParameter": "singleSexCourtTypeDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "inCameraCourt", "Label": "Does the appellant need an in camera court?", "FieldType": "YesOrNo", "FieldTypeParameter": "inCameraCourt", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "inCameraCourtDescription", "Label": "Explain in detail why the appellant needs a private hearing.", "FieldType": "TextArea", "FieldTypeParameter": "inCameraCourtDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "inCameraCourtDescription", "Label": "Explain in detail why the appellant needs an in camera court.", "FieldType": "TextArea", "FieldTypeParameter": "inCameraCourtDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalRequests", "Label": "Is there anything else you would like to request?", "FieldType": "YesOrNo", "FieldTypeParameter": "additionalRequests", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalRequestsDescription", "Label": "Provide details of any additional requests and why they are necessary.", "FieldType": "TextArea", "FieldTypeParameter": "additionalRequestsDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "datesToAvoidTitle", "Label": "## Hearing dates to avoid", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "datesToAvoidYesNo", "Label": "Are there any dates that the appellant or their on-day representation cannot attend a hearing?",  "FieldType": "YesOrNo",  "FieldTypeParameter": "datesToAvoidYesNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "datesToAvoidYesNo", "Label": "Are there any dates that the appellant or their on-day representation cannot attend?",  "FieldType": "YesOrNo",  "FieldTypeParameter": "datesToAvoidYesNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "datesToAvoidDescription", "Label": "Tell us which dates and explain why the case cannot be heard on these dates.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingDateRangeDescription", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "datesToAvoid", "Label": "Dates to avoid", "FieldType": "Collection", "FieldTypeParameter": "datesToAvoid", "SecurityClassification": "PUBLIC"},
@@ -3980,6 +3996,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationDecision", "Label": "Decision", "FieldType": "FixedRadioList", "FieldTypeParameter": "makeAnApplicationDecision", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationDecisionReason", "Label": "Reasons for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideAnApplicationId", "Label": "Internal flag managed by API of decide an application id to send notification", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentHearingDetailsVisible", "Label": "Internal flag managed by API to show/hide current hearing details", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
-
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentHearingDetailsVisible", "Label": "Internal flag managed by API to show/hide current hearing details", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousHearingsTitle", "Label": "![]()\r\n## Previous hearings", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousHearings", "Label": "Previous hearings", "FieldType": "Collection", "FieldTypeParameter": "previousHearing", "SecurityClassification": "PUBLIC"}
 ]

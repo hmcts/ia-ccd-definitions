@@ -178,7 +178,7 @@
   {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "displayApplicationDetailsTitle", "FieldType": "Text", "ElementLabel": "HO application details title", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "person", "FieldType": "hoPerson", "FieldTypeParameter": "hoPerson", "ElementLabel": "HO person", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "applicationStatus", "FieldType": "hoApplication", "FieldTypeParameter": "hoApplication", "ElementLabel": "HO application", "SecurityClassification": "PUBLIC"},
-  
+
   {"LiveFrom": "01/01/2018", "ID": "caseManagementLocation", "ListElementCode": "region", "FieldType": "FixedList", "FieldTypeParameter": "region", "ElementLabel": "region", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "caseManagementLocation", "ListElementCode": "baseLocation", "FieldType": "FixedList", "FieldTypeParameter": "baseLocation", "ElementLabel": "baseLocation", "SecurityClassification": "PUBLIC"},
 
@@ -192,5 +192,19 @@
   {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "applicantRole", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "applicantRole=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "decisionReason", "FieldType": "Text", "ElementLabel": "Reasons for decision", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "decisionDate", "FieldType": "Date", "ElementLabel": "Date of decision", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "decisionMaker", "FieldType": "Text", "ElementLabel": "Decision maker", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "decisionMaker", "FieldType": "Text", "ElementLabel": "Decision maker", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "attendingJudge", "FieldType": "Text", "ElementLabel": "The Judge", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "attendingAppellant", "FieldType": "Text", "ElementLabel": "The appellant", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "attendingHomeOfficeLegalRepresentative", "FieldType": "Text", "ElementLabel": "Home Office Respondent", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "actualCaseHearingLength", "FieldType": "hoursAndMinutes", "FieldTypeParameter": "hearingLength", "ElementLabel": "Actual length", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "ariaListingReference", "FieldType": "Text", "ElementLabel": "Listing reference", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "listCaseHearingCentre", "FieldType": "FixedList", "FieldTypeParameter": "hearingCentre", "ElementLabel": "Location", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "listCaseHearingDate", "FieldType": "DateTime", "ElementLabel": "Date and time", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "listCaseHearingLength", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "ElementLabel": "Length", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "hearingRecordingDocuments", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "ElementLabel": "Recordings", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "appealDecision", "FieldType": "Text", "ElementLabel": "Decision of appeal", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "finalDecisionAndReasonsDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Decision and reason documents", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "hearingRequirements", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Requirements and requests", "SecurityClassification": "PUBLIC"}
+
 ]
