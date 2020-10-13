@@ -570,6 +570,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "caseArgumentDocument", "TabFieldDisplayOrder": 320, "FieldShowCondition": "caseArgumentAvailable=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "caseArgumentDescription", "TabFieldDisplayOrder": 330, "FieldShowCondition": "caseArgumentAvailable=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "caseArgumentEvidence", "TabFieldDisplayOrder": 340, "FieldShowCondition": "caseArgumentAvailable=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "rpDcAppealHearingOption", "TabFieldDisplayOrder": 345, "FieldShowCondition": "appealType=\"deprivation\" OR appealType=\"revocationOfProtection\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "decisionHearingFeeOption", "TabFieldDisplayOrder": 350, "FieldShowCondition": "appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "eaHuAppealTypePaymentOption", "TabFieldDisplayOrder": 355, "FieldShowCondition": "appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "paAppealTypePaymentOption","TabFieldDisplayOrder": 355, "FieldShowCondition": "appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\""},
