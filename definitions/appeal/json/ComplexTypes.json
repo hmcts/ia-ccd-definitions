@@ -177,5 +177,7 @@
   {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "displayAppellantDetailsTitle", "FieldType": "Text", "ElementLabel": "HO appellant details title", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "displayApplicationDetailsTitle", "FieldType": "Text", "ElementLabel": "HO application details title", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "person", "FieldType": "hoPerson", "FieldTypeParameter": "hoPerson", "ElementLabel": "HO person", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "applicationStatus", "FieldType": "hoApplication", "FieldTypeParameter": "hoApplication", "ElementLabel": "HO application", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "hoCaseData", "ListElementCode": "applicationStatus", "FieldType": "hoApplication", "FieldTypeParameter": "hoApplication", "ElementLabel": "HO application", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "caseManagementLocation", "ListElementCode": "region", "FieldType": "FixedList", "FieldTypeParameter": "region", "ElementLabel": "region", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "caseManagementLocation", "ListElementCode": "baseLocation", "FieldType": "FixedList", "FieldTypeParameter": "parties", "ElementLabel": "baseLocation", "SecurityClassification": "PUBLIC"}
 ]

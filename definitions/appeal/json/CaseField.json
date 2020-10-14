@@ -3641,5 +3641,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "markAppealPaidDesc", "Label": "Include the date the payment was made, the amount paid and any other relevant information.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paidDate", "Label": "Payment date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paidAmount", "Label": "Amount paid (£)", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalPaymentInfo", "Label": "Additional payment information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalPaymentInfo", "Label": "Additional payment information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseManagementLocation", "Label": "Case management location", "FieldType": "caseManagementLocation", "SecurityClassification": "PUBLIC"}
+
 ]
