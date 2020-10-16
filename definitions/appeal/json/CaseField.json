@@ -3029,6 +3029,12 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "endAppealDetailsTitle", "Label": "## Ended appeal details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addCaseNoteActionDisabled", "Label": "Internal flag managed by API", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "recordApplicationActionDisabled", "Label": "Internal flag managed by API", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stateBeforeEndAppeal", "Label": "State before End Appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reinstatedDecisionMaker", "Label": "Reinstated Decision Maker", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealStatus", "Label": "Status of appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reinstateAppealDate", "Label": "Date reinstated", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reinstateAppealReason", "Label": "Reason for reinstating", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
