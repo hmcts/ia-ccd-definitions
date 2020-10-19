@@ -2899,7 +2899,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_reviewHearingRequirements_ra",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_listing.png)\r\n\r\n## Do this next\r\nYou can view the hearing requirements and any requests for additional adjustments in the [hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#hearing).<br><br>You should contact the appellant if you need more information.<br><br>You should then review and submit the hearing requirements and any additional adjustments.",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_listing.png)\r\n\r\n## Do this next\r\nYou can view the hearing requirements and any requests for additional adjustments in the [hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#hearing).<br><br>You should contact the appellant if you need more information.<br><br>You should then [review and submit](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewHearingRequirements) the hearing requirements and any additional adjustments.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3052,6 +3052,14 @@
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_listing_feature",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_listing.png)\r\n\r\n## Do this next\r\nThe agreed hearing requirements and dates to avoid are available to view in the [Hearing tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#hearing). When the case has been listed in Aria, you should [list the case here](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/listCase).\r\n\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_listing_feature_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_listing.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. Review any Tribunal notes in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and check the [hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#hearing) for the agreed hearing requirements. When the case has been listed in Aria, you should list the case here.\r\n\r\n",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3998,5 +4006,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideAnApplicationId", "Label": "Internal flag managed by API of decide an application id to send notification", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentHearingDetailsVisible", "Label": "Internal flag managed by API to show/hide current hearing details", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousHearingsTitle", "Label": "![]()\r\n## Previous hearings", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousHearings", "Label": "Previous hearings", "FieldType": "Collection", "FieldTypeParameter": "previousHearing", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousHearings", "Label": "Previous hearings", "FieldType": "Collection", "FieldTypeParameter": "previousHearing", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingLengthVisible", "Label": "Internal flag managed by API to show/hide current hearing length", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
