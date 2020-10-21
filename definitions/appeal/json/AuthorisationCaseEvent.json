@@ -41,6 +41,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadAddendumEvidence", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadAddendumEvidenceLegalRep", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editCaseListing", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "recordApplication", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "recordAttendeesAndDuration", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "endAppeal", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "endAppeal", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
@@ -127,15 +128,6 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "reinstateAppeal", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "reinstateAppeal", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "reinstateAppeal", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
-
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "makeAnApplication", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "makeAnApplication", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "makeAnApplication", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "makeAnApplication", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "makeAnApplication", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "CRUD"},
-
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "decideAnApplication", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "decideAnApplication", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "reinstateAppeal", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"}
 
 ]
