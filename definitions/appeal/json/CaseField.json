@@ -3658,6 +3658,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paidAmount", "Label": "Amount paid (£)", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalPaymentInfo", "Label": "Additional payment information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseManagementLocation", "Label": "Case management location", "FieldType": "caseManagementLocation", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationLink", "Label": "[Make an application](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/makeAnApplication)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationAdvice", "Label": "Select the type of application you are making.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationTypes", "Label": "Type of application", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
