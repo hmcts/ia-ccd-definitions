@@ -3674,5 +3674,13 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationEvidence", "Label": "Supporting evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplications", "Label": "Application", "FieldType": "Collection", "FieldTypeParameter": "makeAnApplication", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplications", "Label": "Application", "FieldType": "Collection", "FieldTypeParameter": "makeAnApplication", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "localAuthorityPolicy",
+    "Label": "Organisation policy",
+    "FieldType": "OrganisationPolicy",
+    "SecurityClassification": "Public"
+  }
 ]
