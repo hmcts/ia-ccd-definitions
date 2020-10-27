@@ -4121,5 +4121,17 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalAidAdvice", "Label": "You need to provide your firm's Legal Aid account number", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalAidAccountNumber", "Label": "Legal Aid account number", "HintText":  "For example, 1A234B", "RegularExpression": "[0-9]{1}[A-Z]{1}[0-9]{3}[A-Z]{1}", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allocateTheCaseTo", "Label": "Allocation type", "FieldType": "FixedRadioList", "FieldTypeParameter": "allocateTheCaseTo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allocateTheCaseTo", "Label": "Allocation type", "FieldType": "FixedRadioList", "FieldTypeParameter": "allocateTheCaseTo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section17Header", "Label": "###  Section 17", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section17Advice", "Label": "You need to provide a copy of a letter from the local authority confirming your client's benefit or accommodation support.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section17Document", "Label": "Local authority letter", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section20Header", "Label": "###  Section 20", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section20Advice", "Label": "You need to provide a copy of a letter from the local authority confirming your client's benefit or accommodation support.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section20Document", "Label": "Local authority letter", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeWaiverHeader", "Label": "###  Home Office Waiver", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeWaiverAdvice", "Label": "You need to provide a copy of the Home Office fee waiver letter to validate this fee remission.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeWaiverDocument", "Label": "Home Office fee waiver letter", "FieldType": "Document", "SecurityClassification": "PUBLIC"}
 ]
