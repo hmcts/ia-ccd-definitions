@@ -4026,5 +4026,20 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousHearingsTitle", "Label": "![]()\r\n## Previous hearings", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousHearings", "Label": "Previous hearings", "FieldType": "Collection", "FieldTypeParameter": "previousHearing", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousHearingDetailsVisible", "Label": "Internal flag managed by API to show/hide previous hearing details", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingLengthVisible", "Label": "Internal flag managed by API to show/hide current hearing length", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingLengthVisible", "Label": "Internal flag managed by API to show/hide current hearing length", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantAddendumEvidenceDocs", "Label": "Appellant Evidence after the hearing bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "respondentAddendumEvidenceDocs", "Label": "Respondent Evidence after the hearing bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appAdditionalEvidenceDocs", "Label": "Appellant additional evidence following FTPA", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "respAdditionalEvidenceDocs", "Label": "Respondent additional evidence following FTPA", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customAppAdditionalEvidenceDocs", "Label": "Appellant additional evidence following FTPA", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customRespAdditionalEvidenceDocs", "Label": "Respondent additional evidence following FTPA", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customFtpaAppellantDocs", "Label": "Appellant FTPA documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customFtpaRespondentDocs", "Label": "Respondent FTPA documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customFinalDecisionAndReasonsDocs", "Label": "Decisions and reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customReheardHearingDocs", "Label": "Reheard hearing documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customAppAddendumEvidenceDocs", "Label": "Appellant Evidence after the hearing bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customRespAddendumEvidenceDocs",   "Label": "Respondent Evidence after the hearing bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"}
+
 ]
