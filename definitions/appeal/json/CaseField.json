@@ -177,6 +177,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeBundle", "Label": "Upload Home Office bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithUpload", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestCaseBuildingTitle", "Label": "You must now build your case by uploading your appeal argument and evidence.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestResponseReviewTitle", "Label": "Request to review the Home Office response", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestNewHearingRequirementsTitle", "Label": "Request to submit new hearing requirements", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -1449,7 +1450,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_appellant_reheard_rule_32_ra",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to submit any new requirements.<br/><br/><br/>",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1529,7 +1530,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_respondent_reheard_rule_32_ra",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to submit any new requirements.<br/><br/><br/>",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1609,7 +1610,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_appellant_reheard_rule_35_ra",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to submit any new requirements.<br/><br/><br/>",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1689,7 +1690,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_respondent_reheard_rule_35_ra",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to submit any new requirements.<br/><br/><br/>",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1929,7 +1930,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_final_decision_reheard_rule_32_ra",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to submit any new requirements.<br/><br/><br/>",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1937,7 +1938,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_final_decision_reheard_rule_35_ra",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to submit any new requirements.<br/><br/><br/>",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#ftpa) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -2609,6 +2610,22 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_submitHearingRequirements",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 8 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_listing.png)\r\n\r\n## Do this next\r\nThe Tribunal will: \r\n- check that the Home Office response complies with the Procedural Rules and Practice Directions\r\n- inform you of any issues\r\n\r\nProviding there are no issues, the response will be shared with the appellant.<br>\r\n\r\nAll parties will be notified when the Hearing Notice is ready.<br><br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_submitHearingRequirements_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case has been listed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_listing",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 8 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_listing.png)\r\n\r\n## Do this next\r\nThe Tribunal will: \r\n- check that the Home Office response complies with the Procedural Rules and Practice Directions\r\n- inform you of any issues\r\n\r\nProviding there are no issues, the response will be shared with the appellant.<br>\r\n\r\nAll parties will be notified when the Hearing Notice is ready.<br><br>",
     "FieldType": "Label",
@@ -2801,6 +2818,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_submitHearingRequirements_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.png)\r\n\r\n## What happens next\r\nThe appellant has been directed to submit any new hearing requirements. If the appellant does not comply within 5 days of the direction, you should direct the listing team to list without hearing requirements.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_judge_submitHearingRequirements",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.png)\r\n\r\n## What happens next\r\nThe appellant will submit their hearing requirements.",
     "FieldType": "Label",
@@ -2809,8 +2834,24 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_judge_submitHearingRequirements_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case has been listed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_submitHearingRequirements",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.png)\r\n\r\n## What happens next\r\nThe appellant will submit their hearing requirements.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_submitHearingRequirements_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case is ready to be listed.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3331,6 +3372,14 @@
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRep_submitHearingRequirements",
     "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_submitHearingRequirements.png)\r\n\r\n## Do this next\r\nThe appeal is now going to a hearing. You need to [submit the appellant's hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/draftHearingRequirements).",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRep_submitHearingRequirements_ra",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_submitHearingRequirements.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. If the appellant's hearing requirements have changed, you should submit new requirements.<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
