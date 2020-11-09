@@ -204,7 +204,6 @@
   {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "listCaseHearingLength", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "ElementLabel": "Length", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "hearingRecordingDocuments", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "ElementLabel": "Recordings", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "appealDecision", "FieldType": "Text", "ElementLabel": "Decision of appeal", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "finalDecisionAndReasonsDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Decision and reason documents", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "hearingRequirements", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Requirements and requests", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "finalDecisionAndReasonsDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Decision and reason documents", "SecurityClassification": "PUBLIC"}
 
 ]
