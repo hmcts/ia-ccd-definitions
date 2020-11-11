@@ -3979,5 +3979,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationFields", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationDecision", "Label": "Decision", "FieldType": "FixedRadioList", "FieldTypeParameter": "makeAnApplicationDecision", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationDecisionReason", "Label": "Reasons for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideAnApplicationId", "Label": "Internal flag managed by API of decide an application id to send notification", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideAnApplicationId", "Label": "Internal flag managed by API of decide an application id to send notification", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentHearingDetailsVisible", "Label": "Internal flag managed by API to show/hide current hearing details", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+
 ]
