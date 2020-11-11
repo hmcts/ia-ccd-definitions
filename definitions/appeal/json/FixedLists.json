@@ -700,5 +700,9 @@
   {"LiveFrom": "01/01/2018", "ID": "remissionClaims", "ListElementCode": "homeOfficeWaiver", "ListElement": "The Home Office waived the fee for the application this appeal relates to because it came under exceptions 4.5 or 9.4 of the Immigration and Nationality (Fees) Regulations 2016", "DisplayOrder": 5},
 
   {"LiveFrom": "01/01/2018", "ID": "allocateTheCaseTo", "ListElementCode": "me", "ListElement": "Allocate to me", "DisplayOrder": 1},
-  {"LiveFrom": "01/01/2018", "ID": "allocateTheCaseTo", "ListElementCode": "caseworker", "ListElement": "Allocate to a caseworker", "DisplayOrder": 2}
+  {"LiveFrom": "01/01/2018", "ID": "allocateTheCaseTo", "ListElementCode": "caseworker", "ListElement": "Allocate to a caseworker", "DisplayOrder": 2},
+
+  {"LiveFrom": "01/01/2018", "ID": "remissionDecisionOptions", "ListElementCode": "approved", "ListElement": "Approved", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDecisionOptions", "ListElementCode": "partiallyApproved", "ListElement": "Partially approved", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDecisionOptions", "ListElementCode": "rejected", "ListElement": "Rejected", "DisplayOrder": 3}
 ]
