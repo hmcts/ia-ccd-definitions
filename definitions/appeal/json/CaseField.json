@@ -3555,6 +3555,7 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRecordingDocuments", "Label": "Recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousHearingRecordingDocuments", "Label": "Previous recordings", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "applicationChangeDesignatedHearingCentre",
