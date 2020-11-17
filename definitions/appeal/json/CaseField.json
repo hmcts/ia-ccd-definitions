@@ -267,6 +267,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantRepresentative", "Label": "Legal representative for the appellant", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "respondentRepresentative", "Label": "Legal representative for the respondent", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "draftDecisionAndReasonsDocuments", "Label": "Decision and reason documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "draftReheardDecisionAndReasons", "Label": "Reheard decision and reason documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeName", "Label": "Internal data managed by API", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeEmailAddress", "Label": "Email", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "automaticDirectionRequestingHearingRequirements", "Label": "Internal timed event ID for request hearing requirements automatic direction", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
