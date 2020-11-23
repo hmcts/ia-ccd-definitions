@@ -4053,5 +4053,24 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customRespAddendumEvidenceDocs",   "Label": "Respondent Evidence after the hearing bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isRemissionsEnabled", "Label": "Internal flag managed by case api for remissions feature", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rpDcAppealHearingOption", "Label": "How do you want the appeal to be decided?", "FieldType": "FixedRadioList", "FieldTypeParameter": "rpDcAppealHearingOptions", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rpDcAppealHearingOption", "Label": "How do you want the appeal to be decided?", "FieldType": "FixedRadioList", "FieldTypeParameter": "rpDcAppealHearingOptions", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeRemissionsHeader", "Label": "###  Fee remissions", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionType", "Label": "Choose one of the following statements", "FieldType": "FixedRadioList", "FieldTypeParameter": "remissionTypes", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "helpWithFeesAdvice",
+    "Label": "### More about Help with Fees\r\nYour client can <a href=\"https://www.gov.uk/government/publications/form-fee-account-application-form-fee-account-customer-application-form\" target=\"_blank\">apply for Help with Fees (opens in new tab).</a> They will be sent a reference number immediately after applying.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "exceptionalCircumstancesRemissionAdvice",
+    "Label": "### More about Exceptional Circumstances Remissions\r\n<a href=\"https://www.gov.uk/government/publications/immigration-and-appeals-tribunal-fees-t495\" target=\"_blank\">Read the Tribunal Fees guidance (opens in a new tab)</a> for more information on Exceptional Circumstances Remissions.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  }
 ]
