@@ -4283,7 +4283,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "newFeeAmount", "Label": "New fee amount", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateStatusAdvice", "Label": "You need to record the status of the fee update. To do this select the task you are about to complete. Do not uncheck any previously selected tasks.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateStatus", "Label": " ", "FieldType": "feeUpdateStatuses", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateRecorded", "Label": " ", "FieldType": "feeUpdateRecorded", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateCompletedStages", "Label": "Completed stages", "FieldType": "MultiSelectList", "FieldTypeParameter": "feeUpdateStatusesForDisplay", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateDetailsTitle", "Label": "![]()\n## Fee update details", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 
