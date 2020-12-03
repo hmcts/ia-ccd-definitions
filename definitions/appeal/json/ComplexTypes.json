@@ -203,6 +203,21 @@
   {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "listCaseHearingDate", "FieldType": "DateTime", "ElementLabel": "Date and time", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "listCaseHearingLength", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "ElementLabel": "Length", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "appealDecision", "FieldType": "Text", "ElementLabel": "Decision of appeal", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "finalDecisionAndReasonsDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Decision and reason documents", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "finalDecisionAndReasonsDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Decision and reason documents", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "feeRemissionType", "FieldType": "Text", "ElementLabel": "Fee remission type", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "asylumSupportReference", "FieldType": "Text", "ElementLabel": "Asylum Support reference number", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "asylumSupportDocument", "FieldType": "Document", "ElementLabel": "Asylum Support confirmation letter", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "legalAidAccountNumber", "FieldType": "Text", "ElementLabel": "Legal Aid account number", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "section17Document", "FieldType": "Document", "ElementLabel": "Local authority letter", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "section20Document", "FieldType": "Document", "ElementLabel": "Local authority letter", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "homeOfficeWaiverDocument", "FieldType": "Document", "ElementLabel": "Home Office fee waiver letter", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "helpWithFeesReferenceNumber", "FieldType": "Text", "ElementLabel": "Help with Fees reference number", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "exceptionalCircumstances", "FieldType": "Text", "ElementLabel": "Explain the exceptional circumstances which justify remission of the fee", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "remissionEcEvidenceDocuments", "FieldType": "Collection", "FieldTypeParameter":  "Document", "ElementLabel": "Supporting evidence", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "remissionDecision", "FieldType": "Text", "ElementLabel": "Decision", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "feeAmount", "FieldType": "MoneyGBP", "ElementLabel": "Fee", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "amountRemitted", "FieldType": "MoneyGBP", "ElementLabel": "Amount remitted", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "amountLeftToPay", "FieldType": "MoneyGBP", "ElementLabel": "Amount left to pay", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "remissionDecisionReason", "FieldType": "Text", "ElementLabel": "Reason for decision", "SecurityClassification": "PUBLIC"}
 ]
