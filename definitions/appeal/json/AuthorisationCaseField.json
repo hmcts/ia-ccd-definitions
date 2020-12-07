@@ -4980,5 +4980,14 @@
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "isRemoveRepresentationRequested", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
 
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "removeLegalRepresentativeDescription", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
-  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "removeLegalRepresentativeDescription", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"}
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "removeLegalRepresentativeDescription", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "lateRemissionType", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "previousRemissionDetails", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "previousRemissionDetails", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "previousRemissionDetails", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "previousRemissionDetails", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRU"}
+
+
+
 ]
