@@ -4240,5 +4240,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "amountRemitted", "Label": "Amount remitted (£)", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "amountLeftToPay", "Label": "Amount left to pay (£)", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionDecisionReason", "Label": "Reason for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionRejectedDatePlus14days", "Label": "Internal flag managed by API for payment due date", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionRejectedDatePlus14days", "Label": "Internal flag managed by API for payment due date", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionDetails", "Label": "Remission details", "FieldType": "Collection", "FieldTypeParameter": "remissionDetails", "SecurityClassification": "PUBLIC"}
 ]
