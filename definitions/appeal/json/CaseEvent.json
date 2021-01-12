@@ -1872,5 +1872,35 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
     "Publish": "N"
+  },
+  {
+    "LiveFrom": "01/01/2021",
+    "CaseTypeID": "Asylum",
+    "ID": "nocRequest",
+    "Name": "NoC Request",
+    "Description": "Notice of Change Request",
+    "DisplayOrder": 71,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_AAC_URL}/noc/check-noc-approval",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2021",
+    "CaseTypeID": "Asylum",
+    "ID": "applyNocDecision",
+    "Name": "Apply NoC Decision",
+    "Description": "Apply Notice of Change Request",
+    "DisplayOrder": 72,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_AAC_URL}/noc/apply-decision",
+    "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "Y"
   }
 ]
