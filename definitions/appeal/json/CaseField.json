@@ -4256,6 +4256,8 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allocateTheCaseTo", "Label": "Allocation type", "FieldType": "FixedRadioList", "FieldTypeParameter": "allocateTheCaseTo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerLocationTitle", "Label": "Choose a location to find a caseworker\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerLocation", "Label": "Location", "FieldType": "FixedList", "FieldTypeParameter": "baseLocation", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerLocation", "Label": "Location", "FieldType": "FixedList", "FieldTypeParameter": "baseLocation", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerNameTitle", "Label": "Select a caseworker to allocate the case to\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerName", "Label": "Caseworker", "FieldType": "FixedList", "FieldTypeParameter": "baseLocation", "SecurityClassification": "PUBLIC"}
 
 ]
