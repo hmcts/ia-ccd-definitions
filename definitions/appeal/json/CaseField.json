@@ -8,11 +8,12 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistTitle3", "Label": "# Tell us about your client", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isOutOfCountryEnabled", "Label": "Out of country feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInUk", "Label": "Is your client currently living in the United Kingdom?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealOutOfCountry", "Label": "Out of country", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklist", "Label": " ", "FieldType": "checklist", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistOutOfCountry", "Label": " ", "FieldType": "checklistOutOfCountry", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeDecisionTitle", "Label": "# Home Office details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeReferenceNumber", "Label": "Home Office Reference/Case ID", "HintText": "Call the Home Office on 0300 790 6268 if you cannot find your Home Office Reference or Case ID", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "02/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeDecisionLetterImage", "Label": "![Home Office decision letter showing that the reference number appears in the top-right corner of the letter](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/home-office-letter_new.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
