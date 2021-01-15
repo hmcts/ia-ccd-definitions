@@ -714,6 +714,9 @@
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatusesForDisplay", "ListElementCode": "refundApproved", "ListElement": "Refund approved"},
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatusesForDisplay", "ListElementCode": "refundInstructed", "ListElement": "Refund instructed"},
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatusesForDisplay", "ListElementCode": "additionalFeeRequested", "ListElement": "Additional fee requested"},
-  {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatusesForDisplay", "ListElementCode": "feeUpdateNotRequired", "ListElement": "Fee update not required"}
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatusesForDisplay", "ListElementCode": "feeUpdateNotRequired", "ListElement": "Fee update not required"},
 
+  {"LiveFrom": "01/01/2018", "ID": "outOfCountryDecisionType", "ListElementCode": "refusalOfHumanRights", "ListElement": "A decision to refuse a human rights claim for entry clearance", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "outOfCountryDecisionType", "ListElementCode": "refusalOfProtection", "ListElement": "A decision to refuse a human rights or protection claim, or deprive you of British citizenship, where you can only apply after your client has left the country", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "outOfCountryDecisionType", "ListElementCode": "removalOfClient", "ListElement": "A decision to remove your client under the Immigration (European Economic Area) Regulations 2016", "DisplayOrder": 3}
 ]
