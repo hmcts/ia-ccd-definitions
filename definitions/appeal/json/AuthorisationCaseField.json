@@ -4032,4 +4032,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "feeUpdateCompletedStages", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "feeUpdateCompletedStages", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "feeUpdateCompletedStages", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "remissionRejectedDatePlus14days", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRU"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "caseHistoryViewer", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "caseHistoryViewer", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "caseHistoryViewer", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"}
 ]
