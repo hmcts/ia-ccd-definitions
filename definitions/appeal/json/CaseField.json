@@ -4274,6 +4274,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerLocationList", "Label": "Location", "FieldType": "FixedList", "FieldTypeParameter": "baseLocation", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerNameTitle", "Label": "Select a caseworker to allocate the case to\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerNameList", "Label": "Caseworker", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerName", "Label": "Caseworker's name", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerName", "Label": "Caseworker's name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "localAuthorityPolicy", "Label": "Organisation policy", "FieldType": "OrganisationPolicy", "SecurityClassification": "PUBLIC"}
 ]
