@@ -236,7 +236,7 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalEvidence", "Label": "Upload documents", "FieldType": "Collection", "FieldTypeParameter": "additionalEvidenceDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingTitle", "Label": "Add the hearing details below.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingCentre", "Label": "Hearing centre", "FieldType": "FixedList", "FieldTypeParameter": "hearingCentre", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingCentre", "Label": "Location", "FieldType": "FixedList", "FieldTypeParameter": "hearingCentre", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingLength", "Label": "Length", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingDate", "Label": "Date and time", "FieldType": "DateTime", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingDateAdjourned", "Label": "Appointment date and time", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
