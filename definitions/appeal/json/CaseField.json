@@ -4132,7 +4132,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "markAppealPaidDesc", "Label": "Include the date the payment was made, the amount paid and any other relevant information.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paidDate", "Label": "Payment date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paidAmount", "Label": "Amount paid (£)", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paidAmount", "Label": "Amount paid", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalPaymentInfo", "Label": "Additional payment information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseManagementLocation", "Label": "Case management location", "FieldType": "caseManagementLocation", "SecurityClassification": "PUBLIC"},
@@ -4263,8 +4263,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionPartiallyApprovedForFeeWithoutHearingAdvice", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionRejectedForFeeWithHearingAdvice", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionRejectedForFeeWithoutHearingAdvice", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "amountRemitted", "Label": "Amount remitted (£)", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "amountLeftToPay", "Label": "Amount left to pay (£)", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "amountRemitted", "Label": "Amount remitted", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "amountLeftToPay", "Label": "Amount left to pay", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionDecisionReason", "Label": "Reason for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionRejectedDatePlus14days", "Label": "Internal flag managed by API for payment due date", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionDetails", "Label": "Remission details", "FieldType": "Collection", "FieldTypeParameter": "remissionDetails", "SecurityClassification": "PUBLIC"},
@@ -4274,6 +4274,17 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerLocationList", "Label": "Location", "FieldType": "FixedList", "FieldTypeParameter": "baseLocation", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerNameTitle", "Label": "Select a caseworker to allocate the case to\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerNameList", "Label": "Caseworker", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerName", "Label": "Caseworker's name", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerName", "Label": "Caseworker's name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "localAuthorityPolicy", "Label": "Organisation policy", "FieldType": "OrganisationPolicy", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateReasonAdvice", "Label": "Select the reason the fee has been updated.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateReason", "Label": "Reason for fee update", "FieldType": "FixedRadioList", "FieldTypeParameter": "feeUpdateReasons", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "newFeeAmount", "Label": "New fee amount", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateStatusAdvice", "Label": "You need to record the status of the fee update. To do this select the task you are about to complete. Do not uncheck any previously selected tasks.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateRecorded", "Label": " ", "FieldType": "feeUpdateRecorded", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateCompletedStages", "Label": "Completed stages", "FieldType": "MultiSelectList", "FieldTypeParameter": "feeUpdateStatusesForDisplay", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateDetailsTitle", "Label": "![]()\n## Fee update details", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 
 ]
