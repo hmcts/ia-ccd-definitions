@@ -3928,6 +3928,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnacceptableCustomerBehaviourExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnaccompaniedMinorExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagSetAsideReheardExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagS94bOutOfCountryExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAnonymityAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagComplexCaseAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
@@ -3938,6 +3939,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnacceptableCustomerBehaviourAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnaccompaniedMinorAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagSetAsideReheardAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagS94bOutOfCountryAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAnonymityImage", "Label": "![This appellant in this case has an anonymity order](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagAnonymity.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagComplexCaseImage", "Label": "![This appeal has been marked as complex case](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagComplexCase.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -3948,6 +3950,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnacceptableCustomerBehaviourImage", "Label": "![The appellant in this case has displayed unacceptable customer behaviour](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagUnacceptableCustomerBehaviour.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnaccompaniedMinorImage", "Label": "![The appellant in this case is an unaccompanied minor](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagUnaccompaniedMinor.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagSetAsideReheardImage", "Label": "![The decision has been set aside and this case will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagSetAsideReheard.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagS94BOutOfCountryImage", "Label": "![The decision has been set aside and this case will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagS94BOutofCountry.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeFlagDescription", "Label": "Select a flag to remove from the case\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeFlagTypeOfFlag", "Label": "Type of flag", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
