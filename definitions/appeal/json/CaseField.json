@@ -8,6 +8,10 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isOutOfCountryEnabled", "Label": "Out of country feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInUk", "Label": "Is your client currently living in the United Kingdom?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealOutOfCountry", "Label": "Out of country", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklist", "Label": " ", "FieldType": "checklist", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeDecisionTitle", "Label": "# Home Office details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeReferenceNumber", "Label": "Home Office Reference/Case ID", "HintText": "Call the Home Office on 0300 790 6268 if you cannot find your Home Office Reference or Case ID", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
