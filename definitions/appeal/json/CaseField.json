@@ -4292,4 +4292,13 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateCompletedStages", "Label": "Completed stages", "FieldType": "MultiSelectList", "FieldTypeParameter": "feeUpdateStatusesForDisplay", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateDetailsTitle", "Label": "![]()\n## Fee update details", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerName", "Label": "Caseworker's name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "caseHistoryViewer",
+    "Label": " ",
+    "FieldType": "CaseHistoryViewer",
+    "SecurityClassification": "Public"
+  }
 ]
