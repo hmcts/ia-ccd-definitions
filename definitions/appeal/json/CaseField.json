@@ -4304,7 +4304,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasCorrespondenceAddress", "Label": "Does your client have a correspondence address outside the UK?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantOutOfCountryAddress", "Label": "Address", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantSponsorTitle", "Label": "# Sponsor", "FieldType": "Label",  "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantSponsorTitle", "Label": "## Sponsor", "FieldType": "Label",  "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasSponsor", "Label": "Sponsor", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "entryClearanceDecisionTitle", "Label": "# Entry clearance decision details", "FieldType": "Label",  "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "gwfReferenceNumber", "Label": "Global Web form", "HintText": "Your GWF reference number was given to you when you first applied. You can find it on emails and letters from the Home Office about your application. For example GWF12345667","FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -4314,6 +4314,21 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outOfCountryDecisionTypeTitle", "Label": "# Decision type", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outOfCountryDecisionType", "Label": "Out of country decision", "FieldType": "FixedRadioList", "FieldTypeParameter": "outOfCountryDecisionType", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterReceivedDateTitle", "Label": "### What date was the Home Office decision letter received?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterReceivedDate", "Label": "Home Office decision letter received", "HintText": "For example, 03 04 2019", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterReceivedDate", "Label": "Home Office decision letter received", "HintText": "For example, 03 04 2019", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorTitle", "Label": "## Sponsor", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorNameTitle", "Label": "## Sponsor\n\nWhat is the sponsor's name?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorGivenNames", "Label": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorFamilyName", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAddressTitle", "Label": "## Sponsor\n\nWhat is the sponsor's address?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAddress", "Label": "Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorSearchPostcode", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorContactTitle", "Label": "## Sponsor\n\nPlease provide an email address or phone number for your client's sponsor, or a person responsible for the sponsor.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorContactPreference", "Label": "Contact details", "FieldType": "FixedRadioList", "FieldTypeParameter": "contactPreference","SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorEmail", "Label": "Sponsor email", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorMobileNumber", "Label": "Sponsor phone number", "FieldType": "Text", "RegularExpression": "^((\\+44(\\s\\(0\\)\\s|\\s0\\s|\\s)?)|0)7\\d{3}(\\s)?\\d{6}$", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAuthorisation", "Label": "Does your client give authorisation for the sponsor to access information relating to the appeal?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAuthorisationLabel", "Label": "**The sponsor will not be sent any notices or decisions relating to the appeal other than a Notice of Hearing, if applicable.**", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorNameForDisplay", "Label": "Sponsor name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAddressForDisplay", "Label": "Sponsor address", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
 ]
