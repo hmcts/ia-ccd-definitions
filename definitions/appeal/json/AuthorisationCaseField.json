@@ -4915,5 +4915,12 @@
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "localAuthorityPolicy", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "localAuthorityPolicy", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "changeOrganisationRequestField", "UserRole": "caseworker-caa", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "changeOrganisationRequestField", "UserRole": "caseworker-approver", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "changeOrganisationRequestField", "UserRole": "caseworker-approver", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "changeOrganisationRequestField", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "changeOrganisationRequestField", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "changeOrganisationRequestField", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "removeRepresentationDescription", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "ccdCaseId", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"}
+
 ]
