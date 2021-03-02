@@ -4352,5 +4352,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAddressForDisplay", "Label": "Sponsor address", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "localAuthorityPolicy", "Label": "Organisation policy", "FieldType": "OrganisationPolicy", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "ID": "changeOrganisationRequestField", "Label": "Change Organisation Request", "FieldType": "ChangeOrganisationRequest", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "ID": "changeOrganisationRequestField", "Label": "Change Organisation Request", "FieldType": "ChangeOrganisationRequest", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeRepresentationDescription", "Label": "#### Once you've submitted this request\r\n- You will no longer have access to this case\r\n- If the case has been shared with any colleagues, they will also lose access\r\n- Linked appeals are not affected. If you want to stop representing a client on a linked appeal, you need to access the case and repeat this action.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isRemoveRepresentationRequested", "Label": "Remove representation requested", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
