@@ -167,7 +167,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "checklistTitle4", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "outOfCountry", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "isOutOfCountryEnabled", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "outOfCountry","PageDisplayOrder": 1, "FieldShowCondition": "checklistTitle4=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "checklistTitle3", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "outOfCountry", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "checklistTitle3", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "outOfCountry", "PageDisplayOrder": 1, "PageShowCondition": "isOutOfCountryEnabled=\"Yes\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "appellantInUk", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "outOfCountry","PageDisplayOrder": 1,"ShowSummaryChangeOption": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "outOfCountryDecisionTypeTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "outOfCountryDecisionType","PageDisplayOrder": 3,"PageShowCondition": "isOutOfCountryEnabled=\"Yes\" AND appellantInUk!=\"Yes\"","ShowSummaryChangeOption": "N"},
