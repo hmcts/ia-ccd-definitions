@@ -1,0 +1,4 @@
+[
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "ID": "NoCChallenge", "DisplayOrder": "1", "QuestionText": "First Name", "AnswerFieldType": "Text", "Answer": "${appellantGivenNames}:[LEGALREPRESENTATIVE]", "QuestionId": "NoCChallengeQ1"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "ID": "NoCChallenge", "DisplayOrder": "2", "QuestionText": "Last Name", "AnswerFieldType": "Text", "Answer": "${appellantFamilyName}:[LEGALREPRESENTATIVE]", "QuestionId": "NoCChallengeQ2"}
+]
