@@ -472,13 +472,14 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagUnacceptableCustomerBehaviourExists", "TabFieldDisplayOrder": 36, "FieldShowCondition": "caseFlagUnacceptableCustomerBehaviourExists=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagUnaccompaniedMinorExists", "TabFieldDisplayOrder": 37, "FieldShowCondition": "caseFlagUnaccompaniedMinorExists=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagSetAsideReheardExists", "TabFieldDisplayOrder": 38, "FieldShowCondition": "caseFlagSetAsideReheardExists=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagS94bOutOfCountryExists", "TabFieldDisplayOrder": 39, "FieldShowCondition": "caseFlagS94bOutOfCountryExists=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "TabID": "overview",
     "CaseFieldID": "caseFlagsTitle",
     "TabFieldDisplayOrder": 50,
-    "FieldShowCondition": "caseFlagDeportExists=\"Yes\" OR caseFlagAnonymityExists=\"Yes\" OR caseFlagComplexCaseExists=\"Yes\" OR caseFlagDetainedImmigrationAppealExists=\"Yes\" OR caseFlagForeignNationalOffenderExists=\"Yes\" OR caseFlagPotentiallyViolentPersonExists=\"Yes\" OR caseFlagUnacceptableCustomerBehaviourExists=\"Yes\" OR caseFlagUnaccompaniedMinorExists=\"Yes\" OR caseFlagSetAsideReheardExists=\"Yes\""
+    "FieldShowCondition": "caseFlagDeportExists=\"Yes\" OR caseFlagAnonymityExists=\"Yes\" OR caseFlagComplexCaseExists=\"Yes\" OR caseFlagDetainedImmigrationAppealExists=\"Yes\" OR caseFlagForeignNationalOffenderExists=\"Yes\" OR caseFlagPotentiallyViolentPersonExists=\"Yes\" OR caseFlagUnacceptableCustomerBehaviourExists=\"Yes\" OR caseFlagUnaccompaniedMinorExists=\"Yes\" OR caseFlagSetAsideReheardExists=\"Yes\" OR caseFlagS94bOutOfCountryExists=\"Yes\""
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagAnonymityImage", "TabFieldDisplayOrder": 51, "FieldShowCondition": "caseFlagAnonymityExists=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagAnonymityAdditionalInformation", "TabFieldDisplayOrder": 52, "FieldShowCondition": "caseFlagAnonymityExists=\"Yes\" AND caseFlagAnonymityAdditionalInformation!=\"\""},
@@ -498,6 +499,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagUnaccompaniedMinorAdditionalInformation", "TabFieldDisplayOrder": 66, "FieldShowCondition": "caseFlagUnaccompaniedMinorExists=\"Yes\" AND caseFlagUnaccompaniedMinorAdditionalInformation!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagSetAsideReheardImage", "TabFieldDisplayOrder": 67, "FieldShowCondition": "isReheardAppealEnabled=\"Yes\" AND caseFlagSetAsideReheardExists=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagSetAsideReheardAdditionalInformation", "TabFieldDisplayOrder": 68, "FieldShowCondition": "isReheardAppealEnabled=\"Yes\" AND caseFlagSetAsideReheardExists=\"Yes\" AND caseFlagSetAsideReheardAdditionalInformation!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagS94BOutOfCountryImage", "TabFieldDisplayOrder": 69, "FieldShowCondition": "caseFlagS94bOutOfCountryExists=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagS94bOutOfCountryAdditionalInformation", "TabFieldDisplayOrder": 70, "FieldShowCondition": "caseFlagS94bOutOfCountryExists=\"Yes\" AND caseFlagS94bOutOfCountryAdditionalInformation!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "endAppealDetailsTitle", "TabFieldDisplayOrder": 85, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"ended\" OR currentCaseStateVisibleToLegalRepresentative=\"ended\" OR currentCaseStateVisibleToHomeOfficeAll=\"ended\" OR currentCaseStateVisibleToAdminOfficer=\"ended\" OR currentCaseStateVisibleToJudge=\"ended\" OR appealStatus=\"Reinstated\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "appealStatus", "TabFieldDisplayOrder": 86, "FieldShowCondition": "appealStatus=\"Reinstated\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "reinstateAppealDate", "TabFieldDisplayOrder": 87, "FieldShowCondition": "appealStatus=\"Reinstated\""},
