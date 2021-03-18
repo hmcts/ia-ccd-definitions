@@ -4294,8 +4294,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerNameList", "Label": "Caseworker", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseWorkerName", "Label": "Caseworker's name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "localAuthorityPolicy", "Label": "Organisation policy", "FieldType": "OrganisationPolicy", "SecurityClassification": "PUBLIC"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateReasonAdvice", "Label": "Select the reason the fee has been updated.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateReason", "Label": "Reason for fee update", "FieldType": "FixedRadioList", "FieldTypeParameter": "feeUpdateReasons", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "newFeeAmount", "Label": "New fee amount", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
@@ -4343,5 +4341,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAuthorisation", "Label": "Does your client give authorisation for the sponsor to access information relating to the appeal?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAuthorisationLabel", "Label": "**The sponsor will not be sent any notices or decisions relating to the appeal other than a Notice of Hearing, if applicable.**", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorNameForDisplay", "Label": "Sponsor name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAddressForDisplay", "Label": "Sponsor address", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAddressForDisplay", "Label": "Sponsor address", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "localAuthorityPolicy", "Label": "Organisation policy", "FieldType": "OrganisationPolicy", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "ID": "changeOrganisationRequestField", "Label": "Change Organisation Request", "FieldType": "ChangeOrganisationRequest", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeRepresentationDescription", "Label": "#### Once you've submitted this request\r\n- You will no longer have access to this case\r\n- If the case has been shared with any colleagues, they will also lose access\r\n- Linked appeals are not affected. If you want to stop representing a client on a linked appeal, you need to access the case and repeat this action.", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
+
 ]
