@@ -97,6 +97,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepReferenceNumber", "Label": "Legal representative reference", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDeclaration", "Label": "Declaration", "FieldType": "MultiSelectList", "FieldTypeParameter": "legalRepDeclaration", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealReferenceNumber", "Label": "Appeal reference", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ccdReferenceNumberForDisplay", "Label": "Online case reference number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantNameForDisplay", "Label": "Appellant name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsForDisplay", "Label": "Grounds of appeal", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGrounds", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationOutOfTimeText", "Label": "## You've missed the deadline for appealing.\r\n\r\nYou can ask for permission to appeal outside of the deadline.\r\n\r\nExplain why you believe your late appeal should be allowed to proceed.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
