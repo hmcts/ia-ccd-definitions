@@ -16,7 +16,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklist", "Label": " ", "FieldType": "checklist", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistOutOfCountry", "Label": " ", "FieldType": "checklistOutOfCountry", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeDecisionTitle", "Label": "# Home Office details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeReferenceNumber", "Label": "Home Office Reference/Case ID", "HintText": "Enter the 9-digit or 16-digit number on the decision letter", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeReferenceNumber", "Label": "Home Office Reference/Case ID", "HintText": "Enter the 9-digit or 16-digit number on the decision letter", "FieldType": "Text", "RegularExpression": "(?:\\d){4}((?:[-](?:\\d){4}){3}|[0-9]{5})", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "02/01/2018",
     "CaseTypeID": "Asylum",
