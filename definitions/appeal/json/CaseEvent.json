@@ -1882,7 +1882,7 @@
     "DisplayOrder": 71,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_AAC_URL}/noc/check-noc-approval",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
     "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
