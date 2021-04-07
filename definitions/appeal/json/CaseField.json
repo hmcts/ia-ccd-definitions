@@ -4424,6 +4424,8 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousRemissionDetails", "Label": "Previous remissions", "FieldType": "Collection", "FieldTypeParameter": "remissionDetails", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousRepresentations", "Label": "Previous representation", "FieldType": "Collection", "FieldTypeParameter": "previousRepresentation", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "physicalOrMentalHealthIssuesFlag", "Label": "Case type tab place holder for physicalOrMentalHealthIssues", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paAppealTypePaymentOptionFlag", "Label": "Case type tab place holder for paAppealTypePaymentOptionFlag", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "eaHuAppealTypePaymentOptionFlag", "Label": "Case type tab place holder for eaHuAppealTypePaymentOptionFlag", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -4438,8 +4440,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outOfTimeDecisionDetailsTitle", "Label": "![]()\r\n## Out of time decision details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outOfTimeDecisionDocuments", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousOutOfTimeDecisionDetails", "Label": "Previous out of time decisions", "FieldType": "Collection", "FieldTypeParameter": "outOfTimeDecisionDetails", "SecurityClassification": "PUBLIC"},
-
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousRepresentations", "Label": "Previous representation", "FieldType": "Collection", "FieldTypeParameter": "previousRepresentation", "SecurityClassification": "PUBLIC"},
 
   {
     "LiveFrom": "01/01/2018",

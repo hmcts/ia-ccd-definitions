@@ -698,6 +698,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepresentativeEmailAddress", "TabFieldDisplayOrder": 180, "FieldShowCondition": "journeyType!=\"aip\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepReferenceNumber", "TabFieldDisplayOrder": 200, "FieldShowCondition": "journeyType!=\"aip\""},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "previousRepresentations", "TabFieldDisplayOrder": 210},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "TabLabel": "Documents", "TabDisplayOrder": 4, "CaseFieldID": "documentsTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "journeyType", "TabFieldDisplayOrder": 9, "FieldShowCondition": "journeyType=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "isFtpaAppellantDecided", "TabFieldDisplayOrder": 10, "FieldShowCondition": "isFtpaAppellantDecided=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
