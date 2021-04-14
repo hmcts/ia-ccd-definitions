@@ -712,10 +712,15 @@
 
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateRecorded", "ListElementCode": "feeUpdateRecorded", "ListElement": "Fee update recorded", "DisplayOrder": 1},
 
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatus", "ListElementCode": "feeUpdateRefundApproved", "ListElement": "Refund approved", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatus", "ListElementCode": "feeUpdateRefundInstructed", "ListElement": "Refund instructed", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatus", "ListElementCode": "feeUpdateAdditionalFeeRequested", "ListElement": "Additional fee requested", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatus", "ListElementCode": "feeUpdateNotRequired", "ListElement": "Fee update not required", "DisplayOrder": 4},
+
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatusesForDisplay", "ListElementCode": "feeUpdateRecorded", "ListElement": "Fee update recorded"},
-  {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatusesForDisplay", "ListElementCode": "refundApproved", "ListElement": "Refund approved"},
-  {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatusesForDisplay", "ListElementCode": "refundInstructed", "ListElement": "Refund instructed"},
-  {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatusesForDisplay", "ListElementCode": "additionalFeeRequested", "ListElement": "Additional fee requested"},
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatusesForDisplay", "ListElementCode": "feeUpdateRefundApproved", "ListElement": "Refund approved"},
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatusesForDisplay", "ListElementCode": "feeUpdateRefundInstructed", "ListElement": "Refund instructed"},
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatusesForDisplay", "ListElementCode": "feeUpdateAdditionalFeeRequested", "ListElement": "Additional fee requested"},
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatusesForDisplay", "ListElementCode": "feeUpdateNotRequired", "ListElement": "Fee update not required"},
 
   {"LiveFrom": "01/01/2018", "ID": "outOfCountryDecisionType", "ListElementCode": "refusalOfHumanRights", "ListElement": "A decision to refuse a human rights claim for entry clearance", "DisplayOrder": 1},

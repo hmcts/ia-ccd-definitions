@@ -631,6 +631,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "feeUpdateReason", "TabFieldDisplayOrder": 612},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "newFeeAmount", "TabFieldDisplayOrder": 613},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "feeUpdateCompletedStages", "TabFieldDisplayOrder": 614},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "displayFeeUpdateStatus", "TabFieldDisplayOrder": 615, "FieldShowCondition": "displayFeeUpdateStatus=\"DUMMY_FIELD_TO_HIDE\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "TabLabel": "Appellant", "TabDisplayOrder": 3, "CaseFieldID": "appellantTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantDetailsTitle", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "ccdReferenceNumberForDisplay", "TabFieldDisplayOrder": 5},
