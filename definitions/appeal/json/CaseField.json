@@ -4360,5 +4360,12 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "lateRemissionType", "Label": "Choose one of the following statements", "FieldType": "FixedRadioList", "FieldTypeParameter": "lateRemissionTypes", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousRemissionDetails", "Label": "Previous remissions", "FieldType": "Collection", "FieldTypeParameter": "remissionDetails", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousRemissionDetails", "Label": "Previous remissions", "FieldType": "Collection", "FieldTypeParameter": "remissionDetails", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "physicalOrMentalHealthIssuesFlag", "Label": "Case type tab place holder for physicalOrMentalHealthIssues", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paAppealTypePaymentOptionFlag", "Label": "Case type tab place holder for paAppealTypePaymentOptionFlag", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "eaHuAppealTypePaymentOptionFlag", "Label": "Case type tab place holder for eaHuAppealTypePaymentOptionFlag", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentStatusFlag", "Label": "Case type tab place holder for paymentStatus", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateReasonFlag", "Label": "Case type tab place holder for feeUpdateReason", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+
 ]
