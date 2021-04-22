@@ -7,5 +7,12 @@
   {"LiveFrom": "01/01/2021", "ID": "ChangeOrganisationRequest", "CaseEventID": "nocRequest", "CaseFieldID": "changeOrganisationRequestField", "ListElementCode": "RequestTimestamp", "FieldDisplayOrder":  "6", "DisplayContext": "OPTIONAL"},
   {"LiveFrom": "01/01/2021", "ID": "ChangeOrganisationRequest", "CaseEventID": "nocRequest", "CaseFieldID": "changeOrganisationRequestField", "ListElementCode": "ApprovalStatus", "DefaultValue": "1", "FieldDisplayOrder":  "7", "DisplayContext": "OPTIONAL"},
   {"LiveFrom": "01/01/2021", "ID": "ChangeOrganisationRequest", "CaseEventID": "removeRepresentation", "CaseFieldID": "changeOrganisationRequestField", "ListElementCode": "CaseRoleId", "FieldDisplayOrder":  "1", "DisplayContext": "MANDATORY"},
-  {"LiveFrom": "01/01/2021", "ID": "ChangeOrganisationRequest", "CaseEventID": "removeLegalRepresentative", "CaseFieldID": "changeOrganisationRequestField", "ListElementCode": "CaseRoleId", "FieldDisplayOrder":  "1", "DisplayContext": "MANDATORY"}
+  {"LiveFrom": "01/01/2021", "ID": "ChangeOrganisationRequest", "CaseEventID": "removeLegalRepresentative", "CaseFieldID": "changeOrganisationRequestField", "ListElementCode": "CaseRoleId", "FieldDisplayOrder":  "1", "DisplayContext": "MANDATORY"},
+
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "changeDirectionDueDate", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "explanation", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "changeDirectionDueDate", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "parties", "FieldDisplayOrder":  "2", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "changeDirectionDueDate", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateDue", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "changeDirectionDueDate", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateSent", "FieldDisplayOrder":  "4", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "changeDirectionDueDate", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "tag", "FieldDisplayOrder":  "5", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "changeDirectionDueDate", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "previousDates", "FieldDisplayOrder":  "6", "DisplayContext": "OPTIONAL", "Publish": "Y"}
 ]
