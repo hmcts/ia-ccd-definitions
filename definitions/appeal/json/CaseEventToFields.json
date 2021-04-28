@@ -400,6 +400,7 @@
     "DisplayContext": "MANDATORY",
     "PageID": "appealType",
     "PageDisplayOrder": 4,
+    "FieldShowCondition": "appealType=\"DUMMY_FIELD_TO_HIDE\"",
     "ShowSummaryChangeOption": "Y",
     "Publish": "Y"
   },
