@@ -14,5 +14,61 @@
   {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "changeDirectionDueDate", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateDue", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "Y"},
   {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "changeDirectionDueDate", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateSent", "FieldDisplayOrder":  "4", "DisplayContext": "OPTIONAL", "Publish": "Y"},
   {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "changeDirectionDueDate", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "tag", "FieldDisplayOrder":  "5", "DisplayContext": "OPTIONAL", "Publish": "Y"},
-  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "changeDirectionDueDate", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "previousDates", "FieldDisplayOrder":  "6", "DisplayContext": "OPTIONAL", "Publish": "Y"}
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "changeDirectionDueDate", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "previousDates", "FieldDisplayOrder":  "6", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestRespondentEvidence", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "explanation", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestRespondentEvidence", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "parties", "FieldDisplayOrder":  "2", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestRespondentEvidence", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateDue", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestRespondentEvidence", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateSent", "FieldDisplayOrder":  "4", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestRespondentEvidence", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "tag", "FieldDisplayOrder":  "5", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestRespondentEvidence", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "previousDates", "FieldDisplayOrder":  "6", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestCaseBuilding", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "explanation", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestCaseBuilding", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "parties", "FieldDisplayOrder":  "2", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestCaseBuilding", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateDue", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestCaseBuilding", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateSent", "FieldDisplayOrder":  "4", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestCaseBuilding", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "tag", "FieldDisplayOrder":  "5", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestCaseBuilding", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "previousDates", "FieldDisplayOrder":  "6", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestReasonsForAppeal", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "explanation", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestReasonsForAppeal", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "parties", "FieldDisplayOrder":  "2", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestReasonsForAppeal", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateDue", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestReasonsForAppeal", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateSent", "FieldDisplayOrder":  "4", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestReasonsForAppeal", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "tag", "FieldDisplayOrder":  "5", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestReasonsForAppeal", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "previousDates", "FieldDisplayOrder":  "6", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestRespondentReview", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "explanation", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestRespondentReview", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "parties", "FieldDisplayOrder":  "2", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestRespondentReview", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateDue", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestRespondentReview", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateSent", "FieldDisplayOrder":  "4", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestRespondentReview", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "tag", "FieldDisplayOrder":  "5", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestRespondentReview", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "previousDates", "FieldDisplayOrder":  "6", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "sendDirection", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "explanation", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "sendDirection", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "parties", "FieldDisplayOrder":  "2", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "sendDirection", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateDue", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "sendDirection", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateSent", "FieldDisplayOrder":  "4", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "sendDirection", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "tag", "FieldDisplayOrder":  "5", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "sendDirection", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "previousDates", "FieldDisplayOrder":  "6", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestHearingRequirements", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "explanation", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestHearingRequirements", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "parties", "FieldDisplayOrder":  "2", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestHearingRequirements", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateDue", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestHearingRequirements", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateSent", "FieldDisplayOrder":  "4", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestHearingRequirements", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "tag", "FieldDisplayOrder":  "5", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestHearingRequirements", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "previousDates", "FieldDisplayOrder":  "6", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestCmaRequirements", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "explanation", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestCmaRequirements", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "parties", "FieldDisplayOrder":  "2", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestCmaRequirements", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateDue", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestCmaRequirements", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateSent", "FieldDisplayOrder":  "4", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestCmaRequirements", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "tag", "FieldDisplayOrder":  "5", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "requestCmaRequirements", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "previousDates", "FieldDisplayOrder":  "6", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "sendDirectionWithQuestions", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "explanation", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "sendDirectionWithQuestions", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "parties", "FieldDisplayOrder":  "2", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "sendDirectionWithQuestions", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateDue", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "sendDirectionWithQuestions", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "dateSent", "FieldDisplayOrder":  "4", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "sendDirectionWithQuestions", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "tag", "FieldDisplayOrder":  "5", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "sendDirectionWithQuestions", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "previousDates", "FieldDisplayOrder":  "6", "DisplayContext": "OPTIONAL", "Publish": "Y"}
 ]
