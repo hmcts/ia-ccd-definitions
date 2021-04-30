@@ -396,10 +396,10 @@
     "CaseEventFieldLabel": "Type of appeal",
     "PageFieldDisplayOrder": 5,
     "DisplayContext": "MANDATORY",
-    "PageID": "appealType",
+    "PageID": "declaration",
     "PageDisplayOrder": 4,
     "FieldShowCondition": "legalRepDeclaration=\"DUMMY_FIELD_TO_HIDE\"",
-    "ShowSummaryChangeOption": "Y",
+    "ShowSummaryChangeOption": "N",
     "Publish": "Y"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "applyForFTPAAppellant", "CaseFieldID": "ftpaAppellantSubmissionOutOfTime", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "ftpaAppellantSubmissionOutOfTimePage","PageDisplayOrder": 1, "FieldShowCondition": "ftpaAppellantOutOfTimeText=\"DUMMY_FIELD_TO_HIDE\"", "PageShowCondition": "ftpaAppellantSubmissionOutOfTime=\"Yes\"", "ShowSummaryChangeOption": "N"},
