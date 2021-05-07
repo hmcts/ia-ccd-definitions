@@ -224,6 +224,10 @@
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "feeAmount", "FieldType": "MoneyGBP", "ElementLabel": "Fee", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "amountRemitted", "FieldType": "MoneyGBP", "ElementLabel": "Amount remitted", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "amountLeftToPay", "FieldType": "MoneyGBP", "ElementLabel": "Amount left to pay", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "remissionDecisionReason", "FieldType": "Text", "ElementLabel": "Reason for decision", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "remissionDecisionReason", "FieldType": "Text", "ElementLabel": "Reason for decision", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionDetails", "ListElementCode": "decisionType", "FieldType": "Text", "ElementLabel": "Out of time decision", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionDetails", "ListElementCode": "decisionMaker", "FieldType": "Text", "ElementLabel": "Decision maker", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionDetails", "ListElementCode": "decisionDocument", "FieldType": "Document", "ElementLabel": "Decision notice", "SecurityClassification": "PUBLIC"}
 
 ]
