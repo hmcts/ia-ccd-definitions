@@ -10,13 +10,15 @@
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsProtection", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsProtection", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsHumanRights", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsHumanRights", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appealGroundsRevocation", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGroundsRevocation", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist5", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist5", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist5", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist5", "ElementLabel": " ", "FieldShowCondition": "checklist1=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist1", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist1", "ElementLabel": " ", "FieldShowCondition": "checklist1=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist2", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist2", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist7", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist7", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist3", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist3", "ElementLabel": " ", "FieldShowCondition": "checklist4=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist4", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist4", "ElementLabel": " ", "FieldShowCondition": "checklist4=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist6", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist6", "ElementLabel": " ", "FieldShowCondition": "checklist6=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "checklistOutOfCountry", "ListElementCode": "checklist2", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist2", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "checklistOutOfCountry", "ListElementCode": "checklist7", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist7", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "previousDates", "ListElementCode": "dateDue", "FieldType": "Date", "ElementLabel": "Date due", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "previousDates", "ListElementCode": "dateSent", "FieldType": "Date", "ElementLabel": "Date sent", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "clarifyingQuestion", "ListElementCode": "question", "FieldType": "TextArea", "ElementLabel": "Question", "SecurityClassification": "PUBLIC"},
@@ -205,6 +207,9 @@
   {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "appealDecision", "FieldType": "Text", "ElementLabel": "Decision of appeal", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "finalDecisionAndReasonsDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Decision and reason documents", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateRecorded", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "feeUpdateRecorded", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatus", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "feeUpdateStatus", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "feeRemissionType", "FieldType": "Text", "ElementLabel": "Fee remission type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "asylumSupportReference", "FieldType": "Text", "ElementLabel": "Asylum Support reference number", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "asylumSupportDocument", "FieldType": "Document", "ElementLabel": "Asylum Support confirmation letter", "SecurityClassification": "PUBLIC"},
@@ -219,5 +224,10 @@
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "feeAmount", "FieldType": "MoneyGBP", "ElementLabel": "Fee", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "amountRemitted", "FieldType": "MoneyGBP", "ElementLabel": "Amount remitted", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "amountLeftToPay", "FieldType": "MoneyGBP", "ElementLabel": "Amount left to pay", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "remissionDecisionReason", "FieldType": "Text", "ElementLabel": "Reason for decision", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "remissionDecisionReason", "FieldType": "Text", "ElementLabel": "Reason for decision", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionDetails", "ListElementCode": "decisionType", "FieldType": "Text", "ElementLabel": "Out of time decision", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionDetails", "ListElementCode": "decisionMaker", "FieldType": "Text", "ElementLabel": "Decision maker", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionDetails", "ListElementCode": "decisionDocument", "FieldType": "Document", "ElementLabel": "Decision notice", "SecurityClassification": "PUBLIC"}
+
 ]

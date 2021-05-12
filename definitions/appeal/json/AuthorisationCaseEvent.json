@@ -140,7 +140,14 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "decideAnApplication", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "decideAnApplication", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestNewHearingRequirements", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestNewHearingRequirements", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestNewHearingRequirements", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
 
-  
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseEventID": "nocRequest", "UserRole": "caseworker-caa", "CRUD": "CRUD"},
+
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseEventID": "applyNocDecision", "UserRole": "caseworker-approver", "CRUD": "CRUD"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "removeRepresentation", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "removeLegalRepresentative", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "removeLegalRepresentative", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "recordOutOfTimeDecision", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"}
 ]
