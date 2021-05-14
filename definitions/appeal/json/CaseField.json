@@ -4360,5 +4360,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousRemissionDetails", "Label": "Previous remissions", "FieldType": "Collection", "FieldTypeParameter": "remissionDetails", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousRepresentations", "Label": "Previous representation", "FieldType": "Collection", "FieldTypeParameter": "previousRepresentation", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousRepresentations", "Label": "Previous representation", "FieldType": "Collection", "FieldTypeParameter": "previousRepresentation", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "doThisNowUpdateLegalRepDetails", "Label": "### Do this now\r\nSelect Update legal representative details from the Next step dropdown and enter your details.\r\n\r\nYou will not receive important notifications about the appeal until you do this.", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 ]

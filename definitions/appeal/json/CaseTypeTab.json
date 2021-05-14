@@ -80,6 +80,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "lateRemissionType", "TabFieldDisplayOrder": 7, "FieldShowCondition": "lateRemissionType=\"DUMMY_FIELD_TO_HIDE\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "remissionRejectedDatePlus14days", "TabFieldDisplayOrder": 7, "FieldShowCondition": "remissionRejectedDatePlus14days=\"DUMMY_FIELD_TO_HIDE\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "feeUpdateReason", "TabFieldDisplayOrder": 7, "FieldShowCondition": "feeUpdateReason=\"DUMMY_FIELD_TO_HIDE\""},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "changeOrganisationRequestField", "TabFieldDisplayOrder": 7, "FieldShowCondition": "caseBuildingReadyForSubmission=\"DUMMY_FIELD_TO_HIDE\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "doThisNowUpdateLegalRepDetails", "TabFieldDisplayOrder": 6, "FieldShowCondition": "changeOrganisationRequestField!=\"\""},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_appealStarted_dcRp", "TabFieldDisplayOrder": 7, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"appealStarted\" AND appealType!=\"protection\" AND appealType!=\"refusalOfEu\" AND appealType!=\"refusalOfHumanRights\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_appealStarted_eaHuPa", "TabFieldDisplayOrder": 7, "FieldShowCondition": "isFeePaymentEnabled!=\"Yes\" AND currentCaseStateVisibleToLegalRepresentative=\"appealStarted\" AND appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_appealStarted_remissions", "TabFieldDisplayOrder": 7, "FieldShowCondition": "isRemissionsEnabled=\"Yes\" AND currentCaseStateVisibleToLegalRepresentative=\"appealStarted\" AND remissionType=\"hoWaiverRemission\""},
@@ -864,4 +868,5 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "validationAppealData", "TabFieldDisplayOrder": 4, "FieldShowCondition": "homeOfficeSearchStatus=\"SUCCESS\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseHistory", "TabLabel": "Case history", "TabDisplayOrder": 12, "CaseFieldID": "caseHistoryViewer", "TabFieldDisplayOrder": 1}
+
 ]
