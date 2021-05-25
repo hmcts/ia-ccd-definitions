@@ -559,6 +559,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "dateEntryClearanceDecision", "TabFieldDisplayOrder": 213,"FieldShowCondition": "isOutOfCountryEnabled=\"Yes\" AND appealOutOfCountry=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "dateClientLeaveUk", "TabFieldDisplayOrder": 215,"FieldShowCondition": "appealOutOfCountry=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "reasonForLinkAppeal", "TabFieldDisplayOrder": 217, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"*\" OR currentCaseStateVisibleToHomeOfficeApc=\"*\" OR currentCaseStateVisibleToHomeOfficeAll=\"*\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseWorkerName", "TabFieldDisplayOrder": 218, "FieldShowCondition": "caseWorkerName!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "[CREATED_DATE]", "TabFieldDisplayOrder": 300},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "legalRepresentativeTitle", "TabFieldDisplayOrder": 301},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "legalRepCompany", "TabFieldDisplayOrder": 302},
