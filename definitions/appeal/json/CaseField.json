@@ -4435,5 +4435,14 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outOfTimeDecisionDocument", "Label": "Upload decision notice", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outOfTimeDecisionDetailsTitle", "Label": "![]()\r\n## Out of time decision details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outOfTimeDecisionDocuments", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousOutOfTimeDecisionDetails", "Label": "Previous out of time decisions", "FieldType": "Collection", "FieldTypeParameter": "outOfTimeDecisionDetails", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousOutOfTimeDecisionDetails", "Label": "Previous out of time decisions", "FieldType": "Collection", "FieldTypeParameter": "outOfTimeDecisionDetails", "SecurityClassification": "PUBLIC"},
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_payAndSubmitPaymentFailed",
+    "Label": "## Current progress of the case\r\n\r\n![Payment pending](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYour appeal has been submitted but the payment has failed. There are two ways you can pay for the appeal.\r\n\r\n- If you have resolved the issue that caused the payment to fail, you can [make a payment using Payment by Account](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/paymentAppeal)\r\n- If you want to pay by card, you can [change the payment method to card](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editPaymentMethod). The Tribunal will then contact you with payment instructions\r\n\r\nYou must pay the fee within 14 days of submitting the appeal or the Tribunal may end the appeal.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  }
 ]
