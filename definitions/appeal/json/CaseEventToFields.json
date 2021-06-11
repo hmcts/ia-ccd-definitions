@@ -372,7 +372,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealPaid", "CaseFieldID": "paidAmount", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "markAppealPaid", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealPaid", "CaseFieldID": "additionalPaymentInfo", "PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "markAppealPaid", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "submissionOutOfTime", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "submissionOutOfTimePage", "PageDisplayOrder": 1, "FieldShowCondition": "applicationOutOfTimeText=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "PageShowCondition": "submissionOutOfTime=\"Yes\"", "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "submissionOutOfTime", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "submissionOutOfTimePage", "PageLabel": "Your appeal is out of time", "PageDisplayOrder": 1, "FieldShowCondition": "applicationOutOfTimeText=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "PageShowCondition": "submissionOutOfTime=\"Yes\"", "ShowSummaryChangeOption": "N"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -385,9 +385,9 @@
     "PageDisplayOrder": 1,
     "ShowSummaryChangeOption": "N"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "applicationOutOfTimeExplanation", "CaseEventFieldLabel": "You can upload a document or fill out the box below.", "PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "submissionOutOfTimePage","PageDisplayOrder": 1,"ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "applicationOutOfTimeDocument", "CaseEventFieldLabel": " ", "PageFieldDisplayOrder": 4, "DisplayContext": "OPTIONAL", "PageID": "submissionOutOfTimePage","PageDisplayOrder": 1,"ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "legalRepDeclaration", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "declaration", "PageDisplayOrder": 2, "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "applicationOutOfTimeExplanation", "CaseEventFieldLabel": "You can upload a document or fill out the box below.", "PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "submissionOutOfTimePage", "PageDisplayOrder": 1,"ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "applicationOutOfTimeDocument", "CaseEventFieldLabel": " ", "PageFieldDisplayOrder": 4, "DisplayContext": "OPTIONAL", "PageID": "submissionOutOfTimePage", "PageDisplayOrder": 1,"ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "legalRepDeclaration", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "declaration", "PageLabel": "Declaration", "PageDisplayOrder": 2, "ShowSummaryChangeOption": "N"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
