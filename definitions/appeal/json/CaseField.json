@@ -4437,5 +4437,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outOfTimeDecisionDocument", "Label": "Upload decision notice", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outOfTimeDecisionDetailsTitle", "Label": "![]()\r\n## Out of time decision details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outOfTimeDecisionDocuments", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousOutOfTimeDecisionDetails", "Label": "Previous out of time decisions", "FieldType": "Collection", "FieldTypeParameter": "outOfTimeDecisionDetails", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousOutOfTimeDecisionDetails", "Label": "Previous out of time decisions", "FieldType": "Collection", "FieldTypeParameter": "outOfTimeDecisionDetails", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousRepresentations", "Label": "Previous representation", "FieldType": "Collection", "FieldTypeParameter": "previousRepresentation", "SecurityClassification": "PUBLIC"}
 ]
