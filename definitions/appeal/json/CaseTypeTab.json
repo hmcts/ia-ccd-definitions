@@ -742,9 +742,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "previousHearingRecordingDocuments", "TabFieldDisplayOrder": 19, "FieldShowCondition": "previousHearingRecordingDocuments!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "hearingRecordingDocuments", "TabFieldDisplayOrder": 20, "FieldShowCondition": "hearingRecordingDocuments!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "addendumEvidenceDocuments", "TabFieldDisplayOrder": 21, "FieldShowCondition": "addendumEvidenceDocuments!=\"\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "legalRepresentativeDocuments", "TabFieldDisplayOrder": 22, "FieldShowCondition": "legalRepresentativeDocuments!=\"\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "respondentDocuments", "TabFieldDisplayOrder": 23, "FieldShowCondition": "respondentDocuments!=\"\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "appellantDocuments", "TabFieldDisplayOrder": 24, "FieldShowCondition": "journeyType=\"aip\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "legalRepresentativeDocuments", "TabFieldDisplayOrder": 22, "FieldShowCondition": "journeyType!=\"aip\" AND legalRepresentativeDocuments!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "appellantDocuments", "TabFieldDisplayOrder": 23, "FieldShowCondition": "journeyType=\"aip\" AND appellantDocuments!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "respondentDocuments", "TabFieldDisplayOrder": 24, "FieldShowCondition": "respondentDocuments!=\"\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "directions", "TabLabel": "Directions", "TabDisplayOrder": 5, "CaseFieldID": "directionsTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "directions", "CaseFieldID": "journeyType", "TabFieldDisplayOrder": 9, "FieldShowCondition": "journeyType=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
