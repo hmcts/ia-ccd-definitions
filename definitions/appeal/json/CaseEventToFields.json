@@ -402,7 +402,8 @@
     "PageDisplayOrder": 4,
     "FieldShowCondition": "legalRepDeclaration=\"DUMMY_FIELD_TO_HIDE\"",
     "ShowSummaryChangeOption": "N",
-    "Publish": "Y"
+    "Publish": "Y",
+    "RetainHiddenValue": "Y"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "applyForFTPAAppellant", "CaseFieldID": "ftpaAppellantSubmissionOutOfTime", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "ftpaAppellantSubmissionOutOfTimePage", "PageLabel": "Late application", "PageDisplayOrder": 1, "FieldShowCondition": "ftpaAppellantOutOfTimeText=\"DUMMY_FIELD_TO_HIDE\"", "PageShowCondition": "ftpaAppellantSubmissionOutOfTime=\"Yes\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "applyForFTPAAppellant", "CaseFieldID": "ftpaAppellantOutOfTimeText", "PageFieldDisplayOrder": 2, "DisplayContext": "READONLY", "PageID": "ftpaAppellantSubmissionOutOfTimePage","PageDisplayOrder": 1,"ShowSummaryChangeOption": "N"},
