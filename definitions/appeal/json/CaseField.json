@@ -4424,6 +4424,8 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousRemissionDetails", "Label": "Previous remissions", "FieldType": "Collection", "FieldTypeParameter": "remissionDetails", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousRepresentations", "Label": "Previous representation", "FieldType": "Collection", "FieldTypeParameter": "previousRepresentation", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "physicalOrMentalHealthIssuesFlag", "Label": "Case type tab place holder for physicalOrMentalHealthIssues", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paAppealTypePaymentOptionFlag", "Label": "Case type tab place holder for paAppealTypePaymentOptionFlag", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "eaHuAppealTypePaymentOptionFlag", "Label": "Case type tab place holder for eaHuAppealTypePaymentOptionFlag", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -4438,8 +4440,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outOfTimeDecisionDetailsTitle", "Label": "![]()\r\n## Out of time decision details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outOfTimeDecisionDocuments", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousOutOfTimeDecisionDetails", "Label": "Previous out of time decisions", "FieldType": "Collection", "FieldTypeParameter": "outOfTimeDecisionDetails", "SecurityClassification": "PUBLIC"},
-
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousRepresentations", "Label": "Previous representation", "FieldType": "Collection", "FieldTypeParameter": "previousRepresentation", "SecurityClassification": "PUBLIC"},
 
   {
     "LiveFrom": "01/01/2018",
@@ -4472,5 +4472,14 @@
     "Label": "## Current progress of the case\r\n\r\n![Payment pending](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nWe have not been able to confirm if this payment has failed.\r\n\r\nEmail iaexceptions@justice.gov.uk to check the status of this payment. Please include the HMCTS reference for the appeal.\r\n\r\nThe Tribunal will reply to confirm the payment status. If you still have to pay a fee, the reply will include instructions on how to make a payment.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "doThisNowUpdateLegalRepDetails",
+    "Label": "![Important message: Do this now. Select Update legal representative details from the Next step dropdown and enter your details. You will not receive important notifications about the appeal until you do this.](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_doThisNow_updateDetails.svg)\r\n\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
   }
+
 ]

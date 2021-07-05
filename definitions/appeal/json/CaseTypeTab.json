@@ -85,6 +85,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "recordedOutOfTimeDecision", "TabFieldDisplayOrder": 7, "FieldShowCondition": "recordedOutOfTimeDecision=\"DUMMY_FIELD_TO_HIDE\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "outOfTimeDecisionType", "TabFieldDisplayOrder": 7, "FieldShowCondition": "outOfTimeDecisionType=\"DUMMY_FIELD_TO_HIDE\""},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "changeOrganisationRequestField", "TabFieldDisplayOrder": 7, "FieldShowCondition": "caseBuildingReadyForSubmission=\"DUMMY_FIELD_TO_HIDE\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "doThisNowUpdateLegalRepDetails", "TabFieldDisplayOrder": 6, "FieldShowCondition": "changeOrganisationRequestField!=\"\""},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_appealStarted_dcRp", "TabFieldDisplayOrder": 7, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"appealStarted\" AND appealType!=\"protection\" AND appealType!=\"refusalOfEu\" AND appealType!=\"refusalOfHumanRights\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_appealStarted_eaHuPa", "TabFieldDisplayOrder": 7, "FieldShowCondition": "isFeePaymentEnabled!=\"Yes\" AND currentCaseStateVisibleToLegalRepresentative=\"appealStarted\" AND appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_appealStarted_remissions", "TabFieldDisplayOrder": 7, "FieldShowCondition": "isRemissionsEnabled=\"Yes\" AND currentCaseStateVisibleToLegalRepresentative=\"appealStarted\" AND remissionType=\"hoWaiverRemission\""},
@@ -698,6 +701,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepresentativeEmailAddress", "TabFieldDisplayOrder": 180, "FieldShowCondition": "journeyType!=\"aip\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepReferenceNumber", "TabFieldDisplayOrder": 200, "FieldShowCondition": "journeyType!=\"aip\""},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "previousRepresentations", "TabFieldDisplayOrder": 210},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "TabLabel": "Documents", "TabDisplayOrder": 4, "CaseFieldID": "documentsTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "journeyType", "TabFieldDisplayOrder": 9, "FieldShowCondition": "journeyType=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "isFtpaAppellantDecided", "TabFieldDisplayOrder": 10, "FieldShowCondition": "isFtpaAppellantDecided=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
@@ -947,4 +952,5 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "validationAppealData", "TabFieldDisplayOrder": 4, "FieldShowCondition": "homeOfficeSearchStatus=\"SUCCESS\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseHistory", "TabLabel": "Case history", "TabDisplayOrder": 12, "CaseFieldID": "caseHistoryViewer", "TabFieldDisplayOrder": 1}
+
 ]
