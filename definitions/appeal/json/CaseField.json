@@ -4119,7 +4119,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentByAccountReferenceNumberLabel", "Label": "### Payment by Account reference number", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "pbaNumber", "Label": "Enter your Payment by Account reference number", "HintText": "For example, PBA1234567", "FieldType": "Text", "RegularExpression": "PBA[0-9]{7}", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "cantSeePaymentByAccount", "Label": "### Can’t see your Payment by Account number?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyLinkToUsePba", "Label": "<a href=\"https://immigrationappealsonline.justice.gov.uk/IACFees\" target=\"_blank\">Apply to use Payment by Account</a>", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyLinkToUsePba", "Label": "<a href=\"https://www.gov.uk/guidance/hmcts-payment-by-account-for-online-services\" target=\"_blank\">Apply to use Payment by Account (Opens in new window)</a>", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
 
   {
     "LiveFrom": "01/01/2018",
