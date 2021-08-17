@@ -514,7 +514,7 @@
     "Name": "Stitching bundle complete",
     "Description": "Stitching bundle complete",
     "DisplayOrder": 23,
-    "PreConditionState(s)": "finalBundling",
+    "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
@@ -2137,5 +2137,26 @@
      "ShowEventNotes": "N",
      "EndButtonLabel": "Update",
      "Publish": "N"
-   }
+   },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "generateUpperTribunalBundle",
+    "Name": "Generate Upper Tribunal bundle",
+    "Description": "Generate upper tribunal bundle",
+    "DisplayOrder": 23,
+    "PreConditionState(s)": "ftpaDecided",
+    "PostConditionState": "ftpaDecided",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
+    "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Generate",
+    "Publish": "N"
+  }
 ]
