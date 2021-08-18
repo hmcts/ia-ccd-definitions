@@ -759,6 +759,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_appellant_granted_old_cases",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\r\nYou must create a bundle for the Upper Tribunal.\r\n\r\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_ftpa_appellant_granted",
     "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## What happens next\r\nNo further action required.<br/><br/><br/>",
     "FieldType": "Label",
@@ -788,11 +796,26 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_ftpa_appellant_granted_old_cases",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\r\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_ftpa_respondent_granted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\r\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_respondent_granted_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\r\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -829,11 +852,26 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_ftpa_respondent_granted_old_cases",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\r\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_ftpa_appellant_part_granted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_appellant_part_granted_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -870,11 +908,26 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_ftpa_appellant_part_granted_old_cases",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_ftpa_respondent_part_granted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_respondent_part_granted_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -911,11 +964,26 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_ftpa_respondent_part_granted_old_cases",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_ftpa_appellant_dismissed",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_appellant_dismissed_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -932,6 +1000,14 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_admin_ftpa_appellant_dismissed",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_ftpa_appellant_dismissed_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -1041,11 +1117,18 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_ftpa_respondent_dismissed",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_respondent_dismissed_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -1062,6 +1145,14 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_admin_ftpa_respondent_dismissed",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_ftpa_respondent_dismissed_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -1123,11 +1214,18 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_ftpa_appellant_not_admitted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_appellant_not_admitted_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -1144,6 +1242,14 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_admin_ftpa_appellant_not_admitted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_ftpa_appellant_not_admitted_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -1253,11 +1359,18 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_ftpa_respondent_not_admitted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\n\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_ftpa_respondent_not_admitted_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\n\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -1274,6 +1387,14 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_admin_ftpa_respondent_not_admitted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_ftpa_respondent_not_admitted_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -1304,12 +1425,18 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
-
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_rj_ftpa_appellant_granted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\r\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_appellant_granted_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\r\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -1346,11 +1473,26 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_rj_ftpa_appellant_granted_old_cases",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\r\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_rj_ftpa_respondent_granted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_respondent_granted_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -1387,11 +1529,26 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_rj_ftpa_respondent_granted_old_cases",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_rj_ftpa_appellant_part_granted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_appellant_part_granted_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -1431,7 +1588,23 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_rj_ftpa_appellant_part_granted_old_cases",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_judge_rj_ftpa_respondent_part_granted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_respondent_part_granted_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -1471,7 +1644,23 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_rj_ftpa_respondent_part_granted_old_cases",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal granted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaGranted.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_judge_rj_ftpa_appellant_dismissed",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_appellant_dismissed_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -1488,6 +1677,14 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_admin_rj_ftpa_appellant_dismissed",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_rj_ftpa_appellant_dismissed_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -1532,11 +1729,18 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_rj_ftpa_respondent_dismissed",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_respondent_dismissed_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -1553,6 +1757,14 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_admin_rj_ftpa_respondent_dismissed",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_rj_ftpa_respondent_dismissed_old_cases",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\nYou must create a bundle for the Upper Tribunal.\n\n[Generate the Upper Tribunal bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateUpperTribunalBundle)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
