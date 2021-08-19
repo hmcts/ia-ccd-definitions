@@ -36,6 +36,8 @@
   {"LiveFrom": "01/01/2018", "ID": "direction", "ListElementCode": "tag", "FieldType": "Text", "ElementLabel": "Tag", "FieldShowCondition": "tag=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "direction", "ListElementCode": "previousDates", "FieldType": "Collection", "FieldTypeParameter": "previousDates", "ElementLabel": "Previous dates", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "direction", "ListElementCode": "clarifyingQuestions", "FieldType": "Collection", "FieldTypeParameter": "clarifyingQuestion", "ElementLabel": "Clarifying questions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "direction", "ListElementCode": "uniqueId", "FieldType": "Text", "ElementLabel": "Unique Id", "FieldShowCondition": "uniqueId=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "direction", "ListElementCode": "directionType", "FieldType": "Text", "ElementLabel": "Direction Type", "FieldShowCondition": "directionType=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "editableDirection", "ListElementCode": "explanation", "FieldType": "TextArea", "ElementLabel": "Explanation", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "editableDirection", "ListElementCode": "parties", "FieldType": "FixedList", "FieldTypeParameter": "parties", "ElementLabel": "Parties", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "editableDirection", "ListElementCode": "dateDue", "FieldType": "Date", "ElementLabel": "By what date must they comply?", "SecurityClassification": "PUBLIC"},
