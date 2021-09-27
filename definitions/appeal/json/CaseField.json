@@ -233,6 +233,8 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealResponseDocument", "Label": "Response document", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealResponseDescription", "Label": "Description", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealReviewDecisionTitle", "Label": "# What was the outcome of the review?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealReviewOutcome", "Label": "Outcome\r\n\r\n", "FieldType": "FixedRadioList", "FieldTypeParameter": "appealReviewOutcome", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealResponseEvidence", "Label": "Evidence", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addHomeOfficeAppealResponseTitle", "Label": "#### Files should be:\r\n- a maximum of 100MB in size (larger files must be split)\r\n- labelled clearly, e.g. HOappealresponse.pdf\r\n- in Word or PDF format - other file formats must be sent to both the appellant and Tribunal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppealResponseDocument", "Label": "Upload the appeal response", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
