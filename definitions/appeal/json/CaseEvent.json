@@ -2121,23 +2121,6 @@
     "EndButtonLabel": "Update payment method",
     "Publish": "N"
   },
-   {
-     "LiveFrom": "01/01/2018",
-     "CaseTypeID": "Asylum",
-     "ID": "adminCaseUpdate",
-     "Name": "Case data updated",
-     "Description": "Case data updated by amdmin user",
-     "DisplayOrder": 87,
-     "PreConditionState(s)": "*",
-     "PostConditionState": "*",
-     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
-     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
-     "SecurityClassification": "Public",
-     "ShowSummary": "N",
-     "ShowEventNotes": "N",
-     "EndButtonLabel": "Update",
-     "Publish": "N"
-   },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
