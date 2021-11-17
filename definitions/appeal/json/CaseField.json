@@ -259,6 +259,7 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalEvidence", "Label": "Upload documents", "FieldType": "Collection", "FieldTypeParameter": "additionalEvidenceDocument", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "markEvidenceAsReviewedAction", "Label": "[Mark evidence as reviewed](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/markEvidenceAsReviewed)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingTitle", "Label": "Add the hearing details below.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingCentre", "Label": "Location", "FieldType": "FixedList", "FieldTypeParameter": "hearingVenue", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingLength", "Label": "Length", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "SecurityClassification": "PUBLIC"},
@@ -321,6 +322,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadHomeOfficeAppealResponseActionAvailable", "Label": "Internal flag managed by API to enable/disable uploadHomeOfficeAppealResponseAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadedHomeOfficeAppealResponseDocs", "Label": "Already uploaded files:", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadAdditionalEvidenceActionAvailable", "Label": "Internal flag managed by API to enable/disable uploadAdditionalEvidenceAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "markEvidenceAsReviewedActionAvailable", "Label": "Internal flag managed by API to enable/disable markEvidenceAsReviewedAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseBuildingReadyForSubmission", "Label": "Internal flag managed by API to show correct case progression within the caseBuilding state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "respondentReviewAppealResponseAdded", "Label": "Internal flag managed by API to show correct case progression within the respondentReview state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewResponseActionAvailable", "Label": "Internal flag managed by API to enable/disable reviewResponseAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
