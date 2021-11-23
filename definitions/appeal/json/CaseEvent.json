@@ -2212,6 +2212,7 @@
     "DisplayOrder": 24,
     "PreConditionState(s)": "preHearing;decision;decided",
     "PostConditionState": "*",
+    "EventEnablingCondition": "markAddendumEvidenceAsReviewedActionAvailable=\"Yes\"",
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
