@@ -259,6 +259,7 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalEvidence", "Label": "Upload documents", "FieldType": "Collection", "FieldTypeParameter": "additionalEvidenceDocument", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "markEvidenceAsReviewedAction", "Label": "[Mark evidence as reviewed](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/markEvidenceAsReviewed)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingTitle", "Label": "Add the hearing details below.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingCentre", "Label": "Location", "FieldType": "FixedList", "FieldTypeParameter": "hearingVenue", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listCaseHearingLength", "Label": "Length", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "SecurityClassification": "PUBLIC"},
@@ -321,6 +322,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadHomeOfficeAppealResponseActionAvailable", "Label": "Internal flag managed by API to enable/disable uploadHomeOfficeAppealResponseAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadedHomeOfficeAppealResponseDocs", "Label": "Already uploaded files:", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadAdditionalEvidenceActionAvailable", "Label": "Internal flag managed by API to enable/disable uploadAdditionalEvidenceAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "markEvidenceAsReviewedActionAvailable", "Label": "Internal flag managed by API to enable/disable markEvidenceAsReviewedAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseBuildingReadyForSubmission", "Label": "Internal flag managed by API to show correct case progression within the caseBuilding state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "respondentReviewAppealResponseAdded", "Label": "Internal flag managed by API to show correct case progression within the respondentReview state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewResponseActionAvailable", "Label": "Internal flag managed by API to enable/disable reviewResponseAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -4323,6 +4325,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnaccompaniedMinorExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagSetAsideReheardExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagS94bOutOfCountryExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAppealOnHoldExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAnonymityAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagComplexCaseAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
@@ -4334,6 +4337,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnaccompaniedMinorAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagSetAsideReheardAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagS94bOutOfCountryAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAppealOnHoldAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAnonymityImage", "Label": "![This appellant in this case has an anonymity order](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagAnonymity.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagComplexCaseImage", "Label": "![This appeal has been marked as complex case](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagComplexCase.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -4345,6 +4349,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagUnaccompaniedMinorImage", "Label": "![The appellant in this case is an unaccompanied minor](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagUnaccompaniedMinor.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagSetAsideReheardImage", "Label": "![The decision has been set aside and this case will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagSetAsideReheard.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagS94BOutOfCountryImage", "Label": "![The decision has been set aside and this case will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagS94BOutofCountry.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAppealOnHoldImage", "Label": "![This appellant case is on hold](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagAppealOnHold.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeFlagDescription", "Label": "Select a flag to remove from the case\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeFlagTypeOfFlag", "Label": "Type of flag", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
