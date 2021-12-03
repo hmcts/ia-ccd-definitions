@@ -730,6 +730,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAipHearingRequirements", "CaseFieldID": "witnessDetails", "PageFieldDisplayOrder": 1, "DisplayContext": "OPTIONAL", "PageID": "WitnessDetails", "PageDisplayOrder": 1,  "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAipHearingRequirements", "CaseFieldID": "isEvidenceFromOutsideUkInCountry", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "EvidenceFromOutsideUkInCountry", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAipHearingRequirements", "CaseFieldID": "remoteVideoCall", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "remoteVideoCall", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAipHearingRequirements", "CaseFieldID": "remoteVideoCallDescription", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "remoteVideoCall", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAipHearingRequirements", "CaseFieldID": "bringOwnMultimediaEquipment", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "remoteVideoCall", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
 
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateHearingRequirements", "CaseFieldID": "hearingRequirementsTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "draftHearingRequirements", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
