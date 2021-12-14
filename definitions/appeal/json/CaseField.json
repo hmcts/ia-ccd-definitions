@@ -4586,6 +4586,7 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationEvidence", "Label": "Supporting evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplications", "Label": "Application", "FieldType": "Collection", "FieldTypeParameter": "makeAnApplication", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "lastModifiedApplication", "Label": " ", "FieldType": "makeAnApplication", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasApplicationsToDecide", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideAnApplicationLink", "Label": "[Decide an application](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/decideAnApplication)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
