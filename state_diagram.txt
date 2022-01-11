@@ -1,0 +1,78 @@
+@startuml
+hide empty description
+skinparam state {
+BackgroundColor<<allStates>> DeepSkyBlue
+  BackgroundColor<<noPermission>> Gainsboro
+  FontColor<<noPermission>> Gray
+}
+state "All states" as allStates <<allStates>>
+[*] --> appealStarted :  startAppeal
+appealStarted --> appealStarted :  editAppeal
+appealStarted --> appealSubmitted :  submitAppeal\n payAndSubmitAppeal
+pendingPayment --> pendingPayment :  sendDirection\n changeDirectionDueDate\n addCaseNote\n recordApplication\n changeHearingCentre\n updateLegalRepDetails\n editAppealAfterSubmit\n markAppealPaid\n makeAnApplication\n decideAnApplication\n recordRemissionDecision\n requestFeeRemission
+appealSubmitted --> appealSubmitted :  sendDirection\n changeDirectionDueDate\n addCaseNote\n recordApplication\n changeHearingCentre\n updateLegalRepDetails\n editAppealAfterSubmit\n paymentAppeal\n markAppealPaid\n requestHomeOfficeData\n makeAnApplication\n decideAnApplication\n recordRemissionDecision\n manageFeeUpdate\n requestFeeRemission\n recordOutOfTimeDecision
+awaitingRespondentEvidence --> awaitingRespondentEvidence :  sendDirection\n changeDirectionDueDate\n requestRespondentEvidence\n uploadHomeOfficeBundle\n addCaseNote\n recordApplication\n changeHearingCentre\n updateLegalRepDetails\n editAppealAfterSubmit\n paymentAppeal\n markAppealPaid\n makeAnApplication\n decideAnApplication\n recordRemissionDecision\n manageFeeUpdate\n requestFeeRemission\n recordOutOfTimeDecision
+caseBuilding --> caseBuilding :  sendDirection\n changeDirectionDueDate\n addCaseNote\n recordApplication\n uploadAdditionalEvidenceHomeOffice\n changeHearingCentre\n updateLegalRepDetails\n editAppealAfterSubmit\n paymentAppeal\n markAppealPaid\n makeAnApplication\n decideAnApplication\n recordRemissionDecision\n manageFeeUpdate\n requestFeeRemission\n recordOutOfTimeDecision
+caseUnderReview --> caseUnderReview :  sendDirection\n changeDirectionDueDate\n uploadAdditionalEvidence\n addCaseNote\n recordApplication\n uploadAdditionalEvidenceHomeOffice\n changeHearingCentre\n updateLegalRepDetails\n editAppealAfterSubmit\n paymentAppeal\n markAppealPaid\n makeAnApplication\n decideAnApplication\n recordRemissionDecision\n manageFeeUpdate\n requestFeeRemission\n recordOutOfTimeDecision\n markEvidenceAsReviewed
+respondentReview --> respondentReview :  sendDirection\n changeDirectionDueDate\n addAppealResponse\n uploadHomeOfficeAppealResponse\n requestResponseReview\n requestResponseAmend\n uploadAdditionalEvidence\n addCaseNote\n recordApplication\n uploadAdditionalEvidenceHomeOffice\n changeHearingCentre\n updateLegalRepDetails\n editAppealAfterSubmit\n paymentAppeal\n markAppealPaid\n makeAnApplication\n decideAnApplication\n recordRemissionDecision\n manageFeeUpdate\n requestFeeRemission\n recordOutOfTimeDecision\n markEvidenceAsReviewed
+submitHearingRequirements --> submitHearingRequirements :  sendDirection\n changeDirectionDueDate\n uploadAdditionalEvidence\n addCaseNote\n recordApplication\n uploadAdditionalEvidenceHomeOffice\n changeHearingCentre\n updateLegalRepDetails\n editAppealAfterSubmit\n paymentAppeal\n markAppealPaid\n makeAnApplication\n decideAnApplication\n recordRemissionDecision\n manageFeeUpdate\n requestFeeRemission\n recordOutOfTimeDecision\n markEvidenceAsReviewed
+listing --> listing :  sendDirection\n changeDirectionDueDate\n uploadAdditionalEvidence\n addCaseNote\n recordApplication\n uploadAdditionalEvidenceHomeOffice\n updateHearingRequirements\n reviewHearingRequirements\n updateHearingAdjustments\n changeHearingCentre\n updateLegalRepDetails\n editAppealAfterSubmit\n paymentAppeal\n markAppealPaid\n makeAnApplication\n decideAnApplication\n recordRemissionDecision\n manageFeeUpdate\n requestFeeRemission\n recordOutOfTimeDecision\n markEvidenceAsReviewed
+prepareForHearing --> prepareForHearing :  sendDirection\n changeDirectionDueDate\n uploadAdditionalEvidence\n addCaseNote\n editCaseListing\n recordApplication\n uploadAdditionalEvidenceHomeOffice\n updateHearingRequirements\n updateHearingAdjustments\n changeHearingCentre\n updateLegalRepDetails\n editAppealAfterSubmit\n paymentAppeal\n markAppealPaid\n makeAnApplication\n decideAnApplication\n recordRemissionDecision\n manageFeeUpdate\n requestFeeRemission\n recordOutOfTimeDecision\n markEvidenceAsReviewed
+finalBundling --> finalBundling :  sendDirection\n changeDirectionDueDate\n generateHearingBundle\n addCaseNote\n editCaseListing\n recordApplication\n updateHearingRequirements\n updateHearingAdjustments\n changeHearingCentre\n updateLegalRepDetails\n editAppealAfterSubmit\n paymentAppeal\n customiseHearingBundle\n markAppealPaid\n makeAnApplication\n decideAnApplication\n recordRemissionDecision\n manageFeeUpdate\n requestFeeRemission\n recordOutOfTimeDecision\n markEvidenceAsReviewed
+preHearing --> preHearing :  sendDirection\n changeDirectionDueDate\n addCaseNote\n uploadAddendumEvidence\n editCaseListing\n recordApplication\n uploadAddendumEvidenceLegalRep\n uploadAddendumEvidenceHomeOffice\n uploadAddendumEvidenceAdminOfficer\n updateHearingRequirements\n updateHearingAdjustments\n changeHearingCentre\n updateLegalRepDetails\n editAppealAfterSubmit\n paymentAppeal\n markAppealPaid\n makeAnApplication\n decideAnApplication\n recordRemissionDecision\n manageFeeUpdate\n requestFeeRemission\n recordOutOfTimeDecision
+decision --> decision :  sendDirection\n changeDirectionDueDate\n generateDecisionAndReasons\n addCaseNote\n uploadAddendumEvidence\n editCaseListing\n recordApplication\n recordAttendeesAndDuration\n uploadAddendumEvidenceLegalRep\n uploadAddendumEvidenceHomeOffice\n uploadAddendumEvidenceAdminOfficer\n updateHearingRequirements\n updateHearingAdjustments\n uploadHearingRecording\n changeHearingCentre\n updateLegalRepDetails\n editAppealAfterSubmit\n paymentAppeal\n markAppealPaid\n makeAnApplication\n decideAnApplication\n recordRemissionDecision\n manageFeeUpdate\n requestFeeRemission\n recordOutOfTimeDecision
+adjourned --> adjourned :  sendDirection\n changeDirectionDueDate\n uploadAdditionalEvidence\n addCaseNote\n editCaseListing\n updateHearingRequirements\n updateHearingAdjustments\n restoreStateFromAdjourn\n editAppealAfterSubmit\n paymentAppeal\n makeAnApplication\n decideAnApplication\n recordRemissionDecision\n manageFeeUpdate\n requestFeeRemission\n recordOutOfTimeDecision
+ftpaSubmitted --> ftpaSubmitted :  changeDirectionDueDate\n addCaseNote\n recordAttendeesAndDuration\n changeHearingCentre\n applyForFTPAAppellant\n applyForFTPARespondent\n recordAllocatedJudge\n editAppealAfterSubmit\n makeAnApplication\n decideAnApplication
+ftpaDecided --> ftpaDecided :  changeDirectionDueDate\n addCaseNote\n changeHearingCentre\n applyForFTPAAppellant\n applyForFTPARespondent\n leadershipJudgeFtpaDecision\n residentJudgeFtpaDecision\n editAppealAfterSubmit\n makeAnApplication\n decideAnApplication\n generateUpperTribunalBundle
+awaitingReasonsForAppeal --> awaitingReasonsForAppeal :  changeDirectionDueDate\n addCaseNote\n editReasonsForAppeal\n changeHearingCentre\n editTimeExtension\n reviewTimeExtension\n submitTimeExtension\n paymentAppeal\n makeAnApplication\n decideAnApplication
+reasonsForAppealSubmitted --> reasonsForAppealSubmitted :  changeDirectionDueDate\n uploadAdditionalEvidence\n addCaseNote\n changeHearingCentre\n paymentAppeal\n makeAnApplication\n decideAnApplication
+awaitingClarifyingQuestionsAnswers --> awaitingClarifyingQuestionsAnswers :  changeDirectionDueDate\n addCaseNote\n changeHearingCentre\n editTimeExtension\n reviewTimeExtension\n submitTimeExtension\n editClarifyingQuestionAnswers\n paymentAppeal\n makeAnApplication\n decideAnApplication
+clarifyingQuestionsAnswersSubmitted --> clarifyingQuestionsAnswersSubmitted :  changeDirectionDueDate\n addCaseNote\n changeHearingCentre\n paymentAppeal\n makeAnApplication\n decideAnApplication
+awaitingCmaRequirements --> awaitingCmaRequirements :  changeDirectionDueDate\n uploadAdditionalEvidence\n addCaseNote\n changeHearingCentre\n editTimeExtension\n reviewTimeExtension\n submitTimeExtension\n editCmaRequirements\n paymentAppeal\n makeAnApplication\n decideAnApplication
+cmaRequirementsSubmitted --> cmaRequirementsSubmitted :  changeDirectionDueDate\n uploadAdditionalEvidence\n addCaseNote\n changeHearingCentre\n paymentAppeal\n makeAnApplication\n decideAnApplication
+cmaAdjustmentsAgreed --> cmaAdjustmentsAgreed :  changeDirectionDueDate\n uploadAdditionalEvidence\n addCaseNote\n changeHearingCentre\n paymentAppeal\n makeAnApplication\n decideAnApplication
+cmaListed --> cmaListed :  changeDirectionDueDate\n uploadAdditionalEvidence\n addCaseNote\n changeHearingCentre\n updateDetailsAfterCma\n paymentAppeal\n makeAnApplication\n decideAnApplication
+appealSubmitted --> awaitingRespondentEvidence :  requestRespondentEvidence
+awaitingRespondentEvidence --> caseBuilding :  uploadRespondentEvidence\n requestCaseBuilding\n forceRequestCaseBuilding
+caseBuilding --> caseUnderReview :  buildCase\n submitCase\n forceCaseToCaseUnderReview
+caseUnderReview --> caseBuilding :  requestCaseEdit
+caseUnderReview --> respondentReview :  requestRespondentReview
+reasonsForAppealSubmitted --> respondentReview :  requestRespondentReview
+clarifyingQuestionsAnswersSubmitted --> respondentReview :  requestRespondentReview
+respondentReview --> listing :  requestHearingRequirements
+listing --> prepareForHearing :  listCase
+submitHearingRequirements --> listing :  listCaseWithoutHearingRequirements\n draftHearingRequirements
+prepareForHearing --> finalBundling :  createCaseSummary
+caseBuilding --> awaitingRespondentEvidence :  revertStateToAwaitingRespondentEvidence
+allStates --> allStates :  asyncStitchingComplete\n editDocuments\n flagCase\n removeFlag\n linkAppeal\n unlinkAppeal\n rollbackPayment\n rollbackPaymentTimeout\n uploadSensitiveDocuments\n allocateTheCase\n nocRequest\n applyNocDecision\n removeRepresentation\n removeLegalRepresentative\n editPaymentMethod\n updatePaymentStatus
+preHearing --> decision :  decisionAndReasonsStarted
+decision --> decided :  sendDecisionAndReasons
+decided --> decided :  addCaseNote\n uploadAddendumEvidence\n recordApplication\n recordAttendeesAndDuration\n uploadAddendumEvidenceLegalRep\n uploadAddendumEvidenceHomeOffice\n uploadAddendumEvidenceAdminOfficer\n uploadHearingRecording\n changeHearingCentre\n applyForFTPAAppellant\n applyForFTPARespondent\n updateLegalRepDetails\n editAppealAfterSubmit\n paymentAppeal\n markAppealPaid\n makeAnApplication\n decideAnApplication\n recordRemissionDecision\n manageFeeUpdate\n requestFeeRemission\n recordOutOfTimeDecision
+respondentReview --> submitHearingRequirements :  requestHearingRequirementsFeature\n forceCaseToSubmitHearingRequirements
+awaitingRespondentEvidence --> awaitingReasonsForAppeal :  requestReasonsForAppeal
+awaitingReasonsForAppeal --> reasonsForAppealSubmitted :  submitReasonsForAppeal
+finalBundling --> preHearing :  sendToPreHearing
+ftpaSubmitted --> ftpaDecided :  leadershipJudgeFtpaDecision\n residentJudgeFtpaDecision
+allStates --> awaitingClarifyingQuestionsAnswers :  sendDirectionWithQuestions
+awaitingClarifyingQuestionsAnswers --> clarifyingQuestionsAnswersSubmitted :  submitClarifyingQuestionAnswers
+pendingPayment --> awaitingCmaRequirements :  requestCmaRequirements
+respondentReview --> awaitingCmaRequirements :  requestCmaRequirements
+reasonsForAppealSubmitted --> awaitingCmaRequirements :  requestCmaRequirements
+awaitingCmaRequirements --> cmaRequirementsSubmitted :  submitCmaRequirements
+cmaRequirementsSubmitted --> cmaAdjustmentsAgreed :  reviewCmaRequirements
+cmaAdjustmentsAgreed --> cmaListed :  listCma
+preHearing --> adjourned :  adjournHearingWithoutDate
+finalBundling --> adjourned :  adjournHearingWithoutDate
+prepareForHearing --> adjourned :  adjournHearingWithoutDate
+decision --> adjourned :  adjournHearingWithoutDate
+adjourned --> finalBundling :  decisionWithoutHearing
+respondentReview --> finalBundling :  decisionWithoutHearing
+submitHearingRequirements --> finalBundling :  decisionWithoutHearing
+listing --> finalBundling :  decisionWithoutHearing
+pendingPayment --> appealSubmitted :  moveToSubmitted\n payForAppeal
+appealSubmitted --> pendingPayment :  moveToPaymentPending
+allStates --> pendingPayment :  rollbackPaymentTimeoutToPaymentPending
+ftpaDecided --> submitHearingRequirements :  requestNewHearingRequirements
+ -->  :  recordOutOfTimeDecision
+@enduml
+
