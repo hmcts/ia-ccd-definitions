@@ -2184,5 +2184,23 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "Publish": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "editAipHearingRequirements",
+    "Name": "Draft hearing requirements UI",
+    "Description": "Save draft hearing requirements",
+    "DisplayOrder": 100,
+    "PreConditionState(s)": "submitHearingRequirements",
+    "PostConditionState": "*",
+    "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit",
+    "Publish": "N"
   }
 ]
