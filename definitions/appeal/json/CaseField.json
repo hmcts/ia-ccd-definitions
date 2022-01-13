@@ -3425,6 +3425,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_reviewHearingRequirements_aip",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_reviewHearingRequirements.svg)\r\n\r\n## Do this next\r\nYou can view the hearing requirements and any requests for additional adjustments in the [Hearing tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).<br><br>If you need more information, [direct the appellant to answer clarifying questions](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitClarifyingQuestionAnswers).<br><br>If you do not need more information, [review and record](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewHearingRequirements) the hearing requirements and any additional adjustments.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_reviewHearingRequirements",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_reviewHearingRequirements.svg)\r\n\r\n## Do this next\r\nYou can view the hearing requirements and any requests for additional adjustments in the [Hearing tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).<br><br>You should contact the appellant if you need more information.<br><br>You should then [review and submit](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewHearingRequirements) the hearing requirements and any additional adjustments.",
     "FieldType": "Label",
