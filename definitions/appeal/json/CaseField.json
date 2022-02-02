@@ -12,6 +12,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistTitle4", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isOutOfCountryEnabled", "Label": "Out of country feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInUk", "Label": "Is your client currently living in the United Kingdom?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInUkPreviousSelection", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealOutOfCountry", "Label": "Out of country", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklist", "Label": " ", "FieldType": "checklist", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistOutOfCountry", "Label": " ", "FieldType": "checklistOutOfCountry", "SecurityClassification": "PUBLIC"},
@@ -4974,5 +4975,15 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasPbaAccounts", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseName", "Label": "Case Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "pcqId", "Label": "PCQ Id", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "pcqId", "Label": "PCQ Id", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "appealTypePreviousSelection",
+    "Label": " ",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "appealType",
+    "SecurityClassification": "PUBLIC"
+  }
 ]
