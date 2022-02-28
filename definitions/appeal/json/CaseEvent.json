@@ -2151,7 +2151,7 @@
     "Name": "Mark evidence as reviewed",
     "Description": "Mark evidence as reviewed",
     "DisplayOrder": 24,
-    "PreConditionState(s)": "caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling",
+    "PreConditionState(s)": "caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;caseBuilding",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
