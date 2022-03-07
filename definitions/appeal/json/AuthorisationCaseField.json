@@ -5435,6 +5435,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "preClarifyingState", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "preClarifyingState", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRUD"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "waDummyPostcode", "UserRole": "caseworker-ia-admofficer", "CRUD": "RU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "waDummyPostcode", "UserRole": "caseworker-ia-caseofficer", "CRUD": "RU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "waDummyPostcode", "UserRole": "caseworker-wa-task-configuration", "CRUD": "RU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "waDummyPostcode", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "RU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "waDummyPostcode", "UserRole": "citizen", "CRUD": "RU"}
 
 ]
