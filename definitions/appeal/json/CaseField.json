@@ -4992,6 +4992,14 @@
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "appealType",
     "SecurityClassification": "PUBLIC"
-  }
+  },
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "markAddendumEvidenceAsReviewedActionAvailable", "Label": "Internal flag managed by API to enable/disable markAddendumEvidenceAsReviewedAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "markAddendumEvidenceAsReviewedAction", "Label": "[Mark evidence as reviewed](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/markAddendumEvidenceAsReviewed)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentRequestSentDate", "Label": "Date sent", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentRequestSentNoteDescription", "Label": "Notes", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentRequestSentDocument", "Label": "Upload a document", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hmctsCaseCategory", "Label": "HMCTS Case Category", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hmctsCaseNameInternal", "Label": "Case Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
 
 ]
