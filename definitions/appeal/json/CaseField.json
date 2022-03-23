@@ -4353,6 +4353,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagSetAsideReheardAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagS94bOutOfCountryAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAppealOnHoldAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagPilotCaseAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAnonymityImage", "Label": "![This appellant in this case has an anonymity order](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagAnonymity.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagComplexCaseImage", "Label": "![This appeal has been marked as complex case](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagComplexCase.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -4365,6 +4367,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagSetAsideReheardImage", "Label": "![The decision has been set aside and this case will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagSetAsideReheard.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagS94BOutOfCountryImage", "Label": "![The decision has been set aside and this case will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagS94BOutofCountry.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAppealOnHoldImage", "Label": "![This appellant case is on hold](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagAppealOnHold.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagPilotCaseImage", "Label": "![This appellant in this case has an anonymity order](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseFlagAnonymity.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeFlagDescription", "Label": "Select a flag to remove from the case\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeFlagTypeOfFlag", "Label": "Type of flag", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
@@ -4841,12 +4845,12 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseManagementCategory", "Label": "Case management category", "FieldType": "DynamicList",  "SecurityClassification": "PUBLIC"},
   {
-  "LiveFrom": "01/01/2018",
-  "CaseTypeID": "Asylum",
-  "ID": "hoAppellantDetailsFoundAdvice",
-  "Label": "The Home Office data has returned more than one appellant for this appeal. Review the details submitted to the Tribunal by the appellant and select the matching appellant from the list.",
-  "FieldType": "Label",
-  "SecurityClassification": "PUBLIC"
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "hoAppellantDetailsFoundAdvice",
+    "Label": "The Home Office data has returned more than one appellant for this appeal. Review the details submitted to the Tribunal by the appellant and select the matching appellant from the list.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
   },
   {
     "LiveFrom": "01/01/2018",
