@@ -12,6 +12,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistTitle4", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isOutOfCountryEnabled", "Label": "Out of country feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInUk", "Label": "Is your client currently living in the United Kingdom?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInUkPreviousSelection", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealOutOfCountry", "Label": "Out of country", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklist", "Label": " ", "FieldType": "checklist", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistOutOfCountry", "Label": " ", "FieldType": "checklistOutOfCountry", "SecurityClassification": "PUBLIC"},
@@ -3927,6 +3928,7 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalEvidenceHomeOffice", "Label": "Additional evidence", "FieldType": "Collection", "FieldTypeParameter": "additionalEvidenceHomeOfficeDocument", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "subscriptions", "Label": "Subscriptions", "FieldType": "Collection", "FieldTypeParameter": "subscription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorSubscriptions", "Label": "Subscriptions", "FieldType": "Collection", "FieldTypeParameter": "subscription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journeyType", "Label": "Type of Journey", "FieldType": "FixedList", "FieldTypeParameter": "journeyTypes", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
@@ -3989,6 +3991,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeAppealFromOnlineTitle", "Label": "You should only remove an appeal when you're sure it cannot continue through the online service. This decision cannot be undone and may need to be reviewed by a judge.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeAppealFromOnlineReason", "Label": "Reasons for removal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeAppealFromOnlineDate", "Label": "Removal date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -4660,7 +4663,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalAid", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalAidAdvice", "Label": "You need to provide your firm's Legal Aid account number", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalAidAccountNumber", "Label": "Legal Aid account number", "HintText":  "For example, 1A234B", "RegularExpression": "[0-9]{1}[A-Z]{1}[0-9]{3}[A-Z]{1}", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalAidAccountNumber", "Label": "Legal Aid account number", "HintText":  "For example, 6-20 characters without spaces", "RegularExpression": "[\\S]{6,20}", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section17Header", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section17Advice", "Label": "You need to provide a copy of a letter from the local authority confirming your client's benefit or accommodation support.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -4755,6 +4758,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorContactPreference", "Label": "Contact details", "FieldType": "FixedRadioList", "FieldTypeParameter": "contactPreference","SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorEmail", "Label": "Sponsor email", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorMobileNumber", "Label": "Sponsor phone number", "FieldType": "Text", "RegularExpression": "^((\\+44(\\s\\(0\\)\\s|\\s0\\s|\\s)?)|0)7\\d{3}(\\s)?\\d{6}$", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "aipSponsorEmailForDisplay", "Label": "Sponsor email", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "aipSponsorMobileNumberForDisplay", "Label": "Sponsor phone number", "FieldType": "Text", "RegularExpression": "^((\\+44(\\s\\(0\\)\\s|\\s0\\s|\\s)?)|0)7\\d{3}(\\s)?\\d{6}$", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAuthorisation", "Label": "Does your client give authorisation for the sponsor to access information relating to the appeal?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAuthorisationLabel", "Label": "**The sponsor will not be sent any notices or decisions relating to the appeal other than a Notice of Hearing, if applicable.**", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorNameForDisplay", "Label": "Sponsor name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -4977,10 +4982,23 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseName", "Label": "Case Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "pcqId", "Label": "PCQ Id", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "waDummyPostcode", "Label": "WA Dummy Postcode", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAppealReferenceNumberAvailable", "Label": "Internal flag managed by API for logging AIP Appeal reference and CCD Id", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "appealTypePreviousSelection",
+    "Label": " ",
+    "FieldType": "FixedRadioList",
+    "FieldTypeParameter": "appealType",
+    "SecurityClassification": "PUBLIC"
+  },
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentRequestSentDate", "Label": "Date sent", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentRequestSentNoteDescription", "Label": "Notes", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentRequestSentDocument", "Label": "Upload a document", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hmctsCaseCategory", "Label": "HMCTS Case Category", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hmctsCaseNameInternal", "Label": "Case Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
 
