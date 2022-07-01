@@ -457,22 +457,7 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "legalRepresentative_appealStarted_serviceRequest_PayNow_pa",
-    "Label": "It will be updated soon.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "legalRepresentative_appealStarted_serviceRequest_eaHu",
-    "Label": "It will be updated soon.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "serviceRequest", "Label": "Service Request", "FieldType": "WaysToPay", "SecurityClassification": "Public"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
