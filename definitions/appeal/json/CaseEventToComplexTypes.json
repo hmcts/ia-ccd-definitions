@@ -89,7 +89,7 @@
   {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "sendDirectionWithQuestions", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "previousDates", "FieldDisplayOrder":  "6", "DisplayContext": "OPTIONAL", "Publish": "Y"},
   {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "sendDirectionWithQuestions", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "uniqueId", "FieldDisplayOrder":  "7", "DisplayContext": "OPTIONAL", "Publish": "Y"},
   {"LiveFrom": "01/01/2021", "ID": "direction", "CaseEventID": "sendDirectionWithQuestions", "CaseFieldID": "lastModifiedDirection", "ListElementCode": "directionType", "FieldDisplayOrder":  "8", "DisplayContext": "OPTIONAL", "Publish": "Y"},
-  
+
   {"LiveFrom": "01/01/2021", "ID": "makeAnApplication", "CaseEventID": "makeAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "applicant", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "Y"},
   {"LiveFrom": "01/01/2021", "ID": "makeAnApplication", "CaseEventID": "makeAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "type", "FieldDisplayOrder":  "2", "DisplayContext": "OPTIONAL", "Publish": "Y"},
   {"LiveFrom": "01/01/2021", "ID": "makeAnApplication", "CaseEventID": "makeAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "details", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "Y"},
@@ -100,5 +100,18 @@
   {"LiveFrom": "01/01/2021", "ID": "makeAnApplication", "CaseEventID": "makeAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "applicantRole", "FieldDisplayOrder":  "8", "DisplayContext": "OPTIONAL", "Publish": "Y"},
   {"LiveFrom": "01/01/2021", "ID": "makeAnApplication", "CaseEventID": "makeAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "decisionReason", "FieldDisplayOrder":  "9", "DisplayContext": "OPTIONAL", "Publish": "Y"},
   {"LiveFrom": "01/01/2021", "ID": "makeAnApplication", "CaseEventID": "makeAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "decisionDate", "FieldDisplayOrder":  "10", "DisplayContext": "OPTIONAL", "Publish": "Y"},
-  {"LiveFrom": "01/01/2021", "ID": "makeAnApplication", "CaseEventID": "makeAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "decisionMaker", "FieldDisplayOrder":  "11", "DisplayContext": "OPTIONAL", "Publish": "Y"}
- ]
+  {"LiveFrom": "01/01/2021", "ID": "makeAnApplication", "CaseEventID": "makeAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "decisionMaker", "FieldDisplayOrder":  "11", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+
+  {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "applicant", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "type", "FieldDisplayOrder":  "2", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "details", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "evidence", "FieldDisplayOrder":  "4", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "date", "FieldDisplayOrder":  "5", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "decision", "FieldDisplayOrder":  "6", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "state", "FieldDisplayOrder":  "7", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "applicantRole", "FieldDisplayOrder":  "8", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "decisionReason", "FieldDisplayOrder":  "9", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "decisionDate", "FieldDisplayOrder":  "10", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "decisionMaker", "FieldDisplayOrder":  "11", "DisplayContext": "OPTIONAL", "Publish": "Y"}
+
+]
