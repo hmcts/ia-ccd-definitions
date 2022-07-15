@@ -1158,11 +1158,7 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "applicationOutOfTimeExplanation", "CaseEventFieldLabel": "You can upload a document or fill out the box below.", "PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "submissionOutOfTimePage","PageDisplayOrder": 85,"ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "applicationOutOfTimeDocument", "CaseEventFieldLabel": " ", "PageFieldDisplayOrder": 4, "DisplayContext": "OPTIONAL", "PageID": "submissionOutOfTimePage","PageDisplayOrder": 85,"ShowSummaryChangeOption": "N"},
-
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "linkAppeal", "CaseFieldID": "reasonForLinkAppeal", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "reasonForLinkAppealPageId", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y", "CaseEventFieldLabel": "Reason for link"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "unlinkAppeal", "CaseFieldID": "unlinkAppealReasonForLink", "PageFieldDisplayOrder": 3, "DisplayContext": "READONLY", "PageID": "reasonForUnlinkAppealPageId", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "unlinkAppeal", "CaseFieldID": "unlinkAppeaTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "reasonForUnlinkAppealPageId", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
-
+  
   {"LiveFrom": "07/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadSensitiveDocuments", "CaseFieldID": "uploadSensitiveDocsHeaderDescription", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "uploadSensitiveDocumentsPage1", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "07/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadSensitiveDocuments", "CaseFieldID": "uploadSensitiveDocsIsAppellantRespondent", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "uploadSensitiveDocumentsPage1", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "07/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadSensitiveDocuments", "CaseFieldID": "uploadSensitiveDocsAdviceOnUploads", "PageFieldDisplayOrder": 2, "DisplayContext": "READONLY", "PageID": "uploadSensitiveDocumentsPage1", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
