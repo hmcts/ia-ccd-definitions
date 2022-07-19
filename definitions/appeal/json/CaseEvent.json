@@ -431,7 +431,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "List case",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -450,7 +450,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -507,7 +507,7 @@
     "ShowSummary": "N",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Generate",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -546,7 +546,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -567,7 +567,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Generate",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -626,7 +626,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Upload",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -645,7 +645,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "List case",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -761,7 +761,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Upload",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -780,7 +780,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Upload",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -799,7 +799,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Upload",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1035,7 +1035,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1054,7 +1054,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Update",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1155,7 +1155,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1798,7 +1798,7 @@
     "ShowSummary": "N",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Generate",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1902,7 +1902,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Record decision",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2151,7 +2151,7 @@
     "Name": "Mark evidence as reviewed",
     "Description": "Mark evidence as reviewed",
     "DisplayOrder": 24,
-    "PreConditionState(s)": "caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling",
+    "PreConditionState(s)": "caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;caseBuilding",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
@@ -2219,5 +2219,40 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Complete Clarifying Questions",
     "Publish": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "markAddendumEvidenceAsReviewed",
+    "Name": "Mark evidence as reviewed",
+    "Description": "Mark addendum evidence as reviewed",
+    "DisplayOrder": 24,
+    "PreConditionState(s)": "preHearing;decision;decided",
+    "PostConditionState": "*",
+    "EventEnablingCondition": "markAddendumEvidenceAsReviewedActionAvailable=\"Yes\"",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Mark as reviewed",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "markPaymentRequestSent",
+    "Name": "Mark payment request sent",
+    "Description": "Mark payment request sent",
+    "DisplayOrder": 25,
+    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Save note",
+    "Publish": "Y"
   }
 ]
