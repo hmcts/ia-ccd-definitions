@@ -342,42 +342,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "pbaAdvice", "PageFieldDisplayOrder": 10, "DisplayContext": "READONLY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "hasPbaAccounts!=\"No\"" ,"ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "editYourAppeal", "PageFieldDisplayOrder": 11, "DisplayContext": "READONLY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "hasPbaAccounts!=\"No\"" ,"ShowSummaryChangeOption": "N"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealPaid", "CaseFieldID": "markAppealPaidDesc", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "markAppealPaid","PageDisplayOrder": 1,"ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealPaid", "CaseFieldID": "paidDate", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "markAppealPaid", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealPaid", "CaseFieldID": "paidAmount", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "markAppealPaid", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealPaid", "CaseFieldID": "additionalPaymentInfo", "PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "markAppealPaid", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "CaseEventID": "markAppealPaid",
-    "CaseFieldID": "appealType",
-    "CaseEventFieldLabel": "Type of appeal",
-    "PageFieldDisplayOrder": 4,
-    "DisplayContext": "MANDATORY",
-    "PageID": "markAppealPaid",
-    "PageDisplayOrder": 1,
-    "FieldShowCondition": "additionalPaymentInfo=\"DUMMY_FIELD_TO_HIDE\"",
-    "ShowSummaryChangeOption": "N",
-    "Publish": "Y",
-    "RetainHiddenValue": "Y"
-  },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "moveToSubmitted", "CaseFieldID": "dummyEmptyLabel", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "moveToSubmitted","PageDisplayOrder": 1, "PageShowCondition": "dummyEmptyLabel=\"DUMMY_VALUE_TO_HIDE_FIELD\"","ShowSummaryChangeOption": "N"},
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "CaseEventID": "moveToSubmitted",
-    "CaseFieldID": "appealType",
-    "CaseEventFieldLabel": "Type of appeal",
-    "PageFieldDisplayOrder": 2,
-    "DisplayContext": "MANDATORY",
-    "PageID": "moveToSubmitted",
-    "PageDisplayOrder": 1,
-    "FieldShowCondition": "dummyEmptyLabel=\"DUMMY_FIELD_TO_HIDE\"",
-    "ShowSummaryChangeOption": "N",
-    "Publish": "Y",
-    "RetainHiddenValue": "Y"
-  },
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "submissionOutOfTime", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "submissionOutOfTimePage", "PageLabel": "Your appeal is out of time", "PageDisplayOrder": 1, "FieldShowCondition": "applicationOutOfTimeText=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "PageShowCondition": "submissionOutOfTime=\"Yes\"", "ShowSummaryChangeOption": "N"},
   {
     "LiveFrom": "01/01/2018",
