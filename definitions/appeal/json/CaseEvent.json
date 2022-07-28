@@ -825,8 +825,8 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "endAppealForRemissionRejected",
-    "Name": "EndAppeal Remission Rejected",
+    "ID": "endAppealAutomatically",
+    "Name": "End Appeal Remission Rejected",
     "Description": "End Appeal For Remission Rejected",
     "DisplayOrder": 35,
     "PreConditionState(s)": "*",
@@ -838,10 +838,11 @@
     "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
     "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
     "SecurityClassification": "Public",
-    "ShowSummary": "N",
+    "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Send direction",
-    "Publish": "Y"
+    "EndButtonLabel": "End appeal",
+    "Publish": "Y",
+    "EventEnablingCondition": "paymentStatus!=\"Paid\""
   },
   {
     "LiveFrom": "01/01/2018",
