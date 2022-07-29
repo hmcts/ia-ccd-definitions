@@ -366,6 +366,11 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addCaseNoteDescription", "Label": "Case note", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addCaseNoteDocument", "Label": "Upload a document", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseNotesTabTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseLinksFlag", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "maintainCaseLinksFlag", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseLinksTabTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseLinks", "Label": "Case Links", "FieldType": "Collection", "FieldTypeParameter": "caseLink", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "componentLauncher", "Label": " ", "FieldType": "ComponentLauncher", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addCaseNoteLink", "Label": "[Add case note](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/addCaseNote)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseNotes", "Label": "Case notes", "FieldType": "Collection", "FieldTypeParameter": "caseNote", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "editCaseListingTitle", "Label": "You're editing the details of a case that's already been listed. Amend the hearing details below. ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -4434,6 +4439,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonForLinkAppeal", "Label": "Linked appeal", "FieldType": "FixedRadioList", "FieldTypeParameter": "reasonForLinkAppealOptions", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "02/01/2018", "CaseTypeID": "Asylum", "ID": "unlinkAppealReasonForLink", "Label": "| **Reason for link** | **${reasonForLinkAppeal}** |\r\n| --- | --- |", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "02/01/2018", "CaseTypeID": "Asylum", "ID": "unlinkAppeaTitle", "Label": "## Review the link you want to remove", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submitNotificationStatus", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFeePaymentEnabled", "Label": "isFeePaymentEnabled", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isReheardAppealEnabled", "Label": "isReheardAppealEnabled", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -4840,12 +4846,12 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseManagementCategory", "Label": "Case management category", "FieldType": "DynamicList",  "SecurityClassification": "PUBLIC"},
   {
-  "LiveFrom": "01/01/2018",
-  "CaseTypeID": "Asylum",
-  "ID": "hoAppellantDetailsFoundAdvice",
-  "Label": "The Home Office data has returned more than one appellant for this appeal. Review the details submitted to the Tribunal by the appellant and select the matching appellant from the list.",
-  "FieldType": "Label",
-  "SecurityClassification": "PUBLIC"
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "hoAppellantDetailsFoundAdvice",
+    "Label": "The Home Office data has returned more than one appellant for this appeal. Review the details submitted to the Tribunal by the appellant and select the matching appellant from the list.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
   },
   {
     "LiveFrom": "01/01/2018",
