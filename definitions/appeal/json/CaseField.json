@@ -108,6 +108,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepReferenceNumberTitle", "Label": "# Your own reference number", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepReferenceNumber", "Label": "Legal representative reference", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDeclaration", "Label": " ", "FieldType": "MultiSelectList", "FieldTypeParameter": "legalRepDeclaration", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDirectionToPay", "Label": "### Next step - payment\nNow that you have filled out your application and signed it, you must pay or submit your help with fees, to have it considered by the courts.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealReferenceNumber", "Label": "Appeal reference", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ccdReferenceNumberForDisplay", "Label": "Online case reference number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantNameForDisplay", "Label": "Appellant name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
