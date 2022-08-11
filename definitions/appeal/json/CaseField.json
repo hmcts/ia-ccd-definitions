@@ -4774,7 +4774,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseNameHmctsInternal", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "globalSearchParties", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "globalSearchParty", "SecurityClassification": "PUBLIC"},
-
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "globalSearchCollection", "Label": " ", "FieldType": "globalSearchParty", "SecurityClassification": "PUBLIC"},
+  
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "lateRemissionType", "Label": "Choose one of the following statements", "FieldType": "FixedRadioList", "FieldTypeParameter": "lateRemissionTypes", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousRemissionDetails", "Label": "Previous remissions", "FieldType": "Collection", "FieldTypeParameter": "remissionDetails", "SecurityClassification": "PUBLIC"},
