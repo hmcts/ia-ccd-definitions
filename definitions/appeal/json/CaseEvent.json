@@ -1674,6 +1674,23 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "moveToSubmitted",
+    "Name": "Mark appeal as paid",
+    "Description": "Mark appeal as paid",
+    "DisplayOrder": 53,
+    "PreConditionState(s)": "pendingPayment",
+    "PostConditionState": "appealSubmitted",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Mark as paid",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "moveToPaymentPending",
     "Name": "Mark appeal as not paid",
     "Description": "Mark appeal as not paid",

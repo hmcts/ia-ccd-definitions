@@ -378,6 +378,22 @@
     "Publish": "Y",
     "RetainHiddenValue": "Y"
   },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "moveToSubmitted", "CaseFieldID": "dummyEmptyLabel", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "moveToSubmitted","PageDisplayOrder": 1, "PageShowCondition": "dummyEmptyLabel=\"DUMMY_VALUE_TO_HIDE_FIELD\"","ShowSummaryChangeOption": "N"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "CaseEventID": "moveToSubmitted",
+    "CaseFieldID": "appealType",
+    "CaseEventFieldLabel": "Type of appeal",
+    "PageFieldDisplayOrder": 2,
+    "DisplayContext": "MANDATORY",
+    "PageID": "moveToSubmitted",
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "dummyEmptyLabel=\"DUMMY_FIELD_TO_HIDE\"",
+    "ShowSummaryChangeOption": "N",
+    "Publish": "Y",
+    "RetainHiddenValue": "Y"
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "applyForFTPAAppellant", "CaseFieldID": "ftpaAppellantSubmissionOutOfTime", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "ftpaAppellantSubmissionOutOfTimePage", "PageLabel": "Late application", "PageDisplayOrder": 1, "FieldShowCondition": "ftpaAppellantOutOfTimeText=\"DUMMY_FIELD_TO_HIDE\"", "PageShowCondition": "ftpaAppellantSubmissionOutOfTime=\"Yes\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "applyForFTPAAppellant", "CaseFieldID": "ftpaAppellantOutOfTimeText", "PageFieldDisplayOrder": 2, "DisplayContext": "READONLY", "PageID": "ftpaAppellantSubmissionOutOfTimePage","PageDisplayOrder": 1,"ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "applyForFTPAAppellant", "CaseFieldID": "ftpaAppellantOutOfTimeExplanation", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "ftpaAppellantSubmissionOutOfTimePage","PageDisplayOrder": 1,"ShowSummaryChangeOption": "Y"},
