@@ -2,5 +2,16 @@
   {"LiveFrom": "01/01/2017", "CaseTypeID": "Asylum", "CaseFieldID": "appealReferenceNumber", "Label": "HMCTS reference", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2017", "CaseTypeID": "Asylum", "CaseFieldID": "appellantNameForDisplay", "Label": "Appellant name", "DisplayOrder": 2},
   {"LiveFrom": "01/01/2017", "CaseTypeID": "Asylum", "CaseFieldID": "[STATE]", "Label": "Status", "DisplayOrder": 3},
-  {"LiveFrom": "01/01/2017", "CaseTypeID": "Asylum", "CaseFieldID": "listCaseHearingDate", "Label": "Hearing date", "DisplayOrder": 4}
+  {"LiveFrom": "01/01/2017", "CaseTypeID": "Asylum", "CaseFieldID": "listCaseHearingDate", "Label": "Hearing date", "DisplayOrder": 4},
+  {
+    "LiveFrom" : "01/01/2017",
+    "LiveTo" : "",
+    "CaseTypeID" : "Asylum",
+    "CaseFieldID" : "SearchCriteria",
+    "Label" : "SearchCriteria",
+    "ListElementCode" : "",
+    "DisplayOrder" : 5,
+    "ResultsOrdering" : "",
+    "DisplayContextParameter" : ""
+  }
 ]
