@@ -497,6 +497,14 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_appealSubmitted_remission_journey_pa",
+    "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYou need to [pay for your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}#Service%20Request) within 14 days of receiving the notification or the Tribunal will end the appeal.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_appealSubmitted_remission_journey_paLater",
     "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYou have submitted your appeal. A Tribunal Caseworker will now review your appeal.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -609,7 +617,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_paymentPending_noRemission",
-    "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## Do this next\r\nGenerate a payment reference for this appeal.\r\n\r\nEmail the legal representative with instructions to pay the fee.\r\n\r\nThen [add a case note](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/addCaseNote). You must attach a copy of the email you sent to the legal representative to the case note.\r\n\r\nFinally, you then need to do one of the following:\r\n* If you receive confirmation that the fee has been paid, you need to [mark the appeal as paid](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/markAppealPaid)\r\n* If the fee is not paid within 14 days of sending payment instructions to the legal representative, you need to [end the appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/endAppeal).",
+    "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## What happens next\r\nThe appeal is awaiting payment.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -657,7 +665,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_pendingPaymentPayLater_remission_journey",
-    "Label": "## Current progress of the case\r\n\r\n![Payment pending](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYou still need to [pay for your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}#Service%20Request). You will soon receive a notification with instructions on how to pay by card online. You need to pay within 14 days of receiving the notification or the Tribunal will end the appeal.",
+    "Label": "## Current progress of the case\r\n\r\n![Payment pending](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYou need to [pay for your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}#Service%20Request) within 14 days of receiving the notification or the Tribunal will end the appeal.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
