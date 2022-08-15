@@ -2177,6 +2177,6 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
     "Publish": "N",
-    "EventEnablingCondition": "paymentStatus!=\"Paid\" AND hasServiceRequestAlready!=\"Yes\" AND paAppealTypePaymentOption=\"payLater\" AND journeyType!=\"aip\""
+    "EventEnablingCondition": "paymentStatus!=\"Paid\" AND hasServiceRequestAlready!=\"Yes\" AND paAppealTypePaymentOption!=\"payOffline\" AND eaHuAppealTypePaymentOption!=\"payOffline\" AND journeyType!=\"aip\""
   }
 ]
