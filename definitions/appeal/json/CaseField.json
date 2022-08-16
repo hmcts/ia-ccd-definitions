@@ -4505,6 +4505,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "howToPayLabel", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paAppealTypePaymentOption", "Label": "Payment method", "FieldType": "FixedRadioList", "FieldTypeParameter": "paAppealTypePaymentOptions", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paAppealTypeAipPaymentOption", "Label": "Payment method", "FieldType": "FixedRadioList", "FieldTypeParameter": "paAppealTypeAipPaymentOptions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "eaHuAppealTypePaymentOption", "Label": "Payment method", "FieldType": "FixedRadioList", "FieldTypeParameter": "eaHuAppealTypePaymentOptions", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentFailedForDisplay", "Label": "Payment status", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
@@ -5006,5 +5007,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hmctsCaseNameInternal", "Label": "Case Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outsideUkWhenApplicationMade", "Label": "Were you outside the UK when you made your application?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outsideUkWhenApplicationMadePreviousSelection", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outsideUkWhenApplicationMadePreviousSelection", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasServiceRequestAlready", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
