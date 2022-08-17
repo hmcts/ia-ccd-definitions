@@ -105,6 +105,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "endAppeal", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "endAppeal", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "endAppeal", "UserRole": "citizen", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "endAppealAutomatically", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editCaseListing", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadAdditionalEvidenceHomeOffice", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadAdditionalEvidenceHomeOffice", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "CRUD"},
@@ -301,15 +302,14 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "UserRole": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "payForAppeal", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "payAndSubmitAppeal", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealPaid", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markPaymentRequestSent", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "moveToPaymentPending", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "moveToPaymentPending", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealPaid", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "moveToSubmitted", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "rollbackPayment", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "rollbackPaymentTimeout", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "rollbackPaymentTimeoutToPaymentPending", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "moveToSubmitted", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editPaymentMethod", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "generateUpperTribunalBundle", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "generateUpperTribunalBundle", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
 
@@ -323,6 +323,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestFeeRemission", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAddendumEvidenceAsReviewed", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAddendumEvidenceAsReviewed", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAddendumEvidenceAsReviewed", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "generateServiceRequest", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"}
 ]
