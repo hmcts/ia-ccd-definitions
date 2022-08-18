@@ -182,5 +182,32 @@
     "ReadOnly": "Y",
     "Disabled": "F",
     "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "specific-access-judiciary",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "specific-access-group",
+    "ReadOnly": "Y",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "specific-access-legal-ops",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "specific-access-group",
+    "ReadOnly": "Y",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "specific-access-admin",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "specific-access-group",
+    "ReadOnly": "Y",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
   }
 ]
