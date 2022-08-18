@@ -6554,5 +6554,7 @@
 
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "outsideUkWhenApplicationMade", "UserRole": "citizen", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "outsideUkWhenApplicationMadePreviousSelection", "UserRole": "citizen", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "outsideUkWhenApplicationMade", "UserRole": "specific-access-group", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "outsideUkWhenApplicationMadePreviousSelection", "UserRole": "citizen", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "outsideUkWhenApplicationMadePreviousSelection", "UserRole": "specific-access-group", "CRUD": "R"}
 ]
