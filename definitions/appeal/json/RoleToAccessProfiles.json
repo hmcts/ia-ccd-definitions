@@ -218,5 +218,23 @@
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "idam:caseworker-ia-admofficer",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "caseflags_profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "idam:caseworker-ia-iacjudge",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "caseflags_profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
   }
 ]
