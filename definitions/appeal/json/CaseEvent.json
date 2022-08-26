@@ -1686,7 +1686,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Mark as paid",
-    "Publish": "Y"
+    "Publish": "Y",
+    "EventEnablingCondition": "paAppealTypePaymentOption!=\"payLater\""
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1707,7 +1708,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Mark as paid",
-    "Publish": "Y"
+    "Publish": "Y",
+    "EventEnablingCondition": "paAppealTypePaymentOption=\"payLater\""
   },
   {
     "LiveFrom": "01/01/2018",
