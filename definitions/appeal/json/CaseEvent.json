@@ -1686,7 +1686,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Mark as paid",
-    "Publish": "Y"
+    "Publish": "Y",
+    "EventEnablingCondition": "paAppealTypePaymentOption!=\"payLater\""
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1707,7 +1708,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Mark as paid",
-    "Publish": "Y"
+    "Publish": "Y",
+    "EventEnablingCondition": "paAppealTypePaymentOption=\"payLater\""
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2131,7 +2133,7 @@
     "Description": "Update payment status",
     "DisplayOrder": 90,
     "PreConditionState(s)": "*",
-    "PostConditionState": "appealSubmitted(journeyType!=\"aip\" AND paymentStatus=\"Paid\" AND paAppealTypePaymentOption!=\"payLater\" AND appealType!=\"revocationOfProtection\" AND appealType!=\"protection\" AND appealType!=\"deprivation\"):1;*",
+    "PostConditionState": "appealSubmitted(journeyType!=\"aip\" AND paymentStatus=\"Paid\" AND paAppealTypePaymentOption!=\"payLater\" AND appealType!=\"revocationOfProtection\" AND appealType!=\"deprivation\"):1;*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
