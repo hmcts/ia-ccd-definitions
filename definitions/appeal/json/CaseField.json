@@ -4438,7 +4438,7 @@
   },
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonForLinkAppeal", "Label": "Linked appeal", "FieldType": "FixedRadioList", "FieldTypeParameter": "reasonForLinkAppealOptions", "SecurityClassification": "PUBLIC"},
-    {"LiveFrom": "02/01/2018", "CaseTypeID": "Asylum", "ID": "unlinkAppealReasonForLink", "Label": "| **Reason for link** | **${reasonForLinkAppeal}** |\r\n| --- | --- |", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "02/01/2018", "CaseTypeID": "Asylum", "ID": "unlinkAppealReasonForLink", "Label": "| **Reason for link** | **${reasonForLinkAppeal}** |\r\n| --- | --- |", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submitNotificationStatus", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFeePaymentEnabled", "Label": "isFeePaymentEnabled", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isReheardAppealEnabled", "Label": "isReheardAppealEnabled", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
