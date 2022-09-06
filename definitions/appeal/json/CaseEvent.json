@@ -1687,7 +1687,7 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Mark as paid",
     "Publish": "Y",
-    "EventEnablingCondition": "paAppealTypePaymentOption!=\"payLater\" AND hasServiceRequestAlready!=\"Yes\" AND hasServiceRequestAlready!=\"No\""
+    "EventEnablingCondition": "paAppealTypePaymentOption!=\"payLater\" AND hasServiceRequestAlready!=\"Yes\" AND hasServiceRequestAlready!=\"No\" OR remissionDecision=\"partiallyApproved\""
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1709,7 +1709,7 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Mark as paid",
     "Publish": "Y",
-    "EventEnablingCondition": "paAppealTypePaymentOption=\"payLater\" AND hasServiceRequestAlready!=\"Yes\" AND hasServiceRequestAlready!=\"No\""
+    "EventEnablingCondition": "paAppealTypePaymentOption=\"payLater\" AND hasServiceRequestAlready!=\"Yes\" AND hasServiceRequestAlready!=\"No\" OR remissionDecision=\"partiallyApproved\""
   },
   {
     "LiveFrom": "01/01/2018",
