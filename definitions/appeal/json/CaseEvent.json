@@ -1687,7 +1687,7 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Mark as paid",
     "Publish": "Y",
-    "EventEnablingCondition": "paAppealTypePaymentOption!=\"payLater\" AND hasServiceRequestAlready!=\"Yes\" AND hasServiceRequestAlready!=\"No\""
+    "EventEnablingCondition": "paAppealTypePaymentOption=\"payNow\" AND hasServiceRequestAlready!=\"Yes\" AND hasServiceRequestAlready!=\"No\" AND displayMarkAsPaidEventForPartialRemission!=\"No\""
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1709,7 +1709,7 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Mark as paid",
     "Publish": "Y",
-    "EventEnablingCondition": "paAppealTypePaymentOption=\"payLater\" AND hasServiceRequestAlready!=\"Yes\" AND hasServiceRequestAlready!=\"No\""
+    "EventEnablingCondition": "paAppealTypePaymentOption!=\"payNow\" AND hasServiceRequestAlready!=\"Yes\" AND hasServiceRequestAlready!=\"No\" AND displayMarkAsPaidEventForPartialRemission!=\"No\""
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2235,6 +2235,6 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
     "Publish": "N",
-    "EventEnablingCondition": "paymentStatus!=\"Paid\" AND hasServiceRequestAlready!=\"Yes\" AND eaHuAppealTypePaymentOption!=\"payOffline\" AND journeyType!=\"aip\""
+    "EventEnablingCondition": "paymentStatus!=\"Paid\" AND hasServiceRequestAlready!=\"Yes\" AND eaHuAppealTypePaymentOption!=\"payOffline\" AND journeyType!=\"aip\" AND isServiceRequestTabVisibleConsideringRemissions!=\"No\""
   }
 ]
