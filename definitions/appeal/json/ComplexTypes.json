@@ -214,13 +214,6 @@
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateRecorded", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "feeUpdateRecorded", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatus", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "feeUpdateStatus", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "appellantTitle", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "appellantGivenNames", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "appellantFamilyName", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "appellantAddress", "FieldType": "AddressUK", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "appellantEmailAddress", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "appellantDateOfBirth", "FieldType": "Date", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
-
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "feeRemissionType", "FieldType": "Text", "ElementLabel": "Fee remission type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "asylumSupportReference", "FieldType": "Text", "ElementLabel": "Asylum Support reference number", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "asylumSupportDocument", "FieldType": "Document", "ElementLabel": "Asylum Support confirmation letter", "SecurityClassification": "PUBLIC"},
