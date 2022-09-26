@@ -2255,4 +2255,22 @@
     "EndButtonLabel": "Save note",
     "Publish": "Y"
   }
+,
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "pipActivation",
+    "Name": "PiP Activation",
+    "Description": "Appellant is now representing themselves",
+    "DisplayOrder": 91,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit",
+    "Publish": "Y"
+  }
 ]
