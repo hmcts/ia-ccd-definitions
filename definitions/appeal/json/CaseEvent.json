@@ -1674,24 +1674,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "moveToSubmitted",
-    "Name": "Mark appeal as paid",
-    "Description": "Mark appeal as paid",
-    "DisplayOrder": 53,
-    "PreConditionState(s)": "pendingPayment",
-    "PostConditionState": "appealSubmitted",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
-    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
-    "SecurityClassification": "Public",
-    "ShowSummary": "Y",
-    "ShowEventNotes": "N",
-    "EndButtonLabel": "Mark as paid",
-    "Publish": "Y",
-    "EventEnablingCondition": "paAppealTypePaymentOption=\"payNow\" AND hasServiceRequestAlready!=\"Yes\" AND hasServiceRequestAlready!=\"No\" AND displayMarkAsPaidEventForPartialRemission!=\"No\""
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
     "ID": "markAppealPaid",
     "Name": "Mark appeal as paid",
     "Description": "Mark appeal as paid",
@@ -1709,7 +1691,7 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Mark as paid",
     "Publish": "Y",
-    "EventEnablingCondition": "paAppealTypePaymentOption!=\"payNow\" AND hasServiceRequestAlready!=\"Yes\" AND hasServiceRequestAlready!=\"No\" AND displayMarkAsPaidEventForPartialRemission!=\"No\""
+    "EventEnablingCondition": "appealType=\"protection\" AND hasServiceRequestAlready!=\"Yes\" AND hasServiceRequestAlready!=\"No\" AND displayMarkAsPaidEventForPartialRemission!=\"No\""
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2133,7 +2115,7 @@
     "Description": "Update payment status",
     "DisplayOrder": 90,
     "PreConditionState(s)": "*",
-    "PostConditionState": "appealSubmitted(journeyType!=\"aip\" AND paymentStatus=\"Paid\" AND paAppealTypePaymentOption!=\"payLater\" AND appealType!=\"revocationOfProtection\" AND appealType!=\"deprivation\"):1;*",
+    "PostConditionState": "appealSubmitted(journeyType!=\"aip\" AND paymentStatus=\"Paid\" AND appealType!=\"protection\" AND appealType!=\"revocationOfProtection\" AND appealType!=\"deprivation\"):1;*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
