@@ -1232,7 +1232,21 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "recordRemissionDecision", "CaseFieldID": "amountLeftToPay", "DisplayContext": "MANDATORY", "PageFieldDisplayOrder": 4, "PageID": "remissionDecisionDetails", "PageDisplayOrder": 2, "FieldShowCondition": "remissionDecision=\"approved\" OR remissionDecision=\"partiallyApproved\"", "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "recordRemissionDecision", "CaseFieldID": "remissionDecisionReason", "DisplayContext": "MANDATORY", "PageFieldDisplayOrder": 5, "PageID": "remissionDecisionDetails", "PageDisplayOrder": 2, "FieldShowCondition": "remissionDecision=\"partiallyApproved\" OR remissionDecision=\"rejected\"", "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "recordRemissionDecision", "CaseFieldID": "remissionRejectedDatePlus14days", "PageFieldDisplayOrder": 6, "DisplayContext": "READONLY", "PageID": "remissionDecisionDetails", "PageDisplayOrder": 2, "FieldShowCondition": "remissionDecisionReason=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N"},
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "CaseEventID": "recordRemissionDecision",
+    "CaseFieldID": "appealType",
+    "CaseEventFieldLabel": "Type of appeal",
+    "PageFieldDisplayOrder": 7,
+    "DisplayContext": "READONLY",
+    "PageID": "markAppealPaid",
+    "PageDisplayOrder": 2,
+    "FieldShowCondition": "remissionDecision=\"DUMMY_FIELD_TO_HIDE\"",
+    "ShowSummaryChangeOption": "N",
+    "Publish": "Y",
+    "RetainHiddenValue": "Y"
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "manageFeeUpdate", "CaseFieldID": "feeUpdateReasonAdvice", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "feeUpdateReason", "PageDisplayOrder": 1, "CallBackURLMidEvent": "${CCD_DEF_IA_URL}/asylum/ccdMidEvent", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "manageFeeUpdate", "CaseFieldID": "feeUpdateReason", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "feeUpdateReason", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "manageFeeUpdate", "CaseFieldID": "newFeeAmount", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "feeUpdateReason", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
