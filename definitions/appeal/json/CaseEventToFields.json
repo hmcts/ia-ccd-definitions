@@ -361,7 +361,21 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "payForAppeal", "CaseFieldID": "cantSeePaymentByAccount", "PageFieldDisplayOrder": 9, "DisplayContext": "READONLY", "PageID": "enterPbaNumber", "FieldShowCondition": "hasPbaAccounts!=\"No\"",  "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "payForAppeal", "CaseFieldID": "pbaAdvice", "PageFieldDisplayOrder": 10, "DisplayContext": "READONLY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "hasPbaAccounts!=\"No\"" ,"ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "payForAppeal", "CaseFieldID": "editYourAppeal", "PageFieldDisplayOrder": 11, "DisplayContext": "READONLY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "hasPbaAccounts!=\"No\"" ,"ShowSummaryChangeOption": "N"},
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "CaseEventID": "payForAppeal",
+    "CaseFieldID": "appealType",
+    "CaseEventFieldLabel": "Type of appeal",
+    "PageFieldDisplayOrder": 7,
+    "DisplayContext": "READONLY",
+    "PageID": "enterPbaNumber",
+    "PageDisplayOrder": 2,
+    "FieldShowCondition": "hasPbaAccounts=\"DUMMY_FIELD_TO_HIDE\"",
+    "ShowSummaryChangeOption": "N",
+    "Publish": "Y",
+    "RetainHiddenValue": "Y"
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "payAndSubmitAppeal", "CaseFieldID": "decisionHearingFeeOption", "PageFieldDisplayOrder": 1, "PageLabel": "Select PBA number", "DisplayContext": "MANDATORY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "supportPaymentAccount=\"DUMMY_VALUE_TO_HIDE_FIELD\"" ,"ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "payAndSubmitAppeal", "CaseFieldID": "feeWithHearing", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "supportPaymentAccount=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "payAndSubmitAppeal", "CaseFieldID": "feeWithoutHearing", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "supportPaymentAccount=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N"},
