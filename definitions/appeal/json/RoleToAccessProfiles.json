@@ -2,8 +2,8 @@
   {
     "RoleName" : "idam:caseworker-ia-caseofficer",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-caseofficer",
+    "CaseTypeID": "AsylumLinkedCases",
+    "AccessProfiles": "caseworker-ia-caseofficer,caseworker_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -11,7 +11,7 @@
   {
     "RoleName" : "idam:caseworker-wa-task-configuration",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
+    "CaseTypeID": "AsylumLinkedCases",
     "AccessProfiles": "caseworker-wa-task-configuration",
     "ReadOnly": "N",
     "Disabled": "F",
@@ -20,7 +20,7 @@
   {
     "RoleName" : "idam:citizen",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
+    "CaseTypeID": "AsylumLinkedCases",
     "AccessProfiles": "citizen",
     "ReadOnly": "N",
     "Disabled": "F",
@@ -29,7 +29,7 @@
   {
     "RoleName" : "idam:caseworker-ia-legalrep-solicitor",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
+    "CaseTypeID": "AsylumLinkedCases",
     "AccessProfiles": "caseworker-ia-legalrep-solicitor",
     "ReadOnly": "N",
     "Disabled": "F",
@@ -38,7 +38,7 @@
   {
     "RoleName" : "idam:caseworker-ia-system",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
+    "CaseTypeID": "AsylumLinkedCases",
     "AccessProfiles": "caseworker-ia-system",
     "ReadOnly": "N",
     "Disabled": "F",
@@ -47,7 +47,7 @@
   {
     "RoleName" : "idam:caseworker-ia-system-access",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
+    "CaseTypeID": "AsylumLinkedCases",
     "AccessProfiles": "caseworker-ia-system-access",
     "ReadOnly": "N",
     "Disabled": "F",
@@ -56,8 +56,8 @@
   {
     "RoleName" : "idam:caseworker-ia-admofficer",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-admofficer",
+    "CaseTypeID": "AsylumLinkedCases",
+    "AccessProfiles": "caseworker-ia-admofficer,caseworker_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -65,7 +65,7 @@
   {
     "RoleName" : "idam:caseworker-ia-homeofficeapc",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
+    "CaseTypeID": "AsylumLinkedCases",
     "AccessProfiles": "caseworker-ia-homeofficeapc",
     "ReadOnly": "N",
     "Disabled": "F",
@@ -74,7 +74,7 @@
   {
     "RoleName" : "idam:caseworker-ia-homeofficelart",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
+    "CaseTypeID": "AsylumLinkedCases",
     "AccessProfiles": "caseworker-ia-homeofficelart",
     "ReadOnly": "N",
     "Disabled": "F",
@@ -83,7 +83,7 @@
   {
     "RoleName" : "idam:caseworker-ia-homeofficepou",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
+    "CaseTypeID": "AsylumLinkedCases",
     "AccessProfiles": "caseworker-ia-homeofficepou",
     "ReadOnly": "N",
     "Disabled": "F",
@@ -92,7 +92,7 @@
   {
     "RoleName" : "idam:caseworker-ia-respondentofficer",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
+    "CaseTypeID": "AsylumLinkedCases",
     "AccessProfiles": "caseworker-ia-respondentofficer",
     "ReadOnly": "N",
     "Disabled": "F",
@@ -101,8 +101,8 @@
   {
     "RoleName" : "idam:caseworker-ia-iacjudge",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-iacjudge",
+    "CaseTypeID": "AsylumLinkedCases",
+    "AccessProfiles": "caseworker-ia-iacjudge,caseworker_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -110,8 +110,8 @@
   {
     "RoleName" : "idam:caseworker-ras-validation",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ras-validation",
+    "CaseTypeID": "AsylumLinkedCases",
+    "AccessProfiles": "caseworker-ras-validation,caseworker_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -119,8 +119,8 @@
   {
     "RoleName" : "idam:caseworker-caa",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-caa",
+    "CaseTypeID": "AsylumLinkedCases",
+    "AccessProfiles": "caseworker-caa,caseworker_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -128,8 +128,8 @@
   {
     "RoleName" : "idam:caseworker-approver",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-approver",
+    "CaseTypeID": "AsylumLinkedCases",
+    "AccessProfiles": "caseworker-approver,caseworker_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -137,26 +137,8 @@
   {
     "RoleName" : "[LEGALREPRESENTATIVE]",
     "Authorisation": "",
-    "CaseTypeID": "Asylum",
+    "CaseTypeID": "AsylumLinkedCases",
     "AccessProfiles": "[LEGALREPRESENTATIVE]",
-    "ReadOnly": "N",
-    "Disabled": "F",
-    "CaseAccessCategories": ""
-  },
-  {
-    "RoleName" : "hmcts-judiciary",
-    "Authorisation": "",
-    "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker_profile",
-    "ReadOnly": "N",
-    "Disabled": "F",
-    "CaseAccessCategories": ""
-  },
-  {
-    "RoleName" : "hmcts-admin",
-    "Authorisation": "",
-    "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
