@@ -2182,6 +2182,6 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
     "Publish": "N",
-    "EventEnablingCondition": "paymentStatus!=\"Paid\" AND hasServiceRequestAlready!=\"Yes\" AND eaHuAppealTypePaymentOption!=\"payOffline\" AND journeyType!=\"aip\" AND isServiceRequestTabVisibleConsideringRemissions!=\"No\""
+    "EventEnablingCondition": "paymentStatus!=\"Paid\" AND hasServiceRequestAlready!=\"Yes\" AND eaHuAppealTypePaymentOption!=\"payOffline\" AND journeyType!=\"aip\" AND isServiceRequestTabVisibleConsideringRemissions!=\"No\" AND remissionDecision!=\"approved\" AND remissionDecision!=\"partiallyApproved\""
   }
 ]
