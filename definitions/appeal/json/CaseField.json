@@ -512,6 +512,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_legalRep_appealSubmitted_pa_remission_rejected_approved",
+    "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYou have submitted your appeal. A Tribunal Caseworker will now review your appeal.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_legalRep_remission_applied_after_submit_not_approved_pa",
     "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYou have submitted your appeal. A Tribunal Caseworker will now review your appeal.<br/><br/><br/>",
     "FieldType": "Label",
@@ -576,14 +584,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_legalRepresentative_remissions_partiallyApproved_pa",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 2 of 11 stages - the Appeal submitted stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## What happens next\r\nYour remission application has been partially approved. You will soon receive a notification with instructions on how to pay the fee by card online. You must pay within 14 days of receiving the notification or the Tribunal will end the appeal.<br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_remissions_rejected_eaHu",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 2 of 11 stages - the Appeal submitted stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYour client’s remission application has been rejected. You must [pay for this appeal](/case/IA/Asylum/${[CASE_REFERENCE]}#Service%20Request) by ${remissionRejectedDatePlus14days}. Failure to do so may result in the appeal being struck out.<br/> ",
     "FieldType": "Label",
@@ -641,14 +641,6 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_pendingPayment_remission_partiallyApproved_eaHu",
-    "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## Do this next\r\nGenerate a payment reference for this appeal.\r\n\r\nEmail the legal representative with instructions to pay the fee.\r\n\r\nThen [mark payment request sent](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/addCaseNote). You must attach a copy of the email you sent to the legal representative.\r\n\r\nFinally, you then need to do one of the following:\r\n* If you receive confirmation that the fee has been paid, you need to [mark the appeal as paid](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/markAppealPaid)\r\n* If the fee is not paid within 14 days of sending payment instructions to the legal representative, you need to [end the appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/endAppeal).",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_adminOfficer_pendingPayment_remission_partiallyApproved_pa",
     "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## Do this next\r\nGenerate a payment reference for this appeal.\r\n\r\nEmail the legal representative with instructions to pay the fee.\r\n\r\nThen [mark payment request sent](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/addCaseNote). You must attach a copy of the email you sent to the legal representative.\r\n\r\nFinally, you then need to do one of the following:\r\n* If you receive confirmation that the fee has been paid, you need to [mark the appeal as paid](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/markAppealPaid)\r\n* If the fee is not paid within 14 days of sending payment instructions to the legal representative, you need to [end the appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/endAppeal).",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
