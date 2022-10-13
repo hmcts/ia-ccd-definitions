@@ -3,7 +3,7 @@
     "RoleName" : "idam:caseworker-ia-caseofficer",
     "Authorisation": "",
     "CaseTypeID": "AsylumLinkedCases",
-    "AccessProfiles": "caseworker-ia-caseofficer",
+    "AccessProfiles": "caseworker-ia-caseofficer,caseworker_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -57,7 +57,7 @@
     "RoleName" : "idam:caseworker-ia-admofficer",
     "Authorisation": "",
     "CaseTypeID": "AsylumLinkedCases",
-    "AccessProfiles": "caseworker-ia-admofficer",
+    "AccessProfiles": "caseworker-ia-admofficer,caseworker_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -102,7 +102,7 @@
     "RoleName" : "idam:caseworker-ia-iacjudge",
     "Authorisation": "",
     "CaseTypeID": "AsylumLinkedCases",
-    "AccessProfiles": "caseworker-ia-iacjudge",
+    "AccessProfiles": "caseworker-ia-iacjudge,caseworker_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -111,7 +111,7 @@
     "RoleName" : "idam:caseworker-ras-validation",
     "Authorisation": "",
     "CaseTypeID": "AsylumLinkedCases",
-    "AccessProfiles": "caseworker-ras-validation",
+    "AccessProfiles": "caseworker-ras-validation,caseworker_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -120,7 +120,7 @@
     "RoleName" : "idam:caseworker-caa",
     "Authorisation": "",
     "CaseTypeID": "AsylumLinkedCases",
-    "AccessProfiles": "caseworker-caa",
+    "AccessProfiles": "caseworker-caa,caseworker_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -129,7 +129,7 @@
     "RoleName" : "idam:caseworker-approver",
     "Authorisation": "",
     "CaseTypeID": "AsylumLinkedCases",
-    "AccessProfiles": "caseworker-approver",
+    "AccessProfiles": "caseworker-approver,caseworker_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -139,24 +139,6 @@
     "Authorisation": "",
     "CaseTypeID": "AsylumLinkedCases",
     "AccessProfiles": "[LEGALREPRESENTATIVE]",
-    "ReadOnly": "N",
-    "Disabled": "F",
-    "CaseAccessCategories": ""
-  },
-  {
-    "RoleName" : "hmcts-judiciary",
-    "Authorisation": "",
-    "CaseTypeID": "AsylumLinkedCases",
-    "AccessProfiles": "caseworker_profile",
-    "ReadOnly": "N",
-    "Disabled": "F",
-    "CaseAccessCategories": ""
-  },
-  {
-    "RoleName" : "hmcts-admin",
-    "Authorisation": "",
-    "CaseTypeID": "AsylumLinkedCases",
-    "AccessProfiles": "caseworker_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
