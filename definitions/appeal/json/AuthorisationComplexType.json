@@ -10,7 +10,7 @@
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "localAuthorityPolicy", "ListElementCode": "Organisation.OrganisationID", "UserRole": "caseworker-approver", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "localAuthorityPolicy", "ListElementCode": "Organisation.OrganisationName", "UserRole": "caseworker-approver", "CRUD": "CRUD"},
 
-  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "caseTypeTTL", "ListElementCode": "SystemTTL", "UserRole": "TTL_profile", "CRUD": "R"},
-  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "caseTypeTTL", "ListElementCode": "OverrideTTL", "UserRole": "TTL_profile", "CRUD": "CRU"},
-  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "caseTypeTTL", "ListElementCode": "Suspended", "UserRole": "TTL_profile", "CRUD": "CRU"}
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "TTL", "ListElementCode": "SystemTTL", "UserRole": "TTL_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "TTL", "ListElementCode": "OverrideTTL", "UserRole": "TTL_profile", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "TTL", "ListElementCode": "Suspended", "UserRole": "TTL_profile", "CRUD": "CRU"}
 ]
