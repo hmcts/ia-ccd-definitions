@@ -1300,13 +1300,14 @@
     "Name": "Manage Case TTL",
     "Description": "Manage Case TTL",
     "DisplayOrder": 47,
-    "PreConditionState(s)": "decided;ended;appealTakenOffline;ftpaDecided",
+    "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
-    "Publish": "Y"
+    "Publish": "Y",
+    "EventEnablingCondition": "currentCaseStateVisibleToAdminOfficer=\"ended\" OR currentCaseStateVisibleToAdminOfficer=\"decided\" OR currentCaseStateVisibleToAdminOfficer=\"appealTakenOffline\" OR currentCaseStateVisibleToAdminOfficer=\"ftpaDecided\" OR currentCaseStateVisibleToSystem=\"[STATE]\""
   },
   {
     "LiveFrom": "01/01/2018",
