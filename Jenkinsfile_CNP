@@ -6,7 +6,9 @@ properties([
         string(name: 'IA_CASE_API_URI', defaultValue: 'http://ia-case-api-aat.service.core-compute-aat.internal', description: 'The API service to create test data'),
         string(name: 'NUM_TESTS_IN_PARALLEL', defaultValue: '2', description: 'The number of tests to run in parallel'),
         string(name: 'NIGHTLY_TAG', defaultValue: '--cucumberOpts.tags=@nightly-test', description: 'Tag for nightly build'),
-        string(name: 'PREVIEW_TAG', defaultValue: '--cucumberOpts.tags=@preview-test', description: 'Tag for preview build')
+        string(name: 'PREVIEW_TAG', defaultValue: '--cucumberOpts.tags=@preview-test', description: 'Tag for preview build'),
+        [$class: 'GithubProjectProperty', projectUrlStr: 'https://github.com/hmcts/ia-ccd-definitions.git'],
+        pipelineTriggers([[$class: 'GitHubPushTrigger']])
     ])
 ])
 
