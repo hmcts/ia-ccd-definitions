@@ -107,6 +107,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "endAppeal", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "endAppeal", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "endAppeal", "UserRole": "citizen", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "endAppeal", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editCaseListing", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadAdditionalEvidenceHomeOffice", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadAdditionalEvidenceHomeOffice", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "CRUD"},
@@ -328,7 +329,9 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "manageCaseTTL", "UserRole": "TTL_profile", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "manageCaseTTL", "UserRole": "caseworker-ia-system", "CRUD": "CRU"},
-  
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "migrateCaseTTL", "UserRole": "caseworker-ia-system-access", "CRUD": "CRU"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAddendumEvidenceAsReviewed", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAddendumEvidenceAsReviewed", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"}
 

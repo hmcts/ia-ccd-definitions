@@ -1335,6 +1335,7 @@
 
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseEventID": "manageCaseTTL", "CaseFieldID": "TTL", "PageFieldDisplayOrder": 1, "DisplayContext": "COMPLEX", "PageID": "manageCaseTTL", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseEventID": "manageCaseTTL", "CaseFieldID": "reasonForSuspension", "PageFieldDisplayOrder": 2, "DisplayContext": "OPTIONAL", "PageID": "manageCaseTTL", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N", "FieldShowCondition": "TTL.Suspended=\"Yes\""},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseEventID": "migrateCaseTTL", "CaseFieldID": "TTL", "PageFieldDisplayOrder": 1, "DisplayContext": "COMPLEX", "PageID": "migrateCaseTTL", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markPaymentRequestSent", "CaseFieldID": "paymentRequestSentDate", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "paymentRequestSent","PageDisplayOrder": 2,"ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markPaymentRequestSent", "CaseFieldID": "paymentRequestSentNoteDescription", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "paymentRequestSent","PageDisplayOrder": 3,"ShowSummaryChangeOption": "Y"},
