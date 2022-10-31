@@ -8,7 +8,7 @@ def component = "ccd-definitions"
 def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
 def secrets = [
-
+    'ia-${env}': [
     secret('idam-client-id', 'IA_IDAM_CLIENT_ID'),
     secret('idam-secret', 'IA_IDAM_SECRET'),
     secret('s2s-secret', 'IA_S2S_SECRET'),
@@ -18,7 +18,7 @@ def secrets = [
     secret('em-stitching-enabled', 'IA_EM_STITCHING_ENABLED'),
     secret('submit-hearing-requirements-enabled', 'IA_SUBMIT_HEARING_REQUIREMENTS_ENABLED'),
     secret('launch-darkly-sdk-key', 'LAUNCH_DARKLY_SDK_KEY')
-
+  ]
 ]
 
 static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
