@@ -9,6 +9,16 @@ def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
 
 def secrets = [
 
+    secret('idam-client-id', 'IA_IDAM_CLIENT_ID'),
+    secret('idam-secret', 'IA_IDAM_SECRET'),
+    secret('s2s-secret', 'IA_S2S_SECRET'),
+    secret('s2s-microservice', 'IA_S2S_MICROSERVICE'),
+    secret('prof-ref-data-url', 'PROF_REF_DATA_URL'),
+    secret('docmosis-enabled', 'IA_DOCMOSIS_ENABLED'),
+    secret('em-stitching-enabled', 'IA_EM_STITCHING_ENABLED'),
+    secret('submit-hearing-requirements-enabled', 'IA_SUBMIT_HEARING_REQUIREMENTS_ENABLED'),
+    secret('launch-darkly-sdk-key', 'LAUNCH_DARKLY_SDK_KEY')
+
 ]
 
 static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
