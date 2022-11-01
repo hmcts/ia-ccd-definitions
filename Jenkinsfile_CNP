@@ -64,18 +64,5 @@ withPipeline("nodejs", product, component) {
     yarnBuilder.yarn('setup')
   }
 
-  after('functionalTest:aat') {
-
-    publishHTML([
-        allowMissing         : true,
-        alwaysLinkToLastBuild: true,
-        keepAll              : true,
-        reportDir            : "ia-ccd-e2e-tests/reports/tests/functional/",
-        reportFiles          : 'index.html',
-        reportName           : 'IA - EXUI Functional Test Report'
-    ])
-
-  }
-
   println """done!""".stripIndent()
 }
