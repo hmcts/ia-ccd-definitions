@@ -57,6 +57,7 @@
   {"LiveFrom": "01/01/2018", "ID": "additionalEvidenceDocument", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Explain why you are submitting this evidence after the appeal skeleton argument.", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "isDocumentSignedToday", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "isDocumentSignedToday", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "isFeeConsistentWithDecision", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "isFeeConsistentWithDecision", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "includedCredibilityStatementInDecision", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "includedCredibilityStatementInDecision", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "caseNote", "ListElementCode": "caseNoteSubject", "FieldType": "Text", "ElementLabel": "Subject", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "caseNote", "ListElementCode": "caseNoteDescription", "FieldType": "TextArea", "ElementLabel": "Case note", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "caseNote", "ListElementCode": "caseNoteDocument", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
