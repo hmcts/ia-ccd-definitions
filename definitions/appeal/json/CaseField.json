@@ -4617,6 +4617,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "deportationOrderTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "deportationOrderOptions", "Label": "Has a deportation order been made against the appellant?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removalOrderTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removalOrderOptions", "Label": "Are removal directions currently set for your client?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removalOrderDate", "Label": "What date and time is set for the removal?", "HintText": "For example, 03 04 2019", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentSuccessful", "Label": "## Payment successful", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentAccountList", "Label": "Select a Payment by Account number from the list", "Value": "Select a number", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "supportPaymentAccount", "Label": "If you want to use PBA, Email MyHMCTSsupport@justice.gov.uk to ask for your PBA number to be registered with your MyHMCTS account. You will be able to select your PBA number from the list once this is done. It usually takes 3 days.\n\nIf you need to submit the appeal urgently, you can [change the payment method to card](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editPaymentMethod) and pay using that method after you've submitted your appeal.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
