@@ -566,6 +566,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagUnaccompaniedMinorExists", "TabFieldDisplayOrder": 37, "FieldShowCondition": "caseFlagUnaccompaniedMinorExists=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagSetAsideReheardExists", "TabFieldDisplayOrder": 38, "FieldShowCondition": "caseFlagSetAsideReheardExists=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseFlagS94bOutOfCountryExists", "TabFieldDisplayOrder": 39, "FieldShowCondition": "caseFlagS94bOutOfCountryExists=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "appellantInDetention", "TabFieldDisplayOrder": 40, "FieldShowCondition": "appellantInDetention=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -641,6 +643,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "hearingCentre", "TabFieldDisplayOrder": 207},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "homeOfficeReferenceNumber", "TabFieldDisplayOrder": 208},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "appealOutOfCountry", "TabFieldDisplayOrder": 209, "FieldShowCondition": "isOutOfCountryEnabled=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "detentionStatus", "TabFieldDisplayOrder": 210, "FieldShowCondition": "appellantInDetention=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "gwfReferenceNumber", "TabFieldDisplayOrder": 211,"FieldShowCondition": "isOutOfCountryEnabled=\"Yes\" AND appealOutOfCountry=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "dateEntryClearanceDecision", "TabFieldDisplayOrder": 213,"FieldShowCondition": "isOutOfCountryEnabled=\"Yes\" AND appealOutOfCountry=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "dateClientLeaveUk", "TabFieldDisplayOrder": 215,"FieldShowCondition": "appealOutOfCountry=\"Yes\""},
