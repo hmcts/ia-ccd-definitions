@@ -4188,6 +4188,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hearingType", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hearingType", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hearingType", "UserRole": "citizen", "CRUD": "CRUD"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hearingTypeResult", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "listCmaHearingTitle", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "listCmaHearingTitle", "UserRole": "caseworker-wa-task-configuration", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "listCmaHearingTitle", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
@@ -4451,6 +4454,26 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "deportationOrderOptions", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "deportationOrderOptions", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderOptions", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderOptions", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderOptions", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderOptions", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderOptions", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderOptions", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderOptions", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderOptions", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderOptions", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderDate", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderDate", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderDate", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderDate", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderDate", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderDate", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderDate", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderDate", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderDate", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantStateless", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantStateless", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantStateless", "UserRole": "caseworker-wa-task-configuration", "CRUD": "R"},
@@ -4472,6 +4495,16 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "deportationOrderTitle", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "deportationOrderTitle", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "deportationOrderTitle", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderTitle", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderTitle", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderTitle", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderTitle", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderTitle", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderTitle", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderTitle", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderTitle", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalOrderTitle", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "howToPayLabel", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "dontHavePaymentByAccount", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
