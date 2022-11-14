@@ -240,5 +240,5 @@
 
   {"LiveFrom": "01/01/2018", "ID": "prisonNOMSComplexType", "ListElementCode": "prison", "FieldType": "Text", "ElementLabel": "What is your client's NOMS number?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherDetentionFacilityComplexType", "ListElementCode": "other", "FieldType": "Text", "ElementLabel": "Enter the name of the detention facility", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "custodialSentenceDateComplexType", "ListElementCode": "custodialDate", "FieldType": "Date", "ElementLabel": " ", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "custodialSentenceDateComplexType", "ListElementCode": "custodialDate", "FieldType": "Date", "ElementLabel": " ", "Min": "1668176285", "SecurityClassification": "PUBLIC"}
 ]
