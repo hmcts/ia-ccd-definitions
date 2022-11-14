@@ -664,6 +664,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "remissionType", "TabFieldDisplayOrder": 7, "FieldShowCondition": "remissionType=\"DUMMY_FIELD_TO_HIDE\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "feeUpdateReasonFlag", "TabFieldDisplayOrder": 7, "FieldShowCondition": "feeUpdateReason=\"DUMMY_FIELD_TO_HIDE\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "recordedOutOfTimeDecision", "TabFieldDisplayOrder": 7, "FieldShowCondition": "recordedOutOfTimeDecision=\"DUMMY_FIELD_TO_HIDE\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "isAcceleratedDetainedAppeal", "TabFieldDisplayOrder": 7, "FieldShowCondition": "isAcceleratedDetainedAppeal=\"DUMMY_FIELD_TO_HIDE\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealTitle", "TabFieldDisplayOrder": 10, "FieldShowCondition": "reasonsForAppealDecision=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealDateUploaded", "TabFieldDisplayOrder": 20, "FieldShowCondition": "reasonsForAppealDateUploaded=\"*\""},
@@ -697,8 +698,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "prisonNOMSNumber", "TabFieldDisplayOrder": 166, "FieldShowCondition": "appellantInDetention=\"Yes\" AND detentionFacility=\"prison\" AND prisonNOMSNumber!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "custodialSentence", "TabFieldDisplayOrder": 166, "FieldShowCondition": "appellantInDetention=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "dateCustodialSentence", "TabFieldDisplayOrder": 166, "FieldShowCondition": "appellantInDetention=\"Yes\" AND custodialSentence=\"Yes\" AND dateCustodialSentence!=\"\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hasPendingBailApplication", "TabFieldDisplayOrder": 166, "FieldShowCondition": "appellantInDetention=\"Yes\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "bailApplicationNumber", "TabFieldDisplayOrder": 166, "FieldShowCondition": "appellantInDetention=\"Yes\" AND hasPendingBailApplication=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hasPendingBailApplications", "TabFieldDisplayOrder": 166, "FieldShowCondition": "appellantInDetention=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "bailApplicationNumber", "TabFieldDisplayOrder": 166, "FieldShowCondition": "appellantInDetention=\"Yes\" AND hasPendingBailApplications=\"Yes\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "submissionDetailsTitle", "TabFieldDisplayOrder": 170},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "uploadTheNoticeOfDecisionExplanation", "TabFieldDisplayOrder": 173},
