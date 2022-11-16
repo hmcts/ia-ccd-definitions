@@ -61,8 +61,9 @@
   {"LiveFrom": "01/01/2018", "ID": "hearingCentre", "ListElementCode": "glasgow", "ListElement": "Glasgow", "DisplayOrder": 6},
   {"LiveFrom": "01/01/2018", "ID": "hearingCentre", "ListElementCode": "bradford", "ListElement": "Bradford", "DisplayOrder": 7},
   {"LiveFrom": "01/01/2018", "ID": "hearingCentre", "ListElementCode": "birmingham", "ListElement": "Birmingham", "DisplayOrder": 8},
-  {"LiveFrom": "01/01/2018", "ID": "hearingCentre", "ListElementCode": "remoteHearing", "ListElement": "Remote hearing", "DisplayOrder": 9},
-  {"LiveFrom": "01/01/2018", "ID": "hearingCentre", "ListElementCode": "decisionWithoutHearing", "ListElement": "Decision without a hearing", "DisplayOrder": 10},
+  {"LiveFrom": "01/01/2018", "ID": "hearingCentre", "ListElementCode": "harmondsworth ", "ListElement": "Harmondsworth", "DisplayOrder": 9},
+  {"LiveFrom": "01/01/2018", "ID": "hearingCentre", "ListElementCode": "remoteHearing", "ListElement": "Remote hearing", "DisplayOrder": 10},
+  {"LiveFrom": "01/01/2018", "ID": "hearingCentre", "ListElementCode": "decisionWithoutHearing", "ListElement": "Decision without a hearing", "DisplayOrder": 11},
 
   {"LiveFrom": "01/01/2018", "ID": "hearingVenue", "ListElementCode": "taylorHouse", "ListElement": "Taylor House", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "hearingVenue", "ListElementCode": "nottingham", "ListElement": "Nottingham Justice Centre", "DisplayOrder": 2},
@@ -75,8 +76,9 @@
   {"LiveFrom": "01/01/2018", "ID": "hearingVenue", "ListElementCode": "belfast", "ListElement": "Belfast", "DisplayOrder": 9},
   {"LiveFrom": "01/01/2018", "ID": "hearingVenue", "ListElementCode": "bradford", "ListElement": "Bradford", "DisplayOrder": 10},
   {"LiveFrom": "01/01/2018", "ID": "hearingVenue", "ListElementCode": "birmingham", "ListElement": "Birmingham", "DisplayOrder": 11},
-  {"LiveFrom": "01/01/2018", "ID": "hearingVenue", "ListElementCode": "remoteHearing", "ListElement": "Remote hearing", "DisplayOrder": 12},
-  {"LiveFrom": "01/01/2018", "ID": "hearingVenue", "ListElementCode": "decisionWithoutHearing", "ListElement": "Decision Without Hearing", "DisplayOrder": 13},
+  {"LiveFrom": "01/01/2018", "ID": "hearingVenue", "ListElementCode": "harmondsworth", "ListElement": "Harmondsworth", "DisplayOrder": 12},
+  {"LiveFrom": "01/01/2018", "ID": "hearingVenue", "ListElementCode": "remoteHearing", "ListElement": "Remote hearing", "DisplayOrder": 13},
+  {"LiveFrom": "01/01/2018", "ID": "hearingVenue", "ListElementCode": "decisionWithoutHearing", "ListElement": "Decision Without Hearing", "DisplayOrder": 14},
 
   {"LiveFrom": "01/01/2018", "ID": "hearingLength", "ListElementCode": 30, "ListElement": "30 minutes", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "hearingLength", "ListElementCode": 60, "ListElement": "1 hour", "DisplayOrder": 2},
@@ -763,12 +765,12 @@
   {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionType", "ListElementCode": "approved", "ListElement": "Appeal is out of time but can proceed", "DisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionType", "ListElementCode": "rejected", "ListElement": "Appeal is out of time and cannot proceed", "DisplayOrder": 3},
 
-  {"LiveFrom": "01/01/2018", "ID": "detentionFacilityType", "ListElementCode": "irc", "ListElement": "Immigration removal centre", "DisplayOrder": 1},
-  {"LiveFrom": "01/01/2018", "ID": "detentionFacilityType", "ListElementCode": "prison", "ListElement": "Prison", "DisplayOrder": 2},
-  {"LiveFrom": "01/01/2018", "ID": "detentionFacilityType", "ListElementCode": "other", "ListElement": "Other", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "ID": "detentionFacilityType", "ListElementCode": "Immigration removal centre", "ListElement": "Immigration removal centre", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "detentionFacilityType", "ListElementCode": "Prison", "ListElement": "Prison", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "detentionFacilityType", "ListElementCode": "Other", "ListElement": "Other", "DisplayOrder": 3},
 
-  {"LiveFrom": "01/01/2018", "ID": "detentionStatusType", "ListElementCode": "detained", "ListElement": "Detained", "DisplayOrder": 1},
-  {"LiveFrom": "01/01/2018", "ID": "detentionStatusType", "ListElementCode": "accelerated", "ListElement": "Detained - Accelerated", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "detentionStatusType", "ListElementCode": "Detained", "ListElement": "Detained", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "detentionStatusType", "ListElementCode": "Detained - Accelerated", "ListElement": "Detained - Accelerated", "DisplayOrder": 2},
 
   {"LiveFrom": "09/11/2022", "ID": "ircNameList", "ListElementCode": "Brookhouse", "ListElement": "Brookhouse", "DisplayOrder": 1},
   {"LiveFrom": "09/11/2022", "ID": "ircNameList", "ListElementCode": "Colnbrook", "ListElement": "Colnbrook", "DisplayOrder": 2},

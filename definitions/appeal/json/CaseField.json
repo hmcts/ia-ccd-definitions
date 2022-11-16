@@ -5148,12 +5148,13 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "custodialSentence", "Label": "Custodial sentence", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateCustodialSentence", "Label": "Custodial sentence release date", "FieldType": "custodialSentenceDateComplexType", "FieldTypeParameter": "custodialSentenceDateComplexType", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasPendingBailApplications", "Label": "Does your client have a pending bail application?", "FieldType": "FixedRadioList", "FieldTypeParameter": "pendingBailApplication", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "bailApplicationNumber", "Label": "What is your client's bail application number?", "HintText": "For Example: AB/01234 or 1234-1234-1234-1234","FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasPendingBailApplications", "Label": "Pending bail application", "FieldType": "FixedRadioList", "FieldTypeParameter": "pendingBailApplication", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "bailApplicationNumber", "Label": "Bail application number", "HintText": "For Example: AB/01234 or 1234-1234-1234-1234","FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAcceleratedDetainedAppeal", "Label": "Is this an accelerated detained appeal?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingTypeResult", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionStatus", "Label": "Detention status", "FieldType": "FixedList", "FieldTypeParameter": "detentionStatusType", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionStatus", "Label": "Detention status", "FieldType": "FixedList", "FieldTypeParameter": "detentionStatusType", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionDetailsTitle", "Label": "![]()\r\n## Detention details", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 
 ]
