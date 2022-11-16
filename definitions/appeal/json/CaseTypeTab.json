@@ -639,6 +639,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "legalRepresentativeEmailAddress", "FieldShowCondition": "journeyType!=\"aip\"", "TabFieldDisplayOrder": 303},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "legalRepReferenceNumber", "FieldShowCondition": "journeyType!=\"aip\"", "TabFieldDisplayOrder": 304},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "TTL", "TabFieldDisplayOrder": 305},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "reasonForSuspension", "TabFieldDisplayOrder": 306},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_adjourned", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"adjourned\" OR currentCaseStateVisibleToAdminOfficer=\"adjourned\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_others_adjourned", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"adjourned\" OR currentCaseStateVisibleToHomeOfficeApc=\"adjourned\" OR currentCaseStateVisibleToHomeOfficeAll=\"adjourned\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_adjourned", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"adjourned\" AND updateHearingRequirementsExists!=\"Yes\""},
