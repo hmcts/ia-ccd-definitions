@@ -1073,21 +1073,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "legalRepCompany", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "legalRepresentativeDetails","PageDisplayOrder": 75,"ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "legalRepName", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "legalRepresentativeDetails","PageDisplayOrder": 75,"ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "legalRepReferenceNumber", "CaseEventFieldLabel": "Own reference", "PageFieldDisplayOrder": 4, "DisplayContext": "MANDATORY", "PageID": "legalRepresentativeDetails","PageDisplayOrder": 75,"ShowSummaryChangeOption": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "submissionOutOfTime", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "submissionOutOfTimePage", "PageDisplayOrder": 80, "FieldShowCondition": "applicationOutOfTimeText=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "PageShowCondition": "submissionOutOfTime=\"Yes\"", "ShowSummaryChangeOption": "N"},
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "CaseEventID": "editAppealAfterSubmit",
-    "CaseFieldID": "applicationOutOfTimeText",
-    "CaseEventFieldLabel": "You've missed the deadline for appealing.\r\n\r\nYou can ask for permission to appeal outside of the deadline.\r\n\r\nExplain why you believe your late appeal should be allowed to proceed.",
-    "PageFieldDisplayOrder": 2,
-    "DisplayContext": "READONLY",
-    "PageID": "submissionOutOfTimePage",
-    "PageDisplayOrder": 85,
-    "ShowSummaryChangeOption": "N"
-  },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "applicationOutOfTimeExplanation", "CaseEventFieldLabel": "You can upload a document or fill out the box below.", "PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "submissionOutOfTimePage","PageDisplayOrder": 85,"ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "applicationOutOfTimeDocument", "CaseEventFieldLabel": " ", "PageFieldDisplayOrder": 4, "DisplayContext": "OPTIONAL", "PageID": "submissionOutOfTimePage","PageDisplayOrder": 85,"ShowSummaryChangeOption": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "linkAppeal", "CaseFieldID": "reasonForLinkAppeal", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "reasonForLinkAppealPageId", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y", "CaseEventFieldLabel": "Reason for link"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "unlinkAppeal", "CaseFieldID": "unlinkAppealReasonForLink", "PageFieldDisplayOrder": 3, "DisplayContext": "READONLY", "PageID": "reasonForUnlinkAppealPageId", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
