@@ -2218,5 +2218,20 @@
     "EndButtonLabel": "Submit",
     "Publish": "N",
     "EventEnablingCondition": "paymentStatus!=\"Paid\" AND hasServiceRequestAlready!=\"Yes\" AND eaHuAppealTypePaymentOption!=\"payOffline\" AND journeyType!=\"aip\" AND isServiceRequestTabVisibleConsideringRemissions!=\"No\" AND remissionDecision!=\"approved\" AND remissionDecision!=\"partiallyApproved\""
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "migrateToLegacyCaseFlags",
+    "Name": "Legacy case flags migration",
+    "Description": "Legacy case flags migration",
+    "DisplayOrder": 99,
+    "PreConditionState(s)": "appealStarted;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;ended;appealTakenOffline;awaitingReasonsForAppeal;reasonsForAppealSubmitted;ftpaSubmitted;ftpaDecided;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingCmaRequirements;cmaRequirementsSubmitted;cmaAdjustmentsAgreed;cmaListed;adjourned;pendingPayment",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit",
+    "Publish": "Y"
   }
 ]
