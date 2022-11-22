@@ -7566,7 +7566,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_adminOfficer_paymentPending_fee_and_pay", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_adminOfficer_paymentPending_fee_and_pay", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_adminOfficer_paymentPending_noRemission_ea_hu", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_adminOfficer_paymentPending_noRemission_ea_hu", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_adminOfficer_paymentPending_noRemission_ea_hu", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_adminOfficer_paymentPending_noRemission_ea_hu", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_adminOfficer_paymentPending_noRemission_ea_hu", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
@@ -8586,15 +8585,5 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "requestFeeRemissionFlagForServiceRequest", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "requestFeeRemissionFlagForServiceRequest", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
 
-
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hasServiceRequestAlready", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hasServiceRequestAlready", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hasServiceRequestAlready", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "isServiceRequestTabVisibleConsideringRemissions", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "displayMarkAsPaidEventForPartialRemission", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "displayMarkAsPaidEventForPartialRemission", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "displayMarkAsPaidEventForPartialRemission", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
-
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "requestFeeRemissionFlagForServiceRequest", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "requestFeeRemissionFlagForServiceRequest", "UserRole": "caseworker-ia-admofficer", "CRUD": "RUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "isServiceRequestTabVisibleConsideringRemissions", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"}
 ]
