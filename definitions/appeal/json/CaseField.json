@@ -4902,9 +4902,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeRepresentationDescription", "Label": "#### Once you've submitted this request\r\n- You will no longer have access to this case\r\n- If the case has been shared with any colleagues, they will also lose access\r\n- Linked appeals are not affected. If you want to stop representing a client on a linked appeal, you need to access the case and repeat this action.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeLegalRepresentativeDescription", "Label": "#### Once you've submitted this request\r\n- The legal representative will no longer have access to this case\r\n- If the case has been shared with other legal representatives, they will also lose access\r\n- If there are any cases linked to this appeal, they will not be affected", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "searchCriteria ", "Label": " ", "FieldType": "SearchCriteria", "OtherCaseReference":  "appealNumber.value", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "searchParties", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "parties", "SecurityClassification": "PUBLIC"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "lateRemissionType", "Label": "Choose one of the following statements", "FieldType": "FixedRadioList", "FieldTypeParameter": "lateRemissionTypes", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousRemissionDetails", "Label": "Previous remissions", "FieldType": "Collection", "FieldTypeParameter": "remissionDetails", "SecurityClassification": "PUBLIC"},
@@ -5137,7 +5134,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hmctsCaseCategory", "Label": "HMCTS Case Category", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hmctsCaseNameInternal", "Label": "Case Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseNameHmctsInternal", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "SearchCriteria", "Label": " ", "FieldType": "SearchCriteria", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "SearchCriteria", "Label": " ", "FieldType": "SearchCriteria", "OtherCaseReference":  "appealNumber.value", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "searchParties", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "parties", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outsideUkWhenApplicationMade", "Label": "Were you outside the UK when you made your application?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outsideUkWhenApplicationMadePreviousSelection", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
