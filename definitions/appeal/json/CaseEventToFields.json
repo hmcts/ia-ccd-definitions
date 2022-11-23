@@ -55,7 +55,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "uploadTheNoticeOfDecisionTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "uploadTheNoticeOfDecision", "PageLabel": "Upload the Notice of Decision", "PageDisplayOrder": 10, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "uploadTheNoticeOfDecisionDocs", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "uploadTheNoticeOfDecision", "PageDisplayOrder": 10, "ShowSummaryChangeOption": "Y"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealTypeTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appealType", "PageLabel": "Type of appeal", "PageDisplayOrder": 11, "PageShowCondition": "ageAssessment!=\"Yes\"", "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealTypeTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appealType", "PageLabel": "Type of appeal", "PageDisplayOrder": 11, "PageShowCondition": "ageAssessment!=\"Yes\"", "CallBackURLMidEvent": "${CCD_DEF_IA_URL}/asylum/ccdMidEvent?pageId=appealType", "ShowSummaryChangeOption": "N"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -66,8 +66,10 @@
     "DisplayContext": "MANDATORY",
     "PageID": "appealType",
     "PageDisplayOrder": 11,
+    "FieldShowCondition": "appealTypeTitle=\"DO_NOT_SHOW_ON_UI\"",
     "ShowSummaryChangeOption": "Y"
   },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealTypeForDisplay", "CaseEventFieldLabel": "Type of appeal", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "appealType", "PageDisplayOrder": 11, "ShowSummaryChangeOption": "Y"},
   
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealGroundsEuRefusalTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appealGroundsEuRefusal", "PageLabel": "The grounds of your appeal", "PageDisplayOrder": 12, "PageShowCondition": "appealType=\"refusalOfEu\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealGroundsEuRefusal", "CaseEventFieldLabel": "The grounds of your appeal", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "appealGroundsEuRefusal","PageDisplayOrder": 12,"ShowSummaryChangeOption": "Y"},
