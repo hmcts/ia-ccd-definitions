@@ -47,7 +47,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "homeOfficeDecisionEnvelopeImage", "PageFieldDisplayOrder": 6, "DisplayContext": "READONLY", "PageID": "homeOfficeDecision","PageDisplayOrder": 9, "FieldShowCondition": "appellantInUk!=\"No\" AND isAcceleratedDetainedAppeal=\"No\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealSubmissionDate", "PageFieldDisplayOrder": 7, "DisplayContext": "MANDATORY", "PageID": "homeOfficeDecision","PageDisplayOrder": 9,"ShowSummaryChangeOption": "Y"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "decisionLetterDetailsTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "decisionLetterDetails", "PageLabel": "Decision letter details", "PageDisplayOrder": 9, "PageShowCondition": "ageAssessment=\"Yes\"","ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "decisionLetterDetailsTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "decisionLetterDetails", "PageLabel": "Decision letter details", "PageDisplayOrder": 9, "CallBackURLMidEvent": "${CCD_DEF_IA_URL}/asylum/ccdMidEvent?pageId=decisionLetterDetails", "PageShowCondition": "ageAssessment=\"Yes\"","ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "decisionLetterReferenceNumber", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "decisionLetterDetails","PageDisplayOrder": 9, "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "dateOnDecisionLetterTitle", "PageFieldDisplayOrder": 3, "DisplayContext": "READONLY", "PageID": "decisionLetterDetails","PageDisplayOrder": 9,"ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "dateOnDecisionLetter", "PageFieldDisplayOrder": 4, "DisplayContext": "MANDATORY", "PageID": "decisionLetterDetails", "PageDisplayOrder": 9, "CaseEventFieldLabel": "Date letter received", "ShowSummaryChangeOption": "Y"},
@@ -68,6 +68,7 @@
     "PageDisplayOrder": 11,
     "ShowSummaryChangeOption": "Y"
   },
+  
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealGroundsEuRefusalTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appealGroundsEuRefusal", "PageLabel": "The grounds of your appeal", "PageDisplayOrder": 12, "PageShowCondition": "appealType=\"refusalOfEu\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealGroundsEuRefusal", "CaseEventFieldLabel": "The grounds of your appeal", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "appealGroundsEuRefusal","PageDisplayOrder": 12,"ShowSummaryChangeOption": "Y"},
 
