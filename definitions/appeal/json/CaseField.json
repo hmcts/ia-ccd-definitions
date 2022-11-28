@@ -26,6 +26,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantGivenNames", "Label": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantFamilyName", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantDateOfBirth", "Label": "Date of birth", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "aaAppellantDateOfBirth", "Label": "Date of birth used by client", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantNationalityLabel", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantStateless", "Label": "Nationality", "FieldType": "FixedRadioList", "FieldTypeParameter": "appellantStateless", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantNationalities", "Label": "Nationalities", "FieldType": "Collection", "FieldTypeParameter": "nationality", "SecurityClassification": "PUBLIC"},
@@ -36,6 +37,21 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "searchPostcode", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantEmailAddress", "Label": "Email", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantPhoneNumber", "Label": "Phone", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "aaAppellantAddressTitle", "Label": " \r\nWe'll use this to work out which hearing centre is best for them.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "aaAppellantHasFixedAddress", "Label": "Does the appellant have a fixed address?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "aaAppellantHasFixedAddressLabel", "Label": "**We will use the address of your legal practice.**", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "aaAppellantAddress", "Label": "Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "aaEmail", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "aaMobileNumber", "Label": "Mobile phone number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "aaAppellantContactPreferenceTitle",
+    "Label": " \r\nSelect the communication method which best suits the appellant. \r\n\r\n The Tribunal needs this to: \r\n- provide standard guidance on the appeal process\r\n- update the appellant at key points in the appeal\r\n- send the Hearing Notice and guidance on what to expect at hearing\r\n- contact the appellant if, for any reason, your representation ends",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "aaContactPreference", "Label": "Communication Preference", "FieldType": "FixedRadioList", "FieldTypeParameter": "contactPreference","SecurityClassification": "PUBLIC"},
 
   {
     "LiveFrom": "01/01/2018",
@@ -5167,5 +5183,23 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterDetailsTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterReferenceNumber", "Label": "Reference/Case ID of the decision letter", "HintText": "Enter the number on the decision letter from the authority", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateOnDecisionLetterTitle", "Label": "### What date is on the decision letter?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateOnDecisionLetter", "Label": "Date letter received", "HintText": "For example, 03 04 2019", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateOnDecisionLetter", "Label": "Date letter received", "HintText": "For example, 03 04 2019", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriend", "Label": "Does your client have a litigation friend?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriendTitle", "Label": " \r\nEnter the name of the litigation friend", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriendGivenName", "Label": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriendFamilyName", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriendCompany", "Label": "Organisation/Company", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "litigationFriendContactPreferenceTitle",
+    "Label": " \r\nSelect the communication method which best suits the appellant. \r\n\r\n The Tribunal needs this to: \r\n- provide standard guidance on the appeal process\r\n- update the appellant at key points in the appeal\r\n- send the Hearing Notice and guidance on what to expect at hearing\r\n- contact the appellant if, for any reason, your representation ends",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriendContactPreference", "Label": "Provide the email address or phone number of the litigation friend", "FieldType": "FixedRadioList", "FieldTypeParameter": "contactPreference","SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriendEmail", "Label": "Email", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriendMobileNumber", "Label": "Text message", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
 ]
