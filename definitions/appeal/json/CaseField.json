@@ -5188,6 +5188,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "organisationOnDecisionLetter", "Label": "Who made the decision that you are appealing?", "FieldType": "FixedRadioList", "FieldTypeParameter": "organisationOnDecisionLetterList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hscTrust", "Label": " ", "FieldType": "FixedRadioList", "FieldTypeParameter": "hscTrustList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "localAuthority", "Label": "Local authority", "FieldType": "localAuthorityComplexType", "FieldTypeParameter": "localAuthorityComplexType", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterDetailsTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterReferenceNumber", "Label": "Reference/Case ID of the decision letter", "HintText": "Enter the number on the decision letter from the authority", "FieldType": "Text", "SecurityClassification": "PUBLIC"},

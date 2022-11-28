@@ -244,6 +244,9 @@
 
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "accessCode", "FieldType": "Text", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "expiryDate", "FieldType": "Date", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "ID": "localAuthorityComplexType", "ListElementCode": "localAuthorityCode", "FieldType": "FixedList", "FieldTypeParameter": "localAuthorities", "ElementLabel": "Select the name of the local authority", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "localAuthorityComplexType", "ListElementCode": "checklistNoLocalAuthority", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklistNoLocalAuthority", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "localAuthorityComplexType", "ListElementCode": "localAuthorityAddress", "ElementLabel": "Local authority" ,"Label": "Address" ,"FieldType": "AddressGlobal", "FieldShowCondition": "checklistNoLocalAuthority=\"no\"","SecurityClassification": "PUBLIC"}
 ]
