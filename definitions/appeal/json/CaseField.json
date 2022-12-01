@@ -5142,6 +5142,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hmctsCaseCategory", "Label": "HMCTS Case Category", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hmctsCaseNameInternal", "Label": "Case Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseNameHmctsInternal", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "SearchCriteria", "Label": " ", "FieldType": "SearchCriteria", "OtherCaseReference":  "appealNumber.value", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "searchParties", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "parties", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outsideUkWhenApplicationMade", "Label": "Were you outside the UK when you made your application?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outsideUkWhenApplicationMadePreviousSelection", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -5149,7 +5151,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasServiceRequestAlready", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isServiceRequestTabVisibleConsideringRemissions", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "displayMarkAsPaidEventForPartialRemission", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestFeeRemissionFlagForServiceRequest", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantPinInPost", "Label": " ", "FieldType": "pinInPost", "SecurityClassification": "PUBLIC"},
