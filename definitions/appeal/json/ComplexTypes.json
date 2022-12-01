@@ -244,13 +244,5 @@
 
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "accessCode", "FieldType": "Text", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "expiryDate", "FieldType": "Date", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
-
-  {"LiveFrom": "01/01/2018", "ID": "localAuthorityManualComplexType", "ListElementCode": "localAuthorityName", "FieldType": "Text", "ElementLabel": "Name of local authority", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "localAuthorityManualComplexType", "ListElementCode": "localAuthorityAddress", "FieldType": "AddressGlobal", "ElementLabel": " " ,"Label": "Address","SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "localAuthorityManualComplexType", "ListElementCode": "localAuthorityEmail", "FieldType": "Email", "ElementLabel": "Email", "SecurityClassification": "PUBLIC"},
-
-  {"LiveFrom": "01/01/2018", "ID": "localAuthorityComplexType", "ListElementCode": "localAuthorityCode", "FieldType": "FixedList", "FieldTypeParameter": "localAuthorities", "ElementLabel": "Select the name of the local authority", "FieldShowCondition": "checklistNoLocalAuthority!=\"no\"","SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "localAuthorityComplexType", "ListElementCode": "checklistNoLocalAuthority", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklistNoLocalAuthority", "ElementLabel": " ", "DisplayContext": "OPTIONAL","SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "localAuthorityComplexType", "ListElementCode": "localAuthorityManual", "FieldType": "localAuthorityManualComplexType", "ElementLabel": "Local authority", "FieldShowCondition": "checklistNoLocalAuthority=\"no\"", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"}
 ]
