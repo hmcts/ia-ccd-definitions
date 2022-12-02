@@ -2935,6 +2935,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_awaitingRespondentEvidence_ada",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 2 of 11 stages - the Awaiting respondent evidence stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_awaitingRespondentEvidence_preUpload.svg)\r\n\r\n## What happens next\r\nThis is an accelerated detained appeal. [List the case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/listCase) for ${calculatedHearingDate}.<br><br><br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeApc_awaitingRespondentEvidence",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 2 of 8 stages - the Upload Home Office bundle stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_uploadBundle.svg)\r\n\r\n## Do this next\r\nAn appeal against the Home Office decision in this case has been submitted. You can view the appeal form in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nIf you accept that there is a right of appeal you should [upload the Home Office bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadHomeOfficeBundle).\r\n\r\nIf you consider the appeal is not valid, you should contact the Tribunal and the appellant with your reasons.<br><br><br>",
     "FieldType": "Label",
