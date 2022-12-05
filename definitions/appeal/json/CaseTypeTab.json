@@ -658,6 +658,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_adjourned", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"adjourned\" OR currentCaseStateVisibleToAdminOfficer=\"adjourned\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_others_adjourned", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"adjourned\" OR currentCaseStateVisibleToHomeOfficeApc=\"adjourned\" OR currentCaseStateVisibleToHomeOfficeAll=\"adjourned\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_adjourned", "TabFieldDisplayOrder": 21, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"adjourned\" AND updateHearingRequirementsExists!=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseNameHmctsInternal", "TabFieldDisplayOrder": 305, "FieldShowCondition": "caseNameHmctsInternal=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseManagementLocation", "TabFieldDisplayOrder": 306, "FieldShowCondition": "caseManagementLocation=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "caseManagementCategory", "TabFieldDisplayOrder": 307, "FieldShowCondition": "caseManagementCategory=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "TabLabel": "Appeal", "TabDisplayOrder": 2, "CaseFieldID": "appealTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "isOutOfCountryEnabled", "TabFieldDisplayOrder": 2, "FieldShowCondition": "isOutOfCountryEnabled=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "paAppealTypePaymentOptionFlag", "TabFieldDisplayOrder": 7, "FieldShowCondition": "paAppealTypePaymentOption=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
@@ -1053,5 +1056,4 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "validationAppealData", "TabFieldDisplayOrder": 5, "FieldShowCondition": "homeOfficeSearchStatus=\"SUCCESS\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseHistory", "TabLabel": "Case history", "TabDisplayOrder": 12, "CaseFieldID": "caseHistoryViewer", "TabFieldDisplayOrder": 1}
-
 ]

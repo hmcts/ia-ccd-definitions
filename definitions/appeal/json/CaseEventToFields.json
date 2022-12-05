@@ -72,7 +72,7 @@
     "ShowSummaryChangeOption": "Y"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealTypeForDisplay", "CaseEventFieldLabel": "Type of appeal", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "appealType", "PageDisplayOrder": 11, "ShowSummaryChangeOption": "Y"},
-  
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealGroundsEuRefusalTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appealGroundsEuRefusal", "PageLabel": "The grounds of your appeal", "PageDisplayOrder": 12, "PageShowCondition": "appealType=\"refusalOfEu\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealGroundsEuRefusal", "CaseEventFieldLabel": "The grounds of your appeal", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "appealGroundsEuRefusal","PageDisplayOrder": 12,"ShowSummaryChangeOption": "Y"},
 
@@ -406,9 +406,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "exceptionalCircumstances", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "exceptionalCircumstancesRemission", "PageDisplayOrder": 44,  "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "exceptionalCircumstancesSupportEvidenceAdvice", "PageFieldDisplayOrder": 3, "DisplayContext": "READONLY", "PageID": "exceptionalCircumstancesRemission", "PageDisplayOrder": 44,  "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "remissionEcEvidenceDocuments", "PageFieldDisplayOrder": 4, "DisplayContext": "OPTIONAL", "PageID": "exceptionalCircumstancesRemission", "PageDisplayOrder": 44,  "ShowSummaryChangeOption": "Y"},
-  
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "paAppealTypePaymentOption", "PageFieldDisplayOrder": 1, "CaseEventFieldLabel": "Select a payment method", "DisplayContext": "MANDATORY", "PageID": "paymentOptions", "PageLabel": "How to pay", "PageDisplayOrder": 55, "PageShowCondition": "isFeePaymentEnabled=\"Yes\" AND appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\" AND remissionType!=\"hoWaiverRemission\" AND remissionType!=\"helpWithFees\" AND remissionType!=\"exceptionalCircumstancesRemission\" AND appealType!=\"refusalOfEu\" AND appealType!=\"refusalOfHumanRights\" AND appealType!=\"ageAssessment\"", "FieldShowCondition": "appealType=\"protection\"", "ShowSummaryChangeOption": "Y"},
-  
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "decisionHearingFeeOption", "PageFieldDisplayOrder": 1, "PageLabel": "Select PBA number", "DisplayContext": "MANDATORY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "supportPaymentAccount=\"DUMMY_VALUE_TO_HIDE_FIELD\"" ,"ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "feeWithHearing", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "supportPaymentAccount=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "feeWithoutHearing", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "supportPaymentAccount=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N"},
