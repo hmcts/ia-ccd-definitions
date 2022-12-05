@@ -1607,7 +1607,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -1960,6 +1960,8 @@
     "DisplayOrder": 71,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
     "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
     "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
     "SecurityClassification": "Public",
@@ -1992,7 +1994,7 @@
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_AAC_URL}/noc/set-organisation-to-remove",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
     "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
     "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
@@ -2013,7 +2015,7 @@
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
-    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_AAC_URL}/noc/set-organisation-to-remove",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
     "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
     "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
@@ -2218,5 +2220,38 @@
     "EndButtonLabel": "Submit",
     "Publish": "N",
     "EventEnablingCondition": "paymentStatus!=\"Paid\" AND hasServiceRequestAlready!=\"Yes\" AND eaHuAppealTypePaymentOption!=\"payOffline\" AND journeyType!=\"aip\" AND isServiceRequestTabVisibleConsideringRemissions!=\"No\" AND remissionDecision!=\"approved\" AND remissionDecision!=\"partiallyApproved\""
+  }
+,
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "pipActivation",
+    "Name": "PiP Activation",
+    "Description": "Appellant is now representing themselves",
+    "DisplayOrder": 91,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "payAndSubmitAppeal",
+    "Name": "Pay and submit",
+    "Description": "Pay and submit - event added back in for legacy inflight cases support",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "0",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "Publish": "N"
   }
 ]
