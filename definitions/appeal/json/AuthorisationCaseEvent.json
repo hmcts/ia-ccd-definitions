@@ -324,8 +324,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "manageFeeUpdate", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestFeeRemission", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "createFlag", "UserRole": "caseflags_profile", "CRUD": "CRU"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "manageFlags", "UserRole": "caseflags_profile", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "createFlag", "UserRole": "ia_caseflags_profile", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "manageFlags", "UserRole": "ia_caseflags_profile", "CRUD": "CRU"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAddendumEvidenceAsReviewed", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAddendumEvidenceAsReviewed", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
