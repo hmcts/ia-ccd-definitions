@@ -39,7 +39,7 @@
     "RoleName" : "idam:caseworker-ia-system",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-system",
+    "AccessProfiles": "caseworker-ia-system,ia_caseflags_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -48,7 +48,7 @@
     "RoleName" : "idam:caseworker-ia-system-access",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-system-access",
+    "AccessProfiles": "caseworker-ia-system-access,ia_caseflags_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""

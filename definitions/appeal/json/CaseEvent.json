@@ -2262,9 +2262,9 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "migrateClearCaseFlags",
-    "Name": "Legacy case flags migration",
-    "Description": "Legacy case flags migration",
+    "ID": "migrateToStrategicCaseFlags",
+    "Name": "Strategic flags migration",
+    "Description": "Strategic flags migration",
     "DisplayOrder": 99,
     "PreConditionState(s)": "appealStarted;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;ended;appealTakenOffline;awaitingReasonsForAppeal;reasonsForAppealSubmitted;ftpaSubmitted;ftpaDecided;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingCmaRequirements;cmaRequirementsSubmitted;cmaAdjustmentsAgreed;cmaListed;adjourned;pendingPayment",
     "PostConditionState": "*",
