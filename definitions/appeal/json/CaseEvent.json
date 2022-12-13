@@ -862,7 +862,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
-    "EventEnablingCondition": "[STATE]=\"submitHearingRequirements\" OR acceleratedDetainedAppealListed=\"Yes\"",
+    "EventEnablingCondition": "[STATE]=\"submitHearingRequirements\" OR adaHearingRequirementsSubmittable=\"Yes\"",
     "Publish": "Y"
   },
   {
