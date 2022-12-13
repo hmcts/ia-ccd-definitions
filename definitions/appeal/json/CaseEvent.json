@@ -943,7 +943,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
-    "EventEnablingCondition": "[STATE]=\"submitHearingRequirements\" OR adaHearingRequirementsToReview=\"Yes\"",
+    "EventEnablingCondition": "[STATE]=\"listing\" OR adaHearingRequirementsToReview=\"Yes\"",
     "Publish": "N"
   },
   {
