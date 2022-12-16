@@ -3,7 +3,7 @@
     "RoleName" : "idam:caseworker-ia-caseofficer",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-caseofficer,caseworker_profile",
+    "AccessProfiles": "caseworker-ia-caseofficer",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -57,7 +57,7 @@
     "RoleName" : "idam:caseworker-ia-admofficer",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-admofficer,caseworker_profile",
+    "AccessProfiles": "caseworker-ia-admofficer",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -88,8 +88,7 @@
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
-  },
-  {
+  },  {
     "RoleName" : "idam:caseworker-ia-respondentofficer",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
@@ -97,39 +96,35 @@
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
-  },
-  {
+  },  {
     "RoleName" : "idam:caseworker-ia-iacjudge",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-iacjudge,caseworker_profile",
+    "AccessProfiles": "caseworker-ia-iacjudge",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
-  },
-  {
+  },  {
     "RoleName" : "idam:caseworker-ras-validation",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ras-validation,caseworker_profile",
+    "AccessProfiles": "caseworker-ras-validation",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
-  },
-  {
+  },  {
     "RoleName" : "idam:caseworker-caa",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-caa,caseworker_profile",
+    "AccessProfiles": "caseworker-caa",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
-  },
-  {
+  },  {
     "RoleName" : "idam:caseworker-approver",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-approver,caseworker_profile",
+    "AccessProfiles": "caseworker-approver",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -140,6 +135,87 @@
     "CaseTypeID": "Asylum",
     "AccessProfiles": "[LEGALREPRESENTATIVE]",
     "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "[CREATOR]",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "[CREATOR]",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "hmcts-staff",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "GS_profile",
+    "ReadOnly": "Y",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "hmcts-admin",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "GS_profile",
+    "ReadOnly": "Y",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "hmcts-legal-operations",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "GS_profile",
+    "ReadOnly": "Y",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "hmcts-ctsc",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "GS_profile",
+    "ReadOnly": "Y",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "hmcts-judiciary",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "GS_profile",
+    "ReadOnly": "Y",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "specific-access-judiciary",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "ia_specific_access_judge_profile",
+    "ReadOnly": "Y",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "specific-access-legal-ops",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "ia_specific_access_legal_ops_profile",
+    "ReadOnly": "Y",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "specific-access-admin",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "ia_specific_access_admin_profile",
+    "ReadOnly": "Y",
     "Disabled": "F",
     "CaseAccessCategories": ""
   }
