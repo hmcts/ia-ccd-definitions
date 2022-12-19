@@ -95,7 +95,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "appellantHasNotTakenOverCase", "TabFieldDisplayOrder": 6, "FieldShowCondition": "changeOrganisationRequestField!=\"\" AND journeyType!=\"aip\""},
 
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_appealStarted_dcRp", "TabFieldDisplayOrder": 7, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"appealStarted\" AND appealType!=\"protection\" AND appealType!=\"refusalOfEu\" AND appealType!=\"refusalOfHumanRights\" AND appealType!=\"ageAssessment\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_appealStarted_dcRp", "TabFieldDisplayOrder": 7, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"appealStarted\" AND appealType!=\"protection\" AND appealType!=\"refusalOfEu\" AND appealType!=\"refusalOfHumanRights\" AND appealType!=\"euSettlementScheme\" AND appealType!=\"ageAssessment\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_appealStarted_eaHuPaAg", "TabFieldDisplayOrder": 7, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"appealStarted\" AND appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\" AND remissionType!=\"*\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRepresentative_appealStarted_remissions", "TabFieldDisplayOrder": 7, "FieldShowCondition": "isRemissionsEnabled=\"Yes\" AND currentCaseStateVisibleToLegalRepresentative=\"appealStarted\" AND remissionType=\"hoWaiverRemission\""},
