@@ -882,6 +882,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Update",
+    "EventEnablingCondition": "[STATE]=\"listing\" OR [STATE]=\"prepareForHearing\" OR [STATE]=\"preHearing\" OR [STATE]=\"finalBundling\" OR [STATE]=\"decision\" OR [STATE]=\"adjourned\" OR adaHearingRequirementsToReview=\"Yes\"",
     "Publish": "N"
   },
   {
