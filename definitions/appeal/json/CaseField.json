@@ -5209,13 +5209,13 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ageAssessment", "Label": "Are you appealing an age assessment decision?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "organisationOnDecisionLetter", "Label": "Who made the decision that you are appealing?", "FieldType": "FixedRadioList", "FieldTypeParameter": "organisationOnDecisionLetterList", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hscTrust", "Label": " ", "FieldType": "FixedRadioList", "FieldTypeParameter": "hscTrustList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hscTrust", "Label": "HSC Trust", "FieldType": "FixedRadioList", "FieldTypeParameter": "hscTrustList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "localAuthority", "Label": "Local authority", "FieldType": "FixedList", "FieldTypeParameter": "localAuthorities", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterDetailsTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterReferenceNumber", "Label": "Reference/Case ID of the decision letter", "HintText": "Enter the number on the decision letter from the authority", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateOnDecisionLetterTitle", "Label": "### What date is on the decision letter?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateOnDecisionLetter", "Label": "Date letter received", "HintText": "For example, 03 04 2019", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateOnDecisionLetter", "Label": "Date of letter", "HintText": "For example, 03 04 2019", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriend", "Label": "Does your client have a litigation friend?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriendTitle", "Label": " \r\nEnter the name of the litigation friend", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
