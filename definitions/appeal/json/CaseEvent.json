@@ -872,7 +872,7 @@
     "Name": "Update hearing requirements",
     "Description": "Update hearing requirements",
     "DisplayOrder": 36,
-    "PreConditionState(s)": "listing;prepareForHearing;preHearing;finalBundling;decision;adjourned",
+    "PreConditionState(s)": "listing;prepareForHearing;preHearing;finalBundling;decision;adjourned;awaitingRespondentEvidence",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
@@ -882,6 +882,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Update",
+    "EventEnablingCondition": "[STATE]=\"listing\" OR [STATE]=\"prepareForHearing\" OR [STATE]=\"preHearing\" OR [STATE]=\"finalBundling\" OR [STATE]=\"decision\" OR [STATE]=\"adjourned\" OR adaHearingRequirementsUpdatable=\"Yes\"",
     "Publish": "N"
   },
   {
