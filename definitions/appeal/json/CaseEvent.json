@@ -850,7 +850,7 @@
     "Name": "Submit hearing requirements",
     "Description": "Submit hearing requirements",
     "DisplayOrder": 36,
-    "PreConditionState(s)": "submitHearingRequirements;awaitingRespondentEvidence",
+    "PreConditionState(s)": "submitHearingRequirements;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview",
     "PostConditionState": "listing(isAcceleratedDetainedAppeal!=\"Yes\"):1;*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
@@ -862,7 +862,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
-    "EventEnablingCondition": "[STATE]=\"submitHearingRequirements\" OR acceleratedDetainedAppealListed=\"Yes\"",
+    "EventEnablingCondition": "[STATE]=\"submitHearingRequirements\" OR adaHearingRequirementsSubmittable=\"Yes\"",
     "Publish": "Y"
   },
   {
@@ -872,7 +872,7 @@
     "Name": "Update hearing requirements",
     "Description": "Update hearing requirements",
     "DisplayOrder": 36,
-    "PreConditionState(s)": "listing;prepareForHearing;preHearing;finalBundling;decision;adjourned",
+    "PreConditionState(s)": "listing;prepareForHearing;preHearing;finalBundling;decision;adjourned;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
@@ -882,6 +882,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Update",
+    "EventEnablingCondition": "[STATE]=\"listing\" OR [STATE]=\"prepareForHearing\" OR [STATE]=\"preHearing\" OR [STATE]=\"finalBundling\" OR [STATE]=\"decision\" OR [STATE]=\"adjourned\" OR adaHearingRequirementsUpdatable=\"Yes\"",
     "Publish": "N"
   },
   {
@@ -931,8 +932,8 @@
     "Name": "Hearing requirements",
     "Description": "Hearing requirements",
     "DisplayOrder": 39,
-    "PreConditionState(s)": "listing",
-    "PostConditionState": "listing",
+    "PreConditionState(s)": "listing;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview",
+    "PostConditionState": "listing(isAcceleratedDetainedAppeal!=\"Yes\"):1;*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
@@ -943,6 +944,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
+    "EventEnablingCondition": "[STATE]=\"listing\" OR adaHearingRequirementsToReview=\"Yes\"",
     "Publish": "N"
   },
   {
@@ -1011,7 +1013,7 @@
     "Name": "Update hearing adjustments",
     "Description": "Update hearing adjustments",
     "DisplayOrder": 39,
-    "PreConditionState(s)": "listing;prepareForHearing;finalBundling;preHearing;decision;adjourned",
+    "PreConditionState(s)": "listing;prepareForHearing;finalBundling;preHearing;decision;adjourned;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
@@ -1023,6 +1025,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Update",
+    "EventEnablingCondition": "[STATE]=\"listing\" OR [STATE]=\"prepareForHearing\" OR [STATE]=\"finalBundling\" OR [STATE]=\"preHearing\" OR [STATE]=\"decision\" OR [STATE]=\"adjourned\" OR adaHearingAdjustmentsUpdatable=\"Yes\"",
     "Publish": "N"
   },
   {
@@ -1609,7 +1612,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
