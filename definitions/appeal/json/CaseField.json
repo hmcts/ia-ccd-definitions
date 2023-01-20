@@ -5242,6 +5242,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "prevJourneyType", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listingAvailableForAda", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "calculatedHearingDate", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "calculatedHearingDate", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityReviewLabel", "Label": "Record the decision maker, the decision and the reasons for the decision.", "FieldType": "Label","SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityReviewJudge", "Label": "Judge's name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityReviewDecision", "Label": "Decision\r\n\r\n", "FieldType": "FixedRadioList", "FieldTypeParameter": "suitabilityReviewDecision", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityReviewReason", "Label": "Reasons for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
 ]
