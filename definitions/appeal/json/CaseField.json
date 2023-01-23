@@ -103,9 +103,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasNewMatters", "Label": "Are there any new reasons your client wishes to remain in the UK or any new grounds on which they should be permitted to stay?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "newMatters", "Label": "Explain these new matters and their relevance to the appeal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasOtherAppealsTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasOtherAppeals", "Label": "Has your client appealed against any other UK immigration decisions?", "FieldType": "FixedRadioList", "FieldTypeParameter": "otherAppeals", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasOtherAppeals", "Label": "Other appeals", "FieldType": "FixedRadioList", "FieldTypeParameter": "otherAppeals", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "otherAppealsTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "otherAppeals", "Label": "Appeal number", "FieldType": "Collection", "FieldTypeParameter": "appealNumber", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "otherAppeals", "Label": "Other appeals number", "FieldType": "Collection", "FieldTypeParameter": "appealNumber", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDetailsHintAndTitle", "Label": " \r\nEnter your details.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDetailsTitle", "Label": " \r\nEnter your details.", "HintText": "Enter your details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCompany", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -491,6 +491,14 @@
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_appealSubmitted_rpDc",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 2 of 11 stages - the Appeal submitted stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYou have submitted your appeal. A Tribunal Caseworker will now review your appeal. You don't need to do anything else right now.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_appealSubmitted_Ag",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 2 of 11 stages - the Appeal submitted stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYou have submitted your appeal. A Legal Officer will review your appeal. You don't need to do anything else right now.\r\n\r\nYou can now apply for [Interim relief](#).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -2679,7 +2687,7 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu",
+    "ID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_ag",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal submitted stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -4096,6 +4104,7 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isEvidenceFromOutsideUkOoc", "Label": "Does anyone wish to give oral evidence from outside the UK?", "HintText":"In certain circumstances someone who is outside the UK may be able to participate in the hearing remotely.", "FieldType": "YesOrNo", "FieldTypeParameter": "isEvidenceFromOutsideUkOoc", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isEvidenceFromOutsideUkDocText", "Label": "Provide the name and location of anyone who wishes to give oral evidence from outside the UK",  "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isEvidenceFromOutsideUkInCountry", "Label": "Does anyone wish to give oral evidence from outside the UK?", "HintText":"In certain circumstances someone who is outside the UK may be able to participate in the hearing remotely.", "FieldType": "YesOrNo", "FieldTypeParameter": "isEvidenceFromOutsideUkInCountry", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isEvidenceFromOutsideUkInCountryText", "Label": "Provide the name and location of anyone who wishes to give oral evidence from outside the UK",  "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAppellantAttendingTheHearing", "Label": "Will the appellant attend the hearing?", "FieldType": "YesOrNo", "FieldTypeParameter": "isAppellantAttendingTheHearing", "SecurityClassification": "PUBLIC"},
@@ -5212,14 +5221,14 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ageAssessment", "Label": "Are you appealing an age assessment decision?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "organisationOnDecisionLetter", "Label": "Who made the decision that you are appealing?", "FieldType": "FixedRadioList", "FieldTypeParameter": "organisationOnDecisionLetterList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "organisationOnDecisionLetter", "Label": "Respondent", "FieldType": "FixedRadioList", "FieldTypeParameter": "organisationOnDecisionLetterList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hscTrust", "Label": "HSC Trust", "FieldType": "FixedRadioList", "FieldTypeParameter": "hscTrustList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "localAuthority", "Label": "Local authority", "FieldType": "FixedList", "FieldTypeParameter": "localAuthorities", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterDetailsTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterReferenceNumber", "Label": "Reference/Case ID of the decision letter", "HintText": "Enter the number on the decision letter from the authority", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterReferenceNumber", "Label": "Respondent's reference/Case ID", "HintText": "Enter the number on the decision letter from the authority", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateOnDecisionLetterTitle", "Label": "### What date is on the decision letter?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateOnDecisionLetter", "Label": "Date of letter", "HintText": "For example, 03 04 2019", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateOnDecisionLetter", "Label": "Date on decision letter", "HintText": "For example, 03 04 2019", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriend", "Label": "Does your client have a litigation friend?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriendTitle", "Label": " \r\nEnter the name of the litigation friend", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
