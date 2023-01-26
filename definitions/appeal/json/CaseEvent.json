@@ -2273,6 +2273,8 @@
     "PreConditionState(s)": "respondentReview",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
     "PostConditionState": "prepareForHearing(suitabilityReviewDecision=\"suitable\"):1;*",
     "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
     "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
