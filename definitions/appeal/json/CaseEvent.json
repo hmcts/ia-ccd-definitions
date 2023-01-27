@@ -638,7 +638,7 @@
     "Name": "Edit case listing",
     "Description": "Edit case listing",
     "DisplayOrder": 29,
-    "PreConditionState(s)": "prepareForHearing;finalBundling;preHearing;decision;adjourned",
+    "PreConditionState(s)": "prepareForHearing;finalBundling;preHearing;decision;adjourned;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
@@ -648,6 +648,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "List case",
+    "EventEnablingCondition": "[STATE]=\"prepareForHearing\" OR [STATE]=\"finalBundling\" OR [STATE]=\"preHearing\" OR [STATE]=\"decision\" OR [STATE]=\"adjourned\" OR adaEditListingAvailable=\"Yes\"",
     "Publish": "Y"
   },
   {
