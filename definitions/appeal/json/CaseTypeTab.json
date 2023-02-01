@@ -848,10 +848,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "recordApplicationActionDisabled", "TabFieldDisplayOrder": 9, "FieldShowCondition": "recordApplicationActionDisabled=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "hasApplicationsToDecide", "TabFieldDisplayOrder": 9, "FieldShowCondition": "hasApplicationsToDecide=\"DUMMY_FIELD_TO_HIDE\""},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseLevelFlags", "TabLabel": "Case flags", "TabDisplayOrder": 6, "CaseFieldID": "caseFlagsTabTitle", "TabFieldDisplayOrder": 1},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseLevelFlags", "CaseFieldID": "caseLevelFlags", "TabFieldDisplayOrder": 2, "FieldShowCondition": "caseLevelFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseLevelFlags", "CaseFieldID": "appellantLevelFlags", "TabFieldDisplayOrder": 3, "FieldShowCondition": "appellantLevelFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseLevelFlags", "CaseFieldID": "flagLauncher", "DisplayContextParameter": "#ARGUMENT(READ)", "TabFieldDisplayOrder": 4},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "TabLabel": "Case flags", "TabDisplayOrder": 6, "CaseFieldID": "caseFlagsTabTitle", "TabFieldDisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "caseFlags", "TabFieldDisplayOrder": 2, "FieldShowCondition": "caseFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "appellantLevelFlags", "TabFieldDisplayOrder": 3, "FieldShowCondition": "appellantLevelFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "flagLauncher", "DisplayContextParameter": "#ARGUMENT(READ)", "TabFieldDisplayOrder": 4},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "makeAnApplicationLink", "TabFieldDisplayOrder": 3, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative!=\"appealStarted\" AND currentCaseStateVisibleToLegalRepresentative!=\"appealTakenOffline\" AND currentCaseStateVisibleToHomeOfficeAll!=\"appealTakenOffline\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "decideAnApplicationLink", "TabFieldDisplayOrder": 4, "FieldShowCondition": "hasApplicationsToDecide=\"Yes\""},
