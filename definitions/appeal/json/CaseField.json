@@ -5363,5 +5363,46 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_respondentReview_ada_suitability_to_do",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview_appeal_response.svg)\r\n\r\n## Do this next\r\nThe Home Office has reviewed its decision, You can access the Home Office review in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n A judge will now review the case and determine if it is suitable to continue as an accelerated detained appeal. You will be notified when a decision has been made.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_respondentReview_ada_suitability_to_do",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview_appeal_response.svg)\r\n\r\n## What happens next\r\nA judge will review the case and determine if it is suitable to continue as an accelerated detained appeal.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_respondentReview_ada_suitability_to_do",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview_appeal_response.svg)\r\n\r\n## What happens next\r\nA judge will review the case and determine if it is suitable to continue as an accelerated detained appeal.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeall_respondentReview_ada_suitability_to_do",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview_appeal_response.svg)\r\n\r\n## What happens next\r\nA judge will review the case and determine if it is suitable to continue as an accelerated detained appeal.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_respondentReview_ada_suitability_to_do",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview_appeal_response.svg)\r\n\r\n## Do this next\r\nYou must now [determine if it suitable to continue as an accelerated detained appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/adaSuitabilityReview).",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  }
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAdmin", "Label": "Internal flag managed by API to allow admin users to create a case on behalf of an unrepresented appellant", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
