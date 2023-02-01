@@ -14,7 +14,7 @@
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist5", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist5", "ElementLabel": " ", "FieldShowCondition": "checklist1=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist1", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist1", "ElementLabel": " ", "FieldShowCondition": "checklist1=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist2", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist2", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist7", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist7", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist7", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist7", "ElementLabel": " ", "FieldShowCondition": "checklist7=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist3", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist3", "ElementLabel": " ", "FieldShowCondition": "checklist4=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist4", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist4", "ElementLabel": " ", "FieldShowCondition": "checklist4=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "checklist", "ListElementCode": "checklist6", "FieldType": "MultiSelectList", "FieldTypeParameter": "checklist6", "ElementLabel": " ", "FieldShowCondition": "checklist6=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
@@ -215,6 +215,13 @@
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateRecorded", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "feeUpdateRecorded", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatus", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "feeUpdateStatus", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "appellantTitle", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "appellantGivenNames", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "appellantFamilyName", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "appellantAddress", "FieldType": "AddressUK", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "appellantEmailAddress", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "appellantDateOfBirth", "FieldType": "Date", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "feeRemissionType", "FieldType": "Text", "ElementLabel": "Fee remission type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "asylumSupportReference", "FieldType": "Text", "ElementLabel": "Asylum Support reference number", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "asylumSupportDocument", "FieldType": "Document", "ElementLabel": "Asylum Support confirmation letter", "SecurityClassification": "PUBLIC"},
@@ -236,5 +243,10 @@
   {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionDetails", "ListElementCode": "decisionDocument", "FieldType": "Document", "ElementLabel": "Decision notice", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "ID": "previousRepresentation", "ListElementCode": "legalRepCompany", "FieldType": "Text", "ElementLabel": "Company Name", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "previousRepresentation", "ListElementCode": "legalRepReferenceNumber", "FieldType": "Text", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "previousRepresentation", "ListElementCode": "legalRepReferenceNumber", "FieldType": "Text", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "accessCode", "FieldType": "Text", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "expiryDate", "FieldType": "Date", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"}
+
 ]
