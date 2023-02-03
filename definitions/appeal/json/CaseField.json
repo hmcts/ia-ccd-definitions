@@ -5338,5 +5338,6 @@
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse.svg)\r\n\r\n## Do this next\r\nYou must create a case summary for the judge to use at the hearing.\n \n[Create case summary](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/createCaseSummary)",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
-  }
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAdmin", "Label": "Internal flag managed by API to allow admin users to create a case on behalf of an unrepresented appellant", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
