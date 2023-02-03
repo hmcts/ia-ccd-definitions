@@ -129,7 +129,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationOutOfTimeDocument", "Label": "Late submission supporting document", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantSubmissionOutOfTime", "Label": "Internal flag managed by API to enable/disable out of time submission page", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantOutOfTimeText", "Label": "This application is late. You must provide full reasons why it is being submitted more than 14 days after the Decision and Reasons document was uploaded. \r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantOutOfTimeText", "Label": "Provide detailed reasons why this application is being submitted after the deadline.\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantOutOfTimeExplanation", "Label": "Reasons why the application is late", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantOutOfTimeDocuments", "Label": "Documents supporting late application", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {
