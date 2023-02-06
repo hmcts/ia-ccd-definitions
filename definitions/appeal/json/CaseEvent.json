@@ -2285,5 +2285,27 @@
     "EndButtonLabel": "Record decision",
     "EventEnablingCondition": "respondentReviewAppealResponseAdded=\"Yes\" AND detentionStatus=\"detainedAccelerated\"",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "transferOutOfAda",
+    "Name": "Transfer out of ADA",
+    "Description": "Transfer out of ADA",
+    "DisplayOrder": 93,
+    "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;respondentReview;caseBuilding;caseUnderReview;prepareForHearing;finalBundling;preHearing;decision;decided",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
+    "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "PostConditionState": "*",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Transfer out",
+    "EventEnablingCondition": "isAcceleratedDetainedAppeal=\"Yes\"",
+    "Publish": "Y"
   }
 ]

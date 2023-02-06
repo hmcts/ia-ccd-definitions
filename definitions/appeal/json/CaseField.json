@@ -5343,7 +5343,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_respondentReview_unsuitable_ada",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview.svg)\r\n\r\n## What happens next\r\nThis appeal has been determined unsuitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>You must now [transfer the appeal out of the accelerated detained appeal process.](/Overview)",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview.svg)\r\n\r\n## What happens next\r\nThis appeal has been determined unsuitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>You must now [transfer the appeal out of the accelerated detained appeal process](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/transferOutOfAda).",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5403,5 +5403,11 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAdmin", "Label": "Internal flag managed by API to allow admin users to create a case on behalf of an unrepresented appellant", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAdmin", "Label": "Internal flag managed by API to allow admin users to create a case on behalf of an unrepresented appellant", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "transferOutOfAdaReason", "Label": "Reason for transfer", "FieldType": "FixedRadioList", "FieldTypeParameter": "transferOutOfAdaReasonsList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "transferOutOfAdaMoreDetails", "Label": "Further details", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "transferOutOfAdaDate", "Label": "Date transferred out of ADA", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasTransferredOutOfAda", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+
 ]
