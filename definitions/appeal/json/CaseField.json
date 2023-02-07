@@ -268,7 +268,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_finalBundling_in_new",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.svg)\r\n\r\n## What to do next\r\nThe hearing bundle is being generated. You will soon be able to view the hearing bundle in the documents tab.\r\n\r\nYou and the other parties will be notified when the hearing bundle is available.\r\n\r\nIf the bundle fails to generate, you will be notified and need to generate the bundle again.</br></br>",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling${adaSuffix}.svg)\r\n\r\n## What to do next\r\nThe hearing bundle is being generated. You will soon be able to view the hearing bundle in the documents tab.\r\n\r\nYou and the other parties will be notified when the hearing bundle is available.\r\n\r\nIf the bundle fails to generate, you will be notified and need to generate the bundle again.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3369,7 +3369,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_finalBundling_ada",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 8 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_listed.svg)\r\n\r\n## What happens next\r\nThe Tribunal will generate the hearing bundle. You will be notified when this is ready to view.\r\n</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 8 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling${adaSuffix}.svg)\r\n\r\n## What happens next\r\nThe Tribunal will generate the hearing bundle. You will be notified when this is ready to view.\r\n</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3673,7 +3673,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_finalBundling",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.svg)\r\n\r\n## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing. You should first review the documents in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n If you happy with the documents, [generate the hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle).\r\n\n\nIf you want to add or remove any documents, you can [customise hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/customiseHearingBundle)",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling${adaSuffix}.svg)\r\n\r\n## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing. You should first review the documents in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n If you happy with the documents, [generate the hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle).\r\n\n\nIf you want to add or remove any documents, you can [customise hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/customiseHearingBundle)",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3681,7 +3681,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_reheard_finalBundling",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.svg)\r\n\r\n## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing. You should first review the documents in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n If you happy with the documents, [generate the hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle).\r\n\n\nIf you want to add or remove any documents, you can [customise hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/customiseHearingBundle)",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling${adaSuffix}.svg)\r\n\r\n## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing. You should first review the documents in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n If you happy with the documents, [generate the hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle).\r\n\n\nIf you want to add or remove any documents, you can [customise hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/customiseHearingBundle)",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3689,7 +3689,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_stitching_failed",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.svg)\r\n\r\n## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing.\r\n\r\n[Generate hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle)",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling${adaSuffix}.svg)\r\n\r\n## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing.\r\n\r\n[Generate hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle)",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3697,7 +3697,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_finalBundling_in_progress",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.svg)\r\n\r\n## What to do next\r\nThe hearing bundle is being generated. You will soon be able to view the hearing bundle in the documents tab.\r\n\r\nYou and the other parties will be notified when the hearing bundle is available.\r\n\r\nIf the bundle fails to generate, you will be notified and need to generate the bundle again.</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling${adaSuffix}.svg)\r\n\r\n## What to do next\r\nThe hearing bundle is being generated. You will soon be able to view the hearing bundle in the documents tab.\r\n\r\nYou and the other parties will be notified when the hearing bundle is available.\r\n\r\nIf the bundle fails to generate, you will be notified and need to generate the bundle again.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3705,7 +3705,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_finalBundling",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.svg)\r\n\r\n## What happens next\r\nA Legal Officer will generate a hearing bundle for all parties to use at the hearing.",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling${adaSuffix}.svg)\r\n\r\n## What happens next\r\nA Legal Officer will generate a hearing bundle for all parties to use at the hearing.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3833,7 +3833,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_finalBundling",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.svg)\r\n\r\n## What happens next\r\nA Legal Officer will generate a hearing bundle for all parties to use at the hearing.\r\n\r\n<br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling${adaSuffix}.svg)\r\n\r\n## What happens next\r\nA Legal Officer will generate a hearing bundle for all parties to use at the hearing.\r\n\r\n<br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -4102,7 +4102,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_finalBundling",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_listed.svg)\r\n\r\n## Do this next\r\nThe case has now been listed. Go to the documents tab to see the Hearing notice, which includes the hearing details.\r\n\r\n[Go to the documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents)",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling${adaSuffix}.svg)\r\n\r\n## Do this next\r\nThe case has now been listed. Go to the documents tab to see the Hearing notice, which includes the hearing details.\r\n\r\n[Go to the documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents)",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5304,7 +5304,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_unsuitable_ada",
-    "Label": "## Current progress of the case\r\n\r\n![Respondent review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_appealResponseUploaded${adaSuffix}.svg)\r\n\r\n## Do this next\r\nA Judge has determine that this appeal is unsuitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>The appeal will be transferred out of the accelerated detained appeal process. All parties will be notified when this happens.",
+    "Label": "## Current progress of the case\r\n\r\n![Respondent review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_appealResponseUploaded${adaSuffix}.svg)\r\n\r\n## Do this next\r\nA Judge has determined that this appeal is unsuitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>The appeal will be transferred out of the accelerated detained appeal process. All parties will be notified when this happens.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5312,7 +5312,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_suitable_ada",
-    "Label": "## Current progress of the case\r\n\r\n![Respondent review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_appealResponseUploaded${adaSuffix}.svg)\r\n\r\n## Do this next\r\nA Judge has determine that this appeal is suitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>The tribunal will generate the hearing bundle. You will be notified when it is ready to view.",
+    "Label": "## Current progress of the case\r\n\r\n![Respondent review](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_preHearing${adaSuffix}.svg)\r\n\r\n## Do this next\r\nA Judge has determined that this appeal is suitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>The tribunal will generate the hearing bundle. You will be notified when it is ready to view.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5320,7 +5320,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_respondentReview_unsuitable_ada",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse${adaSuffix}.svg)\r\n\r\n## Do this next\r\nA Judge has determine that this appeal is unsuitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>The appeal will be transferred out of the accelerated detained appeal process. All parties will be notified when this happens.",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse${adaSuffix}.svg)\r\n\r\n## Do this next\r\nA Judge has determined that this appeal is unsuitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>The appeal will be transferred out of the accelerated detained appeal process. All parties will be notified when this happens.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5328,7 +5328,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_prepareForHearing_suitable_ada",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse${adaSuffix}.svg)\r\n\r\n## Do this next\r\nThis appeal has been determined suitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>A Legal Officer will generate a hearing bundle for all parties to use at the hearing.",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_preHearing${adaSuffix}.svg)\r\n\r\n## Do this next\r\nThis appeal has been determined suitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>A Legal Officer will generate a hearing bundle for all parties to use at the hearing.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5336,7 +5336,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_respondentReview_unsuitable_ada",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview${adaSuffix}.svg)\r\n\r\n## Do this next\r\nA Judge has determine that this appeal is unsuitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>The appeal will be transferred out of the accelerated detained appeal process. All parties will be notified when this happens.",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview${adaSuffix}.svg)\r\n\r\n## Do this next\r\nA Judge has determined that this appeal is unsuitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>The appeal will be transferred out of the accelerated detained appeal process. All parties will be notified when this happens.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5344,7 +5344,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_prepareForHearing_suitable_ada",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview${adaSuffix}.svg)\r\n\r\n## Do this next\r\nA Judge has determine that this appeal is suitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>The tribunal will generate the hearing bundle. You will be notified when it is ready to view.",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_preHearing${adaSuffix}.svg)\r\n\r\n## Do this next\r\nA Judge has determined that this appeal is suitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>The tribunal will generate the hearing bundle. You will be notified when it is ready to view.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5352,7 +5352,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_prepareForHearing_suitable_ada",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview${adaSuffix}.svg)\r\n\r\n## What happens next\r\nThis appeal has been determined suitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>A Legal Officer will generate a hearing bundle for all parties to use at the hearing.",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_preHearing${adaSuffix}.svg)\r\n\r\n## What happens next\r\nThis appeal has been determined suitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>A Legal Officer will generate a hearing bundle for all parties to use at the hearing.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5368,7 +5368,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_respondentReview_unsuitable_ada",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse${adaSuffix}.svg)\r\n\r\n## Do this next\r\nA Judge has determine that this appeal is unsuitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>The appeal will be transferred out of the accelerated detained appeal process. All parties will be notified when this happens.",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse${adaSuffix}.svg)\r\n\r\n## Do this next\r\nA Judge has determined that this appeal is unsuitable to continue as an accelerated detained appeal. The reasons for this decision are available to view in the documents tab.<br><br>The appeal will be transferred out of the accelerated detained appeal process. All parties will be notified when this happens.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5376,7 +5376,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_prepareForHearing_suitable_ada",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse${adaSuffix}.svg)\r\n\r\n## Do this next\r\nYou must create a case summary for the judge to use at the hearing.\n \n[Create case summary](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/createCaseSummary)",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_preHearing${adaSuffix}.svg)\r\n\r\n## Do this next\r\nYou must create a case summary for the judge to use at the hearing.\n \n[Create case summary](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/createCaseSummary)",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5384,7 +5384,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_respondentReview_ada_suitability_pending",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview_appeal_response.svg)\r\n\r\n## Do this next\r\nThe Home Office has reviewed its decision, You can access the Home Office review in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n A judge will now review the case and determine if it is suitable to continue as an accelerated detained appeal. You will be notified when a decision has been made.",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_appealResponseUploaded${adaSuffix}.svg)\r\n\r\n## Do this next\r\nThe Home Office has reviewed its decision, You can access the Home Office review in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n A judge will now review the case and determine if it is suitable to continue as an accelerated detained appeal. You will be notified when a decision has been made.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5392,7 +5392,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_respondentReview_ada_suitability_pending",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview_appeal_response.svg)\r\n\r\n## What happens next\r\nA judge will review the case and determine if it is suitable to continue as an accelerated detained appeal.",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_appealResponseUploaded${adaSuffix}.svg)\r\n\r\n## What happens next\r\nA judge will review the case and determine if it is suitable to continue as an accelerated detained appeal.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5400,7 +5400,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_respondentReview_ada_suitability_pending",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview_appeal_response.svg)\r\n\r\n## What happens next\r\nA judge will review the case and determine if it is suitable to continue as an accelerated detained appeal.",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_appealResponseUploaded${adaSuffix}.svg)\r\n\r\n## What happens next\r\nA judge will review the case and determine if it is suitable to continue as an accelerated detained appeal.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5408,7 +5408,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeall_respondentReview_ada_suitability_pending",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview_appeal_response.svg)\r\n\r\n## What happens next\r\nA judge will review the case and determine if it is suitable to continue as an accelerated detained appeal.",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_appealResponseUploaded${adaSuffix}.svg)\r\n\r\n## What happens next\r\nA judge will review the case and determine if it is suitable to continue as an accelerated detained appeal.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5416,7 +5416,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_respondentReview_ada_suitability_pending",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview_appeal_response.svg)\r\n\r\n## Do this next\r\nYou must now [determine if it suitable to continue as an accelerated detained appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/adaSuitabilityReview).",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_appealResponseUploaded${adaSuffix}.svg)\r\n\r\n## Do this next\r\nYou must now [determine if it suitable to continue as an accelerated detained appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/adaSuitabilityReview).",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
