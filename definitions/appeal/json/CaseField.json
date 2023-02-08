@@ -113,6 +113,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCompany", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepName", "Label": "Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "internalContactDetailsTitle", "Label": "Enter the appellant's contact details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "internalAppellantEmail", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "internalAppellantMobileNumber", "Label": "Mobile number", "FieldType": "Text", "RegularExpression": "^((\\+44(\\s\\(0\\)\\s|\\s0\\s|\\s)?)|0)7\\d{3}(\\s)?\\d{6}$", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCompanyName", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCompanyAddress", "Label": "Company Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC"},
 
@@ -4690,6 +4694,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionDocs", "Label": "Notice of Decision", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionDocument", "Label": "Notice of Decision", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionExplanation", "Label": "Reason you cannot provide the Notice of Decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheAppealFormTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheAppealFormDocs", "Label": "Appeal Form", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "deportationOrderTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "deportationOrderOptions", "Label": "Has a deportation order been made against the appellant?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},

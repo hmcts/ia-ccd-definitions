@@ -119,7 +119,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "homeOfficeReferenceNumber", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "homeOfficeReferenceNumber", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "homeOfficeDecisionLetterImage", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "homeOfficeDecisionLetterImage", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "homeOfficeDecisionDate", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "homeOfficeDecisionDate", "UserRole": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "homeOfficeDecisionDate", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
@@ -462,6 +461,31 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantHasFixedAddress", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantHasFixedAddress", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantHasFixedAddress", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "internalContactDetailsTitle", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "internalContactDetailsTitle", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "internalContactDetailsTitle", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "internalContactDetailsTitle", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "internalAppellantEmail", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "internalAppellantEmail", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "internalAppellantEmail", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "internalAppellantEmail", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "internalAppellantMobileNumber", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "internalAppellantMobileNumber", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "internalAppellantMobileNumber", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "internalAppellantMobileNumber", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheAppealFormTitle", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheAppealFormTitle", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheAppealFormTitle", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheAppealFormTitle", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheAppealFormDocs", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheAppealFormDocs", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheAppealFormDocs", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheAppealFormDocs", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantHasFixedAddress", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantHasFixedAddress", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "R"},
@@ -4193,7 +4217,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "endAppealDate", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "tribunalDocuments", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "tribunalDocuments", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "tribunalDocuments", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "tribunalDocuments", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "tribunalDocuments", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "tribunalDocuments", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "tribunalDocuments", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
