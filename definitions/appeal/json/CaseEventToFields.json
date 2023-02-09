@@ -345,7 +345,22 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "cantSeePaymentByAccount", "PageFieldDisplayOrder": 9, "DisplayContext": "READONLY", "PageID": "enterPbaNumber", "FieldShowCondition": "hasPbaAccounts!=\"No\"",  "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "pbaAdvice", "PageFieldDisplayOrder": 10, "DisplayContext": "READONLY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "hasPbaAccounts!=\"No\"" ,"ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "editYourAppeal", "PageFieldDisplayOrder": 11, "DisplayContext": "READONLY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "hasPbaAccounts!=\"No\"" ,"ShowSummaryChangeOption": "N"},
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "CaseEventID": "paymentAppeal",
+    "CaseFieldID": "appealType",
+    "CaseEventFieldLabel": "Type of appeal",
+    "PageFieldDisplayOrder": 11,
+    "DisplayContext": "MANDATORY",
+    "PageID": "enterPbaNumber",
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "supportPaymentAccount=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "ShowSummaryChangeOption": "N",
+    "Publish": "Y",
+    "RetainHiddenValue": "Y"
+  },
+  
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "submissionOutOfTime", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "submissionOutOfTimePage", "PageLabel": "Your appeal is out of time", "PageDisplayOrder": 1, "FieldShowCondition": "applicationOutOfTimeText=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "PageShowCondition": "submissionOutOfTime=\"Yes\"", "ShowSummaryChangeOption": "N"},
   {
     "LiveFrom": "01/01/2018",
