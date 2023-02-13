@@ -12667,6 +12667,18 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "ftpaApplicationDeadline", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "ftpaApplicationDeadline", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "ftpaApplicationDeadline", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "ftpaApplicationDeadline", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealTypeForFilter", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealTypeForFilter", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealTypeForFilter", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealTypeForFilter", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealTypeForFilter", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealTypeForFilter", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealTypeForFilter", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealTypeForFilter", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealTypeForFilter", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealTypeForFilter", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealTypeForFilter", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealTypeForFilter", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"}
 ]
