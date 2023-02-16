@@ -5440,7 +5440,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "transferOutOfAdaDate", "Label": "Date transferred out of ADA", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasTransferredOutOfAda", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicationDeadline", "Label": "Internal flag managed by API to set FTPA deadline dynamically based on appealDate", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicationDeadline", "Label": "Internal flag managed by API to set FTPA deadline dynamically based on appealDate", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
 
-
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "markAppealAsAdaExplanation", "Label": "Explain why this appeal is being marked an accelerated detained appeal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateMarkedAsAda", "Label": "Date marked as ADA", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonAppealMarkedAsAda", "Label": "Reason appeal marked as ADA", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
 ]
