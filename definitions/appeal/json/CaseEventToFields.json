@@ -1411,6 +1411,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "adaSuitabilityReview", "CaseFieldID": "suitabilityReviewReason", "PageFieldDisplayOrder": 4, "DisplayContext": "MANDATORY", "PageID": "suitabilityReview", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "transferOutOfAda", "CaseFieldID": "transferOutOfAdaReason", "CaseEventFieldLabel": "Why is this appeal being transferred out of the accelerated detained appeal process?", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "transferOutOfAda", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "transferOutOfAda", "CaseFieldID": "transferOutOfAdaMoreDetails", "CaseEventFieldLabel": "Provide more details", "PageFieldDisplayOrder": 2, "DisplayContext": "OPTIONAL", "PageID": "transferOutOfAda", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "transferOutOfAda", "CaseFieldID": "transferOutOfAdaMoreDetails", "CaseEventFieldLabel": "Provide more details", "PageFieldDisplayOrder": 2, "DisplayContext": "OPTIONAL", "PageID": "transferOutOfAda", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealAsAda", "CaseFieldID": "markAppealAsAdaExplanation", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "markAppealAsAda","PageDisplayOrder": 1,"ShowSummaryChangeOption": "Y"}
 ]
