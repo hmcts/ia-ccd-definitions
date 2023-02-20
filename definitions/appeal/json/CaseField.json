@@ -5444,5 +5444,8 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "markAppealAsAdaExplanation", "Label": "Explain why this appeal is being marked an accelerated detained appeal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateMarkedAsAda", "Label": "Date marked as ADA", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonAppealMarkedAsAda", "Label": "Reason appeal marked as ADA", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonAppealMarkedAsAda", "Label": "Reason appeal marked as ADA", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adaHearingRequirementsSubmitted", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+
 ]
