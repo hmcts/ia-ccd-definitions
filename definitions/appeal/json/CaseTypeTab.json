@@ -807,6 +807,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "transferOutOfAdaDate", "TabFieldDisplayOrder": 157, "FieldShowCondition": "isAcceleratedDetainedAppeal=\"No\" AND hasTransferredOutOfAda=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "transferOutOfAdaReason", "TabFieldDisplayOrder": 158, "FieldShowCondition": "isAcceleratedDetainedAppeal=\"No\" AND hasTransferredOutOfAda=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "transferOutOfAdaMoreDetails", "TabFieldDisplayOrder": 159, "FieldShowCondition": "isAcceleratedDetainedAppeal=\"No\" AND hasTransferredOutOfAda=\"Yes\" AND transferOutOfAdaMoreDetails!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "dateMarkedAsAda", "TabFieldDisplayOrder": 160, "FieldShowCondition": "isAcceleratedDetainedAppeal=\"Yes\" AND dateMarkedAsAda!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonAppealMarkedAsAda", "TabFieldDisplayOrder": 161, "FieldShowCondition": "isAcceleratedDetainedAppeal=\"Yes\" AND reasonAppealMarkedAsAda!=\"\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "detentionDetailsTitle", "TabFieldDisplayOrder": 166, "FieldShowCondition": "appellantInDetention=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "detentionStatus", "TabFieldDisplayOrder": 166, "FieldShowCondition": "appellantInDetention=\"Yes\""},
