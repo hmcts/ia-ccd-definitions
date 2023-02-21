@@ -47,7 +47,7 @@
     "Name": "Submit your appeal",
     "Description": "Submit your appeal",
     "DisplayOrder": 3,
-    "PreConditionState(s)": "appealStarted",
+    "PreConditionState(s)": "appealStarted;appealStartedByAdmin",
     "PostConditionState": "appealSubmitted",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
