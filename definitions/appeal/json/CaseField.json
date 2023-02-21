@@ -124,6 +124,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepReferenceNumberTitle", "Label": "# Your own reference number", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepReferenceNumber", "Label": "Legal representative reference", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDeclaration", "Label": " ", "FieldType": "MultiSelectList", "FieldTypeParameter": "legalRepDeclaration", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adminDeclaration", "Label": " ", "FieldType": "MultiSelectList", "FieldTypeParameter": "adminDeclaration", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDirectionToPayHeader", "Label": "### Next step - payment", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDirectionToPayDescription", "Label": "You must pay for your appeal.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDirectionToPayFeeHeader", "Label": "### Fee to pay", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -4844,6 +4845,7 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_aip", "Label": "![The appellant in this case is representing themselves](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/journey_type_appellant_in_person.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_aip_ada", "Label": "![The appellant in this ADA case is representing themselves](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/AiP-manual-ADA-journey-flag.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_legal_rep", "Label": "![The appellant in this case is legally represented](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/journey_type_legally_represented.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_ada", "Label": "![This case is an Accelerated detained appeal](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_acceleratedDetainedAppeal.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_ada_lr", "Label": "![This case is an Accelerated detained appeal](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/journey_type_acceleratedDetainedAppeal.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
