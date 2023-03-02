@@ -1842,7 +1842,6 @@
     "DisplayOrder": 54,
     "PreConditionState(s)": "appealSubmitted",
     "PostConditionState": "*",
-    "EventEnablingCondition": "appealOutOfCountry=\"No\"",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "1,1,1,1",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
@@ -1852,6 +1851,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "EventEnablingCondition": "appealOutOfCountry=\"No\" AND appellantInDetention!=\"Yes\" AND appealType!=\"ageAssessment\"",
     "EndButtonLabel": "Request Home Office data",
     "Publish": "N"
   },
