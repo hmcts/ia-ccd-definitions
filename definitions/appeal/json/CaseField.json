@@ -905,6 +905,22 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_decided_allowed_OOC",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.\r\n\r\n<a href=\"https://www.smartsurvey.co.uk/s/LegalImmigrationAsylum/\" target=\"_blank\">Tell us what you think about the appeals service</a>\r\n\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_decided_dismissed_OOC",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.\r\n\r\n<a href=\"https://www.smartsurvey.co.uk/s/LegalImmigrationAsylum/\" target=\"_blank\">Tell us what you think about the appeals service</a>\r\n\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_ftpa_respondent_submitted_allowed",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.<br/><br/><br/>",
     "FieldType": "Label",
