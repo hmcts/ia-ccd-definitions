@@ -4211,23 +4211,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_decided_allowed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>\r\n",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_decided_allowed_ooc",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply within 28 days from the date the decision and reasons document was uploaded.<br/><br/><br/>\r\n",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_decided_allowed_uk",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply within 14 days from the date the decision and reasons document was uploaded.<br/><br/><br/>\r\n",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 14 days from the date of decision to do this.<br/><br/><br/>\r\n",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -4235,23 +4219,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_decided_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>\r\n",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_decided_dismissed_ooc",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply within 28 days from the date the decision and reasons document was uploaded.<br/><br/><br/>\r\n",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_decided_dismissed_uk",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply within 14 days from the date the decision and reasons document was uploaded.<br/><br/><br/>\r\n",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 14 days from the date of decision to do this.<br/><br/><br/>\r\n",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -4363,23 +4331,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_post_hearing_details_recorded_admin_decided_allowed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_post_hearing_details_recorded_admin_decided_allowed_ooc",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply within 28 days from the date the decision and reasons document was uploaded.<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_post_hearing_details_recorded_admin_decided_allowed_uk",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply within 14 days from the date the decision and reasons document was uploaded.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 14 days from the date of decision to do this.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -4387,23 +4339,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_post_hearing_details_recorded_admin_decided_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_post_hearing_details_recorded_admin_decided_dismissed_ooc",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply within 28 days from the date the decision and reasons document was uploaded.<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_post_hearing_details_recorded_admin_decided_dismissed_uk",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply within 14 days from the date the decision and reasons document was uploaded.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed${adaSuffix}.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 14 days from the date of decision to do this.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -4426,48 +4362,16 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "prog_post_hearing_details_recorded_admin_ftpa_submitted_allowed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "ID": "progress_post_hearing_details_recorded_admin_ftpa_submitted_allowed",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 14 days from the date of decision to do this.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "prog_post_hearing_details_recorded_admin_ftpa_submitted_allowed_ooc",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply within 28 days from the date the decision and reasons document was uploaded.<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "prog_post_hearing_details_recorded_admin_ftpa_submitted_allowed_uk",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply within 14 days from the date the decision and reasons document was uploaded.<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "prog_post_hearing_details_recorded_admin_ftpa_submitted_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "prog_post_hearing_details_recorded_admin_ftpa_submitted_dismissed_ooc",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply within 28 days from the date the decision and reasons document was uploaded.<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "prog_post_hearing_details_recorded_admin_ftpa_submitted_dismissed_uk",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe case has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply within 14 days from the date the decision and reasons document was uploaded.<br/><br/><br/>",
+    "ID": "progress_post_hearing_details_recorded_admin_ftpa_submitted_dismissed",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 14 days from the date of decision to do this.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
