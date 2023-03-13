@@ -1658,7 +1658,7 @@
     "Name": "Make a payment",
     "Description": "Make a payment",
     "DisplayOrder": 51,
-    "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;respondentReview;caseBuilding;caseUnderReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;awaitingReasonsForAppeal;reasonsForAppealSubmitted;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingCmaRequirements;cmaRequirementsSubmitted;cmaAdjustmentsAgreed;cmaListed;adjourned",
+    "PreConditionState(s)": "appealSubmitted;pendingPayment;awaitingRespondentEvidence;respondentReview;caseBuilding;caseUnderReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;awaitingReasonsForAppeal;reasonsForAppealSubmitted;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingCmaRequirements;cmaRequirementsSubmitted;cmaAdjustmentsAgreed;cmaListed;adjourned",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
@@ -1671,7 +1671,7 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Pay now",
     "EventEnablingCondition": "journeyType=\"aip\"",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2003,7 +2003,6 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "Publish": "Y"
-
   },
   {
     "LiveFrom": "01/01/2021",
@@ -2024,7 +2023,6 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "Publish": "Y"
-
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2221,8 +2219,7 @@
     "EndButtonLabel": "Submit",
     "Publish": "N",
     "EventEnablingCondition": "paymentStatus!=\"Paid\" AND hasServiceRequestAlready!=\"Yes\" AND eaHuAppealTypePaymentOption!=\"payOffline\" AND journeyType!=\"aip\" AND isServiceRequestTabVisibleConsideringRemissions!=\"No\" AND remissionDecision!=\"approved\" AND remissionDecision!=\"partiallyApproved\""
-  }
-,
+  },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
