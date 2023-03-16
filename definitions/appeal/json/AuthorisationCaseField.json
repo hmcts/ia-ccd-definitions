@@ -9203,8 +9203,9 @@
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "changeOrganisationRequestField", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "changeOrganisationRequestField", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
 
-
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "removeRepresentationDescription", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
+
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "LinkedCasesComponentLauncher", "UserRole": "ia_caselinks_profile", "CRUD": "CRUD"},
 
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "removeLegalRepresentativeDescription", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "removeLegalRepresentativeDescription", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},

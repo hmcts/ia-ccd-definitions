@@ -850,7 +850,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "recordApplicationActionDisabled", "TabFieldDisplayOrder": 9, "FieldShowCondition": "recordApplicationActionDisabled=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "hasApplicationsToDecide", "TabFieldDisplayOrder": 9, "FieldShowCondition": "hasApplicationsToDecide=\"DUMMY_FIELD_TO_HIDE\""},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseLinksTab", "TabLabel": "Case Links", "CaseFieldID": "caseLinks", "DisplayContextParameter" : "#ARGUMENT(READ)", "TabDisplayOrder": 8, "TabFieldDisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseLinksTab", "TabLabel": "Linked Cases", "CaseFieldID": "caseLinks", "DisplayContextParameter" : "#ARGUMENT(LinkedCases)", "TabDisplayOrder": 8, "TabFieldDisplayOrder": 1, "FieldShowCondition": "LinkedCasesComponentLauncher!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseLinksTab", "TabLabel": "Linked Cases", "CaseFieldID": "LinkedCasesComponentLauncher", "DisplayContextParameter" : "#ARGUMENT(LinkedCases)", "TabDisplayOrder": 8, "TabFieldDisplayOrder": 1},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "makeAnApplicationLink", "TabFieldDisplayOrder": 3, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative!=\"appealStarted\" AND currentCaseStateVisibleToLegalRepresentative!=\"appealTakenOffline\" AND currentCaseStateVisibleToHomeOfficeAll!=\"appealTakenOffline\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "decideAnApplicationLink", "TabFieldDisplayOrder": 4, "FieldShowCondition": "hasApplicationsToDecide=\"Yes\""},
