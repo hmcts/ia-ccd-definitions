@@ -925,7 +925,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_decided_allowed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed${adaSuffix}.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadline}.\r\n\r\n<a href=\"https://www.smartsurvey.co.uk/s/LegalImmigrationAsylum/\" target=\"_blank\">Tell us what you think about the appeals service</a>\r\n\r\n",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed${adaSuffix}.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadlineDate}.\r\n\r\n<a href=\"https://www.smartsurvey.co.uk/s/LegalImmigrationAsylum/\" target=\"_blank\">Tell us what you think about the appeals service</a>\r\n\r\n",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -949,7 +949,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_decided_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed${adaSuffix}.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadline}.\r\n\r\n<a href=\"https://www.smartsurvey.co.uk/s/LegalImmigrationAsylum/\" target=\"_blank\">Tell us what you think about the appeals service</a>\r\n\r\n",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed${adaSuffix}.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadlineDate}.\r\n\r\n<a href=\"https://www.smartsurvey.co.uk/s/LegalImmigrationAsylum/\" target=\"_blank\">Tell us what you think about the appeals service</a>\r\n\r\n",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -973,7 +973,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_ftpa_respondent_submitted_allowed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadlineDate}.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -997,7 +997,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_ftpa_respondent_submitted_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadlineDate}.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1326,7 +1326,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficePou_ftpa_appellant_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1350,7 +1350,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeGeneric_ftpa_appellant_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1423,7 +1423,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_case_allowed_homeOfficePou_ftpa_appellant_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1447,7 +1447,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_case_allowed_homeOfficeGeneric_ftpa_appellant_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1527,7 +1527,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_ftpa_respondent_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadlineDate}.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1584,7 +1584,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_case_allowed_legalRep_ftpa_respondent_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadlineDate}.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1664,7 +1664,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficePou_ftpa_appellant_not_admitted",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1688,7 +1688,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeGeneric_ftpa_appellant_not_admitted",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1761,7 +1761,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_case_allowed_homeOfficePou_ftpa_appellant_not_admitted",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1785,7 +1785,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_case_allowed_hoGeneric_ftpa_appellant_not_admitted",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -1865,7 +1865,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_ftpa_respondent_not_admitted",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadlineDate}.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -2179,7 +2179,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficePou_rj_ftpa_appellant_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -2203,7 +2203,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeGeneric_rj_ftpa_appellant_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -2283,7 +2283,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_rj_ftpa_respondent_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been dismissed. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -2971,7 +2971,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_case_allowed_legalRep_ftpa_respondent_not_admitted",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadline}.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant). You must apply by ${ftpaApplicationDeadlineDate}.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3011,6 +3011,14 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_ag",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal submitted stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted${adaSuffix}.svg)\r\n\r\n## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_appealSubmitted_detained",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal submitted stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted${adaSuffix}.svg)\r\n\r\n## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -3747,7 +3755,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficePou_decided_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed${adaSuffix}.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed${adaSuffix}.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3771,7 +3779,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficePou_decided_allowed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed${adaSuffix}.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed${adaSuffix}.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3795,7 +3803,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeGeneric_decided_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed${adaSuffix}.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed${adaSuffix}.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3819,7 +3827,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeGeneric_decided_allowed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed${adaSuffix}.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed${adaSuffix}.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3883,7 +3891,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficePou_ftpa_appellant_submitted_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3907,7 +3915,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficePou_ftpa_appellant_submitted_allowed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3931,7 +3939,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeGeneric_ftpa_appellant_submitted_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3955,7 +3963,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeGeneric_ftpa_appellant_submitted_allowed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadline}.</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\nThe appeal has been decided. You have the right to [apply for permission to appeal to the Upper Tribunal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent). You must apply by ${ftpaApplicationDeadlineDate}.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5884,7 +5892,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "transferOutOfAdaDate", "Label": "Date transferred out of ADA", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasTransferredOutOfAda", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicationDeadline", "Label": "Internal flag managed by API to set FTPA deadline dynamically based on appealDate", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicationDeadlineDate", "Label": "Internal flag managed by API to set FTPA deadline dynamically based on appealDate", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "markAppealAsAdaExplanation", "Label": "Explain why this appeal is being marked an accelerated detained appeal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateMarkedAsAda", "Label": "Date marked as ADA", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
