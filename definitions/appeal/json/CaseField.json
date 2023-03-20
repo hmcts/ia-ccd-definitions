@@ -3423,6 +3423,22 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeGeneric_decided_dismissed_OOC",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.</br></br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeGeneric_decided_allowed_OOC",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.</br></br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_ftpa_respondent_in_progress",
     "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal in progress](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaInProgress.png)\r\n\r\n## What happens next\r\nThe First-tier Tribunal will consider the application and make a decision shortly.\r\nThe application is available to view in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA).<br/><br/><br/>",
     "FieldType": "Label",
