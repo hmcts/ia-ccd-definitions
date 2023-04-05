@@ -828,7 +828,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "dateRemovedDetainedStatus", "TabFieldDisplayOrder": 162, "FieldShowCondition": "appellantInDetention=\"No\" AND dateRemovedDetainedStatus!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsRemovedFromDetention", "TabFieldDisplayOrder": 163, "FieldShowCondition": "appellantInDetention=\"No\" AND reasonsRemovedFromDetention!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "detentionDate", "TabFieldDisplayOrder": 164, "FieldShowCondition": "appellantInDetention=\"Yes\" AND detentionDate=\"*\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "detentionReasons", "TabFieldDisplayOrder": 164, "FieldShowCondition": "appellantInDetention=\"Yes\" AND detentionDate=\"*\" AND detentionReasons=\"*\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "detentionReasons", "TabFieldDisplayOrder": 165, "FieldShowCondition": "appellantInDetention=\"Yes\" AND detentionDate=\"*\" AND detentionReasons=\"*\""},
 
 
 
