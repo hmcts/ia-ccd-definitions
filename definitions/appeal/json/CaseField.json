@@ -5969,8 +5969,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateRemovedDetainedStatus", "Label": "Date detention status removed", "HintText": "For example, 03 04 2023", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonsRemovedFromDetention", "Label": "Reasons for removal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionDate", "Label": " ", "HintText": "For example, 03 04 2023", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionReasons", "Label": " ", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionDate", "Label": "Date appeal marked as detained", "HintText": "For example, 03 04 2023", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionReasons", "Label": "Reasons why appellant is detained", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "prisonNOMSNumberAo", "Label": "NOMS number", "FieldType": "prisonNOMSComplexTypeAo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateCustodialSentenceAo", "Label": "Custodial sentence release date", "FieldType": "custodialSentenceDateComplexTypeAo", "SecurityClassification": "PUBLIC"}
 ]
