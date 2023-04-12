@@ -446,6 +446,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "uploadTheAppealFormDocs", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "uploadAppealForm", "PageDisplayOrder": 48, "ShowSummaryChangeOption": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "decisionHearingFeeOption", "PageFieldDisplayOrder": 1, "PageLabel": "Select PBA number", "DisplayContext": "MANDATORY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "supportPaymentAccount=\"DUMMY_VALUE_TO_HIDE_FIELD\"" ,"ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "journeyType", "PageFieldDisplayOrder": 1, "PageLabel": "Select PBA number", "DisplayContext": "MANDATORY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "supportPaymentAccount=\"DUMMY_FIELD_TO_HIDE\"", "ShowSummaryChangeOption": "N", "Publish": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "feeWithHearing", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "supportPaymentAccount=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "feeWithoutHearing", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "supportPaymentAccount=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "hasPbaAccounts", "PageFieldDisplayOrder": 4, "DisplayContext": "MANDATORY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "supportPaymentAccount=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N"},
@@ -457,7 +458,21 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "cantSeePaymentByAccount", "PageFieldDisplayOrder": 9, "DisplayContext": "READONLY", "PageID": "enterPbaNumber", "FieldShowCondition": "hasPbaAccounts!=\"No\"",  "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "pbaAdvice", "PageFieldDisplayOrder": 10, "DisplayContext": "READONLY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "hasPbaAccounts!=\"No\"" ,"ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "paymentAppeal", "CaseFieldID": "editYourAppeal", "PageFieldDisplayOrder": 11, "DisplayContext": "READONLY", "PageID": "enterPbaNumber", "PageDisplayOrder": 1, "FieldShowCondition": "hasPbaAccounts!=\"No\"" ,"ShowSummaryChangeOption": "N"},
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "CaseEventID": "paymentAppeal",
+    "CaseFieldID": "appealType",
+    "CaseEventFieldLabel": "Type of appeal",
+    "PageFieldDisplayOrder": 11,
+    "DisplayContext": "MANDATORY",
+    "PageID": "enterPbaNumber",
+    "PageDisplayOrder": 1,
+    "FieldShowCondition": "supportPaymentAccount=\"DUMMY_VALUE_TO_HIDE_FIELD\"",
+    "ShowSummaryChangeOption": "N",
+    "Publish": "Y",
+    "RetainHiddenValue": "Y"
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "submissionOutOfTime", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "submissionOutOfTimePage", "PageLabel": "Your appeal is out of time", "PageDisplayOrder": 1, "FieldShowCondition": "applicationOutOfTimeText=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "PageShowCondition": "submissionOutOfTime=\"Yes\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "applicationOutOfTimeText", "CaseEventFieldLabel": "You've missed the deadline for appealing.\r\n\r\nYou can ask for permission to appeal outside of the deadline.\r\n\r\nExplain why you believe your late appeal should be allowed to proceed.", "PageFieldDisplayOrder": 2, "DisplayContext": "READONLY", "PageID": "submissionOutOfTimePage", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "applicationOutOfTimeExplanation", "CaseEventFieldLabel": "You can upload a document or fill out the box below.", "PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "submissionOutOfTimePage", "PageDisplayOrder": 1,"ShowSummaryChangeOption": "N"},
