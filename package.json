@@ -7,6 +7,10 @@
       "iaCaseUrl": "http://ia-case-api:8090",
       "aacUrl": "http://manage-case-assignment:4454"
     },
+    "preview": {
+      "iaCaseUrl": "http://ia-case-api-pr-1273-java",
+      "aacUrl": "http://aac-manage-case-assignment-aat.service.core-compute-aat.internal"
+    },
     "demo": {
       "iaCaseUrl": "http://ia-case-api-demo.service.core-compute-demo.internal",
       "aacUrl": "http://aac-manage-case-assignment-demo.service.core-compute-demo.internal"
@@ -36,6 +40,7 @@
     "generate-json": "yarn --cwd ccd-definition-processor xlsx2json -D ../definitions/appeal/json -i ../definitions/appeal/xlsx/ccd-appeal-config-base.xlsx && pretty-quick --pattern 'appeal/**/json/**.json' && sed -e 's+http://ia-case-api:8090+${CCD_DEF_IA_URL}+g' ./definitions/appeal/json/CaseEvent.json  > ./definitions/appeal/json/CaseEvent.json.new && mv ./definitions/appeal/json/CaseEvent.json.new ./definitions/appeal/json/CaseEvent.json && mv definitions/appeal/json/UserProfile.json definitions/appeal/env/${CCD_ENV:-dev}/UserProfile.json",
     "generate-excel": "yarn --cwd ccd-definition-processor json2xlsx -D ../target/appeal/json -o ../target/appeal/xlsx/ccd-appeal-config-${CCD_ENV:-dev}.xlsx",
     "generate-dev": "CCD_ENV=dev yarn copy-json && CCD_DEF_VERSION=`git branch | grep '* ' | cut -c -16` CCD_ENV=dev CCD_DEF_IA_URL=${IA_CASE_URL:-$npm_package_config_dev_iaCaseUrl} CCD_DEF_AAC_URL=${AAC_URL:-$npm_package_config_dev_aacUrl} yarn generate-excel",
+    "generate-preview": "CCD_ENV=preview yarn copy-json && CCD_DEF_VERSION=`git branch | grep '* ' | cut -c -16` CCD_ENV=preview CCD_DEF_IA_URL=$npm_package_config_preview_iaCaseUrl CCD_DEF_AAC_URL=$npm_package_config_preview_aacUrl yarn generate-excel",
     "generate-demo": "CCD_ENV=demo yarn copy-json && CCD_DEF_VERSION=`git branch | grep '* ' | cut -c -16` CCD_ENV=demo CCD_DEF_IA_URL=$npm_package_config_demo_iaCaseUrl CCD_DEF_AAC_URL=$npm_package_config_demo_aacUrl yarn generate-excel",
     "generate-ithc": "CCD_ENV=ithc yarn copy-json && CCD_DEF_VERSION=`git branch | grep '* ' | cut -c -16` CCD_ENV=ithc CCD_DEF_IA_URL=$npm_package_config_ithc_iaCaseUrl CCD_DEF_AAC_URL=$npm_package_config_ithc_aacUrl yarn generate-excel",
     "generate-perftest": "CCD_ENV=perftest yarn copy-json && CCD_DEF_VERSION=`git branch | grep '* ' | cut -c -16` CCD_ENV=perftest CCD_DEF_IA_URL=$npm_package_config_perftest_iaCaseUrl CCD_DEF_AAC_URL=$npm_package_config_perftest_aacUrl yarn generate-excel",

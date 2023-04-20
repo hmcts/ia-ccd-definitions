@@ -68,6 +68,7 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "contactPreference", "Label": "Communication Preference", "FieldType": "FixedRadioList", "FieldTypeParameter": "contactPreference","SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "contactPreferenceUnRep", "Label": "Communication Preference", "FieldType": "MultiSelectList", "FieldTypeParameter": "contactPreferenceUnRep","SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "email", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "mobileNumber", "Label": "Mobile phone number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
