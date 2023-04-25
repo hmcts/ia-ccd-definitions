@@ -245,10 +245,10 @@
   {"LiveFrom": "01/01/2018", "ID": "previousRepresentation", "ListElementCode": "legalRepCompany", "FieldType": "Text", "ElementLabel": "Company Name", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "previousRepresentation", "ListElementCode": "legalRepReferenceNumber", "FieldType": "Text", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "ID": "prisonNOMSComplexType", "ListElementCode": "prison", "FieldType": "Text", "ElementLabel": "What is your client's NOMS number?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "prisonNOMSComplexType", "ListElementCode": "prison", "FieldType": "Text", "ElementLabel": "What is the appellant's NOMS number?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "prisonNOMSComplexTypeAo", "ListElementCode": "prison", "FieldType": "Text", "ElementLabel": "What is the appellant's NOMS number?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherDetentionFacilityComplexType", "ListElementCode": "other", "FieldType": "Text", "ElementLabel": "Enter the name of the detention facility", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "custodialSentenceDateComplexType", "ListElementCode": "custodialDate", "FieldType": "Date", "ElementLabel": "What is your client's release date?", "Min": "1668176285", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "custodialSentenceDateComplexType", "ListElementCode": "custodialDate", "FieldType": "Date", "ElementLabel": "What is the appellant's release date?", "Min": "1668176285", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "custodialSentenceDateComplexTypeAo", "ListElementCode": "custodialDate", "FieldType": "Date", "ElementLabel": "What is the appellant's release date?", "Min": "1668176285", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "accessCode", "FieldType": "Text", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
