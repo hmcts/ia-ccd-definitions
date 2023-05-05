@@ -2366,7 +2366,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Mark appeal as detained",
-    "EventEnablingCondition": "appellantInDetention!=\"Yes\"",
+    "EventEnablingCondition": "appellantInDetention!=\"Yes\" and isNabaEnabled=\"Yes\"",
     "Publish": "Y"
   },
   {
