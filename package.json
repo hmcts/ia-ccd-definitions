@@ -7,6 +7,10 @@
       "iaCaseUrl": "http://ia-case-api:8090",
       "aacUrl": "http://manage-case-assignment:4454"
     },
+    "preview": {
+      "iaCaseUrl": "http://ia-case-api-pr-1303-java",
+      "aacUrl": "http://aac-manage-case-assignment-aat.service.core-compute-aat.internal"
+    },
     "demo": {
       "iaCaseUrl": "http://ia-case-api-demo.service.core-compute-demo.internal",
       "aacUrl": "http://aac-manage-case-assignment-demo.service.core-compute-demo.internal"
@@ -36,6 +40,7 @@
     "generate-json": "bin/generate-json.sh",
     "generate-excel": "bin/generate-excel.sh",
     "generate-dev": "bin/generate-dev.sh",
+    "generate-preview": "bin/generate-preview.sh",
     "generate-demo": "bin/generate-demo.sh",
     "generate-ithc": "bin/generate-ithc.sh",
     "generate-perftest": "bin/generate-perftest.sh",
