@@ -5804,6 +5804,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAgeAssessmentEnabled", "Label": "Age Assessment Appeal feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAgeAssessmentVisible", "Label": "Age Assessment Appeal condition to determine if AAA page is visible", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isNabaEnabled", "Label": "NABA feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ageAssessment", "Label": "Are you appealing an age assessment decision?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "organisationOnDecisionLetter", "Label": "Respondent", "FieldType": "FixedRadioList", "FieldTypeParameter": "organisationOnDecisionLetterList", "SecurityClassification": "PUBLIC"},
