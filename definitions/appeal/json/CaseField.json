@@ -194,7 +194,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "editableDirections", "Label": "Directions", "FieldType": "Collection", "FieldTypeParameter": "editableDirection", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sendDirectionAction", "Label": "[Send a new direction](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/sendDirection)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sendDirectionExplanation", "Label": "Explain the direction you are issuing", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sendDirectionParties", "Label": "Who are you giving the direction to?", "FieldType": "FixedList", "FieldTypeParameter": "parties", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "directionParties", "Label": "Who are you giving the direction to?", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sendDirectionDateDue", "Label": "By what date must they comply?", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeDirectionDueDateAction", "Label": "[Change a direction due date](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/changeDirectionDueDate)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeDirectionDueDateTitle", "Label": "Select the direction that needs updating.\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
