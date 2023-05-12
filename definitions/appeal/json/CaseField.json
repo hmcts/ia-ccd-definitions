@@ -568,7 +568,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRep_appealSubmitted_pa_noRemission_internal_noc_to_rep",
-    "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted${adaSuffix}.svg)\r\n\r\n## Do this next\r\nYou have submitted your appeal. A Tribunal Caseworker will now review your appeal.\r\n\r\nTo pay for this appeal, please [Make a payment](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateServiceRequest).<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted${adaSuffix}.svg)\r\n\r\n## Do this next\r\nYou have submitted your appeal. A Tribunal Caseworker will now review your appeal.\r\n\r\nTo pay for this appeal, please [make a payment](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateServiceRequest).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
