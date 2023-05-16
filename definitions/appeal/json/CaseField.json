@@ -5992,5 +5992,11 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionDate", "Label": "Date appeal marked as detained", "HintText": "For example, 03 04 2023", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionReasons", "Label": "Reasons why appellant is detained", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "prisonNOMSNumberAo", "Label": "NOMS number", "FieldType": "prisonNOMSComplexTypeAo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateCustodialSentenceAo", "Label": "Custodial sentence release date", "FieldType": "custodialSentenceDateComplexTypeAo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateCustodialSentenceAo", "Label": "Custodial sentence release date", "FieldType": "custodialSentenceDateComplexTypeAo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "noticeOfDecisionUtTransferTitle", "Label": "Upload the Notice of Decision for the expedited section 82A appeal in the Upper Tribunal.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "noticeOfDecisionUtTransferDocument", "Label": "Upload Notice of Decision", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "utAppealReferenceTitle", "Label": "Enter the appeal reference for the expedited section 82A appeal in the Upper Tribunal.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "utAppealReferenceNumber", "Label": "What is the Upper Tribunal appeal reference?", "HintText": "For example, UI-2020-123456", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "utInstructionDate", "Label": "When was the First-tier Tribunal instructed to transfer this appeal to the Upper Tribunal?", "HintText": "For example, 03 04 2023","FieldType": "Date", "SecurityClassification": "PUBLIC"}
 ]
