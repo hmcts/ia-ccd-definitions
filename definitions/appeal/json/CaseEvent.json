@@ -2379,12 +2379,13 @@
     "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;respondentReview;submitHearingRequirements;listing;caseBuilding;caseUnderReview;prepareForHearing;finalBundling;preHearing;decision",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
-    "PostConditionState": "*",
+    "PostConditionState": "ended",
     "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
     "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
+    "EventEnablingCondition": "appealReadyForUtTransfer!=\"Yes\"",
     "Publish": "Y"
   }
 ]
