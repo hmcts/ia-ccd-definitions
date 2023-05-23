@@ -3149,14 +3149,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_homeOfficeAll_appealSubmitted_pendingPayment_aip",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal submitted stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## What happens next\r\nThe appeal is awaiting payment.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
     "ID": "progress_judge_appealSubmitted",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal submitted stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted${adaSuffix}.svg)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will review the appeal and decide if it's valid.<br/><br/><br/>",
     "FieldType": "Label",
@@ -5619,14 +5611,6 @@
     "CaseTypeID": "Asylum",
     "ID": "doThisNowUpdateLegalRepDetails",
     "Label": "![Important message: Do this now. Select Update legal representative details from the Next step dropdown and enter your details. You will not receive important notifications about the appeal until you do this.](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_doThisNow_updateDetails.svg)\r\n\r\n",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "appellantHasNotTakenOverCase",
-    "Label": "![Important message: The appellant is not currently represented.](https://raw.githubusercontent.com/hmcts/ia-aip-frontend/master/app/assets/images/appellantNotCurrentlyRepresented.svg)\r\n\r\n",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
