@@ -3,7 +3,7 @@
     "RoleName" : "idam:caseworker-ia-caseofficer",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-caseofficer",
+    "AccessProfiles": "caseworker-ia-caseofficer,ia_caselinks_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -57,7 +57,7 @@
     "RoleName" : "idam:caseworker-ia-admofficer",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-admofficer",
+    "AccessProfiles": "caseworker-ia-admofficer,ia_caselinks_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -100,7 +100,7 @@
     "RoleName" : "idam:caseworker-ia-iacjudge",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-iacjudge",
+    "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -151,7 +151,7 @@
     "RoleName" : "hmcts-staff",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "GS_profile",
+    "AccessProfiles": "GS_profile,ia_caselinks_profile",
     "ReadOnly": "Y",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -160,7 +160,7 @@
     "RoleName" : "hmcts-admin",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "GS_profile",
+    "AccessProfiles": "GS_profile,ia_caselinks_profile",
     "ReadOnly": "Y",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -169,7 +169,7 @@
     "RoleName" : "hmcts-legal-operations",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "GS_profile",
+    "AccessProfiles": "GS_profile,ia_caselinks_profile",
     "ReadOnly": "Y",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -187,7 +187,7 @@
     "RoleName" : "hmcts-judiciary",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "GS_profile",
+    "AccessProfiles": "GS_profile,ia_caselinks_profile",
     "ReadOnly": "Y",
     "Disabled": "F",
     "CaseAccessCategories": ""
