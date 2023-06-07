@@ -4478,7 +4478,11 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "flagCaseTypeOfFlag", "Label": "Type of flag", "FieldType": "FixedList", "FieldTypeParameter": "legacyCaseFlags", "SecurityClassification": "PUBLIC"},  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "flagCaseAdditionalInformation", "Label": "Additional information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagsTitle", "Label": "## Flags\r\n\r\nThese flags are only visible to the Tribunal.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legacyCaseFlags", "Label": "Directions", "FieldType": "Collection", "FieldTypeParameter": "legacyCaseFlag", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlags", "Label": "Directions", "FieldType": "Collection", "FieldTypeParameter": "caseFlag", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legacyCaseFlags", "Label": "Directions", "FieldType": "Collection", "FieldTypeParameter": "legacyCaseFlag", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagsTabTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlags", "Label": " ", "FieldType": "Flags", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantLevelFlags", "Label": " ", "FieldType": "Flags", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "flagLauncher", "Label": " ", "FieldType": "FlagLauncher", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagAnonymityExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlagComplexCaseExists", "Label": "Internal flag managed by API for the flags display in case", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
