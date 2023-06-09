@@ -68,7 +68,7 @@
     "Name": "Send direction",
     "Description": "Send direction",
     "DisplayOrder": 4,
-    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;adjourned",
+    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingReasonsForAppeal;reasonsForAppealSubmitted;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;adjourned",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
@@ -2076,7 +2076,6 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "Publish": "Y"
-
   },
   {
     "LiveFrom": "01/01/2021",
