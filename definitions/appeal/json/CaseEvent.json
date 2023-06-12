@@ -2335,7 +2335,7 @@
     "ID": "removeDetainedStatus",
     "Name": "Remove detained status",
     "Description": "Remove detained status",
-    "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;respondentReview;caseBuilding;caseUnderReview;prepareForHearing;finalBundling;preHearing;decision;decided",
+    "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;respondentReview;submitHearingRequirements;listing;caseBuilding;caseUnderReview;prepareForHearing;finalBundling;preHearing;decision;decided",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutAboutToSubmitEvent": "5,5,5,5",
@@ -2365,7 +2365,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Mark appeal as detained",
-    "EventEnablingCondition": "appellantInDetention!=\"Yes\" and isNabaEnabled=\"Yes\"",
+    "EventEnablingCondition": "appellantInDetention!=\"Yes\" AND isNabaEnabled=\"Yes\"",
     "Publish": "Y"
   }
 ]
