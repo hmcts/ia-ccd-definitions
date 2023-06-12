@@ -2367,5 +2367,25 @@
     "EndButtonLabel": "Mark appeal as detained",
     "EventEnablingCondition": "appellantInDetention!=\"Yes\" AND isNabaEnabled=\"Yes\"",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "updateDetentionLocation",
+    "Name": "Update detention location",
+    "Description": "Update detention location",
+    "DisplayOrder": 95,
+    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;ended;ftpaSubmitted;ftpaDecided;",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EventEnablingCondition": "appellantInDetention=\"Yes\"",
+    "EndButtonLabel": "Update detention location",
+    "Publish": "Y"
   }
 ]
