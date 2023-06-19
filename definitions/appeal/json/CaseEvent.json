@@ -2387,5 +2387,23 @@
     "EventEnablingCondition": "appellantInDetention=\"Yes\"",
     "EndButtonLabel": "Update detention location",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "markAsReadyForUtTransfer",
+    "Name": "Mark as ready for UT transfer",
+    "Description": "Mark as ready for UT transfer",
+    "DisplayOrder": 95,
+    "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;respondentReview;submitHearingRequirements;listing;caseBuilding;caseUnderReview;prepareForHearing;finalBundling;preHearing;decision",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "PostConditionState": "ended",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "Publish": "Y"
   }
 ]
