@@ -3310,6 +3310,22 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficer_legalrep_ended_marked_ready_for_ut_transfer",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has ended](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/mark_appeal_ready_for_ut_transfer.png)\r\n\r\n## What happens next\nIf you have any outstanding directions from first-tier Tribunal, send any response to the Upper Tribunal by the due date.\n\nAll the relevant documents for this appeal will be transferred to the Upper Tribunal.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_judge_legalOfficer_ended_marked_ready_for_ut_transfer",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has ended](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/mark_appeal_ready_for_ut_transfer.png)\r\n\r\n## What happens next\nAll the relevant documents for this appeal will be transferred to the Upper Tribunal.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_awaitingRespondentEvidence",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 2 of 11 stages - the Awaiting respondent evidence stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_awaitingRespondentEvidence_preUpload${adaSuffix}.svg)\r\n\r\n## What happens next\nThe Home Office will prepare their bundle.<br><br><br>",
     "FieldType": "Label",
@@ -4632,6 +4648,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "endAppealDate", "Label": "Outcome date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "tribunalDocuments", "Label": "Tribunal documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "endAppealDetailsTitle", "Label": "## Ended appeal details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "markReadyForUtTransferTitle", "Label": "## Appeal transfer details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addCaseNoteActionDisabled", "Label": "Internal flag managed by API", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "recordApplicationActionDisabled", "Label": "Internal flag managed by API", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stateBeforeEndAppeal", "Label": "State before End Appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -6020,5 +6037,13 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "prisonNOMSNumberAo", "Label": "NOMS number", "FieldType": "prisonNOMSComplexTypeAo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateCustodialSentenceAo", "Label": "Custodial sentence release date", "FieldType": "custodialSentenceDateComplexTypeAo", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "notificationAttachmentDocuments", "Label": "Notification attachment documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "notificationAttachmentDocuments", "Label": "Notification attachment documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "noticeOfDecisionUtTransferTitle", "Label": "Upload the Notice of Decision for the expedited section 82A appeal in the Upper Tribunal.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "noticeOfDecisionUtTransferDocument", "Label": "Notice of Decision", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "utAppealReferenceTitle", "Label": "Enter the appeal reference for the expedited section 82A appeal in the Upper Tribunal.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "utAppealReferenceNumber", "Label": "Upper Tribunal expedited section 82A appeal reference", "HintText": "For example, UI-2020-123456", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "utInstructionDate", "Label": "Date First-tier Tribunal instructed to transfer appeal", "HintText": "For example, 03 04 2023","FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealReadyForUtTransfer", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealReadyForUtTransferOutcome", "Label": "Outcome of the appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
 ]
