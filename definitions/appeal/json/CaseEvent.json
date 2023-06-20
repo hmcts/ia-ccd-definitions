@@ -2395,7 +2395,7 @@
     "Name": "Mark as ready for UT transfer",
     "Description": "Mark as ready for UT transfer",
     "DisplayOrder": 95,
-    "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;respondentReview;submitHearingRequirements;listing;caseBuilding;caseUnderReview;prepareForHearing;finalBundling;preHearing;decision",
+    "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;respondentReview;submitHearingRequirements;listing;caseBuilding;caseUnderReview;prepareForHearing;finalBundling;preHearing;decision;clarifyingQuestionsAnswersSubmitted;awaitingClarifyingQuestionsAnswers;adjourned;awaitingReasonsForAppeal;reasonsForAppealSubmitted",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
     "PostConditionState": "ended",
