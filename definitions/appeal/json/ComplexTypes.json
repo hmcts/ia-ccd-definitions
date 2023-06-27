@@ -84,11 +84,11 @@
   {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "wantsSms", "FieldType": "YesOrNo", "ElementLabel": "Whether the user wants sms", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "witnessDetails", "ListElementCode": "witnessName", "FieldType": "Text", "ElementLabel": "Name", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "language", "FieldType": "FixedList", "FieldTypeParameter": "isoLanguages", "ElementLabel": "Language", "FieldShowCondition": "language=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "languages", "FieldType": "DynamicList", "ElementLabel": "Language", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "languageDialect", "FieldType": "Text", "ElementLabel": "Dialect", "HintText": "Enter N/A if no dialect required", "FieldShowCondition": "languageDialect=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "languageManualEnter", "FieldType": "MultiSelectList", "FieldTypeParameter": "isLanguageEnteredManually", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "languageDescription", "FieldType": "TextArea", "ElementLabel": " ", "FieldShowCondition": "languageManualEnter=\"Yes\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguageElement", "ListElementCode": "language", "FieldType": "FixedList", "FieldTypeParameter": "isoLanguages", "ElementLabel": "Language", "FieldShowCondition": "language=\"HIDE_LEGACY_FIELD\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguageElement", "ListElementCode": "interpreterLanguageRd", "FieldType": "DynamicList", "ElementLabel": "Language", "HintText": "Enter the language that will need to be interpreted. If this language is not listed you can enter it manually.", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguageElement", "ListElementCode": "languageDialect", "FieldType": "Text", "ElementLabel": "Dialect", "HintText": "Enter N/A if no dialect required", "FieldShowCondition": "languageDialect=\"HIDE_LEGACY_FIELD\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguageElement", "ListElementCode": "languageManualEnter", "FieldType": "MultiSelectList", "FieldTypeParameter": "isLanguageEnteredManually", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguageElement", "ListElementCode": "manualLanguageDescription", "FieldType": "TextArea", "ElementLabel": " ", "FieldShowCondition": "languageManualEnter=\"Yes\"", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "ID": "datesToAvoid", "ListElementCode": "dateToAvoid", "FieldType": "Date", "ElementLabel": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "datesToAvoid", "ListElementCode": "dateToAvoidReason", "FieldType": "TextArea", "ElementLabel": "Reason", "SecurityClassification": "PUBLIC"},
