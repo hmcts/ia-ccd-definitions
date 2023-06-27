@@ -2259,7 +2259,7 @@
     "Name": "Legacy case flags migration",
     "Description": "Legacy case flags migration",
     "DisplayOrder": 99,
-    "PreConditionState(s)": "appealStarted;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;ended;appealTakenOffline;awaitingReasonsForAppeal;reasonsForAppealSubmitted;ftpaSubmitted;ftpaDecided;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingCmaRequirements;cmaRequirementsSubmitted;cmaAdjustmentsAgreed;cmaListed;adjourned;pendingPayment",
+    "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "N",
