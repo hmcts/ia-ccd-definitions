@@ -101,6 +101,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDetailsTitle", "Label": " \r\nEnter your details.", "HintText": "Enter your details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCompany", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepName", "Label": "Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepMobileNumber", "Label": "Contact number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCompanyName", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCompanyAddress", "Label": "Company Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC"},
@@ -4552,6 +4553,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateLegalRepCompany", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateLegalRepName", "Label": "Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateLegalRepEmailAddress", "Label": "Email", "HintText": "This is for correspondence only. You cannot change your sign-in email.", "RegularExpression":  "^([a-zA-Z0-9\\_\\-\\.]+)@([a-zA-Z0-9\\_\\-\\.]+)\\.([a-zA-Z]{2,5})$", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateLegalRepMobileNumber", "Label": "Contact number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateLegalRepReferenceNumber", "Label": "Own reference", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adjournHearingWithoutDateReasonsTitle", "Label": "The hearing will be adjourned and a new hearing date can be added in the future.\r\nBoth parties will be notified and a Notice of Adjournment will be generated.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adjournHearingWithoutDateReasons", "Label": "Reasons for adjournment", "HintText": "This will be visible to both parties", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
