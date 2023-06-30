@@ -83,8 +83,14 @@
   {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "wantsEmail", "FieldType": "YesOrNo", "ElementLabel": "Whether the user wants emails", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "wantsSms", "FieldType": "YesOrNo", "ElementLabel": "Whether the user wants sms", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "witnessDetails", "ListElementCode": "witnessName", "FieldType": "Text", "ElementLabel": "Name", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "language", "FieldType": "FixedList", "FieldTypeParameter": "isoLanguages", "ElementLabel": "Language", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "languageDialect", "FieldType": "Text", "ElementLabel": "Dialect", "HintText": "Enter N/A if no dialect required", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguageElement", "ListElementCode": "interpreterLanguageRd", "FieldType": "DynamicList", "ElementLabel": "Language", "FieldShowCondition": "languageManualEnter!=\"Yes\"", "HintText": "Enter the language that will need to be interpreted. If this language is not listed you can enter it manually.", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguageElement", "ListElementCode": "languageManualEnter", "FieldType": "MultiSelectList", "FieldTypeParameter": "isLanguageEnteredManually", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguageElement", "ListElementCode": "manualLanguageDescription", "FieldType": "TextArea", "ElementLabel": " ", "FieldShowCondition": "languageManualEnter=\"Yes\"", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "ID": "datesToAvoid", "ListElementCode": "dateToAvoid", "FieldType": "Date", "ElementLabel": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "datesToAvoid", "ListElementCode": "dateToAvoidReason", "FieldType": "TextArea", "ElementLabel": "Reason", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingRecordingDocument", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Audio file", "RegularExpression": ".mp3", "SecurityClassification": "PUBLIC"},
