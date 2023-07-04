@@ -1980,8 +1980,7 @@
     "DisplayOrder": 72,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "CallBackURLAboutToStartEvent": "${CCD_DEF_AAC_URL}/noc/apply-decision",
-    "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
+
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
     "ShowEventNotes": "Y"
@@ -2253,5 +2252,27 @@
     "ShowSummary": "N",
     "ShowEventNotes": "N",
     "Publish": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "updateS94bStatus",
+    "Name": "Update s94b status",
+    "Description": "Update s94b status",
+    "DisplayOrder": 101,
+    "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;ftpaSubmitted;ftpaDecided;adjourned;awaitingReasonsForAppeal;reasonsForAppealSubmitted;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingCmaRequirements;cmaRequirementsSubmitted;cmaAdjustmentsAgreed;cmaListed",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
+    "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit",
+    "EventEnablingCondition": "isS94bStatusUpdatable!=\"No\"",
+    "Publish": "Y"
   }
 ]
