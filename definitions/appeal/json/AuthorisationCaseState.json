@@ -6,6 +6,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealStarted", "UserRole": "caseworker-caa", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealStarted", "UserRole": "caseworker-approver", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealStarted", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealStarted", "UserRole": "caseworker-ia-system", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealSubmitted", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealSubmitted", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealSubmitted", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
@@ -26,6 +27,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealSubmitted", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealSubmitted", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealSubmitted", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealSubmitted", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingRespondentEvidence", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingRespondentEvidence", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
@@ -47,6 +49,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingRespondentEvidence", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingRespondentEvidence", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingRespondentEvidence", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingRespondentEvidence", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "caseBuilding", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "caseBuilding", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
@@ -68,6 +71,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "caseBuilding", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "caseBuilding", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "caseBuilding", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "caseBuilding", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "caseUnderReview", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "caseUnderReview", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
@@ -89,6 +93,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "caseUnderReview", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "caseUnderReview", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "caseUnderReview", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "caseUnderReview", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "respondentReview", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "respondentReview", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
@@ -110,6 +115,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "respondentReview", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "respondentReview", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "respondentReview", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "respondentReview", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "submitHearingRequirements", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "submitHearingRequirements", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
@@ -131,6 +137,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "submitHearingRequirements", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "submitHearingRequirements", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "submitHearingRequirements", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "submitHearingRequirements", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "listing", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "listing", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
@@ -152,6 +159,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "listing", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "listing", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "listing", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "listing", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "prepareForHearing", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "prepareForHearing", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
@@ -173,6 +181,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "prepareForHearing", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "prepareForHearing", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "prepareForHearing", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "prepareForHearing", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "finalBundling", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "finalBundling", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
@@ -194,6 +203,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "finalBundling", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "finalBundling", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "finalBundling", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "finalBundling", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "preHearing", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "preHearing", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
@@ -215,6 +225,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "preHearing", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "preHearing", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "preHearing", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "preHearing", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "decision", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "decision", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
@@ -236,6 +247,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "decision", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "decision", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "decision", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "decision", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "decided", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "decided", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
@@ -257,6 +269,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "decided", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "decided", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "decided", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "decided", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ended", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ended", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
@@ -271,12 +284,14 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ended", "UserRole": "caseworker-caa", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ended", "UserRole": "caseworker-approver", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ended", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ended", "UserRole": "caseworker-ia-system", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ended", "UserRole": "citizen", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ended", "UserRole": "GS_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ended", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ended", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ended", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ended", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ended", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
@@ -291,12 +306,14 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "caseworker-caa", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "caseworker-approver", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "caseworker-ia-system", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "citizen", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "GS_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "appealTakenOffline", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingReasonsForAppeal", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingReasonsForAppeal", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
@@ -305,6 +322,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingReasonsForAppeal", "UserRole": "caseworker-caa", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingReasonsForAppeal", "UserRole": "caseworker-approver", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingReasonsForAppeal", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingReasonsForAppeal", "UserRole": "caseworker-ia-system", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingReasonsForAppeal", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingReasonsForAppeal", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingReasonsForAppeal", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "CRU"},
@@ -316,6 +334,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingReasonsForAppeal", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingReasonsForAppeal", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingReasonsForAppeal", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingReasonsForAppeal", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "reasonsForAppealSubmitted", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "reasonsForAppealSubmitted", "UserRole": "citizen", "CRUD": "CRU"},
@@ -323,6 +342,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "reasonsForAppealSubmitted", "UserRole": "caseworker-caa", "CRUD": "RU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "reasonsForAppealSubmitted", "UserRole": "caseworker-approver", "CRUD": "RU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "reasonsForAppealSubmitted", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "reasonsForAppealSubmitted", "UserRole": "caseworker-ia-system", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "reasonsForAppealSubmitted", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "reasonsForAppealSubmitted", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "reasonsForAppealSubmitted", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "CRU"},
@@ -335,6 +355,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "reasonsForAppealSubmitted", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "reasonsForAppealSubmitted", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "reasonsForAppealSubmitted", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "reasonsForAppealSubmitted", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaSubmitted", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaSubmitted", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
@@ -350,11 +371,13 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaSubmitted", "UserRole": "caseworker-caa", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaSubmitted", "UserRole": "caseworker-approver", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaSubmitted", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaSubmitted", "UserRole": "caseworker-ia-system", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaSubmitted", "UserRole": "GS_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaSubmitted", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaSubmitted", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaSubmitted", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaSubmitted", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaSubmitted", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaDecided", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaDecided", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
@@ -370,11 +393,13 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaDecided", "UserRole": "caseworker-caa", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaDecided", "UserRole": "caseworker-approver", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaDecided", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaDecided", "UserRole": "caseworker-ia-system", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaDecided", "UserRole": "GS_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaDecided", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaDecided", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaDecided", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaDecided", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "ftpaDecided", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingClarifyingQuestionsAnswers", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingClarifyingQuestionsAnswers", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
@@ -383,6 +408,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingClarifyingQuestionsAnswers", "UserRole": "caseworker-caa", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingClarifyingQuestionsAnswers", "UserRole": "caseworker-approver", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingClarifyingQuestionsAnswers", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingClarifyingQuestionsAnswers", "UserRole": "caseworker-ia-system", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingClarifyingQuestionsAnswers", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingClarifyingQuestionsAnswers", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingClarifyingQuestionsAnswers", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "CRU"},
@@ -394,6 +420,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingClarifyingQuestionsAnswers", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingClarifyingQuestionsAnswers", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingClarifyingQuestionsAnswers", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingClarifyingQuestionsAnswers", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "clarifyingQuestionsAnswersSubmitted", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "clarifyingQuestionsAnswersSubmitted", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
@@ -402,6 +429,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "clarifyingQuestionsAnswersSubmitted", "UserRole": "caseworker-caa", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "clarifyingQuestionsAnswersSubmitted", "UserRole": "caseworker-approver", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "clarifyingQuestionsAnswersSubmitted", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "clarifyingQuestionsAnswersSubmitted", "UserRole": "caseworker-ia-system", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "clarifyingQuestionsAnswersSubmitted", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "clarifyingQuestionsAnswersSubmitted", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "clarifyingQuestionsAnswersSubmitted", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "CRU"},
@@ -413,6 +441,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "clarifyingQuestionsAnswersSubmitted", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "clarifyingQuestionsAnswersSubmitted", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "clarifyingQuestionsAnswersSubmitted", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "clarifyingQuestionsAnswersSubmitted", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingCmaRequirements", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingCmaRequirements", "UserRole": "citizen", "CRUD": "CRU"},
@@ -421,6 +450,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingCmaRequirements", "UserRole": "caseworker-caa", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingCmaRequirements", "UserRole": "caseworker-approver", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingCmaRequirements", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingCmaRequirements", "UserRole": "caseworker-ia-system", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingCmaRequirements", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingCmaRequirements", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingCmaRequirements", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "CRU"},
@@ -432,6 +462,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingCmaRequirements", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingCmaRequirements", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingCmaRequirements", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "awaitingCmaRequirements", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaRequirementsSubmitted", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaRequirementsSubmitted", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
@@ -440,6 +471,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaRequirementsSubmitted", "UserRole": "caseworker-caa", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaRequirementsSubmitted", "UserRole": "caseworker-approver", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaRequirementsSubmitted", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaRequirementsSubmitted", "UserRole": "caseworker-ia-system", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaRequirementsSubmitted", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaRequirementsSubmitted", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaRequirementsSubmitted", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "CRU"},
@@ -451,6 +483,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaRequirementsSubmitted", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaRequirementsSubmitted", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaRequirementsSubmitted", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaRequirementsSubmitted", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaAdjustmentsAgreed", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaAdjustmentsAgreed", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
@@ -460,6 +493,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaAdjustmentsAgreed", "UserRole": "caseworker-caa", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaAdjustmentsAgreed", "UserRole": "caseworker-approver", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaAdjustmentsAgreed", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaAdjustmentsAgreed", "UserRole": "caseworker-ia-system", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaAdjustmentsAgreed", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaAdjustmentsAgreed", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaAdjustmentsAgreed", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "CRU"},
@@ -470,6 +504,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaAdjustmentsAgreed", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaAdjustmentsAgreed", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaAdjustmentsAgreed", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaAdjustmentsAgreed", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaListed", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaListed", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
@@ -477,6 +512,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaListed", "UserRole": "caseworker-caa", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaListed", "UserRole": "caseworker-approver", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaListed", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaListed", "UserRole": "caseworker-ia-system", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaListed", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaListed", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaListed", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "CRU"},
@@ -487,6 +523,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaListed", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaListed", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaListed", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "cmaListed", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "adjourned", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "adjourned", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
@@ -501,12 +538,14 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "adjourned", "UserRole": "caseworker-caa", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "adjourned", "UserRole": "caseworker-approver", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "adjourned", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "adjourned", "UserRole": "caseworker-ia-system", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "adjourned", "UserRole": "citizen", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "adjourned", "UserRole": "GS_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "adjourned", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "adjourned", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "adjourned", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "adjourned", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "adjourned", "UserRole": "ia_caseflags_profile", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "pendingPayment", "UserRole": "caseworker-caa", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "pendingPayment", "UserRole": "caseworker-approver", "CRUD": "CRU"},
@@ -527,5 +566,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "pendingPayment", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "pendingPayment", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "pendingPayment", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "pendingPayment", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "pendingPayment", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseStateID": "pendingPayment", "UserRole": "ia_caseflags_profile", "CRUD": "R"}
 ]
