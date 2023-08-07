@@ -2266,5 +2266,20 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "migrateClearLegacyCaseFlags",
+    "Name": "Legacy case flags clearing",
+    "Description": "Legacy case flags clearing",
+    "DisplayOrder": 99,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit",
+    "Publish": "Y"
   }
 ]
