@@ -2324,5 +2324,24 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Manage Flags",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "updateInterpreterBookingStatus",
+    "Name": "Update Booking Status",
+    "Description": "Update Interpreter Booking Status",
+    "DisplayOrder": 12,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
+    "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Update",
+    "Publish": "Y"
   }
 ]
