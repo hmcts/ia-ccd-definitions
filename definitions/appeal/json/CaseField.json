@@ -142,6 +142,7 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantGroundsUploadTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantGroundsDocuments", "Label": "Grounds of the application", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantGrounds", "Label": "Grounds of the application", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantEvidenceUploadTitle", "Label": "## Upload any other evidence that supports this application (Optional)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantEvidenceDocuments", "Label": "Supporting evidence", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDocuments", "Label": "FTPA Appellant documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
@@ -317,6 +318,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeName", "Label": "Internal data managed by API", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeEmailAddress", "Label": "Email", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "automaticDirectionRequestingHearingRequirements", "Label": "Internal timed event ID for request hearing requirements automatic direction", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "automaticEndAppealTimedEventId", "Label": "Internal timed event ID for automatic ending appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "notificationsSent", "Label": "Internal collection managed by API to track notifications sent using GovNotify for this case", "FieldType": "Collection", "FieldTypeParameter": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeDirectionDueDateActionAvailable", "Label": "Internal flag managed by API to enable/disable changeDirectionDueDateAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sendDirectionActionAvailable", "Label": "Internal flag managed by API to enable/disable sendDirectionAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -752,6 +754,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_paymentPending_aip",
+    "Label": "## Current progress of the case\r\n\r\n![Payment pending](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## What happens next\r\nThe appeal is awaiting payment.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_appealSubmitted_noRemissions_eaHu",
     "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYou have submitted your appeal. A Tribunal Caseworker will now review your appeal.",
     "FieldType": "Label",
@@ -890,6 +900,22 @@
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_decided_dismissed",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.\r\n\r\n<a href=\"https://www.smartsurvey.co.uk/s/LegalImmigrationAsylum/\" target=\"_blank\">Tell us what you think about the appeals service</a>\r\n\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_decided_allowed_OOC",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.\r\n\r\n<a href=\"https://www.smartsurvey.co.uk/s/LegalImmigrationAsylum/\" target=\"_blank\">Tell us what you think about the appeals service</a>\r\n\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_decided_dismissed_OOC",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.\r\n\r\n<a href=\"https://www.smartsurvey.co.uk/s/LegalImmigrationAsylum/\" target=\"_blank\">Tell us what you think about the appeals service</a>\r\n\r\n",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -2734,6 +2760,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_appealSubmitted_pendingPayment_aip",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal submitted stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## What happens next\r\nThe appeal is awaiting payment.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_judge_appealSubmitted",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal submitted stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will review the appeal and decide if it's valid.<br/><br/><br/>",
     "FieldType": "Label",
@@ -3374,6 +3408,22 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficePou_decided_dismissed_OOC",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.</br></br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficePou_decided_allowed_OOC",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.</br></br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeGeneric_decided_dismissed",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.</br></br>",
     "FieldType": "Label",
@@ -3384,6 +3434,22 @@
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeGeneric_decided_allowed",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.</br></br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeGeneric_decided_dismissed_OOC",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.</br></br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeGeneric_decided_allowed_OOC",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3704,6 +3770,22 @@
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_decided_dismissed",
     "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 14 days from the date of decision to do this.<br/><br/><br/>\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_decided_allowed_OOC",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 28 days from the date of decision to do this.<br/><br/><br/>\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_decided_dismissed_OOC",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 28 days from the date of decision to do this.<br/><br/><br/>\r\n",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5152,6 +5234,13 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isServiceRequestTabVisibleConsideringRemissions", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "displayMarkAsPaidEventForPartialRemission", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestFeeRemissionFlagForServiceRequest", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseLinksFlag", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "maintainCaseLinksFlag", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseLinksTabTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "LinkedCasesComponentLauncher", "Label": "Component Launcher (for displaying Linked Cases data)", "FieldType": "ComponentLauncher", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseLinks", "Label": "Linked Cases", "FieldType": "Collection", "FieldTypeParameter": "CaseLink", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantPinInPost", "Label": " ", "FieldType": "pinInPost", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "prevJourneyType", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
