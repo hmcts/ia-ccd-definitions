@@ -6054,6 +6054,16 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "utAppealReferenceNumber", "Label": "Upper Tribunal expedited section 82A appeal reference", "HintText": "For example, UI-2020-123456", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "utInstructionDate", "Label": "Date First-tier Tribunal instructed to transfer appeal", "HintText": "For example, 03 04 2023","FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealReadyForUtTransfer", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealReadyForUtTransferOutcome", "Label": "Outcome of the appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealReadyForUtTransferOutcome", "Label": "Outcome of the appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityHearingTypeTitle", "Label": "At the suitability assessment, a judge determines if the appeal can be fairly decided in the time allowed. It takes place 16 working days after an accelerated detained appeal is submitted.\n\nThe suitability assessment is usually a video hearing. However, it can be decided without a hearing if both parties consent and the Tribunal agrees.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityHearingTypeYesOrNo", "Label": "Do you consent to the suitability assessment being decided without a hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityHearingTypeYesLabel", "Label": "**If you select yes, the suitability assessment will only be decided without a hearing if the respondent and Tribunal agree.**", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityAppellantAttendanceTitle", "Label": "Suitability assessment hearings usually take place by video. The Tribunal will confirm the format in the Notice of Hearing.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityAppellantAttendanceYesOrNo1", "Label": "Will the appellant attend the suitability assessment hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityAppellantAttendanceYesOrNo2", "Label": "Will the appellant attend the suitability assessment hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityInterpreterServicesYesOrNo", "Label": "Will the appellant need an interpreter at the suitability assessment hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityInterpreterServicesLanguage", "Label": "Language and dialect needed", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
 ]
