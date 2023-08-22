@@ -1009,12 +1009,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "listCaseHearingLengthVisible", "TabFieldDisplayOrder": 95, "FieldShowCondition": "listCaseHearingLengthVisible=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "interpreterBookingStatusTitle", "TabFieldDisplayOrder": 75, "FieldShowCondition": "appellantInterpreterSpokenLanguageBookingStatus!=\"\" AND appellantInterpreterSignLanguageBookingStatus!=\"\" AND witnessInterpreterSpokenLanguageBookingStatus1!=\"\" AND witnessInterpreterSignLanguageBookingStatus1!=\"\""},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "appellantInterpreterSpokenLanguageBooking", "TabFieldDisplayOrder": 76, "FieldShowCondition": "appellantInterpreterSpokenLanguageBookingStatus=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "appellantInterpreterSignLanguageBooking", "TabFieldDisplayOrder": 77, "FieldShowCondition": "appellantInterpreterSignLanguageBookingStatus=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "appellantInterpreterSpokenLanguageBookingStatus", "TabFieldDisplayOrder": 78, "FieldShowCondition": "appellantInterpreterSpokenLanguageBookingStatus!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "appellantInterpreterSignLanguageBookingStatus", "TabFieldDisplayOrder": 79, "FieldShowCondition": "appellantInterpreterSignLanguageBookingStatus!=\"\""},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "witnessInterpreterSpokenLanguageBooking1", "TabFieldDisplayOrder": 80, "FieldShowCondition": "witnessInterpreterSpokenLanguageBookingStatus1=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "witnessInterpreterSignLanguageBooking1", "TabFieldDisplayOrder": 81, "FieldShowCondition": "witnessInterpreterSignLanguageBookingStatus1=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "witnessInterpreterSpokenLanguageBookingStatus1", "TabFieldDisplayOrder": 82, "FieldShowCondition": "witnessInterpreterSpokenLanguageBookingStatus1!=\"\""},
@@ -1055,6 +1053,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "witnessInterpreterSignLanguageBooking10", "TabFieldDisplayOrder": 118, "FieldShowCondition": "witnessInterpreterSignLanguageBookingStatus10=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "witnessInterpreterSpokenLanguageBookingStatus10", "TabFieldDisplayOrder": 119, "FieldShowCondition": "witnessInterpreterSpokenLanguageBookingStatus10!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "witnessInterpreterSignLanguageBookingStatus10", "TabFieldDisplayOrder": 120, "FieldShowCondition": "witnessInterpreterSignLanguageBookingStatus10!=\"\""},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "interpreterDetailsTitle", "TabFieldDisplayOrder": 121, "FieldShowCondition": "interpreterDetails!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "interpreterDetails", "TabFieldDisplayOrder": 122, "FieldShowCondition": "interpreterDetails!=\"\""},
+
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "TabLabel": "FTPA", "TabDisplayOrder": 9, "CaseFieldID": "ftpaTabTitle", "TabFieldDisplayOrder": 1, "TabShowCondition": "ftpaAppellantSubmitted=\"Yes\" OR ftpaRespondentSubmitted=\"Yes\"" },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "ftpaAppellantSubmitted", "TabFieldDisplayOrder": 9, "FieldShowCondition": "ftpaAppellantSubmitted=\"DUMMY_VALUE_TO_HIDE_FIELD\""},

@@ -288,5 +288,13 @@
 
   {"LiveFrom": "01/01/2018", "ID": "witness10InterpreterSignLanguage", "CaseEventID": "updateHearingRequirements", "CaseFieldID": "witness10InterpreterSignLanguage", "ListElementCode": "languageRefData", "DisplayContext": "MANDATORY", "FieldDisplayOrder": "1", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "witness10InterpreterSignLanguage", "CaseEventID": "updateHearingRequirements", "CaseFieldID": "witness10InterpreterSignLanguage", "ListElementCode": "languageManualEntry", "DisplayContext": "OPTIONAL", "FieldDisplayOrder": "2", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "witness10InterpreterSignLanguage", "CaseEventID": "updateHearingRequirements", "CaseFieldID": "witness10InterpreterSignLanguage", "ListElementCode": "languageManualEntryDescription", "DisplayContext": "MANDATORY", "FieldDisplayOrder": "3", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "witness10InterpreterSignLanguage", "CaseEventID": "updateHearingRequirements", "CaseFieldID": "witness10InterpreterSignLanguage", "ListElementCode": "languageManualEntryDescription", "DisplayContext": "MANDATORY", "FieldDisplayOrder": "3", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "CaseEventID": "updateInterpreterDetails", "CaseFieldID": "interpreterDetails", "ListElementCode": "interpreterBookingRef", "DisplayContext": "MANDATORY", "FieldDisplayOrder": "1", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "CaseEventID": "updateInterpreterDetails", "CaseFieldID": "interpreterDetails", "ListElementCode": "interpreterGivenNames", "DisplayContext": "MANDATORY", "FieldDisplayOrder": "2", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "CaseEventID": "updateInterpreterDetails", "CaseFieldID": "interpreterDetails", "ListElementCode": "interpreterFamilyName", "DisplayContext": "MANDATORY", "FieldDisplayOrder": "3", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "CaseEventID": "updateInterpreterDetails", "CaseFieldID": "interpreterDetails", "ListElementCode": "interpreterPhoneNumber", "DisplayContext": "MANDATORY", "FieldDisplayOrder": "4", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "CaseEventID": "updateInterpreterDetails", "CaseFieldID": "interpreterDetails", "ListElementCode": "interpreterEmail", "DisplayContext": "MANDATORY", "FieldDisplayOrder": "5", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "CaseEventID": "updateInterpreterDetails", "CaseFieldID": "interpreterDetails", "ListElementCode": "interpreterNote", "DisplayContext": "OPTIONAL", "FieldDisplayOrder": "6", "SecurityClassification": "PUBLIC"}
+
 ]
