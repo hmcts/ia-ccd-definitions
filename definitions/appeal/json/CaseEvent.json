@@ -2324,7 +2324,7 @@
     "Name": "Update s94b status",
     "Description": "Update s94b status",
     "DisplayOrder": 101,
-    "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;ftpaSubmitted;ftpaDecided;adjourned;awaitingReasonsForAppeal;reasonsForAppealSubmitted;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingCmaRequirements;cmaRequirementsSubmitted;cmaAdjustmentsAgreed;cmaListed",
+    "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;ftpaSubmitted;ftpaDecided;adjourned;awaitingReasonsForAppeal;reasonsForAppealSubmitted;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingCmaRequirements;cmaRequirementsSubmitted;cmaAdjustmentsAgreed;cmaListed;decided;appealTakenOffline;ended",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
