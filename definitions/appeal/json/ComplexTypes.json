@@ -264,8 +264,8 @@
   {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterBookingRef", "FieldType": "Text", "ElementLabel": "Booking reference", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterGivenNames", "FieldType": "Text", "ElementLabel": "Given names", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterFamilyName", "FieldType": "Text", "ElementLabel": "Family name", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterPhoneNumber", "FieldType": "Text", "ElementLabel": "Phone number", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterEmail", "FieldType": "Text", "ElementLabel": "Email", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterPhoneNumber", "FieldType": "PhoneUK", "ElementLabel": "Phone number", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterEmail", "FieldType": "Email", "ElementLabel": "Email", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterNote", "FieldType": "Text", "ElementLabel": "Note", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterId", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "interpreterBookingRef=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"}
 
