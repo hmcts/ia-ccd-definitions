@@ -3024,8 +3024,56 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_awaitingAppellantReasonsForAppeal",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 3 of 11 stages - the Case building stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_caseBuilding.svg)\r\n\r\n## What happens next\r\nThe appellant has been directed to submit their Appeal Reasons.<br><br><br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_awaitingAppellantReasonsForAppeal",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 3 of 11 stages - the Case building stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_caseBuilding.svg)\r\n\r\n## What happens next\r\nThe appellant has been directed to submit their Appeal Reasons. <br><br><br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_awaitingAppellantReasonsForAppeal",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 3 of 11 stages - the Case building stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_caseBuilding.svg)\r\n\r\n## What happens next\r\nThe appellant has been directed to submit their Appeal Reasons. You will be notified when the Tribunal has finished reviewing the appellant's answers.<br><br><br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_awaitingClarifyingQuestions",
-    "Label": "## Current progress of the case\r\n\r\n![Clarifying Questions Sent](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_clarifyinigQuestions_sent.svg)\r\n\r\n## Do this next\r\nThe appellant has been directed to answer clarifying questions. You will be notified when their answers are ready to \r\n\r\nreview.",
+    "Label": "## Current progress of the case\r\n\r\n![Clarifying Questions Sent](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_clarifyinigQuestions_sent.svg)\r\n\r\n## What happens next\r\nThe appellant has been directed to answer clarifying questions. You will be notified when their answers are ready to \r\n\r\nreview.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_awaitingClarifyingQuestions",
+    "Label": "## Current progress of the case\r\n\r\n![Clarifying Questions Sent](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_clarifyinigQuestions_sent.svg)\r\n\r\n## What happens next\r\nThe appellant has been directed to answer clarifying questions.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_awaitingClarifyingQuestions",
+    "Label": "## Current progress of the case\r\n\r\n![Clarifying Questions Sent](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_clarifyinigQuestions_sent.svg)\r\n\r\n## What happens next\r\nThe appellant has been directed to answer clarifying questions.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_awaitingClarifyingQuestions",
+    "Label": "## Current progress of the case\r\n\r\n![Clarifying Questions Sent](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_clarifyinigQuestions_sent.svg)\r\n\r\n## What happens next\r\nThe appellant has been directed to answer clarifying questions.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -3122,6 +3170,14 @@
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_aip_caseUnderReview",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 4 of 11 stages - the Case under review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_caseUnderReview.svg)\r\n\r\n## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\n If you believe the case is ready to proceed you should [direct the respondent to review it](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview).\r\n\r\n If you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\n You can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_aip_caseUnderReview",
+    "Label": "## Current progress of the case\r\n\r\n![Respondent evidence uploaded](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_awaitAppealSkeletonArgument.svg)\r\n\r\n## What happens next\r\nThe Tribunal will check that the appellant's answers are suitable. The Home Office will be notified when the Appellant's reasons for appeal have been reviewed..<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
