@@ -855,6 +855,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "physicalOrMentalHealthIssuesFlag", "TabFieldDisplayOrder": 9, "FieldShowCondition": "physicalOrMentalHealthIssues=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "hearingType", "TabFieldDisplayOrder": 9, "FieldShowCondition": "hearingType=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "isReheardAppealEnabled", "TabFieldDisplayOrder": 7, "FieldShowCondition": "isReheardAppealEnabled=\"DUMMY_FIELD_TO_HIDE\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "caseFlagSetAsideReheardExists", "TabFieldDisplayOrder": 7, "FieldShowCondition": "caseFlagSetAsideReheardExists=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "hearingTitle", "TabFieldDisplayOrder": 2, "FieldShowCondition": "hearingType!=\"appointment\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "appointmentTitle", "TabFieldDisplayOrder": 2, "FieldShowCondition": "hearingType=\"appointment\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "appointmentAttendanceTitle", "TabFieldDisplayOrder": 3, "FieldShowCondition": "haveHearingAttendeesAndDurationBeenRecorded=\"Yes\" AND hearingType=\"appointment\""},
