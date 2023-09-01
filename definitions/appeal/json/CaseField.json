@@ -5326,6 +5326,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "witnessInterpreterSignLanguageBookingStatus10", "Label": "${witnessInterpreterSignLanguageBooking10}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "interpreterDetails", "Label": "Interpreter details", "FieldType": "Collection", "FieldTypeParameter": "interpreterDetails", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "interpreterDetailsTitle", "Label": "![]()\r\n## Interpreter details", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "interpreterDetailsTitle", "Label": "![]()\r\n## Interpreter details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepIndividualPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepOrganisationPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
 ]
