@@ -1,0 +1,22 @@
+nodejs:
+  applicationPort: 3000
+  aadIdentityName: ia
+
+xui-webapp:
+  enabled: false
+
+idam-pr:
+  enabled: false
+
+wa:
+  enabled: false
+servicebus:
+  enabled: false
+ccd-message-publisher:
+  enabled: false
+aac-manage-case-assignment:
+  enabled: false
+am-org-role-mapping-service:
+  enabled: false
+redis:
+  enabled: false

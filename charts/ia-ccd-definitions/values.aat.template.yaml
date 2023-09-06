@@ -1,0 +1,31 @@
+nodejs:
+  # Don't modify below here
+  image: ${IMAGE_NAME}
+  ingressHost: ${SERVICE_FQDN}
+
+xui-webapp:
+  enabled: false
+
+idam-pr:
+  enabled: false
+
+et-cos:
+  enabled: false
+
+et-sya:
+  enabled: false
+
+et-sya-api:
+  enabled: false
+wa:
+  enabled: false
+servicebus:
+  enabled: false
+ccd-message-publisher:
+  enabled: false
+aac-manage-case-assignment:
+  enabled: false
+am-org-role-mapping-service:
+  enabled: false
+redis:
+  enabled: false
