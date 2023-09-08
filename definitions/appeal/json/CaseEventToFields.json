@@ -4,8 +4,6 @@
 
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "tribunalReceivedDate", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "CaseEventFieldLabel": "Date appeal received", "PageID": "tribunalReceivedAppeal", "PageLabel": "When did the Tribunal receive the appeal?", "PageDisplayOrder": 2, "PageShowCondition": "isAdmin=\"Yes\"", "ShowSummaryChangeOption": "Y"},
 
-  {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "checklist", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "aboutYourClient", "PageDisplayOrder": 2, "ShowSummaryChangeOption": "N"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "searchParties", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageLabel": "Location", "PageID": "outOfCountry","PageDisplayOrder": 3, "FieldShowCondition": "legalRepReferenceNumber=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "isOutOfCountryEnabled", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "outOfCountry","PageDisplayOrder": 3, "FieldShowCondition": "checklistTitle=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "letterSentOrReceived", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "outOfCountry","PageDisplayOrder": 3, "FieldShowCondition": "homeOfficeDecisionTitle=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N"},
