@@ -3,7 +3,7 @@
     "RoleName" : "idam:caseworker-ia-caseofficer",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-caseofficer,ia_caselinks_profile",
+    "AccessProfiles": "caseworker-ia-caseofficer,ia_caselinks_profile,ia_caseflags_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -12,7 +12,7 @@
     "RoleName" : "idam:caseworker-wa-task-configuration",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-wa-task-configuration",
+    "AccessProfiles": "caseworker-wa-task-configuration,ia_caseflags_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -39,7 +39,7 @@
     "RoleName" : "idam:caseworker-ia-system",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-system",
+    "AccessProfiles": "caseworker-ia-system,ia_caseflags_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -48,7 +48,7 @@
     "RoleName" : "idam:caseworker-ia-system-access",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-system-access",
+    "AccessProfiles": "caseworker-ia-system-access,ia_caseflags_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -57,7 +57,7 @@
     "RoleName" : "idam:caseworker-ia-admofficer",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-admofficer,ia_caselinks_profile",
+    "AccessProfiles": "caseworker-ia-admofficer,ia_caselinks_profile,ia_caseflags_profile",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -100,7 +100,7 @@
   "RoleName" : "idam:caseworker-ia-iacjudge",
   "Authorisation": "",
   "CaseTypeID": "Asylum",
-  "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile",
+  "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile,ia_caseflags_profile",
   "ReadOnly": "N",
   "Disabled": "F",
   "CaseAccessCategories": ""
