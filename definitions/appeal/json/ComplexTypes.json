@@ -85,6 +85,7 @@
 
   {"LiveFrom": "01/01/2018", "ID": "witnessDetails", "ListElementCode": "witnessName", "FieldType": "Text", "ElementLabel": "Given names", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "witnessDetails", "ListElementCode": "witnessFamilyName", "FieldType": "Text", "ElementLabel": "Family name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "witnessDetails", "ListElementCode": "witnessPartyId", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "witnessPartyId=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "language", "FieldType": "FixedList", "FieldTypeParameter": "isoLanguages", "ElementLabel": "Language", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "languageDialect", "FieldType": "Text", "ElementLabel": "Dialect", "HintText": "Enter N/A if no dialect required", "SecurityClassification": "PUBLIC"},
 
@@ -259,6 +260,14 @@
 
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "accessCode", "FieldType": "Text", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "expiryDate", "FieldType": "Date", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterBookingRef", "FieldType": "Text", "ElementLabel": "Booking reference", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterGivenNames", "FieldType": "Text", "ElementLabel": "Given names", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterFamilyName", "FieldType": "Text", "ElementLabel": "Family name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterPhoneNumber", "FieldType": "PhoneUK", "ElementLabel": "Phone number", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterEmail", "FieldType": "Email", "ElementLabel": "Email", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterNote", "FieldType": "Text", "ElementLabel": "Note", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterId", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "interpreterBookingRef=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"}
 
 ]

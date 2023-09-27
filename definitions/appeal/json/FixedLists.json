@@ -779,5 +779,10 @@
   {"LiveFrom": "01/01/2018", "ID": "isLanguageEnteredManually", "ListElementCode": "Yes", "ListElement": "Enter the language manually", "DisplayOrder": 1},
 
   {"LiveFrom": "01/01/2018", "ID": "interpreterLanguageCategory", "ListElementCode": "spokenLanguageInterpreter", "ListElement": "Spoken language interpreter", "DisplayOrder": 1},
-  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguageCategory", "ListElementCode": "signLanguageInterpreter", "ListElement": "Sign language interpreter", "DisplayOrder": 2}
+  {"LiveFrom": "01/01/2018", "ID": "interpreterLanguageCategory", "ListElementCode": "signLanguageInterpreter", "ListElement": "Sign language interpreter", "DisplayOrder": 2},
+
+  {"LiveFrom": "01/01/2018", "ID": "bookingStatus", "ListElementCode": "notRequested", "ListElement": "Not requested", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "bookingStatus", "ListElementCode": "requested", "ListElement": "Requested", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "bookingStatus", "ListElementCode": "booked", "ListElement": "Booked", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "ID": "bookingStatus", "ListElementCode": "cancelled", "ListElement": "Cancelled", "DisplayOrder": 4}
 ]
