@@ -794,5 +794,26 @@
   {"LiveFrom": "01/01/2018", "ID": "bookingStatus", "ListElementCode": "notRequested", "ListElement": "Not requested", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "bookingStatus", "ListElementCode": "requested", "ListElement": "Requested", "DisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "ID": "bookingStatus", "ListElementCode": "booked", "ListElement": "Booked", "DisplayOrder": 3},
-  {"LiveFrom": "01/01/2018", "ID": "bookingStatus", "ListElementCode": "cancelled", "ListElement": "Cancelled", "DisplayOrder": 4}
+  {"LiveFrom": "01/01/2018", "ID": "bookingStatus", "ListElementCode": "cancelled", "ListElement": "Cancelled", "DisplayOrder": 4},
+
+  {"LiveFrom": "01/01/2018", "ID": "hearingYesNoRadioButton", "ListElementCode": "no", "ListElement": "No", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "hearingYesNoRadioButton", "ListElementCode": "yes", "ListElement": "Yes", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "hearingChannelTypeChangingRadioButton", "ListElementCode": "INTER", "ListElement": "In Person", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "hearingChannelTypeChangingRadioButton", "ListElementCode": "VID", "ListElement": "Video", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "hearingChannelTypeChangingRadioButton", "ListElementCode": "TEL", "ListElement": "Telephone", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "ID": "hearingChannelTypeChangingRadioButton", "ListElementCode": "ONPPRS", "ListElement": "On the Papers", "DisplayOrder": 4},
+  {"LiveFrom": "01/01/2018", "ID": "hearingChannelTypeChangingRadioButton", "ListElementCode": "NA", "ListElement": "Not in Attendance", "DisplayOrder": 5},
+  {"LiveFrom": "01/01/2018", "ID": "hearingUpdateReasonList", "ListElementCode": "hearing-type-change", "ListElement": "Different hearing mode required", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "hearingUpdateReasonList", "ListElementCode": "postponement-granted", "ListElement": "Application for postponement granted", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "hearingUpdateReasonList", "ListElementCode": "no-interpreter-available", "ListElement": "No interpreter available in required language", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "ID": "hearingUpdateReasonList", "ListElementCode": "court-closure", "ListElement": "Court disruption/closure", "DisplayOrder": 4},
+  {"LiveFrom": "01/01/2018", "ID": "hearingUpdateReasonList", "ListElementCode": "requirements-change", "ListElement": "Change to hearing request/requirements", "DisplayOrder": 5},
+  {"LiveFrom": "01/01/2018", "ID": "hearingUpdateReasonList", "ListElementCode": "interpreter-change", "ListElement": "Change to interpreter requirements", "DisplayOrder": 6},
+  {"LiveFrom": "01/01/2018", "ID": "hearingUpdateReasonList", "ListElementCode": "hearing-centre-transfer", "ListElement": "Hearing Centre transfer directed/granted", "DisplayOrder": 7},
+  {"LiveFrom": "01/01/2018", "ID": "hearingUpdateReasonList", "ListElementCode": "expedite-granted", "ListElement": "Application to expedite granted", "DisplayOrder": 8},
+  {"LiveFrom": "01/01/2018", "ID": "hearingUpdateReasonList", "ListElementCode": "other", "ListElement": "Other", "DisplayOrder": 9},
+  {"LiveFrom": "01/01/2018", "ID": "hearingDateChangingValues", "ListElementCode": "FirstAvailableDate", "ListElement": "First available date", "DisplayOrder": 1, "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingDateChangingValues", "ListElementCode": "DateToBeFixed", "ListElement": "Date to be fixed", "DisplayOrder": 2, "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingDateChangingValues", "ListElementCode": "ChooseADateRange", "ListElement": "Choose a date range", "DisplayOrder": 3, "SecurityClassification": "PUBLIC"}
+
 ]
