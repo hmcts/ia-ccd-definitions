@@ -836,6 +836,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "caseFlags", "TabFieldDisplayOrder": 2, "FieldShowCondition": "caseFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "appellantLevelFlags", "TabFieldDisplayOrder": 3, "FieldShowCondition": "appellantLevelFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "witnessLevelFlags", "TabFieldDisplayOrder": 3, "FieldShowCondition": "witnessLevelFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "interpreterLevelFlags", "TabFieldDisplayOrder": 3, "FieldShowCondition": "interpreterLevelFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "flagLauncher", "DisplayContextParameter": "#ARGUMENT(READ)", "TabFieldDisplayOrder": 4},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseLinks", "TabLabel": "Linked Cases", "CaseFieldID": "caseLinks", "DisplayContextParameter" : "#ARGUMENT(LinkedCases)", "TabDisplayOrder": 8, "TabFieldDisplayOrder": 1, "FieldShowCondition": "LinkedCasesComponentLauncher!=\"\""},
