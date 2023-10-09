@@ -6089,5 +6089,12 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityInterpreterServicesYesOrNo", "Label": "Will the appellant need an interpreter at the suitability assessment hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityInterpreterServicesLanguage", "Label": "Language and dialect needed", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isNotificationTurnedOff", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isNotificationTurnedOff", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "beforeYouStartEjpLabel", "Label": "You will be asked to provide the following information about this appeal.\n\n* Upper Tribunal reference\n* Date of appeal transfer to the First-tier tribunal\n* State of the appeal before it was transferred\n* Upper Tribunal transfer order\n* Detention details, if applicable\n* Appeal details, including the Notice of Decision\n* Appellant's personal details\n* Completed IAUT-2 appeal form\n\nCheck if the appellant has appealed any other UK immigration decisions. If they have, you will need the appeal number to submit the appeal.\n\nOnce you start, you will not be able to save your progress until you have answered all the questions.\n\nPlease ensure you have all the information you need to hand and allow enough time to submit the appeal in one sitting.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "upperTribunalReferenceNumber", "Label": "Upper tribunal reference", "HintText": "For example, UI-2020-123456", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "firstTierTribunalTransferDate", "Label": "Date of transfer to First-tier Tribunal", "HintText": "For example, 03 04 2023", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stateOfTheAppeal", "Label": "State of the appeal when transferred", "FieldType": "FixedList", "FieldTypeParameter": "stateOfTheAppealList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "utTransferDoc", "Label": "Upper Tribunal transfer order", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"}
 ]
