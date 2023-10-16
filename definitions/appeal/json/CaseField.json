@@ -5414,8 +5414,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDateValue", "Label": "Hearing date", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDateYesNo", "Label": "Do you want to change the hearing date?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingYesNoRadioButton", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDateType", "Label": "When should the next hearing be?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingDateChangingValues", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDateRangeEarliest", "Label": "You can enter either or both dates.", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDateRangeLatest", "Label": " ", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDateRangeLabel", "Label": "You can enter either or both dates.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDateRangeEarliest", "Label": "Earliest hearing date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDateRangeLatest", "Label": "Latest hearing date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingUpdateReasonTitle", "Label": "The selected hearing will be updated based on the \r\n changes requested. Please give a reason for the \r\n update.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingUpdateReason", "Label": "Update reason", "FieldType": "FixedList", "FieldTypeParameter": "changeHearingUpdateReason", "SecurityClassification": "PUBLIC"}
 
