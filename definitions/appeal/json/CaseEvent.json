@@ -2451,5 +2451,19 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Update",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "listCaseForFTOnly",
+    "Name": "For functional test use only",
+    "Description": "For functional test use only",
+    "DisplayOrder": 14,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "listing",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "Publish": "N"
   }
 ]
