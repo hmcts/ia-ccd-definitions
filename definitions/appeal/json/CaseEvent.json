@@ -2432,5 +2432,24 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Handle hearing exception",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "updateHMCResponse",
+    "Name": "Update HMC Response",
+    "Description": "Update HMC Response",
+    "DisplayOrder": 14,
+    "PreConditionState(s)": "listing",
+    "PostConditionState": "prepareForHearing",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
+    "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Update",
+    "Publish": "Y"
   }
 ]
