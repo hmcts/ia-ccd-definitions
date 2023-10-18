@@ -2422,7 +2422,7 @@
     "Description": "Update HMC Response",
     "DisplayOrder": 14,
     "PreConditionState(s)": "listing",
-    "PostConditionState": "prepareForHearing",
+    "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
     "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
