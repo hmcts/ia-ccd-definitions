@@ -5402,16 +5402,16 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "epimsId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearings", "Label": "Which hearing are you updating?", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingTypeValue", "Label": "Hearing type", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingType", "Label": "Hearing type", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingTypeYesNo", "Label": "Do you want to change the hearing type?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingYesNoRadioButton", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingLocationValue", "Label": "Hearing location", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingLocation", "Label": "Hearing location", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingLocationYesNo", "Label": "Do you want to change the hearing location?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingYesNoRadioButton", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDurationValue", "Label": "Hearing duration", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDuration", "Label": "Hearing duration", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDurationYesNo", "Label": "Do you want to change the hearing duration?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingYesNoRadioButton", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDateValue", "Label": "Hearing date", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDate", "Label": "Hearing date", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDateYesNo", "Label": "Do you want to change the hearing date?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingYesNoRadioButton", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDateType", "Label": "When should the next hearing be?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingDateChangingValues", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDateRangeLabel", "Label": "You can enter either or both dates.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
