@@ -5421,5 +5421,14 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingUpdateReason", "Label": "Update reason", "FieldType": "FixedList", "FieldTypeParameter": "changeHearingUpdateReason", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isIntegrated", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requireManualHearingsCancellation", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requireManualHearingsCancellation", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adjournmentDetailsHearing", "Label": "Which hearing are you recording adjournment details for?", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingAdjournmentWhen", "Label": "When did the adjournment happen?", "FieldType": "FixedRadioList", "FieldTypeParameter": "whenDidTheAdjournmentHappen", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingAdjournmentDecisionParty", "Label": "Who made the decision to adjourn?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingAdjournmentDecisionParty", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingAdjournmentDecisionPartyName", "Label": "Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingAdjournmentRequestingParty", "Label": "Who requested the adjournment?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingAdjournmentRequestingParty", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "anyAdditionalAdjournmentInfo", "Label": "Is there anything about the adjournment you want to add?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalAdjournmentInfo", "Label": "Provide more information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+
 ]
