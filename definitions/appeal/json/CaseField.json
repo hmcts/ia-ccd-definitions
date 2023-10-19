@@ -5429,6 +5429,16 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingAdjournmentDecisionPartyName", "Label": "Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingAdjournmentRequestingParty", "Label": "Who requested the adjournment?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingAdjournmentRequestingParty", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "anyAdditionalAdjournmentInfo", "Label": "Is there anything about the adjournment you want to add?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalAdjournmentInfo", "Label": "Provide more information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
-
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalAdjournmentInfo", "Label": "Provide more information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "relistCaseImmediately", "Label": "Can the case be relisted right away?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingFormat", "Label": "Confirm the format of the next hearing", "FieldType": "DynamicRadioList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingLocation", "Label": "Where should the next hearing be listed?", "FieldType": "FixedList", "FieldTypeParameter": "hearingVenue", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingDuration", "Label": "How long should the next hearing be listed for?", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingDate", "Label": "When should the next hearing be?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingDateChangingValues", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingDateFixed", "Label": "The date of the hearing must be", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingDateRangeLabel", "Label": "You can enter either or both dates.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingDateRangeEarliest", "Label": "Earliest hearing date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingDateRangeLatest", "Label": "Latest hearing date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "shouldReserveOrExcludedJudge", "Label": "Does the judge need to be reserved or excluded?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reserveOrExcludeJudge", "Label": " ", "FieldType": "FixedList", "FieldTypeParameter": "reserveOrExcludeJudge", "SecurityClassification": "PUBLIC"}
 ]
