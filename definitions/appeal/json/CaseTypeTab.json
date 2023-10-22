@@ -1228,5 +1228,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "validation_caseOfficer_noMatch", "TabFieldDisplayOrder": 4, "FieldShowCondition": "homeOfficeSearchNoMatch=\"NO_MATCH\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "validationAppealData", "TabFieldDisplayOrder": 5, "FieldShowCondition": "homeOfficeSearchStatus=\"SUCCESS\""},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseHistory", "TabLabel": "Case history", "TabDisplayOrder": 12, "CaseFieldID": "caseHistoryViewer", "TabFieldDisplayOrder": 1}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseHistory", "TabLabel": "Case history", "TabDisplayOrder": 12, "CaseFieldID": "caseHistoryViewer", "TabFieldDisplayOrder": 1},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applyForCosts", "TabLabel": "Costs", "TabDisplayOrder": 13, "CaseFieldID": "appliedForCostsTitle", "TabShowCondition": "appliesForCosts=\"*\"", "TabFieldDisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applyForCosts", "CaseFieldID": "appliesForCosts", "TabFieldDisplayOrder": 2}
 ]
