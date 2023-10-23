@@ -258,5 +258,6 @@
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "scheduleOfCostsDocuments", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Schedule of costs", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsHearingType", "FieldType": "YesOrNo", "ElementLabel": " ", "FieldShowCondition": "argumentsAndEvidenceDetails=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsHearingTypeExplanation", "FieldType": "Text", "ElementLabel": "Reason for hearing", "FieldShowCondition": "applyForCostsHearingTypeExplanation!=\"\"", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsCreationDate", "FieldType": "Date", "ElementLabel": "Date application was made", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsCreationDate", "FieldType": "Date", "ElementLabel": "Date application was made", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "respondentToCostsOrder", "FieldType": "Text", "ElementLabel": "Respondent to costs order", "SecurityClassification": "PUBLIC"}
 ]
