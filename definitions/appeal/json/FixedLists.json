@@ -820,5 +820,18 @@
   {"LiveFrom": "01/01/2018", "ID": "hearingAdjournmentRequestingParty", "ListElementCode": "homeOffice", "ListElement": "Home Office", "DisplayOrder": 3, "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingAdjournmentRequestingParty", "ListElementCode": "tribunal", "ListElement": "Tribunal", "DisplayOrder": 4, "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "reserveOrExcludeJudge", "ListElementCode": "exclude", "ListElement": "Exclude Judge from the next hearing", "DisplayOrder": 1, "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "reserveOrExcludeJudge", "ListElementCode": "reserve", "ListElement": "Reserve Judge to the next hearing", "DisplayOrder": 2, "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "reserveOrExcludeJudge", "ListElementCode": "reserve", "ListElement": "Reserve Judge to the next hearing", "DisplayOrder": 2, "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "heaingCancellationReason", "ListElementCode": "reclassified", "ListElement": "Reclassified", "DisplayOrder": 1, "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "heaingCancellationReason", "ListElementCode": "ra-not-met", "ListElement": "Reasonable adjustment not met", "DisplayOrder": 2, "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "heaingCancellationReason", "ListElementCode": "evidence-contention", "ListElement": "Expert evidence in contention", "DisplayOrder": 3, "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "heaingCancellationReason", "ListElementCode": "postponement-granted", "ListElement": "WithdApplication for postponement grantedrawn", "DisplayOrder": 4, "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "heaingCancellationReason", "ListElementCode": "joh-not-attend", "ListElement": "No judge available/non attendance", "DisplayOrder": 5, "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "heaingCancellationReason", "ListElementCode": "court-closure", "ListElement": "Court disruption/closure", "DisplayOrder": 6, "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "heaingCancellationReason", "ListElementCode": "public-health", "ListElement": "Public health emergency", "DisplayOrder": 7, "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "heaingCancellationReason", "ListElementCode": "evidence-required", "ListElement": "Expert evidence required", "DisplayOrder": 8, "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "heaingCancellationReason", "ListElementCode": "new-issue", "ListElement": "New issue raised", "DisplayOrder": 9, "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "heaingCancellationReason", "ListElementCode": "detention-facility-transfer", "ListElement": "Appellant transferred to a different detention facility", "DisplayOrder": 10, "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "heaingCancellationReason", "ListElementCode": "abandoned", "ListElement": "Appeal abandoned", "DisplayOrder": 11, "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "heaingCancellationReason", "ListElementCode": "no-valid-appeal", "ListElement": "No valid appeal", "DisplayOrder": 12, "SecurityClassification": "PUBLIC"}
 ]
