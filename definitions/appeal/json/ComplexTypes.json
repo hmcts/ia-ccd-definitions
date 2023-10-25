@@ -251,7 +251,7 @@
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsDecision", "FieldType": "Text", "ElementLabel": "Decision", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "typesOfAppliedCosts", "FieldType": "FixedList", "FieldTypeParameter": "typesOfAppliedCosts", "ElementLabel": "Type of costs", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "appliedCostsType", "FieldType": "Text", "ElementLabel": "Type of costs", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "argumentsAndEvidenceDetails", "FieldType": "Text", "ElementLabel": "Further details", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsApplicantType", "FieldType": "Text", "ElementLabel": "Who applied for costs order", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "argumentsAndEvidenceDocuments", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Applicant's documents", "SecurityClassification": "PUBLIC"},
