@@ -270,6 +270,24 @@
   {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterPhoneNumber", "FieldType": "PhoneUK", "ElementLabel": "Phone number", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterEmail", "FieldType": "Email", "ElementLabel": "Email", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterNote", "FieldType": "Text", "ElementLabel": "Note", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterId", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "interpreterBookingRef=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterId", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "interpreterBookingRef=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "adjournmentDetailsHearing", "FieldType": "Text", "ElementLabel": "Which hearing are you recording adjournment details for?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "hearingAdjournmentWhen", "FieldType": "FixedRadioList", "FieldTypeParameter": "whenDidTheAdjournmentHappen", "ElementLabel": "When did the adjournment happen?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "hearingAdjournmentDecisionParty", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingAdjournmentDecisionParty", "ElementLabel": "Who made the decision to adjourn?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "hearingAdjournmentDecisionPartyName", "FieldType": "Text", "ElementLabel": "Name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "hearingAdjournmentRequestingParty", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingAdjournmentRequestingParty", "ElementLabel": "Who requested the adjournment?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "anyAdditionalAdjournmentInfo", "FieldType": "Text", "ElementLabel": "anyAdditionalAdjournmentInfo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "additionalAdjournmentInfo", "FieldType": "TextArea", "ElementLabel": "Provide more information", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "relistCaseImmediately", "FieldType": "Text", "ElementLabel": "Can the case be relisted right away?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingFormat", "FieldType": "Text", "ElementLabel": "Confirm the format of the next hearing", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingLocation", "FieldType": "FixedList", "FieldTypeParameter": "hearingVenue", "ElementLabel": "Where should the next hearing be listed?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingDuration", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "ElementLabel": "How long should the next hearing be listed for?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingDate", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingDateChangingValues", "ElementLabel": "When should the next hearing be?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingDateFixed", "FieldType": "Text", "ElementLabel": "The date of the hearing must be", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingDateRangeEarliest", "FieldType": "Text", "ElementLabel": "Earliest hearing date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingDateRangeLatest", "FieldType": "Text", "ElementLabel": "Latest hearing date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "shouldReserveOrExcludedJudge", "FieldType": "Text", "ElementLabel": "Does the judge need to be reserved or excluded?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "reserveOrExcludeJudge", "FieldType": "FixedList", "FieldTypeParameter": "reserveOrExcludeJudge", "ElementLabel": "Exclude or reserve", "SecurityClassification": "PUBLIC"}
 
 ]
