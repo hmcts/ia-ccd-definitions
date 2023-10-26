@@ -5440,5 +5440,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingDateRangeEarliest", "Label": "Earliest hearing date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingDateRangeLatest", "Label": "Latest hearing date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "shouldReserveOrExcludedJudge", "Label": "Does the judge need to be reserved or excluded?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reserveOrExcludeJudge", "Label": " ", "FieldType": "FixedList", "FieldTypeParameter": "reserveOrExcludeJudge", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reserveOrExcludeJudge", "Label": " ", "FieldType": "FixedList", "FieldTypeParameter": "reserveOrExcludeJudge", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingWillNotBeRelisted", "Label": "Becasue the hearing will not be relisted immediately the listed hearing will be cancelled. Please select a reason for the cancellation.", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingCancellationReason", "Label": "Cancellation reason", "FieldType": "FixedList", "FieldTypeParameter": "hearingCancellationReason", "SecurityClassification": "PUBLIC"}
+
 ]
