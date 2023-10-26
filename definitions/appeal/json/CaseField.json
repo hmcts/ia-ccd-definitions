@@ -5428,7 +5428,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingAdjournmentRequestingParty", "Label": "Who requested the adjournment?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingAdjournmentRequestingParty", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "anyAdditionalAdjournmentInfo", "Label": "Is there anything about the adjournment you want to add?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalAdjournmentInfo", "Label": "Provide more information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "relistCaseImmediately", "Label": "Can the case be relisted right away?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingFormat", "Label": "Confirm the format of the next hearing", "FieldType": "DynamicRadioList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingLocation", "Label": "Where should the next hearing be listed?", "FieldType": "FixedList", "FieldTypeParameter": "hearingVenue", "SecurityClassification": "PUBLIC"},
