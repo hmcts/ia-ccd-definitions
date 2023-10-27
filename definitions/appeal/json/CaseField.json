@@ -5870,6 +5870,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAgeAssessmentVisible", "Label": "Age Assessment Appeal condition to determine if AAA page is visible", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isNabaEnabled", "Label": "NABA feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isNabaEnabledOoc", "Label": "NABA feature flag OOC value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ageAssessment", "Label": "Are you appealing an age assessment decision?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
@@ -6095,5 +6096,16 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "upperTribunalReferenceNumber", "Label": "Upper tribunal reference", "HintText": "For example, UI-2020-123456", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "firstTierTribunalTransferDate", "Label": "Date of transfer to First-tier Tribunal", "HintText": "For example, 03 04 2023", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stateOfTheAppeal", "Label": "State of the appeal when transferred", "FieldType": "FixedList", "FieldTypeParameter": "stateOfTheAppealList", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "utTransferDoc", "Label": "Upper Tribunal transfer order", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "utTransferDoc", "Label": "Upper Tribunal transfer order", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isEjp", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isLegallyRepresentedEjp", "Label": "Is the appellant legally represented?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadEjpAppealFormTitle", "Label": "Upload a completed copy of the IAUT-2 form", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadEjpAppealFormDocs", "Label": "IAUT-2 appeal form", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDetailsTitleEjp", "Label": " \n\nEnter your details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCompanyEjp", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepGivenNameEjp", "Label": "Given Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepFamilyNameEjp", "Label": "Family Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepEmailEjp", "Label": "Email", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepReferenceEjp", "Label": "Legal representative reference", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
 ]
