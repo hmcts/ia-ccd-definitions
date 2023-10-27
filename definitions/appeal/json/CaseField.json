@@ -5421,6 +5421,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingUpdateReason", "Label": "Update reason", "FieldType": "FixedList", "FieldTypeParameter": "changeHearingUpdateReason", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isIntegrated", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateHmcRequestSuccess", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requireManualHearingsCancellation", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adjournmentDetailsHearing", "Label": "Which hearing are you recording adjournment details for?", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
