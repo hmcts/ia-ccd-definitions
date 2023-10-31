@@ -5411,6 +5411,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingUpdateReason", "Label": "Update reason", "FieldType": "FixedList", "FieldTypeParameter": "changeHearingUpdateReason", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isIntegrated", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateHmcRequestSuccess", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adjournmentDetailsHearing", "Label": "Which hearing are you recording adjournment details for?", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingAdjournmentWhen", "Label": "When did the adjournment happen?", "FieldType": "FixedRadioList", "FieldTypeParameter": "whenDidTheAdjournmentHappen", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingAdjournmentDecisionParty", "Label": "Who made the decision to adjourn?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingAdjournmentDecisionParty", "SecurityClassification": "PUBLIC"},
