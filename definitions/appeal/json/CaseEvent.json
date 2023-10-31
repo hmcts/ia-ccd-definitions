@@ -2018,6 +2018,24 @@
     "ShowEventNotes": "Y"
   },
   {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "applyForCosts",
+    "Name": "Apply for costs",
+    "Description": "Apply for costs",
+    "DisplayOrder": 72,
+    "PreConditionState(s)": "appealSubmitted;pendingPayment;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;adjourned;ftpaSubmitted;ftpaDecided;ended;",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Apply"
+  },
+  {
     "LiveFrom": "01/01/2021",
     "CaseTypeID": "Asylum",
     "ID": "removeRepresentation",
