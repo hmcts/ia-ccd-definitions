@@ -2,7 +2,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistTitle3", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistTitle4", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isOutOfCountryEnabled", "Label": "Out of country feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "ID": "beforeYouStartLabel", "Label": "You will be asked to provide the following information about this appeal.\n\n* Appeal details, including the Notice of Decision\n* Appellant's personal details\n* Detention details, if applicable\n* Reasons the appeal is late, if applicable, and any supporting evidence\n\nCheck if the appellant has appealed any other UK immigration decisions. If they have, you will need the appeal number to submit the appeal.\n\nOnce you start, you will not be able to save your progress until you have answered all the questions.\n\nPlease ensure you have all the information you need to hand and allow enough time to submit the appeal in one sitting.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "tribunalReceivedDate", "Label": "Appeal received by the Tribunal", "HintText": "For example, 03 04 2019", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInUk", "Label": "Is the appellant currently living in the United Kingdom?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -66,7 +65,7 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "contactPreference", "Label": "Communication Preference", "FieldType": "FixedRadioList", "FieldTypeParameter": "contactPreference","SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "contactPreferenceUnRep", "Label": "Communication Preference", "FieldType": "MultiSelectList", "FieldTypeParameter": "contactPreferenceUnRep","SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "contactPreferenceUnRep", "Label": "Communication Preference", "FieldType": "MultiSelectList", "FieldTypeParameter": "contactPreferenceUnRep", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "email", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "mobileNumber", "Label": "Mobile phone number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
@@ -5664,6 +5663,14 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "notificationsTurnedOffBanner",
+    "Label": "![Notifications turned off: You should turn notifications on when you have progressed the case to the correct state.](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ejp_notification_turned_off.svg)\r\n\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseManagementCategory", "Label": "Case management category", "FieldType": "DynamicList",  "SecurityClassification": "PUBLIC"},
   {
   "LiveFrom": "01/01/2018",
@@ -5839,7 +5846,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "displayMarkAsPaidEventForPartialRemission", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestFeeRemissionFlagForServiceRequest", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
-
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sourceOfAppeal", "Label": "Source of appeal - paper/UT?", "FieldType": "FixedRadioList", "FieldTypeParameter": "sourceofAppealOptions", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInDetention", "Label": "Is the appellant currently in detention?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionFacility", "Label": "Detention facility type", "FieldType": "FixedRadioList", "FieldTypeParameter": "detentionFacilityType", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "prisonNOMSNumber", "Label": "NOMS number", "FieldType": "prisonNOMSComplexType", "SecurityClassification": "PUBLIC"},
@@ -5863,6 +5870,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAgeAssessmentVisible", "Label": "Age Assessment Appeal condition to determine if AAA page is visible", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isNabaEnabled", "Label": "NABA feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isNabaEnabledOoc", "Label": "NABA feature flag OOC value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ageAssessment", "Label": "Are you appealing an age assessment decision?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
@@ -6081,6 +6089,29 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityInterpreterServicesYesOrNo", "Label": "Will the appellant need an interpreter at the suitability assessment hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "suitabilityInterpreterServicesLanguage", "Label": "Language and dialect needed", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isNotificationTurnedOff", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "beforeYouStartEjpLabel", "Label": "You will be asked to provide the following information about this appeal.\n\n* Upper Tribunal reference\n* Date of appeal transfer to the First-tier tribunal\n* State of the appeal before it was transferred\n* Upper Tribunal transfer order\n* Detention details, if applicable\n* Appeal details, including the Notice of Decision\n* Appellant's personal details\n* Completed IAUT-2 appeal form\n\nCheck if the appellant has appealed any other UK immigration decisions. If they have, you will need the appeal number to submit the appeal.\n\nOnce you start, you will not be able to save your progress until you have answered all the questions.\n\nPlease ensure you have all the information you need to hand and allow enough time to submit the appeal in one sitting.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "upperTribunalReferenceNumber", "Label": "Upper tribunal reference", "HintText": "For example, UI-2020-123456", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "firstTierTribunalTransferDate", "Label": "Date of transfer to First-tier Tribunal", "HintText": "For example, 03 04 2023", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stateOfTheAppeal", "Label": "State of the appeal when transferred", "FieldType": "FixedList", "FieldTypeParameter": "stateOfTheAppealList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "utTransferDoc", "Label": "Upper Tribunal transfer order", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isEjp", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isLegallyRepresentedEjp", "Label": "Is the appellant legally represented?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadEjpAppealFormTitle", "Label": "Upload a completed copy of the IAUT-2 form", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadEjpAppealFormDocs", "Label": "IAUT-2 appeal form", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDetailsTitleEjp", "Label": " \n\nEnter your details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCompanyEjp", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepGivenNameEjp", "Label": "Given Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepFamilyNameEjp", "Label": "Family Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepEmailEjp", "Label": "Email", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepReferenceEjp", "Label": "Legal representative reference", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalPracticeAddressEjp", "Label": "Legal practice address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantContactPreferenceTitleEjp", "Label": "\n\nSelect the communication method which best suits the appellant.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "unrepContactPreferenceLabelEjp", "Label": "Select the communication method which best suits the appellant.", "FieldType": "FixedRadioList", "FieldTypeParameter": "contactPreference","SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "beforeYouStartApplyForCostsLabel", "Label": "Costs applications should always be clear and contain detailed grounds for why they should \r\n be awarded. They are granted when costs are incurred by a party as a result of any improper,\r unreasonable or negligent act or failure to act by a representative or other party.\n\n ### A costs application should contain the following:\n\n * a clear description of the conduct said to give rise to the application\n* evidence showing the conduct\n* reasons why the Tribunal should make a costs order\n* a detailed schedule of costs incurred, such as spreadsheet\n\n\n The other party will be able to respond to the application. The Tribunal will then review your application and make a decision on your claim.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appliedCostsTypes", "Label": "Which costs application are you applying for?", "FieldType": "DynamicRadioList", "SecurityClassification": "PUBLIC"},
