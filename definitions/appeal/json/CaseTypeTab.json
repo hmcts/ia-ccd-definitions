@@ -1039,8 +1039,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nextHearingDateFixed", "TabFieldDisplayOrder": 160, "FieldShowCondition": "nextHearingDate=\"DateToBeFixed\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nextHearingDateRangeEarliest", "TabFieldDisplayOrder": 161, "FieldShowCondition": "nextHearingDate=\"ChooseADateRange\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nextHearingDateRangeLatest", "TabFieldDisplayOrder": 162, "FieldShowCondition": "nextHearingDate=\"ChooseADateRange\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "shouldReserveOrExcludedJudge", "TabFieldDisplayOrder": 163, "FieldShowCondition": "shouldReserveOrExcludedJudge!=\"\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "reserveOrExcludeJudge", "TabFieldDisplayOrder": 164, "FieldShowCondition": "shouldReserveOrExcludedJudge=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "shouldReserveOrExcludeJudge", "TabFieldDisplayOrder": 163, "FieldShowCondition": "shouldReserveOrExcludeJudge!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "reserveOrExcludeJudge", "TabFieldDisplayOrder": 164, "FieldShowCondition": "shouldReserveOrExcludeJudge=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "previousAdjournmentDetails", "TabFieldDisplayOrder": 165, "FieldShowCondition": "previousAdjournmentDetails=\"*\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "TabLabel": "FTPA", "TabDisplayOrder": 9, "CaseFieldID": "ftpaTabTitle", "TabFieldDisplayOrder": 1, "TabShowCondition": "ftpaAppellantSubmitted=\"Yes\" OR ftpaRespondentSubmitted=\"Yes\"" },

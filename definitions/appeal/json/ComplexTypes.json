@@ -287,7 +287,7 @@
   {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingDateFixed", "FieldType": "Text", "ElementLabel": "The date of the hearing must be", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingDateRangeEarliest", "FieldType": "Text", "ElementLabel": "Earliest hearing date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingDateRangeLatest", "FieldType": "Text", "ElementLabel": "Latest hearing date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "shouldReserveOrExcludedJudge", "FieldType": "Text", "ElementLabel": "Does the judge need to be reserved or excluded?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "shouldReserveOrExcludeJudge", "FieldType": "Text", "ElementLabel": "Does the judge need to be reserved or excluded?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "reserveOrExcludeJudge", "FieldType": "FixedList", "FieldTypeParameter": "reserveOrExcludeJudge", "ElementLabel": "Exclude or reserve", "SecurityClassification": "PUBLIC"}
 
 ]
