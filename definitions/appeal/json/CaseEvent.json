@@ -2259,9 +2259,9 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "migrateToLegacyCaseFlags",
-    "Name": "Legacy case flags migration",
-    "Description": "Legacy case flags migration",
+    "ID": "migrateCase",
+    "Name": "migrate case",
+    "Description": "migrate case",
     "DisplayOrder": 99,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
