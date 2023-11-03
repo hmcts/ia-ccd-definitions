@@ -159,7 +159,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_adminOfficer_appealSubmitted_eaHu", "TabFieldDisplayOrder": 13, "FieldShowCondition": "currentCaseStateVisibleToAdminOfficer=\"appealSubmitted\" AND appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\" AND appealType!=\"protection\" AND appealType!=\"ageAssessment\" AND isEjp!=\"Yes\""},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_adminOfficer_appealSubmitted_ejp", "TabFieldDisplayOrder": 13, "FieldShowCondition": "journeyType!=\"aip\" AND isEjp=\"Yes\" AND isAdmin=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_adminOfficer_appealSubmitted_ejp", "TabFieldDisplayOrder": 13, "FieldShowCondition": "currentCaseStateVisibleToAdminOfficer=\"appealSubmitted\" AND journeyType!=\"aip\" AND isEjp=\"Yes\" AND isAdmin=\"Yes\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_adminOfficer_appealSubmitted_pa", "TabFieldDisplayOrder": 13, "FieldShowCondition": "currentCaseStateVisibleToAdminOfficer=\"appealSubmitted\" AND appealType=\"protection\" AND isEjp!=\"Yes\""},
 
