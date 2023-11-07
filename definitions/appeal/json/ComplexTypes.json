@@ -257,7 +257,11 @@
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "argumentsAndEvidenceDocuments", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Applicant's documents", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "scheduleOfCostsDocuments", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Schedule of costs", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsHearingType", "FieldType": "YesOrNo", "ElementLabel": " ", "FieldShowCondition": "argumentsAndEvidenceDetails=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsHearingTypeExplanation", "FieldType": "Text", "ElementLabel": "Reason for hearing", "FieldShowCondition": "applyForCostsHearingTypeExplanation!=\"\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsHearingTypeExplanation", "FieldType": "TextArea", "ElementLabel": "Reason for hearing", "FieldShowCondition": "applyForCostsHearingTypeExplanation!=\"\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsCreationDate", "FieldType": "Date", "ElementLabel": "Date application was made", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "respondentToCostsOrder", "FieldType": "Text", "ElementLabel": "Respondent to costs order", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "respondentToCostsOrder", "FieldType": "Text", "ElementLabel": "Respondent to costs order", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "isApplyForCostsOot", "FieldType": "YesOrNo", "FieldShowCondition": "isApplyForCostsOot=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ElementLabel": " ", "SecurityClassification": "Public"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsOotExplanation", "FieldType": "TextArea", "ElementLabel": "Reasons why the application is late", "FieldShowCondition": "isApplyForCostsOot=\"Yes\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "ootUploadEvidenceDocuments", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Supporting evidence", "FieldShowCondition": "isApplyForCostsOot=\"Yes\"", "SecurityClassification": "PUBLIC"}
 ]

@@ -6147,5 +6147,13 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyForCostsLink", "Label": "[Apply for costs](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForCosts)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addEvidenceForCostsLink", "Label": "[Add evidence for costs](/case/IA/Asylum/${[CASE_REFERENCE]}/#Costs)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTransferDetailsTabTitle", "Label": "![]()\n\n## Appeal transfer details", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTransferDetailsTabTitle", "Label": "![]()\n\n## Appeal transfer details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyForCostsOotTitle", "Label": "This application is late. You must provide full reasons why it is being submitted more than 28 days \n after the Decision and Reasons document was uploaded", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyForCostsOotExplanation", "Label": "Reasons why the application is late", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyForCostsOotUploadEvidenceTitle", "Label": "#### Upload any evidence that supports the fact your application is late\n * files must be no more than 100MB in size \n * you can upload jpg, png, svg, gif, doc and PDF files \n * before uploading a file, give it a meaningful file name. For example, YYYYMMDD-application-evidence.pdf", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ootUploadEvidenceDocuments", "Label": "Supporting evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isApplyForCostsOot", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sendDecisionsAndReasonsDate", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+
 ]
