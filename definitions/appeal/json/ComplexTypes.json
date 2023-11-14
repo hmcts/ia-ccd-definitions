@@ -263,5 +263,11 @@
 
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "isApplyForCostsOot", "FieldType": "YesOrNo", "FieldShowCondition": "isApplyForCostsOot=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ElementLabel": " ", "SecurityClassification": "Public"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsOotExplanation", "FieldType": "TextArea", "ElementLabel": "Reasons why the application is late", "FieldShowCondition": "isApplyForCostsOot=\"Yes\"", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "ootUploadEvidenceDocuments", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Supporting evidence", "FieldShowCondition": "isApplyForCostsOot=\"Yes\"", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "ootUploadEvidenceDocuments", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Supporting evidence", "FieldShowCondition": "isApplyForCostsOot=\"Yes\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsRespondentRole", "FieldType": "Text", "ElementLabel": "Internal Use - Respondent role for the costs application", "FieldShowCondition": "argumentsAndEvidenceDetails=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "responseToApplication", "FieldType": "TextArea", "ElementLabel": "Response details", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "responseEvidence",  "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Respondent's evidence", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "responseHearingType", "FieldType": "YesOrNo", "ElementLabel": " ", "FieldShowCondition": "argumentsAndEvidenceDetails=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "responseHearingTypeExplanation", "FieldType": "TextArea", "ElementLabel": "Respondent's reason for hearing", "SecurityClassification": "PUBLIC"}
+
 ]

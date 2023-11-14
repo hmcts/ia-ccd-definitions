@@ -6157,5 +6157,22 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sendDecisionsAndReasonsDate", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "emailUnrep", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "mobileNumberUnrep", "Label": "Mobile phone number", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "mobileNumberUnrep", "Label": "Mobile phone number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "respondToCostsList", "Label": "Which costs application do you want to respond to", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "respondToApplicationLabel", "Label": "Use the text area and/or upload option to explain why a cost order should not be made against you. Refer to the other party's argument and schedule of cost to make your response.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "responseToApplicationTextArea", "Label": "Reasons why you feel a costs order should not be made against you", "HintText": "Outline your reasons below. If referring to documents you've uploaded, always reference the document name and page number you refer to.", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "respondToApplicationEvidenceAdvice",
+    "Label": "#### Upload any evidence that supports your application\r\n- you can upload evidence as one file or as separate files\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, YYYYMMDD-application-evidence.pdf",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "responseToApplicationEvidence", "Label": "Upload your response", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "typeOfHearingLabel", "Label": "The Tribunal generally decides costs application without a hearing, but will consider requests for a hearing.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "typeOfHearingOption", "Label": "Do you believe this application requires a hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "typeOfHearingExplanation", "Label": "Explain why you believe an oral hearing is needed.", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
 ]
