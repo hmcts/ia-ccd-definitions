@@ -5445,7 +5445,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousAdjournmentDetails", "Label": "Previous adjournment details", "FieldType": "Collection", "FieldTypeParameter": "adjournmentDetail", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentAdjournmentDetail", "Label": " ", "FieldType": "adjournmentDetail", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingWillNotBeRelisted", "Label": "Becasue the hearing will not be relisted immediately the listed hearing will be cancelled. Please select a reason for the cancellation.", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingWillNotBeRelisted", "Label": "Because the hearing will not be relisted immediately the listed hearing will be cancelled. Please select a reason for the cancellation.", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingCancellationReason", "Label": "Cancellation reason", "FieldType": "FixedList", "FieldTypeParameter": "hearingCancellationReason", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "manualCanHearingRequired", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
