@@ -1525,9 +1525,6 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateInterpreterDetails", "CaseFieldID": "interpreterDetails", "PageFieldDisplayOrder": 1, "DisplayContext": "COMPLEX", "PageID": "1", "PageLabel":  "Update interpreter details", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateHMCResponse", "CaseFieldID": "checklistTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "updateHMCResponse", "PageLabel": "", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateHMCResponse", "CaseFieldID": "isIntegrated", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "updateHMCResponse","PageLabel":  "Update HMC Response", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N", "FieldShowCondition": "checklistTitle=\"DO_NOT_SHOW_ON_UI\""},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateHearingRequest", "CaseFieldID": "changeHearings", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "updateHearingList", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N", "CallBackURLMidEvent": "${CCD_DEF_IA_URL}/asylum/ccdMidEvent"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateHearingRequest", "CaseFieldID": "changeHearingType", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "updateHearingType", "PageDisplayOrder": 2, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateHearingRequest", "CaseFieldID": "changeHearingTypeYesNo", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "updateHearingType", "PageDisplayOrder": 2, "ShowSummaryChangeOption": "N"},
