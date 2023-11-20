@@ -6174,5 +6174,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "typeOfHearingLabel", "Label": "The Tribunal generally decides costs application without a hearing, but will consider requests for a hearing.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "typeOfHearingOption", "Label": "Do you believe this application requires a hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "typeOfHearingExplanation", "Label": "Explain why you believe an oral hearing is needed.", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "typeOfHearingExplanation", "Label": "Explain why you believe an oral hearing is needed.", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "respondToCostsLink", "Label": "[Respond to costs](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/respondToCosts)", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 ]
