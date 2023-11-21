@@ -825,7 +825,7 @@
   {"LiveFrom": "01/01/2018", "ID": "hearingCancellationReason", "ListElementCode": "reclassified", "ListElement": "Reclassified", "DisplayOrder": 1, "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingCancellationReason", "ListElementCode": "ra-not-met", "ListElement": "Reasonable adjustment not met", "DisplayOrder": 2, "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingCancellationReason", "ListElementCode": "evidence-contention", "ListElement": "Expert evidence in contention", "DisplayOrder": 3, "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "hearingCancellationReason", "ListElementCode": "postponement-granted", "ListElement": "WithdApplication for postponement grantedrawn", "DisplayOrder": 4, "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingCancellationReason", "ListElementCode": "postponement-granted", "ListElement": "Application for postponement granted", "DisplayOrder": 4, "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingCancellationReason", "ListElementCode": "joh-not-attend", "ListElement": "No judge available/non attendance", "DisplayOrder": 5, "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingCancellationReason", "ListElementCode": "court-closure", "ListElement": "Court disruption/closure", "DisplayOrder": 6, "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingCancellationReason", "ListElementCode": "public-health", "ListElement": "Public health emergency", "DisplayOrder": 7, "SecurityClassification": "PUBLIC"},
@@ -833,5 +833,13 @@
   {"LiveFrom": "01/01/2018", "ID": "hearingCancellationReason", "ListElementCode": "new-issue", "ListElement": "New issue raised", "DisplayOrder": 9, "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingCancellationReason", "ListElementCode": "detention-facility-transfer", "ListElement": "Appellant transferred to a different detention facility", "DisplayOrder": 10, "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingCancellationReason", "ListElementCode": "abandoned", "ListElement": "Appeal abandoned", "DisplayOrder": 11, "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "hearingCancellationReason", "ListElementCode": "no-valid-appeal", "ListElement": "No valid appeal", "DisplayOrder": 12, "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "hearingCancellationReason", "ListElementCode": "no-valid-appeal", "ListElement": "No valid appeal", "DisplayOrder": 12, "SecurityClassification": "PUBLIC"},
+  
+  {"LiveFrom": "01/01/2018", "ID": "hearingRelistedCancellationReason", "ListElementCode": "hearing-type-change", "ListElement": "Different hearing mode required", "DisplayOrder": 1, "SecurityClassification": "PUBLIC"}, 
+  {"LiveFrom": "01/01/2018", "ID": "hearingRelistedCancellationReason", "ListElementCode": "postponement-granted", "ListElement": "Application for postponement granted", "DisplayOrder": 2, "SecurityClassification": "PUBLIC"}, 
+  {"LiveFrom": "01/01/2018", "ID": "hearingRelistedCancellationReason", "ListElementCode": "no-interpreter-available", "ListElement": "No interpreter available in required language", "DisplayOrder": 3, "SecurityClassification": "PUBLIC"}, 
+  {"LiveFrom": "01/01/2018", "ID": "hearingRelistedCancellationReason", "ListElementCode": "court-closure", "ListElement": "Court disruption/closure", "DisplayOrder": 4, "SecurityClassification": "PUBLIC"}, 
+  {"LiveFrom": "01/01/2018", "ID": "hearingRelistedCancellationReason", "ListElementCode": "requirements-change", "ListElement": "Change to hearing request/requirements", "DisplayOrder": 5, "SecurityClassification": "PUBLIC"}, 
+  {"LiveFrom": "01/01/2018", "ID": "hearingRelistedCancellationReason", "ListElementCode": "interpreter-change", "ListElement": "Change to interpreter requirements", "DisplayOrder": 6, "SecurityClassification": "PUBLIC"}, 
+  {"LiveFrom": "01/01/2018", "ID": "hearingRelistedCancellationReason", "ListElementCode": "other", "ListElement": "Other", "DisplayOrder": 7, "SecurityClassification": "PUBLIC"}
 ]
