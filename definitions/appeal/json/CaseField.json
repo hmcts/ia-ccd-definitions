@@ -5452,6 +5452,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingRelistedCancellationReason", "Label": "Cancellation reason", "FieldType": "FixedList", "FieldTypeParameter": "hearingRelistedCancellationReason", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "manualCanHearingRequired", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "manualUpdHearingRequired", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "manualUpdHearingRequired", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "listHearingInListAssist", "Label": "List hearing in List Assist?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
