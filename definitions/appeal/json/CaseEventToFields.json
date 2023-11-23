@@ -1574,6 +1574,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "recordAdjournmentDetails", "CaseFieldID": "shouldReserveOrExcludeJudge", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "shouldReserveOrExcludeJudge", "PageDisplayOrder": 11, "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "recordAdjournmentDetails", "CaseFieldID": "reserveOrExcludeJudge", "CaseEventFieldLabel": " ", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "shouldReserveOrExcludeJudge", "PageDisplayOrder": 11, "FieldShowCondition": "shouldReserveOrExcludeJudge=\"Yes\"", "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "recordAdjournmentDetails", "CaseFieldID": "hearingWillNotBeRelisted", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "hearingCancellationReason", "PageDisplayOrder": 12, "PageShowCondition": "relistCaseImmediately=\"No\" AND hearingAdjournmentWhen=\"beforeHearingDate\"", "ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "recordAdjournmentDetails", "CaseFieldID": "hearingCancellationReason", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "hearingCancellationReason", "PageDisplayOrder": 12, "ShowSummaryChangeOption": "Y"}
-  
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "recordAdjournmentDetails", "CaseFieldID": "hearingCancellationReason", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "hearingCancellationReason", "PageDisplayOrder": 12, "ShowSummaryChangeOption": "Y"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "listAssistIntegration", "CaseFieldID": "listHearingInListAssist", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "listHearingInListAssist", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"}
 ]
