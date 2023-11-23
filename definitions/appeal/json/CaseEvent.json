@@ -2496,6 +2496,6 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
-    "EventEnablingCondition": "appliesForCosts!=\"\""
+    "EventEnablingCondition": "appliesForCosts!=\"\" AND journeyType!=\"aip\" AND isAdmin!=\"Yes\""
   }
 ]
