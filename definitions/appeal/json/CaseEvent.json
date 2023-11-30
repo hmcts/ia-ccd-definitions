@@ -2438,9 +2438,9 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "handleCmrUpdated",
-    "Name": "Handle CMR Updated",
-    "Description": "Handles CMR updated notification necessary for triggering WA task",
+    "ID": "triggerCmrUpdated",
+    "Name": "Trigger CMR Updated",
+    "Description": "Trigger CMR updated notification necessary for triggering WA task",
     "DisplayOrder": 102,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
@@ -2451,7 +2451,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Handle CMR Updated",
+    "EndButtonLabel": "Trigger CMR Updated",
     "Publish": "Y"
   },
   {
