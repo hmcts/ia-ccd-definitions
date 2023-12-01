@@ -2568,5 +2568,26 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
     "EventEnablingCondition": "appliesForCosts!=\"\" AND journeyType!=\"aip\" AND isAdmin!=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "addEvidenceForCosts",
+    "Name": "Add evidence for costs",
+    "Description": "Add evidence for costs",
+    "DisplayOrder": 98,
+    "PreConditionState(s)": "appealSubmitted;pendingPayment;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;adjourned;ftpaSubmitted;ftpaDecided;ended;",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
+    "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit evidence",
+    "EventEnablingCondition": "appliesForCosts!=\"\" AND journeyType!=\"aip\" AND isAdmin!=\"Yes\""
   }
 ]
