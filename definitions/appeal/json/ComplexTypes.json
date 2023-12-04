@@ -255,7 +255,8 @@
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "argumentsAndEvidenceDocuments", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Applicant's documents", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "scheduleOfCostsDocuments", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Schedule of costs", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsHearingType", "FieldType": "YesOrNo", "ElementLabel": " ", "FieldShowCondition": "argumentsAndEvidenceDetails=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsHearingTypeExplanation", "FieldType": "TextArea", "ElementLabel": "Reason for hearing", "FieldShowCondition": "applyForCostsHearingTypeExplanation!=\"\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applicantAdditionalEvidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Applicant's additional evidence", "FieldShowCondition": "applicantAdditionalEvidence!=\"\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsHearingTypeExplanation", "FieldType": "TextArea", "ElementLabel": "Applicant's reasons for hearing", "FieldShowCondition": "applyForCostsHearingTypeExplanation!=\"\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsCreationDate", "FieldType": "Date", "ElementLabel": "Date application was made", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "respondentToCostsOrder", "FieldType": "Text", "ElementLabel": "Respondent to costs order", "SecurityClassification": "PUBLIC"},
 
@@ -266,6 +267,6 @@
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "responseToApplication", "FieldType": "TextArea", "ElementLabel": "Response details", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "responseEvidence",  "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Respondent's evidence", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "responseHearingType", "FieldType": "YesOrNo", "ElementLabel": " ", "FieldShowCondition": "argumentsAndEvidenceDetails=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "responseHearingTypeExplanation", "FieldType": "TextArea", "ElementLabel": "Respondent's reason for hearing", "SecurityClassification": "PUBLIC"}
-
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "respondentAdditionalEvidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Respondent's additional evidence", "FieldShowCondition": "respondentAdditionalEvidence!=\"\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "responseHearingTypeExplanation", "FieldType": "TextArea", "ElementLabel": "Respondent's reasons for hearing", "SecurityClassification": "PUBLIC"}
 ]

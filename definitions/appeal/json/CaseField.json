@@ -6209,7 +6209,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appliedCostsType", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyForCostsLink", "Label": "[Apply for costs](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForCosts)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addEvidenceForCostsLink", "Label": "[Add evidence for costs](/case/IA/Asylum/${[CASE_REFERENCE]}/#Costs)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addEvidenceForCostsLink", "Label": "[Add evidence for costs](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/addEvidenceForCosts)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTransferDetailsTabTitle", "Label": "![]()\n\n## Appeal transfer details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
 
@@ -6240,5 +6240,16 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "typeOfHearingOption", "Label": "Do you believe this application requires a hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "typeOfHearingExplanation", "Label": "Explain why you believe an oral hearing is needed.", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "respondToCostsLink", "Label": "[Respond to costs](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/respondToCosts)", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "respondToCostsLink", "Label": "[Respond to costs](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/respondToCosts)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addEvidenceForCostsList", "Label": "Which costs application do you want to add evidence to?", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "additionalEvidenceForCostsTitle",
+    "Label": "#### Upload any evidence that supports your costs application\r\n- you can upload evidence as one file or as separate files\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, YYYYMMDD-application-evidence.pdf",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalEvidenceForCosts", "Label": "Upload additional evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"}
 ]
