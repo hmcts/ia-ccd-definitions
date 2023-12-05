@@ -2356,8 +2356,8 @@
   {
   "LiveFrom": "01/01/2018",
   "CaseTypeID": "Asylum",
-  "ID": "reTriggerWaTask",
-  "Name": "Re-trigger Task",
+  "ID": "reTriggerWaTasks",
+  "Name": "Re-trigger Case WA Tasks",
   "Description": "For Re-triggering WA tasks",
   "DisplayOrder": 102,
   "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;ftpaSubmitted;ftpaDecided;adjourned;awaitingReasonsForAppeal;reasonsForAppealSubmitted;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingCmaRequirements;cmaRequirementsSubmitted;cmaAdjustmentsAgreed;cmaListed;decided;appealTakenOffline;ended",
