@@ -249,6 +249,11 @@
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsDecision", "FieldType": "Text", "ElementLabel": "Decision", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "uploadCostsOrder", "FieldType": "Collection", "FieldTypeParameter": "Document", "ElementLabel": "Costs details", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "dateOfDecision", "FieldType": "Text", "ElementLabel": "Date of decision", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "costsDecisionType", "FieldType": "Text", "ElementLabel": "Decision type", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "costsOralHearingDate", "FieldType": "Text", "ElementLabel": "Date of hearing", "FieldShowCondition": "costsDecisionType=\"With an oral hearing\"", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "appliedCostsType", "FieldType": "Text", "ElementLabel": "Type of costs", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "argumentsAndEvidenceDetails", "FieldType": "Text", "ElementLabel": "Further details", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "applyForCosts", "ListElementCode": "applyForCostsApplicantType", "FieldType": "Text", "ElementLabel": "Who applied for costs order", "SecurityClassification": "PUBLIC"},
