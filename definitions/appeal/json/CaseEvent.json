@@ -2484,6 +2484,21 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
+    "Publish": "Y",
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "updateCmrNotification",
+    "Name": "Update CMR notification",
+    "Description": "System event to trigger Update CMR notification work allocaiton task",
+    "DisplayOrder": 104,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Update CMR notification",
     "Publish": "Y"
   }
 ]
