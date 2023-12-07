@@ -2509,16 +2509,16 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "updateCmrNotification",
-    "Name": "Update CMR notification",
-    "Description": "System event to trigger Update CMR notification work allocaiton task",
+    "ID": "triggerCmrListed",
+    "Name": "Trigger CMR Listed",
+    "Description": "System event to trigger Send CMR notification work allocation task",
     "DisplayOrder": 104,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Update CMR notification",
+    "EndButtonLabel": "Trigger CMR Listed",
     "Publish": "Y"
   }
 ]
