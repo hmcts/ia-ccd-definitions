@@ -2362,9 +2362,11 @@
   "DisplayOrder": 102,
   "PreConditionState(s)": "*",
   "PostConditionState": "*",
+  "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+  "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
   "SecurityClassification": "Public",
   "ShowSummary": "Y",
-  "ShowEventNotes": "Y",
+  "ShowEventNotes": "N",
   "EndButtonLabel": "Submit",
   "Publish": "Y"
   },
@@ -2377,12 +2379,12 @@
     "DisplayOrder": 103,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
-    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
-    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
-    "Publish": "N"
+    "Publish": "Y"
   }
 ]
