@@ -6201,7 +6201,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyForCosts", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appliesForCosts", "Label": "Costs", "FieldType": "Collection", "FieldTypeParameter": "applyForCosts", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appliedForCostsTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyForCostsDecision", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyForCostsApplicantType", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyForCostsCreationDate", "Label": " ", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAppliedForCosts", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -6251,5 +6250,12 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalEvidenceForCosts", "Label": "Upload additional evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalEvidenceForCosts", "Label": "Upload additional evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideCostsApplicationList", "Label": "Which costs application do you want to decide?", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyForCostsDecision", "Label": "What is your decision?", "FieldType": "FixedRadioList", "FieldTypeParameter": "applyForCostsDecision", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "costsDecisionType", "Label": "How was the costs application decided?", "FieldType": "FixedRadioList", "FieldTypeParameter": "costsDecisionType", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "costsOralHearingDate", "Label": "When was the oral hearing?", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadCostsOrder", "Label": "Upload order", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideCostApplicationLink", "Label": "[Decide a costs application](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/decideCostsApplication)", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 ]
