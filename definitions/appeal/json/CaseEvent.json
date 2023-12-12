@@ -2438,6 +2438,25 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "triggerCmrUpdated",
+    "Name": "Trigger CMR Updated",
+    "Description": "Trigger CMR updated notification necessary for triggering WA task",
+    "DisplayOrder": 102,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Trigger CMR Updated",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "listCaseForFTOnly",
     "Name": "For functional test use only",
     "Description": "For functional test use only",
@@ -2489,16 +2508,16 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "updateCmrNotification",
-    "Name": "Update CMR notification",
-    "Description": "System event to trigger Update CMR notification work allocaiton task",
+    "ID": "triggerCmrListed",
+    "Name": "Trigger CMR Listed",
+    "Description": "System event to trigger Send CMR notification work allocation task",
     "DisplayOrder": 104,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Update CMR notification",
+    "EndButtonLabel": "Trigger CMR Listed",
     "Publish": "Y"
   }
 ]
