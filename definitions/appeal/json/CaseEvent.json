@@ -752,7 +752,7 @@
     "Name": "Upload additional evidence",
     "Description": "Upload additional evidence",
     "DisplayOrder": 33,
-    "PreConditionState(s)": "caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing",
+    "PreConditionState(s)": "caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;awaitingReasonsForAppeal;reasonsForAppealSubmitted;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
