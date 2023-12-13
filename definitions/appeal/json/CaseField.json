@@ -3877,6 +3877,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_pre_hearing_details_recorded_admin_decision_integrated",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_decision_without_hearing_pre_hearing_request_admin_decision",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nSubmit a hearing request in the [Hearings tab](/cases/case-details/${[CASE_REFERENCE]}/hearings)",
     "FieldType": "Label",
