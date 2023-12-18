@@ -2473,7 +2473,7 @@
     "CaseTypeID": "Asylum",
     "ID": "recordAdjournmentDetails",
     "Name": "Record adjournment details",
-    "PreConditionState(s)": "listing;prepareForHearing;finalBundling;preHearing;decision",
+    "PreConditionState(s)": "prepareForHearing;finalBundling;preHearing;decision",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutURLAboutToStartEvent": "5,5,5,5",
@@ -2485,7 +2485,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
-    "Publish": "Y"
+    "Publish": "Y",
+    "EventEnablingCondition": "isIntegrated=\"Yes\""
   },
   {
     "LiveFrom": "01/01/2018",
