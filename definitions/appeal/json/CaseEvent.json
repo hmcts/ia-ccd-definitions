@@ -692,7 +692,7 @@
     "Name": "End the appeal",
     "Description": "End the appeal",
     "DisplayOrder": 32,
-    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;adjourned;ftpaSubmitted;ftpaDecided;awaitingReasonsForAppeal;awaitingClarifyingQuestionsAnswers;awaitingCmaRequirements",
+    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;adjourned;ftpaSubmitted;ftpaDecided;awaitingReasonsForAppeal;reasonsForAppealSubmitted;clarifyingQuestionsAnswersSubmitted;awaitingClarifyingQuestionsAnswers;awaitingCmaRequirements",
     "PostConditionState": "ended",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
