@@ -4955,7 +4955,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeWaiverDocument", "Label": "Home Office fee waiver letter", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesHeader", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesReferenceNumber", "Label": "Help with Fees reference number", "HintText":  "For example, HWF-A1B-23", "RegularExpression": "^HWF-[A-Z]{1}\\d{1}[A-Z]{1}-\\d{2}$", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesReferenceNumber", "Label": "Help with Fees reference number", "HintText":  "For example, HWF-XXX-XXX", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "exceptionalCircumstancesHeader", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "exceptionalCircumstances", "Label": "Explain the exceptional circumstances which justify remission of the fee", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
