@@ -6204,7 +6204,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyForCostsApplicantType", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyForCostsCreationDate", "Label": " ", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAppliedForCosts", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "respondentToCostsOrder", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appliedCostsType", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applyForCostsLink", "Label": "[Apply for costs](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForCosts)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -6257,5 +6256,19 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "costsDecisionType", "Label": "How was the costs application decided?", "FieldType": "FixedRadioList", "FieldTypeParameter": "costsDecisionType", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "costsOralHearingDate", "Label": "When was the oral hearing?", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadCostsOrder", "Label": "Upload order", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideCostApplicationLink", "Label": "[Decide a costs application](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/decideCostsApplication)", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideCostApplicationLink", "Label": "[Decide a costs application](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/decideCostsApplication)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "judgeAppliedCostsTypes", "Label": "What type of costs order are you considering?", "FieldType": "DynamicRadioList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "respondentToCostsOrder", "Label": "Who is the respondent?", "FieldType": "FixedRadioList", "FieldTypeParameter": "respondentToCostsList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "tribunalConsideringReason", "Label": "The tribunal is considering making a costs order because:", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "judgeEvidenceTitle",
+    "Label": "#### Upload any evidence that supports your costs order\r\n- you can upload evidence as one file or as separate files\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, YYYYMMDD-application-evidence.pdf",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "judgeEvidenceForCostsOrder", "Label": "Upload evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "considerMakingCostsOrderLink", "Label": "[Consider making a costs order](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/considerMakingCostsOrder)", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 ]
