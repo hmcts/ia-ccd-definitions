@@ -5488,6 +5488,11 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "manualCanHearingRequired", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "manualUpdHearingRequired", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requireManualHearingsCancellation", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requireManualHearingsCancellation", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingLocationLabel", "Label": "Where will the hearing take place?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingLocation", "Label": "Location", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "autoHearingRequestEnabled", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 
 ]
