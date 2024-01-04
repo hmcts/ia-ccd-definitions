@@ -5370,11 +5370,12 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "otherDecisionForDisplay", "Label": "Other adjustments", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "interpreterBookingStatusTitle", "Label": "![]()\r\n## Interpreter booking status", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "interpreterBookingStatusDescriptionLabel", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "interpreterBookingStatusDescription",
-    "Label": "The booking status of interpreters can be managed here. After updating an interpreters status the hearing will be automatically updated. This information will then be visible in List Assist.",
+    "Label": "${interpreterBookingStatusDescriptionLabel}",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5489,5 +5490,4 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "manualUpdHearingRequired", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requireManualHearingsCancellation", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
-
 ]
