@@ -1037,7 +1037,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "hearingAdjournmentDecisionPartyName", "TabFieldDisplayOrder": 152, "FieldShowCondition": "hearingAdjournmentDecisionPartyName!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "hearingAdjournmentRequestingParty", "TabFieldDisplayOrder": 153, "FieldShowCondition": "hearingAdjournmentRequestingParty!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "anyAdditionalAdjournmentInfo", "TabFieldDisplayOrder": 154, "FieldShowCondition": "anyAdditionalAdjournmentInfo!=\"\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "additionalAdjournmentInfo", "TabFieldDisplayOrder": 155, "FieldShowCondition": "additionalAdjournmentInfo!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "additionalAdjournmentInfo", "TabFieldDisplayOrder": 155, "FieldShowCondition": "anyAdditionalAdjournmentInfo=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "relistCaseImmediately", "TabFieldDisplayOrder": 156, "FieldShowCondition": "relistCaseImmediately!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nextHearingFormat", "TabFieldDisplayOrder": 157, "FieldShowCondition": "hearingAdjournmentWhen!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nextHearingLocation", "TabFieldDisplayOrder": 158, "FieldShowCondition": "hearingAdjournmentWhen!=\"\""},
