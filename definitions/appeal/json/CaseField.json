@@ -5374,7 +5374,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "interpreterBookingStatusDescription",
-    "Label": "The booking status of interpreters can be managed here. After updating an interpreters status you must update the hearing via the Hearings tab. This information will then be visible in List Assist.",
+    "Label": "The booking status of interpreters can be managed here. After updating an interpreters status the hearing will be automatically updated. This information will then be visible in List Assist.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -5487,7 +5487,13 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "manualCanHearingRequired", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "manualUpdHearingRequired", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "manualCreHearingRequired", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requireManualHearingsCancellation", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requireManualHearingsCancellation", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingLocationLabel", "Label": "Where will the hearing take place?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingLocation", "Label": "Location", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "autoHearingRequestEnabled", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 
 ]
