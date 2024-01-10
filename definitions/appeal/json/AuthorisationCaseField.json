@@ -11276,14 +11276,12 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "requireManualHearingsCancellation", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "requireManualHearingsCancellation", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
 
-<<<<<<< HEAD
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "shouldTriggerReviewInterpreterTask", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "shouldTriggerReviewInterpreterTask", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "shouldTriggerReviewInterpreterTask", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"}
-=======
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hearingLocationLabel", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hearingLocation", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "autoHearingRequestEnabled", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"}
->>>>>>> origin/ia-ccd-definitions-snl
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "autoHearingRequestEnabled", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "shouldTriggerReviewInterpreterTask", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "shouldTriggerReviewInterpreterTask", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "shouldTriggerReviewInterpreterTask", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"}
 ]
