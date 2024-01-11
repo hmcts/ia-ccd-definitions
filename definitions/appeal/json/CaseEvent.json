@@ -2522,5 +2522,20 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Trigger CMR Listed",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "triggerReviewInterpreterBookingTask",
+    "Name": "Trigger Review Interpreter",
+    "Description": "System event to trigger Review Interpreter Booking work allocation task",
+    "DisplayOrder": 104,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Trigger Review Interpreter Booking",
+    "Publish": "Y"
   }
 ]
