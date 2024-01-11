@@ -1582,5 +1582,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "recordAdjournmentDetails", "CaseFieldID": "shouldReserveOrExcludeJudge", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "shouldReserveOrExcludeJudge", "PageDisplayOrder": 16, "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "recordAdjournmentDetails", "CaseFieldID": "reserveOrExcludeJudge", "CaseEventFieldLabel": " ", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "shouldReserveOrExcludeJudge", "PageDisplayOrder": 16, "FieldShowCondition": "shouldReserveOrExcludeJudge=\"Yes\"", "ShowSummaryChangeOption": "Y"},
   
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "listAssistIntegration", "CaseFieldID": "isIntegrated", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "listHearingInListAssist", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "listAssistIntegration", "CaseFieldID": "isIntegrated", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "listHearingInListAssist", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "restoreStateFromAdjourn", "CaseFieldID": "isIntegrated", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "isIntegratedrestoreStateFromAdjourn", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y", "Publish": "Y"}
+
 ]
