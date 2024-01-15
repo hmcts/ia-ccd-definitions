@@ -2537,5 +2537,20 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Trigger Review Interpreter Booking",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "decisionWithoutHearingListed",
+    "Name": "Decision w/o hearing Listed",
+    "Description": "System event to update case data when an on-papers hearing is listed",
+    "DisplayOrder": 105,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Decision without hearing Listed",
+    "Publish": "Y"
   }
 ]
