@@ -183,7 +183,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Send direction",
-    "Publish": "Y"
+    "Publish": "Y",
+    "EventEnablingCondition": "journeyType!=\"aip\""
   },
   {
     "LiveFrom": "01/01/2018",
@@ -204,7 +205,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Send direction",
-    "Publish": "N"
+    "Publish": "N",
+    "EventEnablingCondition": "journeyType!=\"aip\""
   },
   {
     "LiveFrom": "01/01/2018",
