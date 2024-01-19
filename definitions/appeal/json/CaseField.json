@@ -5403,7 +5403,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "witnessInterpreterSpokenLanguageBookingStatus9", "Label": "${witnessInterpreterSpokenLanguageBooking9}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "witnessInterpreterSpokenLanguageBooking10", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "witnessInterpreterSpokenLanguageBookingStatus10", "Label": "${witnessInterpreterSpokenLanguageBooking10}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC"},
- 
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "witnessInterpreterSignLanguageBooking1", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "witnessInterpreterSignLanguageBookingStatus1", "Label": "${witnessInterpreterSignLanguageBooking1}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "witnessInterpreterSignLanguageBooking2", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -5434,7 +5434,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "epimsId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearings", "Label": "Which hearing are you updating?", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingType", "Label": "Hearing type", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingTypeYesNo", "Label": "Do you want to change the hearing type?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingYesNoRadioButton", "SecurityClassification": "PUBLIC"},
@@ -5497,6 +5497,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "autoHearingRequestEnabled", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "shouldTriggerReviewInterpreterTask", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "autoRequestHearingGuide", "Label": "## Auto request hearing\r\n\r\nBecause one or more hearing request have been granted that<br>\r\nmay require additional case flags you must state whether the<br>\r\nhearing can be auto requested when this event is completed. If<br>\r\nnew case flags need to be added to the case before requesting<br>\r\nthe hearing then set this to No. You will then be able to add the<br>\r\ncase flags before manually requesting the hearing.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "autoRequestHearing", "Label": "Hearing can be auto requested?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionWithoutHearingListed", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
