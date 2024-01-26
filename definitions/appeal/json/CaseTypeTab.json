@@ -1014,6 +1014,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "tribunalNotesTitle", "TabFieldDisplayOrder": 33, "FieldShowCondition": "allocatedJudge=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "allocatedJudge", "TabFieldDisplayOrder": 34, "FieldShowCondition": "allocatedJudge=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "previousJudgeAllocations", "TabFieldDisplayOrder": 35, "FieldShowCondition": "previousJudgeAllocations=\"*\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "ftpaList", "TabFieldDisplayOrder": 36, "FieldShowCondition": "ftpaList!=\"\""},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "paymentHistory", "TabLabel": "Payment history", "TabDisplayOrder": 10, "CaseFieldID": "paymentHistoryTabTitle", "TabFieldDisplayOrder": 1,  "TabShowCondition": "isFeePaymentEnabled=\"Yes\"" },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "paymentHistory", "TabLabel": "Payment history", "TabDisplayOrder": 10, "CaseFieldID": "paymentHistoryViewer", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "TabLabel": "Validation", "TabDisplayOrder": 11, "CaseFieldID": "validationTabTitle", "TabFieldDisplayOrder": 1, "TabShowCondition": "currentCaseStateVisibleToCaseOfficer=\"appealSubmitted\" AND isHomeOfficeIntegrationEnabled=\"Yes\" AND appealOutOfCountry=\"No\""},
