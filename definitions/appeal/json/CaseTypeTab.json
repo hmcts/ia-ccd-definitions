@@ -1052,6 +1052,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "previousAdjournmentDetails", "TabFieldDisplayOrder": 166, "FieldShowCondition": "previousAdjournmentDetails=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "hearingReasonToCancel", "TabFieldDisplayOrder": 167, "FieldShowCondition": "hearingAdjournmentWhen=\"beforeHearingDate\" AND relistCaseImmediately=\"No\" AND hearingReasonToCancel!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "isHearingLinked", "TabFieldDisplayOrder": 168, "FieldShowCondition": "isHearingLinked!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "isPanelRequired", "TabFieldDisplayOrder": 168, "FieldShowCondition": "isPanelRequired!=\"\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "TabLabel": "FTPA", "TabDisplayOrder": 9, "CaseFieldID": "ftpaTabTitle", "TabFieldDisplayOrder": 1, "TabShowCondition": "ftpaAppellantSubmitted=\"Yes\" OR ftpaRespondentSubmitted=\"Yes\"" },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "ftpaAppellantSubmitted", "TabFieldDisplayOrder": 9, "FieldShowCondition": "ftpaAppellantSubmitted=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
