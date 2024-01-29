@@ -249,6 +249,7 @@
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "expiryDate", "FieldType": "Date", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaApplicant", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaApplicantType", "ElementLabel": "Applicant", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionOutcomeType", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaResidentJudgeDecisionOutcomeType", "ElementLabel": "The outcome of the application", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionDocument", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "FTPA Decision and Reasons document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionRemadeRule32", "FieldType": "FixedRadioList", "FieldTypeParameter": "isDecisionAllowed", "ElementLabel": "What is the First-tier Tribunal's decision on this case following the FTPA?", "SecurityClassification": "PUBLIC"},
