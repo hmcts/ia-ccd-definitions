@@ -1278,5 +1278,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updatePaymentStatus", "CaseFieldID": "appealType", "CaseEventFieldLabel": " ","PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "updatePaymentStatus", "PageLabel": "Update payment status", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N", "PageShowCondition": "appealType=\"DO_NOT_SHOW_ON_UI\"", "Publish": "Y"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateS94bStatus", "CaseFieldID": "s94bStatus", "CaseEventFieldLabel": "Mark appeal as s94b?","PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "markAppealAsS94B", "PageLabel": "Update s94b status", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y", "Publish": "Y"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateS94bStatus", "CaseFieldID": "s94bStatus", "CaseEventFieldLabel": "Mark appeal as s94b?","PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "markAppealAsS94B", "PageLabel": "Update s94b status", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y", "Publish": "Y"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "isDlrmSetAsideEnabled", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "beforeYouStart","PageDisplayOrder": 1, "FieldShowCondition": "checklistTitle=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N"}
 ]
