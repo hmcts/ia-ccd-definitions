@@ -4414,7 +4414,7 @@
     "FieldType": "TextArea",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicantType", "Label": "Who made the application?", "HintText": "If you are recording a decision based on two applications, select the party that has had the biggest impact on your decision.", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaApplicantType", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicantType", "Label": "Who made the application?", "HintText": "If you are recording a decision based on two applications, select the party that has had thebiggest impact on your decision.", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaApplicantType", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionOutcomeType", "Label": "The outcome of the application", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaDecisionOutcomeType", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
@@ -4424,7 +4424,8 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionDocument", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionDocument", "Label": "FTPA Decision and Reasons document", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaAppellantDecisionDocument", "Label": " ", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allFtpaAppellantDecisionDocs", "Label": "FTPA Appellant Decision and Reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
@@ -4434,9 +4435,19 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "decideFtpaAppellantDecisionNotesAdvice",
+    "Label": "#### Notes for the Upper Tribunal\r\n\r\nDo not issue any case specific directions to the parties regarding the onward conduct of the appeal in the Upper Tribunal. The Upper Tribunal will prepare and issue standard directions in every case.\r\nYou should refer the file to the Principal Resident Judge of UTIAC if you believe further directions should be issued in advance of the initial Upper Tribunal Hearing.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaDecisionCheckList", "Label": "Tick any applicable points", "FieldType": "ftpaDecisionCheckList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantTribunalNotesTitle", "Label": "## Appellant: Tribunal Notes", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decidedFtpaAppellantTribunalNotesTitle", "Label": "## Appellant: Tribunal Notes", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionNotesPoints", "Label": "Tick any applicable points", "FieldType": "ftpaDecisionCheckList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decidedFtpaAppellantDecisionNotesPoints", "Label": "Tick any applicable points", "FieldType": "ftpaDecisionCheckList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionNotesDescription", "Label": "Provide any information that may be helpful to the Upper Tribunal judge",  "FieldType": "TextArea", "FieldTypeParameter": "ftpaDecisionReason", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaAppellantDecided", "Label": "Internal flag managed by API for ftpa appellant decided by leadership judge", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionDetails", "Label": "![]()\r\n## Appellant: Decision on permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -4450,7 +4461,8 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionDocument", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionDocument", "Label": "FTPA Decision and Reasons document", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaRespondentDecisionDocument", "Label": " ", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allFtpaRespondentDecisionDocs", "Label": "FTPA Home Office Decision and Reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
@@ -4460,9 +4472,20 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "decideFtpaRespondentDecisionNotesAdvice",
+    "Label": "#### Notes for the Upper Tribunal\r\n\r\nDo not issue any case specific directions to the parties regarding the onward conduct of the appeal in the Upper Tribunal. The Upper Tribunal will prepare and issue standard directions in every case.\r\nYou should refer the file to the Principal Resident Judge of UTIAC if you believe further directions should be issued in advance of the initial Upper Tribunal Hearing.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentTribunalNotesTitle", "Label": "## Home Office: Tribunal Notes", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaRespondentTribunalNotesTitle", "Label": "## Home Office: Tribunal Notes", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionNotesPoints", "Label": "Tick any applicable points", "FieldType": "ftpaDecisionCheckList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaRespondentDecisionNotesPoints", "Label": "Tick any applicable points", "FieldType": "ftpaDecisionCheckList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionNotesDescription", "Label": "Provide any information that may be helpful to the Upper Tribunal judge",  "FieldType": "TextArea", "FieldTypeParameter": "ftpaDecisionReason", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaRespondentDecisionNotesDescription", "Label": "Provide any information that may be helpful to the Upper Tribunal judge",  "FieldType": "TextArea", "FieldTypeParameter": "ftpaDecisionReason", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentDecided", "Label": "Internal flag managed by API for ftpa respondent decided by leadership judge", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionDetails", "Label": "![]()\r\n## Home Office: Decision on permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionDate", "Label": "Decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
@@ -4519,27 +4542,47 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDecisionReason", "Label": "Reason for decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDueDate", "Label": "Due Date", "HintText": "The new direction due date must be at least one day after the original direction due date" ,"FieldType": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantRjDecisionOutcomeType", "Label": "The outcome of the application", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaResidentJudgeDecisionOutcomeType", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaAppellantRjDecisionOutcomeType", "Label": "The outcome of the application", "FieldType": "FixedRadioList", "FieldTypeParameter": "decideFtpaDecisionOutcomeType", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "ftpaAppellantRjDecisionDocumentUploadAdvice",
+    "Label": "#### Upload the FTPA Decision and Reasons document or Notice of setting aside\r\n#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, FTPA-Decision-and-reasons-JSmith.pdf\r\n\r\n#### FTPA Decision and Reasons document or Notice of setting aside",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "decideFtpaAppellantRjDecisionDocumentUploadAdvice",
     "Label": "#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, FTPA-Decision-and-reasons-JSmith.pdf\r\n\r\n#### Upload FTPA Decision and Reasons document",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaAppellantNoticeOfDecisionSetAsideTitle", "Label": "**Before this decision, did you send a Notice of Intention to Set Aside to both parties?**", "FieldType": "Label", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaAppellantNoticeOfDecisionSetAside", "Label": "If you are not a Resident Judge, select No.", "FieldType": "YesOrNo", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaAppellantNoticeOfDecisionSetAside", "Label": "Before this decision, did you send a Notice of Decision set aside and to be reheard in the First-tier under rule 35?", "FieldType": "YesOrNo", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideIsFtpaAppellantNoticeOfDecisionSetAsideTitle", "Label": "#### Before this decision, did you send a Notice of Intention to Set Aside to both parties?", "FieldType": "Label", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideIsFtpaAppellantNoticeOfDecisionSetAside", "Label": "If you are not a Resident Judge, select No.", "FieldType": "YesOrNo", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionObjectionsTitle", "Label": "## Objections", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionObjections", "Label": "List any objections to the draft Notice from either party", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaAppellantDecisionObjections", "Label": "List any objections to the draft Notice from either party", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "ftpaAppellantNoticeUploadAdivce",
-    "Label": "**Attach a copy of any communication from the parties regarding the Notice Objections.**",
+    "Label": "Attach a copy of any communication from the parties regarding the Notice Objections.\r\n\n#### Notice communication",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "decideFtpaAppellantNoticeUploadAdivce",
+    "Label": "#### Attach a copy of any communication from the parties regarding the Notice Objections.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantNoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaAppellantNoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -4548,30 +4591,60 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "decideFtpaAppellantDecisionListingInsAdvice",
+    "Label": "#### Listing instructions\r\nSpecify any instructions for the Tribunal regarding:\r\n- the hearing\r\n- the judge who hears the case\r\n- any Directions to be sent before listing",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionLstIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaAppellantDecisionLstIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionRemadeRule32", "Label": "What is the First-tier Tribunal's decision on this case following the FTPA?", "FieldType": "FixedRadioList", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaAppellantDecisionRemadeRule32", "Label": "What is the First-tier Tribunal's decision on this case following the FTPA?", "FieldType": "FixedRadioList", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantRjNewDecisionOfAppeal", "Label": "New decision of appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentRjDecisionOutcomeType", "Label": "The outcome of the application", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaResidentJudgeDecisionOutcomeType", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaRespondentRjDecisionOutcomeType", "Label": "The outcome of the application", "FieldType": "FixedRadioList", "FieldTypeParameter": "decideFtpaDecisionOutcomeType", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "ftpaRespondentRjDecisionDocumentUploadAdvice",
+    "Label": "#### Upload the FTPA Decision and Reasons document or Notice of setting aside\r\n#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, FTPA-Decision-and-reasons-JSmith.pdf\r\n\r\n#### FTPA Decision and Reasons document or Notice of setting aside",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "decideFtpaRespondentRjDecisionDocumentUploadAdvice",
     "Label": "#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, FTPA-Decision-and-reasons-JSmith.pdf\r\n\r\n#### Upload FTPA Decision and Reasons document",    "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentNoticeOfDecisionSetAsideTitle", "Label": "**Before this decision, did you send a Notice of Intention to Set Aside to both parties?**", "FieldType": "Label", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentNoticeOfDecisionSetAside", "Label": "If you are not a Resident Judge, select No.", "FieldType": "YesOrNo", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideIsFtpaRespondentNoticeOfDecisionSetAsideTitle", "Label": "#### Before this decision, did you send a Notice of Intention to Set Aside to both parties?", "FieldType": "Label", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentNoticeOfDecisionSetAside", "Label": "Before this decision, did you send a Notice of Decision set aside and to be reheard in the First-tier under rule 35?", "FieldType": "YesOrNo", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideIsFtpaRespondentNoticeOfDecisionSetAside", "Label": "If you are not a Resident Judge, select No.", "FieldType": "YesOrNo", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionObjectionsTitle", "Label": "## Objections", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionObjections", "Label": "List any objections to the draft Notice from either party", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaRespondentDecisionObjections", "Label": "List any objections to the draft Notice from either party", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "ftpaRespondentNoticeUploadAdivce",
-    "Label": "**Attach a copy of any communication from the parties regarding the notice Objections.**",
+    "Label": "Attach a copy of any communication from the parties regarding the Notice Objections.\r\n\n#### Notice communication",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "decideFtpaRespondentNoticeUploadAdivce",
+    "Label": "#### Attach a copy of any communication from the parties regarding the Notice Objections.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentNoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decFtpaRespondentNoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -4580,13 +4653,27 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "decideFtpaRespondentDecisionListingInsAdvice",
+    "Label": "#### Listing instructions\r\nSpecify any instructions for the Tribunal regarding:\r\n- the hearing\r\n- the judge who hears the case\r\n- any Directions to be sent before listing",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionLstIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaRespondentDecisionLstIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionRemadeRule32", "Label": "What is the First-tier Tribunal's decision on this case following the FTPA?", "FieldType": "FixedRadioList", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaRespondentDecisionRemadeRule32", "Label": "What is the First-tier Tribunal's decision on this case following the FTPA?", "FieldType": "FixedRadioList", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentRjNewDecisionOfAppeal", "Label": "New decision of appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantRjDecisionNotesPoints", "Label": "Tick any applicable points", "FieldType": "ftpaDecisionCheckList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaAppellantRjDecisionNotesPoints", "Label": "Tick any applicable points", "FieldType": "ftpaDecisionCheckList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantRjDecisionNotesDescription", "Label": "Provide any information that may be helpful to the Upper Tribunal judge",  "FieldType": "TextArea", "FieldTypeParameter": "ftpaDecisionReason", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaAppellantRjDecisionNotesDescription", "Label": "Provide any information that may be helpful to the Upper Tribunal judge",  "FieldType": "TextArea", "FieldTypeParameter": "ftpaDecisionReason", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentRjDecisionNotesPoints", "Label": "Tick any applicable points", "FieldType": "ftpaDecisionCheckList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaRespondentRjDecisionNotesPoints", "Label": "Tick any applicable points", "FieldType": "ftpaDecisionCheckList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentRjDecisionNotesDescription", "Label": "Provide any information that may be helpful to the Upper Tribunal judge",  "FieldType": "TextArea", "FieldTypeParameter": "ftpaDecisionReason", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decideFtpaRespondentRjDecisionNotesDescription", "Label": "Provide any information that may be helpful to the Upper Tribunal judge",  "FieldType": "TextArea", "FieldTypeParameter": "ftpaDecisionReason", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "draftClarifyingQuestionsAnswers", "Label": "Draft Clarifying Questions and Answers", "FieldType": "Collection", "FieldTypeParameter": "clarifyingQuestionAnswer", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAnsweringClarifyingQuestions", "Label": "Is the appellant answering clarifying questions?", "FieldType": "YesOrNo","SecurityClassification": "PUBLIC"},
