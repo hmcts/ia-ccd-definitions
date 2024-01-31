@@ -377,7 +377,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "bundleFileNamePrefix", "Label": "Internal flag managed by API to identify final bundling file name prefix", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionAllowedTitle", "Label": "## What is your decision?  \r\n\r\nIf the appeal is dismissed on all grounds, select 'Dismissed on all grounds'. If the appeal is allowed on any grounds, you must select 'Allowed'.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionAllowed", "Label": "Decision", "FieldType": "FixedRadioList", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadDecisionAndReasonsTitle", "Label": "## Upload your decision and reasons  ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadDecisionAndReasonsTitle", "Label": "## Upload your decision and reasons as a PDF ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "finalDecisionAndReasonsDocument", "Label": "Decision and reasons", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionAndReasonsDeclarationLabel", "Label": "IMPORTANT:\r\n- The date of signature must be today's date\r\n- You can only apply a fee award when you have allowed the appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDocumentSignedToday", "Label": "       ", "FieldType": "isDocumentSignedToday", "SecurityClassification": "PUBLIC"},
@@ -5558,7 +5558,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeWaiverDocument", "Label": "Home Office fee waiver letter", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesHeader", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesReferenceNumber", "Label": "Help with Fees reference number", "HintText":  "For example, HWF-A1B-23", "RegularExpression": "^HWF-[A-Z]{1}\\d{1}[A-Z]{1}-\\d{2}$", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesReferenceNumber", "Label": "Help with Fees reference number", "HintText":  "For example, HWF-XXX-XXX", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "exceptionalCircumstancesHeader", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "exceptionalCircumstances", "Label": "Explain the exceptional circumstances which justify remission of the fee", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
