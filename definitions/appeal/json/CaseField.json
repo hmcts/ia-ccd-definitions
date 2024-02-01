@@ -1635,13 +1635,11 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
-
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_ftpa_submitted",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal in progress](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaInProgress.png)\r\n\r\n## Do this next\r\nReview the application for permission to appeal in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA).\r\n## Leadership Judge\r\nIf you grant, refuse or do not admit an application, you should [record the application decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/leadershipJudgeFtpaDecision).\r\n\r\nTo propose a decision be set aside:\r\n* send a draft Notice to the Resident Judge\r\n* record sending the draft Notice as a [case note](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/addCaseNote)\r\n\r\nYou don't need to do anything else, the Resident Judge will record the outcome.\r\n## Resident Judge\r\nOnly once you have come to a final decision on the application should you [record the application decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/residentJudgeFtpaDecision).\r\n\r\nIf you are pursuing a rule 35 decision to be set aside, you must send the Notice of intention to set aside to both parties offline and await any objections before recording the application decision.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal in progress](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaInProgress.png)\r\n\r\n## Do this next\r\nReview the application for permission to appeal in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA). When you are ready, [record the application decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/decideFtpaApplication).\r\n## If the application should be treated in a different way\r\n You can remove the case from the FTPA process when recording the application decision. A Judge will then update the Tribunal decision.\n## If you are pursuing a rule 35 decision to be set aside\n This can only be done by a Resident Judge. You must send the Notice of Intention to Set Aside to both parties offline and await any objections before recording the application decision. <br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
