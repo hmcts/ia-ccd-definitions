@@ -4423,12 +4423,14 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionDocument", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allFtpaAppellantDecisionDocs", "Label": "FTPA Appellant Decision and Reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicationAppellantDocument", "Label": " ", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allFtpaAppellantDecisionDocs", "Label": "FTPA Appellant Decision and Reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},  
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "ftpaAppellantDecisionNotesAdvice",
-    "Label": "#### Notes for the Upper Tribunal\r\n\r\nDo not issue any case specific directions to the parties regarding the onward conduct of the appeal in the Upper Tribunal. The Upper Tribunal will prepare and issue standard directions in every case.\r\nYou should refer the file to the Principal Resident Judge of UTIAC if you believe further directions should be issued in advance of the initial Upper Tribunal Hearing.",
+    "Label": "#### Notes for the Upper Tribunal\r\n\r\nDo not issue any case specific directions to the parties regarding the onward conduct of the appeal in\r\nthe Upper Tribunal. The Upper Tribunal will prepare and issue standard directions in every case. You \r\n should refer the file to the Principal Resident Judge of UTIAC if you believe further directions should \r\n be issued in advance of the initial Upper Tribunal Hearing.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -4449,12 +4451,13 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionDocument", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicationRespondentDocument", "Label": " ", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allFtpaRespondentDecisionDocs", "Label": "FTPA Home Office Decision and Reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "ftpaRespondentDecisionNotesAdvice",
-    "Label": "#### Notes for the Upper Tribunal\r\n\r\nDo not issue any case specific directions to the parties regarding the onward conduct of the appeal in the Upper Tribunal. The Upper Tribunal will prepare and issue standard directions in every case.\r\nYou should refer the file to the Principal Resident Judge of UTIAC if you believe further directions should be issued in advance of the initial Upper Tribunal Hearing.",
+    "Label": "#### Notes for the Upper Tribunal\r\n\r\nDo not issue any case specific directions to the parties regarding the onward conduct of the appeal in\r\nthe Upper Tribunal. The Upper Tribunal will prepare and issue standard directions in every case. You \r\n should refer the file to the Principal Resident Judge of UTIAC if you believe further directions should \r\n be issued in advance of the initial Upper Tribunal Hearing.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -4526,7 +4529,7 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaAppellantNoticeOfDecisionSetAsideTitle", "Label": "**Before this decision, did you send a Notice of Intention to Set Aside to both parties?**", "FieldType": "Label", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaAppellantNoticeOfDecisionSetAside", "Label": "If you are not a Resident Judge, select No.", "FieldType": "YesOrNo", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaAppellantNoticeOfDecisionSetAside", "Label": " ", "HintText": "If you are not a Resident Judge, select No.", "FieldType": "YesOrNo", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionObjectionsTitle", "Label": "## Objections", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionObjections", "Label": "List any objections to the draft Notice from either party", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {
@@ -4554,11 +4557,12 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "ftpaRespondentRjDecisionDocumentUploadAdvice",
-    "Label": "#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, FTPA-Decision-and-reasons-JSmith.pdf\r\n\r\n#### Upload FTPA Decision and Reasons document",    "FieldType": "Label",
+    "Label": "#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, FTPA-Decision-and-reasons-JSmith.pdf\r\n\r\n#### Upload FTPA Decision and Reasons document",
+    "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentNoticeOfDecisionSetAsideTitle", "Label": "**Before this decision, did you send a Notice of Intention to Set Aside to both parties?**", "FieldType": "Label", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentNoticeOfDecisionSetAside", "Label": "If you are not a Resident Judge, select No.", "FieldType": "YesOrNo", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentNoticeOfDecisionSetAside","Label": " ", "HintText": "If you are not a Resident Judge, select No.", "FieldType": "YesOrNo", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionObjectionsTitle", "Label": "## Objections", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionObjections", "Label": "List any objections to the draft Notice from either party", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {
