@@ -5440,7 +5440,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingType", "Label": "Hearing type", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingTypeYesNo", "Label": "Do you want to change the hearing type?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingYesNoRadioButton", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingLocation", "Label": "Hearing location", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingCentre", "Label": "Hearing location", "FieldType": "FixedList", "FieldTypeParameter": "hearingVenue", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingLocationYesNo", "Label": "Do you want to change the hearing location?", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingYesNoRadioButton", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeHearingDuration", "Label": "Hearing duration", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
