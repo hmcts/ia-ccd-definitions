@@ -4795,6 +4795,16 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantNoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantR35DecisionObjections", "Label": "List any objections to the draft Notice from either party", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "ftpaAppellantR35NoticeUploadAdivce",
+    "Label": "**Attach a copy of any communication from the parties regarding the Notice Objections.**",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantR35NoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -4831,6 +4841,16 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentNoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentR35DecisionObjections", "Label": "List any objections to the draft Notice from either party", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "ftpaRespondentR35NoticeUploadAdivce",
+    "Label": "**Attach a copy of any communication from the parties regarding the notice Objections.**",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentR35NoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
