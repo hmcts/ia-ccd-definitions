@@ -4942,7 +4942,7 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "asylumSupportReference", "Label": "Asylum Support reference number", "HintText":  "For example, 20/02/1234", "RegularExpression": "[0-9]{2}\\/[0-9]{2}\\/[0-9]{4}", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "asylumSupportReference", "Label": "Asylum Support reference number", "HintText":  "For example, 20/02/1234", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "asylumSupportDocument", "Label": "Asylum Support confirmation letter", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionDetailsTitle", "Label": "![]()\n## Remission details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
 
