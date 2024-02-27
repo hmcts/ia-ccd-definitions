@@ -5617,6 +5617,12 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionAndReasonsTitle", "Label": "Do you want to upload a corrected Decisions and Reasons document?", "FieldType": "Label","SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionAndReasonsFinalCheck", "Label": "Do you want to upload a corrected Decisions and Reasons document?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "summariseTribunalDecisionAndReasonsDocument", "Label": "Summarise the changes made in the corrected Decisions and Reasons document", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionAndReasonDocsUpload", "Label": "Upload Decision and Reasons document", "FieldType": "Document", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionAndReasonDocsUpload", "Label": "Upload Decision and Reasons document", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionOption", "Label": " ", "FieldType": "FixedList", "FieldTypeParameter": "remissionOptions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "asylumSupportRefNumber", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesOption", "Label": " ", "FieldType": "FixedList", "FieldTypeParameter": "helpWithFeesOptions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesRefNumber", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "localAuthorityLetters", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeSupportPersisted", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
