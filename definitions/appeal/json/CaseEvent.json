@@ -98,7 +98,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Mark appeal as ADA",
-    "EventEnablingCondition": "appellantInDetention=\"Yes\" AND isAcceleratedDetainedAppeal!=\"Yes\" AND ageAssessment!=\"Yes\"",
+    "EventEnablingCondition": "appellantInDetention=\"Yes\" AND isAcceleratedDetainedAppeal!=\"Yes\" AND ageAssessment!=\"Yes\" AND isNabaAdaEnabled=\"Yes\"",
     "Publish": "Y"
   },
   {
