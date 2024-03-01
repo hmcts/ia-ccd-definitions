@@ -268,5 +268,12 @@
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaEvidenceDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "Supporting evidence", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaApplicationDate", "FieldType": "Date", "ElementLabel": "Application date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionNotesPoints", "FieldType": "ftpaDecisionCheckList", "ElementLabel": "Tick any applicable points", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionNotesDescription", "FieldType": "TextArea", "ElementLabel": "Provide any information that may be helpful to the Upper Tribunal judge", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionNotesDescription", "FieldType": "TextArea", "ElementLabel": "Provide any information that may be helpful to the Upper Tribunal judge", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "updatedDecisionDate", "FieldType": "Date", "ElementLabel": "Date uploaded", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "dateCoverLetterDocumentUploaded", "FieldType": "Date", "ElementLabel": "Date uploaded", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "coverLetterDocument", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "dateDocumentAndReasonsDocumentUploaded", "FieldType": "Date", "ElementLabel": "Date uploaded", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "documentAndReasonsDocument", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "summariseChanges", "FieldType": "TextArea", "ElementLabel": "What has been corrected", "SecurityClassification": "PUBLIC"}
 ]
