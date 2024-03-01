@@ -45,6 +45,15 @@
     "CaseAccessCategories": ""
   },
   {
+    "RoleName" : "idam:caseworker-ia-admofficer",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "caseworker-ia-admofficer,ia_caselinks_profile,ia_caseflags_profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
     "RoleName" : "idam:caseworker-ia-homeofficeapc",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
