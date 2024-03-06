@@ -2204,7 +2204,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "generateServiceRequest",
-    "Name": "Create service request",
+    "Name": "EVENT TO CREATE A SERVICE REQUEST",
     "Description": "Generate a new service request",
     "DisplayOrder": 53,
     "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;respondentReview;caseBuilding;caseUnderReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;awaitingReasonsForAppeal;reasonsForAppealSubmitted;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingCmaRequirements;cmaRequirementsSubmitted;cmaAdjustmentsAgreed;cmaListed;adjourned",
@@ -2218,7 +2218,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Generate",
+    "EndButtonLabel": "BUTTON TO CREATE",
     "Publish": "N",
     "EventEnablingCondition": "paymentStatus!=\"Paid\" AND eaHuAppealTypePaymentOption!=\"payOffline\" AND journeyType!=\"aip\" AND isServiceRequestTabVisibleConsideringRemissions!=\"No\" AND remissionDecision!=\"approved\" AND remissionDecision!=\"partiallyApproved\""
   },
