@@ -4807,16 +4807,8 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantR35NoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "ftpaAppellantDecisionListingInsAdvice",
-    "Label": "Specify any instructions for the Tribunal regarding:\r\n- the hearing\r\n- the judge who hears the case\r\n- any Directions to be sent before listing",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionLstIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantR35ListingJudgeExclude", "Label": "Enter the name of a judge to exclude", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantR35ListingAdditionalIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionRemadeRule32", "Label": "What is the First-tier Tribunal's decision on this case following the FTPA?", "FieldType": "FixedRadioList", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionRemadeRule32Text", "Label": "Explain why the application should be disposed", "FieldType": "TextArea", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
@@ -4853,14 +4845,7 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentR35NoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "ftpaRespondentDecisionListingInsAdvice",
-    "Label": "Specify any instructions for the Tribunal regarding:\r\n- the hearing\r\n- the judge who hears the case\r\n- any Directions to be sent before listing",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
+
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -4870,7 +4855,6 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionLstIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentR35ListingJudgeExclude", "Label": "Enter the name of a judge to exclude", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentR35ListingAdditionalIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionRemadeRule32", "Label": "What is the First-tier Tribunal's decision on this case following the FTPA?", "FieldType": "FixedRadioList", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionRemadeRule32Text", "Label": "Explain why the application should be disposed", "FieldType": "TextArea", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
@@ -5642,9 +5626,18 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rule32ListingJudgeExclude", "Label": "Enter the name of a judge to exclude", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rule32ListingAdditionalIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updatedAppealDecision", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "judgesNamesToExclude", "Label": "Enter the name of a judge to exclude", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "ftpaDecisionListingInsAdvice",
+    "Label": "Specify any instructions for the Tribunal regarding:\r\n- the hearing\r\n- the judge who hears the case\r\n- any Directions to be sent before listing",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sourceOfRemittal", "Label": "Which court remitted the appeal", "FieldType": "FixedRadioList", "FieldTypeParameter": "sourceOfRemittalList","SecurityClassification": "PUBLIC"},
   {
@@ -5664,7 +5657,7 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "courtReferenceNumber", "Label": "What is the ${sourceOfRemittal} reference number", "FieldType": "Text", "HintText": "For example, UI-2023-000001 or CA-2023-000001", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "judgesToExcludeNames", "Label": "Enter the name of judge to exclude", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "excludedJudgeNames", "Label": "Enter the name of judge to exclude", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalInstructions", "Label": "Enter any additional instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadRemittalDecisionDoc", "Label": "Upload remittal decision", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {
@@ -5684,4 +5677,5 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadOtherRemittalDocs", "Label": "Upload other documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"}
+
 ]
