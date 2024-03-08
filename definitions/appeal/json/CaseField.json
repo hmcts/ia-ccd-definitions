@@ -5657,6 +5657,7 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "courtReferenceNumber", "Label": "What is the ${sourceOfRemittal} reference number", "FieldType": "Text", "HintText": "For example, UI-2023-000001 or CA-2023-000001", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "excludedJudgeNames", "Label": "Enter the name of judge to exclude", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalInstructions", "Label": "Enter any additional instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadRemittalDecisionDoc", "Label": "Upload remittal decision", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {
