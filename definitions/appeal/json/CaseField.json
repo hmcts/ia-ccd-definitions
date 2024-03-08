@@ -5629,16 +5629,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rule32ListingAdditionalIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updatedAppealDecision", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "judgesNamesToExclude", "Label": "Enter the name of a judge to exclude", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "ftpaDecisionListingInsAdvice",
-    "Label": "Specify any instructions for the Tribunal regarding:\r\n- the hearing\r\n- the judge who hears the case\r\n- any Directions to be sent before listing",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sourceOfRemittal", "Label": "Which court remitted the appeal", "FieldType": "FixedRadioList", "FieldTypeParameter": "sourceOfRemittalList","SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
@@ -5675,6 +5665,15 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadOtherRemittalDocs", "Label": "Upload other documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadOtherRemittalDocs", "Label": "Upload other documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "judgesNamesToExclude", "Label": "Enter the name of a judge to exclude", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "ftpaDecisionListingInsAdvice",
+    "Label": "Specify any instructions for the Tribunal regarding:\r\n- the hearing\r\n- the judge who hears the case\r\n- any Directions to be sent before listing",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  }
 ]
