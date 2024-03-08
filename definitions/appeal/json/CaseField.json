@@ -5714,7 +5714,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionAndReasonsTitle", "Label": "Do you want to upload a corrected Decisions and Reasons document?", "FieldType": "Label","SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionAndReasonsFinalCheck", "Label": "Do you want to upload a corrected Decisions and Reasons document?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "summariseTribunalDecisionAndReasonsDocument", "Label": "Corrections made to the Decisions and Reasons document", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "summariseTribunalDecisionAndReasonsDocument", "Label": "Corrections made to the Decision and Reasons document", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionAndReasonDocsUpload", "Label": "Decision and Reasons document", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionOption", "Label": " ", "FieldType": "FixedList", "FieldTypeParameter": "remissionOptions", "SecurityClassification": "PUBLIC"},
