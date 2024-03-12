@@ -4779,7 +4779,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaR35AppellantDocument", "Label": "Rule 35 notice", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allFtpaAppellantDecisionDocs", "Label": "FTPA Appellant Decision and Reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allSetAsideAppellantDocs", "Label": "Set aside documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -4808,7 +4807,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicationRespondentDocument", "Label": " ", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaR35RespondentDocument", "Label": "Rule 35 notice", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allFtpaRespondentDecisionDocs", "Label": "FTPA Home Office Decision and Reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allSetAsideRespondentDocs", "Label": "Set aside documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -5755,5 +5753,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "correctedDecisionAndReasons", "Label": "Corrected Decision and reasons", "FieldType": "Collection", "FieldTypeParameter": "decisionAndReasons", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealDecisionTitleUpdateTribunal", "Label": "![]()\r\n## Appeal decision", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionDate", "Label": "Decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionDate", "Label": "Decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allSetAsideDocs", "Label": "Set aside documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"}
 ]
