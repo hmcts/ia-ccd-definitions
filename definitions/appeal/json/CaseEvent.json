@@ -2397,7 +2397,7 @@
     "Description": "Update Tribunal decision",
     "DisplayOrder": 55,
     "PreConditionState(s)": "ftpaDecided",
-    "PostConditionState": "ftpaDecided",
+    "PostConditionState": "remitted",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
     "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
