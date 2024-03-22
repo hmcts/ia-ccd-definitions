@@ -210,7 +210,7 @@
   {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "listCaseHearingDate", "FieldType": "DateTime", "ElementLabel": "Date and time", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "listCaseHearingLength", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "ElementLabel": "Length", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "appealDecision", "FieldType": "Text", "ElementLabel": "Decision of appeal", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "finalDecisionAndReasonsDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Decision and reason documents", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "finalDecisionAndReasonsDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Decision and reasons documents", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateRecorded", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "feeUpdateRecorded", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateStatus", "ListElementCode": "values", "FieldType": "MultiSelectList", "FieldTypeParameter": "feeUpdateStatus", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
