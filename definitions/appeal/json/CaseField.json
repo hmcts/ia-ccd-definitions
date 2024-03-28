@@ -5510,6 +5510,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestHearingChannel", "Label": "What hearing channel type is required?", "FieldType": "DynamicRadioList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestHearingLength", "Label": "Length", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestHearingDate", "Label": "Date and time", "FieldType": "DateTime", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestHearingDate", "Label": "Date and time", "FieldType": "DateTime", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestHearingDate1", "Label": "Date", "FieldType": "Date", "SecurityClassification": "PUBLIC"}
 
 ]
