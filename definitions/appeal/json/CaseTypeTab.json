@@ -717,6 +717,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRep_remitted", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"remitted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalOfficer_remitted", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"remitted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_remitted", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"remitted\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRep_remitted_hearing_requirements", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"submitHearingRequirements\" AND rehearingReason=\"*\""},
 
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "TabLabel": "Appeal", "TabDisplayOrder": 2, "CaseFieldID": "appealTabTitle", "TabFieldDisplayOrder": 1},
@@ -936,7 +937,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "journey_type_legal_rep_s94b", "TabFieldDisplayOrder": 7, "FieldShowCondition": "journeyType!=\"aip\" AND s94bStatus=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "journey_type_s94b", "TabFieldDisplayOrder": 7, "FieldShowCondition": "journeyType!=\"aip\" AND s94bStatus=\"Yes\" AND legalRepName=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRep_submitHearingRequirements", "TabFieldDisplayOrder": 19, "FieldShowCondition": "caseFlagSetAsideReheardExists!=\"Yes\" AND currentCaseStateVisibleToLegalRepresentative=\"submitHearingRequirements\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRep_submitHearingRequirements_ra", "TabFieldDisplayOrder": 19, "FieldShowCondition": "isReheardAppealEnabled=\"Yes\" AND caseFlagSetAsideReheardExists=\"Yes\" AND currentCaseStateVisibleToLegalRepresentative=\"submitHearingRequirements\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRep_submitHearingRequirements_ra", "TabFieldDisplayOrder": 19, "FieldShowCondition": "isReheardAppealEnabled=\"Yes\" AND caseFlagSetAsideReheardExists=\"Yes\" AND currentCaseStateVisibleToLegalRepresentative=\"submitHearingRequirements\" AND rehearingReason!=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_caseOfficer_exit_appeal", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"appealTakenOffline\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_exit_appeal", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"appealTakenOffline\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_adminOfficer_exit_appeal", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToAdminOfficer=\"appealTakenOffline\""},
