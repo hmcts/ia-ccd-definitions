@@ -75,6 +75,8 @@
   {"LiveFrom": "01/01/2018", "ID": "application", "ListElementCode": "applicationStatus", "FieldType": "Text", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hoursAndMinutes", "ListElementCode": "hours", "FieldType": "Text", "ElementLabel": "Hours", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hoursAndMinutes", "ListElementCode": "minutes", "FieldType": "Text", "ElementLabel": "Minutes", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hoursMinutes", "ListElementCode": "hours", "FieldType": "Number", "ElementLabel": "Hours", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hoursMinutes", "ListElementCode": "minutes", "FieldType": "Number", "ElementLabel": "Minutes", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "additionalEvidenceHomeOfficeDocument", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "additionalEvidenceHomeOfficeDocument", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Why it was late", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "subscriber", "FieldType": "FixedList", "FieldTypeParameter": "subscribers", "ElementLabel": "Subscriber", "SecurityClassification": "PUBLIC"},
