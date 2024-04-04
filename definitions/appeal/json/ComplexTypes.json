@@ -247,6 +247,9 @@
 
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "accessCode", "FieldType": "Text", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "expiryDate", "FieldType": "Date", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "remittalDocument", "ListElementCode": "decisionDocument", "FieldType": "documentWithMetadata", "ElementLabel": "Decision Documents", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remittalDocument", "ListElementCode": "otherRemittalDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Other Remittal Documents", "SecurityClassification": "PUBLIC"}
 
 ]
