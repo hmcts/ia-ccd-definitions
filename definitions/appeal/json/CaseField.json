@@ -5087,6 +5087,22 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "dummy_content_for_spike_1",
+    "Label": "![SPIKE TEXT: The amended hearing bundle is being generated. You will soon be able to view the amended hearing bundle in the documents tab.](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_doThisNow_updateDetails.svg)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "dummy_content_for_spike_2",
+    "Label": "![SPIKE TEXT: The amended hearing bundle has failed to be generated. Please try again.](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_doThisNow_updateDetails.svg)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_payAndSubmitPaymentFailed_remissions_pa",
     "Label": "## Current progress of the case\r\n\r\n![Payment pending](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYour appeal has been submitted but the payment has failed. Please retry to [Make a payment](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateServiceRequest).",
     "FieldType": "Label",
