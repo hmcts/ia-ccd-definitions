@@ -2354,5 +2354,39 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
     "Publish": "Y"
+  },
+  {
+  "LiveFrom": "01/01/2018",
+  "CaseTypeID": "Asylum",
+  "ID": "reTriggerWaTasks",
+  "Name": "Re-trigger WA Tasks for case",
+  "Description": "For Re-triggering WA tasks",
+  "DisplayOrder": 102,
+  "PreConditionState(s)": "*",
+  "PostConditionState": "*",
+  "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+  "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+  "SecurityClassification": "Public",
+  "ShowSummary": "Y",
+  "ShowEventNotes": "N",
+  "EndButtonLabel": "Submit",
+  "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "reTriggerWaBulkTasks",
+    "Name": "Re-trigger Task For Case IDs",
+    "Description": "For starting the event to Re-triggering all necessary WA tasks",
+    "DisplayOrder": 103,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit",
+    "Publish": "Y"
   }
 ]
