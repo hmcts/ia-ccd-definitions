@@ -183,7 +183,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Send direction",
-    "Publish": "Y"
+    "Publish": "Y",
+    "EventEnablingCondition": "journeyType!=\"aip\""
   },
   {
     "LiveFrom": "01/01/2018",
@@ -204,7 +205,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Send direction",
-    "Publish": "N"
+    "Publish": "N",
+    "EventEnablingCondition": "journeyType!=\"aip\""
   },
   {
     "LiveFrom": "01/01/2018",
@@ -694,7 +696,7 @@
     "Name": "End the appeal",
     "Description": "End the appeal",
     "DisplayOrder": 32,
-    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;adjourned;ftpaSubmitted;ftpaDecided;awaitingReasonsForAppeal;awaitingClarifyingQuestionsAnswers;awaitingCmaRequirements",
+    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;adjourned;ftpaSubmitted;ftpaDecided;awaitingReasonsForAppeal;reasonsForAppealSubmitted;clarifyingQuestionsAnswersSubmitted;awaitingClarifyingQuestionsAnswers;awaitingCmaRequirements",
     "PostConditionState": "ended",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
@@ -754,7 +756,7 @@
     "Name": "Upload additional evidence",
     "Description": "Upload additional evidence",
     "DisplayOrder": 33,
-    "PreConditionState(s)": "caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing",
+    "PreConditionState(s)": "caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;awaitingReasonsForAppeal;reasonsForAppealSubmitted;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
@@ -1529,7 +1531,7 @@
     "Name": "Force case - case under review",
     "Description": "Force case to case under review",
     "DisplayOrder": 44,
-    "PreConditionState(s)": "caseBuilding",
+    "PreConditionState(s)": "caseBuilding;awaitingReasonsForAppeal",
     "PostConditionState": "caseUnderReview",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
@@ -2037,7 +2039,7 @@
     "Name": "Request a fee remission",
     "Description": "Request a fee remission",
     "DisplayOrder": 80,
-    "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;adjourned",
+    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;adjourned",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
@@ -2208,8 +2210,8 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "generateServiceRequest",
-    "Name": "Make a payment",
-    "Description": "Make a payment",
+    "Name": "Create a service request",
+    "Description": "Create a new service request",
     "DisplayOrder": 53,
     "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;respondentReview;caseBuilding;caseUnderReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;awaitingReasonsForAppeal;reasonsForAppealSubmitted;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingCmaRequirements;cmaRequirementsSubmitted;cmaAdjustmentsAgreed;cmaListed;adjourned",
     "PostConditionState": "*",
@@ -2224,7 +2226,7 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
     "Publish": "N",
-    "EventEnablingCondition": "paymentStatus!=\"Paid\" AND hasServiceRequestAlready!=\"Yes\" AND eaHuAppealTypePaymentOption!=\"payOffline\" AND journeyType!=\"aip\" AND isServiceRequestTabVisibleConsideringRemissions!=\"No\" AND remissionDecision!=\"approved\" AND remissionDecision!=\"partiallyApproved\""
+    "EventEnablingCondition": "paymentStatus!=\"Paid\" AND eaHuAppealTypePaymentOption!=\"payOffline\" AND journeyType!=\"aip\" AND isServiceRequestTabVisibleConsideringRemissions!=\"No\" AND remissionDecision!=\"approved\" AND remissionDecision!=\"partiallyApproved\""
   },
   {
     "LiveFrom": "01/01/2018",
