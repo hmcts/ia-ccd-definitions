@@ -280,5 +280,7 @@
   {"LiveFrom": "01/01/2018", "ID": "remittalDocument", "ListElementCode": "decisionDocument", "FieldType": "documentWithMetadata", "ElementLabel": "Decision Documents", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "remittalDocument", "ListElementCode": "otherRemittalDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Other Remittal Documents", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "ID": "reheardHearingDocumentsComplex", "ListElementCode": "reheardHearingDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Reheard hearing documents", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "reheardHearingDocumentsComplex", "ListElementCode": "reheardHearingDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Reheard hearing documents", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "reheardHearingDecisionComplex", "ListElementCode": "reheardHearingDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Reheard decision and reason documents", "SecurityClassification": "PUBLIC"}
 ]
