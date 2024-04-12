@@ -6914,7 +6914,9 @@
   "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been marked as remitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_LegalRep_Remitted_SubmitHearingRequirements.png)\r\n\r\n## Do this next\nThe appeal is being reheard. You need to [review and submit the appellant's hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/draftHearingRequirements).<br/><br/>",
   "FieldType": "Label",
   "SecurityClassification": "PUBLIC"
-},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reheardHearingDocumentsCollection", "Label": "Reheard hearing documents", "FieldType": "Collection", "FieldTypeParameter": "reheardHearingDocumentsComplex", "SecurityClassification": "PUBLIC"}
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reheardHearingDocumentsCollection", "Label": "Reheard hearing documents", "FieldType": "Collection", "FieldTypeParameter": "reheardHearingDocumentsComplex", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reheardDecisionReasonsCollection", "Label": "Reheard decision and reason documents", "FieldType": "Collection", "FieldTypeParameter": "reheardHearingDecisionComplex", "SecurityClassification": "PUBLIC"}
 
 ]
