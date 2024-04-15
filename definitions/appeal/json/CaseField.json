@@ -5361,5 +5361,12 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "serviceRequestReference", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "s94bStatus", "Label": "S94B appeal", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "s94bStatus", "Label": "S94B appeal", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAdmin", "Label": "Internal flag managed by API to allow admin users to create a case on behalf of an unrepresented appellant", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "ID": "beforeYouStartLabel", "Label": "You will need to check:\n\n- that this is not a duplicate appeal\n- if the appellant has appealed any other UK immigration decisions. If they have, you will need the appeal number to submit the appeal\n- if the appeallant has a pending bail application. If they have, you will need the bail application reference number to submit the appeal\n\nIn the following screens, you will be asked to provide:\n\n- appeal details, including the Notice of Decision\n- the appellant's personal details\n- detention details, if applicable\n- remission information, if applicable, including any supporting evidence or reference numbers\n- reasons the appeal is late, if applicable, and any supporting evidence\n\nOnce you start, you will not be able to save your progress until you have answered all the questions.\n\nPlease ensure you have all the information you need to hand and allow enough time to submit the appeal in one sitting.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "ID": "dateWillBeUsedToDetermineLabel", "Label": "This date will be used to determine if the appeal is in time.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "tribunalReceivedDate", "Label": "Date appeal received", "HintText": "For example, 03 04 2023", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appelantsRepresentation", "Label": "Has the appeal form been submitted by an appellant in person?", "FieldType": "FixedList", "FieldTypeParameter": "appelantsRepresentation", "SecurityClassification": "PUBLIC"}
 ]
