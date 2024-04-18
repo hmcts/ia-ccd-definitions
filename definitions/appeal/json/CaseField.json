@@ -5361,7 +5361,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantPinInPost", "Label": " ", "FieldType": "pinInPost", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "prevJourneyType", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "s94bStatus", "Label": "S94B appeal", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "serviceRequestReference", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isNabaEnabled", "Label": "NABA feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingTypeResult", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -6053,6 +6053,8 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "serviceRequestReference", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isEvidenceFromOutsideUkDocText", "Label": "Provide the name and location of anyone who wishes to give oral evidence from outside the UK",  "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isEvidenceFromOutsideUkInCountryText", "Label": "Provide the name and location of anyone who wishes to give oral evidence from outside the UK",  "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
