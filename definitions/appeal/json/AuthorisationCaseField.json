@@ -860,12 +860,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "legalRepDirectionToPayHeader", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "legalRepDirectionToPayDescription", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "legalRepDirectionToPayFeeHeader", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "legalRepCreateServiceRequestHeader", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "legalRepCreateServiceRequestDescription", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "legalRepCreateServiceRequestFeeHeader", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "legalRepCreateServiceRequestHeader", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "legalRepCreateServiceRequestDescription", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "legalRepCreateServiceRequestFeeHeader", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealReferenceNumber", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealReferenceNumber", "UserRole": "caseworker-wa-task-configuration", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealReferenceNumber", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
@@ -2159,14 +2153,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRepresentative_appealSubmitted_pa", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRepresentative_appealSubmitted_remission_journey_pbaLatr", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRepresentative_appealSubmitted_pa_remission_applied", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRep_appealSubmitted_pa_pay_now_needs_payment", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRep_appealSubmitted_pa_pay_now_needs_service_request", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRep_appealSubmitted_pa_noRemission_paymentPending", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRep_appealSubmitted_pa_remissions", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRep_appealSubmitted_pa_remission_rejected", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRep_appealSubmitted_pa_remission_rejected_needs_payment", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRep_appealSubmitted_pa_paid", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRep_appealSubmitted_pa_pay_later_needs_payment", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRep_appealSubmitted_pa_pay_later_needs_service_request", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRep_appealSubmitted_pa_lateRemissions", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRep_appealSubmitted_pa_paid_lateRemissions", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRep_appealSubmitted_pa_paid_remissions", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
@@ -9350,15 +9339,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "previousRemissionDetails", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "previousRemissionDetails", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRU"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "tempPreviousRemissionDetails", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "tempPreviousRemissionDetails", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "tempPreviousRemissionDetails", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "tempPreviousRemissionDetails", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "tempPreviousRemissionDetails", "UserRole": "ia_specific_access_judge_profile", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "tempPreviousRemissionDetails", "UserRole": "ia_specific_access_admin_profile", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "tempPreviousRemissionDetails", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "tempPreviousRemissionDetails", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "reviewHearingRequirementsTitle", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "reviewHearingRequirementsTitle", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "reviewHearingRequirementsTitle", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
@@ -9835,13 +9815,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prevJourneyType", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prevJourneyType", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "serviceRequestReference", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "serviceRequestReference", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "serviceRequestReference", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "serviceRequestReference", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "serviceRequestReference", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "serviceRequestReference", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "s94bStatus", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "s94bStatus", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "s94bStatus", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
@@ -9851,7 +9824,5 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "s94bStatus", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "s94bStatus", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "s94bStatus", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "s94bStatus", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
-
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRepresentative_pendingPayment_needs_service_request", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "s94bStatus", "UserRole": "caseworker-ia-system-access", "CRUD": "R"}
 ]
