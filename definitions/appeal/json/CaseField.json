@@ -11,7 +11,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistTitle3", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistTitle4", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isOutOfCountryEnabled", "Label": "Out of country feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInUk", "Label": "Is your client currently living in the United Kingdom?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInUk", "Label": "Is the appeallant in the UK?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInUkPreviousSelection", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealOutOfCountry", "Label": "Out of country", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklist", "Label": " ", "FieldType": "checklist", "SecurityClassification": "PUBLIC"},
@@ -114,6 +114,21 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCreateServiceRequestHeader", "Label": "### Next step - payment", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCreateServiceRequestDescription", "Label": "Select 'Submit' to create the service request", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCreateServiceRequestFeeHeader", "Label": "### Fee to pay", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepGivenName", "Label": "Given name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepFamilyName", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepEmail", "Label": "Email", "FieldType": "Text", "RegularExpression":  "^([a-zA-Z0-9\\_\\-\\.]+)@([a-zA-Z0-9\\_\\-\\.]+)\\.([a-zA-Z]{2,5})$", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepRefNumberPaperJ", "Label": "Legal representative reference", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCompanyPaperJ", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepHasAddress", "Label": "Does the legal representative have a UK address?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepAddressUK", "Label": "Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAddressLine1", "Label": "Address line 1", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAddressLine2", "Label": "Address line 2", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAddressLine3", "Label": "Address line 3", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAddressLine4", "Label": "Address line 4", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocCountryLine", "Label": "Country", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealReferenceNumber", "Label": "Appeal reference", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ccdReferenceNumberForDisplay", "Label": "Online case reference number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantNameForDisplay", "Label": "Appellant name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -5361,5 +5376,15 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "serviceRequestReference", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "s94bStatus", "Label": "S94B appeal", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "s94bStatus", "Label": "S94B appeal", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAdmin", "Label": "Internal flag managed by API to allow admin users to create a case on behalf of an unrepresented appellant", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "ID": "beforeYouStartLabel", "Label": "You will need to check:\n\n- that this is not a duplicate appeal\n- if the appellant has appealed any other UK immigration decisions. If they have, you will need the appeal number to submit the appeal\n- if the appeallant has a pending bail application. If they have, you will need the bail application reference number to submit the appeal\n\nIn the following screens, you will be asked to provide:\n\n- appeal details, including the Notice of Decision\n- the appellant's personal details\n- detention details, if applicable\n- remission information, if applicable, including any supporting evidence or reference numbers\n- reasons the appeal is late, if applicable, and any supporting evidence\n\nOnce you start, you will not be able to save your progress until you have answered all the questions.\n\nPlease ensure you have all the information you need to hand and allow enough time to submit the appeal in one sitting.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "ID": "dateWillBeUsedToDetermineLabel", "Label": "This date will be used to determine if the appeal is in time.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "tribunalReceivedDate", "Label": "Date appeal received", "HintText": "For example, 03 04 2023", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appelantsRepresentation", "Label": "Has the appeal form been submitted by an appellant in person?", "FieldType": "FixedRadioList", "FieldTypeParameter": "appelantsRepresentation", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sourceOfAppeal", "Label": "Source of appeal", "FieldType": "FixedRadioList", "FieldTypeParameter": "sourceofAppealOptions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealWasNotSubmittedReason", "Label": "Enter the reasons the appeal was not submitted on MyHMCTS", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealNotSubmittedReasonDocuments", "Label": "Upload supporting documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"}
 ]
