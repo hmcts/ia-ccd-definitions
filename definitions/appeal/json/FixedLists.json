@@ -672,10 +672,9 @@
   {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "partiallyGranted", "ListElement": "Permission partially granted", "DisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "refused", "ListElement": "Permission refused", "DisplayOrder": 3},
   {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "notAdmitted", "ListElement": "Application not admitted", "DisplayOrder": 4},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "withdrawn", "ListElement": "Withdrawn", "DisplayOrder": 5},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "reheardRule35", "ListElement": "Review decision under rule 35 - Resident Judge only", "DisplayOrder": 6},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "remadeRule31", "ListElement": "Dispose of application under rule 31", "DisplayOrder": 7},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "remadeRule32", "ListElement": "Dispose of application under rule 32", "DisplayOrder": 8},
+  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "reheardRule35", "ListElement": "Review decision under rule 35 - Resident Judge only", "DisplayOrder": 5},
+  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "remadeRule31", "ListElement": "Dispose of application under rule 31", "DisplayOrder": 6},
+  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "remadeRule32", "ListElement": "Dispose of application under rule 32", "DisplayOrder": 7},
 
   {"LiveFrom": "01/01/2018", "ID": "hearingConductionOptions", "ListElementCode": "decisionWithouHearing", "ListElement": "Decision without a hearing", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "hearingConductionOptions", "ListElementCode": "videoWithNoParticipants", "ListElement": "Video with no participants at a hearing centre", "DisplayOrder": 2},
@@ -737,8 +736,13 @@
   {"LiveFrom": "01/01/2018", "ID": "remissionDecisionOptions", "ListElementCode": "rejected", "ListElement": "Rejected", "DisplayOrder": 3},
 
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateReasons", "ListElementCode": "decisionTypeChanged", "ListElement": "Decision type changed", "DisplayOrder": 1},
-  {"LiveFrom": "01/01/2018", "ID": "feeUpdateReasons", "ListElementCode": "appealNotValid", "ListElement": "Appeal not valid", "DisplayOrder": 2},
-  {"LiveFrom": "01/01/2018", "ID": "feeUpdateReasons", "ListElementCode": "feeRemissionChanged", "ListElement": "Fee remission changed", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateReasons", "ListElementCode": "feeRemissionChanged", "ListElement": "Fee remission changed", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateReasons", "ListElementCode": "appealNotValid", "ListElement": "Appeal not valid", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateReasons", "ListElementCode": "appealWithdrawn", "ListElement": "Appeal withdrawn", "DisplayOrder": 4},
+
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateTribunalActions", "ListElementCode": "refund", "ListElement": "The appellant should receive a refund", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateTribunalActions", "ListElementCode": "additionalPayment", "ListElement": "The appellant needs to make an additional payment", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateTribunalActions", "ListElementCode": "noAction", "ListElement": "No action required - fee update made for information only", "DisplayOrder": 3},
 
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateRecorded", "ListElementCode": "feeUpdateRecorded", "ListElement": "Fee update recorded", "DisplayOrder": 1},
 
