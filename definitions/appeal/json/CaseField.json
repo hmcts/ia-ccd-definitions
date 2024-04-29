@@ -5622,6 +5622,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestHearingDate", "Label": "Date and time", "FieldType": "DateTime", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestHearingDate1", "Label": "Date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "serviceRequestReference", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "serviceRequestReference", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "ID": "isCaseUsingLocationRefData", "Label": "CASE USES LOCATION REF DATA", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isCaseUsingLocationRefDataLabel", "Label": "![]()\r\n## CASE USES LOCATION REF DATA", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
 ]
