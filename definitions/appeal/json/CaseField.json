@@ -5815,6 +5815,8 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateTribunalAction", "Label": "Select the action the Tribunal needs to take as a result of this fee update", "FieldType": "FixedRadioList", "FieldTypeParameter": "feeUpdateTribunalActions", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "manageFeeRefundedAmount", "Label": "Amount to be refunded", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "manageFeeRequestedAmount", "Label": "Additional payment requested", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "manageFeeRequestedAmount", "Label": "Additional payment requested", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "automaticRemissionReminderLegalRep", "Label": "Internal timed event ID for record remission decision refused or partially granted", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
 
 ]
