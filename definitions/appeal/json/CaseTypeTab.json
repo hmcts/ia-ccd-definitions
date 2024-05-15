@@ -1036,6 +1036,6 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "isAmendedBundleBeingGenerated", "TabFieldDisplayOrder": 2, "FieldShowCondition": "isAmendedBundleBeingGenerated=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "hasAmendedBundleFailed", "TabFieldDisplayOrder": 2, "FieldShowCondition": "hasAmendedBundleFailed=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "dummy_content_for_spike_1", "TabFieldDisplayOrder": 25},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "dummy_content_for_spike_2", "TabFieldDisplayOrder": 26}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "dummy_content_for_spike_1", "TabFieldDisplayOrder": 1, "FieldShowCondition": "isAmendedBundleBeingGenerated=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "dummy_content_for_spike_2", "TabFieldDisplayOrder": 1, "FieldShowCondition": "hasAmendedBundleFailed=\"Yes\""}
 ]
