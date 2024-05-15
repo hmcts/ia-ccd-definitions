@@ -403,6 +403,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_appealStarted_ada",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal started stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealStarted_ada.svg)\r\n\r\n## Do this next\r\nYou still need to submit the appeal.\r\n\r\n[Submit the appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitAppeal)\r\n\r\nYou can also review and edit the appeal.\r\n\r\n[Edit appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_appealStarted_new",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal started stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealStarted.svg)\r\n\r\n## Do this next\r\nYou still need to submit your appeal.\r\n\r\n[Submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitAppeal)\r\n\r\nYou can also review and edit your appeal.\r\n\r\n[Edit appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal)",
     "FieldType": "Label",
@@ -492,6 +500,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_admin_appealStarted",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal started stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealStarted.svg)\r\n\r\n## Do this next\r\nYou still need to submit your appeal.\r\n\r\n[Submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitAppeal)\r\n\r\nYou can also review and edit your appeal.\r\n\r\n[Edit appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_appealSubmitted",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 2 of 11 stages - the Appeal submitted stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYou have submitted your appeal. A Tribunal Caseworker will now review your appeal. You don't need to do anything else right now.<br/><br/><br/>",
     "FieldType": "Label",
@@ -501,6 +517,14 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_appealSubmitted_rpDc",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 2 of 11 stages - the Appeal submitted stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYou have submitted your appeal. A Tribunal Caseworker will now review your appeal. You don't need to do anything else right now.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_appealSubmitted",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 2 of 11 stages - the Appeal submitted stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealSubmitted.svg)\r\n\r\n## Do this next\r\nYou have submitted your appeal. A Tribunal Caseworker will now review your appeal. You don't need to do anything else right now.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -4835,6 +4859,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionDocument", "Label": "Notice of Decision", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionExplanation", "Label": "Reason you cannot provide the Notice of Decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheAppealFormTitle", "Label": "Upload a copy of the appeal form.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheAppealFormDocs", "Label": "Appeal Form", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "deportationOrderTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "deportationOrderOptions", "Label": "Has a deportation order been made against the appellant?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
@@ -5396,5 +5423,15 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "internalContactDetailsTitle", "Label": "Enter the appellant's contact details.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "internalAppellantEmail", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "internalAppellantMobileNumber", "Label": "Mobile number", "FieldType": "Text", "RegularExpression": "^((\\+44(\\s\\(0\\)\\s|\\s0\\s|\\s)?)|0)7\\d{3}(\\s)?\\d{6}$", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingTypeResult", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingTypeResult", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isNabaEnabled", "Label": "NABA feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isNabaEnabledOoc", "Label": "NABA feature flag OOC value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isNabaAdaEnabled", "Label": "NABA ADA feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAgeAssessmentEnabled", "Label": "Age Assessment Appeal feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAgeAssessmentVisible", "Label": "Age Assessment Appeal condition to determine if AAA page is visible", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "letterSentOrReceived", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isEjp", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealSubmissionInternalDate", "Label": "Appeal created by the Tribunal", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDlrmFeeRemissionEnabled", "Label": "Internal flag managed by API to check DLRM set aside feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
 ]
