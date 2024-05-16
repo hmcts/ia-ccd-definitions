@@ -1328,8 +1328,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateS94bStatus", "CaseFieldID": "s94bStatus", "CaseEventFieldLabel": "Mark appeal as s94b?","PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "markAppealAsS94B", "PageLabel": "Update s94b status", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y", "Publish": "Y"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestHearingRequirementsFeature", "CaseFieldID": "isAdmin", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "requestHearingRequirementsFeature", "PageDisplayOrder": 1, "FieldShowCondition": "dummyEmptyLabel=\"DUMMY_FIELD_TO_HIDE\"", "ShowSummaryChangeOption": "N", "Publish": "Y", "RetainHiddenValue": "Y"},
-
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "asyncStitchingComplete", "CaseFieldID": "isAdmin", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "testPageIsAdmin", "PageDisplayOrder": 1, "FieldShowCondition": "dummyEmptyLabel=\"DUMMY_FIELD_TO_HIDE\"", "ShowSummaryChangeOption": "N", "Publish": "Y", "RetainHiddenValue": "Y"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "asyncStitchingComplete", "CaseFieldID": "dummyEmptyLabel", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "testPageIsAdmin", "PageDisplayOrder": 1,  "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "asyncStitchingComplete", "CaseFieldID": "isAdmin", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "testPageIsAdmin", "PageDisplayOrder": 1, "FieldShowCondition": "dummyEmptyLabel=\"DUMMY_FIELD_TO_HIDE\"", "ShowSummaryChangeOption": "N", "Publish": "Y", "RetainHiddenValue": "Y"}
 
 ]
