@@ -1326,5 +1326,9 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updatePaymentStatus", "CaseFieldID": "appealType", "CaseEventFieldLabel": " ","PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "updatePaymentStatus", "PageLabel": "Update payment status", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N", "PageShowCondition": "appealType=\"DO_NOT_SHOW_ON_UI\"", "Publish": "Y"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateS94bStatus", "CaseFieldID": "s94bStatus", "CaseEventFieldLabel": "Mark appeal as s94b?","PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "markAppealAsS94B", "PageLabel": "Update s94b status", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y", "Publish": "Y"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateS94bStatus", "CaseFieldID": "s94bStatus", "CaseEventFieldLabel": "Mark appeal as s94b?","PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "markAppealAsS94B", "PageLabel": "Update s94b status", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y", "Publish": "Y"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "asyncStitchingComplete", "CaseFieldID": "dummyEmptyLabel", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "asyncStitchingIsAdmin", "PageDisplayOrder": 1,  "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "asyncStitchingComplete", "CaseFieldID": "isAdmin", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "asyncStitchingIsAdmin", "PageDisplayOrder": 1, "FieldShowCondition": "dummyEmptyLabel=\"DUMMY_FIELD_TO_HIDE\"", "ShowSummaryChangeOption": "N", "Publish": "Y", "RetainHiddenValue": "Y"}
+
 ]
