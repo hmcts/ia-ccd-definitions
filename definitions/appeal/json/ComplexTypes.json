@@ -249,6 +249,13 @@
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "expiryDate", "FieldType": "Date", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "ID": "remittalDocument", "ListElementCode": "decisionDocument", "FieldType": "documentWithMetadata", "ElementLabel": "Decision Documents", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remittalDocument", "ListElementCode": "otherRemittalDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Other Remittal Documents", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "reheardHearingDocumentsComplex", "ListElementCode": "reheardHearingDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Reheard hearing documents", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "reheardHearingDecisionComplex", "ListElementCode": "reheardHearingDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Reheard decision and reason documents", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaApplicant", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaApplicantType", "ElementLabel": "Applicant", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionOutcomeType", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaResidentJudgeDecisionOutcomeType", "ElementLabel": "The outcome of the application", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionOutcomeTypeR35", "FieldType": "Text", "ElementLabel": "The outcome of the application", "SecurityClassification": "PUBLIC"},

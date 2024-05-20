@@ -5834,7 +5834,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rule32ListingAdditionalIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updatedAppealDecision", "Label": "Decision of appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "judgesNamesToExclude", "Label": "Enter the name of a judge to exclude", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "judgesNamesToExclude", "Label": "Excluded judges", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -6817,5 +6817,114 @@
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "judgeEvidenceForCostsOrder", "Label": "Upload evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "considerMakingCostsOrderLink", "Label": "[Consider making a costs order](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/considerMakingCostsOrder)", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "considerMakingCostsOrderLink", "Label": "[Consider making a costs order](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/considerMakingCostsOrder)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sourceOfRemittal", "Label": "Remitted from", "FieldType": "FixedRadioList", "FieldTypeParameter": "sourceOfRemittalList","SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "upperTribunalCourtReferenceLabel",
+    "Label": "What is the Upper Tribunal appeal reference number",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "courtOfAppealReferenceLabel",
+    "Label": "What is the Court of Appeal reference number",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "courtReferenceNumber", "Label": "${sourceOfRemittal} reference", "FieldType": "Text", "HintText": "For example, UI-2023-000001 or CA-2023-000001", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remittedAdditionalInstructions", "Label": "Listing instructions",  "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadRemittalDecisionDoc", "Label": "Remittal decision", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "remittalDecisionUploadAdvice",
+    "Label": "#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "otherRemittalDocsUploadAdvice",
+    "Label": "#### Upload any other documents relevant to the remission of this appeal.\n#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, UTPA-Decision-and-Reasons-JSmith.pdf",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadOtherRemittalDocs", "Label": "Upload other documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealRemittedDate", "Label": "Date of remission", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rehearingTitle", "Label": "![]()\r\n## Rehearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rehearingReason", "Label": "Reason for rehearing", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_remitted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been marked as remitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_marked_as_remitted.svg)\r\n\r\n## Do this next\nThe appeal will be reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_remitted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been marked as remitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_marked_as_remitted.svg)\r\n\r\n## Do this next\nA Legal Officer will review the case and decide the next steps.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRep_remitted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been marked as remitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_marked_as_remitted.svg)\r\n\r\n## Do this next\nThe appeal is being reheard. The Tribunal will review the case and contact you to let you know what to do next.\n \nYou can [upload any new evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadAdditionalEvidence) you want the Tribunal to consider.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeoffice_remitted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been marked as remitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_marked_as_remitted.svg)\r\n\r\n## Do this next\nThe appeal is being reheard. The Tribunal will review the case and contact you to let you know what to do next.\n \nYou can [upload any new evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadAdditionalEvidenceHomeOffice) you want the Tribunal to consider.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalOfficer_remitted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been marked as remitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_marked_as_remitted.svg)\r\n\r\n## What happens next\nThe appeal is being reheard. Review the case and send any directions if required.\n \nWhen ready, direct the appellant to [submit any new hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remittalDocuments", "Label": "Remittal Documents", "FieldType": "Collection", "FieldTypeParameter": "remittalDocument", "SecurityClassification": "PUBLIC"},
+
+  {
+  "LiveFrom": "01/01/2018",
+  "CaseTypeID": "Asylum",
+  "ID": "progress_legalRep_remitted_hearing_requirements",
+  "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been marked as remitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_LegalRep_Remitted_SubmitHearingRequirements.png)\r\n\r\n## Do this next\nThe appeal is being reheard. You need to [review and submit the appellant's hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/draftHearingRequirements).<br/><br/>",
+  "FieldType": "Label",
+  "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reheardHearingDocumentsCollection", "Label": "Reheard hearing documents", "FieldType": "Collection", "FieldTypeParameter": "reheardHearingDocumentsComplex", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reheardDecisionReasonsCollection", "Label": "Reheard decision and reason documents", "FieldType": "Collection", "FieldTypeParameter": "reheardHearingDecisionComplex", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestDecisionAndReasonsDocuments", "Label": "Decision and reason documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestRemittalDocuments", "Label": "Remittal Documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestReheardHearingDocuments", "Label": "Reheard hearing documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"}
+
 ]
