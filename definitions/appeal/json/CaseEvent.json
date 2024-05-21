@@ -26,7 +26,7 @@
     "Name": "Edit appeal",
     "Description": "Edit appeal",
     "DisplayOrder": 2,
-    "PreConditionState(s)": "appealStarted",
+    "PreConditionState(s)": "appealStarted;appealStartedByAdmin",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
