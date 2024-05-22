@@ -5834,7 +5834,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rule32ListingAdditionalIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updatedAppealDecision", "Label": "Decision of appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "judgesNamesToExclude", "Label": "Excluded judges", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -6818,8 +6817,7 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "judgeEvidenceForCostsOrder", "Label": "Upload evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "considerMakingCostsOrderLink", "Label": "[Consider making a costs order](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/considerMakingCostsOrder)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-
-
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "judgesNamesToExclude", "Label": "Excluded judges", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sourceOfRemittal", "Label": "Remitted from", "FieldType": "FixedRadioList", "FieldTypeParameter": "sourceOfRemittalList","SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
