@@ -155,7 +155,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealGroundsRevocation", "CaseEventFieldLabel": "Select at least one of the options below", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "appealGroundsRevocation", "ShowSummaryChangeOption": "Y"},
 
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "deportationOrderTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "deportationOrderPage", "PageLabel": "Deportation order", "PageDisplayOrder": 90, "PageShowCondition": "outOfCountryDecisionType!=\"refusalOfHumanRights\" AND appellantInUk=\"Yes\"", "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "deportationOrderTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "deportationOrderPage", "PageLabel": "Deportation order", "PageDisplayOrder": 90, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "deportationOrderOptions", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "deportationOrderPage", "ShowSummaryChangeOption": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "newMattersTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "newMatters",  "PageLabel": "New matters", "PageDisplayOrder": 91, "PageShowCondition": "isAdmin!=\"Yes\"", "ShowSummaryChangeOption": "N"},
