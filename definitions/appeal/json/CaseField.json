@@ -63,7 +63,7 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "contactPreference", "Label": "Communication Preference", "FieldType": "FixedRadioList", "FieldTypeParameter": "contactPreference","SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "email", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "mobileNumber", "Label": "Mobile phone number", "FieldType": "Text","SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "mobileNumber", "Label": "Mobile phone number", "FieldType": "Text", "RegularExpression": "^(?=(?:\\D*\\d){7,15}\\D*$)\\+?(\\d[\\d-. ]+)?(\\([\\d-. ]+\\))?[\\d-. ]*\\d$","SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTypeTitle", "Label": " \r\nSelect the appeal type that best fits your case. If you want to raise something relating to another appeal type, you can do this later.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {
@@ -339,8 +339,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeNamesLabel", "Label": "### Give the names of the legal representatives in this case", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantRepresentative", "Label": "Legal representative for the appellant", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "respondentRepresentative", "Label": "Legal representative for the respondent", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "draftDecisionAndReasonsDocuments", "Label": "Decision and reason documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "draftReheardDecisionAndReasons", "Label": "Reheard decision and reason documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "draftDecisionAndReasonsDocuments", "Label": "Decision and reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "draftReheardDecisionAndReasons", "Label": "Reheard decision and reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeName", "Label": "Internal data managed by API", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeEmailAddress", "Label": "Email", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "automaticDirectionRequestingHearingRequirements", "Label": "Internal timed event ID for request hearing requirements automatic direction", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -390,8 +390,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFeeConsistentWithDecision", "Label": "       ", "FieldType": "isFeeConsistentWithDecision", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionAndReasonsCoverLetter", "Label": "       ", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "finalDecisionAndReasonsPdf", "Label": "Decision and reasons document", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "finalDecisionAndReasonsDocuments", "Label": "Decision and reason documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reheardDecisionReasonsDocuments", "Label": "Reheard decision and reason documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "finalDecisionAndReasonsDocuments", "Label": "Decision and reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reheardDecisionReasonsDocuments", "Label": "Reheard decision and reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addCaseNoteTitle", "Label": "### Add your case note below", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addCaseNoteSubject", "Label": "Subject", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addCaseNoteDescription", "Label": "Case note", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
@@ -1733,13 +1733,11 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-
-
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_ftpa_submitted",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal in progress](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaInProgress.png)\r\n\r\n## Do this next\r\nReview the application for permission to appeal in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA).\r\n## Leadership Judge\r\nIf you grant, refuse or do not admit an application, you should [record the application decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/leadershipJudgeFtpaDecision).\r\n\r\nTo propose a decision be set aside:\r\n* send a draft Notice to the Resident Judge\r\n* record sending the draft Notice as a [case note](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/addCaseNote)\r\n\r\nYou don't need to do anything else, the Resident Judge will record the outcome.\r\n## Resident Judge\r\nOnly once you have come to a final decision on the application should you [record the application decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/residentJudgeFtpaDecision).\r\n\r\nIf you are pursuing a rule 35 decision to be set aside, you must send the Notice of intention to set aside to both parties offline and await any objections before recording the application decision.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal in progress](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaInProgress.png)\r\n\r\n## Do this next\r\nReview the application for permission to appeal in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA). When you are ready, [record the application decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/decideFtpaApplication).\r\n## If the application should be treated in a different way\r\n You can remove the case from the FTPA process when recording the application decision. A Judge will then update the Tribunal decision.\n## If you are pursuing a rule 35 decision to be set aside\n This can only be done by a Resident Judge. You must send the Notice of Intention to Set Aside to both parties offline and await any objections before recording the application decision. <br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -2420,6 +2418,86 @@
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_rj_ftpa_respondent_reheard_rule_35_ra",
     "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case has been listed.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_appellant_reheard_rule_35_dlrm",
+    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_rj_ftpa_appellant_reheard_rule_35_dlrm",
+    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_rj_ftpa_appellant_reheard_rule_35_dlrm",
+    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_rj_ftpa_appellant_reheard_rule_35_dlrm",
+    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_rj_ftpa_appellant_reheard_rule_35_dlrm",
+    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. First check any instructions the Judge has made to the Tribunal, then you should direct the appellant to [submit any new hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_respondent_reheard_rule_35_dlrm",
+    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_rj_ftpa_respondent_reheard_rule_35_dlrm",
+    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_rj_ftpa_respondent_reheard_rule_35_dlrm",
+    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_rj_ftpa_respondent_reheard_rule_35_dlrm",
+    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_rj_ftpa_respondent_reheard_rule_35_dlrm",
+    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. First check any instructions the Judge has made to the Tribunal, then you should direct the appellant to [submit any new hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -4143,6 +4221,318 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_appellant_remade_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_rj_ftpa_appellant_remade_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_rj_ftpa_appellant_remade_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_rj_ftpa_appellant_remade_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_rj_ftpa_appellant_remade_rule_31",
+    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_respondent_remade_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_rj_ftpa_respondent_remade_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_rj_ftpa_respondent_remade_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_rj_ftpa_respondent_remade_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_rj_ftpa_respondent_remade_rule_31",
+    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_appellant_remade_rule_32_dlrm",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_rj_ftpa_appellant_remade_rule_32_dlrm",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_rj_ftpa_appellant_remade_rule_32_dlrm",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_rj_ftpa_appellant_remade_rule_32_dlrm",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_rj_ftpa_appellant_remade_rule_32_dlrm",
+    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_rj_ftpa_respondent_remade_rule_32_dlrm",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_rj_ftpa_respondent_remade_rule_32_dlrm",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_rj_ftpa_respondent_remade_rule_32_dlrm",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_rj_ftpa_respondent_remade_rule_32_dlrm",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_rj_ftpa_respondent_remade_rule_32_dlrm",
+    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRep_updateTrib_decision_allowed_under_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRep_updateTrib_decision_allowed_under_rule_31_Ooc",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRep_updateTrib_decision_dismissed_under_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRep_updateTrib_decision_dismissed_under_rule_31_Ooc",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOffice_updateTrib_decision_allowed_under_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOffice_updateTrib_decision_allowed_under_rule_31_Ooc",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOffice_updateTrib_decision_dismissed_under_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOffice_updateTrib_decision_dismissed_under_rule_31_Ooc",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_updateTrib_allowed_under_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nNo further action required.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_updateTrib_dismissed_under_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nNo further action required.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_updateTrib_allowed_under_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nNo further action required.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_updateTrib_dismissed_under_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nNo further action required.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalOfficer_updateTrib_allowed_under_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 14 days from the date of decision to do this.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalOfficer_updateTrib_dismissed_under_rule_31",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 14 days from the date of decision to do this.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_updateTrib_under_rule_32",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: Decision set aside and to be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_updateTrib_under_rule_32",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: Decision set aside and to be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOffice_updateTrib_under_rule_32",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: Decision set aside and to be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRep_updateTrib_under_rule_32",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: Decision set aside and to be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. A Legal Officer will review any instructions from the Judge and you will be notified if you need to do anything.",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalOfficer_updateTrib_under_rule_32",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: Decision set aside and to be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. First check any instructions the Judge has made to the Tribunal, then you should direct the appellant to [submit any new hearing requirements.](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseDetailsTitle", "Label": "![]()\r\n## Case details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingDetailsTitle", "Label": "![]()\r\n## Hearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingAttendanceTitle", "Label": "![]()\r\n## Hearing attendance", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -4280,7 +4670,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_decision.svg)\r\n\r\n## Do this next\r\nThe judge is writing the decisions and reasons. You will be notified when it is available to view.",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_decision.svg)\r\n\r\n## Do this next\r\nThe judge is writing the decision and reasons. You will be notified when it is available to view.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -4522,13 +4912,16 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionDocument", "Label": "FTPA Decision and Reasons document", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionDocument", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicationAppellantDocument", "Label": " ", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaR35AppellantDocument", "Label": "Rule 35 notice", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allFtpaAppellantDecisionDocs", "Label": "FTPA Appellant Decision and Reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "ftpaAppellantDecisionNotesAdvice",
-    "Label": "#### Notes for the Upper Tribunal\r\n\r\nDo not issue any case specific directions to the parties regarding the onward conduct of the appeal in the Upper Tribunal. The Upper Tribunal will prepare and issue standard directions in every case.\r\nYou should refer the file to the Principal Resident Judge of UTIAC if you believe further directions should be issued in advance of the initial Upper Tribunal Hearing.",
+    "Label": "#### Notes for the Upper Tribunal\r\n\r\nDo not issue any case specific directions to the parties regarding the onward conduct of the appeal in\r\nthe Upper Tribunal. The Upper Tribunal will prepare and issue standard directions in every case. You \r\n should refer the file to the Principal Resident Judge of UTIAC if you believe further directions should \r\n be issued in advance of the initial Upper Tribunal Hearing.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -4548,13 +4941,15 @@
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionDocument", "Label": "FTPA Decision and Reasons document", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionDocument", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicationRespondentDocument", "Label": " ", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaR35RespondentDocument", "Label": "Rule 35 notice", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allFtpaRespondentDecisionDocs", "Label": "FTPA Home Office Decision and Reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "ftpaRespondentDecisionNotesAdvice",
-    "Label": "#### Notes for the Upper Tribunal\r\n\r\nDo not issue any case specific directions to the parties regarding the onward conduct of the appeal in the Upper Tribunal. The Upper Tribunal will prepare and issue standard directions in every case.\r\nYou should refer the file to the Principal Resident Judge of UTIAC if you believe further directions should be issued in advance of the initial Upper Tribunal Hearing.",
+    "Label": "#### Notes for the Upper Tribunal\r\n\r\nDo not issue any case specific directions to the parties regarding the onward conduct of the appeal in\r\nthe Upper Tribunal. The Upper Tribunal will prepare and issue standard directions in every case. You \r\n should refer the file to the Principal Resident Judge of UTIAC if you believe further directions should \r\n be issued in advance of the initial Upper Tribunal Hearing.",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -4607,7 +5002,11 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAppellantFtpaDecisionVisibleToRespondent", "Label": "Internal flag managed by API for leadership judge appellant ftpa decision visible to respondent", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isRespondentFtpaDecisionVisibleToAppellant", "Label": "Internal flag managed by API for leadership judge respondent ftpa decision visible to appellant", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionTitle", "Label": "![]()\r\n## FTPA decision", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionTitleDlrm", "Label": "![]()\r\n## Rehearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantReasonRehearing", "Label": "Reason for rehearing", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionTitle", "Label": "![]()\r\n## FTPA decision", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionTitleDlrm", "Label": "![]()\r\n## Rehearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentReasonRehearing", "Label": "Reason for rehearing", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "timeExtensions", "Label": "Time extensions", "FieldType": "Collection", "FieldTypeParameter": "timeExtension", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionRequired", "Label": "review time extension required", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reviewTimeExtensionDate", "Label": "Date application was made", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
@@ -4621,64 +5020,92 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "ftpaAppellantRjDecisionDocumentUploadAdvice",
-    "Label": "#### Upload the FTPA Decision and Reasons document or Notice of setting aside\r\n#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, FTPA-Decision-and-reasons-JSmith.pdf\r\n\r\n#### FTPA Decision and Reasons document or Notice of setting aside",
+    "Label": "#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, FTPA-Decision-and-reasons-JSmith.pdf\r\n\r\n#### Upload FTPA Decision and Reasons document",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaAppellantNoticeOfDecisionSetAside", "Label": "Before this decision, did you send a Notice of Decision set aside and to be reheard in the First-tier under rule 35?", "FieldType": "YesOrNo", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "ftpaAppellantR35RjDecisionDocumentUploadAdvice",
+    "Label": "#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, Final-Rule-35-notice-JSmith.pdf\r\n\r\n#### Upload final rule 35 notice",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaAppellantNoticeOfDecisionSetAsideTitle", "Label": "**Before this decision, did you send a Notice of Intention to Set Aside to both parties?**", "FieldType": "Label", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaAppellantNoticeOfDecisionSetAside", "Label": "Notice of Intention to Set Aside sent?", "HintText": "Before this decision, did you send a Notice of Intention to Set Aside to both parties?\r\n\r\n(If you are not a Resident Judge, select No.)", "FieldType": "YesOrNo", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionObjectionsTitle", "Label": "## Objections", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionObjections", "Label": "List any objections to the draft Notice from either party", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "ftpaAppellantNoticeUploadAdivce",
-    "Label": "Attach a copy of any communication from the parties regarding the Notice Objections.\r\n\n#### Notice communication",
+    "Label": "**Attach a copy of any communication from the parties regarding the Notice Objections.**",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantNoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantR35DecisionObjections", "Label": "List any objections to the draft Notice from either party", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "ftpaAppellantDecisionListingInsAdvice",
-    "Label": "#### Listing instructions\r\nSpecify any instructions for the Tribunal regarding:\r\n- the hearing\r\n- the judge who hears the case\r\n- any Directions to be sent before listing",
+    "ID": "ftpaAppellantR35NoticeUploadAdivce",
+    "Label": "**Attach a copy of any communication from the parties regarding the Notice Objections.**",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantR35NoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionLstIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantR35ListingAdditionalIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionRemadeRule32", "Label": "What is the First-tier Tribunal's decision on this case following the FTPA?", "FieldType": "FixedRadioList", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionRemadeRule32Text", "Label": "Explain why the application should be disposed", "FieldType": "TextArea", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantRjNewDecisionOfAppeal", "Label": "New decision of appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentRjDecisionOutcomeType", "Label": "The outcome of the application", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaResidentJudgeDecisionOutcomeType", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "ftpaRespondentRjDecisionDocumentUploadAdvice",
-    "Label": "#### Upload the FTPA Decision and Reasons document or Notice of setting aside\r\n#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, FTPA-Decision-and-reasons-JSmith.pdf\r\n\r\n#### FTPA Decision and Reasons document or Notice of setting aside",
+    "Label": "#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, FTPA-Decision-and-reasons-JSmith.pdf\r\n\r\n#### Upload FTPA Decision and Reasons document",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentNoticeOfDecisionSetAside", "Label": "Before this decision, did you send a Notice of Decision set aside and to be reheard in the First-tier under rule 35?", "FieldType": "YesOrNo", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentNoticeOfDecisionSetAsideTitle", "Label": "**Before this decision, did you send a Notice of Intention to Set Aside to both parties?**", "FieldType": "Label", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentNoticeOfDecisionSetAside","Label": "Notice of Intention to Set Aside sent?", "HintText": "Before this decision, did you send a Notice of Intention to Set Aside to both parties?\r\n\r\n(If you are not a Resident Judge, select No.)", "FieldType": "YesOrNo", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionObjectionsTitle", "Label": "## Objections", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionObjections", "Label": "List any objections to the draft Notice from either party", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "ftpaRespondentNoticeUploadAdivce",
-    "Label": "Attach a copy of any communication from the parties regarding the Notice Objections.\r\n\n#### Notice communication",
+    "Label": "**Attach a copy of any communication from the parties regarding the notice Objections.**",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentNoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentR35DecisionObjections", "Label": "List any objections to the draft Notice from either party", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "ftpaRespondentDecisionListingInsAdvice",
-    "Label": "#### Listing instructions\r\nSpecify any instructions for the Tribunal regarding:\r\n- the hearing\r\n- the judge who hears the case\r\n- any Directions to be sent before listing",
+    "ID": "ftpaRespondentR35NoticeUploadAdivce",
+    "Label": "**Attach a copy of any communication from the parties regarding the notice Objections.**",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentR35NoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "ftpaRespondentR35RjDecisionDocumentUploadAdvice",
+    "Label": "#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, Final-Rule-35-notice-JSmith.pdf\r\n\r\n#### Upload final rule 35 notice",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionLstIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentR35ListingAdditionalIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionRemadeRule32", "Label": "What is the First-tier Tribunal's decision on this case following the FTPA?", "FieldType": "FixedRadioList", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionRemadeRule32Text", "Label": "Explain why the application should be disposed", "FieldType": "TextArea", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentRjNewDecisionOfAppeal", "Label": "New decision of appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantRjDecisionNotesPoints", "Label": "Tick any applicable points", "FieldType": "ftpaDecisionCheckList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantRjDecisionNotesDescription", "Label": "Provide any information that may be helpful to the Upper Tribunal judge",  "FieldType": "TextArea", "FieldTypeParameter": "ftpaDecisionReason", "SecurityClassification": "PUBLIC"},
@@ -4996,7 +5423,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customRespAdditionalEvidenceDocs", "Label": "Respondent additional evidence following FTPA", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customFtpaAppellantDocs", "Label": "Appellant FTPA documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customFtpaRespondentDocs", "Label": "Respondent FTPA documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customFinalDecisionAndReasonsDocs", "Label": "Decisions and reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customFinalDecisionAndReasonsDocs", "Label": "Decision and reasons documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customReheardHearingDocs", "Label": "Reheard hearing documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customAppAddendumEvidenceDocs", "Label": "Appellant Evidence after the hearing bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customRespAddendumEvidenceDocs",   "Label": "Respondent Evidence after the hearing bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
@@ -5420,7 +5847,70 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantPinInPost", "Label": " ", "FieldType": "pinInPost", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "prevJourneyType", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "s94bStatus", "Label": "S94B appeal", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaList", "Label": "Application", "FieldType": "Collection", "FieldTypeParameter": "ftpaApplications", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaListVisible", "Label": "Internal flag managed by API to show if FTPA list is populated", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDlrmSetAsideEnabled", "Label": "Internal flag managed by API to check DLRM set aside feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDlrmFeeRemissionEnabled", "Label": "Internal flag managed by API to check DLRM fee remission feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionList", "Label": "What is the reason for updating the decision?", "FieldType": "FixedRadioList", "FieldTypeParameter": "updateTribunalRuleList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDynamicCurrentDecision", "Label": "## Current decision \n\n${updatedAppealDecision}\n\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "originalTribunalDynamicCurrentDecision", "Label": "## Current decision \n\n${appealDecision}\n\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "typesOfUpdateTribunalDecision", "Label": "Do you want to change the decision?", "FieldType": "DynamicRadioList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionAndReasonsTitle", "Label": " ", "FieldType": "Label","SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionAndReasonsFinalCheck", "Label": "Do you want to upload a corrected Decision and Reasons document?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "summariseTribunalDecisionAndReasonsDocument", "Label": "Corrections made to the Decision and Reasons document", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionAndReasonDocsUpload", "Label": "Decision and Reasons document", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionOption", "Label": " ", "FieldType": "FixedList", "FieldTypeParameter": "remissionOptions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "asylumSupportRefNumber", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesOption", "Label": " ", "FieldType": "FixedList", "FieldTypeParameter": "helpWithFeesOptions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesRefNumber", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "localAuthorityLetters", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeSupportPersisted", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "underRule32DocumentUploadAdvice",
+    "Label": "#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, FTPA-Decision-and-reasons-JSmith.pdf\r\n\r\n#### Upload rule 32 notice",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rule32NoticeDocument", "Label": "Rule 32 notice", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "rule32ListingInsAdvice",
+    "Label": "Specify any instructions for the Tribunal regarding:\r\n- the hearing\r\n- the judge who hears the case\r\n- any Directions to be sent before listing",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rule32ListingAdditionalIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updatedAppealDecision", "Label": "Decision of appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "ftpaDecisionListingInsAdvice",
+    "Label": "Specify any instructions for the Tribunal regarding:\r\n- the hearing\r\n- the judge who hears the case\r\n- any Directions to be sent before listing",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "correctedDecisionAndReasons", "Label": "Corrected Decision and reasons", "FieldType": "Collection", "FieldTypeParameter": "decisionAndReasons", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealDecisionTitleUpdateTribunal", "Label": "![]()\r\n## Appeal decision", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionDate", "Label": "Decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "allSetAsideDocs", "Label": "Set aside documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rehearingDetailsTitle", "Label": "![]()\r\n## Rehearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonRehearingRule32", "Label": "Reason for rehearing", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionDateRule32", "Label": "Decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isNabaEnabled", "Label": "NABA feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingTypeResult", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
@@ -6386,499 +6876,116 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "judgeEvidenceForCostsOrder", "Label": "Upload evidence", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "considerMakingCostsOrderLink", "Label": "[Consider making a costs order](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/considerMakingCostsOrder)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "judgesNamesToExclude", "Label": "Excluded judges", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sourceOfRemittal", "Label": "Remitted from", "FieldType": "FixedRadioList", "FieldTypeParameter": "sourceOfRemittalList","SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "upperTribunalCourtReferenceLabel",
+    "Label": "What is the Upper Tribunal appeal reference number",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "courtOfAppealReferenceLabel",
+    "Label": "What is the Court of Appeal reference number",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "courtReferenceNumber", "Label": "${sourceOfRemittal} reference", "FieldType": "Text", "HintText": "For example, UI-2023-000001 or CA-2023-000001", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remittedAdditionalInstructions", "Label": "Listing instructions",  "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadRemittalDecisionDoc", "Label": "Remittal decision", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "remittalDecisionUploadAdvice",
+    "Label": "#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "otherRemittalDocsUploadAdvice",
+    "Label": "#### Upload any other documents relevant to the remission of this appeal.\n#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, UTPA-Decision-and-Reasons-JSmith.pdf",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadOtherRemittalDocs", "Label": "Upload other documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealRemittedDate", "Label": "Date of remission", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rehearingTitle", "Label": "![]()\r\n## Rehearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rehearingReason", "Label": "Reason for rehearing", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_judge_rj_ftpa_appellant_reheard_rule_35_dlrm",
-    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
+    "ID": "progress_judge_remitted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been marked as remitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_marked_as_remitted.svg)\r\n\r\n## Do this next\nThe appeal will be reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_admin_rj_ftpa_appellant_reheard_rule_35_dlrm",
-    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalRepresentative_rj_ftpa_appellant_reheard_rule_35_dlrm",
-    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_homeOfficeAll_rj_ftpa_appellant_reheard_rule_35_dlrm",
-    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_rj_ftpa_appellant_reheard_rule_35_dlrm",
-    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. First check any instructions the Judge has made to the Tribunal, then you should direct the appellant to [submit any new hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_judge_rj_ftpa_respondent_reheard_rule_35_dlrm",
-    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_admin_rj_ftpa_respondent_reheard_rule_35_dlrm",
-    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalRepresentative_rj_ftpa_respondent_reheard_rule_35_dlrm",
-    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_homeOfficeAll_rj_ftpa_respondent_reheard_rule_35_dlrm",
-    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_rj_ftpa_respondent_reheard_rule_35_dlrm",
-    "Label": "## Current progress of the case\n\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\n\n## What happens next\r\nThe appeal is being reheard. First check any instructions the Judge has made to the Tribunal, then you should direct the appellant to [submit any new hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_judge_rj_ftpa_appellant_remade_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_admin_rj_ftpa_appellant_remade_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_homeOfficeAll_rj_ftpa_appellant_remade_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_rj_ftpa_appellant_remade_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalRepresentative_rj_ftpa_appellant_remade_rule_31",
-    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_judge_rj_ftpa_respondent_remade_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_admin_rj_ftpa_respondent_remade_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_homeOfficeAll_rj_ftpa_respondent_remade_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_rj_ftpa_respondent_remade_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalRepresentative_rj_ftpa_respondent_remade_rule_31",
-    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_judge_rj_ftpa_appellant_remade_rule_32_dlrm",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_admin_rj_ftpa_appellant_remade_rule_32_dlrm",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_homeOfficeAll_rj_ftpa_appellant_remade_rule_32_dlrm",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_rj_ftpa_appellant_remade_rule_32_dlrm",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalRepresentative_rj_ftpa_appellant_remade_rule_32_dlrm",
-    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_judge_rj_ftpa_respondent_remade_rule_32_dlrm",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_admin_rj_ftpa_respondent_remade_rule_32_dlrm",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_homeOfficeAll_rj_ftpa_respondent_remade_rule_32_dlrm",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_rj_ftpa_respondent_remade_rule_32_dlrm",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## What happens next\r\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process and Judge will decide it separately.<br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalRepresentative_rj_ftpa_respondent_remade_rule_32_dlrm",
-    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalRep_updateTrib_decision_allowed_under_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalRep_updateTrib_decision_allowed_under_rule_31_Ooc",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalRep_updateTrib_decision_dismissed_under_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalRep_updateTrib_decision_dismissed_under_rule_31_Ooc",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPAAppellant) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_homeOffice_updateTrib_decision_allowed_under_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_homeOffice_updateTrib_decision_allowed_under_rule_31_Ooc",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_homeOffice_updateTrib_decision_dismissed_under_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 14 days to apply from the date the Decision and Reasons document was uploaded.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_homeOffice_updateTrib_decision_dismissed_under_rule_31_Ooc",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## What happens next\r\nThe appeal has been decided. You have the right to [apply for permission to appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/applyForFTPARespondent) to the Upper Tribunal. You have 28 days to apply from the date the Decision and Reasons document was uploaded.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_judge_updateTrib_allowed_under_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nNo further action required.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_judge_updateTrib_dismissed_under_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nNo further action required.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_admin_updateTrib_allowed_under_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nNo further action required.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_admin_updateTrib_dismissed_under_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nNo further action required.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalOfficer_updateTrib_allowed_under_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 14 days from the date of decision to do this.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalOfficer_updateTrib_dismissed_under_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe case has been decided. Either party has the right to appeal this decision, they have 14 days from the date of decision to do this.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_judge_updateTrib_under_rule_32",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: Decision set aside and to be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_admin_updateTrib_under_rule_32",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: Decision set aside and to be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_homeOffice_updateTrib_under_rule_32",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: Decision set aside and to be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. A Legal Officer will review any Tribunal instructions and then the listing team will relist the case.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalRep_updateTrib_under_rule_32",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: Decision set aside and to be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. A Legal Officer will review any instructions from the Judge and you will be notified if you need to do anything.",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalOfficer_updateTrib_under_rule_32",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: Decision set aside and to be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## What happens next\r\nThe appeal is being reheard. First check any instructions the Judge has made to the Tribunal, then you should direct the appellant to [submit any new hearing requirements.](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements)",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicationAppellantDocument", "Label": " ", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaR35AppellantDocument", "Label": "Rule 35 notice", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicationRespondentDocument", "Label": " ", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaR35RespondentDocument", "Label": "Rule 35 notice", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionTitleDlrm", "Label": "![]()\r\n## Rehearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantReasonRehearing", "Label": "Reason for rehearing", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionTitleDlrm", "Label": "![]()\r\n## Rehearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentReasonRehearing", "Label": "Reason for rehearing", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "ftpaAppellantR35RjDecisionDocumentUploadAdvice",
-    "Label": "#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, Final-Rule-35-notice-JSmith.pdf\r\n\r\n#### Upload final rule 35 notice",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaAppellantNoticeOfDecisionSetAsideTitle", "Label": "**Before this decision, did you send a Notice of Intention to Set Aside to both parties?**", "FieldType": "Label", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantR35DecisionObjections", "Label": "List any objections to the draft Notice from either party", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "ftpaAppellantR35NoticeUploadAdivce",
-    "Label": "**Attach a copy of any communication from the parties regarding the Notice Objections.**",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantR35NoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantR35ListingAdditionalIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionRemadeRule32Text", "Label": "Explain why the application should be disposed", "FieldType": "TextArea", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaRespondentNoticeOfDecisionSetAsideTitle", "Label": "**Before this decision, did you send a Notice of Intention to Set Aside to both parties?**", "FieldType": "Label", "FieldTypeParameter": "isNoticeOfDecisionSetAside", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentR35DecisionObjections", "Label": "List any objections to the draft Notice from either party", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "ftpaRespondentR35NoticeUploadAdivce",
-    "Label": "**Attach a copy of any communication from the parties regarding the notice Objections.**",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentR35NoticeDocument", "Label": "Notice communication", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "ftpaRespondentR35RjDecisionDocumentUploadAdvice",
-    "Label": "#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, Final-Rule-35-notice-JSmith.pdf\r\n\r\n#### Upload final rule 35 notice",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentR35ListingAdditionalIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionRemadeRule32Text", "Label": "Explain why the application should be disposed", "FieldType": "TextArea", "FieldTypeParameter": "isDecisionAllowed", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaListVisible", "Label": "Internal flag managed by API to show if FTPA list is populated", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDlrmSetAsideEnabled", "Label": "Internal flag managed by API to check DLRM set aside feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDlrmFeeRemissionEnabled", "Label": "Internal flag managed by API to check DLRM fee remission feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDynamicCurrentDecision", "Label": "## Current decision \n\n${updatedAppealDecision}\n\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "originalTribunalDynamicCurrentDecision", "Label": "## Current decision \n\n${appealDecision}\n\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionAndReasonsTitle", "Label": " ", "FieldType": "Label","SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionAndReasonsFinalCheck", "Label": "Do you want to upload a corrected Decision and Reasons document?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "summariseTribunalDecisionAndReasonsDocument", "Label": "Corrections made to the Decision and Reasons document", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionAndReasonDocsUpload", "Label": "Decision and Reasons document", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "asylumSupportRefNumber", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesRefNumber", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeSupportPersisted", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "underRule32DocumentUploadAdvice",
-    "Label": "#### Advice on uploads\r\n- files must be no more than 100MB in size\r\n- You can upload jpg, png, svg, gif, doc and PDF files\r\n- before uploading a file, give it a meaningful file name. For example, FTPA-Decision-and-reasons-JSmith.pdf\r\n\r\n#### Upload rule 32 notice",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rule32NoticeDocument", "Label": "Rule 32 notice", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "rule32ListingInsAdvice",
-    "Label": "Specify any instructions for the Tribunal regarding:\r\n- the hearing\r\n- the judge who hears the case\r\n- any Directions to be sent before listing",
-    "FieldType": "Label",
-    "SecurityClassification": "PUBLIC"
-  },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rule32ListingAdditionalIns", "Label": "Listing instructions", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updatedAppealDecision", "Label": "Decision of appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "judgesNamesToExclude", "Label": "Enter the name of a judge to exclude", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "ftpaDecisionListingInsAdvice",
-    "Label": "Specify any instructions for the Tribunal regarding:\r\n- the hearing\r\n- the judge who hears the case\r\n- any Directions to be sent before listing",
+    "ID": "progress_admin_remitted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been marked as remitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_marked_as_remitted.svg)\r\n\r\n## Do this next\nA Legal Officer will review the case and decide the next steps.<br/><br/>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealDecisionTitleUpdateTribunal", "Label": "![]()\r\n## Appeal decision", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionDate", "Label": "Decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rehearingDetailsTitle", "Label": "![]()\r\n## Rehearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonRehearingRule32", "Label": "Reason for rehearing", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionDateRule32", "Label": "Decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRep_remitted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been marked as remitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_marked_as_remitted.svg)\r\n\r\n## Do this next\nThe appeal is being reheard. The Tribunal will review the case and contact you to let you know what to do next.\n \nYou can [upload any new evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadAdditionalEvidence) you want the Tribunal to consider.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeoffice_remitted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been marked as remitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_marked_as_remitted.svg)\r\n\r\n## Do this next\nThe appeal is being reheard. The Tribunal will review the case and contact you to let you know what to do next.\n \nYou can [upload any new evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadAdditionalEvidenceHomeOffice) you want the Tribunal to consider.<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalOfficer_remitted",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been marked as remitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_marked_as_remitted.svg)\r\n\r\n## What happens next\nThe appeal is being reheard. Review the case and send any directions if required.\n \nWhen ready, direct the appellant to [submit any new hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remittalDocuments", "Label": "Remittal Documents", "FieldType": "Collection", "FieldTypeParameter": "remittalDocument", "SecurityClassification": "PUBLIC"},
+
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRep_remitted_hearing_requirements",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been marked as remitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_LegalRep_Remitted_SubmitHearingRequirements.png)\r\n\r\n## Do this next\nThe appeal is being reheard. You need to [review and submit the appellant's hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/draftHearingRequirements).<br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reheardHearingDocumentsCollection", "Label": "Reheard hearing documents", "FieldType": "Collection", "FieldTypeParameter": "reheardHearingDocumentsComplex", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reheardDecisionReasonsCollection", "Label": "Reheard decision and reason documents", "FieldType": "Collection", "FieldTypeParameter": "reheardHearingDecisionComplex", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestDecisionAndReasonsDocuments", "Label": "Decision and reason documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestRemittalDocuments", "Label": "Remittal Documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestReheardHearingDocuments", "Label": "Reheard hearing documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAppealAdminJ", "Label": "What are the circumstances of the apellant's out of country appeal?", "FieldType": "FixedRadioList", "FieldTypeParameter": "oocAppealAdminJ", "SecurityClassification": "PUBLIC"}
 
 
-  
+
 ]
