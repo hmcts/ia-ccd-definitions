@@ -1991,6 +1991,7 @@
     "DisplayOrder": 72,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_AAC_URL}/noc/apply-decision",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
