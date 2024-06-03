@@ -122,6 +122,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCreateServiceRequestHeader", "Label": "### Next step - payment", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCreateServiceRequestDescription", "Label": "Select 'Submit' to create the service request", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCreateServiceRequestFeeHeader", "Label": "### Fee to pay", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adminDeclaration", "Label": " ", "FieldType": "MultiSelectList", "FieldTypeParameter": "adminDeclaration", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepGivenName", "Label": "Given name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepFamilyName", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -143,7 +144,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsForDisplay", "Label": "Grounds of appeal", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGrounds", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationOutOfTimeText", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationOutOfTimeExplanation", "Label": "Reasons for late appeal submission", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationOutOfTimeDocument", "Label": "Late submission supporting document", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationOutOfTimeDocument", "Label": "Supporting evidence", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantSubmissionOutOfTime", "Label": "Internal flag managed by API to enable/disable out of time submission page", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantOutOfTimeText", "Label": "This application is late. You must provide full reasons why it is being submitted more than 14 days after the Decision and Reasons document was uploaded. \r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
