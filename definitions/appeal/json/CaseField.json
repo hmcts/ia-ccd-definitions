@@ -38,10 +38,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantStateless", "Label": "Nationality", "FieldType": "FixedRadioList", "FieldTypeParameter": "appellantStateless", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantNationalities", "Label": "Nationalities", "FieldType": "Collection", "FieldTypeParameter": "nationality", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantAddressTitle", "Label": "  ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantHasFixedAddress", "Label": "Does the appellant have a fixed address?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantHasFixedAddress", "Label": "Does the appellant have a postal address?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantHasFixedAddressLabel", "Label": "**We will use the address of your legal practice.**", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantAddress", "Label": "Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantHasFixedAddressAdminJ", "Label": "Does the appellant have a fixed address?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantHasFixedAddressAdminJ", "Label": "Does the appellant have a postal address?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addressLine1AdminJ", "Label": "Address line 1", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addressLine2AdminJ", "Label": "Address line 2", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
