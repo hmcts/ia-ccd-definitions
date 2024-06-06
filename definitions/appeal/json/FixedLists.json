@@ -685,9 +685,10 @@
   {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "granted", "ListElement": "Permission granted", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "partiallyGranted", "ListElement": "Permission partially granted", "DisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "refused", "ListElement": "Permission refused", "DisplayOrder": 3},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "reheardRule35", "ListElement": "Decision set aside and to be reheard in the First-tier under rule 35", "DisplayOrder": 4},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "reheardRule32", "ListElement": "Decision set aside and to be reheard in the First-tier under rule 32", "DisplayOrder": 5},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "remadeRule32", "ListElement": "Decision set aside and remade in the First-tier under rule 32", "DisplayOrder": 6},
+  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "notAdmitted", "ListElement": "Application not admitted", "DisplayOrder": 4},
+  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "reheardRule35", "ListElement": "Review decision under rule 35 - Resident Judge only", "DisplayOrder": 5},
+  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "remadeRule31", "ListElement": "Dispose of application under rule 31", "DisplayOrder": 6},
+  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "remadeRule32", "ListElement": "Dispose of application under rule 32", "DisplayOrder": 7},
 
   {"LiveFrom": "01/01/2018", "ID": "hearingConductionOptions", "ListElementCode": "decisionWithouHearing", "ListElement": "Decision without a hearing", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "hearingConductionOptions", "ListElementCode": "videoWithNoParticipants", "ListElement": "Video with no participants at a hearing centre", "DisplayOrder": 2},
@@ -827,6 +828,22 @@
   {"LiveFrom": "01/01/2018", "ID": "hearingAdjournmentRequestingParty", "ListElementCode": "homeOffice", "ListElement": "Home Office", "DisplayOrder": 3, "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingAdjournmentRequestingParty", "ListElementCode": "tribunal", "ListElement": "Tribunal", "DisplayOrder": 4, "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "reserveOrExcludeJudge", "ListElementCode": "exclude", "ListElement": "Exclude Judge from the next hearing", "DisplayOrder": 1, "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "reserveOrExcludeJudge", "ListElementCode": "reserve", "ListElement": "Reserve Judge to the next hearing", "DisplayOrder": 2, "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "reserveOrExcludeJudge", "ListElementCode": "reserve", "ListElement": "Reserve Judge to the next hearing", "DisplayOrder": 2, "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "updateTribunalRuleList", "ListElementCode": "underRule31", "ListElement": "Correct decision error under rule 31", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "updateTribunalRuleList", "ListElementCode": "underRule32", "ListElement": "Review decision under rule 32 - Resident Judge only", "DisplayOrder": 2},
+
+  {"LiveFrom": "01/01/2018", "ID": "updateDecisionsAndReasonsDocument", "ListElementCode": "newDecisionAndReasons", "ListElement": "Yes", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "updateDecisionsAndReasonsDocument", "ListElementCode": "oldDecisionsAndReasons", "ListElement": "No", "DisplayOrder": 2},
+
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "asylumSupportFromHo", "ListElement": "I get asylum support from the Home Office", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "feeWaiverFromHo", "ListElement": "I got a fee waiver from the Home Office for my application to stay in the UK", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "under18GetSupportFromLocalAuthority", "ListElement": "I am under 18 and get housing or other support from the local authority", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "parentGetSupportFromLocalAuthority", "ListElement": "I am the parent, guardian or sponsor of someone under 18 who gets housing or other support from the local authority", "DisplayOrder": 4},
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "noneOfTheseStatements", "ListElement": "You may still be able to get help to pay the fee", "DisplayOrder": 5},
+
+  {"LiveFrom": "01/01/2018", "ID": "helpWithFeesOptions", "ListElementCode": "wantToApply", "ListElement": "Yes, I want to apply for help with fees", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "helpWithFeesOptions", "ListElementCode": "alreadyApplied", "ListElement": "I have already applied for help with fees", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "helpWithFeesOptions", "ListElementCode": "willPayForAppeal", "ListElement": "No, I will pay for the appeal now", "DisplayOrder": 3}
 
 ]
