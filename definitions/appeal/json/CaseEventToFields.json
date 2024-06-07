@@ -293,18 +293,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "appealTypeTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appealType", "PageLabel": "Type of appeal", "PageDisplayOrder": 45, "FieldShowCondition": "isAdmin!=\"Yes\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "appealTypeTitleAdminJ", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appealType", "PageLabel": "Type of appeal", "FieldShowCondition": "isAdmin=\"Yes\"", "ShowSummaryChangeOption": "N"},
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "CaseEventID": "editAppeal",
-    "CaseFieldID": "appealType",
-    "CaseEventFieldLabel": "Type of appeal",
-    "PageFieldDisplayOrder": 2,
-    "DisplayContext": "MANDATORY",
-    "PageID": "appealType",
-    "PageDisplayOrder": 48,
-    "ShowSummaryChangeOption": "Y"
-  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "appealType", "CaseEventFieldLabel": "Type of appeal", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "appealType", "PageDisplayOrder": 48, "ShowSummaryChangeOption": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "appellantBasicDetailsTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appellantBasicDetails", "PageLabel": "Basic details", "PageDisplayOrder": 51, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "appellantTitle", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "appellantBasicDetails", "FieldShowCondition": "isAdmin!=\"Yes\"", "ShowSummaryChangeOption": "Y"},
