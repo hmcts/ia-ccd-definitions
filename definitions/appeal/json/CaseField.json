@@ -6873,8 +6873,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonRehearingRule32", "Label": "Reason for rehearing", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateTribunalDecisionDateRule32", "Label": "Decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAppealAdminJ", "Label": "What are the circumstances of the apellant's out of country appeal?", "FieldType": "FixedRadioList", "FieldTypeParameter": "oocAppealAdminJ", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAppealAdminJ", "Label": "What are the circumstances of the apellant's out of country appeal?", "FieldType": "FixedRadioList", "FieldTypeParameter": "oocAppealAdminJ", "SecurityClassification": "PUBLIC"},
 
-
-  
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "letterNotificationDocuments", "Label": "Letter notification documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "letterBundleDocuments", "Label": "Letter bundle documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"}
 ]
