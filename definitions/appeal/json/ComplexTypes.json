@@ -252,8 +252,6 @@
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaApplicant", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaApplicantType", "ElementLabel": "Applicant", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionOutcomeType", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaResidentJudgeDecisionOutcomeType", "ElementLabel": "The outcome of the application", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionOutcomeTypeR35", "FieldType": "Text", "ElementLabel": "The outcome of the application", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaNewDecisionDocument", "FieldType": "Document", "ElementLabel": "FTPA Decision and Reasons document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaLegacyDecisionDocument", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "FTPA Decision and Reasons document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaR35Document", "FieldType": "Document", "ElementLabel": "Rule 35 notice", "SecurityClassification": "PUBLIC"},
@@ -285,32 +283,6 @@
 
   {"LiveFrom": "01/01/2018", "ID": "reheardHearingDecisionComplex", "ListElementCode": "reheardHearingDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Reheard decision and reason documents", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaApplicant", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaApplicantType", "ElementLabel": "Applicant", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionOutcomeType", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaResidentJudgeDecisionOutcomeType", "ElementLabel": "The outcome of the application", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionOutcomeTypeR35", "FieldType": "Text", "ElementLabel": "The outcome of the application", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaNewDecisionDocument", "FieldType": "Document", "ElementLabel": "FTPA Decision and Reasons document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaLegacyDecisionDocument", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "FTPA Decision and Reasons document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaR35Document", "FieldType": "Document", "ElementLabel": "Rule 35 notice", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionRemadeRule32", "FieldType": "FixedRadioList", "FieldTypeParameter": "isDecisionAllowed", "ElementLabel": "What is the First-tier Tribunal's decision on this case following the FTPA?", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionRemadeRule32Text", "FieldType": "TextArea", "ElementLabel": "Explain why the application should be disposed", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "isFtpaNoticeOfDecisionSetAside", "FieldType": "YesOrNo", "ElementLabel": "Before this decision, did you send a Notice of Decision set aside and to be reheard in the First-tier under rule 35?", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionObjections", "FieldType": "TextArea", "ElementLabel": "Objections to set aside", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaNoticeDocument", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "Notice communication", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionLstIns", "FieldType": "TextArea", "ElementLabel": "Listing instructions", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionDate", "FieldType": "Date", "ElementLabel": "Decision date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaOutOfTimeExplanation", "FieldType": "TextArea", "ElementLabel": "Reasons why the application is late", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaOutOfTimeDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "Documents supporting late application", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaGroundsDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "Grounds of the application", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaEvidenceDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "Supporting evidence", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaApplicationDate", "FieldType": "Date", "ElementLabel": "Application date", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionNotesPoints", "FieldType": "ftpaDecisionCheckList", "ElementLabel": "Tick any applicable points", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionNotesDescription", "FieldType": "TextArea", "ElementLabel": "Provide any information that may be helpful to the Upper Tribunal judge", "SecurityClassification": "PUBLIC"},
-
-  {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "updatedDecisionDate", "FieldType": "Date", "ElementLabel": "Date uploaded", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "dateCoverLetterDocumentUploaded", "FieldType": "Date", "ElementLabel": "Date uploaded", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "coverLetterDocument", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "dateDocumentAndReasonsDocumentUploaded", "FieldType": "Date", "ElementLabel": "Date uploaded", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "documentAndReasonsDocument", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "summariseChanges", "FieldType": "TextArea", "ElementLabel": "What has been corrected", "SecurityClassification": "PUBLIC"}
-
+  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionOutcomeTypeR35", "FieldType": "Text", "ElementLabel": "The outcome of the application", "SecurityClassification": "PUBLIC"}
 ]
