@@ -28,7 +28,7 @@ try {
             const parts = duplicate.split('-');
             const caseEventID = parts[0];
             const caseFieldID = parts[1];
-            console.log('CaseEventID: ' + caseEventID + 'CaseFieldID: ' + caseFieldID)
+            console.log('CaseEventID: ' + caseEventID + ', CaseFieldID: ' + caseFieldID)
         });
     }
 } catch (err) {
