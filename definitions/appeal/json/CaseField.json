@@ -4531,6 +4531,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingAttendanceTitle", "Label": "![]()\r\n## Hearing attendance", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appointmentAttendanceTitle", "Label": "![]()\r\n## Appointment attendance", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeTitle", "Label": "![]()\r\n## Legal representative", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeTitleAdminJ", "Label": "![]()\r\n## Legal representative", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeDetailsTitle", "Label": "![]()\r\n## Legal representative's details\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDetailsUpdateLink", "Label": "[Update representative's details](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateLegalRepDetails)\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealDetailsTitle", "Label": "![]()\r\n## Appeal details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -6977,5 +6978,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestReheardHearingDocuments", "Label": "Reheard hearing documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAppealAdminJ", "Label": "What are the circumstances of the apellant's out of country appeal?", "FieldType": "FixedRadioList", "FieldTypeParameter": "oocAppealAdminJ", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionRule31Changed", "Label": "Internal flag managed by API to check if decision is changed via Tribunal decision under rule 31", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionRule31Changed", "Label": "Internal flag managed by API to check if decision is changed via Tribunal decision under rule 31", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "letterNotificationDocuments", "Label": "Letter notification documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "letterBundleDocuments", "Label": "Letter bundle documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"}
 ]
