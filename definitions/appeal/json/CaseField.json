@@ -4510,6 +4510,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "markAddendumEvidenceAsReviewedAction", "Label": "[Mark evidence as reviewed](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/markAddendumEvidenceAsReviewed)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addendumEvidencePageTitle", "Label": "Add the evidence and the context. This evidence will not be included in the hearing bundle, it will be added as an addendum.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isHearingBundleAmended", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "amendedBundleCount", "Label": " ", "FieldType": "Number", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "amendedReheardBundleCount", "Label": " ", "FieldType": "Number", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
