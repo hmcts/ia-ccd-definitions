@@ -39,7 +39,7 @@
     "setup": "bin/setup.sh",
     "generate-json": "bin/generate-json.sh",
     "generate-excel": "bin/generate-excel.sh",
-    "generate-dev": "bin/generate-dev.sh",
+    "generate-dev": "bin/generate-dev.sh &&  node bin/case-event-to-fields-duplicate-checker.js",
     "generate-preview": "bin/generate-preview.sh",
     "generate-demo": "bin/generate-demo.sh",
     "generate-ithc": "bin/generate-ithc.sh",
