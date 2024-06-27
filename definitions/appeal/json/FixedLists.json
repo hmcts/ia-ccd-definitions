@@ -32,12 +32,15 @@
   {"LiveFrom": "01/01/2018", "ID": "appealType", "ListElementCode": "deprivation", "ListElement": "Deprivation of citizenship", "DisplayOrder": 3},
   {"LiveFrom": "01/01/2018", "ID": "appealType", "ListElementCode": "protection", "ListElement": "Refusal of protection claim", "DisplayOrder": 4},
   {"LiveFrom": "01/01/2018", "ID": "appealType", "ListElementCode": "revocationOfProtection", "ListElement": "Revocation of a protection status", "DisplayOrder": 5},
+  {"LiveFrom": "01/01/2018", "ID": "appealType", "ListElementCode": "euSettlementScheme", "ListElement": "EU Settlement Scheme", "DisplayOrder": 6},
+
 
   {"LiveFrom": "01/01/2018", "ID": "appealTypePreviousSelection", "ListElementCode": "refusalOfHumanRights", "ListElement": "Refusal of a human rights claim", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "appealTypePreviousSelection", "ListElementCode": "refusalOfEu", "ListElement": "Refusal of application under the EEA regulations", "DisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "ID": "appealTypePreviousSelection", "ListElementCode": "deprivation", "ListElement": "Deprivation of citizenship", "DisplayOrder": 3},
   {"LiveFrom": "01/01/2018", "ID": "appealTypePreviousSelection", "ListElementCode": "protection", "ListElement": "Refusal of protection claim", "DisplayOrder": 4},
   {"LiveFrom": "01/01/2018", "ID": "appealTypePreviousSelection", "ListElementCode": "revocationOfProtection", "ListElement": "Revocation of a protection status", "DisplayOrder": 5},
+  {"LiveFrom": "01/01/2018", "ID": "appealTypePreviousSelection", "ListElementCode": "euSettlementScheme", "ListElement": "EU Settlement Scheme", "DisplayOrder": 6},
 
   {"LiveFrom": "01/01/2018", "ID": "contactPreference", "ListElementCode": "wantsEmail", "ListElement": "Email", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "contactPreference", "ListElementCode": "wantsSms", "ListElement": "Text message", "DisplayOrder": 2},
@@ -354,6 +357,7 @@
   {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "respondent", "ListElement": "Respondent", "DisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "both", "ListElement": "Legal representative and Respondent", "DisplayOrder": 3},
   {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "appellant", "ListElement": "Appellant", "DisplayOrder": 4},
+  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "appellantAndRespondent", "ListElement": "Appellant and Respondent", "DisplayOrder": 5},
 
   {"LiveFrom": "01/01/2018", "ID": "isDecisionAllowed", "ListElementCode": "allowed", "ListElement": "Allowed", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "isDecisionAllowed", "ListElementCode": "dismissed", "ListElement": "Dismissed on all grounds", "DisplayOrder": 2},
@@ -621,17 +625,17 @@
   {"LiveFrom": "01/01/2018", "ID": "timeExtensionDecision", "ListElementCode": "granted", "ListElement": "Application granted", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "timeExtensionDecision", "ListElementCode": "refused", "ListElement": "Application refused", "DisplayOrder": 2},
 
-  {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "anonymity", "ListElement": "Anonymity", "DisplayOrder": 1},
-  {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "unaccompaniedMinor", "ListElement": "Unaccompanied minor", "DisplayOrder": 2},
-  {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "unacceptableCustomerBehaviour", "ListElement": "Unacceptable customer behaviour", "DisplayOrder": 3},
-  {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "potentiallyViolentPerson", "ListElement": "Potentially violent person", "DisplayOrder": 4},
-  {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "appealOnHold", "ListElement": "Appeal on hold", "DisplayOrder": 5},
-  {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "foreignNationalOffender", "ListElement": "Foreign national offender", "DisplayOrder": 6},
-  {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "detainedImmigrationAppeal", "ListElement": "Detained immigration appeal", "DisplayOrder": 7},
-  {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "deport", "ListElement": "Deport", "DisplayOrder": 8},
-  {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "complexCase", "ListElement": "Complex case", "DisplayOrder": 9},
-  {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "setAsideReheard", "ListElement": "Set aside - Reheard", "DisplayOrder": 10},
-  {"LiveFrom": "01/01/2018", "ID": "caseFlags", "ListElementCode": "s94bOutOfCountry", "ListElement": "S94B Out of Country", "DisplayOrder": 11},
+  {"LiveFrom": "01/01/2018", "ID": "legacyCaseFlags", "ListElementCode": "anonymity", "ListElement": "Anonymity", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "legacyCaseFlags", "ListElementCode": "unaccompaniedMinor", "ListElement": "Unaccompanied minor", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "legacyCaseFlags", "ListElementCode": "unacceptableCustomerBehaviour", "ListElement": "Unacceptable customer behaviour", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "ID": "legacyCaseFlags", "ListElementCode": "potentiallyViolentPerson", "ListElement": "Potentially violent person", "DisplayOrder": 4},
+  {"LiveFrom": "01/01/2018", "ID": "legacyCaseFlags", "ListElementCode": "appealOnHold", "ListElement": "Appeal on hold", "DisplayOrder": 5},
+  {"LiveFrom": "01/01/2018", "ID": "legacyCaseFlags", "ListElementCode": "foreignNationalOffender", "ListElement": "Foreign national offender", "DisplayOrder": 6},
+  {"LiveFrom": "01/01/2018", "ID": "legacyCaseFlags", "ListElementCode": "detainedImmigrationAppeal", "ListElement": "Detained immigration appeal", "DisplayOrder": 7},
+  {"LiveFrom": "01/01/2018", "ID": "legacyCaseFlags", "ListElementCode": "deport", "ListElement": "Deport", "DisplayOrder": 8},
+  {"LiveFrom": "01/01/2018", "ID": "legacyCaseFlags", "ListElementCode": "complexCase", "ListElement": "Complex case", "DisplayOrder": 9},
+  {"LiveFrom": "01/01/2018", "ID": "legacyCaseFlags", "ListElementCode": "setAsideReheard", "ListElement": "Set aside - Reheard", "DisplayOrder": 10},
+  {"LiveFrom": "01/01/2018", "ID": "legacyCaseFlags", "ListElementCode": "s94bOutOfCountry", "ListElement": "S94B Out of Country", "DisplayOrder": 11},
 
   {"LiveFrom": "01/01/2018", "ID": "hearingTypes", "ListElementCode": "hearing", "ListElement": "Hearing", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "hearingTypes", "ListElementCode": "appointment", "ListElement": "Appointment", "DisplayOrder": 2},
@@ -667,9 +671,10 @@
   {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "granted", "ListElement": "Permission granted", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "partiallyGranted", "ListElement": "Permission partially granted", "DisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "refused", "ListElement": "Permission refused", "DisplayOrder": 3},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "reheardRule35", "ListElement": "Decision set aside and to be reheard in the First-tier under rule 35", "DisplayOrder": 4},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "reheardRule32", "ListElement": "Decision set aside and to be reheard in the First-tier under rule 32", "DisplayOrder": 5},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "remadeRule32", "ListElement": "Decision set aside and remade in the First-tier under rule 32", "DisplayOrder": 6},
+  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "notAdmitted", "ListElement": "Application not admitted", "DisplayOrder": 4},
+  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "reheardRule35", "ListElement": "Review decision under rule 35 - Resident Judge only", "DisplayOrder": 5},
+  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "remadeRule31", "ListElement": "Dispose of application under rule 31", "DisplayOrder": 6},
+  {"LiveFrom": "01/01/2018", "ID": "ftpaResidentJudgeDecisionOutcomeType", "ListElementCode": "remadeRule32", "ListElement": "Dispose of application under rule 32", "DisplayOrder": 7},
 
   {"LiveFrom": "01/01/2018", "ID": "hearingConductionOptions", "ListElementCode": "decisionWithouHearing", "ListElement": "Decision without a hearing", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "hearingConductionOptions", "ListElementCode": "videoWithNoParticipants", "ListElement": "Video with no participants at a hearing centre", "DisplayOrder": 2},
@@ -678,9 +683,8 @@
   {"LiveFrom": "01/01/2018", "ID": "hearingConductionOptions", "ListElementCode": "audioWithAtLeastOne", "ListElement": "Audio with at least one participant at a hearing centre", "DisplayOrder": 5},
   {"LiveFrom": "01/01/2018", "ID": "hearingConductionOptions", "ListElementCode": "allParticipants", "ListElement": "All participants at the hearing centre", "DisplayOrder": 6},
 
-  {"LiveFrom": "01/01/2018", "ID": "paAppealTypePaymentOptions", "ListElementCode": "payNow", "ListElement": "Pay using Payment by Account", "DisplayOrder": 1},
-  {"LiveFrom": "01/01/2018", "ID": "paAppealTypePaymentOptions", "ListElementCode": "payLater", "ListElement": "Pay after submitting the appeal using Payment by Account", "DisplayOrder": 2},
-  {"LiveFrom": "01/01/2018", "ID": "paAppealTypePaymentOptions", "ListElementCode": "payOffline", "ListElement": "Pay after submitting the appeal by card", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "ID": "paAppealTypePaymentOptions", "ListElementCode": "payNow", "ListElement": "Pay Now", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "paAppealTypePaymentOptions", "ListElementCode": "payLater", "ListElement": "Pay Later", "DisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "ID": "paAppealTypeAipPaymentOptions", "ListElementCode": "payNow", "ListElement": "Pay now", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "paAppealTypeAipPaymentOptions", "ListElementCode": "payLater", "ListElement": "Pay after submitting the appeal", "DisplayOrder": 2},
 
@@ -751,12 +755,32 @@
   {"LiveFrom": "01/01/2018", "ID": "outOfCountryDecisionType", "ListElementCode": "refusalOfHumanRights", "ListElement": "A decision either 1) to refuse a human rights claim made following an application for entry clearance or 2) to refuse a permit to enter the UK under the Immigration (European Economic Area) Regulation 2016", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "outOfCountryDecisionType", "ListElementCode": "refusalOfProtection", "ListElement": "A decision to refuse a protection or human rights claim where your client may only apply after leaving the UK", "DisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "ID": "outOfCountryDecisionType", "ListElementCode": "removalOfClient", "ListElement": "A decision either 1) to remove your client from the UK under the Immigration (European Economic Area) Regulations 2016, where they are currently outside the UK or 2) to deprive your client of British citizenship, where they are currently outside the UK", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "ID": "outOfCountryDecisionType", "ListElementCode": "refusePermit", "ListElement": "A decision to refuse a permit to enter the UK or entry clearance under the immigration rules and/or the EU Settlement Scheme.", "DisplayOrder": 4},
   {"LiveFrom": "01/01/2018", "ID": "lateRemissionTypes", "ListElementCode": "hoWaiverRemission", "ListElement": "My client has a remission, e.g. Asylum support, Legal Aid, Home Office waiver, Section 17/20", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "lateRemissionTypes", "ListElementCode": "helpWithFees", "ListElement": "My client has a Help with Fees reference number", "DisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "ID": "lateRemissionTypes", "ListElementCode": "exceptionalCircumstancesRemission", "ListElement": "My client wants to apply for an Exceptional Circumstances Remission", "DisplayOrder": 3},
 
   {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionType", "ListElementCode": "inTime", "ListElement": "Appeal is in time", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionType", "ListElementCode": "approved", "ListElement": "Appeal is out of time but can proceed", "DisplayOrder": 2},
-  {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionType", "ListElementCode": "rejected", "ListElement": "Appeal is out of time and cannot proceed", "DisplayOrder": 3}
+  {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionType", "ListElementCode": "rejected", "ListElement": "Appeal is out of time and cannot proceed", "DisplayOrder": 3},
+
+  {"LiveFrom": "01/01/2018", "ID": "sourceOfRemittalList", "ListElementCode": "Upper Tribunal", "ListElement": "Upper Tribunal", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "sourceOfRemittalList", "ListElementCode": "Court of Appeal", "ListElement": "Court of Appeal", "DisplayOrder": 2},
+
+  {"LiveFrom": "01/01/2018", "ID": "updateTribunalRuleList", "ListElementCode": "underRule31", "ListElement": "Correct decision error under rule 31", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "updateTribunalRuleList", "ListElementCode": "underRule32", "ListElement": "Review decision under rule 32 - Resident Judge only", "DisplayOrder": 2},
+
+  {"LiveFrom": "01/01/2018", "ID": "updateDecisionsAndReasonsDocument", "ListElementCode": "newDecisionAndReasons", "ListElement": "Yes", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "updateDecisionsAndReasonsDocument", "ListElementCode": "oldDecisionsAndReasons", "ListElement": "No", "DisplayOrder": 2},
+
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "asylumSupportFromHo", "ListElement": "I get asylum support from the Home Office", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "feeWaiverFromHo", "ListElement": "I got a fee waiver from the Home Office for my application to stay in the UK", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "under18GetSupportFromLocalAuthority", "ListElement": "I am under 18 and get housing or other support from the local authority", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "parentGetSupportFromLocalAuthority", "ListElement": "I am the parent, guardian or sponsor of someone under 18 who gets housing or other support from the local authority", "DisplayOrder": 4},
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "noneOfTheseStatements", "ListElement": "You may still be able to get help to pay the fee", "DisplayOrder": 5},
+
+  {"LiveFrom": "01/01/2018", "ID": "helpWithFeesOptions", "ListElementCode": "wantToApply", "ListElement": "Yes, I want to apply for help with fees", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "helpWithFeesOptions", "ListElementCode": "alreadyApplied", "ListElement": "I have already applied for help with fees", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "helpWithFeesOptions", "ListElementCode": "willPayForAppeal", "ListElement": "No, I will pay for the appeal now", "DisplayOrder": 3}
 
 ]
