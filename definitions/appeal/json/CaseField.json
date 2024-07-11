@@ -6984,5 +6984,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionRule31Changed", "Label": "Internal flag managed by API to check if decision is changed via Tribunal decision under rule 31", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "letterNotificationDocuments", "Label": "Letter notification documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "letterBundleDocuments", "Label": "Letter bundle documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "letterBundleDocuments", "Label": "Letter bundle documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAriaMigrated", "Label": "Internal flag managed by API to check if case is ARIA migrated", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ariaDesiredState", "Label": "ARIA migration desired state", "FieldType": "FixedList", "FieldTypeParameter": "listOfStates", "SecurityClassification": "PUBLIC"}
 ]
