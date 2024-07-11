@@ -206,6 +206,9 @@
   {"LiveFrom": "01/01/2018", "ID": "caseManagementLocation", "ListElementCode": "region", "FieldType": "FixedList", "FieldTypeParameter": "region", "ElementLabel": "region", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "caseManagementLocation", "ListElementCode": "baseLocation", "FieldType": "FixedList", "FieldTypeParameter": "baseLocation", "ElementLabel": "baseLocation", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "ID": "caseManagementLocationRefData", "ListElementCode": "region", "FieldType": "FixedList", "FieldTypeParameter": "region", "ElementLabel": "region", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "caseManagementLocationRefData", "ListElementCode": "baseLocation", "FieldType": "DynamicList", "ElementLabel": "baseLocation", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "applicant", "FieldType": "Text", "ElementLabel": "Applicant", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "type", "FieldType": "Text", "ElementLabel": "Type of application", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "details", "FieldType": "TextArea", "ElementLabel": "Application details", "SecurityClassification": "PUBLIC"},
@@ -325,6 +328,9 @@
   {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "coverLetterDocument", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "dateDocumentAndReasonsDocumentUploaded", "FieldType": "Date", "ElementLabel": "Date uploaded", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "documentAndReasonsDocument", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "summariseChanges", "FieldType": "TextArea", "ElementLabel": "What has been corrected", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "summariseChanges", "FieldType": "TextArea", "ElementLabel": "What has been corrected", "SecurityClassification": "PUBLIC"},
+  
+  {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingID", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingDateTime", "FieldType": "DateTime", "ElementLabel": " ", "SecurityClassification": "PUBLIC"}
 
 ]

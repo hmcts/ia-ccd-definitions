@@ -4082,6 +4082,14 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_pre_hearing_details_recorded_admin_decision_integrated_rd",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_decision_without_hearing_pre_hearing_request_admin_decision",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nSubmit a hearing request in the [Hearings tab](/cases/case-details/${[CASE_REFERENCE]}/hearings)",
     "FieldType": "Label",
@@ -4090,7 +4098,23 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_decisionWithoutHearing_preHearing_request_admin_decision_rd",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nSubmit a hearing request in the [Hearings tab](/cases/case-details/${[CASE_REFERENCE]}/hearings)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_decision_without_hearing_post_hearing_request_admin_decision",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_decisionWithoutHearing_postHearing_request_admin_decision_rd",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
@@ -5438,6 +5462,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalPaymentInfo", "Label": "Additional payment information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseManagementLocation", "Label": "Case management location", "FieldType": "caseManagementLocation", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseManagementLocationRefData", "Label": "Case management location", "FieldType": "caseManagementLocationRefData", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationLink", "Label": "[Make an application](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/makeAnApplication)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationAdvice", "Label": "Select the type of application you are making.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
@@ -5488,6 +5513,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customReheardHearingDocs", "Label": "Reheard hearing documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customAppAddendumEvidenceDocs", "Label": "Appellant Evidence after the hearing bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customRespAddendumEvidenceDocs",   "Label": "Respondent Evidence after the hearing bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customLatestRemittalDocs", "Label": "Remittal documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isRemissionsEnabled", "Label": "Internal flag managed by case api for remissions feature", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rpDcAppealHearingOption", "Label": "How do you want the appeal to be decided?", "FieldType": "FixedRadioList", "FieldTypeParameter": "rpDcAppealHearingOptions", "SecurityClassification": "PUBLIC"},
@@ -7190,6 +7216,16 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reheardDecisionReasonsCollection", "Label": "Reheard decision and reason documents", "FieldType": "Collection", "FieldTypeParameter": "reheardHearingDecisionComplex", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestDecisionAndReasonsDocuments", "Label": "Decision and reason documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestRemittalDocuments", "Label": "Remittal Documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestReheardHearingDocuments", "Label": "Reheard hearing documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestReheardHearingDocuments", "Label": "Reheard hearing documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+
+<<<<<<< HEAD
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionWithoutHearing", "Label": "Decision Without Hearing", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingDetails", "Label": " ", "FieldType": "hearingSchedule", "SecurityClassification": "PUBLIC"}
+=======
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInterpreterLanguageCategory", "Label": "What kind of interpreter will the appellant need?", "FieldType": "MultiSelectList", "FieldTypeParameter": "interpreterLanguageCategory", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInterpreterSpokenLanguage", "Label": "Tell us which spoken language is needed for the appellant", "FieldType": "interpreterSpokenLanguage", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInterpreterSignLanguage", "Label": "Tell us which sign language is needed for the appellant", "FieldType": "interpreterSignLanguage", "SecurityClassification": "PUBLIC"}
+>>>>>>> 02912774508a1982f8667c20983921762899acf0
 
 ]
