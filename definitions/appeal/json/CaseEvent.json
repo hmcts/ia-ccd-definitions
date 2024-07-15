@@ -2646,5 +2646,19 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "setNextHearingDate",
+    "Name": "Set next hearing date",
+    "Description": "System event to update next hearing date",
+    "DisplayOrder": 110,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "Publish": "Y"
   }
 ]
