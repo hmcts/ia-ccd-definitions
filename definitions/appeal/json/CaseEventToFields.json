@@ -1460,6 +1460,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "progressMigratedCase", "CaseFieldID": "desiredStateTitle", "PageFieldDisplayOrder": 3, "DisplayContext": "READONLY", "PageID": "progressDesiredState", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "progressMigratedCase", "CaseFieldID": "desiredStateCurrentValue", "PageFieldDisplayOrder": 4, "DisplayContext": "READONLY", "PageID": "progressDesiredState", "CaseEventFieldLabel":  "${ariaDesiredStateSelectedValue}", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "progressMigratedCase", "CaseFieldID": "desiredStateCorrect", "PageFieldDisplayOrder": 5, "DisplayContext": "MANDATORY", "PageID": "progressDesiredState", "ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "progressMigratedCase", "CaseFieldID": "desiredStateValues", "PageFieldDisplayOrder": 6, "DisplayContext": "MANDATORY", "PageID": "progressDesiredState", "ShowSummaryChangeOption": "N", "FieldShowCondition": "desiredStateCorrect=\"No\""}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "progressMigratedCase", "CaseFieldID": "ariaDesiredState", "PageFieldDisplayOrder": 6, "DisplayContext": "MANDATORY", "PageID": "progressDesiredState", "ShowSummaryChangeOption": "N", "FieldShowCondition": "desiredStateCorrect=\"No\""}
 
 ]
