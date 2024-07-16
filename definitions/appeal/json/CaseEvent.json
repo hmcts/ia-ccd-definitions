@@ -2460,5 +2460,23 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progressMigratedCase",
+    "Name": "Progress Migrated Case",
+    "Description": "Progress Migrated Case",
+    "DisplayOrder": 56,
+    "PreConditionState(s)": "migrated",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Continue",
+    "EventEnablingCondition": "[STATE]=\"migrated\"",
+    "Publish": "Y"
   }
 ]
