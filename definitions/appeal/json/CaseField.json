@@ -6996,8 +6996,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ariaDesiredStateSelectedValue", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "desiredStateTips", "Label": "This case will progress to the state listed below.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "desiredStateTitle", "Label": "\r\n Desired state:", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "desiredStateCurrentValue", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "desiredStateTitle", "Label": "### Desired state:\r\n\r\n${ariaDesiredStateSelectedValue}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "desiredStateCorrect", "Label": "Is the desired state correct?", "FieldType": "FixedRadioList", "FieldTypeParameter": "desiredStateCorrect", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationWarningTitle", "Label": "\r\n![Attention: Documents have not been migrated with the case](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/migrate_aria_case_document_warning.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationVhhText", "Label": "You must upload all documents from Virtual Hold (VHH) to this case.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
