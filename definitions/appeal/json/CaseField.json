@@ -7007,9 +7007,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationDocumentsUploadTitle", "Label": "### Documents upload", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationCaseNoteTitle", "Label": "### Do you want to add a case note?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationCaseNote", "Label": " ", "FieldType": "FixedRadioList", "FieldTypeParameter": "migrationCaseNote", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addCaseNoteMigrationTitle", "Label": "### Case note details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addCaseNoteMigrationSubject", "Label": "Subject", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addCaseNoteMigrationDescription", "Label": "Case note", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addCaseNoteMigrationDocuments", "Label": "Upload a case note", "FieldType": "Collection", "FieldTypeParameter": "Document", "SecurityClassification": "PUBLIC"}
-
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addCaseNotesMigration", "Label": "Upload a case note", "FieldType": "Collection", "FieldTypeParameter": "caseNoteMigration", "SecurityClassification": "PUBLIC"}
+  
 ]

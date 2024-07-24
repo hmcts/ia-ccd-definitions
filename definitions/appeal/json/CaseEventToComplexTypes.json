@@ -112,5 +112,9 @@
   {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "applicantRole", "FieldDisplayOrder":  "8", "DisplayContext": "OPTIONAL", "Publish": "Y"},
   {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "decisionReason", "FieldDisplayOrder":  "9", "DisplayContext": "OPTIONAL", "Publish": "Y"},
   {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "decisionDate", "FieldDisplayOrder":  "10", "DisplayContext": "OPTIONAL", "Publish": "Y"},
-  {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "decisionMaker", "FieldDisplayOrder":  "11", "DisplayContext": "OPTIONAL", "Publish": "Y"}
+  {"LiveFrom": "01/01/2021", "ID": "decideAnApplication", "CaseEventID": "decideAnApplication", "CaseFieldID": "lastModifiedApplication", "ListElementCode": "decisionMaker", "FieldDisplayOrder":  "11", "DisplayContext": "OPTIONAL", "Publish": "Y"},
+
+  {"LiveFrom": "01/01/2021", "ID": "progressMigratedCase", "CaseEventID": "progressMigratedCase", "CaseFieldID": "addCaseNotesMigration", "ListElementCode": "caseNoteSubject", "FieldDisplayOrder":  "1", "DisplayContext": "MANDATORY", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "progressMigratedCase", "CaseEventID": "progressMigratedCase", "CaseFieldID": "addCaseNotesMigration", "ListElementCode": "caseNoteDescription", "FieldDisplayOrder":  "2", "DisplayContext": "MANDATORY", "Publish": "Y"},
+  {"LiveFrom": "01/01/2021", "ID": "progressMigratedCase", "CaseEventID": "progressMigratedCase", "CaseFieldID": "addCaseNotesMigration", "ListElementCode": "caseNoteDocument", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "Y"}
 ]
