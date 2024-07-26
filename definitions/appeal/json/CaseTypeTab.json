@@ -764,6 +764,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "remissionType", "TabFieldDisplayOrder": 7, "FieldShowCondition": "remissionType=\"DUMMY_FIELD_TO_HIDE\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "feeUpdateReasonFlag", "TabFieldDisplayOrder": 7, "FieldShowCondition": "feeUpdateReason=\"DUMMY_FIELD_TO_HIDE\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "recordedOutOfTimeDecision", "TabFieldDisplayOrder": 7, "FieldShowCondition": "recordedOutOfTimeDecision=\"DUMMY_FIELD_TO_HIDE\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "isAriaMigrated", "TabFieldDisplayOrder":7, "FieldShowCondition": "isAriaMigrated=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealTitle", "TabFieldDisplayOrder": 10, "FieldShowCondition": "reasonsForAppealDecision=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "reasonsForAppealDateUploaded", "TabFieldDisplayOrder": 20, "FieldShowCondition": "reasonsForAppealDateUploaded=\"*\""},
@@ -810,7 +811,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "decisionHearingFeeOption", "TabFieldDisplayOrder": 350, "FieldShowCondition": "appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "paAppealTypePaymentOption","TabFieldDisplayOrder": 355, "FieldShowCondition": "appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "paymentStatus", "TabFieldDisplayOrder": 380, "FieldShowCondition": "paAppealTypePaymentOption!=\"payNow\" AND paAppealTypePaymentOption!=\"payLater\" AND currentCaseStateVisibleToLegalRepresentative!=\"appealStarted\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "paymentDate", "TabFieldDisplayOrder": 420, "FieldShowCondition": "paAppealTypePaymentOption=\"payOffline\" OR remissionType!=\"noRemission\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "paymentDate", "TabFieldDisplayOrder": 420, "FieldShowCondition": "paAppealTypePaymentOption=\"payOffline\" OR remissionType!=\"noRemission\" OR isAriaMigrated=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "paidAmount", "TabFieldDisplayOrder": 430, "FieldShowCondition": "paAppealTypePaymentOption=\"payOffline\" OR remissionType!=\"noRemission\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "additionalPaymentInfo", "TabFieldDisplayOrder": 450, "FieldShowCondition": "paAppealTypePaymentOption=\"payOffline\" OR remissionType!=\"noRemission\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "remissionDetailsTitle", "TabFieldDisplayOrder": 480, "FieldShowCondition": "feeRemissionType!=\"\""},
