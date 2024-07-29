@@ -75,6 +75,8 @@
   {"LiveFrom": "01/01/2018", "ID": "application", "ListElementCode": "applicationStatus", "FieldType": "Text", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hoursAndMinutes", "ListElementCode": "hours", "FieldType": "Text", "ElementLabel": "Hours", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hoursAndMinutes", "ListElementCode": "minutes", "FieldType": "Text", "ElementLabel": "Minutes", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hoursMinutes", "ListElementCode": "hours", "FieldType": "Number", "ElementLabel": "Hours", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hoursMinutes", "ListElementCode": "minutes", "FieldType": "Number", "ElementLabel": "Minutes", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "additionalEvidenceHomeOfficeDocument", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "additionalEvidenceHomeOfficeDocument", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Why it was late", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "subscriber", "FieldType": "FixedList", "FieldTypeParameter": "subscribers", "ElementLabel": "Subscriber", "SecurityClassification": "PUBLIC"},
@@ -82,9 +84,22 @@
   {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "mobileNumber", "FieldType": "Text", "ElementLabel": "Mobile Number", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "wantsEmail", "FieldType": "YesOrNo", "ElementLabel": "Whether the user wants emails", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "subscription", "ListElementCode": "wantsSms", "FieldType": "YesOrNo", "ElementLabel": "Whether the user wants sms", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "witnessDetails", "ListElementCode": "witnessName", "FieldType": "Text", "ElementLabel": "Name", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "witnessDetails", "ListElementCode": "witnessName", "FieldType": "Text", "ElementLabel": "Given names", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "witnessDetails", "ListElementCode": "witnessFamilyName", "FieldType": "Text", "ElementLabel": "Family name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "witnessDetails", "ListElementCode": "witnessPartyId", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "witnessPartyId=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "witnessDetails", "ListElementCode": "isWitnessDeleted", "FieldType": "YesOrNo", "ElementLabel": " ", "FieldShowCondition": "isWitnessDeleted=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC", "RetainHiddenValue": "Y"},
+
   {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "language", "FieldType": "FixedList", "FieldTypeParameter": "isoLanguages", "ElementLabel": "Language", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "interpreterLanguage", "ListElementCode": "languageDialect", "FieldType": "Text", "ElementLabel": "Dialect", "HintText": "Enter N/A if no dialect required", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "interpreterSpokenLanguage", "ListElementCode": "languageRefData", "FieldType": "DynamicList", "ElementLabel": "Spoken language", "FieldShowCondition": "languageManualEntry!=\"Yes\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterSpokenLanguage", "ListElementCode": "languageManualEntry", "FieldType": "MultiSelectList", "FieldTypeParameter": "isLanguageEnteredManually", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterSpokenLanguage", "ListElementCode": "languageManualEntryDescription", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "languageManualEntry=\"Yes\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterSignLanguage", "ListElementCode": "languageRefData", "FieldType": "DynamicList", "ElementLabel": "Sign language", "FieldShowCondition": "languageManualEntry!=\"Yes\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterSignLanguage", "ListElementCode": "languageManualEntry", "FieldType": "MultiSelectList", "FieldTypeParameter": "isLanguageEnteredManually", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterSignLanguage", "ListElementCode": "languageManualEntryDescription", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "languageManualEntry=\"Yes\"", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "ID": "datesToAvoid", "ListElementCode": "dateToAvoid", "FieldType": "Date", "ElementLabel": "Date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "datesToAvoid", "ListElementCode": "dateToAvoidReason", "FieldType": "TextArea", "ElementLabel": "Reason", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingRecordingDocument", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Audio file", "RegularExpression": ".mp3", "SecurityClassification": "PUBLIC"},
@@ -99,7 +114,9 @@
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "status", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionStatus", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decision", "FieldType": "FixedList", "FieldTypeParameter": "timeExtensionDecision", "ElementLabel": "Decision", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decisionReason", "FieldType": "TextArea", "ElementLabel": "Decision reason", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decisionOutcomeDate", "FieldType": "Date", "ElementLabel": "Decision outcome due date reason", "SecurityClassification": "PUBLIC"},  
+  {"LiveFrom": "01/01/2018", "ID": "timeExtension", "ListElementCode": "decisionOutcomeDate", "FieldType": "Date", "ElementLabel": "Decision outcome due date reason", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "caseFlag", "ListElementCode": "caseFlagType", "FieldType": "FixedList", "FieldTypeParameter": "legacyCaseFlags", "ElementLabel": "Flag type", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "caseFlag", "ListElementCode": "caseFlagAdditionalInformation", "FieldType": "TextArea", "ElementLabel": "Additional information", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "legacyCaseFlag", "ListElementCode": "legacyCaseFlagType", "FieldType": "FixedList", "FieldTypeParameter": "legacyCaseFlags", "ElementLabel": "Flag type", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "legacyCaseFlag", "ListElementCode": "legacyCaseFlagAdditionalInformation", "FieldType": "TextArea", "ElementLabel": "Additional information", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "appointment", "ListElementCode": "appointmentSummary", "FieldType": "Document", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
@@ -189,6 +206,9 @@
   {"LiveFrom": "01/01/2018", "ID": "caseManagementLocation", "ListElementCode": "region", "FieldType": "FixedList", "FieldTypeParameter": "region", "ElementLabel": "region", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "caseManagementLocation", "ListElementCode": "baseLocation", "FieldType": "FixedList", "FieldTypeParameter": "baseLocation", "ElementLabel": "baseLocation", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "ID": "caseManagementLocationRefData", "ListElementCode": "region", "FieldType": "FixedList", "FieldTypeParameter": "region", "ElementLabel": "region", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "caseManagementLocationRefData", "ListElementCode": "baseLocation", "FieldType": "DynamicList", "ElementLabel": "baseLocation", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "applicant", "FieldType": "Text", "ElementLabel": "Applicant", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "type", "FieldType": "Text", "ElementLabel": "Type of application", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "details", "FieldType": "TextArea", "ElementLabel": "Application details", "SecurityClassification": "PUBLIC"},
@@ -251,6 +271,36 @@
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "expiryDate", "FieldType": "Date", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "ID": "reheardHearingDocumentsComplex", "ListElementCode": "reheardHearingDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Reheard hearing documents", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "reheardHearingDecisionComplex", "ListElementCode": "reheardHearingDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Reheard decision and reason documents", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterBookingRef", "FieldType": "Text", "ElementLabel": "Booking reference", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterGivenNames", "FieldType": "Text", "ElementLabel": "Given names", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterFamilyName", "FieldType": "Text", "ElementLabel": "Family name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterPhoneNumber", "FieldType": "PhoneUK", "ElementLabel": "Phone number", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterEmail", "FieldType": "Email", "ElementLabel": "Email", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterNote", "FieldType": "Text", "ElementLabel": "Note", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterId", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "interpreterBookingRef=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "adjournmentDetailsHearing", "FieldType": "Text", "ElementLabel": "Which hearing are you recording adjournment details for?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "hearingAdjournmentWhen", "FieldType": "FixedRadioList", "FieldTypeParameter": "whenDidTheAdjournmentHappen", "ElementLabel": "When did the adjournment happen?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "hearingAdjournmentDecisionParty", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingAdjournmentDecisionParty", "ElementLabel": "Who made the decision to adjourn?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "hearingAdjournmentDecisionPartyName", "FieldType": "Text", "ElementLabel": "Name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "hearingAdjournmentRequestingParty", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingAdjournmentRequestingParty", "ElementLabel": "Who requested the adjournment?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "anyAdditionalAdjournmentInfo", "FieldType": "Text", "ElementLabel": "Is there anything about the adjournment you want to add?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "additionalAdjournmentInfo", "FieldType": "TextArea", "ElementLabel": "Provide more information", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "relistCaseImmediately", "FieldType": "Text", "ElementLabel": "Can the case be relisted right away?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingFormat", "FieldType": "Text", "ElementLabel": "Confirm the format of the next hearing", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingVenue", "FieldType": "Text", "ElementLabel": "Where should the next hearing be listed?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingDuration", "FieldType": "FixedList", "FieldTypeParameter": "hearingLength", "ElementLabel": "How long should the next hearing be listed for?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingDate", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingDateChangingValues", "ElementLabel": "When should the next hearing be?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingDateFixed", "FieldType": "Text", "ElementLabel": "The date of the hearing must be", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingDateRangeEarliest", "FieldType": "Text", "ElementLabel": "Earliest hearing date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "nextHearingDateRangeLatest", "FieldType": "Text", "ElementLabel": "Latest hearing date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "shouldReserveOrExcludeJudge", "FieldType": "Text", "ElementLabel": "Does the judge need to be reserved or excluded?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "reserveOrExcludeJudge", "FieldType": "FixedList", "FieldTypeParameter": "reserveOrExcludeJudge", "ElementLabel": "Exclude or reserve", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaApplicant", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaApplicantType", "ElementLabel": "Applicant", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaNewDecisionDocument", "FieldType": "Document", "ElementLabel": "FTPA Decision and Reasons document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaLegacyDecisionDocument", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "FTPA Decision and Reasons document", "SecurityClassification": "PUBLIC"},
@@ -280,6 +330,10 @@
   {"LiveFrom": "01/01/2018", "ID": "remittalDocument", "ListElementCode": "otherRemittalDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Other Remittal Documents", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "ID": "reheardHearingDocumentsComplex", "ListElementCode": "reheardHearingDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Reheard hearing documents", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "summariseChanges", "FieldType": "TextArea", "ElementLabel": "What has been corrected", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingID", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingDateTime", "FieldType": "DateTime", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "ID": "reheardHearingDecisionComplex", "ListElementCode": "reheardHearingDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Reheard decision and reason documents", "SecurityClassification": "PUBLIC"},
 
