@@ -4678,7 +4678,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "addCaseNoteLink", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "caseNotes", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "caseNotes", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "caseNotes", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "caseNotes", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "caseNotes", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "caseNotes", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "caseNotes", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
@@ -14382,10 +14382,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "migrationDocumentUploadGeneralText", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "migrationDocumentsUploadTitle", "UserRole": "caseworker-ia-system", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "migrationCaseNoteTitle", "UserRole": "caseworker-ia-system", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "addCaseNoteMigrationTitle", "UserRole": "caseworker-ia-system", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "addCaseNoteMigrationSubject", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "addCaseNoteMigrationDescription", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "addCaseNoteMigrationDocuments", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "addCaseNotesMigration", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "migrationCaseNote", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "isAriaMigratedTemporary", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "isAriaMigratedFeeExemption", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
@@ -14458,10 +14455,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "migrationDocumentsUploadTitle", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "migrationCaseNoteTitle", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "addCaseNoteMigrationTitle", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "addCaseNoteMigrationSubject", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "addCaseNoteMigrationDescription", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "addCaseNoteMigrationDocuments", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "addCaseNotesMigration", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "migrationCaseNote", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"}
 
 ]
