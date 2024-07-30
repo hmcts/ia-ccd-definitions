@@ -2653,9 +2653,9 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "setNextHearingDate",
-    "Name": "Set next hearing date",
-    "Description": "System event to update next hearing date",
+    "ID": "updateNextHearingInfo",
+    "Name": "Update next hearing information",
+    "Description": "Event to update next hearing date",
     "DisplayOrder": 110,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
