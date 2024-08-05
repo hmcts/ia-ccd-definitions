@@ -2701,6 +2701,6 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Continue",
     "Publish": "Y",
-    "EventEnablingCondition": "feeUpdateReason=\"decisionTypeChanged\" AND feeUpdateTribunalAction=\"refund\""
+    "EventEnablingCondition": "decisionTypeChangedWithRefundFlag=\"Yes\""
   }
 ]
