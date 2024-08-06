@@ -331,6 +331,8 @@
   {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "summariseChanges", "FieldType": "TextArea", "ElementLabel": "What has been corrected", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingID", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingDateTime", "FieldType": "DateTime", "ElementLabel": " ", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingDateTime", "FieldType": "DateTime", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "ID": "prisonNOMSComplexType", "ListElementCode": "prison", "FieldType": "Text", "ElementLabel": "What is the appellant's NOMS number?", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "otherDetentionFacilityComplexType", "ListElementCode": "other", "FieldType": "Text", "ElementLabel": "Enter the name of the detention facility", "SecurityClassification": "PUBLIC"}
 ]
