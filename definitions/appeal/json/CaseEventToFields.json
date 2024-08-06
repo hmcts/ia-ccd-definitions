@@ -102,8 +102,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "contactPreference", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "appellantContactPreference","PageDisplayOrder": 70,"ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "email", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "appellantContactPreference", "FieldShowCondition": "contactPreference=\"wantsEmail\"","PageDisplayOrder": 70,"ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "mobileNumber", "PageFieldDisplayOrder": 4, "DisplayContext": "MANDATORY", "PageID": "appellantContactPreference", "FieldShowCondition": "contactPreference=\"wantsSms\"","PageDisplayOrder": 70,"ShowSummaryChangeOption": "Y"},
-
-
+  
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appellantAddressTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appellantAddress", "PageLabel": "Appellant's address", "PageDisplayOrder": 70,  "PageShowCondition": "appellantInUk!=\"No\"", "CallBackURLMidEvent": "${CCD_DEF_IA_URL}/asylum/ccdMidEvent?pageId=appellantAddress", "ShowSummaryChangeOption": "N" },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appellantAddressLabel", "PageFieldDisplayOrder": 2, "DisplayContext": "READONLY", "PageID": "appellantAddress","PageDisplayOrder": 70, "FieldShowCondition": "isAdmin!=\"Yes\"", "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appellantHasFixedAddress", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "appellantAddress","PageDisplayOrder": 70, "ShowSummaryChangeOption": "Y"},
