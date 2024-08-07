@@ -2663,5 +2663,19 @@
     "ShowSummary": "N",
     "ShowEventNotes": "N",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "saveNotificationsToData",
+    "Name": "Save notifications to data",
+    "Description": "Save notifications to data",
+    "DisplayOrder": 111,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "Publish": "N"
   }
 ]
