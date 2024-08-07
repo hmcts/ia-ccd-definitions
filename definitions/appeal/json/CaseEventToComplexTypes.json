@@ -302,6 +302,5 @@
   {"LiveFrom": "01/01/2018", "ID": "witnessDetails", "CaseEventID": "updateHearingRequirements", "CaseFieldID": "witnessDetails", "ListElementCode": "witnessPartyId", "DisplayContext": "READONLY", "FieldDisplayOrder": "3", "SecurityClassification": "PUBLIC", "Publish": "Y", "RetainHiddenValue": "Y"},
   {"LiveFrom": "01/01/2018", "ID": "witnessDetails", "CaseEventID": "updateHearingRequirements", "CaseFieldID": "witnessDetails", "ListElementCode": "isWitnessDeleted", "DisplayContext": "READONLY", "FieldDisplayOrder": "4", "SecurityClassification": "PUBLIC", "Publish": "Y", "RetainHiddenValue": "Y"},
 
-  {"LiveFrom": "01/01/2021", "ID": "prisonNOMSComplexType", "CaseEventID": "startAppeal", "CaseFieldID": "prisonNOMSNumber", "ListElementCode": "prison", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "N"},
-  {"LiveFrom": "01/01/2021", "ID": "custodialSentenceDateComplexType", "CaseEventID": "startAppeal", "CaseFieldID": "dateCustodialSentence", "ListElementCode": "custodialDate", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "N"}
+  {"LiveFrom": "01/01/2021", "ID": "prisonNOMSComplexType", "CaseEventID": "startAppeal", "CaseFieldID": "prisonNOMSNumber", "ListElementCode": "prison", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "N"}
 ]
