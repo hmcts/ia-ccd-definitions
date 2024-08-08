@@ -2671,11 +2671,13 @@
     "Name": "Save notifications to data",
     "Description": "Save notifications to data",
     "DisplayOrder": 111,
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
-    "ShowSummary": "N",
+    "ShowSummary": "Y",
     "ShowEventNotes": "N",
-    "Publish": "N"
+    "Publish": "Y"
   }
 ]
