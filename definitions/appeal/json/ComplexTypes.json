@@ -337,11 +337,5 @@
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationSentTo", "FieldType": "Text", "ElementLabel": "To", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationDocument", "FieldType": "Document", "ElementLabel": "Notification Url", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationMethod", "FieldType": "Text", "ElementLabel": "Method", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationStatus", "FieldType": "Text", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
-
-  {"LiveFrom": "01/01/2018", "ID": "caseNote", "ListElementCode": "caseNoteSubject", "FieldType": "Text", "ElementLabel": "Subject", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "caseNote", "ListElementCode": "caseNoteDescription", "FieldType": "TextArea", "ElementLabel": "Case note", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "caseNote", "ListElementCode": "caseNoteDocument", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "caseNote", "ListElementCode": "user", "FieldType": "Text", "ElementLabel": "User", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "caseNote", "ListElementCode": "dateAdded", "FieldType": "Date", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationStatus", "FieldType": "Text", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"}
 ]
