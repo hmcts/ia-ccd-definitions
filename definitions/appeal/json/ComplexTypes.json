@@ -333,6 +333,7 @@
   {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingID", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingDateTime", "FieldType": "DateTime", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationId", "FieldType": "Date", "ElementLabel": "ID", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationDateSent", "FieldType": "Date", "ElementLabel": "Sent on", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationSentTo", "FieldType": "Text", "ElementLabel": "To", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationDocument", "FieldType": "Document", "ElementLabel": "Notification Url", "SecurityClassification": "PUBLIC"},
