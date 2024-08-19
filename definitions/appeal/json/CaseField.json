@@ -7219,6 +7219,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestReheardHearingDocuments", "Label": "Reheard hearing documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionWithoutHearing", "Label": "Decision Without Hearing", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingDetails", "Label": " ", "FieldType": "hearingSchedule", "SecurityClassification": "PUBLIC"},
-
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingCancelledLabel", "Label": "The hearing has been cancelled. Completing this event will remove the hearing date and time from the case and update the Next Hearing Date on Work Allocation tasks. ", "FieldType": "Label", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingCancelledLabel", "Label": "The hearing has been cancelled. Completing this event will remove the hearing date and time from the case and update the Next Hearing Date on Work Allocation tasks. ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "selectedHearingCentreRefData", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  
 ]
