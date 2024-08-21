@@ -1810,9 +1810,9 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "generateAmendedHearingBundle",
-    "Name": "Amend Hearing Bundle",
-    "Description": "Create an amended hearing bundle",
+    "ID": "generateUpdatedHearingBundle",
+    "Name": "Update Hearing Bundle",
+    "Description": "Create an updated hearing bundle",
     "DisplayOrder": 25,
     "PreConditionState(s)": "preHearing;decision;adjourned;appealTakenOffline",
     "PostConditionState": "*",

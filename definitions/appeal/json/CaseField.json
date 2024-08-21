@@ -4574,38 +4574,36 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadAddendumEvidenceAdminOfficerAction", "Label": "[Add additional evidence as an addendum](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadAddendumEvidenceAdminOfficer)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "markAddendumEvidenceAsReviewedAction", "Label": "[Mark evidence as reviewed](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/markAddendumEvidenceAsReviewed)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addendumEvidencePageTitle", "Label": "Add the evidence and the context. This evidence will not be included in the hearing bundle, it will be added as an addendum.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isHearingBundleAmended", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "amendedBundleCount", "Label": " ", "FieldType": "Number", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "amendedReheardBundleCount", "Label": " ", "FieldType": "Number", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isHearingBundleUpdated", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_amendedBundle_in_progress_preHearing",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 10 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_preHearing.svg)\r\n\r\n## What happens next\r\nThe amended hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the amended bundle fails to generate.</br></br>",
+    "ID": "progress_caseOfficer_updatedBundle_in_progress_preHearing",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 10 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_preHearing.svg)\r\n\r\n## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_amendedBundle_in_progress_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## What happens next\r\nThe amended hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the amended bundle fails to generate.</br></br>",
+    "ID": "progress_caseOfficer_updatedBundle_in_progress_decision",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_amendedBundle_in_progress_adjourned",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: The hearing has been adjourned](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_hearing_adjourned.png)\r\n\r\n## What happens next\r\nThe amended hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the amended bundle fails to generate.</br></br>",
+    "ID": "progress_caseOfficer_updatedBundle_in_progress_adjourned",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: The hearing has been adjourned](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_hearing_adjourned.png)\r\n\r\n## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_amendedBundle_in_progress_appealTakenOffline",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been removed from the online service](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealRemoved.png)\r\n\r\n## What happens next\r\nThe amended hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the amended bundle fails to generate.</br></br>",
+    "ID": "progress_caseOfficer_updatedBundle_in_progress_appealTakenOffline",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been removed from the online service](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealRemoved.png)\r\n\r\n## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
