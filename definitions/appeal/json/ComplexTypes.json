@@ -341,5 +341,6 @@
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationDocument", "FieldType": "Document", "ElementLabel": "Notification", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationMethod", "FieldType": "Text", "ElementLabel": "Method", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationStatus", "FieldType": "Text", "ElementLabel": "Status", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationReference", "FieldType": "Text", "ElementLabel": "Reference", "FieldShowCondition": "notificationId=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationReference", "FieldType": "Text", "ElementLabel": "Reference", "FieldShowCondition": "notificationId=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationErrorMessage", "FieldType": "Text", "ElementLabel": "Error", "SecurityClassification": "PUBLIC"}
 ]
