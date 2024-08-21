@@ -51,6 +51,7 @@
   {"LiveFrom": "01/01/2018", "ID": "documentWithMetadata", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "documentWithMetadata", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Description", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "documentWithMetadata", "ListElementCode": "dateUploaded", "FieldType": "Date", "ElementLabel": "Date uploaded", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "documentWithMetadata", "ListElementCode": "timeUploaded", "FieldType": "Text", "ElementLabel": "Time uploaded", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "documentWithMetadata", "ListElementCode": "tag", "FieldType": "Text", "ElementLabel": "Tag", "FieldShowCondition": "tag=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "nationality", "ListElementCode": "code", "FieldType": "FixedList", "FieldTypeParameter": "isoCountries", "ElementLabel": "Nationality", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "additionalEvidenceDocument", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
@@ -329,7 +330,7 @@
   {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "dateDocumentAndReasonsDocumentUploaded", "FieldType": "Date", "ElementLabel": "Date uploaded", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "documentAndReasonsDocument", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "summariseChanges", "FieldType": "TextArea", "ElementLabel": "What has been corrected", "SecurityClassification": "PUBLIC"},
-  
+
   {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingID", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingDateTime", "FieldType": "DateTime", "ElementLabel": " ", "SecurityClassification": "PUBLIC"}
 
