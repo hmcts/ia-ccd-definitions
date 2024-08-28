@@ -7245,5 +7245,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updatedDecisionHearingFeeOption", "Label": "How do you want the appeal to be decided?", "FieldType": "FixedRadioList", "FieldTypeParameter": "decisionHearingFeeOption", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousDecisionHearingFeeOption", "Label": " ", "FieldType": "FixedRadioList", "FieldTypeParameter": "decisionHearingFeeOption", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "selectedHearingCentreRefData", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "selectedHearingCentreRefData", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousFeeAmountGbp", "Label": "Fee", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"}
+
 ]
