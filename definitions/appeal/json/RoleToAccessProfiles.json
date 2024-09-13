@@ -219,7 +219,7 @@
     "RoleName" : "senior-judge",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile,ia_caseflags_profile",
+    "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile,ia_caseflags_profile,payments",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -228,7 +228,7 @@
     "RoleName" : "leadership-judge",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile,ia_caseflags_profile",
+    "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile,ia_caseflags_profile,payments",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -237,7 +237,7 @@
     "RoleName" : "fee-paid-judge",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile,ia_caseflags_profile",
+    "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile,ia_caseflags_profile,payments",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -246,7 +246,7 @@
     "RoleName" : "lead-judge",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile,ia_caseflags_profile",
+    "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile,ia_caseflags_profile,payments",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -255,7 +255,7 @@
     "RoleName" : "hearing-judge",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile,ia_caseflags_profile",
+    "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile,ia_caseflags_profile,payments",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -264,7 +264,7 @@
     "RoleName" : "ftpa-judge",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile,ia_caseflags_profile",
+    "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile,ia_caseflags_profile,payments",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -273,7 +273,7 @@
     "RoleName" : "hearing-panel-judge",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile,ia_caseflags_profile",
+    "AccessProfiles": "caseworker-ia-iacjudge,ia_caselinks_profile,ia_caseflags_profile,payments",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -282,7 +282,7 @@
     "RoleName" : "hearing-centre-admin",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-admofficer,ia_caselinks_profile,ia_caseflags_profile",
+    "AccessProfiles": "caseworker-ia-admofficer,ia_caselinks_profile,ia_caseflags_profile,payments",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -291,7 +291,16 @@
     "RoleName" : "ctsc",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-admofficer,ia_caselinks_profile,ia_caseflags_profile",
+    "AccessProfiles": "caseworker-ia-admofficer,ia_caselinks_profile,ia_caseflags_profile,payments-refund-immigration-and-asylum-appeals,payments",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "ctsc-leader",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "caseworker-ia-admofficer,ia_caselinks_profile,ia_caseflags_profile,payments-refund-approver-immigration-and-asylum-appeals,payments",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -300,7 +309,7 @@
     "RoleName" : "national-business-centre",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-admofficer,ia_caselinks_profile,ia_caseflags_profile",
+    "AccessProfiles": "caseworker-ia-admofficer,ia_caselinks_profile,ia_caseflags_profile,payments",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -309,7 +318,7 @@
     "RoleName" : "senior-tribunal-caseworker",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-caseofficer,ia_caselinks_profile,ia_caseflags_profile",
+    "AccessProfiles": "caseworker-ia-caseofficer,ia_caselinks_profile,ia_caseflags_profile,payments",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -318,7 +327,7 @@
     "RoleName" : "tribunal-caseworker",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-caseofficer,ia_caselinks_profile,ia_caseflags_profile",
+    "AccessProfiles": "caseworker-ia-caseofficer,ia_caselinks_profile,ia_caseflags_profile,payments",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
@@ -327,7 +336,7 @@
     "RoleName" : "case-manager",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
-    "AccessProfiles": "caseworker-ia-caseofficer,ia_caselinks_profile,ia_caseflags_profile",
+    "AccessProfiles": "caseworker-ia-caseofficer,ia_caselinks_profile,ia_caseflags_profile,payments",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
