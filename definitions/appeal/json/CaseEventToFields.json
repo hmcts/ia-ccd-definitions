@@ -1663,6 +1663,8 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateTribunalDecision", "CaseFieldID": "rule32ListingInsAdvice", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageLabel": "Listing instructions", "PageID": "rule32DecisionLstIns", "PageDisplayOrder": 3, "PageShowCondition": "updateTribunalDecisionList=\"underRule32\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateTribunalDecision", "CaseFieldID": "judgesNamesToExclude", "PageFieldDisplayOrder": 2, "DisplayContext": "OPTIONAL", "PageID": "rule32DecisionLstIns", "PageDisplayOrder": 3, "ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateTribunalDecision", "CaseFieldID": "rule32ListingAdditionalIns", "CaseEventFieldLabel": "Enter any additional instructions", "PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "rule32DecisionLstIns", "PageDisplayOrder": 3, "ShowSummaryChangeOption": "Y"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateTribunalDecision", "CaseFieldID": "rule32ListingAdditionalIns", "CaseEventFieldLabel": "Enter any additional instructions", "PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "rule32DecisionLstIns", "PageDisplayOrder": 3, "ShowSummaryChangeOption": "Y"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "resetRemoveRepresentation", "CaseFieldID": "resetRemoveRepresentationReason", "PageFieldDisplayOrder": 1, "DisplayContext": "OPTIONAL", "PageID": "resetRemoveRepresentation", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"}
 
 ]
