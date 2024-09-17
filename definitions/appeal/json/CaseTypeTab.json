@@ -911,14 +911,21 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "sponsorAuthorisation", "TabFieldDisplayOrder": 130, "FieldShowCondition": "isOutOfCountryEnabled=\"Yes\" AND appellantInUk!=\"Yes\" AND hasSponsor=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantPhoneNumber", "TabFieldDisplayOrder": 135, "FieldShowCondition": "journeyType=\"aip\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantEmailAddress", "TabFieldDisplayOrder": 136, "FieldShowCondition": "journeyType=\"aip\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepresentativeDetailsTitle", "TabFieldDisplayOrder": 140, "FieldShowCondition": "journeyType!=\"aip\""},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepresentativeDetailsTitle", "TabFieldDisplayOrder": 140, "FieldShowCondition": "legalRepCompanyPaperJ=\"*\" OR legalRepGivenName=\"*\"  AND  journeyType!=\"aip\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepDetailsUpdateLink", "TabFieldDisplayOrder": 150, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative!=\"appealStarted\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepName", "TabFieldDisplayOrder": 160, "FieldShowCondition": "journeyType!=\"aip\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepFamilyName", "TabFieldDisplayOrder": 161, "FieldShowCondition": "journeyType!=\"aip\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepCompany", "TabFieldDisplayOrder": 170, "FieldShowCondition": "journeyType!=\"aip\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepresentativeEmailAddress", "TabFieldDisplayOrder": 180, "FieldShowCondition": "journeyType!=\"aip\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepMobilePhoneNumber", "TabFieldDisplayOrder": 190, "FieldShowCondition": "journeyType!=\"aip\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepReferenceNumber", "TabFieldDisplayOrder": 200, "FieldShowCondition": "journeyType!=\"aip\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepName", "TabFieldDisplayOrder": 160, "FieldShowCondition": "journeyType!=\"aip\" AND isAdmin!=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepFamilyName", "TabFieldDisplayOrder": 161, "FieldShowCondition": "journeyType!=\"aip\" AND isAdmin!=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepCompany", "TabFieldDisplayOrder": 170, "FieldShowCondition": "journeyType!=\"aip\" AND isAdmin!=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepresentativeEmailAddress", "TabFieldDisplayOrder": 180, "FieldShowCondition": "journeyType!=\"aip\" AND isAdmin!=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepMobilePhoneNumber", "TabFieldDisplayOrder": 190, "FieldShowCondition": "journeyType!=\"aip\" AND isAdmin!=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepReferenceNumber", "TabFieldDisplayOrder": 200, "FieldShowCondition": "journeyType!=\"aip\" AND isAdmin!=\"Yes\""},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepGivenName", "TabFieldDisplayOrder": 160, "FieldShowCondition": "journeyType!=\"aip\" AND isAdmin=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepFamilyNamePaperJ", "TabFieldDisplayOrder": 170, "FieldShowCondition": "journeyType!=\"aip\" AND isAdmin=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepCompanyPaperJ", "TabFieldDisplayOrder": 180, "FieldShowCondition": "journeyType!=\"aip\" AND isAdmin=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepEmail", "TabFieldDisplayOrder": 190, "FieldShowCondition": "journeyType!=\"aip\" AND isAdmin=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "legalRepRefNumberPaperJ", "TabFieldDisplayOrder": 200, "FieldShowCondition": "journeyType!=\"aip\" AND isAdmin=\"Yes\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "previousRepresentations", "TabFieldDisplayOrder": 210},
 
