@@ -47,7 +47,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addressLine2AdminJ", "Label": "Address line 2", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addressLine3AdminJ", "Label": "Address line 3", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addressLine4AdminJ", "Label": "Address line 4", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "countryOocAdminJ", "Label": "Country", "FieldType": "FixedList", "FieldTypeParameter": "isoCountries", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "countryGovUkOocAdminJ", "Label": "Country", "FieldType": "FixedList", "FieldTypeParameter": "isoCountriesGovUk", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "searchPostcode", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantEmailAddress", "Label": "Email", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
@@ -138,7 +138,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAddressLine2", "Label": "Address line 2", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAddressLine3", "Label": "Address line 3", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAddressLine4", "Label": "Address line 4", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocLrCountryAdminJ", "Label": "Country", "FieldType": "FixedList", "FieldTypeParameter": "isoCountries", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocLrCountryGovUkAdminJ", "Label": "Country", "FieldType": "FixedList", "FieldTypeParameter": "isoCountriesGovUk", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealReferenceNumber", "Label": "Appeal reference", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ccdReferenceNumberForDisplay", "Label": "Online case reference number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
