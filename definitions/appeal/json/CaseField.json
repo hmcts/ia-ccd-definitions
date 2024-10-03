@@ -7291,7 +7291,6 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAriaMigrated", "Label": "Internal flag managed by API to check if case is ARIA migrated", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAriaMigratedFilter", "Label": "Internal flag managed by API to allow case filtering", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAriaMigratedTemporary", "Label": "Temporary Internal flag managed by API to check if case is ARIA migrated", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ariaDesiredState", "Label": "Select a desired state:", "FieldType": "FixedList", "FieldTypeParameter": "listOfStates", "HintText": "Choose a different desired state from the dropdown ", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAriaMigratedFeeExemption", "Label": "Internal flag managed by API to check if case is ARIA migrated cases is fee exemption", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
