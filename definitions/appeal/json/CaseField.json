@@ -743,7 +743,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_pendingPayment_remission_partiallyApproved_eaHu",
-    "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## Do this next\r\nGenerate a payment reference for this appeal.\r\n\r\nEmail the legal representative with instructions to pay the fee.\r\n\r\nThen [mark payment request sent](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/addCaseNote). You must attach a copy of the email you sent to the legal representative.\r\n\r\nFinally, you then need to do one of the following:\r\n* If you receive confirmation that the fee has been paid, you need to [mark the appeal as paid](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/markAppealPaid)\r\n* If the fee is not paid within 14 days of sending payment instructions to the legal representative, you need to [end the appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/endAppeal).",
+    "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## Do this next\r\nGenerate a payment reference for this appeal.\r\n\r\nEmail the legal representative with instructions to pay the fee.\r\n\r\nThen [mark payment request sent](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/markPaymentRequestSent). You must attach a copy of the email you sent to the legal representative.\r\n\r\nFinally, you then need to do one of the following:\r\n* If you receive confirmation that the fee has been paid, you need to [mark the appeal as paid](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/markAppealPaid)\r\n* If the fee is not paid within 14 days of sending payment instructions to the legal representative, you need to [end the appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/endAppeal).",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -783,7 +783,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_paymentPending_noRemission_ea_hu",
-    "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## Do this next\r\nGenerate a payment reference for this appeal.\r\n\r\nEmail the legal representative with instructions to pay the fee.\r\n\r\nThen [mark payment request sent](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/addCaseNote). You must attach a copy of the email you sent to the legal representative.\r\n\r\nFinally, you then need to do one of the following:\r\n* If you receive confirmation that the fee has been paid, you need to [mark the appeal as paid](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/markAppealPaid)\r\n* If the fee is not paid within 14 days of sending payment instructions to the legal representative, you need to [end the appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/endAppeal).",
+    "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## Do this next\r\nGenerate a payment reference for this appeal.\r\n\r\nEmail the legal representative with instructions to pay the fee.\r\n\r\nThen [mark payment request sent](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/markPaymentRequestSent). You must attach a copy of the email you sent to the legal representative.\r\n\r\nFinally, you then need to do one of the following:\r\n* If you receive confirmation that the fee has been paid, you need to [mark the appeal as paid](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/markAppealPaid)\r\n* If the fee is not paid within 14 days of sending payment instructions to the legal representative, you need to [end the appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/endAppeal).",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC"
   },
@@ -7220,5 +7220,34 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionWithoutHearing", "Label": "Decision Without Hearing", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingDetails", "Label": " ", "FieldType": "hearingSchedule", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasAddedLegalRepDetails", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "selectedHearingCentreRefData", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDlrmFeeRefundEnabled", "Label": "Internal flag managed by API to check DLRM fee refund feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isLateRemissionRequest", "Label": "Internal flag managed by API to check whether fee remission request is late (refund) or not", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "lateRemissionOption", "Label": " ", "FieldType": "FixedList", "FieldTypeParameter": "remissionOptions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "lateAsylumSupportRefNumber", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "lateHelpWithFeesOption", "Label": " ", "FieldType": "FixedList", "FieldTypeParameter": "helpWithFeesOptions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "lateHelpWithFeesRefNumber", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "lateLocalAuthorityLetters", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "refundRequested", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestFeeRemissionDate", "Label": "fee remission date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeUpdateTribunalAction", "Label": "Select the action the Tribunal needs to take as a result of this fee update", "FieldType": "FixedRadioList", "FieldTypeParameter": "feeUpdateTribunalActions", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "manageFeeRefundedAmount", "Label": "Amount to be refunded", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "manageFeeRequestedAmount", "Label": "Additional payment requested", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "automaticRemissionReminderLegalRep", "Label": "Internal timed event ID for record remission decision refused or partially granted", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "refundConfirmationApplied", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionTypeChangedWithRefundFlag", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updatedDecisionHearingFeeOption", "Label": "How do you want the appeal to be decided?", "FieldType": "FixedRadioList", "FieldTypeParameter": "decisionHearingFeeOption", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousDecisionHearingFeeOption", "Label": " ", "FieldType": "FixedRadioList", "FieldTypeParameter": "decisionHearingFeeOption", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "selectedHearingCentreRefData", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousFeeAmountGbp", "Label": "Fee", "FieldType": "MoneyGBP", "SecurityClassification": "PUBLIC"}
+
 ]
