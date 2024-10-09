@@ -258,6 +258,8 @@
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "amountRemitted", "FieldType": "MoneyGBP", "ElementLabel": "Amount remitted", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "amountLeftToPay", "FieldType": "MoneyGBP", "ElementLabel": "Amount left to pay", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "remissionDecisionReason", "FieldType": "Text", "ElementLabel": "Reason for decision", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "localAuthorityLetters", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Local authority letters", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "helpWithFeesOption", "FieldType": "Text", "ElementLabel": "Help with fees option", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionDetails", "ListElementCode": "decisionType", "FieldType": "Text", "ElementLabel": "Out of time decision", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionDetails", "ListElementCode": "decisionMaker", "FieldType": "Text", "ElementLabel": "Decision maker", "SecurityClassification": "PUBLIC"},
@@ -318,6 +320,7 @@
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionDate", "FieldType": "Date", "ElementLabel": "Decision date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaOutOfTimeExplanation", "FieldType": "TextArea", "ElementLabel": "Reasons why the application is late", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaOutOfTimeDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "Documents supporting late application", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaAppellantGroundsText", "FieldType": "TextArea", "ElementLabel": "Grounds of the application", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaGroundsDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "Grounds of the application", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaEvidenceDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "Supporting evidence", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaApplicationDate", "FieldType": "Date", "ElementLabel": "Application date", "SecurityClassification": "PUBLIC"},
