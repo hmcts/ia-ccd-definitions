@@ -881,8 +881,9 @@
   {"LiveFrom": "01/01/2018", "ID": "remissionDecisionOptions", "ListElementCode": "rejected", "ListElement": "Rejected", "DisplayOrder": 3},
 
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateReasons", "ListElementCode": "decisionTypeChanged", "ListElement": "Decision type changed", "DisplayOrder": 1},
-  {"LiveFrom": "01/01/2018", "ID": "feeUpdateReasons", "ListElementCode": "appealNotValid", "ListElement": "Appeal not valid", "DisplayOrder": 2},
-  {"LiveFrom": "01/01/2018", "ID": "feeUpdateReasons", "ListElementCode": "feeRemissionChanged", "ListElement": "Fee remission changed", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateReasons", "ListElementCode": "feeRemissionChanged", "ListElement": "Fee remission changed", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateReasons", "ListElementCode": "appealNotValid", "ListElement": "Appeal not valid", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "ID": "feeUpdateReasons", "ListElementCode": "appealWithdrawn", "ListElement": "Appeal withdrawn", "DisplayOrder": 4},
 
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateTribunalActions", "ListElementCode": "refund", "ListElement": "The appellant should receive a refund", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "feeUpdateTribunalActions", "ListElementCode": "additionalPayment", "ListElement": "The appellant needs to make an additional payment", "DisplayOrder": 2},
@@ -913,6 +914,22 @@
   {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionType", "ListElementCode": "approved", "ListElement": "Appeal is out of time but can proceed", "DisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionType", "ListElementCode": "rejected", "ListElement": "Appeal is out of time and cannot proceed", "DisplayOrder": 3},
 
+  {"LiveFrom": "01/01/2018", "ID": "updateTribunalRuleList", "ListElementCode": "underRule31", "ListElement": "Correct decision error under rule 31", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "updateTribunalRuleList", "ListElementCode": "underRule32", "ListElement": "Review decision under rule 32 - Resident Judge only", "DisplayOrder": 2},
+
+  {"LiveFrom": "01/01/2018", "ID": "updateDecisionsAndReasonsDocument", "ListElementCode": "newDecisionAndReasons", "ListElement": "Yes", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "updateDecisionsAndReasonsDocument", "ListElementCode": "oldDecisionsAndReasons", "ListElement": "No", "DisplayOrder": 2},
+
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "asylumSupportFromHo", "ListElement": "I get asylum support from the Home Office", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "feeWaiverFromHo", "ListElement": "I got a fee waiver from the Home Office for my application to stay in the UK", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "under18GetSupportFromLocalAuthority", "ListElement": "I am under 18 and get housing or other support from the local authority", "DisplayOrder": 3},
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "parentGetSupportFromLocalAuthority", "ListElement": "I am the parent, guardian or sponsor of someone under 18 who gets housing or other support from the local authority", "DisplayOrder": 4},
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "noneOfTheseStatements", "ListElement": "You may still be able to get help to pay the fee", "DisplayOrder": 5},
+  {"LiveFrom": "01/01/2018", "ID": "remissionOptions", "ListElementCode": "iWantToGetHelpWithFees", "ListElement": "I want to get help with fees", "DisplayOrder": 6},
+
+  {"LiveFrom": "01/01/2018", "ID": "helpWithFeesOptions", "ListElementCode": "wantToApply", "ListElement": "Yes, I want to apply for help with fees", "DisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "ID": "helpWithFeesOptions", "ListElementCode": "alreadyApplied", "ListElement": "I have already applied for help with fees", "DisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "ID": "helpWithFeesOptions", "ListElementCode": "willPayForAppeal", "ListElement": "No, I will pay for the appeal now", "DisplayOrder": 3},
   {"LiveFrom": "01/01/2018", "ID": "sourceOfRemittalList", "ListElementCode": "Upper Tribunal", "ListElement": "Upper Tribunal", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "sourceOfRemittalList", "ListElementCode": "Court of Appeal", "ListElement": "Court of Appeal", "DisplayOrder": 2},
 
