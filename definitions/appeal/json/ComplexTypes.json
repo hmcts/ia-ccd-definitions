@@ -50,7 +50,8 @@
   {"LiveFrom": "01/01/2018", "ID": "documentWithDescription", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Describe the document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "documentWithMetadata", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "documentWithMetadata", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Description", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "documentWithMetadata", "ListElementCode": "dateUploaded", "FieldType": "Date", "ElementLabel": "Date uploaded", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "documentWithMetadata", "ListElementCode": "dateUploaded", "FieldType": "Date", "FieldShowCondition": "dateTimeUploaded!=\"*\"", "ElementLabel": "Date uploaded", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "documentWithMetadata", "ListElementCode": "dateTimeUploaded", "FieldType": "DateTime", "ElementLabel": "Date uploaded", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "documentWithMetadata", "ListElementCode": "tag", "FieldType": "Text", "ElementLabel": "Tag", "FieldShowCondition": "tag=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "nationality", "ListElementCode": "code", "FieldType": "FixedList", "FieldTypeParameter": "isoCountries", "ElementLabel": "Nationality", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "additionalEvidenceDocument", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
@@ -257,6 +258,8 @@
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "amountRemitted", "FieldType": "MoneyGBP", "ElementLabel": "Amount remitted", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "amountLeftToPay", "FieldType": "MoneyGBP", "ElementLabel": "Amount left to pay", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "remissionDecisionReason", "FieldType": "Text", "ElementLabel": "Reason for decision", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "localAuthorityLetters", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Local authority letters", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remissionDetails", "ListElementCode": "helpWithFeesOption", "FieldType": "Text", "ElementLabel": "Help with fees option", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionDetails", "ListElementCode": "decisionType", "FieldType": "Text", "ElementLabel": "Out of time decision", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "outOfTimeDecisionDetails", "ListElementCode": "decisionMaker", "FieldType": "Text", "ElementLabel": "Decision maker", "SecurityClassification": "PUBLIC"},
@@ -268,9 +271,6 @@
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "accessCode", "FieldType": "Text", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "expiryDate", "FieldType": "Date", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "pinInPost", "ListElementCode": "pinUsed", "FieldType": "YesOrNo", "ElementLabel": "Legal representation reference", "SecurityClassification": "PUBLIC"},
-
-  {"LiveFrom": "01/01/2018", "ID": "remittalDocument", "ListElementCode": "decisionDocument", "FieldType": "documentWithMetadata", "ElementLabel": "Decision Documents", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "remittalDocument", "ListElementCode": "otherRemittalDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Other Remittal Documents", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "ID": "reheardHearingDocumentsComplex", "ListElementCode": "reheardHearingDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Reheard hearing documents", "SecurityClassification": "PUBLIC"},
 
@@ -303,8 +303,6 @@
   {"LiveFrom": "01/01/2018", "ID": "adjournmentDetail", "ListElementCode": "reserveOrExcludeJudge", "FieldType": "FixedList", "FieldTypeParameter": "reserveOrExcludeJudge", "ElementLabel": "Exclude or reserve", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaApplicant", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaApplicantType", "ElementLabel": "Applicant", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionOutcomeType", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaResidentJudgeDecisionOutcomeType", "ElementLabel": "The outcome of the application", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionOutcomeTypeR35", "FieldType": "Text", "ElementLabel": "The outcome of the application", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaNewDecisionDocument", "FieldType": "Document", "ElementLabel": "FTPA Decision and Reasons document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaLegacyDecisionDocument", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "FTPA Decision and Reasons document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaR35Document", "FieldType": "Document", "ElementLabel": "Rule 35 notice", "SecurityClassification": "PUBLIC"},
@@ -317,6 +315,7 @@
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionDate", "FieldType": "Date", "ElementLabel": "Decision date", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaOutOfTimeExplanation", "FieldType": "TextArea", "ElementLabel": "Reasons why the application is late", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaOutOfTimeDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "Documents supporting late application", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaAppellantGroundsText", "FieldType": "TextArea", "ElementLabel": "Grounds of the application", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaGroundsDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "Grounds of the application", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaEvidenceDocuments", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "ElementLabel": "Supporting evidence", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaApplicationDate", "FieldType": "Date", "ElementLabel": "Application date", "SecurityClassification": "PUBLIC"},
@@ -329,8 +328,12 @@
   {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "dateDocumentAndReasonsDocumentUploaded", "FieldType": "Date", "ElementLabel": "Date uploaded", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "documentAndReasonsDocument", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "decisionAndReasons", "ListElementCode": "summariseChanges", "FieldType": "TextArea", "ElementLabel": "What has been corrected", "SecurityClassification": "PUBLIC"},
-  
-  {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingID", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
-  {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingDateTime", "FieldType": "DateTime", "ElementLabel": " ", "SecurityClassification": "PUBLIC"}
+  {"LiveFrom": "01/01/2018", "ID": "remittalDocument", "ListElementCode": "decisionDocument", "FieldType": "documentWithMetadata", "ElementLabel": "Decision Documents", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "remittalDocument", "ListElementCode": "otherRemittalDocs", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "ElementLabel": "Other Remittal Documents", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingID", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingDateTime", "FieldType": "DateTime", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionOutcomeType", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaResidentJudgeDecisionOutcomeType", "ElementLabel": "The outcome of the application", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionOutcomeTypeR35", "FieldType": "Text", "ElementLabel": "The outcome of the application", "SecurityClassification": "PUBLIC"}
 ]
