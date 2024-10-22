@@ -6078,6 +6078,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestHearingDate", "Label": "Date and time", "FieldType": "DateTime", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestHearingDate1", "Label": "Date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingIdList", "Label": "List of hearing IDs associated with case", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "serviceRequestReference", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "ID": "isRemoteHearing", "Label": "Will the hearing be held remotely?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
