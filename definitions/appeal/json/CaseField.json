@@ -7216,9 +7216,11 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reheardDecisionReasonsCollection", "Label": "Reheard decision and reason documents", "FieldType": "Collection", "FieldTypeParameter": "reheardHearingDecisionComplex", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestDecisionAndReasonsDocuments", "Label": "Decision and reason documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestRemittalDocuments", "Label": "Remittal Documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestReheardHearingDocuments", "Label": "Reheard hearing documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionWithoutHearing", "Label": "Decision Without Hearing", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingDetails", "Label": " ", "FieldType": "hearingSchedule", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasAddedLegalRepDetails", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDlrmFeeRefundEnabled", "Label": "Internal flag managed by API to check DLRM fee refund feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isLateRemissionRequest", "Label": "Internal flag managed by API to check whether fee remission request is late (refund) or not", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
