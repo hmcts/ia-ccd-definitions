@@ -8,7 +8,7 @@
       "aacUrl": "http://manage-case-assignment:4454"
     },
     "preview": {
-      "iaCaseUrl": "http://ia-case-api-pr-2005-java",
+      "iaCaseUrl": "http://ia-case-api-pr-2378-java",
       "aacUrl": "http://aac-manage-case-assignment-aat.service.core-compute-aat.internal"
     },
     "demo": {
@@ -39,7 +39,7 @@
     "setup": "bin/setup.sh",
     "generate-json": "bin/generate-json.sh",
     "generate-excel": "bin/generate-excel.sh",
-    "generate-dev": "bin/generate-dev.sh",
+    "generate-dev": "bin/generate-dev.sh && node bin/case-event-to-fields-duplicate-checker.js && node bin/check-missing-system-user-fields.js && node bin/auth-casefield-duplicate-checker.js",
     "generate-preview": "bin/generate-preview.sh",
     "generate-demo": "bin/generate-demo.sh",
     "generate-ithc": "bin/generate-ithc.sh",
