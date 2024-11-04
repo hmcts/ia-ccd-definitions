@@ -70,7 +70,7 @@
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "appealType",
     "SecurityClassification":"PUBLIC",
-    "Searchable": "N"
+    "Searchable": "Y"
   },
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsEuRefusalTitle", "Label": " \r\n\r\nYou'll be able to explain your grounds in more detail later.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
@@ -6497,7 +6497,7 @@
     "FieldType": "FixedRadioList",
     "FieldTypeParameter": "appealType",
     "SecurityClassification":"PUBLIC",
-    "Searchable": "Y"
+    "Searchable": "N"
   },
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentRequestSentDate", "Label": "Date sent", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
