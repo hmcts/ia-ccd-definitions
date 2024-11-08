@@ -2702,5 +2702,24 @@
     "EndButtonLabel": "Continue",
     "Publish": "Y",
     "EventEnablingCondition": "decisionTypeChangedWithRefundFlag=\"Yes\""
+  },
+  {
+    "LiveFrom": "01/01/2021",
+    "CaseTypeID": "Asylum",
+    "ID": "revokeCaseAccess",
+    "Name": "Revoke case access",
+    "Description": "Revoke legal representative or Appellant case access",
+    "DisplayOrder": 77,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Revoke access",
+    "Publish": "Y"
   }
 ]
