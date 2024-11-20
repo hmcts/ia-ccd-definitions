@@ -6034,7 +6034,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "additionalPaymentInfo", "Label": "Additional payment information", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseManagementLocation", "Label": "Case management location", "FieldType": "caseManagementLocation", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseManagementLocationRefData", "Label": "Case management location", "FieldType": "caseManagementLocationRefData", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseManagementLocationRefData", "Label": "Case management location", "FieldType": "caseManagementLocationRefData", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationLink", "Label": "[Make an application](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/makeAnApplication)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makeAnApplicationAdvice", "Label": "Select the type of application you are making.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
@@ -6226,7 +6226,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAddress", "Label": "Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorSearchPostcode", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorContactTitle", "Label": " \n\nPlease provide an email address or phone number for your client's sponsor, or a person responsible for the sponsor.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorContactPreference", "Label": "Contact details", "FieldType": "FixedRadioList", "FieldTypeParameter": "contactPreference","SecurityClassification": "PUBLIC", "Searchable": "N"}, 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorContactPreference", "Label": "Contact details", "FieldType": "FixedRadioList", "FieldTypeParameter": "contactPreference","SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorEmail", "Label": "Sponsor email", "FieldType": "Email", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorMobileNumber", "Label": "Sponsor phone number", "FieldType": "Text", "RegularExpression": "^((\\+44(\\s\\(0\\)\\s|\\s0\\s|\\s)?)|0)7\\d{3}(\\s)?\\d{6}$", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "aipSponsorEmailForDisplay", "Label": "Sponsor email", "FieldType": "Email", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
@@ -6794,7 +6794,7 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriendEmail", "Label": "Email", "FieldType": "Email", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriendPhoneNumber", "Label": "Text message", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterReferenceNumber", "Label": "Respondent's reference/Case ID", "HintText": "Enter the number on the decision letter from the authority", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterReferenceNumber", "Label": "Respondent's reference/Case ID", "HintText": "Enter the number on the decision letter from the authority", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasTransferredOutOfAda", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "transferOutOfAdaDate", "Label": "Date transferred out of ADA", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adaSuffix", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
