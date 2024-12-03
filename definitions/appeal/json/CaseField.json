@@ -6888,15 +6888,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTypeTitleUnrep", "Label": " \r\nIf the appellant has ticked more than one appeal type on the form, review the Notice of Decision to determine the primary appeal type.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "internalContactDetailsTitle", "Label": "Enter the appellant's contact details.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
 
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalRepresentative_appealStarted_ada",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal started stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealStarted_ada.svg)\r\n\r\n## Do this next\r\nYou still need to submit the appeal.\r\n\r\n[Submit the appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitAppeal)\r\n\r\nYou can also review and edit the appeal.\r\n\r\n[Edit appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal)",
-    "FieldType": "Label",
-    "SecurityClassification":"PUBLIC",
-    "Searchable": "N"
-  },
+
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
