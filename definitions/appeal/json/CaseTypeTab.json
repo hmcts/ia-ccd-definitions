@@ -966,25 +966,29 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "directions", "CaseFieldID": "sendDirectionWithQuestionsLink", "TabFieldDisplayOrder": 6, "FieldShowCondition": "journeyType=\"aip\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "directions", "CaseFieldID": "requestCmaRequirementsLink", "TabFieldDisplayOrder": 7, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "directions", "CaseFieldID": "directions", "TabFieldDisplayOrder": 8},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseNotes", "TabLabel": "Case notes", "TabDisplayOrder": 6, "CaseFieldID": "caseNotesTabTitle", "TabFieldDisplayOrder": 1},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseNotes", "CaseFieldID": "addCaseNoteActionDisabled", "TabFieldDisplayOrder": 2, "FieldShowCondition": "addCaseNoteActionDisabled=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseNotes", "CaseFieldID": "addCaseNoteLink", "TabFieldDisplayOrder": 3, "FieldShowCondition": "addCaseNoteActionDisabled!=\"Yes\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseNotes", "CaseFieldID": "caseNotes", "TabFieldDisplayOrder": 4},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "TabLabel": "Applications", "TabDisplayOrder": 7, "CaseFieldID": "applicationsTabTitle", "TabFieldDisplayOrder": 1},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "reviewTimeExtensionRequired", "TabFieldDisplayOrder": 9, "FieldShowCondition": "reviewTimeExtensionRequired=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "journeyType", "TabFieldDisplayOrder": 9, "FieldShowCondition": "journeyType=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "recordApplicationActionDisabled", "TabFieldDisplayOrder": 9, "FieldShowCondition": "recordApplicationActionDisabled=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "hasApplicationsToDecide", "TabFieldDisplayOrder": 9, "FieldShowCondition": "hasApplicationsToDecide=\"DUMMY_FIELD_TO_HIDE\""},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "TabLabel": "Case flags", "TabDisplayOrder": 6, "CaseFieldID": "caseFlagsTabTitle", "TabFieldDisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "notifications", "TabLabel": "Notifications", "TabDisplayOrder": 6, "CaseFieldID": "notificationsTabTitle", "TabFieldDisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "notifications", "CaseFieldID": "notifications", "TabFieldDisplayOrder": 1},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "TabLabel": "Case flags", "TabDisplayOrder": 7, "CaseFieldID": "caseFlagsTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "caseFlags", "TabFieldDisplayOrder": 2, "FieldShowCondition": "caseFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "appellantLevelFlags", "TabFieldDisplayOrder": 3, "FieldShowCondition": "appellantLevelFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "witnessLevelFlags", "TabFieldDisplayOrder": 3, "FieldShowCondition": "witnessLevelFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "interpreterLevelFlags", "TabFieldDisplayOrder": 3, "FieldShowCondition": "interpreterLevelFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "flagLauncher", "DisplayContextParameter": "#ARGUMENT(READ)", "TabFieldDisplayOrder": 4},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseLinks", "TabLabel": "Linked Cases", "CaseFieldID": "caseLinks", "DisplayContextParameter" : "#ARGUMENT(LinkedCases)", "TabDisplayOrder": 8, "TabFieldDisplayOrder": 1, "FieldShowCondition": "LinkedCasesComponentLauncher!=\"\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseLinks", "TabLabel": "Linked Cases", "CaseFieldID": "LinkedCasesComponentLauncher", "DisplayContextParameter" : "#ARGUMENT(LinkedCases)", "TabDisplayOrder": 8, "TabFieldDisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseNotes", "TabLabel": "Case notes", "TabDisplayOrder": 8, "CaseFieldID": "caseNotesTabTitle", "TabFieldDisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseNotes", "CaseFieldID": "addCaseNoteActionDisabled", "TabFieldDisplayOrder": 2, "FieldShowCondition": "addCaseNoteActionDisabled=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseNotes", "CaseFieldID": "addCaseNoteLink", "TabFieldDisplayOrder": 3, "FieldShowCondition": "addCaseNoteActionDisabled!=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseNotes", "CaseFieldID": "caseNotes", "TabFieldDisplayOrder": 4},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "TabLabel": "Applications", "TabDisplayOrder": 9, "CaseFieldID": "applicationsTabTitle", "TabFieldDisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "reviewTimeExtensionRequired", "TabFieldDisplayOrder": 9, "FieldShowCondition": "reviewTimeExtensionRequired=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "journeyType", "TabFieldDisplayOrder": 9, "FieldShowCondition": "journeyType=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "recordApplicationActionDisabled", "TabFieldDisplayOrder": 9, "FieldShowCondition": "recordApplicationActionDisabled=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "hasApplicationsToDecide", "TabFieldDisplayOrder": 9, "FieldShowCondition": "hasApplicationsToDecide=\"DUMMY_FIELD_TO_HIDE\""},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseLinks", "TabLabel": "Linked Cases", "CaseFieldID": "caseLinks", "DisplayContextParameter" : "#ARGUMENT(LinkedCases)", "TabDisplayOrder": 10, "TabFieldDisplayOrder": 1, "FieldShowCondition": "LinkedCasesComponentLauncher!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseLinks", "TabLabel": "Linked Cases", "CaseFieldID": "LinkedCasesComponentLauncher", "DisplayContextParameter" : "#ARGUMENT(LinkedCases)", "TabDisplayOrder": 10, "TabFieldDisplayOrder": 1},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "makeAnApplicationLink", "TabFieldDisplayOrder": 3, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative!=\"appealStarted\" AND currentCaseStateVisibleToLegalRepresentative!=\"appealTakenOffline\" AND currentCaseStateVisibleToHomeOfficeAll!=\"appealTakenOffline\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "decideAnApplicationLink", "TabFieldDisplayOrder": 4, "FieldShowCondition": "hasApplicationsToDecide=\"Yes\""},
@@ -992,7 +996,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "makeAnApplications", "TabFieldDisplayOrder": 6},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "applications", "TabFieldDisplayOrder": 7, "FieldShowCondition": "applications!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "applications", "CaseFieldID": "timeExtensions", "TabFieldDisplayOrder": 8},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "serviceRequest", "TabLabel": "Service Request", "CaseFieldID": "serviceRequest", "TabDisplayOrder": 7,  "TabFieldDisplayOrder": 1, "TabShowCondition": "isFeePaymentEnabled=\"Yes\" AND currentCaseStateVisibleToLegalRepresentative!=\"appealStarted\" AND appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\" AND hasServiceRequestAlready=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "serviceRequest", "TabLabel": "Service Request", "CaseFieldID": "serviceRequest", "TabDisplayOrder": 11,  "TabFieldDisplayOrder": 1, "TabShowCondition": "isFeePaymentEnabled=\"Yes\" AND currentCaseStateVisibleToLegalRepresentative!=\"appealStarted\" AND appealType!=\"deprivation\" AND appealType!=\"revocationOfProtection\" AND hasServiceRequestAlready=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "journey_type_aip", "TabFieldDisplayOrder": 7, "FieldShowCondition": "journeyType=\"aip\" AND s94bStatus!=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "journey_type_aip_s94b", "TabFieldDisplayOrder": 7, "FieldShowCondition": "journeyType=\"aip\" AND s94bStatus=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "journey_type_legal_rep", "TabFieldDisplayOrder": 7, "FieldShowCondition": "journeyType!=\"aip\" AND s94bStatus!=\"Yes\" "},
@@ -1007,7 +1011,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "appealRemovedFromTheOnlineServiceTitle", "TabFieldDisplayOrder": 23, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"appealTakenOffline\" OR currentCaseStateVisibleToAdminOfficer=\"appealTakenOffline\" OR currentCaseStateVisibleToHomeOfficeAll=\"appealTakenOffline\" OR currentCaseStateVisibleToLegalRepresentative=\"appealTakenOffline\" OR currentCaseStateVisibleToJudge=\"appealTakenOffline\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "removeAppealFromOnlineReason", "TabFieldDisplayOrder": 24, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"appealTakenOffline\" OR currentCaseStateVisibleToAdminOfficer=\"appealTakenOffline\" OR currentCaseStateVisibleToHomeOfficeAll=\"appealTakenOffline\" OR currentCaseStateVisibleToLegalRepresentative=\"appealTakenOffline\" OR currentCaseStateVisibleToJudge=\"appealTakenOffline\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "removeAppealFromOnlineDate", "TabFieldDisplayOrder": 24, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"appealTakenOffline\" OR currentCaseStateVisibleToAdminOfficer=\"appealTakenOffline\" OR currentCaseStateVisibleToHomeOfficeAll=\"appealTakenOffline\" OR currentCaseStateVisibleToLegalRepresentative=\"appealTakenOffline\" OR currentCaseStateVisibleToJudge=\"appealTakenOffline\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "TabLabel": "Hearing and appointment", "TabDisplayOrder": 8, "CaseFieldID": "hearingTabTitle", "TabFieldDisplayOrder": 1, "TabShowCondition": "submitHearingRequirementsAvailable=\"Yes\" OR caseListedWithoutHearingRequirements=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "TabLabel": "Hearing and appointment", "TabDisplayOrder": 12, "CaseFieldID": "hearingTabTitle", "TabFieldDisplayOrder": 1, "TabShowCondition": "submitHearingRequirementsAvailable=\"Yes\" OR caseListedWithoutHearingRequirements=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "isOutOfCountryEnabled", "TabFieldDisplayOrder": 8, "FieldShowCondition": "isOutOfCountryEnabled=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "appealOutOfCountry", "TabFieldDisplayOrder": 8, "FieldShowCondition": "appealOutOfCountry=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "reviewedHearingRequirements", "TabFieldDisplayOrder": 8, "FieldShowCondition": "reviewedHearingRequirements=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
@@ -1199,7 +1203,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "hearingReasonToCancel", "TabFieldDisplayOrder": 169, "FieldShowCondition": "hearingAdjournmentWhen=\"beforeHearingDate\" AND relistCaseImmediately=\"No\" AND hearingReasonToCancel!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "isHearingLinked", "TabFieldDisplayOrder": 170, "FieldShowCondition": "isHearingLinked!=\"\""},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "TabLabel": "FTPA", "TabDisplayOrder": 9, "CaseFieldID": "ftpaTabTitle", "TabFieldDisplayOrder": 1, "TabShowCondition": "ftpaAppellantSubmitted=\"Yes\" OR ftpaRespondentSubmitted=\"Yes\"" },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "TabLabel": "FTPA", "TabDisplayOrder": 13, "CaseFieldID": "ftpaTabTitle", "TabFieldDisplayOrder": 1, "TabShowCondition": "ftpaAppellantSubmitted=\"Yes\" OR ftpaRespondentSubmitted=\"Yes\"" },
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "ftpaAppellantSubmitted", "TabFieldDisplayOrder": 9, "FieldShowCondition": "ftpaAppellantSubmitted=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "ftpaRespondentSubmitted", "TabFieldDisplayOrder": 9, "FieldShowCondition": "ftpaRespondentSubmitted=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
@@ -1279,9 +1283,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "allocatedJudge", "TabFieldDisplayOrder": 35, "FieldShowCondition": "allocatedJudge=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "ftpa", "CaseFieldID": "previousJudgeAllocations", "TabFieldDisplayOrder": 36, "FieldShowCondition": "previousJudgeAllocations=\"*\""},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "paymentHistory", "TabLabel": "Payment history", "TabDisplayOrder": 10, "CaseFieldID": "paymentHistoryTabTitle", "TabFieldDisplayOrder": 1,  "TabShowCondition": "isFeePaymentEnabled=\"Yes\"" },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "paymentHistory", "TabLabel": "Payment history", "TabDisplayOrder": 10, "CaseFieldID": "paymentHistoryViewer", "TabFieldDisplayOrder": 2},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "TabLabel": "Validation", "TabDisplayOrder": 11, "CaseFieldID": "validationTabTitle", "TabFieldDisplayOrder": 1, "TabShowCondition": "currentCaseStateVisibleToCaseOfficer=\"appealSubmitted\" AND isHomeOfficeIntegrationEnabled=\"Yes\" AND appealOutOfCountry=\"No\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "paymentHistory", "TabLabel": "Payment history", "TabDisplayOrder": 14, "CaseFieldID": "paymentHistoryTabTitle", "TabFieldDisplayOrder": 1,  "TabShowCondition": "isFeePaymentEnabled=\"Yes\"" },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "paymentHistory", "TabLabel": "Payment history", "TabDisplayOrder": 14, "CaseFieldID": "paymentHistoryViewer", "TabFieldDisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "TabLabel": "Validation", "TabDisplayOrder": 15, "CaseFieldID": "validationTabTitle", "TabFieldDisplayOrder": 1, "TabShowCondition": "currentCaseStateVisibleToCaseOfficer=\"appealSubmitted\" AND isHomeOfficeIntegrationEnabled=\"Yes\" AND appealOutOfCountry=\"No\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "homeOfficeSearchStatus", "TabFieldDisplayOrder": 2, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "homeOfficeSearchNoMatch", "TabFieldDisplayOrder": 2, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "contactPreferenceDescription", "TabFieldDisplayOrder": 2, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
@@ -1294,5 +1298,5 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "validation_caseOfficer_noMatch", "TabFieldDisplayOrder": 4, "FieldShowCondition": "homeOfficeSearchNoMatch=\"NO_MATCH\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "validationAppealData", "TabFieldDisplayOrder": 5, "FieldShowCondition": "homeOfficeSearchStatus=\"SUCCESS\""},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseHistory", "TabLabel": "Case history", "TabDisplayOrder": 12, "CaseFieldID": "caseHistoryViewer", "TabFieldDisplayOrder": 1}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseHistory", "TabLabel": "Case history", "TabDisplayOrder": 16, "CaseFieldID": "caseHistoryViewer", "TabFieldDisplayOrder": 1}
 ]
