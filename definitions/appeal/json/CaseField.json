@@ -40,10 +40,19 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantNationalityLabel", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantStateless", "Label": "Nationality", "FieldType": "FixedRadioList", "FieldTypeParameter": "appellantStateless", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantNationalities", "Label": "Nationalities", "FieldType": "Collection", "FieldTypeParameter": "nationality", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantAddressTitle", "Label": " \r\nWe'll use this to work out which hearing centre is best for them.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantHasFixedAddress", "Label": "Does the appellant have a fixed address?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantAddressTitle", "Label": "  ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantHasFixedAddress", "Label": "Does the appellant have a postal address?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantHasFixedAddressLabel", "Label": "**We will use the address of your legal practice.**", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantAddress", "Label": "Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantHasFixedAddressAdminJ", "Label": "Does the appellant have a postal address?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addressLine1AdminJ", "Label": "Address line 1", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addressLine2AdminJ", "Label": "Address line 2", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addressLine3AdminJ", "Label": "Address line 3", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addressLine4AdminJ", "Label": "Address line 4", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "countryGovUkOocAdminJ", "Label": "Country", "FieldType": "FixedList", "FieldTypeParameter": "isoCountriesGovUk", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "searchPostcode", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantEmailAddress", "Label": "Email", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantPhoneNumber", "Label": "Phone", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
@@ -99,7 +108,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasNewMatters", "Label": "Are there any new reasons your client wishes to remain in the UK or any new grounds on which they should be permitted to stay?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "newMatters", "Label": "Explain these new matters and their relevance to the appeal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasOtherAppealsTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasOtherAppeals", "Label": "Previous appeals", "FieldType": "FixedList", "FieldTypeParameter": "otherAppeals", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasOtherAppeals", "Label": "Other appeals", "FieldType": "FixedRadioList", "FieldTypeParameter": "otherAppeals", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "otherAppealsTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "otherAppeals", "Label": "Appeal number", "FieldType": "Collection", "FieldTypeParameter": "appealNumber", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDetailsHintAndTitle", "Label": " \r\nEnter your details.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -108,6 +118,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepName", "Label": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepFamilyName", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepMobilePhoneNumber", "Label": "Contact number", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCompanyName", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCompanyAddress", "Label": "Company Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -121,13 +132,31 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCreateServiceRequestHeader", "Label": "### Next step - payment", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCreateServiceRequestDescription", "Label": "Select 'Submit' to create the service request", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCreateServiceRequestFeeHeader", "Label": "### Fee to pay", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adminDeclaration1", "Label": " ", "FieldType": "MultiSelectList", "FieldTypeParameter": "adminDeclaration", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepGivenName", "Label": "Given name", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepFamilyNamePaperJ", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepEmail", "Label": "Email", "FieldType": "Text", "RegularExpression":  "^([a-zA-Z0-9\\_\\-\\.]+)@([a-zA-Z0-9\\_\\-\\.]+)\\.([a-zA-Z]{2,5})$", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepRefNumberPaperJ", "Label": "Legal representative reference", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCompanyPaperJ", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepHasAddress", "Label": "Does the legal representative have a UK address?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepAddressUK", "Label": "Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAddressLine1", "Label": "Address line 1", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAddressLine2", "Label": "Address line 2", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAddressLine3", "Label": "Address line 3", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAddressLine4", "Label": "Address line 4", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocLrCountryGovUkAdminJ", "Label": "Country", "FieldType": "FixedList", "FieldTypeParameter": "isoCountriesGovUk", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealReferenceNumber", "Label": "Appeal reference", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ccdReferenceNumberForDisplay", "Label": "Online case reference number", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantNameForDisplay", "Label": "Appellant name", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsForDisplay", "Label": "Grounds of appeal", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGrounds", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationOutOfTimeText", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationOutOfTimeExplanation", "Label": "Reasons for late appeal submission", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationOutOfTimeDocument", "Label": "Late submission supporting document", "FieldType": "Document", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "applicationOutOfTimeDocument", "Label": "Supporting evidence", "FieldType": "Document", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantSubmissionOutOfTime", "Label": "Internal flag managed by API to enable/disable out of time submission page", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantOutOfTimeText", "Label": "This application is late. You must provide full reasons why it is being submitted more than 14 days after the Decision and Reasons document was uploaded. \r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -347,6 +376,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeEmailAddress", "Label": "Email", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "automaticDirectionRequestingHearingRequirements", "Label": "Internal timed event ID for request hearing requirements automatic direction", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "automaticEndAppealTimedEventId", "Label": "Internal timed event ID for automatic ending appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "automaticSendPaymentReminderTimedEventId", "Label": "Internal timed event ID for internal send payment reminder", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "notificationsSent", "Label": "Internal collection managed by API to track notifications sent using GovNotify for this case", "FieldType": "Collection", "FieldTypeParameter": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeDirectionDueDateActionAvailable", "Label": "Internal flag managed by API to enable/disable changeDirectionDueDateAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sendDirectionActionAvailable", "Label": "Internal flag managed by API to enable/disable sendDirectionAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -402,6 +433,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addCaseNoteLink", "Label": "[Add case note](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/addCaseNote)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseNotes", "Label": "Case notes", "FieldType": "Collection", "FieldTypeParameter": "caseNote", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "editCaseListingTitle", "Label": "You're editing the details of a case that's already been listed. Amend the hearing details below. ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -409,6 +441,15 @@
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal started stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealStarted.svg)\r\n\r\n## Do this next\r\nYou still need to submit your appeal.\r\n\r\n[Submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitAppeal)\r\n\r\nYou can also review and edit your appeal.\r\n\r\n[Edit appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_appealStarted_ada",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal started stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealStarted_ada.svg)\r\n\r\n## Do this next\r\nYou still need to submit the appeal.\r\n\r\n[Submit the appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitAppeal)\r\n\r\nYou can also review and edit the appeal.\r\n\r\n[Edit appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC",
     "Searchable": "N"
   },
   {
@@ -509,6 +550,15 @@
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal started stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealStarted.svg)\r\n\r\n## Do this next\r\nYou still need to [submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitAppeal)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_admin_appealStarted",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal started stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealStarted.svg)\r\n\r\n## Do this next\r\nYou still need to submit your appeal.\r\n\r\n[Submit your appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitAppeal)\r\n\r\nYou can also review and edit your appeal.\r\n\r\n[Edit appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC",
     "Searchable": "N"
   },
   {
@@ -866,7 +916,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_paymentPending_remission",
-    "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## Do this next\r\nAn appeal has been submitted with a remission application. You need to review the remission details in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Appeal).\r\n\r\nIf you need more information to make a decision, you can email the appellant.\r\n\r\nYou then need to [record your remission decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordRemissionDecision).",
+    "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## Do this next\r\nAn appeal has been submitted with a remission application. You need to review the remission details in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Appeal).\r\n\r\nIf you need more information to make a decision, you can contact the appellant.\r\n\r\nYou then need to [record your remission decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordRemissionDecision).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5088,6 +5138,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingAttendanceTitle", "Label": "![]()\r\n## Hearing attendance", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appointmentAttendanceTitle", "Label": "![]()\r\n## Appointment attendance", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeTitle", "Label": "![]()\r\n## Legal representative", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeTitleAdminJ", "Label": "![]()\r\n## Legal representative", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepresentativeDetailsTitle", "Label": "![]()\r\n## Legal representative's details\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepDetailsUpdateLink", "Label": "[Update representative's details](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateLegalRepDetails)\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealDetailsTitle", "Label": "![]()\r\n## Appeal details", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -5490,6 +5542,11 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_legal_rep", "Label": "![The appellant in this case is legally represented](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/journey_type_legally_represented.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_legal_rep_s94b", "Label": "![The appellant in this s94b case is legally represented](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/journey_type_legally_represented_s94b.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_s94b", "Label": "![The case marked as s94b](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/journey_type_s94b.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_migrated_lr", "Label": "![The case is migrated and Legally represented - manual](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/migrate_aria_LR-manual_label.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_migrated_aip_manual", "Label": "![The case is migrated and appellant in person - manual](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/migrate_aria_appellantinperson_manual_label.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_migrated_fee_exempt", "Label": "![The case is migrated and fee exempt](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/migrate_aria_fee_exempt_label.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_migrated_lr_manual_fee_exempt", "Label": "![The case is migrated Legally represented and fee exempt - manual](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/migrate_aria_fee_exempt_LR-manual_label.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_migrated_aip_manual_fee_exempt", "Label": "![The case is migrated appellant in person and fee exempt - manual](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/migrate_aria_fee_exempt_AIP-manual_label.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -5946,10 +6003,15 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customHearingDocuments", "Label": "Hearing documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customLegalRepDocuments", "Label": "Legal representative documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customRespondentDocuments", "Label": "Respondent documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionTitle", "Label": " \r\nYou must upload the Notice of Decision. If it is not possible, you must provide a valid reason.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionTitle", "Label": "  ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionTips", "Label": " \r\nYou must upload the Notice of Decision. If it is not possible, you must provide a valid reason.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionDocs", "Label": "Notice of Decision", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionDocument", "Label": "Notice of Decision", "FieldType": "Document", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheNoticeOfDecisionExplanation", "Label": "Reason you cannot provide the Notice of Decision", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheAppealFormDocs", "Label": "Appeal Form", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "deportationOrderTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "deportationOrderOptions", "Label": "Has a deportation order been made against the appellant?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -6089,7 +6151,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customLatestRemittalDocs", "Label": "Remittal documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isRemissionsEnabled", "Label": "Internal flag managed by case api for remissions feature", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rpDcAppealHearingOption", "Label": "How do you want the appeal to be decided?", "FieldType": "FixedRadioList", "FieldTypeParameter": "rpDcAppealHearingOptions", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "rpDcAppealHearingOption", "Label": "How does the appellant want the appeal to be decided?", "FieldType": "FixedRadioList", "FieldTypeParameter": "rpDcAppealHearingOptions", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeRemissionsHeader", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionType", "Label": "Choose one of the following statements", "FieldType": "FixedRadioList", "FieldTypeParameter": "remissionTypes", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
@@ -6136,18 +6199,24 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section17Header", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section17Advice", "Label": "You need to provide a copy of a letter from the local authority confirming your client's benefit or accommodation support.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section17AdminAdvice", "Label": "Provide a copy of a letter from the local authority confirming the appellant's benefits or accommodation support.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section17Document", "Label": "Local authority letter", "FieldType": "Document", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section20Header", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section20Advice", "Label": "You need to provide a copy of a letter from the local authority confirming your client's benefit or accommodation support.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section20AdminAdvice", "Label": "Provide a copy of a letter from the local authority confirming the appellant's benefits or accommodation support.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "section20Document", "Label": "Local authority letter", "FieldType": "Document", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeWaiverHeader", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeWaiverAdvice", "Label": "You need to provide a copy of the Home Office fee waiver letter to validate this fee remission.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeWaiverAdminAdvice", "Label": "Provide a copy of the Home Office fee waiver letter to validate this fee remission.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeWaiverDocument", "Label": "Home Office fee waiver letter", "FieldType": "Document", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesHeader", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesReferenceNumber", "Label": "Help with Fees reference number", "HintText":  "For example, HWF-XXX-XXX", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesAdminAdvice", "Label": "If the appellant has included an EX160 Apply for help with fees form, give the form to the fees team to\nprocess and ask for the help with fees reference number.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesReferenceNumber", "Label": "Help with Fees reference number", "HintText":  "For example, HWF-A1B-23", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "exceptionalCircumstancesHeader", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "exceptionalCircumstances", "Label": "Explain the exceptional circumstances which justify remission of the fee", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -6209,14 +6278,18 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantSponsorTitle", "Label": " ", "FieldType": "Label",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasSponsor", "Label": "Does your client have a sponsor?", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "entryClearanceDecisionTitle", "Label": " ", "FieldType": "Label",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "gwfReferenceNumber", "Label": "Global Web form", "HintText": "Your GWF reference number was given to you when you first applied. You can find it on emails and letters from the Home Office about your application. For example GWF12345667","FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateEntryClearanceDecision", "Label": "Date of entry clearance decision", "HintText":"For example, 31 3 1980","FieldType": "Date",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "gwfReferenceNumberTitle", "Label": "You can find the Global Web Form reference and the date the letter was sent on the appellant's Home Office decision letter.","FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "gwfReferenceNumber", "Label": "Global Web form", "HintText": "Enter the 9-digit or 16-digit number on the decision letter","FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateEntryClearanceDecision", "Label": "Date of entry clearance decision", "HintText":"For example, 03 04 2023","FieldType": "Date",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "departureDateTitle", "Label": " ", "FieldType": "Label",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "departureDateTitleAdminJ", "Label": " ", "FieldType": "Label",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateClientLeaveUk", "Label": "Departure date", "FieldType": "Date",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "dateClientLeaveUkAdminJ", "Label": "Departure date", "FieldType": "Date",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outOfCountryDecisionTypeTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "outOfCountryDecisionType", "Label": "Out of country decision", "FieldType": "FixedRadioList", "FieldTypeParameter": "outOfCountryDecisionType", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterReceivedDateTitle", "Label": "### What date was the Home Office decision letter received?", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterReceivedDate", "Label": "Home Office decision letter received", "HintText": "For example, 03 04 2019", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionLetterReceivedDate", "Label": "What date was the Home Office decision letter received?", "HintText": "For example, 03 04 2019", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorNameTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -6231,7 +6304,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorMobileNumber", "Label": "Sponsor phone number", "FieldType": "Text", "RegularExpression": "^((\\+44(\\s\\(0\\)\\s|\\s0\\s|\\s)?)|0)7\\d{3}(\\s)?\\d{6}$", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "aipSponsorEmailForDisplay", "Label": "Sponsor email", "FieldType": "Email", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "aipSponsorMobileNumberForDisplay", "Label": "Sponsor phone number", "FieldType": "Text", "RegularExpression": "^((\\+44(\\s\\(0\\)\\s|\\s0\\s|\\s)?)|0)7\\d{3}(\\s)?\\d{6}$", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAuthorisation", "Label": "Does your client give authorisation for the sponsor to access information relating to the appeal?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAuthorisation", "Label": "Does the appellant give authorisation for the sponsor to access information relating to the appeal?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAuthorisationLabel", "Label": "**The sponsor will not be sent any notices or decisions relating to the appeal other than a Notice of Hearing, if applicable.**", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorNameForDisplay", "Label": "Sponsor name", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorAddressForDisplay", "Label": "Sponsor address", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -6758,10 +6832,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAdmin", "Label": "Internal flag managed by API to allow admin users to create a case on behalf of an unrepresented appellant", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAgeAssessmentEnabled", "Label": "Age Assessment Appeal feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAgeAssessmentVisible", "Label": "Age Assessment Appeal condition to determine if AAA page is visible", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheAppealFormDocs", "Label": "Appeal Form", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicationDeadline", "Label": "Internal flag managed by API to set FTPA deadline dynamically based on appealDate", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealSubmissionInternalDate", "Label": "Appeal created by the Tribunal", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "tribunalReceivedDate", "Label": "Appeal received by the Tribunal", "HintText": "For example, 03 04 2019", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "tribunalReceivedDate", "Label": "Date appeal received", "HintText": "For example, 03 04 2023", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "acceleratedDetainedAppealListed", "Label": "Internal flag managed by API to enable/disable Hearing tab in accelerated detained appeals", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adaHearingRequirementsSubmittable", "Label": "Internal flag managed by API to enable/disable Submit Hearing Requirements event for accelerated detained appeals", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adaHearingRequirementsToReview", "Label": "Internal flag managed by API to enable/disable Review Hearing Requirements event for accelerated detained appeals", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -6783,6 +6857,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriendGivenName", "Label": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriendFamilyName", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "litigationFriendCompany", "Label": "Organisation/Company", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -6807,18 +6882,19 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adaHearingRequirementsSubmitted", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "ID": "beforeYouStartLabel", "Label": "You will be asked to provide the following information about this appeal.\n\n* Appeal details, including the Notice of Decision\n* Appellant's personal details\n* Detention details, if applicable\n* Reasons the appeal is late, if applicable, and any supporting evidence\n\nCheck if the appellant has appealed any other UK immigration decisions. If they have, you will need the appeal number to submit the appeal.\n\nOnce you start, you will not be able to save your progress until you have answered all the questions.\n\nPlease ensure you have all the information you need to hand and allow enough time to submit the appeal in one sitting.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "ID": "dateWillBeUsedToDetermineLabel", "Label": "This date will be used to determine if the appeal is in time.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantsRepresentation", "Label": "Has the appeal form been submitted by an appellant in person?", "FieldType": "FixedRadioList", "FieldTypeParameter": "appellantsRepresentation", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealWasNotSubmittedReason", "Label": "Enter the reasons the appeal was not submitted on MyHMCTS", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealNotSubmittedReasonDocuments", "Label": "Upload supporting documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeReferenceTips", "Label": "You can find the Home Office reference and the date the letter was sent on the appellant's Home Office decision letter.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTypeTitleAdminJ", "Label": " \r\nYou can find the appeal type on the appellant's Home Office decision letter.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantBasicDetailsTitleAdminJ", "Label": " \r\nEnter the appellant's basic details.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantAddressLabel", "Label": " \r\nWe'll use this to work out which hearing centre is best for them.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTypeTitleUnrep", "Label": " \r\nIf the appellant has ticked more than one appeal type on the form, review the Notice of Decision to determine the primary appeal type.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "internalContactDetailsTitle", "Label": "Enter the appellant's contact details.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "progress_legalRepresentative_appealStarted_ada",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal started stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_appealStarted_ada.svg)\r\n\r\n## Do this next\r\nYou still need to submit the appeal.\r\n\r\n[Submit the appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitAppeal)\r\n\r\nYou can also review and edit the appeal.\r\n\r\n[Edit appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/editAppeal)",
-    "FieldType": "Label",
-    "SecurityClassification":"PUBLIC",
-    "Searchable": "N"
-  },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -6886,7 +6962,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_paymentPending_noRemission_pa_ea_hu_eu_ag",
-    "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## Do this next\r\nThe appellant has received instructions to make a telephony payment for the appeal. When the fee has been paid, you should mark the appeal as paid.\r\n\r\nThe appeal will automatically end on day 14 if the fee is not paid.",
+    "Label": "## Current progress of the case\r\n\r\n![Appeal submitted](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## Do this next\r\nA payment request has been sent to the appellant.\nIf you receive confirmation that the fee has been paid, you need to [mark the appeal as paid.](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/markAppealPaid)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -7525,6 +7601,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isEvidenceFromOutsideUkDocText", "Label": "Provide the name and location of anyone who wishes to give oral evidence from outside the UK",  "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isEvidenceFromOutsideUkInCountryText", "Label": "Provide the name and location of anyone who wishes to give oral evidence from outside the UK",  "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_aip_manual", "Label": "![The appellant in this case is representing themselves](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/journey_type_appellant_in_person_manual.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_aip_citizen", "Label": "![The appellant in this case is representing themselves](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/journey_type_appellant_in_person.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_aip_citizen_s94b", "Label": "![The appellant in this s94b case is representing themselves](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/journey_type_appellant_in_person_s94b.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -7532,9 +7609,12 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_ada", "Label": "![This case is an Accelerated detained appeal](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_acceleratedDetainedAppeal.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_ada_lr", "Label": "![This case is an Accelerated detained appeal](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/journey_type_acceleratedDetainedAppeal.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_ejp", "Label": "![This case is an EJP case](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ejp_onItsOwn.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_aip_legally_represented_manual", "Label": "![The appellant in this case is legally represented](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legally_represented_overview_label.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customTribunalDocuments", "Label": "Tribunal documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheAppealFormTitle", "Label": "Upload a copy of the appeal form.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removalOrderTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -7971,6 +8051,37 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "revokeAccessForUserId", "Label": "Enter IDAM User ID to revoke case access", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "revokeAccessForUserOrgId", "Label": "Enter Legal representative's Organisation ID ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAppealAdminJ", "Label": "What are the circumstances of the appellant's out of country appeal?", "FieldType": "FixedRadioList", "FieldTypeParameter": "oocAppealAdminJ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionRule31Changed", "Label": "Internal flag managed by API to check if decision is changed via Tribunal decision under rule 31", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "letterNotificationDocuments", "Label": "Letter notification documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "letterBundleDocuments", "Label": "Letter bundle documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAriaMigrated", "Label": "Internal flag managed by API to check if case is ARIA migrated", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAriaMigratedFilter", "Label": "Internal flag managed by API to allow case filtering", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "Y"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAriaMigratedFilter", "Label": "Internal flag managed by API to allow case filtering", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ariaDesiredState", "Label": "Select a desired state:", "FieldType": "FixedList", "FieldTypeParameter": "listOfStates", "HintText": "Choose a different desired state from the dropdown ", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAriaMigratedFeeExemption", "Label": "Internal flag managed by API to check if case is ARIA migrated cases is fee exemption", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ariaDesiredStateSelectedValue", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "desiredStateTips", "Label": "This case will progress to the state listed below.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "desiredStateTitle", "Label": "### Desired state:\r\n\r\n${ariaDesiredStateSelectedValue}", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "desiredStateCorrect", "Label": "Is the desired state correct?", "FieldType": "FixedRadioList", "FieldTypeParameter": "desiredStateCorrect", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationWarningTitle", "Label": "\r\n![Attention: Documents have not been migrated with the case](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/migrate_aria_case_document_warning.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationVhhText", "Label": "You must upload all documents from Virtual Hold (VHH) to this case.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationHmcText", "Label": "You must upload all documents from Virtual Hold (VHH) to this case.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationMoveItText", "Label": "You must upload documents from Virtual Hold (VHH) and MoveIT to this case.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationVhhToCcdText", "Label": "You must upload all tribunal decision documents from Virtual Hold (VHH) to this case.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationMainTextVisible", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationHmcSecondPartVisible", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationHMCSecondPartTitle", "Label": "If this case was listed for a hearing, you must transfer the listing over to the hearing\r\nmanagement component (HMC) as part of the migration process. ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationDocumentUploadGeneralText", "Label": "\r\n\r\nIf you need to add documents in the future, you can use 'Edit documents' through the 'Next step' dropdown list in case details.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationDocumentsUploadTitle", "Label": "### Documents upload", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationCaseNoteTitle", "Label": "### Do you want to add a case note?", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "migrationCaseNote", "Label": " ", "FieldType": "FixedRadioList", "FieldTypeParameter": "migrationCaseNote", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addCaseNotesMigration", "Label": "Upload a case note", "FieldType": "Collection", "FieldTypeParameter": "caseNoteMigration", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ariaMigrationTaskDueDays", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorEmailAdminJ", "Label": "Sponsor email", "FieldType": "Email", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorMobileNumberAdminJ", "Label": "Sponsor phone number", "FieldType": "Text", "RegularExpression": "^((\\+44(\\s\\(0\\)\\s|\\s0\\s|\\s)?)|0)7\\d{3}(\\s)?\\d{6}$", "SecurityClassification": "PUBLIC", "Searchable": "Y"}
+
 ]
