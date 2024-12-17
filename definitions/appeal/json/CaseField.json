@@ -8082,6 +8082,44 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ariaMigrationTaskDueDays", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorEmailAdminJ", "Label": "Sponsor email", "FieldType": "Email", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorMobileNumberAdminJ", "Label": "Sponsor phone number", "FieldType": "Text", "RegularExpression": "^((\\+44(\\s\\(0\\)\\s|\\s0\\s|\\s)?)|0)7\\d{3}(\\s)?\\d{6}$", "SecurityClassification": "PUBLIC", "Searchable": "Y"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorMobileNumberAdminJ", "Label": "Sponsor phone number", "FieldType": "Text", "RegularExpression": "^((\\+44(\\s\\(0\\)\\s|\\s0\\s|\\s)?)|0)7\\d{3}(\\s)?\\d{6}$", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isHearingBundleUpdated", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_updatedBundle_in_progress_preHearing",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 10 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_preHearing.svg)\r\n\r\n## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_updatedBundle_in_progress_decision",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_updatedBundle_in_progress_adjourned",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: The hearing has been adjourned](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_hearing_adjourned.png)\r\n\r\n## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_updatedBundle_in_progress_appealTakenOffline",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been removed from the online service](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealRemoved.png)\r\n\r\n## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC",
+    "Searchable": "N"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "progress_adminOfficer_adjourned", "Label": "## Current progress of the case\r\n\r\n![Attention: The hearing has been adjourned](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_hearing_adjourned.png)\r\n\r\n## Do this next\r\nThe hearing has been adjourned and there is no scheduled date for the hearing. You can view the reasons for this in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).\r\n\r\nWhen the hearing is ready to be relisted, you must first [restore the appeal to its previous state.](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/restoreStateFromAdjourn)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"}
 ]
