@@ -9,6 +9,15 @@
     "CaseAccessCategories": ""
   },
   {
+    "RoleName" : "idam:caseworker-ia-internal",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "caseworker-ia-internal,caseworker-ia-caseofficer",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
     "RoleName" : "idam:caseworker-wa-task-configuration",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
