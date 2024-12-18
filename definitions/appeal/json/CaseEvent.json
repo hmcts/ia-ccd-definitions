@@ -17,7 +17,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "Publish": "Y"
+    "Publish": "Y",
+    "TTLIncrement": 730
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2770,6 +2771,22 @@
     "Name": "Save notifications to data",
     "Description": "Save notifications to data",
     "DisplayOrder": 111,
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "10,10,10,10",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "ManageTTL",
+    "Name": "Manage Case TTL",
+    "Description": "suspend or resume TTL for case",
+    "DisplayOrder": 112,
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "10,10,10,10",
     "PreConditionState(s)": "*",
