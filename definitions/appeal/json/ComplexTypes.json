@@ -350,9 +350,5 @@
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationMethod", "FieldType": "Text", "ElementLabel": "Method", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationStatus", "FieldType": "Text", "ElementLabel": "Status", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationReference", "FieldType": "Text", "ElementLabel": "Reference", "FieldShowCondition": "notificationId=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationErrorMessage", "FieldType": "Text", "ElementLabel": "Error", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-
-  {"LiveFrom": "01/01/2018", "ID": "time_to_live", "ListElementCode": "system_set_ttl", "FieldType": "Date", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-  {"LiveFrom": "01/01/2018", "ID": "time_to_live", "ListElementCode": "manual_ttl_override", "FieldType": "Date", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-  {"LiveFrom": "01/01/2018", "ID": "time_to_live", "ListElementCode": "do_not_delete", "FieldType": "YesOrNo", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "Y"}
+  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationErrorMessage", "FieldType": "Text", "ElementLabel": "Error", "SecurityClassification": "PUBLIC", "Searchable": "N"}
 ]
