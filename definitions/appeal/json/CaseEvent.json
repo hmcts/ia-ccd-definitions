@@ -17,7 +17,8 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
-    "Publish": "Y"
+    "Publish": "Y",
+    "TTLIncrement": 90
   },
   {
     "LiveFrom": "01/01/2018",
@@ -77,7 +78,8 @@
     "ShowSummary": "N",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
-    "Publish": "Y"
+    "Publish": "Y",
+    "TTLIncrement": 36524
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2818,5 +2820,17 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "ManageTTL",
+    "Name": "Manage Case TTL",
+    "Description": "suspend or resume TTL for case",
+    "DisplayOrder": 112,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "Y"
   }
 ]
