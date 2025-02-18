@@ -41,6 +41,7 @@
     "generate-excel": "bin/generate-excel.sh",
     "generate-dev": "bin/generate-dev.sh && node bin/case-event-to-fields-duplicate-checker.js && node bin/check-missing-system-user-fields.js && node bin/auth-casefield-duplicate-checker.js",
     "generate-preview": "bin/generate-preview.sh",
+    "generate-hearings-preview": "bin/generate-hearings-preview.sh",
     "generate-demo": "bin/generate-demo.sh",
     "generate-ithc": "bin/generate-ithc.sh",
     "generate-perftest": "bin/generate-perftest.sh",
