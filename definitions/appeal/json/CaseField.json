@@ -6851,7 +6851,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adaHearingRequirementsUpdatable", "Label": "Internal flag managed by API to enable/disable Update Hearing Requirements event for accelerated detained appeals", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adaHearingAdjustmentsUpdatable", "Label": "Internal flag managed by API to enable/disable Update Hearing Adjustments event for accelerated detained appeals", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adaEditListingAvailable", "Label": "Internal flag managed by API to enable/disable Edit Case Listing event for accelerated detained appeals", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInDetention", "Label": "Is the appellant currently in detention?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAcceleratedDetainedAppeal", "Label": "Is this an accelerated detained appeal?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "custodialSentence", "Label": "Custodial sentence", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "bailApplicationNumber", "Label": "Bail application number", "HintText": "For Example: AB/01234 or 1234-1234-1234-1234","FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -8131,5 +8131,13 @@
     "Searchable": "N"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "progress_adminOfficer_adjourned", "Label": "## Current progress of the case\r\n\r\n![Attention: The hearing has been adjourned](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_hearing_adjourned.png)\r\n\r\n## Do this next\r\nThe hearing has been adjourned and there is no scheduled date for the hearing. You can view the reasons for this in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).\r\n\r\nWhen the hearing is ready to be relisted, you must first [restore the appeal to its previous state.](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/restoreStateFromAdjourn)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "TTL", "Label": " ", "FieldType": "TTL", "SecurityClassification": "PUBLIC", "Searchable": "N"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "TTL", "Label": " ", "FieldType": "TTL", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInDetention", "Label": "Is the appellant in detention?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionFacility", "Label": "Detention facility", "FieldType": "FixedRadioList", "FieldTypeParameter": "detentionFacilityType", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "prisonNOMSNumber", "Label": "NOMS number", "FieldType": "prisonNOMSComplexType", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "otherDetentionFacilityName", "Label": "Detention facility name", "FieldType": "otherDetentionFacilityComplexType", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ircName", "Label": "Detention facility name", "FieldType": "FixedList", "FieldTypeParameter": "ircNameList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "prisonName", "Label": "Detention facility name", "FieldType": "FixedList", "FieldTypeParameter": "prisonNameList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasPendingBailApplications", "Label": "Pending bail application", "FieldType": "FixedRadioList", "FieldTypeParameter": "pendingBailApplication", "SecurityClassification": "PUBLIC"}
 ]
