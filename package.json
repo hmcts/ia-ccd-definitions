@@ -38,7 +38,7 @@
     "setup": "bin/setup.sh",
     "generate-json": "bin/generate-json.sh",
     "generate-excel": "bin/generate-excel.sh",
-    "generate-ccd-definition": "bin/generate-ccd-definition.sh",
+    "generate": "bin/generate-ccd-definition.sh",
     "generate-dev": "bin/generate-ccd-definition.sh -e dev && node bin/case-event-to-fields-duplicate-checker.js && node bin/check-missing-system-user-fields.js && node bin/auth-casefield-duplicate-checker.js",
     "generate-preview": "bin/generate-ccd-definition.sh -e preview -p $PR_NUMBER",
     "generate-mirrord": "bin/generate-ccd-definition.sh -e mirrord",

@@ -1,4 +1,4 @@
-# ia-ccd-definitions
+# IA CCD Definitions
 
 ### Purpose
 Repo to hold json ccd definition files for IA Team
@@ -149,25 +149,25 @@ The project now includes a unified script for generating CCD definitions for dif
 
 ```bash
 # Generate for dev environment (default)
-yarn generate-ccd-definition
+yarn generate
 
 # Generate for a specific environment
-yarn generate-ccd-definition -e aat
+yarn generate -e aat
 
 # Generate for a preview environment with a specific PR number (required)
-yarn generate-ccd-definition -e preview -p 1234
+yarn generate -e preview -p 1234
 
 # Generate for a mirrord environment with current username
-yarn generate-ccd-definition -e mirrord
+yarn generate -e mirrord
 
 # Generate for a mirrord environment with a specific username
-yarn generate-ccd-definition -e mirrord -u john.doe
+yarn generate -e mirrord -u sabah
 
 # Generate for a specific service
-yarn generate-ccd-definition -e preview -p 1234 -s my-service-api
+yarn generate -e preview -p 1234 -s my-service-api
 
 # Test the configuration without generating files
-yarn generate-ccd-definition -e preview -p 1234 -d
+yarn generate -e preview -p 1234 -d
 ```
 
 #### Command Line Options
