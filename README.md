@@ -245,13 +245,6 @@ The legacy scripts are still available but will be deprecated in future releases
 
 ## Development
 
-### Prerequisites
-
-- Node.js (>=10.16.3)
-- Yarn (>=1.16.x)
-- `CCD_DOCKER_PATH` environment variable (only for `upload` task)
-- `IA_CCD_SECRET_KEY` environment variable (only for generating CCD Definitions for PROD)
-
 ### Setup
 
 ```bash
