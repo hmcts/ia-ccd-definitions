@@ -154,7 +154,7 @@ yarn generate-ccd-definition
 # Generate for a specific environment
 yarn generate-ccd-definition -e aat
 
-# Generate for a preview environment with a specific PR number
+# Generate for a preview environment with a specific PR number (required)
 yarn generate-ccd-definition -e preview -p 1234
 
 # Generate for a mirrord environment with current username
@@ -175,7 +175,7 @@ yarn generate-ccd-definition -e preview -p 1234 -d
 | Option | Description | Default |
 |--------|-------------|---------|
 | `-e, --env` | Environment (dev, preview, demo, ithc, perftest, aat, prod, mirrord) | `dev` |
-| `-p, --pr` | PR number for preview environment | - |
+| `-p, --pr` | PR number for preview environment (required when `-e preview` is specified) | - |
 | `-u, --user` | Username for mirrord environment | Current user (from `whoami`) |
 | `-s, --service` | Service name | `ia-case-api` |
 | `-d, --dry-run` | Show what would be done without actually generating files | `false` |
@@ -185,7 +185,7 @@ yarn generate-ccd-definition -e preview -p 1234 -d
 
 The script dynamically constructs URLs based on the environment and parameters:
 
-- **Preview with PR number**: `http://${SERVICE}-pr-${PR_NUMBER}-java`
+- **Preview**: `http://${SERVICE}-pr-${PR_NUMBER}-java` (PR number is required)
 - **Mirrord**: `http://${SERVICE}-${USERNAME}-java` (uses current username if not specified)
 - **Other environments**: Uses the URL from package.json configuration
 
@@ -197,25 +197,16 @@ The following npm scripts are available for convenience:
 # Generate for dev environment
 yarn generate-dev
 
-# Generate for preview environment
-yarn generate-preview
-
 # Generate for preview environment with a specific PR number
-# Method 1: Set PR_NUMBER environment variable
-PR_NUMBER=1234 yarn generate-preview-pr
-
-# Method 2: Use the generate-ccd-definition script directly
-yarn generate-ccd-definition -e preview -p 1234
+# Method: Set PR_NUMBER environment variable
+PR_NUMBER=1234 yarn generate-preview
 
 # Generate for mirrord environment with current username
 yarn generate-mirrord
 
 # Generate for mirrord environment with a specific username
-# Method 1: Set USERNAME environment variable
-USERNAME=john.doe yarn generate-mirrord-user
-
-# Method 2: Use the generate-ccd-definition script directly
-yarn generate-ccd-definition -e mirrord -u john.doe
+# Method: Set USERNAME environment variable
+USERNAME=sabah yarn generate-mirrord-user
 
 # Generate for demo environment
 yarn generate-demo

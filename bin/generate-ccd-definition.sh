@@ -63,6 +63,13 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
+# Check for required parameters
+if [[ "${ENV}" == "preview" && -z "${PR_NUMBER}" ]]; then
+  echo "Error: PR number (-p, --pr) is required for preview environment"
+  echo "Usage example: $0 -e preview -p 1234"
+  exit 1
+fi
+
 # Source environment variables
 source default.env
 
@@ -90,10 +97,6 @@ if [[ "${ENV}" == "preview" && -n "${PR_NUMBER}" ]]; then
 elif [[ "${ENV}" == "mirrord" ]]; then
   # Custom URL for mirrord environment with username
   CCD_DEF_IA_URL="http://${SERVICE}-${USERNAME}-java"
-  CCD_DEF_AAC_URL="${npm_package_config_preview_aacUrl}"
-elif [[ "${ENV}" == "preview" ]]; then
-  # Default preview URL without PR number
-  CCD_DEF_IA_URL="http://${SERVICE}-preview-java"
   CCD_DEF_AAC_URL="${npm_package_config_preview_aacUrl}"
 else
   # Default URLs from environment variables
