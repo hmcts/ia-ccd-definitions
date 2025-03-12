@@ -4,10 +4,10 @@
 # Usage: ./bin/generate-ccd-definition.sh [options]
 # Options:
 #   -e, --env ENV           Environment (dev, preview, demo, ithc, perftest, aat, prod, mirrord)
-#   -p, --pr PR_NUMBER      PR number for preview environment
+#   -p, --pr PR_NUMBER      PR number for preview environment (required when `-e preview` is specified)
 #   -u, --user USERNAME     Username for mirrord environment (defaults to current user)
 #   -s, --service SERVICE   Service name (default: ia-case-api)
-#   -d, --dry-run           Show what would be done without actually doing it
+#   -d, --dry-run           Show what would be done without actually generating files
 #   -h, --help              Show this help message
 
 # Default values
@@ -49,10 +49,10 @@ while [[ $# -gt 0 ]]; do
       echo "Usage: ./bin/generate-ccd-definition.sh [options]"
       echo "Options:"
       echo "  -e, --env ENV           Environment (dev, preview, demo, ithc, perftest, aat, prod, mirrord)"
-      echo "  -p, --pr PR_NUMBER      PR number for preview environment"
+      echo "  -p, --pr PR_NUMBER      PR number for preview environment (required when `-e preview` is specified)"
       echo "  -u, --user USERNAME     Username for mirrord environment (defaults to current user)"
       echo "  -s, --service SERVICE   Service name (default: ia-case-api)"
-      echo "  -d, --dry-run           Show what would be done without actually doing it"
+      echo "  -d, --dry-run           Show what would be done without actually generating files"
       echo "  -h, --help              Show this help message"
       exit 0
       ;;
@@ -99,9 +99,11 @@ elif [[ "${ENV}" == "mirrord" ]]; then
   CCD_DEF_IA_URL="http://${SERVICE}-${USERNAME}-java"
   CCD_DEF_AAC_URL="${npm_package_config_preview_aacUrl}"
 else
-  # Default URLs from environment variables
-  CCD_DEF_IA_URL="${npm_package_config_${ENV}_iaCaseUrl}"
-  CCD_DEF_AAC_URL="${npm_package_config_${ENV}_aacUrl}"
+  # Default URLs from environment variables - using proper variable indirection
+  IA_URL_VAR="npm_package_config_${ENV}_iaCaseUrl"
+  AAC_URL_VAR="npm_package_config_${ENV}_aacUrl"
+  CCD_DEF_IA_URL="${!IA_URL_VAR}"
+  CCD_DEF_AAC_URL="${!AAC_URL_VAR}"
 fi
 
 # For dev environment, allow override from environment variables
@@ -120,10 +122,10 @@ if [[ "${DRY_RUN}" == "true" ]]; then
   exit 0
 fi
 
-# Run decryption for prod environment
-if [[ "${ENV}" == "prod" ]]; then
-  yarn decrypt
-fi
+# # Run decryption for prod environment
+# if [[ "${ENV}" == "prod" ]]; then
+#   yarn decrypt
+# fi
 
 # Generate the definition
 yarn copy-json && \
