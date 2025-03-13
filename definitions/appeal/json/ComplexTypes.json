@@ -352,9 +352,14 @@
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationReference", "FieldType": "Text", "ElementLabel": "Reference", "FieldShowCondition": "notificationId=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationErrorMessage", "FieldType": "Text", "ElementLabel": "Error", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 31af93a9 (DIAC-973 Rebase from master (#1870))
   {"LiveFrom": "01/01/2018", "ID": "hearingDecision", "ListElementCode": "hearingId", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "hearingDecision", "ListElementCode": "decision", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "ID": "prisonNOMSComplexType", "ListElementCode": "prison", "FieldType": "Text", "ElementLabel": "What is the appellant's NOMS number?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherDetentionFacilityComplexType", "ListElementCode": "other", "FieldType": "Text", "ElementLabel": "Enter the name of the detention facility", "SecurityClassification": "PUBLIC"}
+
 ]
