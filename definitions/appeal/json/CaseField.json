@@ -8130,6 +8130,11 @@
     "Searchable": "N"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "progress_adminOfficer_adjourned", "Label": "## Current progress of the case\r\n\r\n![Attention: The hearing has been adjourned](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_hearing_adjourned.png)\r\n\r\n## Do this next\r\nThe hearing has been adjourned and there is no scheduled date for the hearing. You can view the reasons for this in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).\r\n\r\nWhen the hearing is ready to be relisted, you must first [restore the appeal to its previous state.](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/restoreStateFromAdjourn)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "ID": "currentHearingId", "Label": "Current Hearing ID", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingIdList", "Label": "List of hearing IDs associated with case", "FieldType": "Collection", "FieldTypeParameter": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingDecisionList", "Label": "List of hearing IDs and decisions associated with case", "FieldType": "Collection", "FieldTypeParameter": "hearingDecision", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "TTL", "Label": " ", "FieldType": "TTL", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistTitle4", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
