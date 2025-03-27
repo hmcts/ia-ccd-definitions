@@ -9312,6 +9312,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalDirectionsOptions", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalDirectionsOptions", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalDirectionsOptions", "UserRole": "citizen", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalDirectionsOptions", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalDirectionsDateTime", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalDirectionsDateTime", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
@@ -9328,6 +9330,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalDirectionsDateTime", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalDirectionsDateTime", "UserRole": "caseworker-ia-system-access", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalDirectionsDateTime", "UserRole": "citizen", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "removalDirectionsDateTime", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantStateless", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantStateless", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
@@ -11424,6 +11427,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "isHearingBundleUpdated", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "isHearingBundleUpdated", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "isHearingBundleUpdated", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "isHearingBundleUpdated", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_caseOfficer_updatedBundle_in_progress_preHearing", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_caseOfficer_updatedBundle_in_progress_preHearing", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_caseOfficer_updatedBundle_in_progress_preHearing", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
@@ -15029,21 +15034,21 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "sponsorMobileNumberAdminJ", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hearingIdList", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRU"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hearingIdList", "UserRole": "caseworker-ia-system", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hearingIdList", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseFieldID": "hearingIdList", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseFieldID": "hearingIdList", "UserRole": "caseworker-ia-homeofficebail", "CRUD": "R"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseFieldID": "hearingIdList", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "R"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseFieldID": "hearingIdList", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "currentHearingId", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRU"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "currentHearingId", "UserRole": "caseworker-ia-system", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "currentHearingId", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseFieldID": "currentHearingId", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseFieldID": "currentHearingId", "UserRole": "caseworker-ia-homeofficebail", "CRUD": "R"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseFieldID": "currentHearingId", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "R"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseFieldID": "currentHearingId", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hearingDecisionList", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRU"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hearingDecisionList", "UserRole": "caseworker-ia-system", "CRUD": "CRU"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hearingDecisionList", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseFieldID": "hearingDecisionList", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseFieldID": "hearingDecisionList", "UserRole": "caseworker-ia-homeofficebail", "CRUD": "R"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseFieldID": "hearingDecisionList", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "R"},
@@ -15082,6 +15087,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "detentionFacility", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "detentionFacility", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "detentionFacility", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "detentionFacility", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prisonNOMSNumber", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prisonNOMSNumber", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
@@ -15096,6 +15102,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prisonNOMSNumber", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prisonNOMSNumber", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prisonNOMSNumber", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prisonNOMSNumber", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "otherDetentionFacilityName", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "otherDetentionFacilityName", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
@@ -15110,6 +15117,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "otherDetentionFacilityName", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "otherDetentionFacilityName", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "otherDetentionFacilityName", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "otherDetentionFacilityName", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "ircName", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "ircName", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
@@ -15124,6 +15132,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "ircName", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "ircName", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "ircName", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "ircName", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prisonName", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prisonName", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
@@ -15138,6 +15147,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prisonName", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prisonName", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prisonName", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prisonName", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hasPendingBailApplications", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hasPendingBailApplications", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
@@ -15151,6 +15161,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hasPendingBailApplications", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hasPendingBailApplications", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hasPendingBailApplications", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hasPendingBailApplications", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "bailApplicationNumber", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "bailApplicationNumber", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
@@ -15233,5 +15244,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "custodialSentenceReleaseDate", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "custodialSentenceReleaseDate", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "custodialSentenceReleaseDate", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "custodialSentenceReleaseDate", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "custodialSentenceReleaseDate", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "custodialSentenceReleaseDate", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"}
 ]
