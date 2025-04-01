@@ -1,4 +1,4 @@
-# ia-ccd-definitions
+# IA CCD Definitions
 
 ### Purpose
 Repo to hold json ccd definition files for IA Team
@@ -133,4 +133,107 @@ additional information where necessary.
    `git config --local --unset core.hooksPath`
 
    Still, you shouldn't be doing it so make sure you get in touch with a Technical Lead soon afterwards.
- 
+
+## CCD Definition Generation
+
+### Using the Unified Script
+
+The project now includes a unified script for generating CCD definitions for different environments and PR configurations.
+
+#### Basic Usage
+
+```bash
+# Generate for dev environment (default)
+yarn generate
+
+# Generate for a specific environment
+yarn generate -e aat
+
+# Generate for a preview environment with a specific PR number (required)
+yarn generate -e preview -p 1234
+
+# Generate for a mirrord environment with current username
+yarn generate -e mirrord
+
+# Generate for a mirrord environment with a specific username
+yarn generate -e mirrord -u sabah
+
+# Generate for a specific service
+yarn generate -e preview -p 1234 -s my-service-api
+
+# Test the configuration without generating files
+yarn generate -e preview -p 1234 -d
+```
+
+#### Command Line Options
+
+| Option | Description | Default |
+|--------|-------------|---------|
+| `-e, --env` | Environment (dev, preview, demo, ithc, perftest, aat, prod, mirrord) | `dev` |
+| `-p, --pr` | PR number for preview environment (required when `-e preview` is specified) | - |
+| `-u, --user` | Username for mirrord environment | Current user (from `whoami`) |
+| `-s, --service` | Service name | `ia-case-api` |
+| `-d, --dry-run` | Show what would be done without actually generating files | `false` |
+| `-h, --help` | Show help message | - |
+
+#### URL Construction
+
+The script dynamically constructs URLs based on the environment and parameters:
+
+- **Preview**: `http://${SERVICE}-pr-${PR_NUMBER}-java` (PR number is required)
+- **Mirrord**: `http://${SERVICE}-${USERNAME}-java` (uses current username if not specified)
+- **Other environments**: Uses the URL from package.json configuration
+
+#### NPM Scripts
+
+The following npm scripts are available for convenience:
+
+```bash
+# Generate for dev environment
+yarn generate-dev
+
+# Generate for preview environment with a specific PR number
+# Method: Set PR_NUMBER environment variable
+PR_NUMBER=1234 yarn generate-preview
+
+# Generate for mirrord environment with current username
+yarn generate-mirrord
+
+# Generate for mirrord environment with a specific username
+# Method: Set USERNAME environment variable
+USERNAME=sabah yarn generate-mirrord-user
+
+# Generate for demo environment
+yarn generate-demo
+
+# Generate for ithc environment
+yarn generate-ithc
+
+# Generate for perftest environment
+yarn generate-perftest
+
+# Generate for aat environment
+yarn generate-aat
+
+# Generate for prod environment
+yarn generate-prod
+
+# Generate for all environments
+yarn generate-all
+```
+
+### Configuration
+
+The configuration for different environments is stored in `package.json` under the `config` section. For dynamic environments like `preview` and `mirrord`, only the AAC URL is stored in the configuration, while the service URL is constructed dynamically by the script.
+
+### Legacy Scripts
+
+The legacy scripts are still available but will be deprecated in future releases:
+
+- `bin/generate-dev.sh`
+- `bin/generate-preview.sh`
+- `bin/generate-demo.sh`
+- `bin/generate-ithc.sh`
+- `bin/generate-perftest.sh`
+- `bin/generate-aat.sh`
+- `bin/generate-prod.sh`
