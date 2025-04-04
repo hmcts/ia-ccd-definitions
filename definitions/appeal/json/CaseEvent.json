@@ -2756,7 +2756,9 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
-    "RetriesTimeoutURLAboutToStartEvent": "5,5,5,5",
+    "RetriesTimeoutURLAboutToStartEvent": "3,3,3,3",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "3,3,3,3",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
     "Publish": "Y"
