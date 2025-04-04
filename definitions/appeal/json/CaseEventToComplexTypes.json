@@ -313,6 +313,6 @@
   {"LiveFrom": "01/01/2021", "ID": "TTL", "CaseEventID": "migrateCase", "CaseFieldID": "TTL", "ListElementCode": "OverrideTTL", "FieldDisplayOrder":  "2", "DisplayContext": "OPTIONAL", "Publish": "N"},
   {"LiveFrom": "01/01/2021", "ID": "TTL", "CaseEventID": "migrateCase", "CaseFieldID": "TTL", "ListElementCode": "Suspended", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "N"},
 
-  {"LiveFrom": "01/01/2021", "ID": "nextHearingDetails", "CaseEventID": "updateNextHearingInfo", "CaseFieldID": "nextHearingDetails", "ListElementCode": "hearingID", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "N"},
-  {"LiveFrom": "01/01/2021", "ID": "nextHearingDetails", "CaseEventID": "updateNextHearingInfo", "CaseFieldID": "nextHearingDetails", "ListElementCode": "hearingDateTime", "FieldDisplayOrder":  "2", "DisplayContext": "OPTIONAL", "Publish": "N"}
+  {"LiveFrom": "01/01/2021", "ID": "nextHearingDetails", "CaseEventID": "UpdateNextHearingInfo", "CaseFieldID": "nextHearingDetails", "ListElementCode": "hearingID", "FieldDisplayOrder":  "1", "DisplayContext": "OPTIONAL", "Publish": "N"},
+  {"LiveFrom": "01/01/2021", "ID": "nextHearingDetails", "CaseEventID": "UpdateNextHearingInfo", "CaseFieldID": "nextHearingDetails", "ListElementCode": "hearingDateTime", "FieldDisplayOrder":  "2", "DisplayContext": "OPTIONAL", "Publish": "N"}
 ]
