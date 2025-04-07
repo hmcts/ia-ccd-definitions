@@ -2464,7 +2464,7 @@
     "Name": "Update interpreter details",
     "Description": "Update interpreter details",
     "DisplayOrder": 13,
-    "PreConditionState(s)": "listing;prepareForHearing;finalBundling;preHearing;ended;adjourned",
+    "PreConditionState(s)": "listing;prepareForHearing;finalBundling;preHearing;ended;adjourned;decision;decided",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
