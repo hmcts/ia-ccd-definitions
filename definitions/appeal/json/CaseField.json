@@ -8152,8 +8152,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ircName", "Label": "Detention facility name", "FieldType": "FixedList", "FieldTypeParameter": "ircNameList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "prisonName", "Label": "Detention facility name", "FieldType": "FixedList", "FieldTypeParameter": "prisonNameList", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "custodialSentenceTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "custodialSentence", "Label": "Custodial Sentence", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "custodialSentenceReleaseDate", "Label": "Custodial sentence release date", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "releaseDateProvided", "Label": "Custodial Sentence", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "releaseDate", "Label": "Custodial sentence release date", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasPendingBailApplications", "Label": "Pending bail application", "FieldType": "FixedRadioList", "FieldTypeParameter": "pendingBailApplication", "SecurityClassification": "PUBLIC"}
 
 ]
