@@ -61,6 +61,21 @@ You can run upload task to generate excel based on JSON files and upload the fil
 yarn upload
 ```
 
+You can also upload to other environments by specifying parameters:
+```
+# Upload to local docker environment (default)
+yarn upload
+
+# Upload to preview environment with a specific PR number
+yarn upload -e preview -p 1234
+
+# Upload to mirrord environment with current username
+yarn upload -e mirrord
+
+# Upload to mirrord environment with a specific username
+yarn upload -e mirrord -u username
+```
+
 If you need CCD Definitions Excel files for environments other than DEV,
 there are specific tasks to use:
 
