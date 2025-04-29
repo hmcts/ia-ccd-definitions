@@ -3,16 +3,15 @@
 set -eu
 
 dir=$(dirname ${0})
-filepath=/Users/sabah/work/iac-ft/ia-ccd-definitions/target/appeal/xlsx
+filepath=/Users/sabah/work/iac-ft/ia-ccd-definitions/target/appeal/xlsx/ccd-appeal-config-mirrord.xlsx
 filename=ccd-appeal-config-mirrord.xlsx
 uploadFilename="$(date +"%Y%m%d-%H%M%S")-${filename}"
 
 source ${dir}/load-env-variables.sh
 
-userToken=$(${dir}/idam-lease-user-token.sh)
-serviceToken=$(${dir}/idam-lease-service-token.sh ccd_gw $(docker run --rm hmctspublic.azurecr.io/imported/toolbelt/oathtool --totp -b ${CCD_API_GATEWAY_S2S_SECRET:-AAAAAAAAAAAAAAAC}))
-
+userToken=$(${dir}/idam-user-token-aat.sh)
 echo "Authorization userToken: ${userToken}"
+serviceToken=$(${dir}/idam-service-token-aat.sh)
 echo "Authorization serviceToken: ${serviceToken}"
 
 
