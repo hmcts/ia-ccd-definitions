@@ -2340,16 +2340,16 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "migrateCase",
-    "Name": "migrate PA appeals",
-    "Description": "migrate PA appeals to progress to appeal submitted state",
+    "Name": "migrate case",
+    "Description": "migrate case",
     "DisplayOrder": 99,
-    "PreConditionState(s)": "pendingPayment",
-    "PostConditionState": "appealSubmitted",
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
-    "Publish": "Y"
+    "Publish": "N"
   },
   {
     "LiveFrom": "01/01/2018",

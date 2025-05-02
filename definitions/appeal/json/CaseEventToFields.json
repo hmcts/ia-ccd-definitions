@@ -1905,5 +1905,5 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "ariaCreateCase", "CaseFieldID": "remissionDecision", "PageFieldDisplayOrder": 4, "DisplayContext": "MANDATORY", "PageID": "ariaCreateCasePage", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N", "FieldShowCondition": "dummyEmptyLabel=\"DUMMY_FIELD_TO_HIDE\"", "Publish": "Y", "RetainHiddenValue": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "ManageTTL", "CaseFieldID": "TTL", "PageID": 1, "PageDisplayOrder": 1,"DisplayContext": "COMPLEX", "PageFieldDisplayOrder": 1},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "migrateCase", "CaseFieldID": "appealType", "PageID": 1, "PageDisplayOrder": 1, "DisplayContext": "READONLY", "Publish": "Y"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "migrateCase", "CaseFieldID": "TTL", "PageID": 1, "PageDisplayOrder": 1,"DisplayContext": "COMPLEX", "PageFieldDisplayOrder": 1}
 ]
