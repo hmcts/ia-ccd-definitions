@@ -1,3 +1,5 @@
+import moment, {Moment} from "moment/moment";
+
 const { I } = inject();
 import {appellant, legalRepresentative} from '../detainedConfig'
 
@@ -48,10 +50,12 @@ class createAppeal {
   }
 
   async setHomeOfficeSetails() {
+    const yesterday = moment().subtract(1, 'days');
+
     await I.fillField('#homeOfficeReferenceNumber', '12345');
-    await I.fillField('#homeOfficeDecisionDate-day', '1');
-    await I.fillField('#homeOfficeDecisionDate-month', '5');
-    await I.fillField('#homeOfficeDecisionDate-year', '2000');
+    await I.fillField('#homeOfficeDecisionDate-day', yesterday.date());
+    await I.fillField('#homeOfficeDecisionDate-month', yesterday.month()+1);
+    await I.fillField('#homeOfficeDecisionDate-year', yesterday.year());
     await I.clickContinue();
   }
 
@@ -159,6 +163,12 @@ class createAppeal {
     await I.waitForText('DRAFT',60);
   }
 
+  async agreeToDeclaration() {
+    await I.waitForText('Declaration',60);
+    await I.click('#legalRepDeclaration');
+    await I.click('Submit');
+    await I.waitForText('Your appeal has been submitted',60)
+  }
 
 }
 

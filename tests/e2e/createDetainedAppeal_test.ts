@@ -11,7 +11,7 @@ Before(({ I }) => {
 })
 
 // @ts-ignore
-Scenario('Create Detained Appeal',   async ({I, loginPage, createCasePage, createAppeal}) => {
+Scenario('Create Detained Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal}) => {
     await loginPage.signIn(lawFirmUser);
     await createCasePage.createCase();
     await createAppeal.locationInUK('Yes');
@@ -32,8 +32,10 @@ Scenario('Create Detained Appeal',   async ({I, loginPage, createCasePage, creat
     await createAppeal.hasFeeRemission('No');
     await createAppeal.checkMyAnswers();
 
-    //() => `${caseNumber.split('-').join('').replace(/#/, '')}`;
     caseId = await I.grabCaseNumber();
-    console.log('>>>>', caseId);
-    await I.wait(6);
+    console.log('caseId>>>',caseId);
+
+    await I.selectNextStep('Submit your appeal');
+    await createAppeal.agreeToDeclaration();
+
 });
