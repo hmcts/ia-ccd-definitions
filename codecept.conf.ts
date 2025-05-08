@@ -19,9 +19,10 @@ export const config: CodeceptJS.MainConfig = {
   },
   include: {
     I: './steps_file',
-    loginPage: "./tests/e2e/pages/login.ts",
-    createCasePage: "./tests/e2e/pages/createCase.ts",
-    createAppeal: "./tests/e2e/flows/createAppeal.ts",
+    loginPage: './tests/e2e/pages/login.ts',
+    createCasePage: './tests/e2e/pages/createCase.ts',
+    createAppeal: './tests/e2e/flows/createAppeal.ts',
+    retrieveCase: './tests/e2e/pages/retrieveCase.ts',
   },
   name: 'ia-ccd-definitions'
 }

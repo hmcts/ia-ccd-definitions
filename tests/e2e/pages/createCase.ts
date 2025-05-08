@@ -24,14 +24,13 @@ class createCasePage {
   // insert your methods here
 
   async createCase(){
-   await I.waitForText(this.createCaseLink, 60);
+    await I.waitForText(this.createCaseLink, 60);
     await I.forceClick(this.createCaseLink,);
     await I.waitForText(this.createCaseLink, 60);
     await I.selectOption(this.jurisdictionLocator, this.jurisdictionCode);
     await I.selectOption(this.caseTypeLocator, this.caseTypeCode);
     await I.selectOption(this.eventLocator, this.eventCode);
     await I.forceClick('Start');
-    await I.wait(10);
   }
 }
 

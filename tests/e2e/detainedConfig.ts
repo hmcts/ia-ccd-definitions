@@ -5,6 +5,11 @@ export const lawFirmUser = {
     password: "Aldg@teT0wer"
 }
 
+export const legalOfficer = {
+    email:"ia.caseofficer.ccd@gmail.com",
+    password: " AldgateT0wer"
+}
+
 export const appellant = {
     title: 'Mt',
     givenNames: 'David',

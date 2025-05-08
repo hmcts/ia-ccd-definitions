@@ -1,4 +1,4 @@
-import {lawFirmUser, aatUrl} from './detainedConfig'
+import {lawFirmUser, aatUrl, legalOfficer} from './detainedConfig'
 
 let caseId: string;
 
@@ -37,5 +37,11 @@ Scenario('Create Detained Appeal as Legal Representative',   async ({I, loginPag
 
     await I.selectNextStep('Submit your appeal');
     await createAppeal.agreeToDeclaration();
+});
 
+
+// @ts-ignore
+Scenario('Legal Officer creates Standard Order',   async ({I, loginPage, retrieveCase}) => {
+    await loginPage.signIn(legalOfficer);
+    await retrieveCase.getCase(caseId);
 });
