@@ -833,8 +833,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "detentionDetailsTitle", "TabFieldDisplayOrder": 166, "FieldShowCondition": "appealOutOfCountry=\"No\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "appellantInDetention", "TabFieldDisplayOrder": 167, "FieldShowCondition": "appealOutOfCountry=\"No\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "custodialSentence", "TabFieldDisplayOrder": 167, "FieldShowCondition": "appellantInDetention=\"Yes\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "custodialSentenceReleaseDate", "TabFieldDisplayOrder": 167, "FieldShowCondition": "custodialSentence=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "releaseDateProvided", "TabFieldDisplayOrder": 167, "FieldShowCondition": "appellantInDetention=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "releaseDate", "TabFieldDisplayOrder": 167, "FieldShowCondition": "releaseDateProvided=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "detentionFacility", "TabFieldDisplayOrder": 167, "FieldShowCondition": "appellantInDetention=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "ircName", "TabFieldDisplayOrder": 167, "FieldShowCondition": "appellantInDetention=\"Yes\" AND detentionFacility=\"immigrationRemovalCentre\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "prisonName", "TabFieldDisplayOrder": 167, "FieldShowCondition": "appellantInDetention=\"Yes\" AND detentionFacility=\"prison\""},
