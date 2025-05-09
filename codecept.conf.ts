@@ -16,6 +16,7 @@ export const config: CodeceptJS.MainConfig = {
       url: 'https://www.google.co.uk',
       show: true,
       ignoreHTTPSErrors: true,
+      waitForAction: 1000,
     },
       MyHelper:{
           require: './tests/e2e/helpers/my_helper.ts'

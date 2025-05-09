@@ -21,7 +21,6 @@ class loginPage {
       await I.fillField(this.usernameField, user.email);
       await I.fillField(this.passwordField, user.password);
       await I.click(this.signInButton);
-      await I.wait(20);
     }
     else {
       console.log('*******User details are empty. Cannot login. *******');
