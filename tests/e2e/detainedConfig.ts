@@ -10,6 +10,12 @@ export const legalOfficer = {
     password: " AldgateT0wer"
 }
 
+export const homeOfficeOfficer = {
+    email:"ia.respondentoffice.ccd@gmail.com",
+    password: " AldgateT0wer"
+}
+
+
 export const appellant = {
     title: 'Mt',
     givenNames: 'David',

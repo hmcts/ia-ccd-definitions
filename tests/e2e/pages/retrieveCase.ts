@@ -13,7 +13,6 @@ class retrieveCasePage {
     await I.waitForText('My work', 60);
     await I.fillField('#caseReference', caseId);
     await I.click('Find');
-    await I.wait(10);
   }
 }
 

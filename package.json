@@ -63,6 +63,7 @@
         "codeceptjs:demo:ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples"
     },
     "dependencies": {
+        "@codeceptjs/expect-helper": "^1.0.2",
         "@hmcts/ia-state-diagram-tool": "^0.0.5",
         "config": "^3.0.1",
         "crypto-js": "3.1.9-1",

@@ -1,12 +1,11 @@
-import {lawFirmUser, aatUrl, legalOfficer} from './detainedConfig'
+import {lawFirmUser, aatUrl, legalOfficer, homeOfficeOfficer, legalRepresentative} from './detainedConfig'
 
 let caseId: string;
 
-
 Feature('Detained Appeal');
 
+
 Before(({ I }) => {
-    // or Background
     I.amOnPage(aatUrl);
 })
 
@@ -41,7 +40,9 @@ Scenario('Create Detained Appeal as Legal Representative',   async ({I, loginPag
 
 
 // @ts-ignore
-Scenario('Legal Officer creates Standard Order',   async ({I, loginPage, retrieveCase}) => {
+Scenario('Legal Officer creates Standard Order',   async ({I, loginPage, retrieveCase, createStandarOrder}) => {
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
+    await I.waitForText('Case details',60);
+    await createStandarOrder.isCorrectLabelDisplayed('legally_represented_detained_appeal');
 });
