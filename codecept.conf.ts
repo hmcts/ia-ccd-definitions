@@ -8,7 +8,7 @@ setHeadlessWhen(process.env.HEADLESS);
 setCommonPlugins();
 
 export const config: CodeceptJS.MainConfig = {
-  tests: './tests/e2e/createDetainedAppeal_test.ts',
+  tests: './tests/e2e/*_test.ts',
   output: './output',
   helpers: {
       Playwright: {
@@ -16,7 +16,7 @@ export const config: CodeceptJS.MainConfig = {
       url: 'https://www.google.co.uk',
       show: true,
       ignoreHTTPSErrors: true,
-      waitForAction: 1000,
+      waitForAction: 500,
     },
       MyHelper:{
           require: './tests/e2e/helpers/my_helper.ts'

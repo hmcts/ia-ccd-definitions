@@ -2,7 +2,7 @@ import {lawFirmUser, aatUrl, legalOfficer, homeOfficeOfficer, legalRepresentativ
 
 let caseId: string;
 
-Feature('Detained Appeal');
+Feature('Detained Appeal - Represented £detainedRepresented');
 
 
 Before(({ I }) => {

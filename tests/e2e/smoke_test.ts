@@ -1,7 +1,7 @@
 import {lawFirmUser, aatUrl} from './detainedConfig'
 
 
-Feature('smoke');
+Feature('Smoke Test @smoke');
 
 Before(({ I }) => {
     // or Background

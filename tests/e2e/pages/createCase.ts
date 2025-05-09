@@ -31,6 +31,8 @@ console.log('constuctor fired');
     await I.selectOption(this.caseTypeLocator, this.caseTypeCode);
     await I.selectOption(this.eventLocator, this.eventCode);
     await I.forceClick('Start');
+    // TOFO Instead og a wait add check for change in url - wait added due to flakiness
+    await I.wait(5);
   }
 }
 

@@ -32,6 +32,8 @@
         }
     },
     "scripts": {
+        "test:smoke": "npx codeceptjs run --grep @smoke --verbose",
+        "test:detainedRepresented": "npx codeceptjs run --grep £detainedRepresented --verbose",
         "clean": "rm -rf target/",
         "decrypt": "node bin/decrypt.js",
         "copy-json": "bin/copy-json.sh",
