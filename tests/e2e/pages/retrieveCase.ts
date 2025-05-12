@@ -11,7 +11,7 @@ class retrieveCasePage {
 
   async getCase(caseId: string){
     await I.waitForText('My work', 60);
-    await I.fillField('#caseReference', caseId);
+    await I.fillField('#exuiCaseReferenceSearch', caseId);
     await I.click('Find');
   }
 }

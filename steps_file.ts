@@ -2,6 +2,7 @@
 import {output} from "codeceptjs";
 
 const goButton: string = '//*[@id="content"]/div[1]/div[2]/ccd-event-trigger/form/button';
+const signInButton: string = 'input[value="Sign in"]';
 
 export = function() {
   return actor({
@@ -21,6 +22,11 @@ export = function() {
     async clickStart() {
       let urlBefore = await this.grabCurrentUrl();
       await this.retryUntilUrlChanges(() => this.forceClick('Start'), urlBefore);
+    },
+
+    async clickSignIn() {
+      let urlBefore = await this.grabCurrentUrl();
+      await this.retryUntilUrlChanges(() => this.forceClick(signInButton), urlBefore);
     },
 
     async grabCaseNumber() {
@@ -57,6 +63,10 @@ export = function() {
           throw new Error(`Maximum number of tries (${maxNumberOfTries}) has been reached trying to change urls. Before: ${urlBefore}. After: ${urlAfter}`);
         }
       }
+    },
+
+    sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
     },
 
   });

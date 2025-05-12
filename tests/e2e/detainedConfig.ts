@@ -28,9 +28,22 @@ export const appellant = {
 }
 
  export const legalRepresentative = {
-     company: 'Legal Rep Company',
-     name: 'Steve',
-     familyName: 'Legal',
-     mobile: '02089998888',
-     reference: 'ABCDE12345',
+    company: 'Legal Rep Company',
+    name: 'Steve',
+    familyName: 'Legal',
+    mobile: '02089998888',
+    reference: 'ABCDE12345',
+ }
+
+ export const sponsor = {
+    givenNames: 'Fred William',
+    familyName: 'Sponsor',
+    address: {
+        addressLine1: '66 Pall Mall',
+        postTown: 'London',
+        postcode: 'SW1A 1AB',
+        country: 'United Kingdom'
+    },
+    email: 'sponsorEmail@test.com',
+    mobile: '07890675887',
  }

@@ -1,7 +1,7 @@
 import moment, {Moment} from "moment/moment";
 
 const { I } = inject();
-import {appellant, legalRepresentative} from '../detainedConfig'
+import {appellant, legalRepresentative, sponsor} from '../detainedConfig'
 
 class createAppeal {
 
@@ -103,9 +103,39 @@ class createAppeal {
     await I.clickContinue();
   }
 
-  async hasSponsor(isSponsored: string = 'No'){
-     await I.click(`#hasSponsor_${isSponsored}`);
-     await I.clickContinue();
+  async hasSponsor(isSponsored: string = 'No', sponsorComms: string = 'email', sponsorAuthorised: string = 'Yes'){
+    await I.click(`#hasSponsor_${isSponsored}`);
+    await I.clickContinue();
+
+    if (isSponsored === 'Yes') {
+      await this.setSponsor(sponsorComms, sponsorAuthorised);
+    }
+
+  }
+
+  async setSponsor(emailSms: string, authorisation: string) {
+    await I.fillField('#sponsorGivenNames', sponsor.givenNames);
+    await I.fillField('#sponsorFamilyName', sponsor.familyName);
+    await I.clickContinue();
+
+    await I.click('//*[@id="sponsorAddress_sponsorAddress"]/div/a');
+    await I.fillField('#sponsorAddress__detailAddressLine1', sponsor.address.addressLine1);
+    await I.fillField('#sponsorAddress__detailPostTown', sponsor.address.postTown);
+    await I.fillField('#sponsorAddress__detailPostCode', sponsor.address.postcode);
+    await I.fillField('#sponsorAddress__detailCountry', sponsor.address.country);
+    await I.clickContinue();
+
+    if (emailSms === 'email') {
+      await I.checkOption('#sponsorContactPreference-wantsEmail');
+      await I.fillField('#sponsorEmail', sponsor.email);
+    } else {
+      await I.checkOption('#sponsorContactPreference-wantsSms');
+      await I.fillField('#sponsorMobileNumber', sponsor.mobile);
+    }
+    await I.clickContinue();
+
+    await I.checkOption(`#sponsorAuthorisation_${authorisation}`);
+    await I.clickContinue();
   }
 
   async hasDepotationOrder(hasDeportOrder: string = 'No') {
@@ -113,13 +143,26 @@ class createAppeal {
     await I.clickContinue();
   }
 
-  async hasRemovalOrder(hasRemoveOrder: string = 'No') {
-    await I.click(`#removalOrderOptions_${hasRemoveOrder}`);
+  async hasRemovalDirections(hasRemovalOrder: string = 'No') {
+    await I.click(`#removalOrderOptions_${hasRemovalOrder}`);
+
+    if (hasRemovalOrder === 'Yes') {
+      const todayPlus20Days = moment().add(20, 'days');
+      await I.fillField('#removalOrderDate-day', todayPlus20Days.date());
+      await I.fillField('#removalOrderDate-month', todayPlus20Days.month()+1);
+      await I.fillField('#removalOrderDate-year', todayPlus20Days.year());
+      await I.fillField('#removalOrderDate-hour', '14');
+      await I.fillField('#removalOrderDate-minute', '30');
+      await I.fillField('#removalOrderDate-second', '00');
+    }
     await I.clickContinue();
   }
 
   async hasNewMatters(hasMatters: string = 'No') {
     await I.click(`#hasNewMatters_${hasMatters}`);
+    if (hasMatters === 'Yes') {
+      await I.fillField('#newMatters', 'New mateers test text.');
+    }
     await I.clickContinue();
   }
 
