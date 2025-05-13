@@ -1,7 +1,8 @@
 import moment, {Moment} from "moment/moment";
+import {appellant, legalRepresentative, sponsor} from '../detainedConfig'
 
 const { I } = inject();
-import {appellant, legalRepresentative, sponsor} from '../detainedConfig'
+const doutOfTimedImageLocator: string = '//*[@id="confirmation-body"]/ccd-markdown/div/markdown/p[1]/img';
 
 class createAppeal {
 
@@ -11,9 +12,28 @@ class createAppeal {
   }
   // insert your methods here
 
-   async locationInUK(yesNo: string = 'Yes') {
-     await I.click(`#appellantInUk_${yesNo}`);
-     await I.clickContinue();
+  // setTribunalAppealReceived() - Legal Admin Journey
+  async setTribunalAppealReceived() {
+    const yesterday = moment().subtract(1, 'days');
+
+    await I.fillField('#tribunalReceivedDate-day', yesterday.date());
+    await I.fillField('#tribunalReceivedDate-month', yesterday.month()+1);
+    await I.fillField('#tribunalReceivedDate-year', yesterday.year());
+    await I.clickContinue();
+  }
+
+  // appellantInPerson() - Legal Admin Journey
+  async appellantInPerson(yesNo: string = 'Yes') {
+    await I.click(`#appellantsRepresentation-${yesNo}`);
+    if (yesNo === 'No') {
+      //TODO - add addition page call
+    }
+    await I.clickContinue();
+  }
+
+  async locationInUK(yesNo: string = 'Yes') {
+    await I.click(`#appellantInUk_${yesNo}`);
+    await I.clickContinue();
   }
 
   async inDetention(yesNo: string = 'Yes') {
@@ -49,20 +69,27 @@ class createAppeal {
     await I.clickContinue();
   }
 
-  async setHomeOfficeSetails() {
+  async setHomeOfficeSetails(inTime: boolean = true) {
+    let homeOfficeLetterDate;
+    if (inTime) {
+      homeOfficeLetterDate = moment().subtract(5, 'days');
+    } else {
+      homeOfficeLetterDate = moment().subtract(20, 'days');
+    }
+
     const yesterday = moment().subtract(1, 'days');
 
     await I.fillField('#homeOfficeReferenceNumber', '12345');
-    await I.fillField('#homeOfficeDecisionDate-day', yesterday.date());
-    await I.fillField('#homeOfficeDecisionDate-month', yesterday.month()+1);
-    await I.fillField('#homeOfficeDecisionDate-year', yesterday.year());
+    await I.fillField('#homeOfficeDecisionDate-day', homeOfficeLetterDate.date());
+    await I.fillField('#homeOfficeDecisionDate-month', homeOfficeLetterDate.month()+1);
+    await I.fillField('#homeOfficeDecisionDate-year', homeOfficeLetterDate.year());
     await I.clickContinue();
   }
 
   async uploadNoticeOfDecision() {
     await I.click('Add new');
     await I.attachFile('#uploadTheNoticeOfDecisionDocs_0_document', './tests/documents/TEST_DOCUMENT_1.pdf');
-    await I.fillField('#uploadTheNoticeOfDecisionDocs_0_description', 'Test Notice of Decision docunment.');
+    await I.fillField('#uploadTheNoticeOfDecisionDocs_0_description', 'Test Notice of Decision document.');
     await I.waitForInvisible(locate('.error-message').withText('Uploading...'),20);
     await I.clickContinue();
   }
@@ -72,18 +99,33 @@ class createAppeal {
       case 'EEA':
         await I.click('#appealType-refusalOfEu');
         await I.clickContinue();
-        await this.groundsOfAppeal();
+        let currentUrl: string = await I.grabCurrentUrl();
+
+        if (!currentUrl.includes('BasicDetails')) {
+          await this.groundsOfAppeal();
+        }
         break;
     }
   }
+
+  // appellantDetails() - Legal Admin journey only
+  async appellantDetails() {
+    await I.fillField('#internalAppellantMobileNumber', appellant.mobile);
+    await I.fillField('#internalAppellantEmail', appellant.email);
+    await I.clickContinue();
+  }
+
 
   async groundsOfAppeal() {
     await I.click('#appealGroundsEuRefusal_values-appealGroundsEuRefusal');
     await I.clickContinue();
   }
 
-  async setAppellantBasicDetails() {
-    await I.fillField('#appellantTitle', appellant.title);
+  async setAppellantBasicDetails(minimalBasicDetails: boolean = false) {
+    if (!minimalBasicDetails) {
+      await I.fillField('#appellantTitle', appellant.title);
+    }
+
     await I.fillField('#appellantGivenNames', appellant.givenNames);
     await I.fillField('#appellantFamilyName', appellant.familyName);
     await I.fillField('#appellantDateOfBirth-day', appellant.dob.day);
@@ -158,6 +200,17 @@ class createAppeal {
     await I.clickContinue();
   }
 
+  // uploadAppealDocs() - For Legal Admin journey
+  async uploadAppealDocs() {
+    await I.click('Add new');
+    await I.attachFile('#uploadTheAppealFormDocs_0_document', './tests/documents/TEST_DOCUMENT_1.pdf');
+    await I.fillField('#uploadTheAppealFormDocs_0_description', 'Appeal document.');
+    await I.waitForInvisible(locate('.error-message').withText('Uploading...'),20);
+    await I.clickContinue();
+  }
+
+
+
   async hasNewMatters(hasMatters: string = 'No') {
     await I.click(`#hasNewMatters_${hasMatters}`);
     if (hasMatters === 'Yes') {
@@ -203,14 +256,37 @@ class createAppeal {
   async checkMyAnswers() {
     // TODO: Needs other options added
     await I.clickSaveAndContinue();
-    await I.waitForText('DRAFT',60);
+    await I.waitForText('You have saved your appeal', 60);
+    await I.waitForText('You still need to submit it',60);
   }
 
-  async agreeToDeclaration() {
-    await I.waitForText('Declaration',60);
-    await I.click('#legalRepDeclaration');
-    await I.click('Submit');
-    await I.waitForText('Your appeal has been submitted',60)
+  // setAppealOutOfTime() Legal Admin journey
+  async setAppealOutOfTime(){
+    await I.waitForText('Reasons the appeal is late', 60);
+    await I.fillField('#applicationOutOfTimeExplanation', 'Test explanation of why out of time.');
+    await I.attachFile('#applicationOutOfTimeDocument', './tests/documents/TEST_DOCUMENT_1.pdf');
+    await I.waitForInvisible(locate('.error-message').withText('Uploading...'),20);
+    await I.clickContinue();
+  }
+
+  async agreeToDeclaration(legalRepDeclaration: boolean = true, inTime: boolean = true) {
+      await I.waitForText('Declaration',60);
+      if (legalRepDeclaration) {
+        await I.click('#legalRepDeclaration');
+        await I.waitForText('Your appeal has been submitted',60)
+      } else {
+        await I.click('#adminDeclaration1-hasDeclared');
+      }
+
+    await I.clickButtonOrLink('Submit');
+    if (legalRepDeclaration) {
+      await I.waitForText('Your appeal has been submitted',60)
+    } else if (inTime){
+        await I.waitForText('The appeal has been submitted',60)
+    } else {
+      await I.isCorrectLabelDisplayed(doutOfTimedImageLocator, 'outOfTimeConfirmation');
+    }
+    await I.wait(5);
   }
 
 }

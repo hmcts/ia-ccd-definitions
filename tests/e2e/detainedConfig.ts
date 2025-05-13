@@ -10,6 +10,11 @@ export const legalOfficer = {
     password: " AldgateT0wer"
 }
 
+export const legalAdmin = {
+    email:"ia.adm1nofficer.ccd@gmail.com",
+    password: " AldgateT0wer"
+}
+
 export const homeOfficeOfficer = {
     email:"ia.respondentoffice.ccd@gmail.com",
     password: " AldgateT0wer"
@@ -24,7 +29,9 @@ export const appellant = {
         day: 10,
         month: 6,
         year: 1990
-    }
+    },
+    mobile: '07890667755',
+    email: 'appellantEmail@test.com',
 }
 
  export const legalRepresentative = {

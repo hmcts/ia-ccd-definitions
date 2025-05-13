@@ -16,6 +16,7 @@ export const config: CodeceptJS.MainConfig = {
       url: 'https://www.google.co.uk',
       show: true,
       ignoreHTTPSErrors: true,
+      bypassCSP: true,
       //waitForAction: 500,
     },
       MyHelper:{

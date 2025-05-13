@@ -24,8 +24,8 @@ console.log('constuctor fired');
   // insert your methods here
 
   async createCase() {
-    await I.waitForText('Case list', 60);
-    await I.forceClick(this.createCaseLink,);
+    await I.waitForText('Create Case', 60);
+    await I.clickButtonOrLink(this.createCaseLink,);
     await I.waitForText(this.createCaseLink, 60);
     await I.selectOption(this.jurisdictionLocator, this.jurisdictionCode);
     await I.selectOption(this.caseTypeLocator, this.caseTypeCode);

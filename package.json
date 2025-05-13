@@ -33,7 +33,8 @@
     },
     "scripts": {
         "test:smoke": "npx codeceptjs run --grep @smoke --verbose",
-        "test:detainedRepresented": "npx codeceptjs run --grep @detainedRepresented --verbose",
+        "test:detainedRepresented": "NODE_TLS_REJECT_UNAUTHORIZED=0 npx codeceptjs run --grep @detainedRepresented --verbose",
+        "test:detainedLegalAdmin": "npx codeceptjs run --grep @detainedLegalAdmin --verbose",
         "clean": "rm -rf target/",
         "decrypt": "node bin/decrypt.js",
         "copy-json": "bin/copy-json.sh",

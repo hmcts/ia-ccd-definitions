@@ -1,7 +1,7 @@
 import {lawFirmUser, aatUrl, legalOfficer, homeOfficeOfficer, legalRepresentative} from './detainedConfig'
 
 let caseId: string;
-
+const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
 Feature('Detained Appeal - Represented @detainedRepresented');
 
 
@@ -16,10 +16,10 @@ Scenario('Create Detained Appeal as Legal Representative',   async ({I, loginPag
     await createAppeal.locationInUK('Yes');
     await createAppeal.inDetention('Yes');
     await createAppeal.setDetentionLocation('immigration');
-    await createAppeal.setHomeOfficeSetails();
+    await createAppeal.setHomeOfficeSetails(true);
     await createAppeal.uploadNoticeOfDecision();
     await createAppeal.setTypeOfAppeal();
-    await createAppeal.setAppellantBasicDetails();
+    await createAppeal.setAppellantBasicDetails(false);
     await createAppeal.setNationality(true);
     await createAppeal.hasSponsor('Yes');
     await createAppeal.hasDepotationOrder("No");
@@ -32,10 +32,10 @@ Scenario('Create Detained Appeal as Legal Representative',   async ({I, loginPag
     await createAppeal.checkMyAnswers();
 
     caseId = await I.grabCaseNumber();
-    console.log('caseId>>>',caseId);
+    console.log('caseId>>>>>>>>>>>>>>>'+caseId+'<<<<<<<<<<<<<<<<<<<');
 
     await I.selectNextStep('Submit your appeal');
-    await createAppeal.agreeToDeclaration();
+    await createAppeal.agreeToDeclaration(true);
 });
 
 
@@ -44,5 +44,5 @@ Scenario('Legal Officer creates Standard Order',   async ({I, loginPage, retriev
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
     await I.waitForText('Case details',60);
-    await createStandarOrder.isCorrectLabelDisplayed('legally_represented_detained_appeal');
+    await I.isCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
 });

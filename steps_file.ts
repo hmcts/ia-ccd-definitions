@@ -29,6 +29,12 @@ export = function() {
       await this.retryUntilUrlChanges(() => this.forceClick(signInButton), urlBefore);
     },
 
+    async clickButtonOrLink(buttonOrLinkText: string) {
+      let urlBefore = await this.grabCurrentUrl();
+      await this.retryUntilUrlChanges(() => this.forceClick(buttonOrLinkText), urlBefore);
+    },
+
+
     async grabCaseNumber() {
       await this.waitForElement('.alert-message');
 
@@ -51,8 +57,8 @@ export = function() {
         await action();
         await this.sleep(3000 * tryNumber);
         urlAfter = await this.grabCurrentUrl();
-        console.log('urlBefore>>>>',urlBefore);
-        console.log('urlAfter>>>>',urlAfter);
+        //console.log('urlBefore>>>>',urlBefore);
+        //console.log('urlAfter>>>>',urlAfter);
         if (urlBefore !== urlAfter) {
           console.log(`retryUntilUrlChanges(before: ${urlBefore}, after: ${urlAfter}): url changed after try #${tryNumber} was executed`);
           break;
@@ -68,6 +74,13 @@ export = function() {
     sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
     },
+
+    async isCorrectLabelDisplayed(locator: string, label: string) {
+      console.log('label>>>', label);
+      let src: string = await this.grabAttributeFrom(locator, 'src');
+
+      await this.expectContain(src, label, 'Incorrect or missing Label');
+    }
 
   });
 }
