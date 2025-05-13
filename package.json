@@ -32,9 +32,9 @@
         }
     },
     "scripts": {
-        "test:smoke": "MOCHAWESOME_REPORTFILENAME=smoke npx codeceptjs run --grep @smoke --verbose --reporter mocha-multi --verbose",
-        "test:detainedRepresented": "MOCHAWESOME_REPORTFILENAME=detainedRepresented npx codeceptjs run --grep @detainedRepresented --reporter mocha-multi --verbose",
-        "test:detainedLegalAdmin": "MOCHAWESOME_REPORTFILENAME=detainedLegalAdmin npx codeceptjs run --grep @detainedLegalAdmin --reporter mocha-multi --verbose",
+        "test:smoke": "MOCHAWESOME_REPORTFILENAME=smoke-$(date \"+%Y-%m-%d_%H-%M-%S\") npx codeceptjs run --grep @smoke --verbose --reporter mocha-multi --verbose",
+        "test:detainedRepresented": "MOCHAWESOME_REPORTFILENAME=detainedRepresented-$(date \"+%Y-%m-%d_%H-%M-%S\") npx codeceptjs run --grep @detainedRepresented --reporter mocha-multi --verbose",
+        "test:detainedLegalAdmin": "MOCHAWESOME_REPORTFILENAME=detainedLegalAdmin-$(date \"+%Y-%m-%d_%H-%M-%S\") npx codeceptjs run --grep @detainedLegalAdmin --reporter mocha-multi --verbose",
         "clean": "rm -rf target/",
         "decrypt": "node bin/decrypt.js",
         "copy-json": "bin/copy-json.sh",
