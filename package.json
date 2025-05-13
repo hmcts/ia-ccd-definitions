@@ -32,9 +32,9 @@
         }
     },
     "scripts": {
-        "test:smoke": "npx codeceptjs run --grep @smoke --verbose",
-        "test:detainedRepresented": "NODE_TLS_REJECT_UNAUTHORIZED=0 npx codeceptjs run --grep @detainedRepresented --verbose",
-        "test:detainedLegalAdmin": "npx codeceptjs run --grep @detainedLegalAdmin --verbose",
+        "test:smoke": "MOCHAWESOME_REPORTFILENAME=smoke npx codeceptjs run --grep @smoke --verbose --reporter mocha-multi --verbose",
+        "test:detainedRepresented": "MOCHAWESOME_REPORTFILENAME=detainedRepresented npx codeceptjs run --grep @detainedRepresented --reporter mocha-multi --verbose",
+        "test:detainedLegalAdmin": "MOCHAWESOME_REPORTFILENAME=detainedLegalAdmin npx codeceptjs run --grep @detainedLegalAdmin --reporter mocha-multi --verbose",
         "clean": "rm -rf target/",
         "decrypt": "node bin/decrypt.js",
         "copy-json": "bin/copy-json.sh",
@@ -82,6 +82,9 @@
         "@codeceptjs/ui": "^1.2.4",
         "@types/node": "^22.15.16",
         "codeceptjs": "^3.7.3",
+        "mocha": "^11.2.2",
+        "mocha-multi": "^1.1.7",
+        "mochawesome": "^7.1.3",
         "playwright": "^1.52.0",
         "ts-node": "^10.9.2",
         "typescript": "^5.8.3"

@@ -17,7 +17,7 @@ class createCasePage {
     this.caseTypeCode = 'Asylum';
     this.eventLocator = '#cc-event';
     this.eventCode = 'startAppeal';
-console.log('constuctor fired');
+
     //insert your locators
     // this.button = '#button'
   }

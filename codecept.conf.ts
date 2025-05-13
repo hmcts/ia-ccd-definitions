@@ -34,5 +34,25 @@ export const config: CodeceptJS.MainConfig = {
     retrieveCase: './tests/e2e/pages/retrieveCase.ts',
     createStandarOrder: './tests/e2e/flows/createStandardOrder.ts',
   },
+  mocha:     {
+    reporterOptions: {
+        'codeceptjs-cli-reporter': {
+            stdout:  '-',
+            options: {
+                verbose: true,
+                steps:   true,
+            },
+        },
+        'mochawesome': {
+            stdout: '-',
+            options: {
+                reportDir: 'tests/reports',
+                inlineAssets: true,
+                overwrite: false,
+                json: false,
+            },
+        },
+    },
+  },
   name: 'ia-ccd-definitions'
 }
