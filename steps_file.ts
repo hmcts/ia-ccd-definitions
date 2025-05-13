@@ -1,5 +1,4 @@
 // in this file you can append custom step methods to 'I' object
-import {output} from "codeceptjs";
 
 const goButton: string = '//*[@id="content"]/div[1]/div[2]/ccd-event-trigger/form/button';
 const signInButton: string = 'input[value="Sign in"]';
