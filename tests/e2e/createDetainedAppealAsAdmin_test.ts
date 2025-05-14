@@ -1,7 +1,8 @@
 import {aatUrl, legalAdmin} from './detainedConfig'
 
 let caseId: string;
-let inTime: boolean = false;
+let inTime: boolean = true;
+
 Feature('Detained Appeal - Legal Admin @detainedLegalAdmin');
 
 
@@ -10,7 +11,7 @@ Before(({ I }) => {
 })
 
 // @ts-ignore
-Scenario('Create Detained Appeal as Legal Admin',   async ({I, loginPage, createCasePage, createAppeal}) => {
+Scenario('Create Detained Appeal as Legal Admin - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({I, loginPage, createCasePage, createAppeal}) => {
     await loginPage.signIn(legalAdmin);
     await createCasePage.createCase();
 
@@ -50,7 +51,7 @@ Scenario('Create Detained Appeal as Legal Admin',   async ({I, loginPage, create
        await createAppeal.setAppealOutOfTime();
     }
 
-    await createAppeal.agreeToDeclaration(false, false);
+    await createAppeal.agreeToDeclaration(false, inTime);
 
 });
 
