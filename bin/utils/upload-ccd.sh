@@ -49,22 +49,25 @@ if [[ "${ENV}" == "preview" && -z "${PR_NUMBER}" ]]; then
   exit 1
 fi
 
-# Define filename and URL based on environment
+# Define environment-specific configuration
 case $ENV in
   dev)
     FILENAME="ccd-appeal-config-dev.xlsx"
     CCD_URL="http://localhost:4451"
     GENERATE_CMD="yarn generate-dev"
+    TOKEN_ENV="local"
     ;;
   mirrord)
     FILENAME="ccd-appeal-config-mirrord.xlsx"
     CCD_URL="https://ccd-definition-store-ia-case-api-${USERNAME}-pr-1.preview.platform.hmcts.net"
-    GENERATE_CMD="yarn generate-mirrord"
+    GENERATE_CMD="yarn generate -e mirrord"
+    TOKEN_ENV="aat"
     ;;
   preview)
     FILENAME="ccd-appeal-config-preview-pr${PR_NUMBER}.xlsx"
     CCD_URL="https://ccd-definition-store-ia-case-api-pr-${PR_NUMBER}.preview.platform.hmcts.net"
     GENERATE_CMD="yarn generate -e preview -p ${PR_NUMBER}"
+    TOKEN_ENV="aat"
     ;;
   *)
     echo "Error: Unsupported environment: ${ENV}"
@@ -76,6 +79,7 @@ esac
 echo "Environment: ${ENV}"
 echo "File to upload: ${FILENAME}"
 echo "CCD Definition Store URL: ${CCD_URL}"
+echo "Token Environment: ${TOKEN_ENV}"
 
 # If dry run, exit here
 if [[ "${DRY_RUN}" == "true" ]]; then
@@ -94,6 +98,6 @@ if [ ! -f "${OUTPUT_PATH}" ]; then
   exit 1
 fi
 
-# Upload to CCD
+# Upload to CCD using the appropriate token environment
 echo "Uploading definition file to ${CCD_URL}..."
-bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" 
+bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}" 
