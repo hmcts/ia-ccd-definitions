@@ -262,6 +262,9 @@ For convenience, the following npm scripts are available for direct uploads:
 # Upload to local dev environment (uses CCD docker setup)
 yarn upload
 
+# Alternative upload to local dev environment using the new unified scripts
+yarn upload-local
+
 # Upload to mirrord environment (automatically uses your username)
 yarn upload-mirrord
 
@@ -278,12 +281,23 @@ The upload script dynamically constructs URLs based on the environment and param
 - **Preview**: `https://ccd-definition-store-ia-case-api-pr-${PR_NUMBER}.preview.platform.hmcts.net`
 - **Mirrord**: `https://ccd-definition-store-ia-case-api-${USERNAME}-pr-1.preview.platform.hmcts.net`
 
+### Token Environment Selection
+
+The upload script automatically selects the appropriate token generation method based on the environment:
+
+- **Dev**: Uses local token scripts with `CCD_DOCKER_PATH` if available, or falls back to built-in local scripts
+- **Preview/Mirrord**: Uses AAT token scripts that connect to Azure Key Vault
+
 ### Custom Upload Path
 
 For custom uploads, you can use the `ccd-import-definition.sh` script directly:
 
 ```bash
-bin/utils/ccd-import-definition.sh -f [FILENAME] -u [CCD_DEFINITION_STORE_URL]
+# Upload to local environment
+bin/utils/ccd-import-definition.sh -f [FILENAME] -u [CCD_DEFINITION_STORE_URL] -e local
+
+# Upload to AAT/Preview environment
+bin/utils/ccd-import-definition.sh -f [FILENAME] -u [CCD_DEFINITION_STORE_URL] -e aat
 ```
 
 ### Configuration
