@@ -88,6 +88,8 @@ export = function() {
       for (let i=0; i<noOfTabs; i++) {
           if (await this.grabTextFrom('#mat-tab-label-0-'+i + ' > div') === tabText) {
            await this.click('#mat-tab-label-0-'+i + ' > div');
+
+           // Only works for single flag of detained individual - will need to update if this to be used for mutliple case flags
            this.see(caseFlag);
            this.see(activeInactive.toUpperCase())
            break;
