@@ -284,7 +284,7 @@ class createAppeal {
     } else if (inTime){
         await I.waitForText('The appeal has been submitted',60)
     } else {
-      await I.isCorrectLabelDisplayed(doutOfTimedImageLocator, 'outOfTimeConfirmation');
+      await I.validateCorrectLabelDisplayed(doutOfTimedImageLocator, 'outOfTimeConfirmation');
     }
     await I.wait(5);
   }
