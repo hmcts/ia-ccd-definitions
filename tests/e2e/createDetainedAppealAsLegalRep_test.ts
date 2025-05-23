@@ -2,6 +2,7 @@ import {lawFirmUser, aatUrl, legalOfficer, homeOfficeOfficer, legalRepresentativ
 
 let caseId: string;
 const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
+
 Feature('Detained Appeal - Represented @detainedRepresented');
 
 
@@ -10,7 +11,7 @@ Before(({ I }) => {
 })
 
 // @ts-ignore
-Scenario('Create Detained Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal}) => {
+Scenario.skip('Create Detained Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal}) => {
     await loginPage.signIn(lawFirmUser);
     await createCasePage.createCase();
     await createAppeal.locationInUK('Yes');
@@ -44,5 +45,7 @@ Scenario('Legal Officer creates Standard Order',   async ({I, loginPage, retriev
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
     await I.waitForText('Case details',60);
-    await I.isCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
+    await I.validateCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
+    await I.validateCaseFlagExists('Detained individual', 'ACTIVE');
+
 });

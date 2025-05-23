@@ -74,12 +74,25 @@ export = function() {
       return new Promise(resolve => setTimeout(resolve, ms));
     },
 
-    async isCorrectLabelDisplayed(locator: string, label: string) {
+    async validateCorrectLabelDisplayed(locator: string, label: string) {
       console.log('label>>>', label);
       let src: string = await this.grabAttributeFrom(locator, 'src');
 
       await this.expectContain(src, label, 'Incorrect or missing Label');
-    }
+    },
 
+    async validateCaseFlagExists(caseFlag: string, activeInactive: string = 'ACTIVE') {
+      const noOfTabs: number = await this.grabNumberOfVisibleElements('.mat-tab-label-content');
+      const tabText: string = 'Case flags';
+
+      for (let i=0; i<noOfTabs; i++) {
+          if (await this.grabTextFrom('#mat-tab-label-0-'+i + ' > div') === tabText) {
+           await this.click('#mat-tab-label-0-'+i + ' > div');
+           this.see(caseFlag);
+           this.see(activeInactive.toUpperCase())
+           break;
+         }
+      }
+    }
   });
 }
