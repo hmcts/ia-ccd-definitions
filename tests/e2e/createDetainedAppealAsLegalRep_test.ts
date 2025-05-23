@@ -11,7 +11,7 @@ Before(({ I }) => {
 })
 
 // @ts-ignore
-Scenario.skip('Create Detained Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal}) => {
+Scenario('Create Detained Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal}) => {
     await loginPage.signIn(lawFirmUser);
     await createCasePage.createCase();
     await createAppeal.locationInUK('Yes');
