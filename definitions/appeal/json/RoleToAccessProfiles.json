@@ -1,5 +1,23 @@
 [
   {
+    "RoleName" : "idam:caseworker-ia-caseofficer",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "caseworker-ia-caseofficer,ia_caselinks_profile,ia_caseflags_profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "idam:caseworker-ia-internal",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "caseworker-ia-internal,caseworker-ia-caseofficer",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
     "RoleName" : "idam:caseworker-wa-task-configuration",
     "Authorisation": "",
     "CaseTypeID": "Asylum",
@@ -31,6 +49,15 @@
     "Authorisation": "",
     "CaseTypeID": "Asylum",
     "AccessProfiles": "caseworker-ia-system,ia_caseflags_profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "idam:caseworker-ia-rparobot",
+    "Authorisation": "",
+    "CaseTypeID": "Asylum",
+    "AccessProfiles": "caseworker-ia-rparobot",
     "ReadOnly": "N",
     "Disabled": "F",
     "CaseAccessCategories": ""
