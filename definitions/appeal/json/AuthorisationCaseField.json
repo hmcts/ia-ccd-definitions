@@ -11394,6 +11394,13 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained", "UserRole": "caseworker-wa-task-configuration", "CRUD": "R"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained_cmr", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained_cmr", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained_cmr", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained_cmr", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained_cmr", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained_cmr", "UserRole": "caseworker-wa-task-configuration", "CRUD": "R"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hasPbaAccountsError", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hasPbaAccounts", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
 
@@ -15391,6 +15398,7 @@
 
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "generateListCmrTaskRequested", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "generateListCmrTaskRequested", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "generateListCmrTaskRequested", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "generateListCmrTaskRequested", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "generateListCmrTaskRequested", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
