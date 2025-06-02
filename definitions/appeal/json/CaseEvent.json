@@ -2832,7 +2832,7 @@
     "Description": "Save notifications to data",
     "DisplayOrder": 111,
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
-    "RetriesTimeoutURLAboutToSubmitEvent": "10,10,10,10",
+    "RetriesTimeoutURLAboutToSubmitEvent": "1,1,1,1",
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
     "SecurityClassification": "Public",
@@ -2851,5 +2851,25 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "updateDetentionLocation",
+    "Name": "Update detention location",
+    "Description": "Update the location where the appellant is detained",
+    "DisplayOrder": 120,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Update detention location",
+    "Publish": "Y",
+    "EventEnablingCondition": "appellantInDetention=\"Yes\""
   }
 ]
