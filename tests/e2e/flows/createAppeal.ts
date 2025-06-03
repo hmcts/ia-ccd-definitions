@@ -105,6 +105,11 @@ class createAppeal {
           await this.groundsOfAppeal();
         }
         break;
+      case 'RPS':
+        await I.click('#appealType-revocationOfProtection');
+        await I.clickContinue();
+        await I.click('#appealGroundsRevocation_values-revocationHumanitarianProtection');
+        await I.clickContinue();
     }
   }
 
@@ -225,7 +230,7 @@ class createAppeal {
     await I.clickContinue();
   }
 
-  async setLegsRepresentatibecDetails() {
+  async setLegalRepresentativeDetails() {
     await I.fillField('#legalRepCompany', legalRepresentative.company);
     await I.fillField('#legalRepName', legalRepresentative.name);
     await I.fillField('#legalRepFamilyName', legalRepresentative.familyName);
@@ -236,9 +241,9 @@ class createAppeal {
 
   async isHearingRequired(hearingRequired: boolean = true) {
     if (hearingRequired) {
-      await I.click('#decisionHearingFeeOption-decisionWithHearing');
+      await I.click("//input[contains(@id,'decisionWithHearing')]");
     } else {
-      await I.click('#decisionHearingFeeOption-decisionWithoutHearing');
+      await I.click("//input[contains(@id,decisionWithoutHearing')]");
     }
     await I.clickContinue();
   }

@@ -12,6 +12,8 @@ Before(({ I }) => {
 
 // @ts-ignore
 Scenario('Create Detained Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal}) => {
+    const typeOfAppeal: string = 'RPS';
+
     await loginPage.signIn(lawFirmUser);
     await createCasePage.createCase();
     await createAppeal.locationInUK('Yes');
@@ -19,7 +21,7 @@ Scenario('Create Detained Appeal as Legal Representative',   async ({I, loginPag
     await createAppeal.setDetentionLocation('immigration');
     await createAppeal.setHomeOfficeSetails(true);
     await createAppeal.uploadNoticeOfDecision();
-    await createAppeal.setTypeOfAppeal();
+    await createAppeal.setTypeOfAppeal(typeOfAppeal);
     await createAppeal.setAppellantBasicDetails(false);
     await createAppeal.setNationality(true);
     await createAppeal.hasSponsor('Yes');
@@ -27,9 +29,13 @@ Scenario('Create Detained Appeal as Legal Representative',   async ({I, loginPag
     await createAppeal.hasRemovalDirections('Yes');
     await createAppeal.hasNewMatters('Yes');
     await createAppeal.hasOtherAppeals('No');
-    await createAppeal.setLegsRepresentatibecDetails();
+    await createAppeal.setLegalRepresentativeDetails();
     await createAppeal.isHearingRequired(true);
-    await createAppeal.hasFeeRemission('No');
+
+    if (typeOfAppeal !== 'RPS') {
+        await createAppeal.hasFeeRemission('No');
+    }
+
     await createAppeal.checkMyAnswers();
 
     caseId = await I.grabCaseNumber();

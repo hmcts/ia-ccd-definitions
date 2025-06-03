@@ -33,7 +33,7 @@ Scenario('Create Detained Appeal as Legal Admin - ' + (inTime ? 'In Time' : 'Out
     await createAppeal.hasRemovalDirections('No');
     // await createAppeal.hasNewMatters('Yes');
     await createAppeal.hasOtherAppeals('No');
-    // await createAppeal.setLegsRepresentatibecDetails();
+    // await createAppeal.setLegalRepresentativeDetails();
     await createAppeal.isHearingRequired(true);
     await createAppeal.hasFeeRemission('No');
 
