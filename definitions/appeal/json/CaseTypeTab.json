@@ -929,7 +929,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "hasCorrespondenceAddress", "TabFieldDisplayOrder": 45, "FieldShowCondition": "hasCorrespondenceAddress=\"No\" AND appealOutOfCountry!=\"No\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantOutOfCountryAddress", "TabFieldDisplayOrder": 50,  "FieldShowCondition": "hasCorrespondenceAddress=\"Yes\" AND appealOutOfCountry!=\"No\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantHasFixedAddress", "TabFieldDisplayOrder": 55},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantAddress", "TabFieldDisplayOrder": 60, "FieldShowCondition": "isAdmin!=\"Yes\" OR isAdmin=\"Yes\" AND appellantInUk=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantAddress", "TabFieldDisplayOrder": 60, "FieldShowCondition": "isAdmin!=\"Yes\" OR isAdmin=\"Yes\" AND appellantInUk=\"Yes\" AND \"appellantInDetention!=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "addressLine1AdminJ", "TabFieldDisplayOrder": 60, "FieldShowCondition": "appellantInUk=\"No\" AND isAdmin=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "addressLine2AdminJ", "TabFieldDisplayOrder": 61, "FieldShowCondition": "appellantInUk=\"No\" AND isAdmin=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "addressLine3AdminJ", "TabFieldDisplayOrder": 62, "FieldShowCondition": "appellantInUk=\"No\" AND isAdmin=\"Yes\""},
