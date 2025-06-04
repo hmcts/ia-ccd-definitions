@@ -19,7 +19,7 @@ Scenario('Create Detained Appeal as Legal Representative',   async ({I, loginPag
     await createAppeal.locationInUK('Yes');
     await createAppeal.inDetention('Yes');
     await createAppeal.setDetentionLocation('immigration');
-    await createAppeal.setHomeOfficeSetails(true);
+    await createAppeal.setHomeOfficeDetails(true);
     await createAppeal.uploadNoticeOfDecision();
     await createAppeal.setTypeOfAppeal(typeOfAppeal);
     await createAppeal.setAppellantBasicDetails(false);

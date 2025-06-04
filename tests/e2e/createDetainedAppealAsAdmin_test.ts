@@ -22,7 +22,7 @@ Scenario('Create Detained Appeal as Legal Admin - ' + (inTime ? 'In Time' : 'Out
     await createAppeal.locationInUK('Yes');
     await createAppeal.inDetention('Yes');
     await createAppeal.setDetentionLocation('immigration');
-    await createAppeal.setHomeOfficeSetails(inTime);
+    await createAppeal.setHomeOfficeDetails(inTime);
     await createAppeal.uploadNoticeOfDecision();
     await createAppeal.setTypeOfAppeal();
     await createAppeal.setAppellantBasicDetails(true);

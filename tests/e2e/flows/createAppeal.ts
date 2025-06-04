@@ -69,7 +69,7 @@ class createAppeal {
     await I.clickContinue();
   }
 
-  async setHomeOfficeSetails(inTime: boolean = true) {
+  async setHomeOfficeDetails(inTime: boolean = true) {
     let homeOfficeLetterDate;
     if (inTime) {
       homeOfficeLetterDate = moment().subtract(5, 'days');
