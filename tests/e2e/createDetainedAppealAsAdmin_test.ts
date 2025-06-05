@@ -1,4 +1,4 @@
-import {aatUrl, legalAdmin} from './detainedConfig'
+import {envUrl, legalAdmin} from './detainedConfig'
 
 let caseId: string;
 let inTime: boolean = true;
@@ -7,7 +7,7 @@ Feature('Detained Appeal - Legal Admin @detainedLegalAdmin');
 
 
 Before(({ I }) => {
-    I.amOnPage(aatUrl);
+    I.amOnPage(envUrl);
 })
 
 // @ts-ignore
@@ -39,7 +39,7 @@ Scenario('Create Detained Appeal as Legal Admin - ' + (inTime ? 'In Time' : 'Out
 
     await createAppeal.uploadAppealDocs();
     await createAppeal.checkMyAnswers();
-    await I.clickButtonOrLink('Close and Return to case details');
+    await I.clickCloseAndReturnToCaseDetails();
     //
 
     caseId = await I.grabCaseNumber();

@@ -1,11 +1,11 @@
-import {lawFirmUser, aatUrl} from './detainedConfig'
+import {lawFirmUser, envUrl} from './detainedConfig'
 
 
 Feature('Smoke Test @smoke');
 
 Before(({ I }) => {
     // or Background
-    I.amOnPage(aatUrl);
+    I.amOnPage(envUrl);
 })
 
 // @ts-ignore

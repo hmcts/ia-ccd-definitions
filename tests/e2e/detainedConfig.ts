@@ -1,4 +1,4 @@
-export const aatUrl = 'https://xui-ia-case-api-pr-2525.preview.platform.hmcts.net';
+export const envUrl = 'https://xui-ia-case-api-pr-2525.preview.platform.hmcts.net';
 
 export const lawFirmUser = {
     email:"ialegalreporgcreator12@mailnesia.com",

@@ -28,11 +28,29 @@ export = function() {
       await this.retryUntilUrlChanges(() => this.forceClick(signInButton), urlBefore);
     },
 
+    async clickSubmit() {
+      let urlBefore = await this.grabCurrentUrl();
+      await this.retryUntilUrlChanges(() => this.forceClick('Submit'), urlBefore);
+    },
+
+    async clickCloseAndReturnToCaseDetails() {
+      let urlBefore = await this.grabCurrentUrl();
+      await this.retryUntilUrlChanges(() => this.forceClick('Close and Return to case details'), urlBefore);
+    },
+
+    async clickSendDirection() {
+      let urlBefore = await this.grabCurrentUrl();
+      await this.retryUntilUrlChanges(() => this.forceClick('Send direction'), urlBefore);
+    },
+
     async clickButtonOrLink(buttonOrLinkText: string) {
       let urlBefore = await this.grabCurrentUrl();
       await this.retryUntilUrlChanges(() => this.forceClick(buttonOrLinkText), urlBefore);
     },
 
+    async clickButtonOrLinkWithoutRetry(buttonOrLinkText: string) {
+      await this.forceClick(buttonOrLinkText);
+    },
 
     async grabCaseNumber() {
       await this.waitForElement('.alert-message');
@@ -82,19 +100,34 @@ export = function() {
     },
 
     async validateCaseFlagExists(caseFlag: string, activeInactive: string = 'ACTIVE') {
+      const tabName: string = 'Case flags';
+      await this.selectTab(tabName);
+      // Only works for single flag of detained individual - will need to update if this to be used for mutliple case flags
+      this.see(caseFlag);
+      this.see(activeInactive.toUpperCase())
+    },
+
+    async selectTab(tabName: string) {
+      const tabLabel: string = 'mat-tab-label-';
       const noOfTabs: number = await this.grabNumberOfVisibleElements('.mat-tab-label-content');
-      const tabText: string = 'Case flags';
 
-      for (let i=0; i<noOfTabs; i++) {
-          if (await this.grabTextFrom('#mat-tab-label-0-'+i + ' > div') === tabText) {
-           await this.click('#mat-tab-label-0-'+i + ' > div');
+      // as the tab group number changes dependent on the journey we need to ascertain this before
+      // we can try and select the relevant tab
+      // ie when tabs are displayed after appeal submission they are labelled: #mat-tab-label-0
+      // after creating a service request they are labelled: #mat-tab-label-2
 
-           // Only works for single flag of detained individual - will need to update if this to be used for mutliple case flags
-           this.see(caseFlag);
-           this.see(activeInactive.toUpperCase())
-           break;
-         }
+      let tabId = await this.grabAttributeFrom('.mat-tab-labels > div', 'id');
+      let tabGroupNumber = (tabId.split(tabLabel)[1]).split('-')[0];
+
+      for (let i = 0; i < noOfTabs; i++) {
+        let tabLocator: string = `#${tabLabel}${tabGroupNumber}-${i} > div`;
+
+        if (await this.grabTextFrom(tabLocator) === tabName) {
+          await this.click(tabLocator)
+          break;
+        }
       }
-    }
+    },
+
   });
 }

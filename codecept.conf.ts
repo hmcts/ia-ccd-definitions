@@ -28,11 +28,13 @@ export const config: CodeceptJS.MainConfig = {
   },
   include: {
     I: './steps_file',
-    loginPage: './tests/e2e/pages/login.ts',
-    createCasePage: './tests/e2e/pages/createCase.ts',
+    loginPage: './tests/e2e/pages/login_page.ts',
+    createCasePage: './tests/e2e/pages/createCase_page.ts',
     createAppeal: './tests/e2e/flows/createAppeal.ts',
-    retrieveCase: './tests/e2e/pages/retrieveCase.ts',
-    createStandarOrder: './tests/e2e/flows/createStandardOrder.ts',
+    serviceRequestPage: './tests/e2e/pages/serviceRequest_page.ts',
+    paymentPage: './tests/e2e/pages/payment_page.ts',
+    retrieveCase: './tests/e2e/pages/retrieveCase_page.ts',
+    createStandardOrder: './tests/e2e/flows/createStandardOrder.ts',
   },
   mocha:     {
     reporterOptions: {
