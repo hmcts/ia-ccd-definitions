@@ -37,6 +37,7 @@ export const config: CodeceptJS.MainConfig = {
     retrieveCase: './tests/e2e/pages/retrieveCase_page.ts',
     createDirection: './tests/e2e/flows/createDirection.ts',
     homeOffice: './tests/e2e/pages/uploadHomeOfficeBundle_page.ts',
+    markAppealAsDetained: './tests/e2e/flows/events/markAppealAsDetained.ts',
   },
   mocha:     {
     reporterOptions: {

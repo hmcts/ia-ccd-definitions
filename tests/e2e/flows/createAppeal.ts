@@ -1,4 +1,4 @@
-import moment, {Moment} from "moment/moment";
+import moment from "moment/moment";
 import {appellant, legalRepresentative, sponsor} from '../detainedConfig'
 
 const { I } = inject();
@@ -44,7 +44,6 @@ class createAppeal {
   async setDetentionLocation(detentionLocation: string = 'immigration') {
     switch (detentionLocation) {
       case 'immigration':
-        console.log('immigration');
         await I.click('#detentionFacility-immigrationRemovalCentre');
         await I.clickContinue();
         await this.setDetentionCentre();
@@ -55,7 +54,6 @@ class createAppeal {
       case 'other':
         break;
     }
-
   }
 
    async setDetentionCentre() {
@@ -120,6 +118,30 @@ class createAppeal {
     await I.clickContinue();
   }
 
+  // appellant contact preference: non-detained journey only
+  async setAppellentContactPreference(preference: string = 'EMAIL') {
+    if (preference === 'EMAIL') {
+      await I.click('#contactPreference-wantsEmail');
+      await I.fillField('#email', appellant.email);
+    } else {
+      await I.click('#contactPreference-wantsSms');
+      await I.fillField('#mobileNumber', appellant.mobile);
+    }
+    await I.clickContinue();
+  }
+
+  // appellant address: non-detained journey only
+  async setAppellentsAddress(hasPostalAddress: string = 'Yes') {
+    await I.click(`#appellantHasFixedAddress_${hasPostalAddress}`);
+    if (hasPostalAddress === 'Yes') {
+      await I.click('//*[@id="appellantAddress_appellantAddress"]/div/a');
+      await I.fillField('#appellantAddress__detailAddressLine1', appellant.address.addressLine1);
+      await I.fillField('#appellantAddress__detailPostTown', appellant.address.postTown);
+      await I.fillField('#appellantAddress__detailPostCode', appellant.address.postcode);
+      await I.fillField('#appellantAddress__detailCountry', appellant.address.country);
+    }
+    await I.clickContinue();
+}
 
   async groundsOfAppeal() {
     await I.click('#appealGroundsEuRefusal_values-appealGroundsEuRefusal');
@@ -164,7 +186,6 @@ class createAppeal {
     await I.fillField('#sponsorGivenNames', sponsor.givenNames);
     await I.fillField('#sponsorFamilyName', sponsor.familyName);
     await I.clickContinue();
-
     await I.click('//*[@id="sponsorAddress_sponsorAddress"]/div/a');
     await I.fillField('#sponsorAddress__detailAddressLine1', sponsor.address.addressLine1);
     await I.fillField('#sponsorAddress__detailPostTown', sponsor.address.postTown);
@@ -301,5 +322,5 @@ class createAppeal {
 }
 
 // For inheritance
-//module.exports = new detentionPage();
+//module.exports = new createAppeal();
 export = createAppeal;

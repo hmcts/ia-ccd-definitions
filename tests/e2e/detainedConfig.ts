@@ -22,13 +22,19 @@ export const homeOfficeOfficer = {
 
 
 export const appellant = {
-    title: 'Mt',
+    title: 'Mr',
     givenNames: 'David',
     familyName: 'Smith',
     dob: {
         day: 10,
         month: 6,
         year: 1990
+    },
+    address: {
+        addressLine1: 'Buckingham Palace',
+        postTown: 'London',
+        postcode: 'SW1A 1AA',
+        country: 'United Kingdom'
     },
     mobile: '07890667755',
     email: 'appellantEmail@test.com',

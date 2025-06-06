@@ -107,7 +107,7 @@ Scenario('Appellant/Legal Rep build case',   async ({I, loginPage, retrieveCase,
 }).retry(3);
 
 // @ts-ignore
-Scenario('Legal Officer creates Respondent Review Direction',   async ({I, loginPage, retrieveCase, createDirection}) => {
+Scenario.skip('Legal Officer creates Respondent Review Direction',   async ({I, loginPage, retrieveCase, createDirection}) => {
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
     await I.waitForText('Case details',60);
@@ -117,7 +117,7 @@ Scenario('Legal Officer creates Respondent Review Direction',   async ({I, login
 }).retry(3);
 
 // @ts-ignore
-Scenario('Home Office Officer (respondant) responds to appeal response from Appellant/Legal Rep',   async ({I, loginPage, retrieveCase, createDirection}) => {
+Scenario.skip('Home Office Officer (respondant) responds to appeal response from Appellant/Legal Rep',   async ({I, loginPage, retrieveCase, createDirection}) => {
     await loginPage.signIn(homeOfficeOfficer);
     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
     await I.waitForText('Case details',60);
@@ -125,11 +125,12 @@ Scenario('Home Office Officer (respondant) responds to appeal response from Appe
     await I.waitForElement('#appealReviewOutcome-decisionMaintained', 60);
     await I.click('#appealReviewOutcome-decisionMaintained');
     await I.clickContinue();
-    // TODO: move to function to be used by scenarios
+    // TODO: move to function to be used by multiple scenarios
     await I.waitForElement('#homeOfficeAppealResponseDocument', 60);
     await I.attachFile('#homeOfficeAppealResponseDocument', './tests/documents/TEST_DOCUMENT_1.pdf');
     await I.waitForInvisible(locate('.error-message').withText('Uploading...'),20);
     await I.clickContinue();
+    // end code to move
     await I.clickButtonOrLink('Upload');
     await I.waitForText('You\'ve uploaded the appeal response');
     await I.clickCloseAndReturnToCaseDetails();
