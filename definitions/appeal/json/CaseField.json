@@ -8191,6 +8191,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionPostcode", "Label": "Postcode/Zipcode", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantDetainedDate", "Label": "When was the appellant detained?", "HintText": "For example, 03 04 2023", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addReasonAppellantWasDetained", "Label": "Reason appellant was detained", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addReasonAppellantWasDetained", "Label": "Reason appellant was detained", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionRemovalDate", "Label": "When was the appellant removed from detention?", "HintText": "For example, 03 04 2023", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionRemovalReason", "Label": "Reasons the appellant was removed from detention", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"}
 
 ]
