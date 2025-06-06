@@ -65,6 +65,7 @@ class paymentPage {
       // To work around this for the moment will force the navigation back to the overview tab
       // in preview environment
       await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
+      await I.wait(5);
     }
   }
 }

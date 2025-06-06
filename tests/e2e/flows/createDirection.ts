@@ -1,7 +1,7 @@
 import moment, {Moment} from "moment/moment";
 
 const { I } = inject();
-class createStandardOrder {
+class createDirection {
 
     constructor() {
         //insert your locators
@@ -29,8 +29,16 @@ class createStandardOrder {
         await I.expectDeepEqual(complyDate, todayPlusDays, `Request respondence evidence comply date should be ${daysToAdd} days from today: ${todayPlusDays}.`);
     }
 
+    async confirmAndSubmitCaseBuildingDirection() {
+        await I.waitForText('Explain the direction you are issuing', 60);
+        await I.clickContinue();
+        await I.clickSendDirection();
+        await I.waitForText('You have sent a direction');
+        await I.clickCloseAndReturnToCaseDetails();
+    }
+
 }
 
 // For inheritance
 //module.exports = new detentionPage();
-export = createStandardOrder;
+export = createDirection;

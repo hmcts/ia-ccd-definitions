@@ -13,6 +13,7 @@ export const config: CodeceptJS.MainConfig = {
   helpers: {
       Playwright: {
       browser: 'chromium',
+      restart: true,
       url: 'https://www.google.co.uk',
       show: true,
       ignoreHTTPSErrors: true,
@@ -34,7 +35,8 @@ export const config: CodeceptJS.MainConfig = {
     serviceRequestPage: './tests/e2e/pages/serviceRequest_page.ts',
     paymentPage: './tests/e2e/pages/payment_page.ts',
     retrieveCase: './tests/e2e/pages/retrieveCase_page.ts',
-    createStandardOrder: './tests/e2e/flows/createStandardOrder.ts',
+    createDirection: './tests/e2e/flows/createDirection.ts',
+    homeOffice: './tests/e2e/pages/uploadHomeOfficeBundle_page.ts',
   },
   mocha:     {
     reporterOptions: {

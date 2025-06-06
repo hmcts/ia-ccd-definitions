@@ -28,6 +28,12 @@ export = function() {
       await this.retryUntilUrlChanges(() => this.forceClick(signInButton), urlBefore);
     },
 
+    async clickSignOut() {
+      let urlBefore = await this.grabCurrentUrl();
+      await this.retryUntilUrlChanges(() => this.forceClick('Sign out'), urlBefore);
+    },
+
+
     async clickSubmit() {
       let urlBefore = await this.grabCurrentUrl();
       await this.retryUntilUrlChanges(() => this.forceClick('Submit'), urlBefore);
@@ -103,8 +109,9 @@ export = function() {
       const tabName: string = 'Case flags';
       await this.selectTab(tabName);
       // Only works for single flag of detained individual - will need to update if this to be used for mutliple case flags
-      this.see(caseFlag);
-      this.see(activeInactive.toUpperCase())
+      await this.see(caseFlag);
+      await this.see(activeInactive.toUpperCase())
+      console.log('validating case flag - success');
     },
 
     async selectTab(tabName: string) {
@@ -128,6 +135,11 @@ export = function() {
         }
       }
     },
+
+    async logout() {
+      await this.clickSignOut();
+      await this.waitForElement('#username');
+    }
 
   });
 }
