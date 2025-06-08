@@ -833,6 +833,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "deportationOrderOptions", "TabFieldDisplayOrder": 163, "FieldShowCondition": "deportationOrderOptions!=\"\" AND outOfCountryDecisionType!=\"refusalOfHumanRights\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "removalOrderOptions", "TabFieldDisplayOrder": 164, "FieldShowCondition": "removalOrderOptions!=\"\" AND appealOutOfCountry=\"No\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "removalOrderDate", "TabFieldDisplayOrder": 165, "FieldShowCondition": "removalOrderDate!=\"\" AND appealOutOfCountry=\"No\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "appellantDetainedDate", "TabFieldDisplayOrder": 165, "FieldShowCondition": "appellantDetainedDate!=\"\" AND appealOutOfCountry=\"No\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "addReasonAppellantWasDetained", "TabFieldDisplayOrder": 165, "FieldShowCondition": "addReasonAppellantWasDetained!=\"\" AND appealOutOfCountry=\"No\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "detentionDetailsTitle", "TabFieldDisplayOrder": 166, "FieldShowCondition": "appealOutOfCountry=\"No\""},
 

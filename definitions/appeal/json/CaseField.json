@@ -6938,7 +6938,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantBasicDetailsTitleAdminJ", "Label": " \r\nEnter the appellant's basic details.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantAddressLabel", "Label": " \r\nWe'll use this to work out which hearing centre is best for them.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTypeTitleUnrep", "Label": " \r\nIf the appellant has ticked more than one appeal type on the form, review the Notice of Decision to determine the primary appeal type.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "internalContactDetailsTitle", "Label": "Enter the appellant's contact details.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
@@ -8195,5 +8194,9 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionBuilding", "Label": "Building", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionAddressLines", "Label": "Address", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionPostcode", "Label": "Postcode/Zipcode", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionPostcode", "Label": "Postcode/Zipcode", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantDetainedDate", "Label": "When was the appellant detained?", "HintText": "For example, 03 04 2023", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addReasonAppellantWasDetained", "Label": "Reason appellant was detained", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"}
+
 ]
