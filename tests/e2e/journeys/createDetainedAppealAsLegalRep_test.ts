@@ -1,9 +1,10 @@
 import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative} from '../detainedConfig'
 
-
-let caseId: string;
+// @ts-ignore
+let caseId: string = '1749483729677692';
 
 const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
+const detainedRepresentedS94bImageLocator: string = '//*[@id="journey_type_legal_rep_detained_s9"]/dt/ccd-markdown/div/markdown/p/img';
 
 Feature('Detained Appeal - Represented @detainedRepresented');
 
@@ -56,11 +57,13 @@ Scenario('Create Detained Appeal as Legal Representative',   async ({I, loginPag
 
 
 // @ts-ignore
-Scenario('Legal Officer creates Respondent Direction',   async ({I, loginPage, retrieveCase, createDirection}) => {
+Scenario('Legal Officer creates adds s94b appeal status and Respondent Direction',   async ({I, loginPage, retrieveCase, createDirection, s94b}) => {
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
     await I.waitForText('Case details',60);
     await I.validateCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
+    await s94b.setStatus('Yes');
+    await I.validateCorrectLabelDisplayed(detainedRepresentedS94bImageLocator, 'legalRep_detained_s9');
     await I.validateCaseFlagExists('Detained individual', 'ACTIVE');
     await I.selectNextStep('Request respondent evidence');
     await createDirection.confirmAndSubmitRespondentDirection();
