@@ -1,4 +1,4 @@
-import {envUrl, legalAdmin} from './detainedConfig'
+import {envUrl, legalAdmin} from '../detainedConfig'
 
 let caseId: string;
 let inTime: boolean = true;

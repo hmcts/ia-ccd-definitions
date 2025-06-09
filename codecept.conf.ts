@@ -8,7 +8,7 @@ setHeadlessWhen(process.env.HEADLESS);
 setCommonPlugins();
 
 export const config: CodeceptJS.MainConfig = {
-  tests: './tests/e2e/*_test.ts',
+  tests: './tests/e2e/journeys/*_test.ts',
   output: './output',
   helpers: {
       Playwright: {

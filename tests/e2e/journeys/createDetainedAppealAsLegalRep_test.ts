@@ -1,4 +1,4 @@
-import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative} from './detainedConfig'
+import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative} from '../detainedConfig'
 
 
 let caseId: string;
@@ -107,7 +107,7 @@ Scenario('Appellant/Legal Rep build case',   async ({I, loginPage, retrieveCase,
 }).retry(3);
 
 // @ts-ignore
-Scenario.skip('Legal Officer creates Respondent Review Direction',   async ({I, loginPage, retrieveCase, createDirection}) => {
+Scenario('Legal Officer creates Respondent Review Direction',   async ({I, loginPage, retrieveCase, createDirection}) => {
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
     await I.waitForText('Case details',60);
@@ -117,7 +117,7 @@ Scenario.skip('Legal Officer creates Respondent Review Direction',   async ({I, 
 }).retry(3);
 
 // @ts-ignore
-Scenario.skip('Home Office Officer (respondant) responds to appeal response from Appellant/Legal Rep',   async ({I, loginPage, retrieveCase, createDirection}) => {
+Scenario('Home Office Officer (respondant) responds to appeal response from Appellant/Legal Rep',   async ({I, loginPage, retrieveCase, createDirection}) => {
     await loginPage.signIn(homeOfficeOfficer);
     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
     await I.waitForText('Case details',60);
@@ -136,12 +136,3 @@ Scenario.skip('Home Office Officer (respondant) responds to appeal response from
     await I.clickCloseAndReturnToCaseDetails();
     await I.logout();
 }).retry(3);
-
-
-// @ts-ignore
-Scenario.skip('test',   async ({I, loginPage, paymentPage}) => {
-    await loginPage.signIn(lawFirmUser);
-    await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
-    await I.waitForText('Case details',60);
-    await paymentPage.makePayment('CC');
-});

@@ -1,7 +1,7 @@
-import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative} from './detainedConfig'
+import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative} from '../detainedConfig'
 
 
-let caseId: string = '1749220506621430';
+let caseId: string;
 
 const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
 
@@ -13,7 +13,7 @@ Before(({ I }) => {
 })
 
 // @ts-ignore
-Scenario.skip('Create Non-Detained Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal, serviceRequestPage, paymentPage}) => {
+Scenario('Create Non-Detained Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal, serviceRequestPage, paymentPage}) => {
     const typeOfAppeal: string = 'EEA';
 
     await loginPage.signIn(lawFirmUser);
