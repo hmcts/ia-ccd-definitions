@@ -60,7 +60,7 @@
         "upload-preview": "bin/utils/upload-ccd.sh -e preview -p $PR_NUMBER",
         "create-state-diagram": "generateStateDiagram ./definitions/appeal/json/ -s=ended,appealTakenOffline -e=shareACase",
         "codeceptjs": "codeceptjs run --steps",
-        "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
+        "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps"
     },
     "dependencies": {
         "@codeceptjs/expect-helper": "^1.0.2",
