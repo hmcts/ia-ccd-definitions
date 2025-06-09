@@ -7,9 +7,9 @@ const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep
 
 Feature('Detained Appeal - Represented @detainedRepresented');
 
-
-Before(({ I }) => {
-    I.amOnPage(envUrl);
+// @ts-ignore
+Before(async({ I }) => {
+    await I.amOnPage(envUrl);
 })
 
 // @ts-ignore
