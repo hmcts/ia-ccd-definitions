@@ -91,6 +91,12 @@ fi
 echo "Generating definition file for ${ENV} environment..."
 ${GENERATE_CMD}
 
+# Run validation scripts
+echo "Running validation checks..."
+node bin/case-event-to-fields-duplicate-checker.js
+node bin/check-missing-system-user-fields.js
+node bin/auth-casefield-duplicate-checker.js
+
 # Check if file exists before uploading
 OUTPUT_PATH="target/appeal/xlsx/${FILENAME}"
 if [ ! -f "${OUTPUT_PATH}" ]; then
