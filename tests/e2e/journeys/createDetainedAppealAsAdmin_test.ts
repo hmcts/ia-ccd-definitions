@@ -6,8 +6,8 @@ let inTime: boolean = true;
 Feature('Detained Appeal - Legal Admin @detainedLegalAdmin');
 
 
-Before(({ I }) => {
-    I.amOnPage(envUrl);
+Before(async({ I }) => {
+    await I.amOnPage(envUrl);
 })
 
 // @ts-ignore
