@@ -3,7 +3,7 @@ import {envUrl, legalAdmin} from '../detainedConfig'
 let caseId: string;
 let inTime: boolean = true;
 
-Feature('Detained Appeal - Legal Admin @detainedLegalAdmin');
+Feature('Detained Appeal - Legal Admin @LegalAdminDetainedAppellantInPerson');
 
 
 Before(async({ I }) => {
@@ -11,7 +11,7 @@ Before(async({ I }) => {
 })
 
 // @ts-ignore
-Scenario('Create Detained Appeal as Legal Admin - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({I, loginPage, createCasePage, createAppeal}) => {
+Scenario('Create Detained Appeal - Appellant In Person as Legal Admin - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({I, loginPage, createCasePage, createAppeal}) => {
     await loginPage.signIn(legalAdmin);
     await createCasePage.createCase();
 
@@ -22,6 +22,7 @@ Scenario('Create Detained Appeal as Legal Admin - ' + (inTime ? 'In Time' : 'Out
     await createAppeal.locationInUK('Yes');
     await createAppeal.inDetention('Yes');
     await createAppeal.setDetentionLocation('immigration');
+    await createAppeal.setBailApplication('No');
     await createAppeal.setHomeOfficeDetails(inTime);
     await createAppeal.uploadNoticeOfDecision();
     await createAppeal.setTypeOfAppeal();

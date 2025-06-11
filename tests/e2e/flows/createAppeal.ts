@@ -41,17 +41,26 @@ class createAppeal {
     await I.clickContinue();
   }
 
-  async setDetentionLocation(detentionLocation: string = 'immigration') {
+  async setDetentionLocation(detentionLocation: string = 'immigrationRemovalCentre', hasCustodialSentence: string = 'Yes') {
     switch (detentionLocation) {
-      case 'immigration':
-        await I.click('#detentionFacility-immigrationRemovalCentre');
+      case 'immigrationRemovalCentre':
+        await I.click(`#detentionFacility-${detentionLocation}`);
         await I.clickContinue();
         await this.setDetentionCentre();
-        await this.bailApplication('No');
         break;
       case 'prison':
+        await I.click(`#detentionFacility-${detentionLocation}`);
+        await I.waitForElement(`#prisonNOMSNumber_${detentionLocation}`);
+        await I.fillField('#prisonNOMSNumber_prison','567890')
+        await I.clickContinue();
+        await I.selectOption('#prisonName', 'HM Prison Belmarsh');
+        await I.clickContinue();
         break;
       case 'other':
+        await I.click(`#detentionFacility-${detentionLocation}`);
+        await I.waitForVisible('#otherDetentionFacilityName_other', 60);
+        await I.fillField('#otherDetentionFacilityName_other', 'Other facility test');
+        await I.clickContinue();
         break;
     }
   }
@@ -61,9 +70,26 @@ class createAppeal {
     await I.clickContinue();
   }
 
-  async bailApplication(bail: string = "No") {
+  async setCustodialSentence(hasCustodialSentence: string = 'Yes') {
+    await I.click(`#releaseDateProvided_${hasCustodialSentence}`);
+
+    if (hasCustodialSentence === 'Yes') {
+      const todayPlus60days = moment().add(60, 'days');
+
+      await I.fillField('#releaseDate-day', todayPlus60days.date());
+      await I.fillField('#releaseDate-month', todayPlus60days.month()+1);
+      await I.fillField('#releaseDate-year', todayPlus60days.year());
+      await I.clickContinue();
+    }
+  }
+
+  async setBailApplication(bail: string = "No") {
     // TODO: Needs other options added
-    await I.click('#hasPendingBailApplications-No');
+    await I.click(`#hasPendingBailApplications-${bail}`);
+    if (bail === 'Yes') {
+      await I.waitForElement('#bailApplicationNumber', 60);
+      await I.fillField('#bailApplicationNumber', 'AB/01234');
+    }
     await I.clickContinue();
   }
 
@@ -108,6 +134,24 @@ class createAppeal {
         await I.clickContinue();
         await I.click('#appealGroundsRevocation_values-revocationHumanitarianProtection');
         await I.clickContinue();
+        break;
+      case 'RHR':
+        await I.click('#appealType-refusalOfHumanRights');
+        await I.clickContinue();
+        await I.click('#appealGroundsDecisionHumanRightsRefusal_values-humanRightsRefusal');
+        await I.clickContinue();
+        break;
+      case 'DC':
+        await I.click('#appealType-deprivation');
+        await I.clickContinue();
+        await I.checkOption('#appealGroundsDeprivation_values-disproportionateDeprivation');
+        await I.clickContinue();
+        break;
+      case 'EU':
+        await I.click('#appealType-euSettlementScheme');
+        await I.clickContinue();
+        break;
+
     }
   }
 
@@ -240,7 +284,7 @@ class createAppeal {
   async hasNewMatters(hasMatters: string = 'No') {
     await I.click(`#hasNewMatters_${hasMatters}`);
     if (hasMatters === 'Yes') {
-      await I.fillField('#newMatters', 'New mateers test text.');
+      await I.fillField('#newMatters', 'New matters test text.');
     }
     await I.clickContinue();
   }
@@ -307,7 +351,7 @@ class createAppeal {
 
     await I.clickSubmit();
 
-    if (legalRepDeclaration) {
+    if (legalRepDeclaration && inTime) {
       await I.waitForText('Your appeal has been submitted',60)
     } else if (inTime){
         await I.waitForText('The appeal has been submitted',60)

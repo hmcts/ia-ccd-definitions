@@ -1,12 +1,14 @@
 import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative} from '../detainedConfig'
 
 // @ts-ignore
-let caseId: string = '1749483729677692';
+let caseId: string;
+let inTime: boolean = false;
 
 const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
 const detainedRepresentedS94bImageLocator: string = '//*[@id="journey_type_legal_rep_detained_s9"]/dt/ccd-markdown/div/markdown/p/img';
 
-Feature('Detained Appeal - Represented @detainedRepresented');
+
+Feature('Detained Appeal - Represented @LegalRepDetainedRepresented');
 
 // @ts-ignore
 Before(async({ I }) => {
@@ -14,15 +16,25 @@ Before(async({ I }) => {
 })
 
 // @ts-ignore
-Scenario('Create Detained Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal, serviceRequestPage, paymentPage}) => {
-    const typeOfAppeal: string = 'EEA';
+Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time'),   async ({I, loginPage, createCasePage, createAppeal, serviceRequestPage, paymentPage}) => {
+    const typeOfAppeal: string = 'EEA'; // Refusal under EEA regulations
+    //const typeOfAppeal: string = 'RHR'; // Refusal human rights
+    //const typeOfAppeal: string  = 'DC'; // Deprivation of citizenship
+    //const typeOfAppeal: string  = 'EU'; // Refusal of application under the EU Settlement Scheme
+    const detentionLocation: string = 'immigrationRemovalCentre';
 
     await loginPage.signIn(lawFirmUser);
     await createCasePage.createCase();
     await createAppeal.locationInUK('Yes');
     await createAppeal.inDetention('Yes');
-    await createAppeal.setDetentionLocation('immigration');
-    await createAppeal.setHomeOfficeDetails(true);
+    await createAppeal.setDetentionLocation('detentionLocation');
+
+    if (detentionLocation === 'prison') {
+        await createAppeal.setCustodialSentence('Yes');
+    }
+
+    await createAppeal.setBailApplication('No');
+    await createAppeal.setHomeOfficeDetails(inTime);
     await createAppeal.uploadNoticeOfDecision();
     await createAppeal.setTypeOfAppeal(typeOfAppeal);
     await createAppeal.setAppellantBasicDetails(false);
@@ -35,7 +47,7 @@ Scenario('Create Detained Appeal as Legal Representative',   async ({I, loginPag
     await createAppeal.setLegalRepresentativeDetails();
     await createAppeal.isHearingRequired(true);
 
-    if (typeOfAppeal !== 'RPS') {
+    if (typeOfAppeal !== 'RPS' && typeOfAppeal !== 'DC') {
         await createAppeal.hasFeeRemission('No');
     }
 
@@ -45,15 +57,22 @@ Scenario('Create Detained Appeal as Legal Representative',   async ({I, loginPag
     console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
 
     await I.selectNextStep('Submit your appeal');
-    await createAppeal.agreeToDeclaration(true);
+    if (!inTime) {
+        await createAppeal.setAppealOutOfTime();
+    }
 
-    // create service request
-    await serviceRequestPage.createServiceRequest();
+    await createAppeal.agreeToDeclaration(true, inTime);
 
-    // make payment - will remove caseId from parmaeters and function when successful payment hyperlink points to correct env
-    await paymentPage.makePayment('CC', caseId);
+    if (typeOfAppeal !== 'DC') {
+        // create service request
+        await serviceRequestPage.createServiceRequest();
+
+        // make payment - will remove caseId from parmaeters and function when successful payment hyperlink points to correct env
+        await paymentPage.makePayment('CC', caseId);
+    }
+
     await I.logout();
-});
+}).retry(3);
 
 
 // @ts-ignore

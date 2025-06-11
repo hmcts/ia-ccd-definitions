@@ -1,4 +1,4 @@
-import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative} from '../detainedConfig'
+import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative, legalAdmin} from '../detainedConfig'
 
 
 let caseId: string;
@@ -57,10 +57,14 @@ Scenario('Create Non-Detained Appeal as Legal Representative',   async ({I, logi
 
 // @ts-ignore
 Scenario('Legal Officer creates Respondent Direction',   async ({I, loginPage, retrieveCase, markAppealAsDetained}) => {
-    await loginPage.signIn(legalOfficer);
+   // const detentionLocation: string = 'immigrationRemovalCentre';
+    const detentionLocation: string = 'prison';
+  //  const detentionLocation: string = 'other';
+
+    await loginPage.signIn(legalAdmin);
     await retrieveCase.getCase(caseId);
     await I.waitForText('Case details',60);
     await I.selectNextStep('Mark appeal as detained');
-    await markAppealAsDetained.setAsDetained('immigration');
+    await markAppealAsDetained.setAsDetained(detentionLocation);
     await I.logout();
 }).retry(3);

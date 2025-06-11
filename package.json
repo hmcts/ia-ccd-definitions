@@ -33,8 +33,8 @@
     },
     "scripts": {
         "test:smoke": "MOCHAWESOME_REPORTFILENAME=smoke-$(date \"+%Y-%m-%d_%H-%M-%S\") npx codeceptjs run --grep @smoke --verbose --reporter mocha-multi --verbose",
-        "test:detainedRepresented": "MOCHAWESOME_REPORTFILENAME=detainedRepresented-$(date \"+%Y-%m-%d_%H-%M-%S\") npx codeceptjs run --grep @detainedRepresented --reporter mocha-multi --verbose",
-        "test:detainedLegalAdmin": "MOCHAWESOME_REPORTFILENAME=detainedLegalAdmin-$(date \"+%Y-%m-%d_%H-%M-%S\") npx codeceptjs run --grep @detainedLegalAdmin --reporter mocha-multi --verbose",
+        "test:LegalRepCreatesDetainedRepresented": "MOCHAWESOME_REPORTFILENAME=LegalRepCreatesDetainedRepresented-$(date \"+%Y-%m-%d_%H-%M-%S\") npx codeceptjs run --grep @LegalRepDetainedRepresented --reporter mocha-multi --verbose",
+        "test:LegalAdminCreatesDetainedAppellantInPerson": "MOCHAWESOME_REPORTFILENAME=LegalAdminCreatesDetainedAppellantInPerson-$(date \"+%Y-%m-%d_%H-%M-%S\") npx codeceptjs run --grep @LegalAdminDetainedAppellantInPerson --reporter mocha-multi --verbose",
         "test:nonDetainedToDetainedRepresented": "MOCHAWESOME_REPORTFILENAME=NonDetainedToDetainedRepresented-$(date \"+%Y-%m-%d_%H-%M-%S\") npx codeceptjs run --grep @NonDetainedToDetainedRepresented --reporter mocha-multi --verbose",
         "clean": "rm -rf target/",
         "decrypt": "node bin/decrypt.js",
