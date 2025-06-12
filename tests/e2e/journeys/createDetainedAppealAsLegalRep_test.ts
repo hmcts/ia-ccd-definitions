@@ -27,7 +27,7 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
     await createCasePage.createCase();
     await createAppeal.locationInUK('Yes');
     await createAppeal.inDetention('Yes');
-    await createAppeal.setDetentionLocation('detentionLocation');
+    await createAppeal.setDetentionLocation(detentionLocation);
 
     if (detentionLocation === 'prison') {
         await createAppeal.setCustodialSentence('Yes');
