@@ -843,6 +843,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "releaseDate", "TabFieldDisplayOrder": 167, "FieldShowCondition": "releaseDateProvided=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hasPendingBailApplications", "TabFieldDisplayOrder": 167, "FieldShowCondition": "appellantInDetention=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "bailApplicationNumber", "TabFieldDisplayOrder": 167, "FieldShowCondition": "appellantInDetention=\"Yes\" AND hasPendingBailApplications=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "detentionRemovalDate", "TabFieldDisplayOrder": 167, "FieldShowCondition": "detentionRemovalDate!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "detentionRemovalReason", "TabFieldDisplayOrder": 167, "FieldShowCondition": "detentionRemovalReason!=\"\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "submissionDetailsTitle", "TabFieldDisplayOrder": 170},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "uploadTheNoticeOfDecisionExplanation", "TabFieldDisplayOrder": 173},
