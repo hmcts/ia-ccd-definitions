@@ -1,5 +1,7 @@
 import moment from "moment/moment";
 import {appellant, legalRepresentative, sponsor} from '../detainedConfig'
+// @ts-ignore
+import {detentionFacility} from '../fixtures/detentionFacilities'
 
 const { I } = inject();
 const outOfTimedImageLocator: string = '//*[@id="confirmation-body"]/ccd-markdown/div/markdown/p[1]/img';
@@ -51,9 +53,9 @@ class createAppeal {
       case 'prison':
         await I.click(`#detentionFacility-${detentionLocation}`);
         await I.waitForElement(`#prisonNOMSNumber_${detentionLocation}`);
-        await I.fillField('#prisonNOMSNumber_prison','567890')
+        await I.fillField('#prisonNOMSNumber_prison', appellant.NOMSNumber)
         await I.clickContinue();
-        await I.selectOption('#prisonName', 'HM Prison Belmarsh');
+        await I.selectOption('#prisonName', detentionFacility.prison.name);
         await I.clickContinue();
         break;
       case 'other':
@@ -74,11 +76,10 @@ class createAppeal {
     await I.click(`#releaseDateProvided_${hasCustodialSentence}`);
 
     if (hasCustodialSentence === 'Yes') {
-      const todayPlus60days = moment().add(60, 'days');
+      await I.fillField('#releaseDate-day', appellant.custodialSentence.day);
+      await I.fillField('#releaseDate-month', appellant.custodialSentence.month);
+      await I.fillField('#releaseDate-year', appellant.custodialSentence.year);
 
-      await I.fillField('#releaseDate-day', todayPlus60days.date());
-      await I.fillField('#releaseDate-month', todayPlus60days.month()+1);
-      await I.fillField('#releaseDate-year', todayPlus60days.year());
       await I.clickContinue();
     }
   }
@@ -88,7 +89,7 @@ class createAppeal {
     await I.click(`#hasPendingBailApplications-${bail}`);
     if (bail === 'Yes') {
       await I.waitForElement('#bailApplicationNumber', 60);
-      await I.fillField('#bailApplicationNumber', 'AB/01234');
+      await I.fillField('#bailApplicationNumber', appellant.bailApplicationNumber);
     }
     await I.clickContinue();
   }
@@ -174,11 +175,16 @@ class createAppeal {
     await I.clickContinue();
   }
 
-  // appellant address: non-detained journey only
-  async setAppellentsAddress(hasPostalAddress: string = 'Yes') {
-    await I.click(`#appellantHasFixedAddress_${hasPostalAddress}`);
+  // appellant address: non-detained journey and detained journey where facility is "Other"
+  async setAppellentsAddress(journeyType: string = "detained", hasPostalAddress: string = 'Yes', isUpdateDetentionLocationEvent: boolean = false) {
+    if (journeyType !== 'detained') {
+      await I.click(`#appellantHasFixedAddress_${hasPostalAddress}`);
+    }
+
     if (hasPostalAddress === 'Yes') {
-      await I.click('//*[@id="appellantAddress_appellantAddress"]/div/a');
+      if (!isUpdateDetentionLocationEvent) {
+        await I.click('//*[@id="appellantAddress_appellantAddress"]/div/a');
+      }
       await I.fillField('#appellantAddress__detailAddressLine1', appellant.address.addressLine1);
       await I.fillField('#appellantAddress__detailPostTown', appellant.address.postTown);
       await I.fillField('#appellantAddress__detailPostCode', appellant.address.postcode);

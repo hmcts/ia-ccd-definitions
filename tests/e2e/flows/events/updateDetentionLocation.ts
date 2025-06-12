@@ -1,17 +1,42 @@
+import createAppeal from '../createAppeal';
+
 const { I } = inject();
 
 class detentionLocation {
 
+    private createAppeal: createAppeal;
+    private detentionLocation: string;
+
     constructor() {
+        this.createAppeal = new createAppeal();
+
     }
 
-    // async setStatus(isS94b: string = 'Yes'){
-    //     await I.selectNextStep('Update s94b status');
-    //     await I.waitForElement(`#s94bStatus_${isS94b}`, 60);
-    //     await I.click(`#s94bStatus_${isS94b}`);
-    //     await I.clickContinue();
-    //     await I.clickSubmit();
-    // }
+    async changeLocation(detentionLocation: string = 'prison'){
+        this.detentionLocation = detentionLocation;
+        await this.createAppeal.setDetentionLocation(detentionLocation)
+        switch (detentionLocation) {
+            case 'immigrationRemovalCentre':
+                await this.createAppeal.setBailApplication('Yes');
+                break;
+            case 'other':
+                await this.createAppeal.setAppellentsAddress('detained', 'Yes', true);
+                await this.createAppeal.setCustodialSentence('Yes');
+                break;
+            case 'prison':
+                await this.createAppeal.setCustodialSentence('Yes');
+                break;
+        }
+
+        await I.clickButtonOrLink('Update detention location');
+        await I.waitForText('You have updated the detained location', 60);
+        await I.clickCloseAndReturnToCaseDetails();
+    };
+
+    async validateDataUpdated() {
+        await I.validateDataOnAppellantTab();
+        await I.validateDataOnAppealTab(this.detentionLocation);
+    };
 }
 
 // For inheritance

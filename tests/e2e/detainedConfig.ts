@@ -1,3 +1,6 @@
+import moment from "moment";
+const todayPlus60days = moment().add(60, 'days');
+
 export const envUrl = 'https://xui-ia-case-api-pr-2525.preview.platform.hmcts.net';
 
 export const lawFirmUser = {
@@ -38,6 +41,16 @@ export const appellant = {
     },
     mobile: '07890667755',
     email: 'appellantEmail@test.com',
+    NOMSNumber: '123456',
+    custodialSentence: {
+        day: todayPlus60days.date(),
+        month: todayPlus60days.month()+1,
+        shortMonthDesc: todayPlus60days.format('MMM'),
+        longMonthDesc: todayPlus60days.format('MMMM'),
+        year: todayPlus60days.year(),
+    },
+    bailApplicationNumber: 'AB/01234',
+
 }
 
  export const legalRepresentative = {

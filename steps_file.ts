@@ -1,4 +1,7 @@
 // in this file you can append custom step methods to 'I' object
+// @ts-ignore
+import {detentionFacility} from './tests/e2e/fixtures/detentionFacilities'
+import {appellant} from './tests/e2e/detainedConfig'
 
 const goButton: string = '//*[@id="content"]/div[1]/div[2]/ccd-event-trigger/form/button';
 const signInButton: string = 'input[value="Sign in"]';
@@ -67,9 +70,10 @@ export = function() {
     },
 
     async selectNextStep(nextStep: string) {
+      let urlBefore = await this.grabCurrentUrl();
       await this.selectOption('#next-step', nextStep);
       await this.waitForEnabled(goButton);
-      await this.click(goButton);
+      await this.retryUntilUrlChanges(() => this.forceClick(goButton), urlBefore);
     },
 
     async retryUntilUrlChanges(action, urlBefore, maxNumberOfTries = 6) {
@@ -133,6 +137,91 @@ export = function() {
           await this.click(tabLocator)
           break;
         }
+      }
+    },
+
+    async validateDataOnAppellantTab() {
+      const appellantTabDetentionFacilityTypeLocator: string = '//*[@id="case-viewer-field-read--detentionFacility"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-fixed-radio-list-field/span';
+      const appellantTabDetentionFacilityIrcNameLocator: string = '//*[@id="case-viewer-field-read--ircName"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-fixed-list-field/span';
+      const appellantTabDetentionFacilityPrisonNameLocator: string = '//*[@id="case-viewer-field-read--prisonName"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-fixed-list-field/span';
+      const appellantTabDetentionPrisonNomsNumberLocator: string = '//*[@id="case-viewer-field-read--prisonNOMSNumber"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-complex-field/ccd-read-complex-field-table/div/table/tbody/tr/td/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-text-field/span';
+      const appellantTabDetentionBuildingLocator: string = '//*[@id="case-viewer-field-read--detentionBuilding"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-text-field/span';
+      const appellantTabDetentionAddressLocator:string = '//*[@id="case-viewer-field-read--detentionAddressLines"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-text-field/span';
+      const appellantTabDetentionPostcodeLocator:string = '//*[@id="case-viewer-field-read--detentionPostcode"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-text-field/span';
+      const appellantTabOtherFacilityNameLocator: string = '//*[@id="case-viewer-field-read--otherDetentionFacilityName"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-complex-field/ccd-read-complex-field-table/div/table/tbody/tr/td/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-text-field/span';
+      const detentionFacilityList: string[] = ['Immigration removal centre', 'Prison', 'Other'];
+
+      await this.selectTab('Appellant');
+      const facilityType: string = await this.grabTextFrom(appellantTabDetentionFacilityTypeLocator);
+      await this.expectContain(detentionFacilityList, facilityType, 'Invalid Detention facility detected');
+      const detentionFacilityName: string = (facilityType === 'Other' ? await this.grabTextFrom(appellantTabOtherFacilityNameLocator) : (facilityType === 'Prison' ? await this.grabTextFrom(appellantTabDetentionFacilityPrisonNameLocator) : await this.grabTextFrom(appellantTabDetentionFacilityIrcNameLocator)));
+      const detentionFacilityBuilding: string = await this.grabTextFrom(appellantTabDetentionBuildingLocator);
+      const detentionFacilityAddress: string = await this.grabTextFrom(appellantTabDetentionAddressLocator);
+      const detentionFacilityPostcode: string = await this.grabTextFrom(appellantTabDetentionPostcodeLocator);
+
+      switch (facilityType) {
+        case 'Immigration removal centre':
+          await this.expectEqual(detentionFacilityName, detentionFacility.immigrationRemovalCentre.name, 'Immigration removal centre name must exist on the Appellant Tab');
+          await this.expectEqual(detentionFacilityBuilding, detentionFacility.immigrationRemovalCentre.building, 'Immigration removal centre building must exist on the Appellant Tab');
+          await this.expectEqual(detentionFacilityAddress, detentionFacility.immigrationRemovalCentre.address, 'Immigration removal centre address must exist on the Appellant Tab');
+          await this.expectEqual(detentionFacilityPostcode, detentionFacility.immigrationRemovalCentre.postcode, 'Immigration removal centre postcode must exist on the Appellant Tab');
+          break;
+        case 'Prison':
+          await this.expectEqual(detentionFacilityName, detentionFacility.prison.name, 'Prison name must exist on the Appellant Tab');
+          await this.expectEqual(await this.grabTextFrom(appellantTabDetentionPrisonNomsNumberLocator), appellant.NOMSNumber, 'NOMS number must exist on the Appellant Tab');
+          await this.expectEqual(detentionFacilityBuilding, detentionFacility.prison.building, 'Prison building must exist on the Appellant Tab');
+          await this.expectEqual(detentionFacilityAddress, detentionFacility.prison.address, 'Prison address must exist on the Appellant Tab');
+          await this.expectEqual(detentionFacilityPostcode, detentionFacility.prison.postcode, 'Prison postcode must exist on the Appellant Tab');
+          break;
+        case 'Other':
+          await this.expectEqual(detentionFacilityName, detentionFacility.other.name, 'Other facility name must exist on the Appellant Tab');
+          await this.expectEqual(detentionFacilityBuilding, detentionFacility.other.building, 'Other facility building must exist on the Appellant Tab');
+          await this.expectEqual(detentionFacilityAddress, detentionFacility.other.address, 'Other facility address must exist on the Appellant Tab');
+          await this.expectEqual(detentionFacilityPostcode, detentionFacility.other.postcode, 'Other facility postcode must exist on the Appellant Tab');
+          break;
+      }
+    },
+
+    async validateDataOnAppealTab(detentionLocation: string = 'prison') {
+      const appealTabInDetentionLocator: string = '//*[@id="case-viewer-field-read--appellantInDetention"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-yes-no-field/span';
+      const appealTabCustodialSentenceLocator: string = '//*[@id="case-viewer-field-read--releaseDateProvided"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-yes-no-field/span';
+      const appealTabCustodialSentenceReleaseDateLocator: string = '//*[@id="case-viewer-field-read--releaseDate"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-date-field/span';
+      const appealTabOnBailLocator: string = '//*[@id="case-viewer-field-read--hasPendingBailApplications"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-fixed-radio-list-field/span';
+      const appealTabBailApplicationNumberLocator: string = '//*[@id="case-viewer-field-read--bailApplicationNumber"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-text-field/span';
+      const yesNo: string[] = ['Yes', 'No'];
+      let onBail: string;
+      const bailApplicationNumber: string = appellant.bailApplicationNumber;
+      let tabBailApplicationNumber:string;
+      let inDetention: string;
+      let hasCustodialSentence: string;
+      let tabCustodialReleaseDate: string;
+      const custodialReleaseDate: string = appellant.custodialSentence.day + ' ' + appellant.custodialSentence.shortMonthDesc + ' ' + appellant.custodialSentence.year;
+
+      await this.selectTab('Appeal');
+
+      inDetention = await this.grabTextFrom(appealTabInDetentionLocator);
+      await this.expectContain(yesNo, inDetention, 'A valid Detention flag must exist on the Appeal Tab');
+
+      switch (detentionLocation) {
+        case 'immigrationRemovalCentre':
+          onBail = await this.grabTextFrom(appealTabOnBailLocator);
+          await this.expectContain(yesNo, onBail, 'A valid on bail flag must exist on the Appeal Tab');
+          if (onBail === 'Yes') {
+            tabBailApplicationNumber = await this.grabTextFrom(appealTabBailApplicationNumberLocator);
+            await this.expectEqual(tabBailApplicationNumber, bailApplicationNumber, 'A valid Bail Application Number must exist on the Appeal Tab');
+          }
+          break;
+        case 'prison':
+          hasCustodialSentence = await this.grabTextFrom(appealTabCustodialSentenceLocator);
+          await this.expectContain(yesNo, hasCustodialSentence, 'A valid Custodial Sentence flag must exist on the Appeal Tab');
+
+          if (hasCustodialSentence === 'Yes') {
+            tabCustodialReleaseDate = await this.grabTextFrom(appealTabCustodialSentenceReleaseDateLocator);
+            await this.expectEqual(tabCustodialReleaseDate, custodialReleaseDate, 'A valid Custodial Realease Date must exist on the Appeal Tab');
+          }
+          break;
+        case 'other':
+          break;
       }
     },
 

@@ -2,10 +2,13 @@ import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentativ
 
 // @ts-ignore
 let caseId: string;
-let inTime: boolean = false;
+let inTime: boolean = true;
 
 const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
 const detainedRepresentedS94bImageLocator: string = '//*[@id="journey_type_legal_rep_detained_s9"]/dt/ccd-markdown/div/markdown/p/img';
+//const detentionLocation: string = 'immigrationRemovalCentre';
+const detentionLocation: string = 'prison';
+//const detentionLocation: string = 'other';
 
 
 Feature('Detained Appeal - Represented @LegalRepDetainedRepresented');
@@ -21,7 +24,6 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
     //const typeOfAppeal: string = 'RHR'; // Refusal human rights
     //const typeOfAppeal: string  = 'DC'; // Deprivation of citizenship
     //const typeOfAppeal: string  = 'EU'; // Refusal of application under the EU Settlement Scheme
-    const detentionLocation: string = 'immigrationRemovalCentre';
 
     await loginPage.signIn(lawFirmUser);
     await createCasePage.createCase();
@@ -29,16 +31,24 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
     await createAppeal.inDetention('Yes');
     await createAppeal.setDetentionLocation(detentionLocation);
 
-    if (detentionLocation === 'prison') {
+    if (detentionLocation === 'prison' || detentionLocation === 'other') {
         await createAppeal.setCustodialSentence('Yes');
     }
 
-    await createAppeal.setBailApplication('No');
+    if (detentionLocation === 'immigrationRemovalCentre') {
+        await createAppeal.setBailApplication('Yes');
+    }
+
     await createAppeal.setHomeOfficeDetails(inTime);
     await createAppeal.uploadNoticeOfDecision();
     await createAppeal.setTypeOfAppeal(typeOfAppeal);
     await createAppeal.setAppellantBasicDetails(false);
     await createAppeal.setNationality(true);
+
+    if (detentionLocation === 'other') {
+        await createAppeal.setAppellentsAddress('detained', 'Yes');
+    }
+
     await createAppeal.hasSponsor('No');
     await createAppeal.hasDepotationOrder("No");
     await createAppeal.hasRemovalDirections('Yes');
@@ -76,7 +86,7 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
 
 
 // @ts-ignore
-Scenario('Legal Officer creates adds s94b appeal status and Respondent Direction',   async ({I, loginPage, retrieveCase, createDirection, s94b}) => {
+Scenario('Legal Officer adds s94b appeal status, updates detention location and creates Respondent Direction',   async ({I, loginPage, retrieveCase, createDirection, s94b, updateDetentionLocation}) => {
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
     await I.waitForText('Case details',60);
@@ -84,6 +94,9 @@ Scenario('Legal Officer creates adds s94b appeal status and Respondent Direction
     await s94b.setStatus('Yes');
     await I.validateCorrectLabelDisplayed(detainedRepresentedS94bImageLocator, 'legalRep_detained_s9');
     await I.validateCaseFlagExists('Detained individual', 'ACTIVE');
+    await I.selectNextStep('Update detention location');
+    await updateDetentionLocation.changeLocation(detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison'))
+    await updateDetentionLocation.validateDataUpdated();
     await I.selectNextStep('Request respondent evidence');
     await createDirection.confirmAndSubmitRespondentDirection();
     await I.logout();
