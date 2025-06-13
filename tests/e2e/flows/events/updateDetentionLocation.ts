@@ -12,8 +12,7 @@ class detentionLocation {
 
     }
 
-    async changeLocation(detentionLocation: string = 'prison'){
-        this.detentionLocation = detentionLocation;
+    async changeLocation(detentionLocation: string = 'prison', hasCustodialSentence: boolean = true) {
         await this.createAppeal.setDetentionLocation(detentionLocation)
         switch (detentionLocation) {
             case 'immigrationRemovalCentre':
@@ -21,10 +20,20 @@ class detentionLocation {
                 break;
             case 'other':
                 await this.createAppeal.setAppellentsAddress('detained', 'Yes', true);
-                await this.createAppeal.setCustodialSentence('Yes');
+                if (hasCustodialSentence) {
+                    await this.createAppeal.setCustodialSentence('Yes');
+                } else {
+                    await this.createAppeal.setCustodialSentence('No');
+                    await this.createAppeal.setBailApplication('Yes');
+                }
                 break;
             case 'prison':
-                await this.createAppeal.setCustodialSentence('Yes');
+                if (hasCustodialSentence) {
+                    await this.createAppeal.setCustodialSentence('Yes');
+                } else {
+                    await this.createAppeal.setCustodialSentence('No');
+                    await this.createAppeal.setBailApplication('Yes');
+                }
                 break;
         }
 
