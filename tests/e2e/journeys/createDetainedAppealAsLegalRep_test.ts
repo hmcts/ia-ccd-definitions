@@ -6,8 +6,8 @@ let inTime: boolean = true;
 
 const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
 const detainedRepresentedS94bImageLocator: string = '//*[@id="journey_type_legal_rep_detained_s9"]/dt/ccd-markdown/div/markdown/p/img';
-//const detentionLocation: string = 'immigrationRemovalCentre';
-const detentionLocation: string = 'prison';
+const detentionLocation: string = 'immigrationRemovalCentre';
+//const detentionLocation: string = 'prison';
 //const detentionLocation: string = 'other';
 
 
@@ -75,10 +75,18 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
 
     if (typeOfAppeal !== 'DC') {
         // create service request
-        await serviceRequestPage.createServiceRequest();
+        await retryTo(tryNum => {
+            serviceRequestPage.createServiceRequest()
+        }, 3);
+
+        //await serviceRequestPage.createServiceRequest();
 
         // make payment - will remove caseId from parmaeters and function when successful payment hyperlink points to correct env
-        await paymentPage.makePayment('CC', caseId);
+        await retryTo(tryNum => {
+            paymentPage.makePayment('CC', caseId);
+        }, 3);
+
+        //await paymentPage.makePayment('CC', caseId);
     }
 
     await I.logout();
