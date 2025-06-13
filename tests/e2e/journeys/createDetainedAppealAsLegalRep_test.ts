@@ -20,10 +20,11 @@ Before(async({ I }) => {
 
 // @ts-ignore
 Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time'),   async ({I, loginPage, createCasePage, createAppeal, serviceRequestPage, paymentPage}) => {
-    const typeOfAppeal: string = 'EEA'; // Refusal under EEA regulations
-    //const typeOfAppeal: string = 'RHR'; // Refusal human rights
-    //const typeOfAppeal: string  = 'DC'; // Deprivation of citizenship
-    //const typeOfAppeal: string  = 'EU'; // Refusal of application under the EU Settlement Scheme
+    //const typeOfAppeal: string = 'EEA'; // Refusal under EEA regulations (payment required)
+    //const typeOfAppeal: string = 'RHR'; // Refusal human rights (payment required)
+    const typeOfAppeal: string  = 'DC'; // Deprivation of citizenship (no payment required)
+    //const typeOfAppeal: string  = 'EU'; // Refusal of application under the EU Settlement Scheme (payment required)
+    //const typeOfAppeal: string = 'RPS'; // Revocation of a protection status (no payment required)
 
     await loginPage.signIn(lawFirmUser);
     await createCasePage.createCase();
@@ -73,20 +74,12 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
 
     await createAppeal.agreeToDeclaration(true, inTime);
 
-    if (typeOfAppeal !== 'DC') {
+    if (typeOfAppeal !== 'RPS' && typeOfAppeal !== 'DC') {
         // create service request
-        await retryTo(tryNum => {
-            serviceRequestPage.createServiceRequest()
-        }, 3);
+       await serviceRequestPage.createServiceRequest();
 
-        //await serviceRequestPage.createServiceRequest();
-
-        // make payment - will remove caseId from parmaeters and function when successful payment hyperlink points to correct env
-        await retryTo(tryNum => {
-            paymentPage.makePayment('CC', caseId);
-        }, 3);
-
-        //await paymentPage.makePayment('CC', caseId);
+        // make payment - will remove caseId from parameters and function when successful payment hyperlink points to correct env
+       await paymentPage.makePayment('CC', caseId);
     }
 
     await I.logout();

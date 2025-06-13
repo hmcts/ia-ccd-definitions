@@ -120,12 +120,12 @@ class createAppeal {
   }
 
   async setTypeOfAppeal(appealType: string = 'EEA'){
+    let currentUrl: string;
     switch (appealType) {
       case 'EEA':
         await I.click('#appealType-refusalOfEu');
         await I.clickContinue();
-        let currentUrl: string = await I.grabCurrentUrl();
-
+        currentUrl = await I.grabCurrentUrl();
         if (!currentUrl.includes('BasicDetails')) {
           await this.groundsOfAppeal();
         }
@@ -133,26 +133,34 @@ class createAppeal {
       case 'RPS':
         await I.click('#appealType-revocationOfProtection');
         await I.clickContinue();
-        await I.click('#appealGroundsRevocation_values-revocationHumanitarianProtection');
-        await I.clickContinue();
+        currentUrl = await I.grabCurrentUrl();
+        if (!currentUrl.includes('BasicDetails')) {
+          await I.click('#appealGroundsRevocation_values-revocationHumanitarianProtection');
+          await I.clickContinue();
+        }
         break;
       case 'RHR':
         await I.click('#appealType-refusalOfHumanRights');
         await I.clickContinue();
-        await I.click('#appealGroundsDecisionHumanRightsRefusal_values-humanRightsRefusal');
-        await I.clickContinue();
+        currentUrl = await I.grabCurrentUrl();
+        if (!currentUrl.includes('BasicDetails')) {
+          await I.click('#appealGroundsDecisionHumanRightsRefusal_values-humanRightsRefusal');
+          await I.clickContinue();
+        }
         break;
       case 'DC':
         await I.click('#appealType-deprivation');
         await I.clickContinue();
-        await I.checkOption('#appealGroundsDeprivation_values-disproportionateDeprivation');
-        await I.clickContinue();
+        currentUrl = await I.grabCurrentUrl();
+        if (!currentUrl.includes('BasicDetails')) {
+          await I.checkOption('#appealGroundsDeprivation_values-disproportionateDeprivation');
+          await I.clickContinue();
+        }
         break;
       case 'EU':
         await I.click('#appealType-euSettlementScheme');
         await I.clickContinue();
         break;
-
     }
   }
 

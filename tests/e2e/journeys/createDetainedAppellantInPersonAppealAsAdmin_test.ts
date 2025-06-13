@@ -2,6 +2,7 @@ import {envUrl, legalAdmin} from '../detainedConfig'
 
 let caseId: string;
 let inTime: boolean = true;
+const detentionLocation: string = 'immigrationRemovalCentre';
 
 Feature('Detained Appeal - Legal Admin @LegalAdminDetainedAppellantInPerson');
 
@@ -12,6 +13,12 @@ Before(async({ I }) => {
 
 // @ts-ignore
 Scenario('Create Detained Appeal - Appellant In Person as Legal Admin - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({I, loginPage, createCasePage, createAppeal}) => {
+    //const typeOfAppeal: string = 'EEA'; // Refusal under EEA regulations (payment required)
+    //const typeOfAppeal: string = 'RHR'; // Refusal human rights (payment required)
+    const typeOfAppeal: string  = 'DC'; // Deprivation of citizenship (no payment required)
+    //const typeOfAppeal: string  = 'EU'; // Refusal of application under the EU Settlement Scheme (payment required)
+    //const typeOfAppeal: string = 'RPS'; // Revocation of a protection status (no payment required)
+
     await loginPage.signIn(legalAdmin);
     await createCasePage.createCase();
 
@@ -21,11 +28,11 @@ Scenario('Create Detained Appeal - Appellant In Person as Legal Admin - ' + (inT
     await createAppeal.appellantInPerson('Yes');
     await createAppeal.locationInUK('Yes');
     await createAppeal.inDetention('Yes');
-    await createAppeal.setDetentionLocation('immigration');
+    await createAppeal.setDetentionLocation(detentionLocation);
     await createAppeal.setBailApplication('No');
     await createAppeal.setHomeOfficeDetails(inTime);
     await createAppeal.uploadNoticeOfDecision();
-    await createAppeal.setTypeOfAppeal();
+    await createAppeal.setTypeOfAppeal(typeOfAppeal);
     await createAppeal.setAppellantBasicDetails(true);
     await createAppeal.setNationality(true);
     await createAppeal.appellantDetails();
@@ -36,7 +43,10 @@ Scenario('Create Detained Appeal - Appellant In Person as Legal Admin - ' + (inT
     await createAppeal.hasOtherAppeals('No');
     // await createAppeal.setLegalRepresentativeDetails();
     await createAppeal.isHearingRequired(true);
-    await createAppeal.hasFeeRemission('No');
+
+    if (typeOfAppeal !== 'RPS' && typeOfAppeal !== 'DC') {
+        await createAppeal.hasFeeRemission('No');
+    }
 
     await createAppeal.uploadAppealDocs();
     await createAppeal.checkMyAnswers();
@@ -54,5 +64,5 @@ Scenario('Create Detained Appeal - Appellant In Person as Legal Admin - ' + (inT
 
     await createAppeal.agreeToDeclaration(false, inTime);
 
-});
+}).retry(3);
 

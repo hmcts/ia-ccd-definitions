@@ -1,6 +1,6 @@
 import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative, legalAdmin} from '../detainedConfig'
 
-let caseId: string = '1749726994914723'; //other
+let caseId: string; // = '1749726994914723'; //other
    // '1749737053416831'; //prison
   //  '1749737491338431'; //immigration
 
@@ -13,8 +13,8 @@ Before(async({ I }) => {
 })
 
 // @ts-ignore
-Scenario.skip('Create Non-Detained Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal, serviceRequestPage, paymentPage}) => {
-    const typeOfAppeal: string = 'EEA';
+Scenario('Create Non-Detained Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal, serviceRequestPage, paymentPage}) => {
+    const typeOfAppeal: string = 'RPS';
 
     await loginPage.signIn(lawFirmUser);
     await createCasePage.createCase();
@@ -34,7 +34,7 @@ Scenario.skip('Create Non-Detained Appeal as Legal Representative',   async ({I,
     await createAppeal.setLegalRepresentativeDetails();
     await createAppeal.isHearingRequired(true);
 
-    if (typeOfAppeal !== 'RPS') {
+    if (typeOfAppeal !== 'RPS' && typeOfAppeal !== 'DC') {
         await createAppeal.hasFeeRemission('No');
     }
 
@@ -46,11 +46,14 @@ Scenario.skip('Create Non-Detained Appeal as Legal Representative',   async ({I,
     await I.selectNextStep('Submit your appeal');
     await createAppeal.agreeToDeclaration(true);
 
-    // create service request
-    await serviceRequestPage.createServiceRequest();
+    if (typeOfAppeal !== 'RPS' && typeOfAppeal !== 'DC') {
+        // create service request
+        await serviceRequestPage.createServiceRequest();
 
-    // make payment - will remove caseId from parmaeters and function when successful payment hyperlink points to correct env
-    await paymentPage.makePayment('CC', caseId);
+        // make payment - will remove caseId from parameters and function when successful payment hyperlink points to correct env
+        await paymentPage.makePayment('CC', caseId);
+    }
+
     await I.logout();
 });
 
