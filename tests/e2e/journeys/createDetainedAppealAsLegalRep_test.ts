@@ -1,14 +1,14 @@
 import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative} from '../detainedConfig'
 
 // @ts-ignore
-let caseId: string;
+let caseId: string = '1750084535526838';
 let inTime: boolean = true;
 
 const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
 const detainedRepresentedS94bImageLocator: string = '//*[@id="journey_type_legal_rep_detained_s9"]/dt/ccd-markdown/div/markdown/p/img';
-const detentionLocation: string = 'immigrationRemovalCentre';
+//const detentionLocation: string = 'immigrationRemovalCentre';
 //const detentionLocation: string = 'prison';
-//const detentionLocation: string = 'other';
+const detentionLocation: string = 'other';
 
 
 Feature('Detained Appeal - Represented @LegalRepDetainedRepresented');

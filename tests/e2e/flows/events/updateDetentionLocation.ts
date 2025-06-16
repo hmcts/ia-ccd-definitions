@@ -13,6 +13,7 @@ class detentionLocation {
     }
 
     async changeLocation(detentionLocation: string = 'prison', hasCustodialSentence: boolean = true) {
+        this.detentionLocation = detentionLocation;
         await this.createAppeal.setDetentionLocation(detentionLocation)
         switch (detentionLocation) {
             case 'immigrationRemovalCentre':

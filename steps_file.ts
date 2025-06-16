@@ -211,16 +211,21 @@ export = function() {
             await this.expectEqual(tabBailApplicationNumber, bailApplicationNumber, 'A valid Bail Application Number must exist on the Appeal Tab');
           }
           break;
-        case 'prison':
+        default:
           hasCustodialSentence = await this.grabTextFrom(appealTabCustodialSentenceLocator);
           await this.expectContain(yesNo, hasCustodialSentence, 'A valid Custodial Sentence flag must exist on the Appeal Tab');
 
           if (hasCustodialSentence === 'Yes') {
             tabCustodialReleaseDate = await this.grabTextFrom(appealTabCustodialSentenceReleaseDateLocator);
-            await this.expectEqual(tabCustodialReleaseDate, custodialReleaseDate, 'A valid Custodial Realease Date must exist on the Appeal Tab');
+            await this.expectEqual(tabCustodialReleaseDate, custodialReleaseDate, 'A valid Custodial Release Date must exist on the Appeal Tab');
+          } else {
+            onBail = await this.grabTextFrom(appealTabOnBailLocator);
+            await this.expectContain(yesNo, onBail, 'A valid on bail flag must exist on the Appeal Tab');
+            if (onBail === 'Yes') {
+              tabBailApplicationNumber = await this.grabTextFrom(appealTabBailApplicationNumberLocator);
+              await this.expectEqual(tabBailApplicationNumber, bailApplicationNumber, 'A valid Bail Application Number must exist on the Appeal Tab');
+            }
           }
-          break;
-        case 'other':
           break;
       }
     },

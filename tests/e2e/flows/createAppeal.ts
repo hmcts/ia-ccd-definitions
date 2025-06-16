@@ -79,9 +79,8 @@ class createAppeal {
       await I.fillField('#releaseDate-day', appellant.custodialSentence.day);
       await I.fillField('#releaseDate-month', appellant.custodialSentence.month);
       await I.fillField('#releaseDate-year', appellant.custodialSentence.year);
-
-      await I.clickContinue();
     }
+    await I.clickContinue();
   }
 
   async setBailApplication(bail: string = "No") {
@@ -184,13 +183,13 @@ class createAppeal {
   }
 
   // appellant address: non-detained journey and detained journey where facility is "Other"
-  async setAppellentsAddress(journeyType: string = "detained", hasPostalAddress: string = 'Yes', isUpdateDetentionLocationEvent: boolean = false) {
+  async setAppellentsAddress(journeyType: string = "detained", hasPostalAddress: string = 'Yes', updateDetentionLocationEvent: boolean = false) {
     if (journeyType !== 'detained') {
       await I.click(`#appellantHasFixedAddress_${hasPostalAddress}`);
     }
 
     if (hasPostalAddress === 'Yes') {
-      if (!isUpdateDetentionLocationEvent) {
+      if (!updateDetentionLocationEvent) {
         await I.click('//*[@id="appellantAddress_appellantAddress"]/div/a');
       }
       await I.fillField('#appellantAddress__detailAddressLine1', appellant.address.addressLine1);
