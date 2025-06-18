@@ -2920,7 +2920,7 @@
     "Name": "Appellant in Person - Manual",
     "Description": "Update the case to Appellant in Person - Manual",
     "DisplayOrder": 123,
-    "PreConditionState(s)": "*",
+    "PreConditionState(s)": "appealSubmitted",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
@@ -2929,7 +2929,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Appellant in Person - Manual",
-    "EventEnablingCondition": "isAdmin!=\"Yes\"",
+    "EventEnablingCondition": "isAdmin!=\"Yes\" AND changeOrganisationRequestField!=\"\"",
     "Publish": "Y"
   }
 ]
