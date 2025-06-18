@@ -59,17 +59,17 @@ Scenario('Create Non-Detained Appeal as Legal Representative',   async ({I, logi
 
 
 // @ts-ignore
-Scenario('Legal Officer creates Respondent Direction',   async ({I, loginPage, retrieveCase, markAppealAsDetained}) => {
-   // const detentionLocation: string = 'immigrationRemovalCentre';
-    const detentionLocation: string = 'prison';
-  //  const detentionLocation: string = 'other';
+Scenario('Legal Officer creates Respondent Direction',   async ({I, loginPage, retrieveCase, markAppealAsDetained, updateDetentionLocation}) => {
+    const detentionLocation: string = 'immigrationRemovalCentre';
+   // const detentionLocation: string = 'prison';
+   // const detentionLocation: string = 'other';
 
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
     await I.waitForText('Case details',60);
     await I.selectNextStep('Mark appeal as detained');
     await markAppealAsDetained.setAsDetained(detentionLocation);
-
+    await updateDetentionLocation.validateDataUpdated(detentionLocation);
     await I.logout();
 
 }).retry(3);

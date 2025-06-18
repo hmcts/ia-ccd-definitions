@@ -5,15 +5,14 @@ const { I } = inject();
 class detentionLocation {
 
     private createAppeal: createAppeal;
-    private detentionLocation: string;
 
     constructor() {
         this.createAppeal = new createAppeal();
+        console.log('CONSTRUCTOR CALLED');
 
     }
 
     async changeLocation(detentionLocation: string = 'prison', hasCustodialSentence: boolean = true) {
-        this.detentionLocation = detentionLocation;
         await this.createAppeal.setDetentionLocation(detentionLocation)
         switch (detentionLocation) {
             case 'immigrationRemovalCentre':
@@ -43,9 +42,10 @@ class detentionLocation {
         await I.clickCloseAndReturnToCaseDetails();
     };
 
-    async validateDataUpdated() {
+    async validateDataUpdated(detentionLocation: string) {
+        console.log('this.detentionLocation>>>>>', detentionLocation);
         await I.validateDataOnAppellantTab();
-        await I.validateDataOnAppealTab(this.detentionLocation);
+        await I.validateDataOnAppealTab(detentionLocation);
     };
 }
 
