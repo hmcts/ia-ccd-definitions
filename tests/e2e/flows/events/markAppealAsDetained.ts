@@ -1,4 +1,3 @@
-import moment from "moment/moment";
 import createAppeal from '../createAppeal';
 import {appellant} from '../../detainedConfig'
 
@@ -12,14 +11,13 @@ class markAppeal {
 
     }
 
-    async setAsDetained(detentionLocation: string = 'immigration'){
-        const yesterday = moment().subtract(1, 'days');
+    async setAsDetained(detentionLocation: string = 'immigration', yesterday){
 
         await I.waitForText('Detention details', 60);
-        await I.fillField('#appellantDetainedDate-day', yesterday.date());
-        await I.fillField('#appellantDetainedDate-month', yesterday.month()+1);
-        await I.fillField('#appellantDetainedDate-year', yesterday.year());
-        await I.fillField('#addReasonAppellantWasDetained', 'Reason for the appellant being detained');
+        await I.fillField('#appellantDetainedDate-day', appellant.detained.date.day);
+        await I.fillField('#appellantDetainedDate-month', appellant.detained.date.month);
+        await I.fillField('#appellantDetainedDate-year', appellant.detained.date.year);
+        await I.fillField('#addReasonAppellantWasDetained', appellant.detained.reason);
         await I.clickContinue();
         await this.createAppeal.setDetentionLocation(detentionLocation);
 

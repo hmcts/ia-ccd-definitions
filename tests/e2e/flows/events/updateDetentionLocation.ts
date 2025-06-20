@@ -42,8 +42,7 @@ class detentionLocation {
         await I.clickCloseAndReturnToCaseDetails();
     };
 
-    async validateDataUpdated(detentionLocation: string) {
-        console.log('this.detentionLocation>>>>>', detentionLocation);
+    async validateDataUpdated(detentionLocation: string, yesterday) {
         await I.validateDataOnAppellantTab();
         await I.validateDataOnAppealTab(detentionLocation);
     };

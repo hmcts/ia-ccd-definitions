@@ -1,10 +1,10 @@
 import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative, legalAdmin} from '../detainedConfig'
 
-let caseId: string; // = '1749726994914723'; //other
-   // '1749737053416831'; //prison
-  //  '1749737491338431'; //immigration
-
-
+let caseId: string;
+const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
+//const detentionLocation: string = 'immigrationRemovalCentre';
+//const detentionLocation: string = 'prison';
+const detentionLocation: string = 'other';
 Feature('Detained Appeal - Represented @NonDetainedToDetainedRepresented');
 
 
@@ -60,9 +60,7 @@ Scenario('Create Non-Detained Appeal as Legal Representative',   async ({I, logi
 
 // @ts-ignore
 Scenario('Legal Officer creates Respondent Direction',   async ({I, loginPage, retrieveCase, markAppealAsDetained, updateDetentionLocation}) => {
-    const detentionLocation: string = 'immigrationRemovalCentre';
-   // const detentionLocation: string = 'prison';
-   // const detentionLocation: string = 'other';
+
 
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
@@ -70,6 +68,8 @@ Scenario('Legal Officer creates Respondent Direction',   async ({I, loginPage, r
     await I.selectNextStep('Mark appeal as detained');
     await markAppealAsDetained.setAsDetained(detentionLocation);
     await updateDetentionLocation.validateDataUpdated(detentionLocation);
+    await I.validateCaseFlagExists('Detained individual', 'Active');
+    await I.selectTab('Overview');
+    await I.validateCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
     await I.logout();
-
 }).retry(3);

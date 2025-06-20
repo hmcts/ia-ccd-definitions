@@ -1,5 +1,7 @@
 import moment from "moment";
 const todayPlus60days = moment().add(60, 'days');
+const yesterday = moment().subtract(1, 'days');
+const todayPlus10days = moment().add(10, 'days');
 
 export const envUrl = 'https://xui-ia-case-api-pr-2525.preview.platform.hmcts.net';
 
@@ -49,8 +51,33 @@ export const appellant = {
         longMonthDesc: todayPlus60days.format('MMMM'),
         year: todayPlus60days.year(),
     },
+    detained: {
+        date: {
+            day: yesterday.date(),
+            month: yesterday.month() + 1,
+            shortMonthDesc: yesterday.format('MMM'),
+            longMonthDesc: yesterday.format('MMMM'),
+            year: yesterday.year(),
+        },
+        reason: 'Reason for the appellant being detained',
+    },
+    removalDirections: {
+        date: {
+            day: todayPlus10days.date(),
+            month: todayPlus10days.month() + 1,
+            shortMonthDesc: todayPlus10days.format('MMM'),
+            longMonthDesc: todayPlus10days.format('MMMM'),
+            year: todayPlus10days.year(),
+        },
+        time: {
+            hour24: todayPlus10days.format('HH'),
+            hour12NoLeadingZero: todayPlus10days.format('h'),
+            minutesWithLeadingZero: todayPlus10days.format('mm'),
+            secondsWithLeadingZero: todayPlus10days.format('ss'),
+            amPm: todayPlus10days.format('A'),
+        },
+    },
     bailApplicationNumber: 'AB/01234',
-
 }
 
  export const legalRepresentative = {

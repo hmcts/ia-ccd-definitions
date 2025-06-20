@@ -272,13 +272,12 @@ class createAppeal {
     await I.click(`#removalOrderOptions_${hasRemovalOrder}`);
 
     if (hasRemovalOrder === 'Yes') {
-      const todayPlus20Days = moment().add(20, 'days');
-      await I.fillField('#removalOrderDate-day', todayPlus20Days.date());
-      await I.fillField('#removalOrderDate-month', todayPlus20Days.month()+1);
-      await I.fillField('#removalOrderDate-year', todayPlus20Days.year());
-      await I.fillField('#removalOrderDate-hour', '14');
-      await I.fillField('#removalOrderDate-minute', '30');
-      await I.fillField('#removalOrderDate-second', '00');
+      await I.fillField('#removalOrderDate-day', appellant.removalDirections.date.day);
+      await I.fillField('#removalOrderDate-month', appellant.removalDirections.date.month);
+      await I.fillField('#removalOrderDate-year', appellant.removalDirections.date.year);
+      await I.fillField('#removalOrderDate-hour', appellant.removalDirections.time.hour24);
+      await I.fillField('#removalOrderDate-minute', appellant.removalDirections.time.minutesWithLeadingZero);
+      await I.fillField('#removalOrderDate-second', appellant.removalDirections.time.secondsWithLeadingZero);
     }
     await I.clickContinue();
   }
