@@ -541,6 +541,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "appealType", "CaseEventFieldLabel": "Type of appeal", "PageFieldDisplayOrder": 5, "DisplayContext": "MANDATORY", "PageID": "declaration", "PageDisplayOrder": 4, "FieldShowCondition": "legalRepDeclaration=\"DUMMY_FIELD_TO_HIDE\"", "ShowSummaryChangeOption": "N", "Publish": "Y", "RetainHiddenValue": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "submitAppeal", "CaseFieldID": "appellantInDetention", "PageFieldDisplayOrder": 7, "DisplayContext": "MANDATORY", "PageID": "declaration", "PageDisplayOrder": 2, "FieldShowCondition": "legalRepDeclaration=\"DUMMY_FIELD_TO_HIDE\"", "ShowSummaryChangeOption": "N", "Publish": "Y", "RetainHiddenValue": "Y"},
 
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealPaid", "CaseFieldID": "markAppealPaidDesc", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "markAppealPaid","PageDisplayOrder": 1,"ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealPaid", "CaseFieldID": "paidDate", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "markAppealPaid", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "markAppealPaid", "CaseFieldID": "paidAmount", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "markAppealPaid", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
