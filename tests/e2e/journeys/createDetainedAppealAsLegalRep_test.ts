@@ -91,10 +91,10 @@ Scenario('Legal Officer adds s94b appeal status, updates detention location and 
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
     await I.waitForText('Case details',60);
-    await I.validateCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
-    await s94b.setStatus('Yes');
+
+    await s94b.setStatus('Yes');await I.validateCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
     await I.validateCorrectLabelDisplayed(detainedRepresentedS94bImageLocator, 'legalRep_detained_s9');
-    await I.validateCaseFlagExists('Detained individual', 'ACTIVE');
+    await I.validateCaseFlagExists('Detained individual', 'Active');
     await I.selectNextStep('Update detention location');
     await updateDetentionLocation.changeLocation(detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison'), detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
     await updateDetentionLocation.validateDataUpdated(detentionLocation);
