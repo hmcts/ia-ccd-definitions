@@ -1,11 +1,11 @@
+import {createCase} from '../detainedConfig'
 const { I } = inject();
 
 class createCasePage {
   private createCaseLink: string;
   private jurisdictionLocator: string;
-  private jurisdictionCode: string;
   private caseTypeLocator: string;
-  private caseTypeCode: string;
+  private caseTypeOptionLocator: string;
   private eventLocator: string;
   private eventCode: string;
 
@@ -13,11 +13,9 @@ class createCasePage {
   constructor() {
     this.createCaseLink = 'Create case';
     this.jurisdictionLocator = '#cc-jurisdiction';
-    this.jurisdictionCode = 'IA';
     this.caseTypeLocator = '#cc-case-type';
-    this.caseTypeCode = 'Asylum';
+    this.caseTypeOptionLocator = '//*[@id="cc-case-type"]/option';
     this.eventLocator = '#cc-event';
-    this.eventCode = 'startAppeal';
 
     //insert your locators
     // this.button = '#button'
@@ -30,10 +28,18 @@ class createCasePage {
     await I.waitForText(this.createCaseLink, 60);
     await I.wait(3);
 
-    if (await I.grabValueFrom(this.eventLocator) !== this.eventCode) {
-      await I.selectOption(this.jurisdictionLocator, this.jurisdictionCode);
-      await I.selectOption(this.caseTypeLocator, this.caseTypeCode);
-      await I.selectOption(this.eventLocator, this.eventCode);
+    if (await I.grabValueFrom(this.eventLocator) !== createCase.eventCode) {
+      await I.selectOption(this.jurisdictionLocator, createCase.jurisdictionCode);
+
+      let listOfValues: string[] = await I.grabAttributeFromAll(this.caseTypeOptionLocator, 'value');
+      for (const value of listOfValues) {
+        const idx: number = listOfValues.indexOf(value);
+        if (value === createCase.caseTypeCode){
+          await I.selectOption(this.caseTypeLocator, await I.grabTextFrom(locate(this.caseTypeOptionLocator).at(idx+1)));
+        }
+      }
+
+      await I.selectOption(this.eventLocator, createCase.eventCode);
     }
 
     await I.clickStart();

@@ -3,11 +3,19 @@ const todayPlus60days = moment().add(60, 'days');
 const yesterday = moment().subtract(1, 'days');
 const todayPlus10days = moment().add(10, 'days');
 
-export const envUrl = 'https://xui-ia-case-api-pr-2525.preview.platform.hmcts.net';
+runningEnv: process.env.ENVIRONMENT;
+
+export const envUrl: string = process.env.ENVIRONMENT === 'preview' ? 'https://xui-ia-case-api-pr-2525.preview.platform.hmcts.net' : 'https://manage-case.demo.platform.hmcts.net';
+
+export const createCase = {
+    jurisdictionCode: 'IA',
+    caseTypeCode: 'Asylum',
+    eventCode: 'startAppeal',
+}
 
 export const lawFirmUser = {
-    email:"ialegalreporgcreator12@mailnesia.com",
-    password: "Aldg@teT0wer"
+    email: process.env.ENVIRONMENT === 'preview' ? "ialegalreporgcreator12@mailnesia.com" : "ialegalreporgcreator12@mailinator.com",
+    password: process.env.ENVIRONMENT === 'preview' ? "Aldg@teT0wer" : 'AldgateT0wer',
 }
 
 export const legalOfficer = {
