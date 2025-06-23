@@ -9,6 +9,7 @@ class createCasePage {
   private eventLocator: string;
   private eventCode: string;
 
+
   constructor() {
     this.createCaseLink = 'Create case';
     this.jurisdictionLocator = '#cc-jurisdiction';
@@ -27,9 +28,14 @@ class createCasePage {
     await I.waitForText('Create Case', 60);
     await I.clickButtonOrLink(this.createCaseLink,);
     await I.waitForText(this.createCaseLink, 60);
-    await I.selectOption(this.jurisdictionLocator, this.jurisdictionCode);
-    await I.selectOption(this.caseTypeLocator, this.caseTypeCode);
-    await I.selectOption(this.eventLocator, this.eventCode);
+    await I.wait(3);
+
+    if (await I.grabValueFrom(this.eventLocator) !== this.eventCode) {
+      await I.selectOption(this.jurisdictionLocator, this.jurisdictionCode);
+      await I.selectOption(this.caseTypeLocator, this.caseTypeCode);
+      await I.selectOption(this.eventLocator, this.eventCode);
+    }
+
     await I.clickStart();
   }
 }

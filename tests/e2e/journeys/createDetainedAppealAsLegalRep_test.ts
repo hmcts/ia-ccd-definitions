@@ -1,8 +1,8 @@
 import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative} from '../detainedConfig'
 
 // @ts-ignore
-let caseId: string = '1750241613831544';
-let inTime: boolean = true;
+let caseId: string;
+let inTime: boolean = false;
 
 const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
 const detainedRepresentedS94bImageLocator: string = '//*[@id="journey_type_legal_rep_detained_s9"]/dt/ccd-markdown/div/markdown/p/img';
@@ -20,9 +20,9 @@ Before(async({ I }) => {
 
 // @ts-ignore
 Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time'),   async ({I, loginPage, createCasePage, createAppeal, serviceRequestPage, paymentPage}) => {
-    //const typeOfAppeal: string = 'EEA'; // Refusal under EEA regulations (payment required)
+    const typeOfAppeal: string = 'EEA'; // Refusal under EEA regulations (payment required)
     //const typeOfAppeal: string = 'RHR'; // Refusal human rights (payment required)
-    const typeOfAppeal: string  = 'DC'; // Deprivation of citizenship (no payment required)
+    //const typeOfAppeal: string  = 'DC'; // Deprivation of citizenship (no payment required)
     //const typeOfAppeal: string  = 'EU'; // Refusal of application under the EU Settlement Scheme (payment required)
     //const typeOfAppeal: string = 'RPS'; // Revocation of a protection status (no payment required)
 
