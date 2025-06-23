@@ -3,7 +3,7 @@ const todayPlus60days = moment().add(60, 'days');
 const yesterday = moment().subtract(1, 'days');
 const todayPlus10days = moment().add(10, 'days');
 
-runningEnv: process.env.ENVIRONMENT;
+export const runningEnv =  process.env.ENVIRONMENT;
 
 export const envUrl: string = process.env.ENVIRONMENT === 'preview' ? 'https://xui-ia-case-api-pr-2525.preview.platform.hmcts.net' : 'https://manage-case.demo.platform.hmcts.net';
 
