@@ -40,7 +40,7 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
         await createAppeal.setBailApplication('Yes');
     }
 
-    await createAppeal.setHomeOfficeDetails(inTime);
+    await createAppeal.setHomeOfficeDetails(true); //false if out of time
     await createAppeal.uploadNoticeOfDecision();
     await createAppeal.setTypeOfAppeal(typeOfAppeal);
     await createAppeal.setAppellantBasicDetails(false);

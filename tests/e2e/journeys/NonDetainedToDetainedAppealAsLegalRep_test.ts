@@ -20,7 +20,7 @@ Scenario('Create Non-Detained Appeal as Legal Representative',   async ({I, logi
     await createCasePage.createCase();
     await createAppeal.locationInUK('Yes');
     await createAppeal.inDetention('No');
-    await createAppeal.setHomeOfficeDetails(true);
+    await createAppeal.setHomeOfficeDetails(true); //false if out of time
     await createAppeal.uploadNoticeOfDecision();
     await createAppeal.setTypeOfAppeal(typeOfAppeal);
     await createAppeal.setAppellantBasicDetails(false);
