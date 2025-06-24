@@ -18,6 +18,7 @@ Scenario('Create Detained Appeal - Appellant In Person as Legal Admin - ' + (inT
     const typeOfAppeal: string  = 'DC'; // Deprivation of citizenship (no payment required)
     //const typeOfAppeal: string  = 'EU'; // Refusal of application under the EU Settlement Scheme (payment required)
     //const typeOfAppeal: string = 'RPS'; // Revocation of a protection status (no payment required)
+   //const typeOfAppeal:string = 'RPC'; // Refusal of protection claim (payment required)
 
     await loginPage.signIn(legalAdmin);
     await createCasePage.createCase();

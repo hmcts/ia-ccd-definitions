@@ -217,6 +217,12 @@ class createAppeal {
         await I.click('#appealType-euSettlementScheme');
         await I.clickContinue();
         break;
+      case 'RPC':
+        await I.click('#appealType-protection');
+        await I.clickContinue();
+        await I.click('#appealGroundsProtection_values-protectionHumanitarianProtection');
+        await I.clickContinue();
+        break;
     }
   }
 
