@@ -38,6 +38,66 @@ class createAppeal {
     await I.clickContinue();
   }
 
+
+  async outOfCountryDecision(appealDecision: string = 'refusalOfHumanRights', inTime: boolean = true) {
+    let currentUrl: string;
+    const letterDate = inTime
+        ? moment().subtract(5, 'days')
+        : moment().subtract(20, 'days');
+
+    switch (appealDecision) {
+      case 'refusalOfHumanRights':
+        await I.click('#outOfCountryDecisionType-refusalOfHumanRights');
+        await I.clickContinue();
+        currentUrl = await I.grabCurrentUrl();
+        if (currentUrl.includes('startAppealentryClearanceDecision')) {
+          await I.fillField('#gwfReferenceNumber', '123456789');
+          await I.fillField('#dateEntryClearanceDecision-day', letterDate.date().toString());
+          await I.fillField('#dateEntryClearanceDecision-month', (letterDate.month() + 1).toString());
+          await I.fillField('#dateEntryClearanceDecision-year', letterDate.year().toString());
+          await I.clickContinue();
+        }
+        break;
+      case 'refusalOfProtection':
+        await I.click('#outOfCountryDecisionType-refusalOfProtection');
+        await I.clickContinue();
+        currentUrl = await I.grabCurrentUrl();
+        if (currentUrl.includes('startAppealdepartureDate')) {
+          await I.fillField('#dateClientLeaveUk-day', '01');
+          await I.fillField('#dateClientLeaveUk-month', '06');
+          await I.fillField('#dateClientLeaveUk-year', '2025');
+          await I.clickContinue();
+          await this.setHomeOfficeDetails(true, 'decisionLetterReceivedDate');
+        }
+        break;
+      case 'removalOfClient':
+        await I.click('#outOfCountryDecisionType-removalOfClient');
+        await I.clickContinue();
+        currentUrl = await I.grabCurrentUrl();
+        if (currentUrl.includes('startAppealhomeOfficeDecision')) {
+          await I.fillField('#homeOfficeReferenceNumber', '123456789');
+          await I.fillField('#day-label-decisionLetterReceivedDate-day', letterDate.date().toString());
+          await I.fillField('#month-label-decisionLetterReceivedDate-month', (letterDate.month() + 1).toString());
+          await I.fillField('#year-label-decisionLetterReceivedDate-year', letterDate.year().toString());
+          await I.clickContinue();
+          await this.setHomeOfficeDetails(true, 'decisionLetterReceivedDate');
+        }
+        break;
+      case 'refusePermit':
+        await I.click('#outOfCountryDecisionType-refusePermit');
+        await I.clickContinue();
+        currentUrl = await I.grabCurrentUrl();
+        if (currentUrl.includes('startAppealentryClearanceDecision')) {
+          await I.fillField('#gwfReferenceNumber', '123456789');
+          await I.fillField('#dateEntryClearanceDecision-day', letterDate.date().toString());
+          await I.fillField('#dateEntryClearanceDecision-month', (letterDate.month() + 1).toString());
+          await I.fillField('#dateEntryClearanceDecision-year', letterDate.year().toString());
+          await I.clickContinue();
+        }
+        break;
+    }
+  }
+
   async inDetention(yesNo: string = 'Yes') {
     await I.click(`#appellantInDetention_${yesNo}`);
     await I.clickContinue();
@@ -93,20 +153,17 @@ class createAppeal {
     await I.clickContinue();
   }
 
-  async setHomeOfficeDetails(inTime: boolean = true) {
-    let homeOfficeLetterDate;
-    if (inTime) {
-      homeOfficeLetterDate = moment().subtract(5, 'days');
-    } else {
-      homeOfficeLetterDate = moment().subtract(20, 'days');
-    }
+  async setHomeOfficeDetails(inTime: boolean = true, fieldPrefix: string = 'homeOfficeDecisionDate') {
+    const homeOfficeLetterDate = inTime
+        ? moment().subtract(5, 'days')
+        : moment().subtract(20, 'days');
 
-    const yesterday = moment().subtract(1, 'days');
+      await I.fillField('#homeOfficeReferenceNumber', '12345');
 
-    await I.fillField('#homeOfficeReferenceNumber', '12345');
-    await I.fillField('#homeOfficeDecisionDate-day', homeOfficeLetterDate.date());
-    await I.fillField('#homeOfficeDecisionDate-month', homeOfficeLetterDate.month()+1);
-    await I.fillField('#homeOfficeDecisionDate-year', homeOfficeLetterDate.year());
+
+    await I.fillField(`#${fieldPrefix}-day`, homeOfficeLetterDate.date().toString());
+    await I.fillField(`#${fieldPrefix}-month`, (homeOfficeLetterDate.month() + 1).toString());
+    await I.fillField(`#${fieldPrefix}-year`, homeOfficeLetterDate.year().toString());
     await I.clickContinue();
   }
 
@@ -199,6 +256,17 @@ class createAppeal {
     }
     await I.clickContinue();
 }
+
+  async setOutOfCountryAddress(hasAddress: 'Yes' | 'No' = 'Yes') {
+    await I.click(`#hasCorrespondenceAddress_${hasAddress}`);
+
+    if (hasAddress === 'Yes') {
+      const outOfCountryAddress = '123 Example Street, Example City, Example Country, AB12 3CD';
+      await I.fillField('#appellantOutOfCountryAddress', outOfCountryAddress);
+    }
+
+    await I.clickContinue();
+  }
 
   async groundsOfAppeal() {
     await I.click('#appealGroundsEuRefusal_values-appealGroundsEuRefusal');
