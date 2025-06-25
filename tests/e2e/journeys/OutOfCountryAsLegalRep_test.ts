@@ -37,6 +37,10 @@ Scenario('Create Out of Country Appeal as Legal Representative',   async ({I, lo
         await createAppeal.hasFeeRemission('No');
     }
 
+    if (typeOfAppeal === 'RPC') {
+        await createAppeal.setPayNowLater('Now');
+    }
+
     await createAppeal.checkMyAnswers();
 
     caseId = await I.grabCaseNumber();

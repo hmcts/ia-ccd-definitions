@@ -409,11 +409,15 @@ class createAppeal {
     await I.clickContinue();
   }
 
+  // Only valid for appeal type: Refusal of protection claim
+  async setPayNowLater(nowLater: string = 'Now') {
+    await I.click(`#paAppealTypePaymentOption-pay${nowLater}`);
+    await I.clickContinue();
+  }
+
   async checkMyAnswers() {
-    // TODO: Needs other options added
     await I.clickSaveAndContinue();
-    // Below fails in Preview env - really needs fixing at preview env level
-    // TODO: But will write code to circumvent the issue
+
     if(['demo'].includes(runningEnv)) {
       await I.waitForText('You have saved your appeal', 60);
       await I.waitForText('You still need to submit it', 60);

@@ -63,6 +63,10 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
         await createAppeal.hasFeeRemission('No');
     }
 
+    if (typeOfAppeal === 'RPC') {
+        await createAppeal.setPayNowLater('Now');
+    }
+
     await createAppeal.checkMyAnswers();
 
     caseId = await I.grabCaseNumber();
