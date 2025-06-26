@@ -4,7 +4,8 @@ import {appellant} from "../../detainedConfig";
 
 const { I } = inject();
 
-class RemoveDetainedStatus {
+class removeDetainedStatus {
+
     async detentionRemovalDetails() {
         const monthAgo = moment().subtract(1, 'month');
 
@@ -65,12 +66,9 @@ class RemoveDetainedStatus {
 
     async checkAppealTabDetentionNo() {
         await I.selectTab('Appeal');
-        // const detentionStatusLocator = '//*[@id="case-viewer-field-read--appellantInDetention"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-yes-no-field/span';
-        await I.grabTextFrom('//*[@id="case-viewer-field-read--appellantInDetention"]');
-        const no: string[] = ['No'];
+        let appellantInDetention: string = await I.grabTextFrom('//*[@id="case-viewer-field-read--appellantInDetention"]');
         // @ts-ignore
-        await I.expectContain(no, 'No', 'A valid Detained Status has been removed');
-        // await I.see('No', detentionStatusLocator);
+        await I.expectEqual(appellantInDetention, 'No', `The Detention Flag: ${appellantInDetention} on the Appeal Tab is invalid. It should be: No`);
     }
 
 
@@ -91,4 +89,5 @@ class RemoveDetainedStatus {
 }
 
 // Export as default
-export default new RemoveDetainedStatus();
+//export default new removeDetainedStatus();
+export = removeDetainedStatus;

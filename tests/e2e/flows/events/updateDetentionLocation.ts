@@ -8,8 +8,6 @@ class detentionLocation {
 
     constructor() {
         this.createAppeal = new createAppeal();
-        console.log('CONSTRUCTOR CALLED');
-
     }
 
     async changeLocation(detentionLocation: string = 'prison', hasCustodialSentence: boolean = true) {

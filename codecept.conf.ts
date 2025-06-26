@@ -40,6 +40,7 @@ export const config: CodeceptJS.MainConfig = {
     markAppealAsDetained: './tests/e2e/flows/events/markAppealAsDetained.ts',
     s94b: './tests/e2e/flows/events/setS94bStatus.ts',
     updateDetentionLocation: './tests/e2e/flows/events/updateDetentionLocation.ts',
+    removeDetainedStatus: './tests/e2e/flows/events/removeDetainedStatus.ts',
   },
   mocha:     {
     reporterOptions: {
