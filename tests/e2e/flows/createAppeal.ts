@@ -27,10 +27,19 @@ class createAppeal {
   // appellantInPerson() - Legal Admin Journey
   async appellantInPerson(yesNo: string = 'Yes') {
     await I.click(`#appellantsRepresentation-${yesNo}`);
+    
     if (yesNo === 'No') {
-      //TODO - add addition page call
+      await I.clickContinue();
+      await I.fillField('#appealWasNotSubmittedReason', 'Reason why appeal was not submitted on MyHMCTS');
+      await I.click('Add new');
+      await I.attachFile('#appealNotSubmittedReasonDocuments_0_document', './tests/documents/TEST_DOCUMENT_1.pdf');
+      await I.fillField('#appealNotSubmittedReasonDocuments_0_description', 'Supporting document test');
+      await I.waitForInvisible(locate('.error-message').withText('Uploading...'), 20);
+      await I.clickContinue();
+      await this.setLegalRepresentativeDetails();
+    } else {
+      await I.clickContinue();
     }
-    await I.clickContinue();
   }
 
   async locationInUK(yesNo: string = 'Yes') {
