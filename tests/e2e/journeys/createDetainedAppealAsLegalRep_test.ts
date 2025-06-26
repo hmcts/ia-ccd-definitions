@@ -90,11 +90,27 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
     await I.logout();
 }).retry(3);
 
+// // @ts-ignore
+// Scenario('Legal Officer adds s94b appeal status, updates detention location and creates Respondent Direction',   async ({I, loginPage, retrieveCase, createDirection, s94b, updateDetentionLocation}) => {
+//     await loginPage.signIn(legalOfficer);
+//     await retrieveCase.getCase(caseId);
+//     await I.waitForText('Case details',60);
+//
+//     await s94b.setStatus('Yes');await I.validateCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
+//     await I.validateCorrectLabelDisplayed(detainedRepresentedS94bImageLocator, 'legalRep_detained_s9');
+//     await I.validateCaseFlagExists('Detained individual', 'Active');
+//     await I.selectNextStep('Update detention location');
+//     await updateDetentionLocation.changeLocation(detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison'), detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
+//     await updateDetentionLocation.validateDataUpdated(detentionLocation);
+//     await I.selectNextStep('Request respondent evidence');
+//     await createDirection.confirmAndSubmitRespondentDirection();
+//     await I.logout();
+// }).retry(3)
 
 
 //
 // // @ts-ignore
-// Scenario('Home Office Officer (respondant) review appeal and upload Home Office bundle',   async ({I, loginPage, retrieveCase, homeOffice}) => {
+// Scenario('Home Office Officer (respondent) review appeal and upload Home Office bundle',   async ({I, loginPage, retrieveCase, homeOffice}) => {
 //     await loginPage.signIn(homeOfficeOfficer);
 //     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
 //     await I.waitForText('Case details', 60);
@@ -143,7 +159,7 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
 // }).retry(3);
 //
 // // @ts-ignore
-// Scenario('Home Office Officer (respondant) responds to appeal response from Appellant/Legal Rep',   async ({I, loginPage, retrieveCase, createDirection}) => {
+// Scenario('Home Office Officer (respondent) responds to appeal response from Appellant/Legal Rep',   async ({I, loginPage, retrieveCase, createDirection}) => {
 //     await loginPage.signIn(homeOfficeOfficer);
 //     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
 //     await I.waitForText('Case details',60);
