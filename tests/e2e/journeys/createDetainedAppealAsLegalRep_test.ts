@@ -1,4 +1,6 @@
-import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative} from '../detainedConfig'
+import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative, legalAdmin} from '../detainedConfig'
+import RemoveDetainedStatus from "../flows/events/removeDetainedStatus";
+
 
 // @ts-ignore
 let caseId: string;
@@ -24,8 +26,8 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
     //const typeOfAppeal: string = 'RHR'; // Refusal human rights (payment required)
     //const typeOfAppeal: string  = 'DC'; // Deprivation of citizenship (no payment required)
     //const typeOfAppeal: string  = 'EU'; // Refusal of application under the EU Settlement Scheme (payment required)
-    //const typeOfAppeal: string = 'RPS'; // Revocation of a protection status (no payment required)
-    const typeOfAppeal:string = 'RPC'; // Refusal of protection claim (payment required)
+    const typeOfAppeal: string = 'RPS'; // Revocation of a protection status (no payment required)
+    // const typeOfAppeal:string = 'RPC'; // Refusal of protection claim (payment required)
 
     await loginPage.signIn(lawFirmUser);
     await createCasePage.createCase();
@@ -177,3 +179,17 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
 //     await I.clickCloseAndReturnToCaseDetails();
 //     await I.logout();
 // }).retry(3);
+//
+
+// @ts-ignore
+Scenario('Admin removes detained status',   async ({I, loginPage}) => {
+    await loginPage.signIn(legalAdmin);
+    await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
+    await I.waitForText('Case details',60);
+    await I.selectNextStep('Remove Detained Status');
+    await RemoveDetainedStatus.removeDetainedStatus();
+    await I.clickCloseAndReturnToCaseDetails();
+    await I.validateCaseFlagExists('Detained individual', 'Inactive');
+    await RemoveDetainedStatus.checkIfNonDetained();
+    await I.logout();
+}).retry(3);
