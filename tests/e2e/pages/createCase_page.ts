@@ -7,7 +7,6 @@ class createCasePage {
   private caseTypeLocator: string;
   private caseTypeOptionLocator: string;
   private eventLocator: string;
-  private eventCode: string;
 
 
   constructor() {
@@ -16,11 +15,7 @@ class createCasePage {
     this.caseTypeLocator = '#cc-case-type';
     this.caseTypeOptionLocator = '//*[@id="cc-case-type"]/option';
     this.eventLocator = '#cc-event';
-
-    //insert your locators
-    // this.button = '#button'
   }
-  // insert your methods here
 
   async createCase() {
     await I.waitForText('Create Case', 60);
