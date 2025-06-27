@@ -6,7 +6,7 @@ import {detentionFacility} from '../fixtures/detentionFacilities'
 const { I } = inject();
 const outOfTimedImageLocator: string = '//*[@id="confirmation-body"]/ccd-markdown/div/markdown/p[1]/img';
 
-class createAppeal {
+class CreateAppeal {
 
   constructor() {
     //insert your locators
@@ -469,4 +469,4 @@ class createAppeal {
 
 // For inheritance
 //module.exports = new createAppeal();
-export = createAppeal;
+export = CreateAppeal;

@@ -1,6 +1,6 @@
 const { I } = inject();
 
-class loginPage {
+class LoginPage {
   private usernameField: string;
   private passwordField: string;
 
@@ -28,4 +28,4 @@ class loginPage {
 
 // For inheritance
 //module.exports = new loginPage();
-export = loginPage;
+export = LoginPage;

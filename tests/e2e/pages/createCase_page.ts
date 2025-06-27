@@ -1,7 +1,7 @@
 import {createCase} from '../detainedConfig'
 const { I } = inject();
 
-class createCasePage {
+class CreateCasePage {
   private createCaseLink: string;
   private jurisdictionLocator: string;
   private caseTypeLocator: string;
@@ -48,4 +48,4 @@ class createCasePage {
 
 // For inheritance
 //module.exports = new loginPage();
-export = createCasePage;
+export = CreateCasePage;

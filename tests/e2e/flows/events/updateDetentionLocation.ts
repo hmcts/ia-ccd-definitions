@@ -2,7 +2,7 @@ import createAppeal from '../createAppeal';
 
 const { I } = inject();
 
-class detentionLocation {
+class DetentionLocation {
 
     private createAppeal: createAppeal;
 
@@ -48,4 +48,4 @@ class detentionLocation {
 
 // For inheritance
 //module.exports = new serviceRequestPage();
-export = detentionLocation;
+export = DetentionLocation;

@@ -1,7 +1,7 @@
 import moment, {Moment} from "moment/moment";
 
 const { I } = inject();
-class createDirection {
+class CreateDirection {
 
     constructor() {
         //insert your locators
@@ -43,4 +43,4 @@ class createDirection {
 
 // For inheritance
 //module.exports = new detentionPage();
-export = createDirection;
+export = CreateDirection;

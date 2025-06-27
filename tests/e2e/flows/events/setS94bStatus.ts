@@ -1,6 +1,6 @@
 const { I } = inject();
 
-class s94b {
+class S94b {
 
     constructor() {
     }
@@ -16,4 +16,4 @@ class s94b {
 
 // For inheritance
 //module.exports = new serviceRequestPage();
-export = s94b;
+export = S94b;

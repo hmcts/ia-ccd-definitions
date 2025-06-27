@@ -1,6 +1,6 @@
 const { I } = inject();
 
-class retrieveCasePage {
+class RetrieveCasePage {
 
   constructor() {
 
@@ -18,4 +18,4 @@ class retrieveCasePage {
 
 // For inheritance
 //module.exports = new loginPage();
-export = retrieveCasePage;
+export = RetrieveCasePage;

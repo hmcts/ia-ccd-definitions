@@ -3,7 +3,7 @@ import {appellant} from '../../detainedConfig'
 
 const { I } = inject();
 
-class markAppeal {
+class MarkAppeal {
     private createAppeal: createAppeal;
 
     constructor() {
@@ -50,4 +50,4 @@ class markAppeal {
 
 // For inheritance
 //module.exports = new serviceRequestPage();
-export = markAppeal;
+export = MarkAppeal;

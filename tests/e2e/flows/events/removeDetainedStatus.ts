@@ -4,7 +4,7 @@ import {appellant} from "../../detainedConfig";
 
 const { I } = inject();
 
-class removeDetainedStatus {
+class RemoveDetainedStatus {
 
     async removeStatus(contactPreference: 'Email' | 'Text' = 'Email') {
         await this.detentionRemovalDetails();
@@ -86,4 +86,4 @@ class removeDetainedStatus {
 
 // Export as default
 //export default new removeDetainedStatus();
-export = removeDetainedStatus;
+export = RemoveDetainedStatus;

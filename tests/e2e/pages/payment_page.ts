@@ -4,7 +4,7 @@ import {envUrl} from '../detainedConfig'
 
 const { I } = inject();
 
-class paymentPage {
+class PaymentPage {
   private cardNumber: string = '4444333322221111';
   private expiryMonth: string = '11';
   private expiryYear: string = '2032';
@@ -71,4 +71,4 @@ class paymentPage {
 }
 
 // For inheritance
-export = paymentPage;
+export = PaymentPage;
