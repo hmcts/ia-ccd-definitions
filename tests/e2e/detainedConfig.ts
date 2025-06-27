@@ -2,6 +2,7 @@ import moment from "moment";
 const todayPlus60days = moment().add(60, 'days');
 const yesterday = moment().subtract(1, 'days');
 const todayPlus10days = moment().add(10, 'days');
+const monthAgo = moment().subtract(1, 'month');
 
 export const runningEnv =  process.env.ENVIRONMENT;
 
@@ -84,6 +85,14 @@ export const appellant = {
             secondsWithLeadingZero: todayPlus10days.format('ss'),
             amPm: todayPlus10days.format('A'),
         },
+    },
+    detentionRemoval: {
+        date: {
+        day: monthAgo.date().toString(),
+        month: (monthAgo.month() + 1).toString(),
+        year: monthAgo.year().toString(),
+        },
+        reason: 'Testing reason why appellant was removed from detention.',
     },
     bailApplicationNumber: 'AB/01234',
 }

@@ -1,7 +1,7 @@
 import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative, legalAdmin} from '../detainedConfig'
 
 // @ts-ignore
-let caseId: string = '1750958170473622';
+let caseId: string;
 let inTime: boolean = true;
 
 const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
@@ -186,9 +186,9 @@ Scenario('Admin removes detained status',   async ({I, loginPage, removeDetained
     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
     await I.waitForText('Case details',60);
     await I.selectNextStep('Remove Detained Status');
-    await removeDetainedStatus.removeDetainedStatus();
+    await removeDetainedStatus.removeStatus();
     await I.clickCloseAndReturnToCaseDetails();
     await I.validateCaseFlagExists('Detained individual', 'Inactive');
-    await removeDetainedStatus.checkIfNonDetained();
+    await removeDetainedStatus.validateIsNonDetained();
     await I.logout();
 }).retry(3);

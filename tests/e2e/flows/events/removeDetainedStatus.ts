@@ -6,16 +6,25 @@ const { I } = inject();
 
 class removeDetainedStatus {
 
+    async removeStatus(contactPreference: 'Email' | 'Text' = 'Email') {
+        await this.detentionRemovalDetails();
+        await this.appellantAddress('Yes');
+        await this.appellantContactPreference(contactPreference);
+        await this.removeDetainedCYA();
+        await I.clickButtonOrLink('Remove Detained Status');
+        await this.removeDetainedConfirmation();
+    }
+
     async detentionRemovalDetails() {
-        const monthAgo = moment().subtract(1, 'month');
+
 
         await I.waitForText(`Detention removal details`, 60);
 
-        await I.fillField('#detentionRemovalDate-day', monthAgo.date().toString());
-        await I.fillField('#detentionRemovalDate-month', (monthAgo.month() + 1).toString());
-        await I.fillField('#detentionRemovalDate-year', monthAgo.year().toString());
+        await I.fillField('#detentionRemovalDate-day', appellant.detentionRemoval.date.day);
+        await I.fillField('#detentionRemovalDate-month', appellant.detentionRemoval.date.month);
+        await I.fillField('#detentionRemovalDate-year', appellant.detentionRemoval.date.year);
 
-        await I.fillField('#detentionRemovalReason','Testing reason why appellant was removed from detention');
+        await I.fillField('#detentionRemovalReason',appellant.detentionRemoval.reason);
         await I.clickContinue();
     }
 
@@ -23,25 +32,22 @@ class removeDetainedStatus {
         await I.click(`#appellantHasFixedAddress_${hasPostalAddress}`);
 
         await I.waitForElement('#appellantAddress_appellantAddress_postcodeInput');
-        await I.fillField('#appellantAddress_appellantAddress_postcodeInput', 'B11LS');
-        await I.click('//button[contains(text(), "Find address")]');
-        await I.wait(2);
-        await I.selectOption('#appellantAddress_appellantAddress_addressList', 'Apartment 1, Westside One, 22 Suffolk Street Queensway, Birmingham '); // First valid address
+        await I.fillField('#appellantAddress_appellantAddress_postcodeInput', appellant.address.postcode);
+        await I.click('//*[@id="appellantAddress_appellantAddress_postcodeLookup"]/button');
+        await I.waitForVisible('#appellantAddress_appellantAddress_addressList',60);
+        await I.waitForText('1 address found', 60);
+        await I.selectOption('#appellantAddress_appellantAddress_addressList', appellant.address.addressLine1 + ', ' + appellant.address.postTown);
         await I.clickContinue();
     }
 
-    async appellantContactPreference(preference: 'email' | 'text') {
+    async appellantContactPreference(preference: 'Email' | 'Text') {
         await I.waitForText('The appellant\'s contact preference', 60);
-
-        if (preference === 'email') {
-            // Select email option
-            await I.click('#contactPreference-wantsEmail');
+        await I.click(`#contactPreference-wants${preference}`);
+        if (preference === 'Email') {
             // Fill in email field from config
             await I.waitForElement('#email', 5);
             await I.fillField('#email', appellant.email);
-        } else if (preference === 'text') {
-            // Select text message option
-            await I.click('#contactPreference-wantsSms');
+        } else {
             // Fill in phone number field from config
             await I.waitForElement('#mobileNumber', 5);
             await I.fillField('#mobileNumber', appellant.mobile);
@@ -71,17 +77,7 @@ class removeDetainedStatus {
         await I.expectEqual(appellantInDetention, 'No', `The Detention Flag: ${appellantInDetention} on the Appeal Tab is invalid. It should be: No`);
     }
 
-
-    async removeDetainedStatus(contactPreference: 'email' | 'text' = 'email') {
-        await this.detentionRemovalDetails();
-        await this.appellantAddress('Yes');
-        await this.appellantContactPreference(contactPreference);
-        await this.removeDetainedCYA();
-        await I.clickButtonOrLink('Remove Detained Status');
-        await this.removeDetainedConfirmation();
-    }
-
-    async checkIfNonDetained() {
+    async validateIsNonDetained() {
         await this.checkAppealTabDetentionNo();
     }
 
