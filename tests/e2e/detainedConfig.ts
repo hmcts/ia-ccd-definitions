@@ -102,7 +102,14 @@ export const appellant = {
     name: 'Steve',
     familyName: 'Legal',
     mobile: '02089998888',
+     email: 'legalRepEmail@test.com',
     reference: 'ABCDE12345',
+     address: {
+         addressLine1: '16 Deans Yard',
+         postTown: 'London',
+         postcode: 'SW1P 3PA',
+         country: 'United Kingdom'
+     },
  }
 
  export const sponsor = {

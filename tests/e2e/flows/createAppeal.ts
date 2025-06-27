@@ -25,7 +25,7 @@ class CreateAppeal {
   }
 
   // appellantInPerson() - Legal Admin Journey
-  async appellantInPerson(yesNo: string = 'Yes') {
+  async appellantInPerson(yesNo: string = 'Yes', hasPostalAddress: string = 'Yes') {
     await I.click(`#appellantsRepresentation-${yesNo}`);
     
     if (yesNo === 'No') {
@@ -36,7 +36,24 @@ class CreateAppeal {
       await I.fillField('#appealNotSubmittedReasonDocuments_0_description', 'Supporting document test');
       await I.waitForInvisible(locate('.error-message').withText('Uploading...'), 20);
       await I.clickContinue();
-      await this.setLegalRepresentativeDetails();
+
+      await I.waitForText('Legal representative details', 60);
+      await I.fillField('#legalRepCompanyPaperJ', legalRepresentative.company);
+      await I.fillField('#legalRepGivenName', legalRepresentative.name);
+      await I.fillField('#legalRepFamilyNamePaperJ', legalRepresentative.familyName);
+      await I.fillField('#legalRepEmail', legalRepresentative.email);
+      await I.fillField('#legalRepRefNumberPaperJ', legalRepresentative.reference);
+      await I.clickContinue();
+
+      await I.waitForText('Legal representative address', 60);
+      await I.click(`#legalRepHasAddress_${hasPostalAddress}`);
+      await I.waitForElement('#legalRepAddressUK_legalRepAddressUK_postcodeInput');
+      await I.fillField('#legalRepAddressUK_legalRepAddressUK_postcodeInput',  legalRepresentative.address.postcode);
+      await I.click('//button[contains(text(), "Find address")]');
+      await I.wait(2);
+      await I.selectOption('#legalRepAddressUK_legalRepAddressUK_addressList', legalRepresentative.address.addressLine1); // First valid address
+      await I.clickContinue();
+
     } else {
       await I.clickContinue();
     }
