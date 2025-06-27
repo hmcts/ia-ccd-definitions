@@ -256,6 +256,10 @@ export = function() {
       }
     },
 
+    async runAccessibilityCheck(pageName: string){
+      this.runA11yCheck({reportFileName: `${pageName}_accessibility_audit.html`});
+    },
+
     async logout() {
       await this.clickSignOut();
       await this.waitForElement('#username');

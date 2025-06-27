@@ -13,6 +13,7 @@ class ServiceRequestPage {
   async createServiceRequest(){
     await I.selectNextStep('Create a service request');
     await I.waitForText('Next step - payment', 60);
+    await I.runAccessibilityCheck('CreateServiceRequestPage');
     await I.clickSubmit();
     await I.waitForText('You have created a service request', 60);
     await I.clickCloseAndReturnToCaseDetails();

@@ -60,6 +60,7 @@ class CreateAppeal {
   }
 
   async locationInUK(yesNo: string = 'Yes') {
+    await I.runAccessibilityCheck('LocationPage');
     await I.click(`#appellantInUk_${yesNo}`);
     await I.clickContinue();
   }
@@ -125,11 +126,13 @@ class CreateAppeal {
   }
 
   async inDetention(yesNo: string = 'Yes') {
+    await I.runAccessibilityCheck('InDententionPage');
     await I.click(`#appellantInDetention_${yesNo}`);
     await I.clickContinue();
   }
 
   async setDetentionLocation(detentionLocation: string = 'immigrationRemovalCentre', hasCustodialSentence: string = 'Yes') {
+    await I.runAccessibilityCheck('DetentionLocationPage');
     switch (detentionLocation) {
       case 'immigrationRemovalCentre':
         await I.click(`#detentionFacility-${detentionLocation}`);
@@ -138,15 +141,19 @@ class CreateAppeal {
         break;
       case 'prison':
         await I.click(`#detentionFacility-${detentionLocation}`);
-        await I.waitForElement(`#prisonNOMSNumber_${detentionLocation}`);
+        await I.waitForElement(`#prisonNOMSNumber_${detentionLocation}`, 60);
+        await I.runAccessibilityCheck('DententionLocationPrisonNOMSPage');
         await I.fillField('#prisonNOMSNumber_prison', appellant.NOMSNumber)
+        await I.runAccessibilityCheck('DententionLocationPrisonNOMSPage');
         await I.clickContinue();
         await I.selectOption('#prisonName', detentionFacility.prison.name);
+        await I.runAccessibilityCheck('DententionLocationPrisonNamePage');
         await I.clickContinue();
         break;
       case 'other':
         await I.click(`#detentionFacility-${detentionLocation}`);
         await I.waitForVisible('#otherDetentionFacilityName_other', 60);
+        await I.runAccessibilityCheck('DententionLocationOtherPage');
         await I.fillField('#otherDetentionFacilityName_other', 'Other facility test');
         await I.clickContinue();
         break;
@@ -155,6 +162,7 @@ class CreateAppeal {
 
    async setDetentionCentre() {
     await I.selectOption('#ircName', 'Brookhouse');
+    await I.runAccessibilityCheck('DententionLocationIRCPage');
     await I.clickContinue();
   }
 
@@ -166,6 +174,7 @@ class CreateAppeal {
       await I.fillField('#releaseDate-month', appellant.custodialSentence.month);
       await I.fillField('#releaseDate-year', appellant.custodialSentence.year);
     }
+    await I.runAccessibilityCheck('CustodialSentencePage');
     await I.clickContinue();
   }
 
@@ -176,6 +185,7 @@ class CreateAppeal {
       await I.waitForElement('#bailApplicationNumber', 60);
       await I.fillField('#bailApplicationNumber', appellant.bailApplicationNumber);
     }
+    await I.runAccessibilityCheck('PendingBailApplicationPage');
     await I.clickContinue();
   }
 
@@ -184,7 +194,8 @@ class CreateAppeal {
         ? moment().subtract(5, 'days')
         : moment().subtract(20, 'days');
 
-      await I.fillField('#homeOfficeReferenceNumber', '12345');
+    await I.runAccessibilityCheck('HomeOfficeDetailsPage');
+    await I.fillField('#homeOfficeReferenceNumber', '12345');
 
 
     await I.fillField(`#${fieldPrefix}-day`, homeOfficeLetterDate.date().toString());
@@ -194,6 +205,7 @@ class CreateAppeal {
   }
 
   async uploadNoticeOfDecision() {
+    await I.runAccessibilityCheck('UploadNoticeOfDecisionPage');
     await I.click('Add new');
     await I.attachFile('#uploadTheNoticeOfDecisionDocs_0_document', './tests/documents/TEST_DOCUMENT_1.pdf');
     await I.fillField('#uploadTheNoticeOfDecisionDocs_0_description', 'Test Notice of Decision document.');
@@ -203,6 +215,7 @@ class CreateAppeal {
 
   async setTypeOfAppeal(appealType: string = 'EEA'){
     let currentUrl: string;
+    await I.runAccessibilityCheck('TypeOfAppealPage');
     switch (appealType) {
       case 'EEA':
         await I.click('#appealType-refusalOfEu');
@@ -217,6 +230,7 @@ class CreateAppeal {
         await I.clickContinue();
         currentUrl = await I.grabCurrentUrl();
         if (!currentUrl.includes('BasicDetails')) {
+          await I.runAccessibilityCheck('TypeOfAppealRevocationHumanitarianProtectionOptionsPage');
           await I.click('#appealGroundsRevocation_values-revocationHumanitarianProtection');
           await I.clickContinue();
         }
@@ -226,6 +240,7 @@ class CreateAppeal {
         await I.clickContinue();
         currentUrl = await I.grabCurrentUrl();
         if (!currentUrl.includes('BasicDetails')) {
+          await I.runAccessibilityCheck('TypeOfAppealHumanRightsRefusalOptionsPage');
           await I.click('#appealGroundsDecisionHumanRightsRefusal_values-humanRightsRefusal');
           await I.clickContinue();
         }
@@ -235,6 +250,7 @@ class CreateAppeal {
         await I.clickContinue();
         currentUrl = await I.grabCurrentUrl();
         if (!currentUrl.includes('BasicDetails')) {
+          await I.runAccessibilityCheck('TypeOfAppealDeprivationOptionsPage');
           await I.checkOption('#appealGroundsDeprivation_values-disproportionateDeprivation');
           await I.clickContinue();
         }
@@ -245,7 +261,8 @@ class CreateAppeal {
         break;
       case 'RPC':
         await I.click('#appealType-protection');
-        await I.clickContinue();
+        await I.clickContinue()
+        await I.runAccessibilityCheck('TypeOfAppealHumanitarianProtectionOptionsPage');
         await I.click('#appealGroundsProtection_values-protectionHumanitarianProtection');
         await I.clickContinue();
         break;
@@ -286,6 +303,7 @@ class CreateAppeal {
       await I.fillField('#appellantAddress__detailPostCode', appellant.address.postcode);
       await I.fillField('#appellantAddress__detailCountry', appellant.address.country);
     }
+    await I.runAccessibilityCheck('AppellantAddressPage');
     await I.clickContinue();
 }
 
@@ -301,6 +319,7 @@ class CreateAppeal {
   }
 
   async groundsOfAppeal() {
+    await I.runAccessibilityCheck('TypeOfAppealRefusalOfEuOptionsPage');
     await I.click('#appealGroundsEuRefusal_values-appealGroundsEuRefusal');
     await I.clickContinue();
   }
@@ -315,6 +334,7 @@ class CreateAppeal {
     await I.fillField('#appellantDateOfBirth-day', appellant.dob.day);
     await I.fillField('#appellantDateOfBirth-month', appellant.dob.month);
     await I.fillField('#appellantDateOfBirth-year', appellant.dob.year);
+    await I.runAccessibilityCheck('AppellantBasicDetailsPage');
     await I.clickContinue();
   }
 
@@ -326,10 +346,12 @@ class CreateAppeal {
     } else {
       await I.click('#appellantStateless-hasNationality');
     }
+    await I.runAccessibilityCheck('AppellantNationalityPage');
     await I.clickContinue();
   }
 
   async hasSponsor(isSponsored: string = 'No', sponsorComms: string = 'email', sponsorAuthorised: string = 'Yes'){
+    await I.runAccessibilityCheck('SponsorPage');
     await I.click(`#hasSponsor_${isSponsored}`);
     await I.clickContinue();
 
@@ -340,9 +362,11 @@ class CreateAppeal {
   }
 
   async setSponsor(emailSms: string, authorisation: string) {
+    await I.runAccessibilityCheck('SponsorNames')
     await I.fillField('#sponsorGivenNames', sponsor.givenNames);
     await I.fillField('#sponsorFamilyName', sponsor.familyName);
     await I.clickContinue();
+    await I.runAccessibilityCheck('SponsorAddress');
     await I.click('//*[@id="sponsorAddress_sponsorAddress"]/div/a');
     await I.fillField('#sponsorAddress__detailAddressLine1', sponsor.address.addressLine1);
     await I.fillField('#sponsorAddress__detailPostTown', sponsor.address.postTown);
@@ -350,6 +374,7 @@ class CreateAppeal {
     await I.fillField('#sponsorAddress__detailCountry', sponsor.address.country);
     await I.clickContinue();
 
+    await I.runAccessibilityCheck('SponsorContactPreferencePage');
     if (emailSms === 'email') {
       await I.checkOption('#sponsorContactPreference-wantsEmail');
       await I.fillField('#sponsorEmail', sponsor.email);
@@ -358,12 +383,13 @@ class CreateAppeal {
       await I.fillField('#sponsorMobileNumber', sponsor.mobile);
     }
     await I.clickContinue();
-
+    await I.runAccessibilityCheck('SponsorAuthorisationPage');
     await I.checkOption(`#sponsorAuthorisation_${authorisation}`);
     await I.clickContinue();
   }
 
   async hasDepotationOrder(hasDeportOrder: string = 'No') {
+    await I.runAccessibilityCheck('DeportationPage');
     await I.click(`#deportationOrderOptions_${hasDeportOrder}`);
     await I.clickContinue();
   }
@@ -379,6 +405,7 @@ class CreateAppeal {
       await I.fillField('#removalOrderDate-minute', appellant.removalDirections.time.minutesWithLeadingZero);
       await I.fillField('#removalOrderDate-second', appellant.removalDirections.time.secondsWithLeadingZero);
     }
+    await I.runAccessibilityCheck('RemovalDirectionsPage');
     await I.clickContinue();
   }
 
@@ -398,16 +425,19 @@ class CreateAppeal {
     if (hasMatters === 'Yes') {
       await I.fillField('#newMatters', 'New matters test text.');
     }
+    await I.runAccessibilityCheck('NewMattersPage');
     await I.clickContinue();
   }
 
   async hasOtherAppeals(otherAppeals: string = 'No') {
     // TODO: Needs other options added
+    await I.runAccessibilityCheck('OtherAppealsPage');
     await I.click('#hasOtherAppeals-No');
     await I.clickContinue();
   }
 
   async setLegalRepresentativeDetails() {
+    await I.runAccessibilityCheck('LegalRepresentativeDetailsPage');
     await I.fillField('#legalRepCompany', legalRepresentative.company);
     await I.fillField('#legalRepName', legalRepresentative.name);
     await I.fillField('#legalRepFamilyName', legalRepresentative.familyName);
@@ -417,6 +447,7 @@ class CreateAppeal {
   }
 
   async isHearingRequired(hearingRequired: boolean = true) {
+    await I.runAccessibilityCheck('HearingRequiredPage');
     if (hearingRequired) {
       await I.click("//input[contains(@id,'decisionWithHearing')]");
     } else {
@@ -427,6 +458,7 @@ class CreateAppeal {
 
   async hasFeeRemission(feeRemission: string = 'No') {
     // TODO: Needs other options added
+    await I.runAccessibilityCheck('FeeRemissionPage');
     switch (feeRemission) {
       case 'No':
         await I.click('#remissionType-noRemission');
@@ -437,6 +469,7 @@ class CreateAppeal {
 
   // Only valid for appeal type: Refusal of protection claim
   async setPayNowLater(nowLater: string = 'Now') {
+    await I.runAccessibilityCheck('PayNowPage');
     await I.click(`#paAppealTypePaymentOption-pay${nowLater}`);
     await I.clickContinue();
   }
@@ -453,6 +486,7 @@ class CreateAppeal {
 
   // setAppealOutOfTime() Legal Admin journey
   async setAppealOutOfTime(){
+    await I.runAccessibilityCheck('AppealOutOfTimePage');
     await I.waitForText('Reasons the appeal is late', 60);
     await I.fillField('#applicationOutOfTimeExplanation', 'Test explanation of why out of time.');
     await I.attachFile('#applicationOutOfTimeDocument', './tests/documents/TEST_DOCUMENT_1.pdf');
@@ -462,6 +496,7 @@ class CreateAppeal {
 
   async agreeToDeclaration(legalRepDeclaration: boolean = true, inTime: boolean = true) {
       await I.waitForText('Declaration',60);
+    await I.runAccessibilityCheck('DeclarationPage');
       if (legalRepDeclaration) {
         await I.click('#legalRepDeclaration');
       } else {
@@ -485,5 +520,5 @@ class CreateAppeal {
 }
 
 // For inheritance
-//module.exports = new createAppeal();
-export = CreateAppeal;
+module.exports = new CreateAppeal();
+//export = CreateAppeal;

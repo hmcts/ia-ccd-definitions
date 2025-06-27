@@ -8,7 +8,7 @@ setHeadlessWhen(process.env.HEADLESS);
 setCommonPlugins();
 
 export const config: CodeceptJS.MainConfig = {
-  tests: './tests/e2e/journeys/*_test.ts',
+  tests: './tests/e2e/**/*_test.ts',
   output: './output',
   helpers: {
       Playwright: {
@@ -25,6 +25,10 @@ export const config: CodeceptJS.MainConfig = {
       },
       Expect: {
           require: '@codeceptjs/expect-helper'
+      },
+      A11yHelper: {
+          require: 'codeceptjs-a11y-helper',
+          outputDir: 'tests/reports/accessibility',
       },
   },
   include: {
@@ -54,7 +58,7 @@ export const config: CodeceptJS.MainConfig = {
         'mochawesome': {
             stdout: '-',
             options: {
-                reportDir: 'tests/reports',
+                reportDir: 'tests/reports/functional',
                 inlineAssets: true,
                 overwrite: false,
                 json: false,
