@@ -66,5 +66,10 @@ export const config: CodeceptJS.MainConfig = {
         },
     },
   },
-  name: 'ia-ccd-definitions'
+  async bootstrap() {
+      // TODO
+      //Add deletion of all accessibility files here
+  },
+
+    name: 'ia-ccd-definitions'
 }
