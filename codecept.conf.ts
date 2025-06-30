@@ -1,4 +1,6 @@
 import { setHeadlessWhen, setCommonPlugins } from '@codeceptjs/configure';
+import fs from 'fs';
+
 
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
@@ -67,9 +69,18 @@ export const config: CodeceptJS.MainConfig = {
     },
   },
   async bootstrap() {
-      // TODO
-      //Add deletion of all accessibility files here
-  },
+      const directoryPath = './tests/reports/accessibility/';
 
+      const fileList = fs.readdirSync(directoryPath);
+
+      fileList.forEach(function (filename) {
+        try {
+            fs.unlinkSync(directoryPath+filename);
+        }
+        catch (e) {
+            console.log('Couldn\'t delete file: ' + filename);
+        }
+      });
+  },
     name: 'ia-ccd-definitions'
 }
