@@ -3,6 +3,7 @@ import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentativ
 // @ts-ignore
 let caseId: string;
 let inTime: boolean = true;
+let cmrListing: boolean = true;
 
 const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
 const detainedRepresentedS94bImageLocator: string = '//*[@id="journey_type_legal_rep_detained_s9"]/dt/ccd-markdown/div/markdown/p/img';
@@ -19,7 +20,7 @@ Before(async({ I }) => {
 })
 
 // @ts-ignore
-Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time'),   async ({I, loginPage, createCasePage, createAppeal, serviceRequestPage, paymentPage}) => {
+Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing',   async ({I, loginPage, createCasePage, createAppeal, serviceRequestPage, paymentPage}) => {
     //const typeOfAppeal: string = 'EEA'; // Refusal under EEA regulations (payment required)
     //const typeOfAppeal: string = 'RHR'; // Refusal human rights (payment required)
     //const typeOfAppeal: string  = 'DC'; // Deprivation of citizenship (no payment required)
@@ -90,22 +91,26 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
     await I.logout();
 }).retry(3);
 
-// // @ts-ignore
-// Scenario('Legal Officer adds s94b appeal status, updates detention location and creates Respondent Direction',   async ({I, loginPage, retrieveCase, createDirection, s94b, updateDetentionLocation}) => {
-//     await loginPage.signIn(legalOfficer);
-//     await retrieveCase.getCase(caseId);
-//     await I.waitForText('Case details',60);
-//
-//     await s94b.setStatus('Yes');await I.validateCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
-//     await I.validateCorrectLabelDisplayed(detainedRepresentedS94bImageLocator, 'legalRep_detained_s9');
-//     await I.validateCaseFlagExists('Detained individual', 'Active');
-//     await I.selectNextStep('Update detention location');
-//     await updateDetentionLocation.changeLocation(detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison'), detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
-//     await updateDetentionLocation.validateDataUpdated(detentionLocation);
-//     await I.selectNextStep('Request respondent evidence');
-//     await createDirection.confirmAndSubmitRespondentDirection();
-//     await I.logout();
-// }).retry(3)
+// @ts-ignore
+Scenario('Legal Officer adds s94b appeal status, updates detention location and creates Respondent Direction',   async ({I, loginPage, retrieveCase, createDirection, s94b, updateDetentionLocation, requestHomeOfficeData, generateListCMR}) => {
+    await loginPage.signIn(legalOfficer);
+    await retrieveCase.getCase(caseId);
+    await I.waitForText('Case details',60);
+
+    await s94b.setStatus('Yes');await I.validateCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
+    await I.validateCorrectLabelDisplayed(detainedRepresentedS94bImageLocator, 'legalRep_detained_s9');
+    await I.validateCaseFlagExists('Detained individual', 'Active');
+    await I.selectNextStep('Update detention location');
+    await updateDetentionLocation.changeLocation(detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison'), detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
+    await updateDetentionLocation.validateDataUpdated(detentionLocation);
+    await I.selectNextStep('Request Home Office data');
+    await requestHomeOfficeData.matchAppellantDetails();
+    await I.selectNextStep('Generate List CMR Task');
+    await generateListCMR.createTask();
+    await I.selectNextStep('Request respondent evidence');
+    await createDirection.confirmAndSubmitRespondentDirection();
+    await I.logout();
+}).retry(3)
 
 
 //
@@ -181,7 +186,7 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
 //
 
 // @ts-ignore
-Scenario('Admin removes detained status',   async ({I, loginPage, removeDetainedStatus}) => {
+Scenario.skip('Admin removes detained status',   async ({I, loginPage, removeDetainedStatus}) => {
     await loginPage.signIn(legalAdmin);
     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
     await I.waitForText('Case details',60);

@@ -40,9 +40,9 @@ class DetentionLocation {
         await I.clickCloseAndReturnToCaseDetails();
     };
 
-    async validateDataUpdated(detentionLocation: string, yesterday) {
+    async validateDataUpdated(detentionLocation: string, validateDetentionDate: boolean = false) {
         await I.validateDataOnAppellantTab();
-        await I.validateDataOnAppealTab(detentionLocation);
+        await I.validateDataOnAppealTab(detentionLocation, validateDetentionDate);
     };
 }
 
