@@ -31,7 +31,7 @@ Scenario('Create Detained Appeal - Appellant In Person as Legal Admin - ' + (inT
     await createAppeal.inDetention('Yes');
     await createAppeal.setDetentionLocation(detentionLocation);
     await createAppeal.setBailApplication('No');
-    await createAppeal.setHomeOfficeDetails(true); //false if out of time
+    await createAppeal.setHomeOfficeDetails(inTime);
     await createAppeal.uploadNoticeOfDecision();
     await createAppeal.setTypeOfAppeal(typeOfAppeal);
     await createAppeal.setAppellantBasicDetails(true);
@@ -58,6 +58,6 @@ Scenario('Create Detained Appeal - Appellant In Person as Legal Admin - ' + (inT
 
     await draftAppeal.submit(false, inTime);
 
-
+    await I.logout();
 }).retry(3);
 

@@ -1,7 +1,7 @@
 import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative, legalAdmin} from '../detainedConfig'
 
 // @ts-ignore
-let caseId: string;
+let caseId: string = '1751475402284585';
 let inTime: boolean = true;
 let cmrListing: boolean = true;
 
@@ -42,7 +42,7 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
         await createAppeal.setBailApplication('Yes');
     }
 
-    await createAppeal.setHomeOfficeDetails(true); //false if out of time
+    await createAppeal.setHomeOfficeDetails(inTime);
     await createAppeal.uploadNoticeOfDecision();
     await createAppeal.setTypeOfAppeal(typeOfAppeal);
     await createAppeal.setAppellantBasicDetails(false);
@@ -92,17 +92,14 @@ Scenario('Legal Officer adds s94b appeal status, updates detention location and 
     await retrieveCase.getCase(caseId);
     await I.waitForText('Case details',60);
 
-    await s94b.setStatus('Yes');await I.validateCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
+    await s94b.setStatus('Yes');
+    await I.validateCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
     await I.validateCorrectLabelDisplayed(detainedRepresentedS94bImageLocator, 'legalRep_detained_s9');
     await I.validateCaseFlagExists('Detained individual', 'Active');
-    await I.selectNextStep('Update detention location');
     await updateDetentionLocation.changeLocation(detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison'), detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
     await updateDetentionLocation.validateDataUpdated(detentionLocation);
-    await I.selectNextStep('Request Home Office data');
     await requestHomeOfficeData.matchAppellantDetails();
-    await I.selectNextStep('Generate List CMR Task');
     await generateListCMR.createTask();
-    await I.selectNextStep('Request respondent evidence');
     await createDirection.confirmAndSubmitRespondentDirection();
     await I.logout();
 }).retry(3)

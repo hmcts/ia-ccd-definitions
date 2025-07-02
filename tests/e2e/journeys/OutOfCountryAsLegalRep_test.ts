@@ -1,7 +1,7 @@
 import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative, legalAdmin} from '../detainedConfig'
 
 let caseId: string;
-const inTime:boolean = false;
+const inTime:boolean = true;
 const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
 //const detentionLocation: string = 'immigrationRemovalCentre';
 //const detentionLocation: string = 'prison';

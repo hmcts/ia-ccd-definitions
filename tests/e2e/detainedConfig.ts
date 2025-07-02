@@ -81,8 +81,8 @@ export const appellant = {
         time: {
             hour24: todayPlus10days.format('HH'),
             hour12NoLeadingZero: todayPlus10days.format('h'),
-            minutesWithLeadingZero: todayPlus10days.format('mm'),
-            secondsWithLeadingZero: todayPlus10days.format('ss'),
+            minutesWithLeadingZero: '07', // hard coded as if the scenario fails this minutes will have changed as the config will be reloaded and moment rereun
+            secondsWithLeadingZero: '22', // hard coded as if the scenario fails this minutes will have changed as the config will be reloaded and moment rereun
             amPm: todayPlus10days.format('A'),
         },
     },
