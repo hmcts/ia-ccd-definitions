@@ -6,6 +6,7 @@ class GenerateListCMR {
     }
 
     async createTask() {
+        await I.selectNextStep('Generate List CMR Task');
         await I.clickButtonOrLink('Generate');
     };
 }

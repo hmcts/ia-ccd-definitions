@@ -12,6 +12,7 @@ class CreateDirection {
 
 
     async confirmAndSubmitRespondentDirection() {
+       await I.selectNextStep('Request respondent evidence');
        await I.waitForText('Explain the direction you are issuing', 60);
        await this.validateComplyDate();
        await I.clickContinue();

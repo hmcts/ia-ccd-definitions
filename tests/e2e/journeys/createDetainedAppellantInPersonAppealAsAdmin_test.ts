@@ -12,7 +12,7 @@ Before(async({ I }) => {
 })
 
 // @ts-ignore
-Scenario('Create Detained Appeal - Appellant In Person as Legal Admin - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({I, loginPage, createCasePage, createAppeal}) => {
+Scenario('Create Detained Appeal - Appellant In Person as Legal Admin - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({I, loginPage, createCasePage, createAppeal, draftAppeal}) => {
     //const typeOfAppeal: string = 'EEA'; // Refusal under EEA regulations (payment required)
     //const typeOfAppeal: string = 'RHR'; // Refusal human rights (payment required)
     const typeOfAppeal: string  = 'DC'; // Deprivation of citizenship (no payment required)
@@ -52,18 +52,12 @@ Scenario('Create Detained Appeal - Appellant In Person as Legal Admin - ' + (inT
     await createAppeal.uploadAppealDocs();
     await createAppeal.checkMyAnswers();
     await I.clickCloseAndReturnToCaseDetails();
-    //
 
     caseId = await I.grabCaseNumber();
     console.log('caseId>>>>>>>>>'+caseId+'<<<<<<<<<<<<<');
-    //
 
-    await I.selectNextStep('Submit your appeal');
-    if (!inTime) {
-       await createAppeal.setAppealOutOfTime();
-    }
+    await draftAppeal.submit(false, inTime);
 
-    await createAppeal.agreeToDeclaration(false, inTime);
 
 }).retry(3);
 

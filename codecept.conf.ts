@@ -43,6 +43,7 @@ export const config: CodeceptJS.MainConfig = {
     retrieveCase: './tests/e2e/pages/retrieveCase_page.ts',
     createDirection: './tests/e2e/flows/createDirection.ts',
     homeOffice: './tests/e2e/pages/uploadHomeOfficeBundle_page.ts',
+    draftAppeal: './tests/e2e/flows/events/submitYourAppeal.ts',
     markAppealAsDetained: './tests/e2e/flows/events/markAppealAsDetained.ts',
     s94b: './tests/e2e/flows/events/setS94bStatus.ts',
     updateDetentionLocation: './tests/e2e/flows/events/updateDetentionLocation.ts',

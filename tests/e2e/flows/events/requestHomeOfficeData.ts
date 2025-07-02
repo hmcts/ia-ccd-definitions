@@ -7,6 +7,7 @@ class RequestHomeOfficeData {
     }
 
     async matchAppellantDetails() {
+        await I.selectNextStep('Request Home Office data');
         await I.waitForElement('#homeOfficeAppellantsList');
         await I.clickContinue();
         await I.clickButtonOrLink('Request Home Office data');
