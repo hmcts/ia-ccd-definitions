@@ -179,7 +179,7 @@ export = function() {
       }
     },
 
-    async validateDataOnAppealTab(detentionLocation: string = 'prison') {
+    async validateDataOnAppealTab(detentionLocation: string = 'prison', checkForDetainedDate:boolean) {
       const appealTabInDetentionLocator: string = '//*[@id="case-viewer-field-read--appellantInDetention"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-yes-no-field/span';
       const appealTabCustodialSentenceLocator: string = '//*[@id="case-viewer-field-read--releaseDateProvided"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-yes-no-field/span';
       const appealTabCustodialSentenceReleaseDateLocator: string = '//*[@id="case-viewer-field-read--releaseDate"]/span/ccd-field-read/div/ccd-field-read-label/div/ccd-read-date-field/span';
@@ -207,11 +207,13 @@ export = function() {
       inDetention = await this.grabTextFrom(appealTabInDetentionLocator);
       await this.expectContain(yesNo, inDetention, 'A valid Detention flag must exist on the Appeal Tab');
 
-      detainedDate = await this.grabTextFrom(appealTabDetainedDate);
-      await this.expectEqual(detainedDate, appellant.detained.date.day + ' ' + appellant.detained.date.shortMonthDesc + ' ' + appellant.detained.date.year);
+      if (checkForDetainedDate) {
+        detainedDate = await this.grabTextFrom(appealTabDetainedDate);
+        await this.expectEqual(detainedDate, appellant.detained.date.day + ' ' + appellant.detained.date.shortMonthDesc + ' ' + appellant.detained.date.year);
 
-      detainedReason = await this.grabTextFrom(appealTabDetainedReason);
-      await this.expectEqual(detainedReason, appellant.detained.reason, 'The reason for the detention is incorrect on the Appeals Tab');
+        detainedReason = await this.grabTextFrom(appealTabDetainedReason);
+        await this.expectEqual(detainedReason, appellant.detained.reason, 'The reason for the detention is incorrect on the Appeals Tab');
+      }
 
       hasRemovalDirections = await this.grabTextFrom(appealTabRemovalDirections);
       await this.expectContain(yesNo, hasRemovalDirections, 'A valid Removal Directions flag must exist on the Appeal Tab');
