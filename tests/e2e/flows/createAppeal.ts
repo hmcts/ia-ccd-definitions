@@ -17,7 +17,7 @@ class CreateAppeal {
   // setTribunalAppealReceived() - Legal Admin Journey
   async setTribunalAppealReceived() {
     const yesterday = moment().subtract(1, 'days');
-
+    await I.runAccessibilityCheck('TribunalAppealReceivedDate');
     await I.fillField('#tribunalReceivedDate-day', yesterday.date());
     await I.fillField('#tribunalReceivedDate-month', yesterday.month()+1);
     await I.fillField('#tribunalReceivedDate-year', yesterday.year());
@@ -35,6 +35,7 @@ class CreateAppeal {
       await I.attachFile('#appealNotSubmittedReasonDocuments_0_document', './tests/documents/TEST_DOCUMENT_1.pdf');
       await I.fillField('#appealNotSubmittedReasonDocuments_0_description', 'Supporting document test');
       await I.waitForInvisible(locate('.error-message').withText('Uploading...'), 20);
+      await I.runAccessibilityCheck('ReasonNotSubmittedOnHMCTS');
       await I.clickContinue();
 
       await I.waitForText('Legal representative details', 60);
@@ -43,6 +44,7 @@ class CreateAppeal {
       await I.fillField('#legalRepFamilyNamePaperJ', legalRepresentative.familyName);
       await I.fillField('#legalRepEmail', legalRepresentative.email);
       await I.fillField('#legalRepRefNumberPaperJ', legalRepresentative.reference);
+      await I.runAccessibilityCheck('LegalRepresentativeDetails');
       await I.clickContinue();
 
       await I.waitForText('Legal representative address', 60);
@@ -52,6 +54,7 @@ class CreateAppeal {
       await I.click('//button[contains(text(), "Find address")]');
       await I.wait(2);
       await I.selectOption('#legalRepAddressUK_legalRepAddressUK_addressList', legalRepresentative.address.addressLine1); // First valid address
+      await I.runAccessibilityCheck('LegalRepresentativeAddress');
       await I.clickContinue();
 
     } else {
@@ -273,6 +276,7 @@ class CreateAppeal {
   async appellantDetails() {
     await I.fillField('#internalAppellantMobileNumber', appellant.mobile);
     await I.fillField('#internalAppellantEmail', appellant.email);
+    await I.runAccessibilityCheck('AppellantDetails');
     await I.clickContinue();
   }
 
@@ -411,6 +415,7 @@ class CreateAppeal {
 
   // uploadAppealDocs() - For Legal Admin journey
   async uploadAppealDocs() {
+    await I.runAccessibilityCheck('UploadAppealDocumentation');
     await I.click('Add new');
     await I.attachFile('#uploadTheAppealFormDocs_0_document', './tests/documents/TEST_DOCUMENT_1.pdf');
     await I.fillField('#uploadTheAppealFormDocs_0_description', 'Appeal document.');
