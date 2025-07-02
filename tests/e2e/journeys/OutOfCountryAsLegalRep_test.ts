@@ -1,6 +1,7 @@
 import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative, legalAdmin} from '../detainedConfig'
 
 let caseId: string;
+const inTime:boolean = false;
 const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
 //const detentionLocation: string = 'immigrationRemovalCentre';
 //const detentionLocation: string = 'prison';
@@ -13,13 +14,13 @@ Before(async({ I }) => {
 })
 
 // @ts-ignore
-Scenario('Create Out of Country Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal, serviceRequestPage, paymentPage}) => {
+Scenario('Create Out of Country Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal, draftAppeal, serviceRequestPage, paymentPage}) => {
     const typeOfAppeal: string = 'RPS';
 
     await loginPage.signIn(lawFirmUser);
     await createCasePage.createCase();
     await createAppeal.locationInUK('No');
-    await createAppeal.outOfCountryDecision('refusalOfProtection');
+    await createAppeal.outOfCountryDecision('refusalOfProtection', inTime);
     await createAppeal.uploadNoticeOfDecision();
     await createAppeal.setTypeOfAppeal(typeOfAppeal);
     await createAppeal.setAppellantBasicDetails(false);
@@ -46,8 +47,7 @@ Scenario('Create Out of Country Appeal as Legal Representative',   async ({I, lo
     caseId = await I.grabCaseNumber();
     console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
 
-    await I.selectNextStep('Submit your appeal');
-    await createAppeal.agreeToDeclaration(true);
+    await draftAppeal.submit(true, inTime);
 
     if (typeOfAppeal !== 'RPS' && typeOfAppeal !== 'DC') {
         // create service request

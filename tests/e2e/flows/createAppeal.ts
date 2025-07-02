@@ -71,9 +71,9 @@ class CreateAppeal {
 
   async outOfCountryDecision(appealDecision: string = 'refusalOfHumanRights', inTime: boolean = true) {
     let currentUrl: string;
-    const letterDate = inTime
+    const inOutOfTimeDate = inTime
         ? moment().subtract(5, 'days')
-        : moment().subtract(20, 'days');
+        : moment().subtract(2, 'months');
 
     switch (appealDecision) {
       case 'refusalOfHumanRights':
@@ -82,9 +82,9 @@ class CreateAppeal {
         currentUrl = await I.grabCurrentUrl();
         if (currentUrl.includes('startAppealentryClearanceDecision')) {
           await I.fillField('#gwfReferenceNumber', '123456789');
-          await I.fillField('#dateEntryClearanceDecision-day', letterDate.date().toString());
-          await I.fillField('#dateEntryClearanceDecision-month', (letterDate.month() + 1).toString());
-          await I.fillField('#dateEntryClearanceDecision-year', letterDate.year().toString());
+          await I.fillField('#dateEntryClearanceDecision-day', inOutOfTimeDate.date().toString());
+          await I.fillField('#dateEntryClearanceDecision-month', (inOutOfTimeDate.month() + 1).toString());
+          await I.fillField('#dateEntryClearanceDecision-year', inOutOfTimeDate.year().toString());
           await I.clickContinue();
         }
         break;
@@ -93,11 +93,11 @@ class CreateAppeal {
         await I.clickContinue();
         currentUrl = await I.grabCurrentUrl();
         if (currentUrl.includes('startAppealdepartureDate')) {
-          await I.fillField('#dateClientLeaveUk-day', '01');
-          await I.fillField('#dateClientLeaveUk-month', '06');
-          await I.fillField('#dateClientLeaveUk-year', '2025');
+          await I.fillField('#dateClientLeaveUk-day', inOutOfTimeDate.date().toString());
+          await I.fillField('#dateClientLeaveUk-month', (inOutOfTimeDate.month() + 1).toString());
+          await I.fillField('#dateClientLeaveUk-year', inOutOfTimeDate.year().toString());
           await I.clickContinue();
-          await this.setHomeOfficeDetails(true, 'decisionLetterReceivedDate');
+          await this.setHomeOfficeDetails(inTime, 'decisionLetterReceivedDate');
         }
         break;
       case 'removalOfClient':
@@ -106,11 +106,11 @@ class CreateAppeal {
         currentUrl = await I.grabCurrentUrl();
         if (currentUrl.includes('startAppealhomeOfficeDecision')) {
           await I.fillField('#homeOfficeReferenceNumber', '123456789');
-          await I.fillField('#day-label-decisionLetterReceivedDate-day', letterDate.date().toString());
-          await I.fillField('#month-label-decisionLetterReceivedDate-month', (letterDate.month() + 1).toString());
-          await I.fillField('#year-label-decisionLetterReceivedDate-year', letterDate.year().toString());
+          await I.fillField('#day-label-decisionLetterReceivedDate-day', inOutOfTimeDate.date().toString());
+          await I.fillField('#month-label-decisionLetterReceivedDate-month', (inOutOfTimeDate.month() + 1).toString());
+          await I.fillField('#year-label-decisionLetterReceivedDate-year', inOutOfTimeDate.year().toString());
           await I.clickContinue();
-          await this.setHomeOfficeDetails(true, 'decisionLetterReceivedDate');
+          await this.setHomeOfficeDetails(inTime, 'decisionLetterReceivedDate');
         }
         break;
       case 'refusePermit':
@@ -119,9 +119,9 @@ class CreateAppeal {
         currentUrl = await I.grabCurrentUrl();
         if (currentUrl.includes('startAppealentryClearanceDecision')) {
           await I.fillField('#gwfReferenceNumber', '123456789');
-          await I.fillField('#dateEntryClearanceDecision-day', letterDate.date().toString());
-          await I.fillField('#dateEntryClearanceDecision-month', (letterDate.month() + 1).toString());
-          await I.fillField('#dateEntryClearanceDecision-year', letterDate.year().toString());
+          await I.fillField('#dateEntryClearanceDecision-day', inOutOfTimeDate.date().toString());
+          await I.fillField('#dateEntryClearanceDecision-month', (inOutOfTimeDate.month() + 1).toString());
+          await I.fillField('#dateEntryClearanceDecision-year', inOutOfTimeDate.year().toString());
           await I.clickContinue();
         }
         break;
