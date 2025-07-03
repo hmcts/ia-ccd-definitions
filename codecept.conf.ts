@@ -41,7 +41,6 @@ export const config: CodeceptJS.MainConfig = {
     serviceRequestPage: './tests/e2e/pages/serviceRequest_page.ts',
     paymentPage: './tests/e2e/pages/payment_page.ts',
     retrieveCase: './tests/e2e/pages/retrieveCase_page.ts',
-    createDirection: './tests/e2e/flows/createDirection.ts',
     homeOffice: './tests/e2e/pages/uploadHomeOfficeBundle_page.ts',
     draftAppeal: './tests/e2e/flows/events/submitYourAppeal.ts',
     markAppealAsDetained: './tests/e2e/flows/events/markAppealAsDetained.ts',
@@ -50,6 +49,12 @@ export const config: CodeceptJS.MainConfig = {
     removeDetainedStatus: './tests/e2e/flows/events/removeDetainedStatus.ts',
     requestHomeOfficeData: './tests/e2e/flows/events/requestHomeOfficeData.ts',
     generateListCMR: './tests/e2e/flows/events/generateListCMRTask.ts',
+    respondentEvidenceDirection: './tests/e2e/flows/events/respondentEvidenceDirection.ts',
+    homeOfficeBundle: './tests/e2e/flows/events/homeOfficeBundle.ts',
+    caseBuildingDirection: './tests/e2e/flows/events/caseBuildingDirection.ts',
+    buildYourCase: './tests/e2e/flows/events/buildYourCase.ts',
+    respondentReviewDirection: './tests/e2e/flows/events/respondentReviewDirection.ts',
+    appealResponse: './tests/e2e/flows/events/uploadAppealResponse.ts',
   },
   mocha:     {
     reporterOptions: {

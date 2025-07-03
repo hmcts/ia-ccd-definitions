@@ -2,6 +2,7 @@
 // @ts-ignore
 import {detentionFacility} from './tests/e2e/fixtures/detentionFacilities'
 import {appellant} from './tests/e2e/detainedConfig'
+import moment from "moment/moment";
 const { tryTo } = require('codeceptjs/effects')
 
 const goButton: string = '//*[@id="content"]/div[1]/div[2]/ccd-event-trigger/form/button';
@@ -265,7 +266,19 @@ export = function() {
     async logout() {
       await this.clickSignOut();
       await this.waitForElement('#username');
-    }
+    },
+
+    // Used for Respondent Evidence and Review Events
+    async validateComplyDate() {
+      const daysToAdd: number = 7;
+      const complyDate: string = await this.grabValueFrom('#sendDirectionDateDue-day') + '-'
+          + await this.grabValueFrom('#sendDirectionDateDue-month') + '-'
+          + await this.grabValueFrom('#sendDirectionDateDue-year');
+      const todayPlusDays = moment().add(daysToAdd, 'days').format('DD-MM-YYYY');
+
+      // @ts-ignore
+      await this.expectDeepEqual(complyDate, todayPlusDays, `Request respondence evidence comply date should be ${daysToAdd} days from today: ${todayPlusDays}.`);
+    },
 
   });
 }

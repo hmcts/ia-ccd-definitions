@@ -1,7 +1,7 @@
 import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative, legalAdmin} from '../detainedConfig'
 
 // @ts-ignore
-let caseId: string = '1751475402284585';
+let caseId: string;
 let inTime: boolean = true;
 let cmrListing: boolean = true;
 
@@ -87,7 +87,7 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
 }).retry(3);
 
 // @ts-ignore
-Scenario('Legal Officer adds s94b appeal status, updates detention location and creates Respondent Direction',   async ({I, loginPage, retrieveCase, createDirection, s94b, updateDetentionLocation, requestHomeOfficeData, generateListCMR}) => {
+Scenario('Legal Officer adds s94b appeal status, updates detention location and creates Respondent Direction',   async ({I, loginPage, retrieveCase, respondentEvidenceDirection, s94b, updateDetentionLocation, requestHomeOfficeData, generateListCMR}) => {
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
     await I.waitForText('Case details',60);
@@ -100,82 +100,59 @@ Scenario('Legal Officer adds s94b appeal status, updates detention location and 
     await updateDetentionLocation.validateDataUpdated(detentionLocation);
     await requestHomeOfficeData.matchAppellantDetails();
     await generateListCMR.createTask();
-    await createDirection.confirmAndSubmitRespondentDirection();
+    await respondentEvidenceDirection.submit();
     await I.logout();
 }).retry(3)
 
 
-//
-// // @ts-ignore
-// Scenario('Home Office Officer (respondent) review appeal and upload Home Office bundle',   async ({I, loginPage, retrieveCase, homeOffice}) => {
-//     await loginPage.signIn(homeOfficeOfficer);
-//     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
-//     await I.waitForText('Case details', 60);
-//     await I.selectNextStep('Upload Home Office bundle');
-//     await homeOffice.uploadBundle();
-//     await I.logout();
-// }).retry(3);
-//
-//
-// // @ts-ignore
-// Scenario('Legal Officer directs appellant/Legal Rep to build case',   async ({I, loginPage, retrieveCase, createDirection}) => {
-//     await loginPage.signIn(legalOfficer);
-//     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
-//     await I.waitForText('Case details', 60);
-//     await I.selectNextStep('Request case building');
-//     await createDirection.confirmAndSubmitCaseBuildingDirection();
-//     await I.logout();
-// }).retry(3);
-//
-//
-// // @ts-ignore
-// Scenario('Appellant/Legal Rep build case',   async ({I, loginPage, retrieveCase, createDirection}) => {
-//     await loginPage.signIn(lawFirmUser);
-//     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
-//     await I.waitForText('Case details', 60);
-//     await I.selectNextStep('Build your case');
-//     // TODO: move to function to be used by scenarios
-//     await I.waitForElement('#caseArgumentDocument', 60);
-//     await I.attachFile('#caseArgumentDocument', './tests/documents/TEST_DOCUMENT_1.pdf');
-//     await I.waitForInvisible(locate('.error-message').withText('Uploading...'),20);
-//     await I.clickContinue();
-//     await I.clickSubmit();
-//     await I.waitForText('You have submitted your case');
-//     await I.clickCloseAndReturnToCaseDetails();
-//     await I.logout();
-// }).retry(3);
-//
-// // @ts-ignore
-// Scenario('Legal Officer creates Respondent Review Direction',   async ({I, loginPage, retrieveCase, createDirection}) => {
-//     await loginPage.signIn(legalOfficer);
-//     await retrieveCase.getCase(caseId);
-//     await I.waitForText('Case details',60);
-//     await I.selectNextStep('Request respondent review');
-//     await createDirection.confirmAndSubmitRespondentDirection();
-//     await I.logout();
-// }).retry(3);
-//
-// // @ts-ignore
-// Scenario('Home Office Officer (respondent) responds to appeal response from Appellant/Legal Rep',   async ({I, loginPage, retrieveCase, createDirection}) => {
-//     await loginPage.signIn(homeOfficeOfficer);
-//     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
-//     await I.waitForText('Case details',60);
-//     await I.selectNextStep('Upload the appeal response');
-//     await I.waitForElement('#appealReviewOutcome-decisionMaintained', 60);
-//     await I.click('#appealReviewOutcome-decisionMaintained');
-//     await I.clickContinue();
-//     // TODO: move to function to be used by multiple scenarios
-//     await I.waitForElement('#homeOfficeAppealResponseDocument', 60);
-//     await I.attachFile('#homeOfficeAppealResponseDocument', './tests/documents/TEST_DOCUMENT_1.pdf');
-//     await I.waitForInvisible(locate('.error-message').withText('Uploading...'),20);
-//     await I.clickContinue();
-//     // end code to move
-//     await I.clickButtonOrLink('Upload');
-//     await I.waitForText('You\'ve uploaded the appeal response');
-//     await I.clickCloseAndReturnToCaseDetails();
-//     await I.logout();
-// }).retry(3);
-//
+
+// @ts-ignore
+Scenario('Home Office Officer (respondent) review appeal and upload Home Office bundle',   async ({I, loginPage, homeOfficeBundle}) => {
+    await loginPage.signIn(homeOfficeOfficer);
+    await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
+    await I.waitForText('Case details', 60);
+    await homeOfficeBundle.upload();
+    await I.logout();
+}).retry(3);
+
+
+// @ts-ignore
+Scenario('Legal Officer directs appellant/Legal Rep to build case',   async ({I, loginPage, retrieveCase, caseBuildingDirection}) => {
+    await loginPage.signIn(legalOfficer);
+    await retrieveCase.getCase(caseId);
+    await I.waitForText('Case details', 60);
+    await caseBuildingDirection.submit();
+    await I.logout();
+}).retry(3);
+
+
+// @ts-ignore
+Scenario('Appellant/Legal Rep build case',   async ({I, loginPage, buildYourCase}) => {
+    await loginPage.signIn(lawFirmUser);
+    await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
+    await I.waitForText('Case details', 60);
+    await buildYourCase.build();
+    await I.logout();
+}).retry(3);
+
+// @ts-ignore
+Scenario('Legal Officer creates Respondent Review Direction',   async ({I, loginPage, retrieveCase, respondentReviewDirection}) => {
+    await loginPage.signIn(legalOfficer);
+    await retrieveCase.getCase(caseId);
+    await I.waitForText('Case details',60);
+    await respondentReviewDirection.submit();
+    await I.logout();
+}).retry(3);
+
+// @ts-ignore
+Scenario('Home Office Officer (respondent) responds to appeal response from Appellant/Legal Rep',   async ({I, loginPage, appealResponse}) => {
+    await loginPage.signIn(homeOfficeOfficer);
+    await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
+    await I.waitForText('Case details',60);
+    await appealResponse.upload();
+    await I.logout();
+}).retry(3);
+
 
 // @ts-ignore
 Scenario.skip('Admin removes detained status',   async ({I, loginPage, removeDetainedStatus}) => {

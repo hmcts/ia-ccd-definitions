@@ -7,6 +7,7 @@ class GenerateListCMR {
 
     async createTask() {
         await I.selectNextStep('Generate List CMR Task');
+        await I.waitForElement('.button[type="submit"]', 60);
         await I.clickButtonOrLink('Generate');
     };
 }
