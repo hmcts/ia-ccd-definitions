@@ -41,7 +41,6 @@ export const config: CodeceptJS.MainConfig = {
     serviceRequestPage: './tests/e2e/pages/serviceRequest_page.ts',
     paymentPage: './tests/e2e/pages/payment_page.ts',
     retrieveCase: './tests/e2e/pages/retrieveCase_page.ts',
-    homeOffice: './tests/e2e/pages/uploadHomeOfficeBundle_page.ts',
     draftAppeal: './tests/e2e/flows/events/submitYourAppeal.ts',
     markAppealAsDetained: './tests/e2e/flows/events/markAppealAsDetained.ts',
     s94b: './tests/e2e/flows/events/setS94bStatus.ts',
