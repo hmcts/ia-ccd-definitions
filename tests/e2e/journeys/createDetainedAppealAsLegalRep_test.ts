@@ -1,4 +1,4 @@
-import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative, legalAdmin} from '../detainedConfig'
+import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalAdmin} from '../detainedConfig'
 
 // @ts-ignore
 let caseId: string;
