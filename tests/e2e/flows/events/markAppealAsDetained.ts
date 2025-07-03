@@ -12,7 +12,7 @@ class MarkAppeal {
     }
 
     async setAsDetained(detentionLocation: string = 'immigration', yesterday){
-
+        await I.selectNextStep('Mark appeal as detained');
         await I.waitForText('Detention details', 60);
         await I.fillField('#appellantDetainedDate-day', appellant.detained.date.day);
         await I.fillField('#appellantDetainedDate-month', appellant.detained.date.month);

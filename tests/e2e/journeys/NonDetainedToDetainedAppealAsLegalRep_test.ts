@@ -65,7 +65,6 @@ Scenario('Legal Officer creates Respondent Direction',   async ({I, loginPage, r
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
     await I.waitForText('Case details',60);
-    await I.selectNextStep('Mark appeal as detained');
     await markAppealAsDetained.setAsDetained(detentionLocation);
     await updateDetentionLocation.validateDataUpdated(detentionLocation, true);
     await I.validateCaseFlagExists('Detained individual', 'Active');

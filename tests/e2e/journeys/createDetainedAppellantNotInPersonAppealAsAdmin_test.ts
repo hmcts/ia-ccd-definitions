@@ -67,7 +67,6 @@ Scenario('Admin removes detained status for Legally Represented - Manual',   asy
     await loginPage.signIn(legalAdmin);
     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
     await I.waitForText('Case details',60);
-    await I.selectNextStep('Remove Detained Status');
     await removeDetainedStatus.removeStatusAiPNo();
     await I.clickCloseAndReturnToCaseDetails();
     await I.validateCaseFlagExists('Detained individual', 'Inactive');

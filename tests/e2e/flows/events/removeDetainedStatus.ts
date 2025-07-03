@@ -18,6 +18,7 @@ class RemoveDetainedStatus {
 
     //Legally Represented - Manual
     async removeStatusAiPNo() {
+        await I.selectNextStep('Remove Detained Status');
         await this.detentionRemovalDetails();
         await this.appellantAddressManual();
         await this.appellantContactDetails();
