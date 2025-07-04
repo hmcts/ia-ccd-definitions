@@ -54,6 +54,10 @@ export const config: CodeceptJS.MainConfig = {
     buildYourCase: './tests/e2e/flows/events/buildYourCase.ts',
     respondentReviewDirection: './tests/e2e/flows/events/respondentReviewDirection.ts',
     appealResponse: './tests/e2e/flows/events/uploadAppealResponse.ts',
+    reviewHomeOfficeResponse: './tests/e2e/flows/events/reviewHomeOfficeResponse.ts',
+    requestHearingRequirements: './tests/e2e/flows/events/requestHearingRequirements.ts',
+    submitHearingRequirements: './tests/e2e/flows/events/submitHearingRequirements.ts',
+    reviewHearingRequirements: './tests/e2e/flows/events/reviewHearingRequirements.ts',
   },
   mocha:     {
     reporterOptions: {

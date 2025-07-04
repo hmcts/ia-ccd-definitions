@@ -269,8 +269,7 @@ export = function() {
     },
 
     // Used for Respondent Evidence and Review Events
-    async validateComplyDate() {
-      const daysToAdd: number = 7;
+    async validateComplyDate(daysToAdd: number) {
       const complyDate: string = await this.grabValueFrom('#sendDirectionDateDue-day') + '-'
           + await this.grabValueFrom('#sendDirectionDateDue-month') + '-'
           + await this.grabValueFrom('#sendDirectionDateDue-year');

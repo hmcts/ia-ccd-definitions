@@ -1,7 +1,7 @@
 import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalAdmin} from '../detainedConfig'
 
 // @ts-ignore
-let caseId: string;
+let caseId: string = '1751555117742751';
 let inTime: boolean = true;
 let cmrListing: boolean = true;
 
@@ -10,6 +10,13 @@ const detainedRepresentedS94bImageLocator: string = '//*[@id="journey_type_legal
 const detentionLocation: string = 'immigrationRemovalCentre';
 //const detentionLocation: string = 'prison';
 //const detentionLocation: string = 'other';
+
+const typeOfAppeal: string = 'EEA'; // Refusal under EEA regulations (payment required)
+//const typeOfAppeal: string = 'RHR'; // Refusal human rights (payment required)
+//const typeOfAppeal: string  = 'DC'; // Deprivation of citizenship (no payment required)
+//const typeOfAppeal: string  = 'EU'; // Refusal of application under the EU Settlement Scheme (payment required)
+//const typeOfAppeal: string = 'RPS'; // Revocation of a protection status (no payment required)
+// const typeOfAppeal:string = 'RPC'; // Refusal of protection claim (payment required)
 
 
 Feature('Detained Appeal - Represented @LegalRepDetainedRepresented');
@@ -21,12 +28,6 @@ Before(async({ I }) => {
 
 // @ts-ignore
 Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing',   async ({I, loginPage, createCasePage, createAppeal, draftAppeal, serviceRequestPage, paymentPage}) => {
-    //const typeOfAppeal: string = 'EEA'; // Refusal under EEA regulations (payment required)
-    //const typeOfAppeal: string = 'RHR'; // Refusal human rights (payment required)
-    //const typeOfAppeal: string  = 'DC'; // Deprivation of citizenship (no payment required)
-    //const typeOfAppeal: string  = 'EU'; // Refusal of application under the EU Settlement Scheme (payment required)
-    const typeOfAppeal: string = 'RPS'; // Revocation of a protection status (no payment required)
-    // const typeOfAppeal:string = 'RPC'; // Refusal of protection claim (payment required)
 
     await loginPage.signIn(lawFirmUser);
     await createCasePage.createCase();
@@ -98,7 +99,11 @@ Scenario('Legal Officer adds s94b appeal status, updates detention location and 
     await I.validateCaseFlagExists('Detained individual', 'Active');
     await updateDetentionLocation.changeLocation(detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison'), detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
     await updateDetentionLocation.validateDataUpdated(detentionLocation);
-    await requestHomeOfficeData.matchAppellantDetails();
+
+    if (typeOfAppeal === 'RPS' || typeOfAppeal === 'RPC') {
+        await requestHomeOfficeData.matchAppellantDetails();
+    }
+
     await generateListCMR.createTask();
     await respondentEvidenceDirection.submit();
     await I.logout();
@@ -153,16 +158,30 @@ Scenario('Home Office Officer (respondent) responds to appeal response from Appe
     await I.logout();
 }).retry(3);
 
+// @ts-ignore
+Scenario('Legal Officer directs appellant/legal rep to Review Home Office response',   async ({I, loginPage, retrieveCase, reviewHomeOfficeResponse}) => {
+    await loginPage.signIn(legalOfficer);
+    await retrieveCase.getCase(caseId);
+    await I.waitForText('Case details',60);
+    await reviewHomeOfficeResponse.submit();
+    await I.logout();
+}).retry(3);
 
 // @ts-ignore
-Scenario.skip('Admin removes detained status',   async ({I, loginPage, removeDetainedStatus}) => {
-    await loginPage.signIn(legalAdmin);
+Scenario('Appellant/legal rep request and submit hearing requirements',   async ({I, loginPage, requestHearingRequirements, submitHearingRequirements}) => {
+    await loginPage.signIn(lawFirmUser);
     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
-    await I.waitForText('Case details',60);
-    await I.selectNextStep('Remove Detained Status');
-    await removeDetainedStatus.removeStatus();
-    await I.clickCloseAndReturnToCaseDetails();
-    await I.validateCaseFlagExists('Detained individual', 'Inactive');
-    await removeDetainedStatus.validateIsNonDetained();
+    await I.waitForText('Case details', 60);
+    await requestHearingRequirements.submit();
+    await submitHearingRequirements.submit();
+    await I.logout();
+}).retry(3);
+
+// @ts-ignore
+Scenario('Legal Officer to review hearing requirements',   async ({I, loginPage, retrieveCase, reviewHearingRequirements}) => {
+    await loginPage.signIn(legalOfficer);
+    await retrieveCase.getCase(caseId);
+    await I.waitForText('Case details', 60);
+    await reviewHearingRequirements.submit();
     await I.logout();
 }).retry(3);

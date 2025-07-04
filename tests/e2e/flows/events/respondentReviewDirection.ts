@@ -10,7 +10,7 @@ class RespondentReviewDirection {
     async submit() {
         await I.selectNextStep('Request respondent review');
         await I.waitForText('Explain the direction you are issuing', 60);
-        await I.validateComplyDate();
+        await I.validateComplyDate(7);
         await I.clickContinue();
         await I.clickSendDirection();
         await I.waitForText('You have sent a direction');

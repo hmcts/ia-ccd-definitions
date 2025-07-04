@@ -1,16 +1,14 @@
-import moment from "moment";
-
 const { I } = inject();
 
-class RespondentEvidenceDirection {
+class ReviewHomeOfficeResponse {
 
     constructor() {
     }
 
     async submit() {
-        await I.selectNextStep('Request respondent evidence');
+        await I.selectNextStep('Review Home Office response');
         await I.waitForText('Explain the direction you are issuing', 60);
-        await I.validateComplyDate(7);
+        await I.validateComplyDate(5);
         await I.clickContinue();
         await I.clickSendDirection();
         await I.waitForText('You have sent a direction');
@@ -18,5 +16,5 @@ class RespondentEvidenceDirection {
 }
 
 // For inheritance
-//module.exports = new RespondentEvidenceDirection();
-export = RespondentEvidenceDirection;
+//module.exports = new ReviewHomeOfficeResponse();
+export = ReviewHomeOfficeResponse;
