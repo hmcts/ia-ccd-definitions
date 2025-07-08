@@ -1634,7 +1634,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Adjourn",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2715,20 +2715,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "setNextHearingDate",
-    "Name": "Set next hearing date",
-    "Description": "System event to update next hearing date",
-    "DisplayOrder": 110,
-    "PreConditionState(s)": "*",
-    "PostConditionState": "*",
-    "SecurityClassification": "Public",
-    "ShowSummary": "N",
-    "ShowEventNotes": "N",
-    "Publish": "Y"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
     "ID": "sendPaymentReminderNotification",
     "Name": "Payment reminder notification",
     "Description": "Send payment reminder for notification",
@@ -2743,6 +2729,79 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "UpdateNextHearingInfo",
+    "Name": "Update next hearing info",
+    "Description": "Event to update next hearing date",
+    "DisplayOrder": 110,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
+    "RetriesTimeoutURLAboutToStartEvent": "3,3,3,3",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "3,3,3,3",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "hearingCancelled",
+    "Name": "Hearing Cancelled",
+    "Description": "Event to update case data after hearing is cancelled",
+    "DisplayOrder": 100,
+    "PreConditionState(s)": "prepareForHearing;finalBundling;preHearing;decision;decided;adjourned",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "cmrListing",
+    "Name": "CMR Listing",
+    "Description": "System event to update case data after CMR listing",
+    "DisplayOrder": 104,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "cmrReListing",
+    "Name": "CMR Re-Listing",
+    "Description": "System event to update case data after CMR re-listing",
+    "DisplayOrder": 102,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
     "Publish": "Y"
   },
   {
@@ -2819,8 +2878,7 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowSummary": "Y",
-    "ShowEventNotes": "N",
-    "Publish": "Y"
+    "ShowEventNotes": "N"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2911,6 +2969,26 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Remove Detained Status",
     "EventEnablingCondition": "appellantInDetention=\"Yes\" AND [STATE]!=\"appealStarted\" AND [STATE]!=\"appealStartedByAdmin\"",
+    "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "appellantInPersonManual",
+    "Name": "Appellant in Person - Manual",
+    "Description": "Update the case to Appellant in Person - Manual",
+    "DisplayOrder": 123,
+    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;adjourned;ftpaSubmitted;ftpaDecided;awaitingReasonsForAppeal;reasonsForAppealSubmitted;clarifyingQuestionsAnswersSubmitted;awaitingClarifyingQuestionsAnswers;awaitingCmaRequirements;remitted",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Appellant in Person - Manual",
+    "EventEnablingCondition": "isAdmin!=\"Yes\"",
     "Publish": "Y"
   }
 ]
