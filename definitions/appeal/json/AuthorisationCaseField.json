@@ -15495,5 +15495,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "detentionRemovalReason", "UserRole": "ia_specific_access_judge_profile", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "detentionRemovalReason", "UserRole": "ia_specific_access_admin_profile", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "detentionRemovalReason", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "detentionRemovalReason", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "detentionRemovalReason", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantInPersonManualInstructions", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantInPersonManualInstructions", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"}
 ]
