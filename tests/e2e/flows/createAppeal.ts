@@ -27,7 +27,7 @@ class CreateAppeal {
   // appellantInPerson() - Legal Admin Journey
   async appellantInPerson(yesNo: string = 'Yes', hasPostalAddress: string = 'Yes') {
     await I.click(`#appellantsRepresentation-${yesNo}`);
-    
+
     if (yesNo === 'No') {
       await I.clickContinue();
       await I.fillField('#appealWasNotSubmittedReason', 'Reason why appeal was not submitted on MyHMCTS');
@@ -182,11 +182,21 @@ class CreateAppeal {
   }
 
   async setBailApplication(bail: string = "No") {
-    // TODO: Needs other options added
-    await I.click(`#hasPendingBailApplications-${bail}`);
-    if (bail === 'Yes') {
-      await I.waitForElement('#bailApplicationNumber', 60);
-      await I.fillField('#bailApplicationNumber', appellant.bailApplicationNumber);
+    switch (bail) {
+      case 'Yes':
+        await I.click('#hasPendingBailApplications-Yes');
+        await I.waitForElement('#bailApplicationNumber', 60);
+        await I.fillField('#bailApplicationNumber', appellant.bailApplicationNumber);
+      break;
+      case 'YesWithoutBailApplicationNumber':
+        await I.click('#hasPendingBailApplications-YesWithoutBailApplicationNumber');
+      break;
+      case 'No':
+        await I.click('#hasPendingBailApplications-No');
+      break;
+      case 'NotSure':
+        await I.click('#hasPendingBailApplications-NotSure');
+      break;
     }
     await I.runAccessibilityCheck('PendingBailApplicationPage');
     await I.clickContinue();
