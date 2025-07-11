@@ -1,7 +1,10 @@
 {
   "name": "ia-ccd-definitions",
-  "version": "0.1",
+  "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "ccd-definition-processor"
+  ],
   "config": {
     "dev": {
       "iaCaseUrl": "http://ia-case-api:8090",
@@ -36,6 +39,9 @@
     "decrypt": "node bin/decrypt.js",
     "copy-json": "bin/copy-json.sh",
     "setup": "bin/setup.sh",
+    "lint": "yarn workspace ccd-definition-processor lint",
+    "test": "node bin/case-event-to-fields-duplicate-checker.js && node bin/check-missing-system-user-fields.js && node bin/auth-casefield-duplicate-checker.js",
+    "test:unit": "yarn workspace ccd-definition-processor test",
     "generate-json": "bin/generate-json.sh",
     "generate-excel": "bin/generate-excel.sh",
     "generate": "bin/generate-ccd-definition.sh",
