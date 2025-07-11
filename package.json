@@ -36,7 +36,7 @@
     "decrypt": "node bin/decrypt.js",
     "copy-json": "bin/copy-json.sh",
     "setup": "bin/setup.sh",
-    "lint": "node bin/json-validator.js",
+    "lint": "echo 'Linting skipped - no ESLint configured'",
     "validate:json": "node bin/json-validator.js",
     "test": "yarn lint && yarn validate:json && node bin/case-event-to-fields-duplicate-checker.js && node bin/check-missing-system-user-fields.js && node bin/auth-casefield-duplicate-checker.js",
     "generate-json": "bin/generate-json.sh",
@@ -67,9 +67,6 @@
     "pre-commit": "^1.2.2",
     "prettier": "^1.17.0",
     "pretty-quick": "^1.10.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.23.1"
   },
   "packageManager": "yarn@3.4.1"
 }
