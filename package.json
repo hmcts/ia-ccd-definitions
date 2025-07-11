@@ -41,6 +41,7 @@
     "test": "yarn lint && yarn validate:json && node bin/case-event-to-fields-duplicate-checker.js && node bin/check-missing-system-user-fields.js && node bin/auth-casefield-duplicate-checker.js",
     "test:unit": "jest",
     "test:coverage": "jest --coverage",
+    "test:a11y": "echo 'Accessibility testing skipped - no tests configured yet'",
     "generate-json": "bin/generate-json.sh",
     "generate-excel": "bin/generate-excel.sh",
     "generate": "bin/generate-ccd-definition.sh",
