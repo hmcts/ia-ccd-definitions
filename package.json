@@ -39,6 +39,8 @@
     "lint": "echo 'Linting skipped - no ESLint configured'",
     "validate:json": "node bin/json-validator.js",
     "test": "yarn lint && yarn validate:json && node bin/case-event-to-fields-duplicate-checker.js && node bin/check-missing-system-user-fields.js && node bin/auth-casefield-duplicate-checker.js",
+    "test:unit": "jest",
+    "test:coverage": "jest --coverage",
     "generate-json": "bin/generate-json.sh",
     "generate-excel": "bin/generate-excel.sh",
     "generate": "bin/generate-ccd-definition.sh",
@@ -67,6 +69,30 @@
     "pre-commit": "^1.2.2",
     "prettier": "^1.17.0",
     "pretty-quick": "^1.10.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "<rootDir>/test/**/*.test.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/ccd-definition-processor/"
+    ],
+    "collectCoverageFrom": [
+      "bin/**/*.js",
+      "!bin/node_modules/**",
+      "!**/node_modules/**",
+      "!ccd-definition-processor/**"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ]
   },
   "packageManager": "yarn@3.4.1"
 }
