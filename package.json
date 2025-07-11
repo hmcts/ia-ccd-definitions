@@ -39,8 +39,10 @@
     "decrypt": "node bin/decrypt.js",
     "copy-json": "bin/copy-json.sh",
     "setup": "bin/setup.sh",
-    "lint": "yarn workspace ccd-definition-processor lint",
-    "test": "node bin/case-event-to-fields-duplicate-checker.js && node bin/check-missing-system-user-fields.js && node bin/auth-casefield-duplicate-checker.js",
+    "lint": "eslint bin/case-event-to-fields-duplicate-checker.js bin/check-missing-system-user-fields.js bin/auth-casefield-duplicate-checker.js",
+    "lint:fix": "eslint --fix bin/case-event-to-fields-duplicate-checker.js bin/check-missing-system-user-fields.js bin/auth-casefield-duplicate-checker.js",
+    "validate:json": "node bin/json-validator.js",
+    "test": "yarn lint && yarn validate:json && node bin/case-event-to-fields-duplicate-checker.js && node bin/check-missing-system-user-fields.js && node bin/auth-casefield-duplicate-checker.js",
     "test:unit": "yarn workspace ccd-definition-processor test",
     "generate-json": "bin/generate-json.sh",
     "generate-excel": "bin/generate-excel.sh",
@@ -70,6 +72,9 @@
     "pre-commit": "^1.2.2",
     "prettier": "^1.17.0",
     "pretty-quick": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.1"
   },
   "packageManager": "yarn@3.4.1"
 }
