@@ -1,13 +1,24 @@
 import moment from "moment";
 import {appellant} from "../../detainedConfig";
+// @ts-ignore
+import {detentionFacility} from "../../fixtures/detentionFacilities";
 
 
 const { I } = inject();
+const appealTabInDetentionLocator: string = '//*[@id="case-viewer-field-read--appellantInDetention"]';
+const appealTabCustodialText: string = 'Custodial Sentence';
+const appealTabCustodialDateText: string = 'Custodial sentence release date';
+const appealTabBailPendingText: string = 'Pending bail application';
+const appealTabBailNumberText: string = 'Bail application number';
+const appellantTabDetentionFacilityTypeText: string = 'Detention facility type';
+const appellantTabDetentionFacilityNameText: string = 'Detention facility name';
+const appellantTabNomsNoText: string = 'NOMS number';
 
 class RemoveDetainedStatus {
 
-    //Legally Represented
+        //Legally Represented
     async removeStatus(contactPreference: 'Email' | 'Text' = 'Email') {
+        await I.selectNextStep('Remove Detained Status');
         await this.detentionRemovalDetails();
         await this.appellantAddress('Yes');
         await this.appellantContactPreference(contactPreference);
@@ -27,13 +38,30 @@ class RemoveDetainedStatus {
         await this.removeDetainedConfirmation();
     }
 
-    async validateIsNonDetained() {
-        await this.checkAppealTabDetentionNo();
+    async validateDataOnAppealTab() {
+        await I.selectTab('Appeal');
+        let appellantInDetention: string = await I.grabTextFrom(appealTabInDetentionLocator);
+        // @ts-ignore
+        await I.expectEqual(appellantInDetention, 'No', `The Detention Flag value of: ${appellantInDetention} on the Appeal Tab is invalid. It should be: No`);
+        await I.dontSee(appealTabCustodialText);
+        await I.dontSee(appealTabCustodialDateText);
+        await I.dontSee(appealTabBailPendingText);
+        await I.dontSee(appealTabBailNumberText);
+
+    }
+
+    async validateDataOnAppellantTab(detentionLocation: string) {
+        await I.selectTab('Appellant');
+
+        await I.dontSee(appellantTabDetentionFacilityTypeText);
+        await I.dontSee(appellantTabDetentionFacilityNameText);
+        await I.dontSee(appellantTabNomsNoText);
+        await I.dontSee(detentionLocation === 'prison' ? detentionFacility.prison.building : detentionFacility.immigrationRemovalCentre.building);
+        await I.dontSee(detentionLocation === 'prison' ? detentionFacility.prison.address : detentionFacility.immigrationRemovalCentre.address);
+        await I.dontSee(detentionLocation === 'prison' ? detentionFacility.prison.postcode : detentionFacility.immigrationRemovalCentre.postcode);
     }
 
     async detentionRemovalDetails() {
-
-
         await I.waitForText(`Detention removal details`, 60);
 
         await I.fillField('#detentionRemovalDate-day', appellant.detentionRemoval.date.day);
@@ -109,14 +137,15 @@ class RemoveDetainedStatus {
 
     async removeDetainedConfirmation() {
         await I.waitForText('You have removed the detained status from this appeal', 60);
+        await I.clickCloseAndReturnToCaseDetails();
     }
 
-    async checkAppealTabDetentionNo() {
-        await I.selectTab('Appeal');
-        let appellantInDetention: string = await I.grabTextFrom('//*[@id="case-viewer-field-read--appellantInDetention"]');
-        // @ts-ignore
-        await I.expectEqual(appellantInDetention, 'No', `The Detention Flag: ${appellantInDetention} on the Appeal Tab is invalid. It should be: No`);
-    }
+    // async checkAppealTabDetentionNo() {
+    //     await I.selectTab('Appeal');
+    //     let appellantInDetention: string = await I.grabTextFrom('//*[@id="case-viewer-field-read--appellantInDetention"]');
+    //     // @ts-ignore
+    //     await I.expectEqual(appellantInDetention, 'No', `The Detention Flag: ${appellantInDetention} on the Appeal Tab is invalid. It should be: No`);
+    // }
 
 
 

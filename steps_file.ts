@@ -276,7 +276,7 @@ export = function() {
       const todayPlusDays = moment().add(daysToAdd, 'days').format('DD-MM-YYYY');
 
       // @ts-ignore
-      await this.expectDeepEqual(complyDate, todayPlusDays, `Request respondence evidence comply date should be ${daysToAdd} days from today: ${todayPlusDays}.`);
+      await this.expectDeepEqual(complyDate, todayPlusDays, `Request respondent evidence comply date should be ${daysToAdd} days from today: ${todayPlusDays}.`);
     },
 
   });

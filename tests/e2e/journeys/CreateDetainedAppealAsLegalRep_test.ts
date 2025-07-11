@@ -1,7 +1,7 @@
 import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalAdmin} from '../detainedConfig'
 
 // @ts-ignore
-let caseId: string = '1751555117742751';
+let caseId: string;
 let inTime: boolean = true;
 let cmrListing: boolean = true;
 
