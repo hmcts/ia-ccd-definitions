@@ -6,7 +6,7 @@ class PaymentPage {
   private cardPaymentLocator: string = '#cardPayment';
   private cardNoLocator: string = '#card-no';
   private expiryMonthLocator: string = '#expiry-month';
-  private expiryYearLocator: string = '#cardholder-name';
+  private expiryYearLocator: string = '#expiry-year';
   private cardHolderNameLocator = '#cardholder-name';
   private cvcLocator = '#cvc';
   private addressLine1Locator = '#address-line-1';
