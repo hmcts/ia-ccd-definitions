@@ -14,8 +14,6 @@ export default defineConfig([
       "codecept.conf.ts",
       ".eslintrc.js",
       "steps.d.ts",
-      "steps_file.ts",
-      "tests/e2e/pages/payment_page.ts",
   ]),
   { files: ["**/*.{js,mjs,cjs,ts,mts,cts}"], plugins: { js }, extends: ["js/recommended"] },
   { files: ["**/*.js"], languageOptions: { sourceType: "commonjs" } },

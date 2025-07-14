@@ -3,7 +3,7 @@
 import {detentionFacility} from './tests/e2e/fixtures/detentionFacilities'
 import {appellant} from './tests/e2e/detainedConfig'
 import moment from "moment/moment";
-// @ts-ignore
+// @ts-expect-error stop warning
 import {tryTo} from 'codeceptjs/effects';
 
 
