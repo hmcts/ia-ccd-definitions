@@ -1,7 +1,7 @@
 import {envUrl, legalAdmin} from '../detainedConfig'
 
 let caseId: string;
-let inTime: boolean = true;
+const inTime: boolean = true;
 const detentionLocation: string = 'immigrationRemovalCentre';
 
 Feature('Detained Appeal - Legal Admin @LegalAdminDetainedAppellantInPerson');
@@ -11,7 +11,7 @@ Before(async({ I }) => {
     await I.amOnPage(envUrl);
 })
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Create Detained Appeal - Appellant In Person as Legal Admin - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({I, loginPage, createCasePage, createAppeal, draftAppeal}) => {
     //const typeOfAppeal: string = 'EEA'; // Refusal under EEA regulations (payment required)
     //const typeOfAppeal: string = 'RHR'; // Refusal human rights (payment required)

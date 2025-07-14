@@ -1,6 +1,6 @@
 import moment from "moment/moment";
 import {appellant, legalRepresentative, sponsor, runningEnv} from '../detainedConfig'
-// @ts-ignore
+// @ts-expect-error stop warning
 import {detentionFacility} from '../fixtures/detentionFacilities'
 
 const { I } = inject();
@@ -134,7 +134,7 @@ class CreateAppeal {
     await I.clickContinue();
   }
 
-  async setDetentionLocation(detentionLocation: string = 'immigrationRemovalCentre', hasCustodialSentence: string = 'Yes') {
+  async setDetentionLocation(detentionLocation: string = 'immigrationRemovalCentre') {
     await I.runAccessibilityCheck('DetentionLocationPage');
     switch (detentionLocation) {
       case 'immigrationRemovalCentre':
@@ -445,9 +445,11 @@ class CreateAppeal {
   }
 
   async hasOtherAppeals(otherAppeals: string = 'No') {
-    // TODO: Needs other options added
+    await I.click(`#hasOtherAppeals-${otherAppeals}`);
+    if (otherAppeals != 'No') {
+      // TODO: Needs other options added
+    }
     await I.runAccessibilityCheck('OtherAppealsPage');
-    await I.click('#hasOtherAppeals-No');
     await I.clickContinue();
   }
 

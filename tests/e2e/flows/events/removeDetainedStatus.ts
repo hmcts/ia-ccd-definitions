@@ -1,6 +1,5 @@
-import moment from "moment";
 import {appellant} from "../../detainedConfig";
-// @ts-ignore
+// @ts-expect-error stop warning
 import {detentionFacility} from "../../fixtures/detentionFacilities";
 
 
@@ -40,8 +39,8 @@ class RemoveDetainedStatus {
 
     async validateDataOnAppealTab() {
         await I.selectTab('Appeal');
-        let appellantInDetention: string = await I.grabTextFrom(appealTabInDetentionLocator);
-        // @ts-ignore
+        const appellantInDetention: string = await I.grabTextFrom(appealTabInDetentionLocator);
+        // @ts-expect-error stop warning
         await I.expectEqual(appellantInDetention, 'No', `The Detention Flag value of: ${appellantInDetention} on the Appeal Tab is invalid. It should be: No`);
         await I.dontSee(appealTabCustodialText);
         await I.dontSee(appealTabCustodialDateText);

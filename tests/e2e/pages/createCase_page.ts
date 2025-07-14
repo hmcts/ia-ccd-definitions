@@ -26,7 +26,7 @@ class createCasePage {
     if (await I.grabValueFrom(this.eventLocator) !== createCase.eventCode) {
       await I.selectOption(this.jurisdictionLocator, createCase.jurisdictionCode);
 
-      let listOfValues: string[] = await I.grabAttributeFromAll(this.caseTypeOptionLocator, 'value');
+      const listOfValues: string[] = await I.grabAttributeFromAll(this.caseTypeOptionLocator, 'value');
       for (const value of listOfValues) {
         const idx: number = listOfValues.indexOf(value);
         if (value === createCase.caseTypeCode){

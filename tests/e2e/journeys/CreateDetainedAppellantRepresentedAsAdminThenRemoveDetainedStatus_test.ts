@@ -1,7 +1,7 @@
 import {envUrl, legalAdmin} from '../detainedConfig'
 
 let caseId: string;
-let inTime: boolean = true;
+const inTime: boolean = true;
 
 Feature('Legally Represented - Manual Detained Appeal - Legal Admin @LegalAdminDetainedRepresented');
 
@@ -10,7 +10,7 @@ Before(async({ I }) => {
     await I.amOnPage(envUrl);
 })
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Create Represented Detained Appeal in Prison with Custodial sentence - ' + (inTime ? 'In Time' : 'Out of Time') + ' - Then remove detained status',   async ({I, loginPage, createCasePage, createAppeal, draftAppeal, removeDetainedStatus}) => {
     //const typeOfAppeal: string = 'EEA'; // Refusal under EEA regulations (payment required)
     //const typeOfAppeal: string = 'RHR'; // Refusal human rights (payment required)
@@ -60,7 +60,7 @@ Scenario('Create Represented Detained Appeal in Prison with Custodial sentence -
 
 }).retry(3);
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Create Represented Detained Appeal in Immigration Removal Centre - ' + (inTime ? 'In Time' : 'Out of Time') + ' - Then remove detained status',   async ({I, loginPage, createCasePage, createAppeal, draftAppeal, removeDetainedStatus}) => {
     //const typeOfAppeal: string = 'EEA'; // Refusal under EEA regulations (payment required)
     //const typeOfAppeal: string = 'RHR'; // Refusal human rights (payment required)
@@ -109,7 +109,7 @@ Scenario('Create Represented Detained Appeal in Immigration Removal Centre - ' +
 
 }).retry(3);
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario.skip('Admin removes detained status for Legally Represented - Manual',   async ({I, loginPage, removeDetainedStatus}) => {
     await loginPage.signIn(legalAdmin);
     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);

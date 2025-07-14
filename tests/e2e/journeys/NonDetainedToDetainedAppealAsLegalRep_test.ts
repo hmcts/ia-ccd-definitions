@@ -1,19 +1,17 @@
-import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative, legalAdmin} from '../detainedConfig'
+import {lawFirmUser, envUrl, legalOfficer} from '../detainedConfig'
 
 let caseId: string;
 const inTime: boolean = true;
 const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
-//const detentionLocation: string = 'immigrationRemovalCentre';
-//const detentionLocation: string = 'prison';
-const detentionLocation: string = 'other';
-Feature('Detained Appeal - Represented @NonDetainedToDetainedRepresented');
+const detentionLocation: string = 'immigrationRemovalCentre';
 
+Feature('Detained Appeal - Represented @NonDetainedToDetainedRepresented');
 
 Before(async({ I }) => {
     await I.amOnPage(envUrl);
 })
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Create Non-Detained Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal, draftAppeal, serviceRequestPage, paymentPage}) => {
     const typeOfAppeal: string = 'RPS';
 
@@ -55,10 +53,10 @@ Scenario('Create Non-Detained Appeal as Legal Representative',   async ({I, logi
     }
 
     await I.logout();
-});
+}).retry(3);
 
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Legal Officer creates Respondent Direction',   async ({I, loginPage, retrieveCase, markAppealAsDetained, updateDetentionLocation}) => {
 
 

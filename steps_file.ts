@@ -1,9 +1,12 @@
 // in this file you can append custom step methods to 'I' object
-// @ts-ignore
+// @ts-expect-error stop warning
 import {detentionFacility} from './tests/e2e/fixtures/detentionFacilities'
 import {appellant} from './tests/e2e/detainedConfig'
 import moment from "moment/moment";
-const { tryTo } = require('codeceptjs/effects')
+// @ts-ignore
+import {tryTo} from 'codeceptjs/effects';
+
+
 
 const goButton: string = '//*[@id="content"]/div[1]/div[2]/ccd-event-trigger/form/button';
 const signInButton: string = 'input[value="Sign in"]';
@@ -14,48 +17,48 @@ export = function() {
     // Define custom steps here, use 'this' to access default methods of I.
     // It is recommended to place a general 'login' function here.
     async clickContinue() {
-      let urlBefore = await this.grabCurrentUrl();
+      const urlBefore = await this.grabCurrentUrl();
       await this.retryUntilUrlChanges(() => this.forceClick('Continue'), urlBefore);
     },
 
     async clickSaveAndContinue() {
-      let urlBefore = await this.grabCurrentUrl();
+      const urlBefore = await this.grabCurrentUrl();
       await this.retryUntilUrlChanges(() => this.forceClick('Save and continue'), urlBefore);
     },
 
     async clickStart() {
-      let urlBefore = await this.grabCurrentUrl();
+      const urlBefore = await this.grabCurrentUrl();
       await this.retryUntilUrlChanges(() => this.forceClick('Start'), urlBefore);
     },
 
     async clickSignIn() {
-      let urlBefore = await this.grabCurrentUrl();
+      const urlBefore = await this.grabCurrentUrl();
       await this.retryUntilUrlChanges(() => this.forceClick(signInButton), urlBefore);
     },
 
     async clickSignOut() {
-      let urlBefore = await this.grabCurrentUrl();
+      const urlBefore = await this.grabCurrentUrl();
       await this.retryUntilUrlChanges(() => this.forceClick('Sign out'), urlBefore);
     },
 
 
     async clickSubmit() {
-      let urlBefore = await this.grabCurrentUrl();
+      const urlBefore = await this.grabCurrentUrl();
       await this.retryUntilUrlChanges(() => this.forceClick('Submit'), urlBefore);
     },
 
     async clickCloseAndReturnToCaseDetails() {
-      let urlBefore = await this.grabCurrentUrl();
+      const urlBefore = await this.grabCurrentUrl();
       await this.retryUntilUrlChanges(() => this.forceClick('Close and Return to case details'), urlBefore);
     },
 
     async clickSendDirection() {
-      let urlBefore = await this.grabCurrentUrl();
+      const urlBefore = await this.grabCurrentUrl();
       await this.retryUntilUrlChanges(() => this.forceClick('Send direction'), urlBefore);
     },
 
     async clickButtonOrLink(buttonOrLinkText: string) {
-      let urlBefore = await this.grabCurrentUrl();
+      const urlBefore = await this.grabCurrentUrl();
       await this.retryUntilUrlChanges(() => this.forceClick(buttonOrLinkText), urlBefore);
     },
 
@@ -64,15 +67,15 @@ export = function() {
     },
 
     async grabCaseNumber() {
-      await this.waitForElement('.alert-message');
+      await this.waitForElement('.alert-message', 60);
 
-      let message: string = await this.grabTextFrom('.alert-message');
-      let caseId: string = (message.split('#')[1].split(' ')[0]).split('-').join('');
+      const message: string = await this.grabTextFrom('.alert-message');
+      const caseId: string = (message.split('#')[1].split(' ')[0]).split('-').join('');
       return caseId;
     },
 
     async selectNextStep(nextStep: string) {
-      let urlBefore = await this.grabCurrentUrl();
+      const urlBefore = await this.grabCurrentUrl();
       await this.selectOption('#next-step', nextStep);
       await this.waitForEnabled(goButton);
       await this.retryUntilUrlChanges(() => this.forceClick(goButton), urlBefore);
@@ -86,8 +89,6 @@ export = function() {
         await action();
         await this.sleep(3000 * tryNumber);
         urlAfter = await this.grabCurrentUrl();
-        //console.log('urlBefore>>>>',urlBefore);
-        //console.log('urlAfter>>>>',urlAfter);
         if (urlBefore !== urlAfter) {
           console.log(`retryUntilUrlChanges(before: ${urlBefore}, after: ${urlAfter}): url changed after try #${tryNumber} was executed`);
           break;
@@ -105,7 +106,7 @@ export = function() {
     },
 
     async validateCorrectLabelDisplayed(locator: string, label: string) {
-      let src: string = await this.grabAttributeFrom(locator, 'src');
+      const src: string = await this.grabAttributeFrom(locator, 'src');
       await this.expectContain(src, label, 'Incorrect or missing Label');
     },
 
@@ -125,11 +126,11 @@ export = function() {
       // ie when tabs are displayed after appeal submission they are labelled: #mat-tab-label-0
       // after creating a service request they are labelled: #mat-tab-label-2
 
-      let tabId = await this.grabAttributeFrom('.mat-tab-labels > div', 'id');
-      let tabGroupNumber = (tabId.split(tabLabel)[1]).split('-')[0];
+      const tabId = await this.grabAttributeFrom('.mat-tab-labels > div', 'id');
+      const tabGroupNumber = (tabId.split(tabLabel)[1]).split('-')[0];
 
       for (let i = 0; i < noOfTabs; i++) {
-        let tabLocator: string = `#${tabLabel}${tabGroupNumber}-${i} > div`;
+        const tabLocator: string = `#${tabLabel}${tabGroupNumber}-${i} > div`;
 
         if (await this.grabTextFrom(tabLocator) === tabName) {
           await this.click(tabLocator)
@@ -194,8 +195,6 @@ export = function() {
       let onBail: string;
       const bailApplicationNumber: string = appellant.bailApplicationNumber;
       let tabBailApplicationNumber:string;
-      let inDetention: string;
-      let hasRemovalDirections: string;
       let tabRemovalDirectionsDate: string;
       let hasCustodialSentence: string;
       let tabCustodialReleaseDate: string;
@@ -205,7 +204,7 @@ export = function() {
 
       await this.selectTab('Appeal');
 
-      inDetention = await this.grabTextFrom(appealTabInDetentionLocator);
+      const inDetention = await this.grabTextFrom(appealTabInDetentionLocator);
       await this.expectContain(yesNo, inDetention, 'A valid Detention flag must exist on the Appeal Tab');
 
       if (checkForDetainedDate) {
@@ -216,7 +215,7 @@ export = function() {
         await this.expectEqual(detainedReason, appellant.detained.reason, 'The reason for the detention is incorrect on the Appeals Tab');
       }
 
-      hasRemovalDirections = await this.grabTextFrom(appealTabRemovalDirections);
+      const hasRemovalDirections = await this.grabTextFrom(appealTabRemovalDirections);
       await this.expectContain(yesNo, hasRemovalDirections, 'A valid Removal Directions flag must exist on the Appeal Tab');
 
       switch (detentionLocation) {
@@ -275,7 +274,6 @@ export = function() {
           + await this.grabValueFrom('#sendDirectionDateDue-year');
       const todayPlusDays = moment().add(daysToAdd, 'days').format('DD-MM-YYYY');
 
-      // @ts-ignore
       await this.expectDeepEqual(complyDate, todayPlusDays, `Request respondent evidence comply date should be ${daysToAdd} days from today: ${todayPlusDays}.`);
     },
 

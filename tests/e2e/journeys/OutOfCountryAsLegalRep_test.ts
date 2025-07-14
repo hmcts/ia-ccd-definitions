@@ -1,11 +1,8 @@
-import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalRepresentative, legalAdmin} from '../detainedConfig'
+import {lawFirmUser, envUrl} from '../detainedConfig'
 
 let caseId: string;
 const inTime:boolean = true;
-const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
-//const detentionLocation: string = 'immigrationRemovalCentre';
-//const detentionLocation: string = 'prison';
-const detentionLocation: string = 'other';
+
 Feature('Detained Appeal - Represented @OutOfCountryLegalRepresented');
 
 
@@ -13,7 +10,7 @@ Before(async({ I }) => {
     await I.amOnPage(envUrl);
 })
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Create Out of Country Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal, draftAppeal, serviceRequestPage, paymentPage}) => {
     const typeOfAppeal: string = 'RPS';
 

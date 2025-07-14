@@ -1,10 +1,22 @@
-// @ts-nocheck
-import {envUrl} from '../detainedConfig'
-
+import {envUrl, runningEnv} from '../detainedConfig'
 
 const { I } = inject();
 
 class PaymentPage {
+  private cardPaymentLocator: string = '#cardPayment';
+  private cardNoLocator: string = '#card-no';
+  private expiryMonthLocator: string = '#expiry-month';
+  private expiryYearLocator: string = '#cardholder-name';
+  private cardHolderNameLocator = '#cardholder-name';
+  private cvcLocator = '#cvc';
+  private addressLine1Locator = '#address-line-1';
+  private addressCityLocator = '#address-city';
+  private addressCountryLocator = '#address-country';
+  private addressPostcodeLocator = '#address-postcode';
+  private emailLocator = '#email';
+  private continueButtonLocator = '#submit-card-details';
+  private confirmButtonLocator = '#confirm';
+
   private cardNumber: string = '4444333322221111';
   private expiryMonth: string = '11';
   private expiryYear: string = '2032';
@@ -17,23 +29,7 @@ class PaymentPage {
   private email: string = 'sol-i-citor@test.com';
 
   constructor() {
-    //insert your locators
-    this.cardPaymentLocator = '#cardPayment';
-    this.cardNoLocator = '#card-no';
-    this.expiryMonthLocator = '#expiry-month';
-    this.expiryYearLocator = '#expiry-year';
-    this.cardHolderNameLocator = '#cardholder-name';
-    this.cvcLocator = '#cvc';
-    this.addressLine1Locator = '#address-line-1';
-    this.addressCityLocator = '#address-city';
-    this.addressCountryLocator = '#address-country';
-    this.addressPostcodeLocator = '#address-postcode';
-    this.emailLocator = '#email';
-    this.continueButtonLocator = '#submit-card-details';
-    this.confirmButtonLocator = '#confirm';
   }
-  // insert your methods here
-
 
   async makePayment(paymentType: string = 'CC', caseId: string){
     await I.selectTab('Service Request')
@@ -64,8 +60,12 @@ class PaymentPage {
       // In preview "Return to service request" hyperlink forwards to an AAT address
       // To work around this for the moment will force the navigation back to the overview tab
       // in preview environment
-      await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
-      await I.wait(5);
+      if (['preview'].includes(runningEnv)){
+        await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
+        await I.waitForText('Case details', 60);
+      } else {
+        await I.clickContinue();
+      }
     }
   }
 }

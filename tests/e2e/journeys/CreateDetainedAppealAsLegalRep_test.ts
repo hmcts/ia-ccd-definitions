@@ -1,9 +1,8 @@
-import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer, legalAdmin} from '../detainedConfig'
+import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer} from '../detainedConfig'
 
-// @ts-ignore
 let caseId: string;
-let inTime: boolean = true;
-let cmrListing: boolean = true;
+const inTime: boolean = true;
+const cmrListing: boolean = true;
 
 const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
 const detainedRepresentedS94bImageLocator: string = '//*[@id="journey_type_legal_rep_detained_s9"]/dt/ccd-markdown/div/markdown/p/img';
@@ -21,12 +20,11 @@ const typeOfAppeal: string = 'EEA'; // Refusal under EEA regulations (payment re
 
 Feature('Detained Appeal - Represented @LegalRepDetainedRepresented');
 
-// @ts-ignore
 Before(async({ I }) => {
     await I.amOnPage(envUrl);
 })
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing',   async ({I, loginPage, createCasePage, createAppeal, draftAppeal, serviceRequestPage, paymentPage}) => {
 
     await loginPage.signIn(lawFirmUser);
@@ -87,7 +85,7 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
     await I.logout();
 }).retry(3);
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Legal Officer adds s94b appeal status, updates detention location and creates Respondent Direction',   async ({I, loginPage, retrieveCase, respondentEvidenceDirection, s94b, updateDetentionLocation, requestHomeOfficeData, generateListCMR}) => {
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
@@ -111,7 +109,7 @@ Scenario('Legal Officer adds s94b appeal status, updates detention location and 
 
 
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Home Office Officer (respondent) review appeal and upload Home Office bundle',   async ({I, loginPage, homeOfficeBundle}) => {
     await loginPage.signIn(homeOfficeOfficer);
     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
@@ -121,7 +119,7 @@ Scenario('Home Office Officer (respondent) review appeal and upload Home Office 
 }).retry(3);
 
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Legal Officer directs appellant/Legal Rep to build case',   async ({I, loginPage, retrieveCase, caseBuildingDirection}) => {
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
@@ -131,7 +129,7 @@ Scenario('Legal Officer directs appellant/Legal Rep to build case',   async ({I,
 }).retry(3);
 
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Appellant/Legal Rep build case',   async ({I, loginPage, buildYourCase}) => {
     await loginPage.signIn(lawFirmUser);
     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
@@ -140,7 +138,7 @@ Scenario('Appellant/Legal Rep build case',   async ({I, loginPage, buildYourCase
     await I.logout();
 }).retry(3);
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Legal Officer creates Respondent Review Direction',   async ({I, loginPage, retrieveCase, respondentReviewDirection}) => {
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
@@ -149,7 +147,7 @@ Scenario('Legal Officer creates Respondent Review Direction',   async ({I, login
     await I.logout();
 }).retry(3);
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Home Office Officer (respondent) responds to appeal response from Appellant/Legal Rep',   async ({I, loginPage, appealResponse}) => {
     await loginPage.signIn(homeOfficeOfficer);
     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
@@ -158,7 +156,7 @@ Scenario('Home Office Officer (respondent) responds to appeal response from Appe
     await I.logout();
 }).retry(3);
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Legal Officer directs appellant/legal rep to Review Home Office response',   async ({I, loginPage, retrieveCase, reviewHomeOfficeResponse}) => {
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
@@ -167,7 +165,7 @@ Scenario('Legal Officer directs appellant/legal rep to Review Home Office respon
     await I.logout();
 }).retry(3);
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Appellant/legal rep request and submit hearing requirements',   async ({I, loginPage, requestHearingRequirements, submitHearingRequirements}) => {
     await loginPage.signIn(lawFirmUser);
     await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
@@ -177,7 +175,7 @@ Scenario('Appellant/legal rep request and submit hearing requirements',   async 
     await I.logout();
 }).retry(3);
 
-// @ts-ignore
+// @ts-expect-error stop warning
 Scenario('Legal Officer to review hearing requirements',   async ({I, loginPage, retrieveCase, reviewHearingRequirements}) => {
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);

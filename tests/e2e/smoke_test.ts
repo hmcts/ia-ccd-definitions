@@ -8,8 +8,8 @@ Before(({ I }) => {
     I.amOnPage(envUrl);
 })
 
-// @ts-ignore
-Scenario('Checking system is UP',   async ({I, loginPage, createCasePage, createAppeal}) => {
+// @ts-expect-error stop warning
+Scenario('Checking system is UP',   async ({loginPage, createCasePage}) => {
     await loginPage.signIn(lawFirmUser);
     await createCasePage.createCase();
 });
