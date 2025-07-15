@@ -9,6 +9,8 @@ const appealTabCustodialText: string = 'Custodial Sentence';
 const appealTabCustodialDateText: string = 'Custodial sentence release date';
 const appealTabBailPendingText: string = 'Pending bail application';
 const appealTabBailNumberText: string = 'Bail application number';
+const appealTabDateStatusRemovedText: string = 'Date detention status removed';
+const appealTabRemovalReasonsText: string = 'Reasons for removal';
 const appellantTabDetentionFacilityTypeText: string = 'Detention facility type';
 const appellantTabDetentionFacilityNameText: string = 'Detention facility name';
 const appellantTabNomsNoText: string = 'NOMS number';
@@ -46,6 +48,8 @@ class RemoveDetainedStatus {
         await I.dontSee(appealTabCustodialDateText);
         await I.dontSee(appealTabBailPendingText);
         await I.dontSee(appealTabBailNumberText);
+        await I.see(appealTabDateStatusRemovedText);
+        await I.see(appealTabRemovalReasonsText);
 
     }
 

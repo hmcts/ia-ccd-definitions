@@ -87,7 +87,7 @@ export = function() {
       for (let tryNumber = 1; tryNumber <= maxNumberOfTries; tryNumber++) {
         console.log(`Checking if URL has changed, starting try #${tryNumber}`);
         await action();
-        await this.sleep(3000 * tryNumber);
+        await this.sleep(5000 * tryNumber);
         urlAfter = await this.grabCurrentUrl();
         if (urlBefore !== urlAfter) {
           console.log(`retryUntilUrlChanges(before: ${urlBefore}, after: ${urlAfter}): url changed after try #${tryNumber} was executed`);

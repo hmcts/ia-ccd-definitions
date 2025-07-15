@@ -3,7 +3,7 @@ import {envUrl, legalAdmin} from '../detainedConfig'
 let caseId: string;
 const inTime: boolean = true;
 
-Feature('Legally Represented - Manual Detained Appeal - Legal Admin @LegalAdminDetainedRepresented');
+Feature('Legally Represented - Manual Detained Appeal - Legal Admin @LegalAdminDetainedRepresentedToNonDetained');
 
 
 Before(async({ I }) => {
@@ -31,7 +31,7 @@ Scenario('Create Represented Detained Appeal in Prison with Custodial sentence -
     await createAppeal.locationInUK('Yes');
     await createAppeal.inDetention('Yes');
     await createAppeal.setDetentionLocation(detentionLocation);
-    await createAppeal.setCustodialSentence('Yes'); //detention location is prison
+    await createAppeal.setCustodialSentence('Yes');
     await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
     await createAppeal.uploadNoticeOfDecision();
     await createAppeal.setTypeOfAppeal(typeOfAppeal);
@@ -56,6 +56,7 @@ Scenario('Create Represented Detained Appeal in Prison with Custodial sentence -
     await removeDetainedStatus.removeStatusAiPNo();
     await I.validateCaseFlagExists('Detained individual', 'Inactive');
     await removeDetainedStatus.validateDataOnAppealTab(detentionLocation);
+    await removeDetainedStatus.validateDataOnAppellantTab(detentionLocation);
     await I.logout();
 
 }).retry(3);
@@ -105,17 +106,7 @@ Scenario('Create Represented Detained Appeal in Immigration Removal Centre - ' +
     await removeDetainedStatus.removeStatusAiPNo();
     await I.validateCaseFlagExists('Detained individual', 'Inactive');
     await removeDetainedStatus.validateDataOnAppealTab(detentionLocation);
+    await removeDetainedStatus.validateDataOnAppellantTab(detentionLocation);
     await I.logout();
 
-}).retry(3);
-
-// @ts-expect-error stop warning
-Scenario.skip('Admin removes detained status for Legally Represented - Manual',   async ({I, loginPage, removeDetainedStatus}) => {
-    await loginPage.signIn(legalAdmin);
-    await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
-    await I.waitForText('Case details',60);
-    await removeDetainedStatus.removeStatusAiPNo();
-    await I.validateCaseFlagExists('Detained individual', 'Inactive');
- //   await removeDetainedStatus.validateDataOnAppealTab(detentionLocation);
-    await I.logout();
 }).retry(3);
