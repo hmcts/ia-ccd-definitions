@@ -1906,5 +1906,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "ariaCreateCase", "CaseFieldID": "remissionDecision", "PageFieldDisplayOrder": 4, "DisplayContext": "MANDATORY", "PageID": "ariaCreateCasePage", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N", "FieldShowCondition": "dummyEmptyLabel=\"DUMMY_FIELD_TO_HIDE\"", "Publish": "Y", "RetainHiddenValue": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "ManageTTL", "CaseFieldID": "TTL", "PageID": 1, "PageDisplayOrder": 1,"DisplayContext": "COMPLEX", "PageFieldDisplayOrder": 1},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "migrateCase", "CaseFieldID": "TTL", "PageID": 1, "PageDisplayOrder": 1,"DisplayContext": "COMPLEX", "PageFieldDisplayOrder": 1}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "migrateCase", "CaseFieldID": "TTL", "PageID": 1, "PageDisplayOrder": 1,"DisplayContext": "COMPLEX", "PageFieldDisplayOrder": 1},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "appellantInPersonManual", "CaseFieldID": "appellantAddressTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appellantInPersonManual_appellantAddress", "PageLabel": "Appellant's address", "PageDisplayOrder": 2, "CallBackURLMidEvent": "${CCD_DEF_IA_URL}/asylum/ccdMidEvent?pageId=appellantAddress", "ShowSummaryChangeOption": "N" },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "appellantInPersonManual", "CaseFieldID": "appellantAddress", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "appellantInPersonManual_appellantAddress", "CallBackURLMidEvent": "${CCD_DEF_IA_URL}/asylum/ccdMidEvent?pageId=appellantAddress", "ShowSummaryChangeOption": "Y"}
 ]
