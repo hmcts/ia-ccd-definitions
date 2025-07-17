@@ -83,7 +83,6 @@ export = function() {
 
     async retryUntilUrlChanges(action, urlBefore, maxNumberOfTries = 6) {
       let urlAfter;
-      console.log('urlBefore>>>>',urlBefore);
       for (let tryNumber = 1; tryNumber <= maxNumberOfTries; tryNumber++) {
         console.log(`Checking if URL has changed, starting try #${tryNumber}`);
         await action();

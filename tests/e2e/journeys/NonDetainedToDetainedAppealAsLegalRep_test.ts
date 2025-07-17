@@ -12,8 +12,8 @@ Before(async({ I }) => {
 })
 
 // @ts-expect-error stop warning
-Scenario('Create Non-Detained Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal, draftAppeal, serviceRequestPage, paymentPage}) => {
-    const typeOfAppeal: string = 'RPS';
+Scenario('Create Non-Detained Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal, draftAppeal}) => {
+    const typeOfAppeal: string = 'deprivation'; // Deprivation of citizenship (no payment required)
 
     await loginPage.signIn(lawFirmUser);
     await createCasePage.createCase();
@@ -27,39 +27,23 @@ Scenario('Create Non-Detained Appeal as Legal Representative',   async ({I, logi
     await createAppeal.setAppellentContactPreference('EMAIL');
     await createAppeal.setAppellentsAddress('nonDetained','Yes');
     await createAppeal.hasSponsor('No');
-    await createAppeal.hasDepotationOrder("No");
+    await createAppeal.hasDeportationOrder("No");
     await createAppeal.hasNewMatters('Yes');
     await createAppeal.hasOtherAppeals('No');
     await createAppeal.setLegalRepresentativeDetails();
     await createAppeal.isHearingRequired(true);
-
-    if (typeOfAppeal !== 'RPS' && typeOfAppeal !== 'DC') {
-        await createAppeal.hasFeeRemission('No');
-    }
-
     await createAppeal.checkMyAnswers();
 
     caseId = await I.grabCaseNumber();
     console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
 
     await draftAppeal.submit(true, inTime);
-
-    if (typeOfAppeal !== 'RPS' && typeOfAppeal !== 'DC') {
-        // create service request
-        await serviceRequestPage.createServiceRequest();
-
-        // make payment - will remove caseId from parameters and function when successful payment hyperlink points to correct env
-        await paymentPage.makePayment('CC', caseId);
-    }
-
     await I.logout();
 }).retry(3);
 
 
 // @ts-expect-error stop warning
 Scenario('Legal Officer creates Respondent Direction',   async ({I, loginPage, retrieveCase, markAppealAsDetained, updateDetentionLocation}) => {
-
-
     await loginPage.signIn(legalOfficer);
     await retrieveCase.getCase(caseId);
     await I.waitForText('Case details',60);

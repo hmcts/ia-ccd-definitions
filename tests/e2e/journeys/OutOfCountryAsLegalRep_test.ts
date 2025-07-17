@@ -11,8 +11,8 @@ Before(async({ I }) => {
 })
 
 // @ts-expect-error stop warning
-Scenario('Create Out of Country Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal, draftAppeal, serviceRequestPage, paymentPage}) => {
-    const typeOfAppeal: string = 'RPS';
+Scenario('Create Out of Country Appeal as Legal Representative',   async ({I, loginPage, createCasePage, createAppeal, draftAppeal}) => {
+    const typeOfAppeal: string = 'revocationOfProtection'; // Revocation of a protection status (no payment required) "revocationOfProtection"
 
     await loginPage.signIn(lawFirmUser);
     await createCasePage.createCase();
@@ -25,20 +25,11 @@ Scenario('Create Out of Country Appeal as Legal Representative',   async ({I, lo
     await createAppeal.setAppellentContactPreference('EMAIL');
     await createAppeal.setOutOfCountryAddress('Yes');
     await createAppeal.hasSponsor('Yes');
-    await createAppeal.hasDepotationOrder("Yes");
+    await createAppeal.hasDeportationOrder('Yes');
     await createAppeal.hasNewMatters('No');
     await createAppeal.hasOtherAppeals('No');
     await createAppeal.setLegalRepresentativeDetails();
     await createAppeal.isHearingRequired(true);
-
-    if (typeOfAppeal !== 'RPS' && typeOfAppeal !== 'DC') {
-        await createAppeal.hasFeeRemission('No');
-    }
-
-    if (typeOfAppeal === 'RPC') {
-        await createAppeal.setPayNowLater('Now');
-    }
-
     await createAppeal.checkMyAnswers();
 
     caseId = await I.grabCaseNumber();
@@ -46,16 +37,7 @@ Scenario('Create Out of Country Appeal as Legal Representative',   async ({I, lo
 
     await draftAppeal.submit(true, inTime);
 
-    if (typeOfAppeal !== 'RPS' && typeOfAppeal !== 'DC') {
-        // create service request
-        await serviceRequestPage.createServiceRequest();
-
-        // make payment - will remove caseId from parameters and function when successful payment hyperlink points to correct env
-        await paymentPage.makePayment('CC', caseId);
-    }
-
     await I.logout();
 });
-
 
 

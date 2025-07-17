@@ -1,6 +1,6 @@
 import {lawFirmUser, envUrl, legalOfficer, homeOfficeOfficer} from '../detainedConfig'
 
-let caseId: string;
+let caseId: string = '1752655171618589';
 const inTime: boolean = true;
 const cmrListing: boolean = true;
 
@@ -10,15 +10,15 @@ const detentionLocation: string = 'immigrationRemovalCentre';
 //const detentionLocation: string = 'prison';
 //const detentionLocation: string = 'other';
 
-const typeOfAppeal: string = 'EEA'; // Refusal under EEA regulations (payment required)
-//const typeOfAppeal: string = 'RHR'; // Refusal human rights (payment required)
-//const typeOfAppeal: string  = 'DC'; // Deprivation of citizenship (no payment required)
-//const typeOfAppeal: string  = 'EU'; // Refusal of application under the EU Settlement Scheme (payment required)
-//const typeOfAppeal: string = 'RPS'; // Revocation of a protection status (no payment required)
-// const typeOfAppeal:string = 'RPC'; // Refusal of protection claim (payment required)
+    //const typeOfAppeal: string = 'refusalOfEu'; // Refusal under EEA regulations (payment required)
+    //const typeOfAppeal: string = 'refusalOfHumanRights'; // Refusal human rights (payment required)
+    //const typeOfAppeal: string  = 'deprivation'; // Deprivation of citizenship (no payment required)
+    //const typeOfAppeal: string  = 'euSettlementScheme'; // Refusal of application under the EU Settlement Scheme (payment required)
+    //const typeOfAppeal: string = 'revocationOfProtection'; // Revocation of a protection status (no payment required)
+    const typeOfAppeal:string = 'protection'; // Refusal of protection claim (payment required)
 
 
-Feature('Detained Appeal - Represented @LegalRepDetainedRepresented');
+    Feature('Detained Appeal - Represented @LegalRepDetainedRepresented');
 
 Before(async({ I }) => {
     await I.amOnPage(envUrl);
@@ -26,7 +26,6 @@ Before(async({ I }) => {
 
 // @ts-expect-error stop warning
 Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing',   async ({I, loginPage, createCasePage, createAppeal, draftAppeal, serviceRequestPage, paymentPage}) => {
-
     await loginPage.signIn(lawFirmUser);
     await createCasePage.createCase();
     await createAppeal.locationInUK('Yes');
@@ -52,18 +51,18 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
     }
 
     await createAppeal.hasSponsor('No');
-    await createAppeal.hasDepotationOrder("Yes");
-    await createAppeal.hasRemovalDirections('Yes');
-    await createAppeal.hasNewMatters('Yes');
+    await createAppeal.hasDeportationOrder('No');
+    await createAppeal.hasRemovalDirections('No');
+    await createAppeal.hasNewMatters('No');
     await createAppeal.hasOtherAppeals('No');
     await createAppeal.setLegalRepresentativeDetails();
     await createAppeal.isHearingRequired(true);
 
-    if (typeOfAppeal !== 'RPS' && typeOfAppeal !== 'DC') {
+    if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
         await createAppeal.hasFeeRemission('No');
     }
 
-    if (typeOfAppeal === 'RPC') {
+    if (typeOfAppeal === 'protection') {
         await createAppeal.setPayNowLater('Now');
     }
 
@@ -74,7 +73,7 @@ Scenario('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time'
 
     await draftAppeal.submit(true, inTime);
 
-    if (typeOfAppeal !== 'RPS' && typeOfAppeal !== 'DC') {
+    if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
         // create service request
        await serviceRequestPage.createServiceRequest();
 
@@ -98,7 +97,7 @@ Scenario('Legal Officer adds s94b appeal status, updates detention location and 
     await updateDetentionLocation.changeLocation(detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison'), detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
     await updateDetentionLocation.validateDataUpdated(detentionLocation);
 
-    if (typeOfAppeal === 'RPS' || typeOfAppeal === 'RPC') {
+    if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
         await requestHomeOfficeData.matchAppellantDetails();
     }
 

@@ -226,21 +226,21 @@ class CreateAppeal {
     await I.clickContinue();
   }
 
-  async setTypeOfAppeal(appealType: string = 'EEA'){
+  async setTypeOfAppeal(appealType: string = 'refusalOfEu'){
     let currentUrl: string;
+
     await I.runAccessibilityCheck('TypeOfAppealPage');
+    await I.click(`#appealType-${appealType}`);
+    await I.clickContinue()
+
     switch (appealType) {
-      case 'EEA':
-        await I.click('#appealType-refusalOfEu');
-        await I.clickContinue();
+      case 'refusalOfEu':
         currentUrl = await I.grabCurrentUrl();
         if (!currentUrl.includes('BasicDetails')) {
           await this.groundsOfAppeal();
         }
         break;
-      case 'RPS':
-        await I.click('#appealType-revocationOfProtection');
-        await I.clickContinue();
+      case 'revocationOfProtection':
         currentUrl = await I.grabCurrentUrl();
         if (!currentUrl.includes('BasicDetails')) {
           await I.runAccessibilityCheck('TypeOfAppealRevocationHumanitarianProtectionOptionsPage');
@@ -248,9 +248,7 @@ class CreateAppeal {
           await I.clickContinue();
         }
         break;
-      case 'RHR':
-        await I.click('#appealType-refusalOfHumanRights');
-        await I.clickContinue();
+      case 'refusalOfHumanRights':
         currentUrl = await I.grabCurrentUrl();
         if (!currentUrl.includes('BasicDetails')) {
           await I.runAccessibilityCheck('TypeOfAppealHumanRightsRefusalOptionsPage');
@@ -258,9 +256,7 @@ class CreateAppeal {
           await I.clickContinue();
         }
         break;
-      case 'DC':
-        await I.click('#appealType-deprivation');
-        await I.clickContinue();
+      case 'deprivation':
         currentUrl = await I.grabCurrentUrl();
         if (!currentUrl.includes('BasicDetails')) {
           await I.runAccessibilityCheck('TypeOfAppealDeprivationOptionsPage');
@@ -268,13 +264,9 @@ class CreateAppeal {
           await I.clickContinue();
         }
         break;
-      case 'EU':
-        await I.click('#appealType-euSettlementScheme');
-        await I.clickContinue();
+      case 'euSettlementScheme':
         break;
-      case 'RPC':
-        await I.click('#appealType-protection');
-        await I.clickContinue()
+      case 'protection':
         await I.runAccessibilityCheck('TypeOfAppealHumanitarianProtectionOptionsPage');
         await I.click('#appealGroundsProtection_values-protectionHumanitarianProtection');
         await I.clickContinue();
@@ -402,7 +394,7 @@ class CreateAppeal {
     await I.clickContinue();
   }
 
-  async hasDepotationOrder(hasDeportOrder: string = 'No') {
+  async hasDeportationOrder(hasDeportOrder: string = 'No') {
     await I.runAccessibilityCheck('DeportationPage');
     await I.click(`#deportationOrderOptions_${hasDeportOrder}`);
     await I.clickContinue();
