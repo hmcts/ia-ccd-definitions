@@ -24,8 +24,8 @@ Scenario('Create Non-Detained Appeal as Legal Representative',   async ({I, logi
     await createAppeal.setTypeOfAppeal(typeOfAppeal);
     await createAppeal.setAppellantBasicDetails(false);
     await createAppeal.setNationality(true);
-    await createAppeal.setAppellentContactPreference('EMAIL');
     await createAppeal.setAppellentsAddress('nonDetained','Yes');
+    await createAppeal.setAppellentContactPreference('EMAIL');
     await createAppeal.hasSponsor('No');
     await createAppeal.hasDeportationOrder("No");
     await createAppeal.hasNewMatters('Yes');
