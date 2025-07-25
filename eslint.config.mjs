@@ -14,8 +14,9 @@ export default defineConfig([
       "codecept.conf.ts",
       ".eslintrc.js",
       "steps.d.ts",
-      "steps.ts"
+      "steps_file.ts",
       "playwright.config.ts",
+      "tests/e2e/scripts/get-secrets.js",
   ]),
     {
         files: ["**/*.ts"],

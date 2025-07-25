@@ -39,7 +39,7 @@ function getTaggedSecrets(keyVaultName) {
 
   return secretsMap;
 }
-// @ts-expect-error test
+
 function updateEnvFile(secretsMap, exampleEnvFilePath, envFilePath) {
   if (!fs.existsSync(exampleEnvFilePath)) {
     console.error(`${exampleEnvFilePath} file not found.`);
