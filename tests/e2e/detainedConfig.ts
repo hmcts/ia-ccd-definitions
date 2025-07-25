@@ -14,8 +14,8 @@ export const createCase = {
     eventCode: 'startAppeal',
 }
 
-export const lawFirmUser = {
-    email: process.env.ENVIRONMENT === 'preview' ? "ialegalreporgcreator12@mailnesia.com" : "ialegalreporgcreator12@mailinator.com",
+export const LegalRepresentative = {
+    username: process.env.ENVIRONMENT === 'preview' ? "ialegalreporgcreator12@mailnesia.com" : "ialegalreporgcreator12@mailinator.com",
     password: process.env.ENVIRONMENT === 'preview' ? "Aldg@teT0wer" : 'AldgateT0wer',
 }
 
@@ -24,7 +24,7 @@ export const legalOfficer = {
     password: " AldgateT0wer"
 }
 
-export const legalAdmin = {
+export const legalOfficerAdmin = {
     email:"ia.adm1nofficer.ccd@gmail.com",
     password: " AldgateT0wer"
 }
