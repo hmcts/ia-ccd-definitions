@@ -14,7 +14,24 @@ export default defineConfig([
       "codecept.conf.ts",
       ".eslintrc.js",
       "steps.d.ts",
+      "steps.ts"
+      "playwright.config.ts",
   ]),
+    {
+        files: ["**/*.ts"],
+        plugins: {
+            "@typescript-eslint": tseslint.plugin,
+        },
+        languageOptions: {
+            parser: tseslint.parser,
+            parserOptions: {
+                project: "./tsconfig.json",
+            },
+        },
+        rules: {
+            "@typescript-eslint/no-floating-promises": "error",
+        },
+    },
   { files: ["**/*.{js,mjs,cjs,ts,mts,cts}"], plugins: { js }, extends: ["js/recommended"] },
   { files: ["**/*.js"], languageOptions: { sourceType: "commonjs" } },
   { files: ["**/*.{js,mjs,cjs,ts,mts,cts}"], languageOptions: { globals: globals.browser } },
