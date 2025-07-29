@@ -115,7 +115,7 @@ def uploadCoreCaseDataDefinitions(env) {
   }
 }
 
-withParameterizedPipeline(type, product, component) {
+withParameterizedPipeline(type, product, component, 'preview') {
   enableHighLevelDataSetup()
   loadVaultSecrets(secrets)
 
