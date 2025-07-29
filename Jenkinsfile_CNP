@@ -130,8 +130,8 @@ pipeline {
     stage('Setup') {
       steps {
         script {
-          // Enable corepack to use the correct Yarn version
-          sh 'corepack enable'
+          // Use corepack prepare to get the correct Yarn version without system-wide installation
+          sh 'corepack prepare yarn@3.4.1 --activate'
           sh 'yarn setup'
         }
       }
