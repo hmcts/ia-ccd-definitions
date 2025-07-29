@@ -130,7 +130,9 @@ pipeline {
     stage('Setup') {
       steps {
         script {
-          yarnBuilder.yarn('setup')
+          // Enable corepack to use the correct Yarn version
+          sh 'corepack enable'
+          sh 'yarn setup'
         }
       }
     }
