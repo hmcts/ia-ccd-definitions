@@ -1,0 +1,166 @@
+#!groovy
+properties([
+    parameters([
+        string(name: 'PR_NUMBER', defaultValue: '', description: 'PR number to generate CCD definition for (e.g., 1993)'),
+        choice(name: 'ENVIRONMENT', choices: 'preview\naat\ndemo\nithc\nperftest', description: 'Environment where CCD definition should be generated')
+    ]),
+    pipelineTriggers([[$class: 'GitHubPushTrigger']])
+]);
+
+@Library("Infrastructure")
+import uk.gov.hmcts.contino.GithubAPI
+
+def type = "nodejs"
+def product = "ia"
+def component = "ccd-definitions"
+
+def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
+
+static Map<String, Object> secret(String secretName, String envVariable) {
+  [$class     : 'AzureKeyVaultSecret',
+   secretType : 'Secret',
+   name       : secretName,
+   envVariable: envVariable
+  ]
+}
+
+def secrets = [
+  'rpx-${env}': [
+    secret('mc-idam-client-secret', 'IDAM_CLIENT_SECRET'),
+  ],
+  's2s-${env}'  : [
+    secret('microservicekey-ccd-gw', 'CCD_API_GATEWAY_S2S_SECRET'),
+    secret('microservicekey-ccd-data', 'CCD_DATA_STORE_S2S_SECRET'),
+    secret('microservicekey-ccd-admin', 'ADMIN_S2S_KEY'),
+    secret('microservicekey-ccd-definition', 'CCD_DEFINITION_STORE_S2S_SECRET'),
+    secret('microservicekey-xui-webapp', 'XUI_S2S_SECRET'),
+  ],
+  'ccd-${env}'  : [
+    secret('ccd-api-gateway-oauth2-client-secret', 'CCD_API_GATEWAY_IDAM_CLIENT_SECRET'),
+    secret('ccd-api-gateway-oauth2-client-secret', 'CCD_API_GATEWAY_OAUTH2_CLIENT_SECRET'),
+    secret('postcode-info-address-lookup-token', 'ADDRESS_LOOKUP_TOKEN'),
+    secret('ccd-admin-web-oauth2-client-secret', 'ADMIN_WEB_IDAM_SECRET'),
+    secret('idam-data-store-client-secret', 'IDAM_OAUTH2_DATA_STORE_CLIENT_SECRET'),
+    secret('idam-data-store-system-user-username', 'IDAM_DATA_STORE_SYSTEM_USER_USERNAME'),
+    secret('idam-data-store-system-user-password', 'IDAM_DATA_STORE_SYSTEM_USER_PASSWORD'),
+    secret('microservicekey-ccd-gw', 'CCD_API_GATEWAY_S2S_KEY'),
+    secret('ccd-admin-web-oauth2-client-secret', 'ADMIN_WEB_IDAM_SECRET'),
+    secret('idam-data-store-system-user-username', 'ROLE_ASSIGNMENT_USER_EMAIL')
+  ],
+  'ia-${env}': [
+    secret('ccd-importer-username', 'CCD_CONFIGURER_IMPORTER_USERNAME'),
+    secret('ccd-importer-password', 'CCD_CONFIGURER_IMPORTER_PASSWORD'),
+    secret('ccd-importer-username', 'DEFINITION_IMPORTER_USERNAME'),
+    secret('ccd-importer-password', 'DEFINITION_IMPORTER_PASSWORD'),
+    secret('postgres-user', 'POSTGRES_USER'),
+    secret('postgres-password', 'POSTGRES_PASSWORD'),
+    secret('default-password', 'DEFAULT_PASSWORD'),
+    secret('system-update-user-password', 'SYSTEM_USER_PASSWORD'),
+    secret('ia-system-access-username', 'IA_SYSTEM_USERNAME'),
+    secret('ia-system-access-password', 'IA_SYSTEM_PASSWORD'),
+    secret('test-caseofficer-username', 'TEST_CASEOFFICER_USERNAME'),
+    secret('test-caseofficer-password', 'TEST_CASEOFFICER_PASSWORD'),
+    secret('test-law-firm-a-username', 'TEST_LAW_FIRM_A_USERNAME'),
+    secret('test-law-firm-a-password', 'TEST_LAW_FIRM_A_PASSWORD'),
+    secret('test-adminofficer-username', 'TEST_ADMINOFFICER_USERNAME'),
+    secret('test-adminofficer-password', 'TEST_ADMINOFFICER_PASSWORD')
+  ]
+]
+
+pipeline {
+  agent any
+  
+  environment {
+    ENVIRONMENT = "${params.ENVIRONMENT}"
+    PR_NUMBER = "${params.PR_NUMBER}"
+    NODE_TLS_REJECT_UNAUTHORIZED = "0"
+    DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-ia-ccd-definitions-pr-${params.PR_NUMBER}.preview.platform.hmcts.net"
+    CCD_DATA_STORE_URL = "https://ccd-data-store-api-ia-ccd-definitions-pr-${params.PR_NUMBER}.preview.platform.hmcts.net"
+  }
+  
+  stages {
+    stage('Validate Parameters') {
+      steps {
+        script {
+          if (!params.PR_NUMBER || params.PR_NUMBER.trim().isEmpty()) {
+            error "PR_NUMBER parameter is required. Please provide a valid PR number."
+          }
+          echo "Generating CCD definition for PR: ${params.PR_NUMBER}"
+          echo "Environment: ${params.ENVIRONMENT}"
+        }
+      }
+    }
+    
+    stage('Setup') {
+      steps {
+        script {
+          // Use corepack prepare to get the correct Yarn version without system-wide installation
+          sh 'corepack prepare yarn@3.4.1 --activate'
+          // Use corepack to run yarn commands
+          sh 'corepack yarn --version'
+          // Install dependencies first
+          sh 'corepack yarn install'
+          sh 'corepack yarn setup'
+        }
+      }
+    }
+    
+    stage('Validate JSON') {
+      steps {
+        script {
+          sh """
+            set -e
+            echo "Validating JSON definitions for PR ${params.PR_NUMBER}"
+            corepack yarn test
+          """
+        }
+      }
+    }
+
+    stage('Generate CCD Definition') {
+      steps {
+        script {
+          sh """
+            set -e
+            echo "Generating CCD definition for PR ${params.PR_NUMBER}"
+            corepack yarn generate-${params.ENVIRONMENT}
+          """
+        }
+      }
+      post {
+        always {
+          dir("${WORKSPACE}/target") {
+            archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-${params.ENVIRONMENT}.xlsx", allowEmptyArchive: true
+          }
+        }
+      }
+    }
+
+    stage('Upload CCD Definition') {
+      when {
+        expression { params.ENVIRONMENT == 'preview' }
+      }
+      steps {
+        script {
+          sh """
+            set -e
+            echo "Uploading CCD definition to PR ${params.PR_NUMBER} environment"
+            bin/utils/upload-ccd.sh -e preview -p ${params.PR_NUMBER}
+          """
+        }
+      }
+    }
+  }
+  
+  post {
+    always {
+      echo "Pipeline completed for PR ${params.PR_NUMBER} in environment ${params.ENVIRONMENT}"
+    }
+    success {
+      echo "CCD definition generation completed successfully for PR ${params.PR_NUMBER}"
+    }
+    failure {
+      echo "CCD definition generation failed for PR ${params.PR_NUMBER}"
+    }
+  }
+} 
