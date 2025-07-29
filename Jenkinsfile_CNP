@@ -115,89 +115,91 @@ def uploadCoreCaseDataDefinitions(env) {
   }
 }
 
-withPipeline(type, product, component) {
-  enableHighLevelDataSetup()
-  loadVaultSecrets(secrets)
+def call() {
+  withParameterizedPipeline(type, product, component) {
+    enableHighLevelDataSetup()
+    loadVaultSecrets(secrets)
 
-  onPR {
-    env.ENVIRONMENT = "preview"
-    env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
-    env.PR_NUMBER = "${CHANGE_ID}"
-    env.DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-    env.CCD_DATA_STORE_URL = "https://ccd-data-store-api-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-  }
-
-  onMaster {
-    env.ENVIRONMENT = "aat"
-  }
-
-  onDemo {
-    env.ENVIRONMENT = "demo"
-  }
-
-  onPerftest {
-    env.ENVIRONMENT = "perftest"
-  }
-
-  onIthc {
-    env.ENVIRONMENT = "ithc"
-  }
-
-  before('highleveldatasetup') {
-    yarnBuilder.yarn('setup')
-    archiveCoreCaseDataDefinitions()
-  }
-
-  afterSuccess('akschartsinstall') {
     onPR {
+      env.ENVIRONMENT = "preview"
+      env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
+      env.PR_NUMBER = "${CHANGE_ID}"
+      env.DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+      env.CCD_DATA_STORE_URL = "https://ccd-data-store-api-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+    }
+
+    onMaster {
+      env.ENVIRONMENT = "aat"
+    }
+
+    onDemo {
+      env.ENVIRONMENT = "demo"
+    }
+
+    onPerftest {
+      env.ENVIRONMENT = "perftest"
+    }
+
+    onIthc {
+      env.ENVIRONMENT = "ithc"
+    }
+
+    before('highleveldatasetup') {
+      yarnBuilder.yarn('setup')
+      archiveCoreCaseDataDefinitions()
+    }
+
+    afterSuccess('akschartsinstall') {
+      onPR {
+        env.IDAM_API_URL = "https://idam-api.aat.platform.hmcts.net"
+        env.SERVICE_AUTH_PROVIDER_API_BASE_URL = "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
+        env.DM_STORE_URL = "http://dm-store-aat.service.core-compute-aat.internal"
+        env.AAC_API_URL = "https://manage-case-assignment-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+        env.ROLE_ASSIGNMENT_URL = "https://am-role-assignment-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+        
+        sh """
+          set -e
+          echo "Generated CCD definitions for preview environment"
+          echo "PR Number: ${CHANGE_ID}"
+          echo "Files generated in target/appeal/xlsx/"
+        """
+
+        env.URL = "https://xui-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+
+        deploymentNumber = githubCreateDeployment()
+        githubUpdateDeploymentStatus(deploymentNumber, env.URL)
+      }
+    }
+
+    afterAlways('smoketest:preview') {
+      steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test-results/smokeTest/**/*'
+    }
+
+    before('smoketest:aat') {
+      env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
       env.IDAM_API_URL = "https://idam-api.aat.platform.hmcts.net"
       env.SERVICE_AUTH_PROVIDER_API_BASE_URL = "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
+      env.CCD_DATA_STORE_URL = "https://ccd-data-store-api-aat.service.core-compute-aat.internal"
       env.DM_STORE_URL = "http://dm-store-aat.service.core-compute-aat.internal"
-      env.AAC_API_URL = "https://manage-case-assignment-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-      env.ROLE_ASSIGNMENT_URL = "https://am-role-assignment-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+      env.AAC_API_URL = "https://manage-case-assignment-aat.service.core-compute-aat.internal"
       
       sh """
         set -e
-        echo "Generated CCD definitions for preview environment"
-        echo "PR Number: ${CHANGE_ID}"
-        echo "Files generated in target/appeal/xlsx/"
+        echo "Generated CCD definitions for AAT environment"
       """
+      
+      env.URL = "https://xui-ia-aat.aat.platform.hmcts.net"
 
-      env.URL = "https://xui-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-
-      deploymentNumber = githubCreateDeployment()
-      githubUpdateDeploymentStatus(deploymentNumber, env.URL)
+      dir("${WORKSPACE}/target") {
+        steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-aat.xlsx"
+      }
+      
+      // Upload definitions can be implemented later when needed
+      // uploadCoreCaseDataDefinitions('aat')
     }
-  }
 
-  afterAlways('smoketest:preview') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test-results/smokeTest/**/*'
-  }
-
-  before('smoketest:aat') {
-    env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
-    env.IDAM_API_URL = "https://idam-api.aat.platform.hmcts.net"
-    env.SERVICE_AUTH_PROVIDER_API_BASE_URL = "http://rpe-service-auth-provider-aat.service.core-compute-aat.internal"
-    env.CCD_DATA_STORE_URL = "https://ccd-data-store-api-aat.service.core-compute-aat.internal"
-    env.DM_STORE_URL = "http://dm-store-aat.service.core-compute-aat.internal"
-    env.AAC_API_URL = "https://manage-case-assignment-aat.service.core-compute-aat.internal"
-    
-    sh """
-      set -e
-      echo "Generated CCD definitions for AAT environment"
-    """
-    
-    env.URL = "https://xui-ia-aat.aat.platform.hmcts.net"
-
-    dir("${WORKSPACE}/target") {
-      steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-aat.xlsx"
+    afterAlways('smoketest:aat') {
+      steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test-results/smokeTest/**/*'
     }
-    
-    // Upload definitions can be implemented later when needed
-    // uploadCoreCaseDataDefinitions('aat')
-  }
-
-  afterAlways('smoketest:aat') {
-    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'test-results/smokeTest/**/*'
   }
 } 
