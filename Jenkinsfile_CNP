@@ -155,7 +155,7 @@ pipeline {
       post {
         always {
           dir("${WORKSPACE}/target") {
-            steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview-pr${CHANGE_ID}.xlsx", allowEmptyArchive: true
+            archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview-pr${CHANGE_ID}.xlsx", allowEmptyArchive: true
           }
         }
       }
