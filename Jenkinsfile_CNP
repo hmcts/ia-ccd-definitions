@@ -149,6 +149,51 @@ def call() {
       archiveCoreCaseDataDefinitions()
     }
 
+    stage('Generate CCD Definition for PR') {
+      when {
+        anyOf {
+          branch 'PR-*'
+          changeRequest()
+        }
+      }
+      steps {
+        script {
+          env.PR_NUMBER = "${CHANGE_ID}"
+          sh """
+            set -e
+            echo "Generating CCD definition for PR ${CHANGE_ID}"
+            yarn generate-preview
+          """
+        }
+      }
+      post {
+        always {
+          dir("${WORKSPACE}/target") {
+            steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview-pr${CHANGE_ID}.xlsx", allowEmptyArchive: true
+          }
+        }
+      }
+    }
+
+    stage('Upload CCD Definition to PR Environment') {
+      when {
+        anyOf {
+          branch 'PR-*'
+          changeRequest()
+        }
+      }
+      steps {
+        script {
+          env.PR_NUMBER = "${CHANGE_ID}"
+          sh """
+            set -e
+            echo "Uploading CCD definition to PR ${CHANGE_ID} environment"
+            bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
+          """
+        }
+      }
+    }
+
     afterSuccess('akschartsinstall') {
       onPR {
         env.IDAM_API_URL = "https://idam-api.aat.platform.hmcts.net"
