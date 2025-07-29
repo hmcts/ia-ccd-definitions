@@ -142,10 +142,13 @@ pipeline {
       }
       steps {
         script {
+          env.PR_NUMBER = "${CHANGE_ID}"
           sh """
             set -e
-            echo "Uploading CCD definition to PR ${params.PR_NUMBER} environment"
-            bin/utils/upload-ccd.sh -e preview -p ${params.PR_NUMBER}
+            echo "Uploading CCD definition to PR ${CHANGE_ID} environment"
+            set -e
+            echo "Uploading CCD definition to PR ${params.PR_NUMBER}"
+            corepack yarn upload-preview
           """
         }
       }
