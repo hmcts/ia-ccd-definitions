@@ -141,6 +141,24 @@ pipeline {
       }
     }
     
+    stage('Validate JSON') {
+      when {
+        anyOf {
+          branch 'PR-*'
+          changeRequest()
+        }
+      }
+      steps {
+        script {
+          sh """
+            set -e
+            echo "Validating JSON definitions for PR ${CHANGE_ID}"
+            corepack yarn test
+          """
+        }
+      }
+    }
+
     stage('Generate CCD Definition for PR') {
       when {
         anyOf {
