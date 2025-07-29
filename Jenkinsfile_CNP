@@ -132,7 +132,9 @@ pipeline {
         script {
           // Use corepack prepare to get the correct Yarn version without system-wide installation
           sh 'corepack prepare yarn@3.4.1 --activate'
-          sh 'yarn setup'
+          // Use corepack to run yarn commands
+          sh 'corepack yarn --version'
+          sh 'corepack yarn setup'
         }
       }
     }
@@ -150,7 +152,7 @@ pipeline {
           sh """
             set -e
             echo "Generating CCD definition for PR ${CHANGE_ID}"
-            yarn generate-preview
+            corepack yarn generate-preview
           """
         }
       }
