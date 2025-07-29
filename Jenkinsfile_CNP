@@ -134,6 +134,8 @@ pipeline {
           sh 'corepack prepare yarn@3.4.1 --activate'
           // Use corepack to run yarn commands
           sh 'corepack yarn --version'
+          // Install dependencies first
+          sh 'corepack yarn install'
           sh 'corepack yarn setup'
         }
       }
