@@ -1,6 +1,4 @@
-import {createCase} from '../detainedConfig'
 import {Page} from "@playwright/test";
-//const { I } = inject();
 
 export class CreateCasePage {
   private jurisdictionLocator: string;
@@ -9,12 +7,7 @@ export class CreateCasePage {
   private eventLocator: string;
 
 
-  constructor(public page: Page) {
-    this.jurisdictionLocator = '#cc-jurisdiction';
-    this.caseTypeLocator = '#cc-case-type';
-    this.caseTypeOptionLocator = '//*[@id="cc-case-type"]/option';
-    this.eventLocator = '#cc-event';
-  }
+  constructor(public page: Page) {}
 
   readonly createCaseLink = this.page.getByRole('link', { name: 'Create case' });
   readonly startButton = this.page.getByRole('button', { name: 'Start' })
@@ -25,7 +18,3 @@ export class CreateCasePage {
     await this.page.waitForTimeout(10000); // waits for 3 seconds
   }
 }
-
-// For inheritance
-//module.exports = new loginPage();
-//export = CreateCasePage;
