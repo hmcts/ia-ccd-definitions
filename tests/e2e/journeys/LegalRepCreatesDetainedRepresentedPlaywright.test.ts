@@ -1,6 +1,7 @@
 import { test } from '@playwright/test';
 import { envUrl, LegalRepresentative} from '../detainedConfig';
 import { IdamPage } from '../page-objects/pages/idam.po';
+import { CreateCasePage } from '../pages/createCase_page';
 
 //let caseId: string = '1752655171618589';
 //const inTime: boolean = true;
@@ -14,6 +15,7 @@ test.describe('Create Appeal. @LegalRepCreatesDetainedRepresentedPlaywright', ()
 
     test('Create Appeal', async ({ page }) => {
       await new IdamPage(page).login(LegalRepresentative);
+      await new CreateCasePage(page).createCase()
     });
 
 });
