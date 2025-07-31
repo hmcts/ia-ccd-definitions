@@ -1,15 +1,18 @@
 import moment from "moment/moment";
 import { Page } from "@playwright/test";
-import { appellant, sponsor } from '../detainedConfig';
+import { appellant, sponsor, legalRepresentative, runningEnv } from '../detainedConfig';
 import { detentionFacility } from '../fixtures/detentionFacilities';
 //const { I } = inject();
 //const outOfTimedImageLocator: string = '//*[@id="confirmation-body"]/ccd-markdown/div/markdown/p[1]/img';
 
 
 export class CreateAppeal {
+    constructor(public page: Page) {}
+    readonly continueButton = this.page.getByRole('button', { name: 'Continue' });
+    readonly clickCloseAndReturnToCaseDetails = this.page.getByRole('button', { name: 'Close and Return to case details' });
 
-  constructor(public page: Page) {}
-  readonly continueButton = this.page.getByRole('button', { name: 'Continue' })
+
+
 
   // setTribunalAppealReceived() - Legal Admin Journey
 //   async setTribunalAppealReceived() {
@@ -233,6 +236,7 @@ export class CreateAppeal {
        await this.page.fill('#uploadTheNoticeOfDecisionDocs_0_description', 'Test Notice of Decision document.');
 //     await I.fillField('#uploadTheNoticeOfDecisionDocs_0_description', 'Test Notice of Decision document.');
        //await this.page.waitForTimeout(5000); // waits for 2 seconds
+       await this.page.waitForSelector('.error-message', { state: 'hidden' });
 //     await I.waitForInvisible(locate('.error-message').withText('Uploading...'),20);
        await this.continueButton.click();
 //     await I.clickContinue();
@@ -517,63 +521,81 @@ export class CreateAppeal {
        await this.continueButton.click();
 //     await I.clickContinue();
    }
-//
-//   async hasOtherAppeals(otherAppeals: string = 'No') {
+
+   async hasOtherAppeals(otherAppeals: string = 'No') {
+       await this.page.check(`#hasOtherAppeals-${otherAppeals}`);
 //     await I.click(`#hasOtherAppeals-${otherAppeals}`);
-//     if (otherAppeals != 'No') {
+       if (otherAppeals != 'No') {
 //       // TODO: Needs other options added
-//     }
+       }
 //     await I.runAccessibilityCheck('OtherAppealsPage');
+       await this.continueButton.click();
 //     await I.clickContinue();
-//   }
-//
-//   async setLegalRepresentativeDetails() {
+   }
+
+   async setLegalRepresentativeDetails() {
 //     await I.runAccessibilityCheck('LegalRepresentativeDetailsPage');
+       await this.page.fill('#legalRepCompany', legalRepresentative.company);
 //     await I.fillField('#legalRepCompany', legalRepresentative.company);
+       await this.page.fill('#legalRepName', legalRepresentative.name);
 //     await I.fillField('#legalRepName', legalRepresentative.name);
+       await this.page.fill('#legalRepFamilyName', legalRepresentative.familyName);
 //     await I.fillField('#legalRepFamilyName', legalRepresentative.familyName);
+       await this.page.fill('#legalRepMobilePhoneNumber', legalRepresentative.mobile);
 //     await I.fillField('#legalRepMobilePhoneNumber', legalRepresentative.mobile);
+       await this.page.fill('#legalRepReferenceNumber', legalRepresentative.reference);
 //     await I.fillField('#legalRepReferenceNumber', legalRepresentative.reference);
+       await this.continueButton.click();
 //     await I.clickContinue();
-//   }
-//
-//   async isHearingRequired(hearingRequired: boolean = true) {
+   }
+
+   async isHearingRequired(hearingRequired: boolean = true) {
 //     await I.runAccessibilityCheck('HearingRequiredPage');
-//     if (hearingRequired) {
-//       await I.click("//input[contains(@id,'decisionWithHearing')]");
-//     } else {
-//       await I.click("//input[contains(@id,decisionWithoutHearing')]");
-//     }
+       if (hearingRequired) {
+           await this.page.check("//input[contains(@id,'decisionWithHearing')]")
+//         await I.click("//input[contains(@id,'decisionWithHearing')]");
+       } else {
+           await this.page.check("//input[contains(@id,decisionWithoutHearing')]")
+//         await I.click("//input[contains(@id,decisionWithoutHearing')]");
+       }
+       await this.continueButton.click();
 //     await I.clickContinue();
-//   }
-//
-//   async hasFeeRemission(feeRemission: string = 'No') {
+   }
+
+   async hasFeeRemission(feeRemission: string = 'No') {
 //     // TODO: Needs other options added
 //     await I.runAccessibilityCheck('FeeRemissionPage');
-//     switch (feeRemission) {
-//       case 'No':
+     switch (feeRemission) {
+         case 'No':
+             await this.page.check('#remissionType-noRemission');
 //         await I.click('#remissionType-noRemission');
-//         break;
-//     }
+         break;
+     }
+       await this.continueButton.click();
 //     await I.clickContinue();
-//   }
-//
-//   // Only valid for appeal type: Refusal of protection claim
-//   async setPayNowLater(nowLater: string = 'Now') {
+   }
+
+   // Only valid for appeal type: Refusal of protection claim
+   async setPayNowLater(nowLater: string = 'Now') {
 //     await I.runAccessibilityCheck('PayNowPage');
+       await this.page.check(`#paAppealTypePaymentOption-pay${nowLater}`);
 //     await I.click(`#paAppealTypePaymentOption-pay${nowLater}`);
+       await this.continueButton.click();
 //     await I.clickContinue();
-//   }
-//
-//   async checkMyAnswers() {
+   }
+
+   async checkMyAnswers() {
+       await this.continueButton.click();
 //     await I.clickSaveAndContinue();
 //
-//     if(['demo'].includes(runningEnv)) {
+       if(['demo'].includes(runningEnv)) {
+
 //       await I.waitForText('You have saved your appeal', 60);
 //       await I.waitForText('You still need to submit it', 60);
+           await this.clickCloseAndReturnToCaseDetails.click();
 //       await I.clickCloseAndReturnToCaseDetails();
-//     }
-//   }
+       }
+   }
    //    }
    }
 //

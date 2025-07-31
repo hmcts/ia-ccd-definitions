@@ -1,10 +1,12 @@
 import { test } from '@playwright/test';
-import { envUrl, LegalRepresentative} from '../detainedConfig';
+import { envUrl, LegalRepresentative } from '../detainedConfig';
 import { IdamPage } from '../page-objects/pages/idam.po';
 import { CreateCasePage } from '../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../flows/createAppealPlaywright';
+import { PageHelper } from '../helpers/pageHelper';
+import { SubmitYourAppeal } from '../flows/events/submitYourAppealPlaywright';
 
-//let caseId: string = '1752655171618589';
+let caseId: string = '1752655171618589';
 const inTime: boolean = true;
 //const cmrListing: boolean = true;
 const detentionLocation: string = 'immigrationRemovalCentre';
@@ -50,7 +52,25 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
       await createAppeal.hasSponsor('Yes');
       await createAppeal.hasDeportationOrder('Yes');
       await createAppeal.hasRemovalDirections('Yes');
-      await createAppeal.hasNewMatters('No');
+      await createAppeal.hasNewMatters('Yes');
+      await createAppeal.hasOtherAppeals('No');
+      await createAppeal.setLegalRepresentativeDetails();
+      await createAppeal.isHearingRequired(true);
+
+      if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+          await createAppeal.hasFeeRemission('No');
+      }
+
+      if (typeOfAppeal === 'protection') {
+          await createAppeal.setPayNowLater('Now');
+      }
+
+      await createAppeal.checkMyAnswers();
+
+      caseId = await new PageHelper(page).grabCaseNumber();
+      console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
+      await new SubmitYourAppeal(page).submit(true, inTime);
+      //await draftAppeal.submit(true, inTime);
 
     });
 
