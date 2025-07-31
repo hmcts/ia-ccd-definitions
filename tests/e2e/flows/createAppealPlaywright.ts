@@ -1,8 +1,9 @@
 //import moment from "moment/moment";
 //import {appellant, legalRepresentative, sponsor, runningEnv} from '../detainedConfig'
 //import {detentionFacility} from '../fixtures/detentionFacilities'
-import {Page} from "@playwright/test";
-
+import { Page } from "@playwright/test";
+import { appellant } from '../detainedConfig';
+import { detentionFacility } from '../fixtures/detentionFacilities';
 //const { I } = inject();
 //const outOfTimedImageLocator: string = '//*[@id="confirmation-body"]/ccd-markdown/div/markdown/p[1]/img';
 
@@ -143,24 +144,32 @@ export class CreateAppeal {
 //         await I.clickContinue();
            await this.setDetentionCentre();
            break;
-//       case 'prison':
+       case 'prison':
+           await this.page.check(`#detentionFacility-${detentionLocation}`);
 //         await I.click(`#detentionFacility-${detentionLocation}`);
 //         await I.waitForElement(`#prisonNOMSNumber_${detentionLocation}`, 60);
 //         await I.runAccessibilityCheck('DententionLocationPrisonNOMSPage');
+           await this.page.fill('#prisonNOMSNumber_prison', appellant.NOMSNumber);
 //         await I.fillField('#prisonNOMSNumber_prison', appellant.NOMSNumber)
 //         await I.runAccessibilityCheck('DententionLocationPrisonNOMSPage');
+           await this.continueButton.click();
 //         await I.clickContinue();
+           await this.page.locator('#prisonName').selectOption(detentionFacility.prison.name);
 //         await I.selectOption('#prisonName', detentionFacility.prison.name);
 //         await I.runAccessibilityCheck('DententionLocationPrisonNamePage');
+           await this.continueButton.click();
 //         await I.clickContinue();
-//         break;
-//       case 'other':
+           break;
+       case 'other':
+           await this.page.check(`#detentionFacility-${detentionLocation}`);
 //         await I.click(`#detentionFacility-${detentionLocation}`);
 //         await I.waitForVisible('#otherDetentionFacilityName_other', 60);
 //         await I.runAccessibilityCheck('DententionLocationOtherPage');
+           await this.page.fill('#otherDetentionFacilityName_other', detentionFacility.other.name);
 //         await I.fillField('#otherDetentionFacilityName_other', 'Other facility test');
+           await this.continueButton.click();
 //         await I.clickContinue();
-//         break;
+           break;
      }
    }
 //
