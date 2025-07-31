@@ -1,5 +1,4 @@
-module.exports = {
-    detentionFacility: {
+export const detentionFacility = {
         immigrationRemovalCentre: {
             name: 'Brookhouse',
             building: 'Brook House IRC',
@@ -18,5 +17,5 @@ module.exports = {
             address: 'London, United Kingdom',
             postcode: 'SW1A 1AA',
         },
-    }
+
 };

@@ -1,11 +1,10 @@
-//import moment from "moment/moment";
-//import {appellant, legalRepresentative, sponsor, runningEnv} from '../detainedConfig'
-//import {detentionFacility} from '../fixtures/detentionFacilities'
+import moment from "moment/moment";
 import { Page } from "@playwright/test";
 import { appellant } from '../detainedConfig';
 import { detentionFacility } from '../fixtures/detentionFacilities';
 //const { I } = inject();
 //const outOfTimedImageLocator: string = '//*[@id="confirmation-body"]/ccd-markdown/div/markdown/p[1]/img';
+
 
 export class CreateAppeal {
 
@@ -179,119 +178,139 @@ export class CreateAppeal {
 //     await I.runAccessibilityCheck('DententionLocationIRCPage');
    }
 //
-//   async setCustodialSentence(hasCustodialSentence: string = 'Yes') {
-//     await I.click(`#releaseDateProvided_${hasCustodialSentence}`);
-//
-//     if (hasCustodialSentence === 'Yes') {
+   async setCustodialSentence(hasCustodialSentence: string = 'Yes') {
+       await this.page.check(`#releaseDateProvided_${hasCustodialSentence}`);
+
+      //     await I.click(`#releaseDateProvided_${hasCustodialSentence}`);
+
+     if (hasCustodialSentence === 'Yes') {
+         await this.page.fill('#releaseDate-day', appellant.custodialSentence.day.toString());
+         await this.page.fill('#releaseDate-month', appellant.custodialSentence.month.toString());
+         await this.page.fill('#releaseDate-year', appellant.custodialSentence.year.toString());
 //       await I.fillField('#releaseDate-day', appellant.custodialSentence.day);
 //       await I.fillField('#releaseDate-month', appellant.custodialSentence.month);
 //       await I.fillField('#releaseDate-year', appellant.custodialSentence.year);
-//     }
+     }
 //     await I.runAccessibilityCheck('CustodialSentencePage');
+       await this.continueButton.click();
 //     await I.clickContinue();
-//   }
+   }
 //
-//   async setBailApplication(bail: string = "No") {
-//     switch (bail) {
-//       case 'Yes':
-//         await I.click('#hasPendingBailApplications-Yes');
-//         await I.waitForElement('#bailApplicationNumber', 60);
-//         await I.fillField('#bailApplicationNumber', appellant.bailApplicationNumber);
-//       break;
-//       case 'YesWithoutBailApplicationNumber':
-//         await I.click('#hasPendingBailApplications-YesWithoutBailApplicationNumber');
-//       break;
-//       case 'No':
-//         await I.click('#hasPendingBailApplications-No');
-//       break;
-//       case 'NotSure':
-//         await I.click('#hasPendingBailApplications-NotSure');
-//       break;
-//     }
-//     await I.runAccessibilityCheck('PendingBailApplicationPage');
-//     await I.clickContinue();
-//   }
-//
-//   async setHomeOfficeDetails(inTime: boolean = true, fieldPrefix: string = 'homeOfficeDecisionDate') {
-//     const homeOfficeLetterDate = inTime
-//         ? moment().subtract(5, 'days')
-//         : moment().subtract(20, 'days');
-//
+   async setBailApplication(bail: string = "No") {
+      await this.page.check(`#hasPendingBailApplications-${bail}`);
+      if (bail === 'Yes') {
+          await this.page.fill('#bailApplicationNumber', appellant.bailApplicationNumber);
+      }
+      await this.continueButton.click();
+   }
+
+
+
+   async setHomeOfficeDetails(inTime: boolean = true) {
+      const homeOfficeLetterDate = inTime ? moment().subtract(5, 'days') : moment().subtract(20, 'days');
+
 //     await I.runAccessibilityCheck('HomeOfficeDetailsPage');
-//     await I.fillField('#homeOfficeReferenceNumber', '12345');
+      await this.page.fill('#homeOfficeReferenceNumber', '12345');
+     //await I.fillField('#homeOfficeReferenceNumber', '12345');
 //
 //
+      await this.page.fill('#homeOfficeDecisionDate-day', homeOfficeLetterDate.date().toString());
+      await this.page.fill('#homeOfficeDecisionDate-month', (homeOfficeLetterDate.month() + 1).toString());
+      await this.page.fill('#homeOfficeDecisionDate-year', homeOfficeLetterDate.year().toString());
 //     await I.fillField(`#${fieldPrefix}-day`, homeOfficeLetterDate.date().toString());
 //     await I.fillField(`#${fieldPrefix}-month`, (homeOfficeLetterDate.month() + 1).toString());
 //     await I.fillField(`#${fieldPrefix}-year`, homeOfficeLetterDate.year().toString());
+      await this.continueButton.click();
 //     await I.clickContinue();
-//   }
+   }
 //
-//   async uploadNoticeOfDecision() {
+   async uploadNoticeOfDecision() {
 //     await I.runAccessibilityCheck('UploadNoticeOfDecisionPage');
-//     await I.click('Add new');
+       await this.page.locator('button:text("Add new")').click();
+ //     await I.click('Add new');
+       await this.page.locator('#uploadTheNoticeOfDecisionDocs_0_document').setInputFiles('./tests/documents/TEST_DOCUMENT_1.pdf');
 //     await I.attachFile('#uploadTheNoticeOfDecisionDocs_0_document', './tests/documents/TEST_DOCUMENT_1.pdf');
+       await this.page.fill('#uploadTheNoticeOfDecisionDocs_0_description', 'Test Notice of Decision document.');
 //     await I.fillField('#uploadTheNoticeOfDecisionDocs_0_description', 'Test Notice of Decision document.');
+       //await this.page.waitForTimeout(5000); // waits for 2 seconds
 //     await I.waitForInvisible(locate('.error-message').withText('Uploading...'),20);
+       await this.continueButton.click();
 //     await I.clickContinue();
-//   }
+   }
 //
-//   async setTypeOfAppeal(appealType: string = 'refusalOfEu'){
-//     let currentUrl: string;
+   async setTypeOfAppeal(appealType: string = 'refusalOfEu'){
+     let currentUrl: string;
 //
 //     await I.runAccessibilityCheck('TypeOfAppealPage');
+       await this.page.check(`#appealType-${appealType}`);
 //     await I.click(`#appealType-${appealType}`);
+       await this.continueButton.click();
 //     await I.clickContinue()
 //
-//     switch (appealType) {
-//       case 'refusalOfEu':
+     switch (appealType) {
+       case 'refusalOfEu':
+           currentUrl = this.page.url();
 //         currentUrl = await I.grabCurrentUrl();
-//         if (!currentUrl.includes('BasicDetails')) {
-//           await this.groundsOfAppeal();
-//         }
-//         break;
-//       case 'revocationOfProtection':
+           if (!currentUrl.includes('BasicDetails')) {
+               await this.groundsOfAppeal();
+           }
+           break;
+       case 'revocationOfProtection':
+           currentUrl = this.page.url();
 //         currentUrl = await I.grabCurrentUrl();
-//         if (!currentUrl.includes('BasicDetails')) {
+           if (!currentUrl.includes('BasicDetails')) {
+               await this.page.check('#appealGroundsRevocation_values-revocationHumanitarianProtection');
 //           await I.runAccessibilityCheck('TypeOfAppealRevocationHumanitarianProtectionOptionsPage');
 //           await I.click('#appealGroundsRevocation_values-revocationHumanitarianProtection');
+               await this.continueButton.click();
 //           await I.clickContinue();
-//         }
-//         break;
-//       case 'refusalOfHumanRights':
+           }
+           break;
+       case 'refusalOfHumanRights':
+           currentUrl = this.page.url();
 //         currentUrl = await I.grabCurrentUrl();
-//         if (!currentUrl.includes('BasicDetails')) {
+           if (!currentUrl.includes('BasicDetails')) {
 //           await I.runAccessibilityCheck('TypeOfAppealHumanRightsRefusalOptionsPage');
+               await this.page.check('#appealGroundsDecisionHumanRightsRefusal_values-humanRightsRefusal');
 //           await I.click('#appealGroundsDecisionHumanRightsRefusal_values-humanRightsRefusal');
+               await this.continueButton.click();
 //           await I.clickContinue();
-//         }
-//         break;
-//       case 'deprivation':
+           }
+           break;
+       case 'deprivation':
+           currentUrl = this.page.url();
 //         currentUrl = await I.grabCurrentUrl();
-//         if (!currentUrl.includes('BasicDetails')) {
+           if (!currentUrl.includes('BasicDetails')) {
+               await this.page.check('#appealGroundsDeprivation_values-disproportionateDeprivation');
 //           await I.runAccessibilityCheck('TypeOfAppealDeprivationOptionsPage');
 //           await I.checkOption('#appealGroundsDeprivation_values-disproportionateDeprivation');
+               await this.continueButton.click();
 //           await I.clickContinue();
-//         }
-//         break;
-//       case 'euSettlementScheme':
-//         break;
-//       case 'protection':
+           }
+           break;
+       case 'euSettlementScheme':
+           break;
+       case 'protection':
 //         await I.runAccessibilityCheck('TypeOfAppealHumanitarianProtectionOptionsPage');
+             await this.page.check('#appealGroundsProtection_values-protectionHumanitarianProtection');
 //         await I.click('#appealGroundsProtection_values-protectionHumanitarianProtection');
+             await this.continueButton.click();
 //         await I.clickContinue();
-//         break;
-//     }
-//   }
-//
-//   // appellantDetails() - Legal Admin journey only
-//   async appellantDetails() {
+             break;
+     }
+   }
+
+   // appellantDetails() - Legal Admin journey only
+   async appellantDetails() {
+       await this.page.fill('#internalAppellantMobileNumber', appellant.mobile);
 //     await I.fillField('#internalAppellantMobileNumber', appellant.mobile);
+       await this.page.fill('#internalAppellantEmail', appellant.email);
 //     await I.fillField('#internalAppellantEmail', appellant.email);
 //     await I.runAccessibilityCheck('AppellantDetails');
+       await this.continueButton.click();
 //     await I.clickContinue();
-//   }
-//
+   }
+
 //   // appellant contact preference: non-detained journey only
 //   async setAppellentContactPreference(preference: string = 'EMAIL') {
 //     if (preference === 'EMAIL') {
@@ -334,38 +353,51 @@ export class CreateAppeal {
 //     await I.clickContinue();
 //   }
 //
-//   async groundsOfAppeal() {
+   async groundsOfAppeal() {
 //     await I.runAccessibilityCheck('TypeOfAppealRefusalOfEuOptionsPage');
+       await this.page.click('#appealGroundsEuRefusal_values-appealGroundsEuRefusal');
 //     await I.click('#appealGroundsEuRefusal_values-appealGroundsEuRefusal');
+       await this.continueButton.click();
 //     await I.clickContinue();
-//   }
+   }
 //
-//   async setAppellantBasicDetails(minimalBasicDetails: boolean = false) {
-//     if (!minimalBasicDetails) {
-//       await I.fillField('#appellantTitle', appellant.title);
-//     }
-//
+   async setAppellantBasicDetails(minimalBasicDetails: boolean = false) {
+      if (!minimalBasicDetails) {
+          await this.page.fill('#appellantTitle', appellant.title);
+          //await I.fillField('#appellantTitle', appellant.title);
+      }
+      await this.page.fill('#appellantGivenNames', appellant.givenNames);
 //     await I.fillField('#appellantGivenNames', appellant.givenNames);
+      await this.page.fill('#appellantFamilyName', appellant.familyName);
 //     await I.fillField('#appellantFamilyName', appellant.familyName);
+      await this.page.fill('#appellantDateOfBirth-day', appellant.dob.day.toString());
 //     await I.fillField('#appellantDateOfBirth-day', appellant.dob.day);
+      await this.page.fill('#appellantDateOfBirth-month', appellant.dob.month.toString());
 //     await I.fillField('#appellantDateOfBirth-month', appellant.dob.month);
+      await this.page.fill('#appellantDateOfBirth-year', appellant.dob.year.toString());
 //     await I.fillField('#appellantDateOfBirth-year', appellant.dob.year);
 //     await I.runAccessibilityCheck('AppellantBasicDetailsPage');
+      await this.continueButton.click();
 //     await I.clickContinue();
-//   }
-//
-//   async setNationality(hasNationality: boolean = true){
-//     if (hasNationality){
+   }
+
+   async setNationality(hasNationality: boolean = true){
+      if (hasNationality){
+          await this.page.check('#appellantStateless-hasNationality');
 //       await I.click('#appellantStateless-hasNationality');
+          await this.page.locator('button:text("Add new")').click();
 //       await I.click('Add new');
+          await this.page.locator('#appellantNationalities_0_code').selectOption('Finland');
 //       await I.selectOption('#appellantNationalities_0_code', 'Finland');
-//     } else {
+      } else {
+          await this.page.check('#appellantStateless-hasNationality');
 //       await I.click('#appellantStateless-hasNationality');
-//     }
+      }
 //     await I.runAccessibilityCheck('AppellantNationalityPage');
+      await this.continueButton.click();
 //     await I.clickContinue();
-//   }
-//
+   }
+
 //   async hasSponsor(isSponsored: string = 'No', sponsorComms: string = 'email', sponsorAuthorised: string = 'Yes'){
 //     await I.runAccessibilityCheck('SponsorPage');
 //     await I.click(`#hasSponsor_${isSponsored}`);
@@ -502,7 +534,8 @@ export class CreateAppeal {
 //       await I.clickCloseAndReturnToCaseDetails();
 //     }
 //   }
- }
+   //    }
+   }
 //
 // // For inheritance
 // //module.exports = new CreateAppeal();
