@@ -43,6 +43,14 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
       await createAppeal.setAppellantBasicDetails(false);
       await createAppeal.setNationality(true);
 
+      if (detentionLocation === 'other') {
+          await createAppeal.setAppellentsAddress('detained', 'Yes');
+      }
+
+      await createAppeal.hasSponsor('Yes');
+      await createAppeal.hasDeportationOrder('Yes');
+      await createAppeal.hasRemovalDirections('Yes');
+      await createAppeal.hasNewMatters('No');
 
     });
 
