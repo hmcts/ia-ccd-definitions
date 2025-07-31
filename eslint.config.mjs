@@ -17,6 +17,7 @@ export default defineConfig([
       "steps_file.ts",
       "playwright.config.ts",
       "tests/e2e/scripts/get-secrets.js",
+      "package-lock.json",
   ]),
     {
         files: ["**/*.ts"],
