@@ -2892,5 +2892,21 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "generatePinInPost",
+    "Name": "Generate PIN in Post",
+    "Description": "Manually generates PIN in Post for AiP NoC",
+    "DisplayOrder": 113,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
+    "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowEventNotes": "Y"
   }
 ]
