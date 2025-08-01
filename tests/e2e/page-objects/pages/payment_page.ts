@@ -1,7 +1,8 @@
-import { Page } from "@playwright/test";
+import {expect, Page} from "@playwright/test";
 import {envUrl, runningEnv} from '../../detainedConfig';
-import { PageHelper } from '../../helpers/PageHelper';
-//const { I } = inject();
+import { TabsHelper } from '../../helpers/TabsHelper';
+import { ButtonHelper} from "../../helpers/ButtonHelper";
+
 
 export class PaymentPage {
   private cardPaymentLocator: string = '#cardPayment';
@@ -29,49 +30,49 @@ export class PaymentPage {
   private postcode: string = 'SW1A 1AA';
   private email: string = 'sol-i-citor@test.com';
 
+  private buttonHelper: ButtonHelper;
+  readonly payNow = this.page.getByText('Pay now');
+
   constructor(public page: Page) {
+    this.buttonHelper = new ButtonHelper(this.page);
   }
 
   async makePayment(paymentType: string = 'CC', caseId: string){
-    await new PageHelper(this.page).selectNextStep('Service Request');
-
-    //await I.selectTab('Service Request')
-    //await I.waitForText('Pay now', 60);
-    await I.clickButtonOrLinkWithoutRetry('Pay now');
+    await new TabsHelper(this.page).selectTab('Service Request');
+    await this.payNow.click();
 
     if (paymentType === 'CC') {
-      await I.waitForElement(this.cardPaymentLocator,60);
-      await I.clickButtonOrLinkWithoutRetry(this.cardPaymentLocator);
-      await I.clickContinue();
+      await this.page.locator(this.cardPaymentLocator).check();
+    //   await I.clickButtonOrLinkWithoutRetry(this.cardPaymentLocator);
+      await this.buttonHelper.continueButton.click();
+    //   await I.clickContinue();
+    //
+      await this.page.fill(this.cardNoLocator, this.cardNumber);
+      await this.page.fill(this.expiryMonthLocator, this.expiryMonth);
+      await this.page.fill(this.expiryYearLocator, this.expiryYear);
+      await this.page.fill(this.cardHolderNameLocator, this.nameOnCard);
+      await this.page.fill(this.cvcLocator, this.cvc);
+      await this.page.fill(this.addressLine1Locator, this.addressLine1);
+      await this.page.fill(this.addressCityLocator, this.city);
+      await this.page.fill(this.addressCountryLocator, this.country);
+      await this.page.fill(this.addressPostcodeLocator, this.postcode);
+      await this.page.fill(this.emailLocator, this.email);
 
-      await I.fillField(this.cardNoLocator, this.cardNumber);
-      await I.fillField(this.expiryMonthLocator, this.expiryMonth);
-      await I.fillField(this.expiryYearLocator, this.expiryYear);
-      await I.fillField(this.cardHolderNameLocator, this.nameOnCard);
-      await I.fillField(this.cvcLocator, this.cvc);
-      await I.fillField(this.addressLine1Locator, this.addressLine1);
-      await I.fillField(this.addressCityLocator, this.city);
-      await I.fillField(this.addressCountryLocator, this.country);
-      await I.fillField(this.addressPostcodeLocator, this.postcode);
-      await I.fillField(this.emailLocator, this.email);
+      await this.page.locator(this.continueButtonLocator).click();
+      await this.page.locator(this.confirmButtonLocator).click();
 
-      await I.clickButtonOrLink(this.continueButtonLocator);
-      await I.waitForText('Confirm your payment', 60);
-      await I.clickButtonOrLink(this.confirmButtonLocator);
-      await I.waitForText('Payment successful');
+      await this.page.waitForSelector('#main-content', { state: 'visible' });
+      const message = await this.page.locator('#main-content').innerText();
+      await expect(message).toContain('Payment successful');
 
       // In preview "Return to service request" hyperlink forwards to an AAT address
       // To work around this for the moment will force the navigation back to the overview tab
       // in preview environment
       if (['preview'].includes(runningEnv)){
-        await I.amOnPage(envUrl + '/cases/case-details/' + caseId);
-        await I.waitForText('Case details', 60);
+        await this.page.goto(envUrl + '/cases/case-details/' + caseId);
       } else {
-        await I.clickContinue();
+         await this.buttonHelper.continueButton.click();
       }
     }
   }
 }
-
-// For inheritance
-export = PaymentPage;
