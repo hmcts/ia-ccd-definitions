@@ -1,6 +1,7 @@
-import {envUrl, runningEnv} from '../detainedConfig'
-
-const { I } = inject();
+import { Page } from "@playwright/test";
+import {envUrl, runningEnv} from '../../detainedConfig';
+import { PageHelper } from '../../helpers/PageHelper';
+//const { I } = inject();
 
 export class PaymentPage {
   private cardPaymentLocator: string = '#cardPayment';
@@ -28,12 +29,14 @@ export class PaymentPage {
   private postcode: string = 'SW1A 1AA';
   private email: string = 'sol-i-citor@test.com';
 
-  constructor() {
+  constructor(public page: Page) {
   }
 
   async makePayment(paymentType: string = 'CC', caseId: string){
-    await I.selectTab('Service Request')
-    await I.waitForText('Pay now', 60);
+    await new PageHelper(this.page).selectNextStep('Service Request');
+
+    //await I.selectTab('Service Request')
+    //await I.waitForText('Pay now', 60);
     await I.clickButtonOrLinkWithoutRetry('Pay now');
 
     if (paymentType === 'CC') {

@@ -3,8 +3,9 @@ import { envUrl, LegalRepresentative } from '../detainedConfig';
 import { IdamPage } from '../page-objects/pages/idam.po';
 import { CreateCasePage } from '../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../flows/createAppealPlaywright';
-import { PageHelper } from '../helpers/pageHelper';
+import { PageHelper } from '../helpers/PageHelper';
 import { SubmitYourAppeal } from '../flows/events/submitYourAppealPlaywright';
+import { CreateServiceRequest } from '../flows/events/createServiceRequestPlaywright';
 
 let caseId: string = '1752655171618589';
 const inTime: boolean = true;
@@ -70,7 +71,14 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
       caseId = await new PageHelper(page).grabCaseNumber();
       console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
       await new SubmitYourAppeal(page).submit(true, inTime);
-      //await draftAppeal.submit(true, inTime);
+
+      if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+          // create service request
+          await new CreateServiceRequest(page).submit();
+
+          // make payment - will remove caseId from parameters and function when successful payment hyperlink points to correct env
+         // await paymentPage.makePayment('CC', caseId);
+      }
 
     });
 
