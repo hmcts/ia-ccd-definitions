@@ -35,7 +35,7 @@ git clone --recursive git@github.com:hmcts/ia-ccd-definitions.git
 ```
 (SSH).  The `--recursive` ensures that the contents of the inner `ccd-definition-processor` repo are also fetched; otherwise, this directory will remain empty and the following commands won't work.
 
-Change drectory:
+Change directory:
 ```
 cd ia-ccd-definitions
 ```
@@ -50,7 +50,7 @@ Set the local repo up for `ccd-definition-processor`:
 yarn setup
 ```
 
-### Usages
+### Usage
 
 #### JSON to Excel
 
@@ -69,7 +69,7 @@ If you need CCD Definitions Excel files for environments other than Dev, there a
 
 `yarn generate-demo`, `yarn generate-ithc`, `yarn generate-perftest`, `yarn generate-aat`, `yarn generate-prod` or `yarn generate-all`
 
-Tasks `yarn generate-prod` and `yarn generate-all` need an additional environment variable called `IA_CCD_SECRET_KEY` to decrypt the UserProfile tab. Ask someone from IA Team to get the correct value.
+Tasks `yarn generate-prod` and `yarn generate-all` need an additional environment variable called `IA_CCD_SECRET_KEY` to decrypt the UserProfile tab. Ask someone from IA Team to give you the correct value.
 
 #### Excel to JSON
 
@@ -82,7 +82,7 @@ Your resulting JSON files will appear in the `definitions/appeal/json` folder.
 
 #### Callback URLs
 
-In dev the callback URL will default to http://ia-case-api:8090. If you want to set your own value, set an environment 
+In Dev the callback URL will default to http://ia-case-api:8090. If you want to set your own value, set an environment 
 variable called `IA_CASE_URL` pointing to the value you want. On some operating systems this can be set to 
 http://host.docker.internal:8090 rather than setting up `ia-case-api` to point to the host machine.
 
@@ -98,24 +98,26 @@ This will generate an image written to `target/state_diagram.png`. If you just w
 set the environment variable `ROLES` and a comma separated list of roles.
 
 ```
-ROLES=role1,role2 yarn create-state-diagram
+ROLES=role1,role2
+yarn create-state-diagram
 ```
 
-**Note**: The state diagram is produced using plantUml which needs Graphviz; see these pages for details and to troubleshoot:
+**Note**: The state diagram is produced using [PlantUML](https://plantuml.com/) which needs [Graphviz](https://graphviz.org/); see these pages for details and to troubleshoot:
+
 https://plantuml.com/graphviz-dot
 
 
 ## Adding Git Conventions
 
 ### Include the git conventions.
-* Make sure your git version is at least 2.9 using the `git --version` command
+* Make sure your Git version is at least 2.9 using the `git --version` command
 * Run the following command:
 ```
 git config --local core.hooksPath .git-config/hooks
 ```
 Once the above is done, you will be required to follow specific conventions for your commit messages and branch names.
 
-If you violate a convention, the git error message will report clearly the convention you should follow and provide
+If you violate a convention, the Git error message will report clearly the convention you should follow and provide
 additional information where necessary.
 
 *Optional:*
@@ -123,7 +125,7 @@ additional information where necessary.
 
   It will automatically set the title for new PRs according to the first commit message, so you won't have to change it manually.
 
-  Note that it will also alter other behaviours in GitHub. Hopefully these will also be improvements to you.
+  Note that it will also alter other behaviour in GitHub. Hopefully these will also be useful to you.
 
 *In case of problems*
 
