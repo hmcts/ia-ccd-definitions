@@ -14,7 +14,7 @@ import { S94b } from "../flows/events/setS94bStatusPlaywright";
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
 
-let caseId: string = '1752655171618589';
+let caseId: string = '1754305894509453';
 const inTime: boolean = true;
 //const cmrListing: boolean = true;
 const detentionLocation: string = 'immigrationRemovalCentre';
@@ -108,11 +108,8 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await new S94b(page).setStatus('Yes');
 
         await validationHelper.validateCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
-//        await I.validateCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
         await validationHelper.validateCorrectLabelDisplayed(detainedRepresentedS94bImageLocator, 'legalRep_detained_s9');
-       // await I.validateCorrectLabelDisplayed(detainedRepresentedS94bImageLocator, 'legalRep_detained_s9');
-        //await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
-        //await I.validateCaseFlagExists('Detained individual', 'Active');
+        await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
 
         // TODO - still to convert
         // await updateDetentionLocation.changeLocation(detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison'), detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
