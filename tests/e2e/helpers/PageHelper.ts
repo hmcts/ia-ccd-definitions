@@ -17,10 +17,8 @@ export class PageHelper {
     async selectNextStep(nextStep: string) {
         //const urlBefore = await this.grabCurrentUrl();
         await this.page.locator('#next-step').selectOption(nextStep);
+        await this.page.waitForTimeout(2000); // waits for 2 seconds
         await this.page.getByRole('button', { name: 'Go' }).click();
-        //await this.selectOption('#next-step', nextStep);
-        //await this.waitForEnabled(goButton);
-        //await this.retryUntilUrlChanges(() => this.forceClick(goButton), urlBefore);
     }
 
     async getCase(caseId: string) {

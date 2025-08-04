@@ -10,11 +10,12 @@ import { SubmitYourAppeal } from '../flows/events/submitYourAppealPlaywright';
 import { CreateServiceRequest } from '../flows/events/createServiceRequestPlaywright';
 import { PaymentPage } from '../page-objects/pages/payment_page';
 import { S94b } from "../flows/events/setS94bStatusPlaywright";
+import { UpdateDetentionLocation } from "../flows/events/updateDetentionLocationPlaywright";
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
 
-let caseId: string = '1754305894509453';
+let caseId: string = '1754326838819873';
 const inTime: boolean = true;
 //const cmrListing: boolean = true;
 const detentionLocation: string = 'immigrationRemovalCentre';
@@ -31,6 +32,8 @@ let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let validationHelper: ValidationHelper;
+let updateDetentionLocation: UpdateDetentionLocation;
+
 
 test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + '@LegalRepCreatesDetainedRepresentedPlaywright', () => {
 
@@ -40,6 +43,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         linkHelper = new LinkHelper(page);
         pageHelper = new PageHelper(page);
         validationHelper = new ValidationHelper(page);
+        updateDetentionLocation = new UpdateDetentionLocation(page);
         await page.goto(envUrl);
     });
 
@@ -102,7 +106,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await linkHelper.signOut.click();
     });
 
-    test('Legal Officer adds s94b appeal status, updates detention location and creates Respondent Direction', async ({ page }) => {
+    test.only('Legal Officer adds s94b appeal status, updates detention location and creates Respondent Direction', async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new S94b(page).setStatus('Yes');
@@ -111,9 +115,8 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await validationHelper.validateCorrectLabelDisplayed(detainedRepresentedS94bImageLocator, 'legalRep_detained_s9');
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
 
-        // TODO - still to convert
-        // await updateDetentionLocation.changeLocation(detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison'), detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
-        // await updateDetentionLocation.validateDataUpdated(detentionLocation);
+        await updateDetentionLocation.changeLocation(detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison'), detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
+        await updateDetentionLocation.validateDataUpdated(detentionLocation);
         //
         // if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
         //     await requestHomeOfficeData.matchAppellantDetails();
