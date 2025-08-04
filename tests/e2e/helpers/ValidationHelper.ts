@@ -11,7 +11,7 @@ export class ValidationHelper {
     }
 
     async validateCaseFlagExists(caseFlag: string, activeInactive: string = 'Active') {
-         await new TabsHelper(this.page).selectTab('Case flags');
+        await new TabsHelper(this.page).selectTab('Case flags');
         const totalTables = await this.page.locator('ccd-case-flag-table').count();
         let flagStatusMatched: boolean = false;
 
