@@ -4,7 +4,7 @@ export class LinkHelper {
 
     constructor(public page: Page) {}
 
-    readonly signOut = this.page.getByRole('link', {name: 'Sign out'});
+    readonly signOut = this.page.locator('.hmcts-header__navigation-link');
 
 
 }
