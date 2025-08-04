@@ -14,13 +14,13 @@ export const createCase = {
     eventCode: 'startAppeal',
 }
 
-export const LegalRepresentative = {
+export const legalRepresentativeCredentials = {
     username: process.env.ENVIRONMENT === 'preview' ? "ialegalreporgcreator12@mailnesia.com" : "ialegalreporgcreator12@mailinator.com",
     password: process.env.ENVIRONMENT === 'preview' ? "Aldg@teT0wer" : 'AldgateT0wer',
 }
 
-export const legalOfficer = {
-    email:"ia.caseofficer.ccd@gmail.com",
+export const legalOfficerCredentials = {
+    username: "ia.caseofficer.ccd@gmail.com",
     password: " AldgateT0wer"
 }
 

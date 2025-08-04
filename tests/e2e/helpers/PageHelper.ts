@@ -22,4 +22,9 @@ export class PageHelper {
         //await this.waitForEnabled(goButton);
         //await this.retryUntilUrlChanges(() => this.forceClick(goButton), urlBefore);
     }
+
+    async getCase(caseId: string) {
+        await this.page.fill('#exuiCaseReferenceSearch', caseId);
+        await this.page.getByRole( 'button', { name: 'Find' }).click();
+    }
 }
