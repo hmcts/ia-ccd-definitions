@@ -15,7 +15,7 @@ import { UpdateDetentionLocation } from "../flows/events/updateDetentionLocation
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
 
-let caseId: string = '1754326838819873';
+let caseId: string = '1754381772983581';
 const inTime: boolean = true;
 //const cmrListing: boolean = true;
 const detentionLocation: string = 'immigrationRemovalCentre';

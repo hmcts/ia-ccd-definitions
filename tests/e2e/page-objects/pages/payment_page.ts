@@ -63,7 +63,7 @@ export class PaymentPage {
 
       await this.page.waitForSelector('#main-content', { state: 'visible' });
       const message = await this.page.locator('#main-content').innerText();
-      await expect(message).toContain('Payment successful');
+      await expect(message, 'Payment failed').toContain('Payment successful');
 
       // In preview "Return to service request" hyperlink forwards to an AAT address
       // To work around this for the moment will force the navigation back to the overview tab

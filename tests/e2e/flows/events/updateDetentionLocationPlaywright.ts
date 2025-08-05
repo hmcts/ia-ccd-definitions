@@ -1,4 +1,4 @@
-import {Page, expect} from "@playwright/test";
+import { Page } from "@playwright/test";
 import { PageHelper } from '../../helpers/PageHelper';
 import { ButtonHelper } from '../../helpers/ButtonHelper';
 import { ValidationHelper } from '../../helpers/ValidationHelper';
@@ -53,6 +53,7 @@ export class UpdateDetentionLocation {
     async validateDataUpdated(detentionLocation: string, validateDetentionDate: boolean = false) {
         await this.validationHelper.validateDataOnAppellantTab();
         //await I.validateDataOnAppellantTab();
+        await this.validationHelper.validateDataOnAppealTab(detentionLocation, validateDetentionDate);
          //await I.validateDataOnAppealTab(detentionLocation, validateDetentionDate);
      };
 }
