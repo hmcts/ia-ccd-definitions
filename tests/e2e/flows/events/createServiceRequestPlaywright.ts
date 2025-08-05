@@ -14,6 +14,6 @@ export class CreateServiceRequest {
     async submit(){
         await this.pageHelper.selectNextStep('Create a service request');
         await this.buttonHelper.submitButton.click();
-        await this.buttonHelper.closeAndReturnToCaseDetails.click();
+        await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
     }
 }

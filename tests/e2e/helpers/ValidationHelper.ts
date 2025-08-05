@@ -2,6 +2,7 @@ import { Page, expect } from "@playwright/test";
 import { TabsHelper } from "./TabsHelper";
 import {detentionFacility} from "../fixtures/detentionFacilities";
 import {appellant} from '../detainedConfig';
+import moment from "moment";
 
 export class ValidationHelper {
     private tabsHelper: TabsHelper;
@@ -178,6 +179,16 @@ export class ValidationHelper {
                 + appellant.removalDirections.time.secondsWithLeadingZero + ' '
                 + appellant.removalDirections.time.amPm);
         }
+    }
+
+    async validateComplyDate(daysToAdd: number) {
+        const complyDate: string = await this.page.locator('#sendDirectionDateDue-day').inputValue() + '-'
+            + await this.page.locator('#sendDirectionDateDue-month').inputValue() + '-'
+            + await this.page.locator('#sendDirectionDateDue-year').inputValue();
+        const todayPlusDays = moment().add(daysToAdd, 'days').format('DD-MM-YYYY');
+
+        await expect(complyDate, `Request respondent evidence comply date should be ${daysToAdd} days from today: ${todayPlusDays}.`).toEqual(todayPlusDays)
+      //  await this.expectDeepEqual(complyDate, todayPlusDays, `Request respondent evidence comply date should be ${daysToAdd} days from today: ${todayPlusDays}.`);
     }
 
 }

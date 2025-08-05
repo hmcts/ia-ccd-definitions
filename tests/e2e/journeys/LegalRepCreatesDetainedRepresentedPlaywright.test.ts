@@ -9,8 +9,11 @@ import { ValidationHelper } from '../helpers/ValidationHelper';
 import { SubmitYourAppeal } from '../flows/events/submitYourAppealPlaywright';
 import { CreateServiceRequest } from '../flows/events/createServiceRequestPlaywright';
 import { PaymentPage } from '../page-objects/pages/payment_page';
-import { S94b } from "../flows/events/setS94bStatusPlaywright";
-import { UpdateDetentionLocation } from "../flows/events/updateDetentionLocationPlaywright";
+import { S94b } from '../flows/events/setS94bStatusPlaywright';
+import { UpdateDetentionLocation } from '../flows/events/updateDetentionLocationPlaywright';
+import { RequestHomeOfficeData } from '../flows/events/requestHomeOfficeDataPlaywright';
+import { GenerateListCMR } from  '../flows/events/generateListCMRTaskPlaywright';
+import {RespondentEvidenceDirection} from "../flows/events/respondentEvidenceDirectionPlaywright";
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
@@ -117,13 +120,16 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
 
         await updateDetentionLocation.changeLocation(detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison'), detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
         await updateDetentionLocation.validateDataUpdated(detentionLocation);
+
+        if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
+            await new RequestHomeOfficeData(page).matchAppellantDetails();
+            //await requestHomeOfficeData.matchAppellantDetails();
+        }
         //
-        // if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
-        //     await requestHomeOfficeData.matchAppellantDetails();
-        // }
-        //
+        await new GenerateListCMR(page).createTask();
         // await generateListCMR.createTask();
-        // await respondentEvidenceDirection.submit();
+
+        await new RespondentEvidenceDirection(page).submit();
 
         await linkHelper.signOut.click();
     });

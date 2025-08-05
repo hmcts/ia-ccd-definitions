@@ -47,13 +47,11 @@ export class UpdateDetentionLocation {
         }
 
         await this.updateDetentionLocationButton.click();
-        await this.buttonHelper.closeAndReturnToCaseDetails.click();
+        await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
     };
 
     async validateDataUpdated(detentionLocation: string, validateDetentionDate: boolean = false) {
         await this.validationHelper.validateDataOnAppellantTab();
-        //await I.validateDataOnAppellantTab();
         await this.validationHelper.validateDataOnAppealTab(detentionLocation, validateDetentionDate);
-         //await I.validateDataOnAppealTab(detentionLocation, validateDetentionDate);
      };
 }

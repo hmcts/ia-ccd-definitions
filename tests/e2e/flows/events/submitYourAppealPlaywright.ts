@@ -49,6 +49,6 @@ export class SubmitYourAppeal {
             await new ValidationHelper(this.page).validateCorrectLabelDisplayed(outOfTimedImageLocator, 'outOfTimeConfirmation');
         }
 
-        await this.buttonHelper.closeAndReturnToCaseDetails.click();
+        await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
     }
 }
