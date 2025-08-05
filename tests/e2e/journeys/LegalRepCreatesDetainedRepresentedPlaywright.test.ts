@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { envUrl, legalRepresentativeCredentials, legalOfficerCredentials } from '../detainedConfig';
+import { envUrl, legalRepresentativeCredentials, legalOfficerCredentials, homeOfficeOfficerCredentials } from '../detainedConfig';
 import { IdamPage } from '../page-objects/pages/idam.po';
 import { CreateCasePage } from '../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../flows/createAppealPlaywright';
@@ -13,12 +13,15 @@ import { S94b } from '../flows/events/setS94bStatusPlaywright';
 import { UpdateDetentionLocation } from '../flows/events/updateDetentionLocationPlaywright';
 import { RequestHomeOfficeData } from '../flows/events/requestHomeOfficeDataPlaywright';
 import { GenerateListCMR } from  '../flows/events/generateListCMRTaskPlaywright';
-import {RespondentEvidenceDirection} from "../flows/events/respondentEvidenceDirectionPlaywright";
+import { RespondentEvidenceDirection } from '../flows/events/respondentEvidenceDirectionPlaywright';
+import { HomeOfficeBundle } from '../flows/events/homeOfficeBundlePlaywright';
+import { CaseBuildingDirection } from '../flows/events/caseBuildingDirectionPlaywright';
+
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
 
-let caseId: string = '1754381772983581';
+let caseId: string;
 const inTime: boolean = true;
 //const cmrListing: boolean = true;
 const detentionLocation: string = 'immigrationRemovalCentre';
@@ -123,14 +126,26 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
 
         if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
             await new RequestHomeOfficeData(page).matchAppellantDetails();
-            //await requestHomeOfficeData.matchAppellantDetails();
         }
-        //
-        await new GenerateListCMR(page).createTask();
-        // await generateListCMR.createTask();
 
+        await new GenerateListCMR(page).createTask();
         await new RespondentEvidenceDirection(page).submit();
 
         await linkHelper.signOut.click();
     });
+
+    test('Home Office Officer (respondent) review appeal and upload Home Office bundle',   async ({ page }) => {
+        await idamPage.login(homeOfficeOfficerCredentials);
+        await page.goto(envUrl + '/cases/case-details/' + caseId);
+        await new HomeOfficeBundle(page).upload();
+        await linkHelper.signOut.click();
+    });
+
+    test('Legal Officer directs appellant/Legal Rep to build case',   async ({ page }) => {
+        await idamPage.login(legalOfficerCredentials);
+        await pageHelper.getCase(caseId);
+        await new CaseBuildingDirection(page).submit();
+        await linkHelper.signOut.click();
+    });
+
 });

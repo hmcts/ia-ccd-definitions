@@ -438,7 +438,7 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
 
        if(['demo'].includes(runningEnv)) {
-           await this.buttonHelper.closeAndReturnToCaseDetails.click();
+           await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
        }
    }
 }

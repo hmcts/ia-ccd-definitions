@@ -15,6 +15,5 @@ export class CreateCasePage {
   async createCase() {
     await this.createCaseLink.click();
     await this.startButton.click();
-//    await this.page.waitForTimeout(10000); // waits for 3 seconds
   }
 }

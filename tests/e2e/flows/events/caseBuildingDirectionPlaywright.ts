@@ -1,9 +1,8 @@
 import { Page } from "@playwright/test";
 import { PageHelper } from '../../helpers/PageHelper';
-import { ValidationHelper} from "../../helpers/ValidationHelper";
-import { ButtonHelper} from "../../helpers/ButtonHelper";
+import { ButtonHelper } from "../../helpers/ButtonHelper";
 
-export class RespondentEvidenceDirection {
+export class CaseBuildingDirection {
     private buttonHelper: ButtonHelper;
 
     constructor(public page: Page) {
@@ -11,9 +10,9 @@ export class RespondentEvidenceDirection {
     }
 
     async submit() {
-        await new PageHelper(this.page).selectNextStep('Request respondent evidence');
-        await new ValidationHelper(this.page).validateComplyDate(7);
+        await new PageHelper(this.page).selectNextStep('Request case building');
         await this.buttonHelper.continueButton.click();
         await this.buttonHelper.sendDirectionButton.click();
+        await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
     };
 }

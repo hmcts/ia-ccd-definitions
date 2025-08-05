@@ -15,14 +15,8 @@ export class RequestHomeOfficeData {
 
     async matchAppellantDetails() {
         await new PageHelper(this.page).selectNextStep('Request Home Office data');
-        //await I.selectNextStep('Request Home Office data');
-        //await I.waitForElement('#homeOfficeAppellantsList');
         await this.buttonHelper.continueButton.click();
-        //await I.clickContinue();
         await this.requestHomeOfficeDataButton.click();
-        //await I.clickButtonOrLink('Request Home Office data');
-        //await I.see('You have matched the appellant details');
         await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
-        //await I.clickCloseAndReturnToCaseDetails();
     };
 }

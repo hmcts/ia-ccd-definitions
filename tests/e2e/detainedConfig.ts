@@ -29,8 +29,8 @@ export const legalOfficerAdmin = {
     password: " AldgateT0wer"
 }
 
-export const homeOfficeOfficer = {
-    email:"ia.respondentoffice.ccd@gmail.com",
+export const homeOfficeOfficerCredentials = {
+    username:"ia.respondentoffice.ccd@gmail.com",
     password: " AldgateT0wer"
 }
 
