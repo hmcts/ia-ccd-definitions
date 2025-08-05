@@ -1,5 +1,10 @@
 import { test } from '@playwright/test';
-import { envUrl, legalRepresentativeCredentials, legalOfficerCredentials, homeOfficeOfficerCredentials } from '../detainedConfig';
+import {
+    envUrl,
+    legalRepresentativeCredentials,
+    legalOfficerCredentials,
+    homeOfficeOfficerCredentials
+} from '../detainedConfig';
 import { IdamPage } from '../page-objects/pages/idam.po';
 import { CreateCasePage } from '../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../flows/createAppealPlaywright';
@@ -16,14 +21,19 @@ import { GenerateListCMR } from  '../flows/events/generateListCMRTaskPlaywright'
 import { RespondentEvidenceDirection } from '../flows/events/respondentEvidenceDirectionPlaywright';
 import { HomeOfficeBundle } from '../flows/events/homeOfficeBundlePlaywright';
 import { CaseBuildingDirection } from '../flows/events/caseBuildingDirectionPlaywright';
-
+import { BuildYourCase } from '../flows/events/buildYourCasePlaywright';
+import { RespondentReviewDirection } from '../flows/events/respondentReviewDirectionPlaywright';
+import { UploadAppealResponse } from '../flows/events/uploadAppealResponsePlaywright';
+import { ForceCaseHearingReqs} from '../flows/events/ForceCaseHearingReqsPlaywright';
+import { SubmitHearingRequirements } from '../flows/events/submitHearingRequirementsPlaywright';
+import { ReviewHearingRequirements } from '../flows/events/reviewHearingRequirementsPlaywright';
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
 
 let caseId: string;
 const inTime: boolean = true;
-//const cmrListing: boolean = true;
+const cmrListing: boolean = true;
 const detentionLocation: string = 'immigrationRemovalCentre';
 //const typeOfAppeal: string = 'refusalOfEu'; // Refusal under EEA regulations (payment required)
 //const typeOfAppeal: string = 'refusalOfHumanRights'; // Refusal human rights (payment required)
@@ -41,7 +51,7 @@ let validationHelper: ValidationHelper;
 let updateDetentionLocation: UpdateDetentionLocation;
 
 
-test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + '@LegalRepCreatesDetainedRepresentedPlaywright', () => {
+test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing @LegalRepCreatesDetainedRepresentedPlaywright', () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -148,4 +158,45 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await linkHelper.signOut.click();
     });
 
+    test('Appellant/Legal Rep build case',   async ({ page }) => {
+        await idamPage.login(legalRepresentativeCredentials);
+        await page.goto(envUrl + '/cases/case-details/' + caseId);
+        await new BuildYourCase(page).build();
+        await linkHelper.signOut.click();
+    });
+
+    test('Legal Officer creates Respondent Review Direction',   async ({ page }) => {
+        await idamPage.login(legalOfficerCredentials);
+        await pageHelper.getCase(caseId);
+        await new RespondentReviewDirection(page).submit();
+        await linkHelper.signOut.click();
+    });
+
+    test('Home Office Officer (respondent) responds to appeal response from Appellant/Legal Rep',   async ({ page }) => {
+        await idamPage.login(homeOfficeOfficerCredentials);
+        await page.goto(envUrl + '/cases/case-details/' + caseId);
+        await new UploadAppealResponse(page).upload();
+        await linkHelper.signOut.click();
+    });
+
+    test('Legal Officer Force case - hearing reqs, thus bypassing Appellant/Legal Rep needing to review the HO decision',   async ({ page }) => {
+        await idamPage.login(legalOfficerCredentials);
+        await pageHelper.getCase(caseId);
+        await new ForceCaseHearingReqs(page).submit();
+        await linkHelper.signOut.click();
+    });
+
+    test('Appellant/legal rep submit hearing requirements',   async ({ page }) => {
+        await idamPage.login(legalRepresentativeCredentials);
+        await page.goto(envUrl + '/cases/case-details/' + caseId);
+        await new SubmitHearingRequirements(page).submit()
+        await linkHelper.signOut.click();
+    });
+
+    test('Legal Officer to review hearing requirements',   async ({ page }) => {
+        await idamPage.login(legalOfficerCredentials);
+        await pageHelper.getCase(caseId);
+        await new ReviewHearingRequirements(page).submit();
+        await linkHelper.signOut.click();
+    });
 });

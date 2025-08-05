@@ -9,6 +9,6 @@ export class ButtonHelper {
     readonly saveAndContinueButton = this.page.getByRole('button', { name: 'Save and continue' });
     readonly closeAndReturnToCaseDetailsButton = this.page.getByRole('button', { name: 'Close and Return to case details' });
     readonly sendDirectionButton = this.page.getByRole('button', { name: 'Send direction'});
-
+    readonly uploadButton = this.page.getByRole('button', { name: 'Upload' });
 
 }

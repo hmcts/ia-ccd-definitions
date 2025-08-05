@@ -2,7 +2,7 @@ import { Page } from "@playwright/test";
 import { PageHelper } from '../../helpers/PageHelper';
 import { ButtonHelper } from "../../helpers/ButtonHelper";
 
-export class HomeOfficeBundle {
+export class UploadAppealResponse {
     private buttonHelper: ButtonHelper;
 
     constructor(public page: Page) {
@@ -10,10 +10,11 @@ export class HomeOfficeBundle {
     }
 
     async upload() {
-        await new PageHelper(this.page).selectNextStep('Upload Home Office bundle');
-        await this.page.locator('button:text("Add new")').click();
-        await this.page.locator('#homeOfficeBundle_0_document').setInputFiles('./tests/documents/TEST_DOCUMENT_2.pdf');
-        await this.page.fill('#homeOfficeBundle_0_description', 'Test Notice of Decision document.');
+        await new PageHelper(this.page).selectNextStep('Upload the appeal response');
+
+        await this.page.locator('#appealReviewOutcome-decisionMaintained').check();
+        await this.buttonHelper.continueButton.click();
+        await this.page.locator('#homeOfficeAppealResponseDocument').setInputFiles('./tests/documents/TEST_DOCUMENT_4.pdf');
         await this.page.waitForSelector('.error-message', { state: 'hidden' });
         await this.buttonHelper.continueButton.click();
         await this.page.waitForTimeout(2000); // waits for 2 seconds otherwise uploadButton click fails
