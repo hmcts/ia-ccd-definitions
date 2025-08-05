@@ -22,15 +22,11 @@ export class ReviewHearingRequirements {
         await this.isSuitableToFloat('No');
         await this.areThereAdditionalInstructions('No');
         await await this.buttonHelper.submitButton.click() // CYA
-        //await I.clickSubmit(); // CYA
-       // await I.waitForText('You\'ve recorded the agreed hearing adjustments');
         await await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
-        //await I.clickCloseAndReturnToCaseDetails();
     };
 
     async remoteHearingDecision(grantedRefused: string = 'Granted') {
         await this.page.locator(`#isRemoteHearingAllowed-${grantedRefused}`).check();
-        //await I.click(`#isRemoteHearingAllowed-${grantedRefused}`);
         await this.page.locator('#remoteVideoCallTribunalResponse').fill('Test description of Tribunal response.');
         await this.buttonHelper.continueButton.click();
     };

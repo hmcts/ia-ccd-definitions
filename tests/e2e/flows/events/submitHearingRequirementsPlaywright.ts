@@ -11,10 +11,7 @@ export class SubmitHearingRequirements {
 
     async submit() {
         await new PageHelper(this.page).selectNextStep('Submit hearing requirements');
-        //await I.selectNextStep('Submit Hearing requirements');
-        //await I.waitForText('Requirements', 60);
         await this.buttonHelper.continueButton.click();
-        //await I.clickContinue();
         await this.isAppellantAttendingTheHearing('Yes');
         await this.isAppellantGivingOralEvidence('Yes');
         await this.isWitnessesAttending('No');
@@ -33,9 +30,7 @@ export class SubmitHearingRequirements {
         await this.areThereDatesToAvoid('No');
 
         await this.buttonHelper.submitButton.click();
-        //await I.clickSubmit();
         await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
-        //await I.clickCloseAndReturnToCaseDetails();
     };
 
     async isAppellantAttendingTheHearing(isAttending: string= 'Yes'){

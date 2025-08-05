@@ -144,7 +144,7 @@ export class CreateAppeal {
            await this.page.fill('#prisonNOMSNumber_prison', appellant.NOMSNumber);
            await this.buttonHelper.continueButton.click();
 
-           await this.page.locator('#prisonName').selectOption(detentionFacility.prison.name);
+           await this.page.selectOption('#prisonName', detentionFacility.prison.name);
            await this.buttonHelper.continueButton.click();
            break;
        case 'other':
@@ -156,7 +156,7 @@ export class CreateAppeal {
    }
 
     async setDetentionCentre() {
-      await this.page.locator('#ircName').selectOption('Brookhouse');
+      await this.page.selectOption('#ircName','Brookhouse');
       await this.buttonHelper.continueButton.click();
    }
 
@@ -247,18 +247,19 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
-//   // appellant contact preference: non-detained journey only
-//   async setAppellentContactPreference(preference: string = 'EMAIL') {
-//     if (preference === 'EMAIL') {
-//       await I.click('#contactPreference-wantsEmail');
-//       await I.fillField('#email', appellant.email);
-//     } else {
-//       await I.click('#contactPreference-wantsSms');
-//       await I.fillField('#mobileNumber', appellant.mobile);
-//     }
-//     await I.clickContinue();
-//   }
-//
+   // appellant contact preference: non-detained journey only
+   async setAppellentContactPreference(preference: string = 'EMAIL') {
+     if (preference === 'EMAIL') {
+       await this.page.check('#contactPreference-wantsEmail');
+       await this.page.fill('#email', appellant.email);
+     } else {
+         await this.page.check('#contactPreference-wantsSms');
+         await this.page.fill('#mobileNumber', appellant.mobile);
+     }
+     await this.buttonHelper.continueButton.click();
+
+   }
+
    // appellant address: non-detained journey and detained journey where facility is "Other"
    async setAppellentsAddress(journeyType: string = "detained", hasPostalAddress: string = 'Yes', updateDetentionLocationEvent: boolean = false) {
        if (journeyType !== 'detained') {
@@ -267,7 +268,7 @@ export class CreateAppeal {
        
        if (hasPostalAddress === 'Yes') {
            if (!updateDetentionLocationEvent) {
-               await this.page.check('//*[@id="appellantAddress_appellantAddress"]/div/a');
+               await this.page.getByText("I can't enter a UK postcode").click();
            }
            await this.page.fill('#appellantAddress__detailAddressLine1', appellant.address.addressLine1);
            await this.page.fill('#appellantAddress__detailPostTown', appellant.address.postTown);
@@ -308,8 +309,8 @@ export class CreateAppeal {
    async setNationality(hasNationality: boolean = true){
        if (hasNationality){
            await this.page.check('#appellantStateless-hasNationality');
-           await this.page.locator('button:text("Add new")').click();
-           await this.page.locator('#appellantNationalities_0_code').selectOption('Finland');
+           await this.page.click('button:text("Add new")');
+           await this.page.selectOption('#appellantNationalities_0_code', 'Finland');
        } else {
            await this.page.check('#appellantStateless-hasNationality');
        }

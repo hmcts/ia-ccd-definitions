@@ -11,7 +11,7 @@ export class ForceCaseHearingReqs {
 
     async submit() {
         await new PageHelper(this.page).selectNextStep('Force case - hearing reqs');
-        await this.page.locator('#reasonToForceCaseToSubmitHearingRequirements').fill('Test Force case - hearing reqs Reason.')
+        await this.page.fill('#reasonToForceCaseToSubmitHearingRequirements','Test Force case - hearing reqs Reason.')
         await this.buttonHelper.continueButton.click();
         await this.buttonHelper.submitButton.click();
         await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();

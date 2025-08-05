@@ -13,7 +13,7 @@ export class ValidationHelper {
 
     async validateCorrectLabelDisplayed(locator: string, label: string) {
         const src:string = await this.page.locator(locator).getAttribute('src');
-        await expect(src, 'Expected label not found').toContain(label);
+        expect(src, 'Expected label not found').toContain(label);
     }
 
     async validateCaseFlagExists(caseFlag: string, activeInactive: string = 'Active') {
@@ -51,7 +51,7 @@ export class ValidationHelper {
                 }
             }
         }
-        await expect(flagStatusMatched, `Expected flag status not found.  Flag: ${caseFlag} with status: ${activeInactive}`).toEqual(true);
+        expect(flagStatusMatched, `Expected flag status not found.  Flag: ${caseFlag} with status: ${activeInactive}`).toEqual(true);
     }
 
 
@@ -70,34 +70,34 @@ export class ValidationHelper {
 
         await this.tabsHelper.selectTab('Appellant');
 
-        const facilityType:string = await this.page.locator('#case-viewer-field-read--detentionFacility').innerText();
-        await expect(detentionFacilityList, `Invalid detention facility detected: ${facilityType}`).toContain(facilityType);
+        const facilityType:string = await this.page.innerText('#case-viewer-field-read--detentionFacility');
+        expect(detentionFacilityList, `Invalid detention facility detected: ${facilityType}`).toContain(facilityType);
 
-        const detentionFacilityName: string = (facilityType === 'Other' ? await this.page.locator(otherFacilityNameLocator).innerText() : (facilityType === 'Prison' ? await this.page.locator(detentionFacilityPrisonNameLocator).innerText() : await this.page.locator(detentionFacilityIrcNameLocator).innerText()));
+        const detentionFacilityName: string = (facilityType === 'Other' ? await this.page.innerText(otherFacilityNameLocator) : (facilityType === 'Prison' ? await this.page.innerText(detentionFacilityPrisonNameLocator) : await this.page.innerText(detentionFacilityIrcNameLocator)));
 
-        const detentionFacilityBuilding: string = await this.page.locator(detentionBuildingLocator).innerText();
-        const detentionFacilityAddress: string = await this.page.locator(detentionAddressLocator).innerText();
-        const detentionFacilityPostcode: string = await this.page.locator(detentionPostcodeLocator).innerText();
+        const detentionFacilityBuilding: string = await this.page.innerText(detentionBuildingLocator);
+        const detentionFacilityAddress: string = await this.page.innerText(detentionAddressLocator);
+        const detentionFacilityPostcode: string = await this.page.innerText(detentionPostcodeLocator);
 
         switch (facilityType) {
             case 'Immigration removal centre':
-                await expect(detentionFacilityName, `${facilityType} name must exist on the Appellant Tab`).toEqual(detentionFacility.immigrationRemovalCentre.name)
-                await expect(detentionFacilityBuilding, `${facilityType} building must exist on the Appellant Tab`).toEqual(detentionFacility.immigrationRemovalCentre.building);
-                await expect(detentionFacilityAddress, `${facilityType} address must exist on the Appellant Tab`).toEqual(detentionFacility.immigrationRemovalCentre.address);
-                await expect(detentionFacilityPostcode, `${facilityType} postcode must exist on the Appellant Tab`).toEqual(detentionFacility.immigrationRemovalCentre.postcode);
+                expect(detentionFacilityName, `${facilityType} name must exist on the Appellant Tab`).toEqual(detentionFacility.immigrationRemovalCentre.name)
+                expect(detentionFacilityBuilding, `${facilityType} building must exist on the Appellant Tab`).toEqual(detentionFacility.immigrationRemovalCentre.building);
+                expect(detentionFacilityAddress, `${facilityType} address must exist on the Appellant Tab`).toEqual(detentionFacility.immigrationRemovalCentre.address);
+                expect(detentionFacilityPostcode, `${facilityType} postcode must exist on the Appellant Tab`).toEqual(detentionFacility.immigrationRemovalCentre.postcode);
                 break;
             case 'Prison':
-                await expect(detentionFacilityName, `${facilityType} name must exist on the Appellant Tab`).toEqual(detentionFacility.prison.name);
-                await expect(await this.page.locator(detentionPrisonNomsNumberLocator).innerText(), 'NOMS number must exist on the Appellant Tab').toEqual(appellant.NOMSNumber);
-                await expect(detentionFacilityBuilding, `${facilityType} building must exist on the Appellant Tab`).toEqual(detentionFacility.prison.building);
-                await expect(detentionFacilityAddress, `${facilityType} address must exist on the Appellant Tab`).toEqual(detentionFacility.prison.address);
-                await expect(detentionFacilityPostcode, `${facilityType} postcode must exist on the Appellant Tab`).toEqual(detentionFacility.prison.postcode)
+                expect(detentionFacilityName, `${facilityType} name must exist on the Appellant Tab`).toEqual(detentionFacility.prison.name);
+                expect(await this.page.innerText(detentionPrisonNomsNumberLocator), 'NOMS number must exist on the Appellant Tab').toEqual(appellant.NOMSNumber);
+                expect(detentionFacilityBuilding, `${facilityType} building must exist on the Appellant Tab`).toEqual(detentionFacility.prison.building);
+                expect(detentionFacilityAddress, `${facilityType} address must exist on the Appellant Tab`).toEqual(detentionFacility.prison.address);
+                expect(detentionFacilityPostcode, `${facilityType} postcode must exist on the Appellant Tab`).toEqual(detentionFacility.prison.postcode)
                 break;
             case 'Other':
-                await expect(detentionFacilityName, `${facilityType} facility name must exist on the Appellant Tab`).toEqual(detentionFacility.other.name);
-                await expect(detentionFacilityBuilding, `${facilityType} facility building must exist on the Appellant Tab`).toEqual(detentionFacility.other.building);
-                await expect(detentionFacilityAddress, `${facilityType} facility address must exist on the Appellant Tab`).toEqual(detentionFacility.other.address);
-                await expect(detentionFacilityPostcode, `${facilityType} facility postcode must exist on the Appellant Tab`).toEqual(detentionFacility.other.postcode);
+                expect(detentionFacilityName, `${facilityType} facility name must exist on the Appellant Tab`).toEqual(detentionFacility.other.name);
+                expect(detentionFacilityBuilding, `${facilityType} facility building must exist on the Appellant Tab`).toEqual(detentionFacility.other.building);
+                expect(detentionFacilityAddress, `${facilityType} facility address must exist on the Appellant Tab`).toEqual(detentionFacility.other.address);
+                expect(detentionFacilityPostcode, `${facilityType} facility postcode must exist on the Appellant Tab`).toEqual(detentionFacility.other.postcode);
                 break;
         }
     }
@@ -125,70 +125,69 @@ export class ValidationHelper {
 
         await this.tabsHelper.selectTab('Appeal');
 
-        const inDetention = await this.page.locator(inDetentionLocator).innerText();
-        await expect(yesNo, `An invalid Detention flag: ${inDetention} found on the Appeal Tab.`).toContain(inDetention);
+        const inDetention = await this.page.innerText(inDetentionLocator);
+        expect(yesNo, `An invalid Detention flag: ${inDetention} found on the Appeal Tab.`).toContain(inDetention);
 
         if (checkForDetainedDate) {
-             detainedDate = await this.page.locator(detainedDateLocator).innerText();
-             await expect(detainedDate, 'Incorrect detained date found on Appeals Tab').toEqual(appellant.detained.date.day + ' ' + appellant.detained.date.shortMonthDesc + ' ' + appellant.detained.date.year);
+             detainedDate = await this.page.innerText(detainedDateLocator);
+             expect(detainedDate, 'Incorrect detained date found on Appeals Tab').toEqual(appellant.detained.date.day + ' ' + appellant.detained.date.shortMonthDesc + ' ' + appellant.detained.date.year);
 
-             detainedReason = await this.page.locator(detainedReasonLocator).innerText();
-             await expect(detainedReason, `The reason: ${detainedReason} for the detention is incorrect on the Appeal Tab`).toEqual(appellant.detained.reason);
+             detainedReason = await this.page.innerText(detainedReasonLocator);
+             expect(detainedReason, `The reason: ${detainedReason} for the detention is incorrect on the Appeal Tab`).toEqual(appellant.detained.reason);
         }
 
-        const hasRemovalDirections = await this.page.locator(removalDirectionsLocator).innerText();
-        await expect(yesNo, `An invalid Removal Directions flag: ${hasRemovalDirections} found on the Appeal Tab`).toContain(hasRemovalDirections);
+        const hasRemovalDirections = await this.page.innerText(removalDirectionsLocator);
+        expect(yesNo, `An invalid Removal Directions flag: ${hasRemovalDirections} found on the Appeal Tab`).toContain(hasRemovalDirections);
 
         switch (detentionLocation) {
             case 'immigrationRemovalCentre':
-                onBail = await this.page.locator(appealTabOnBailLocator).innerText();
-                await expect(yesNo, `An invalid Bail flag: ${onBail} found on the Appeal Tab`).toContain(onBail);
+                onBail = await this.page.innerText(appealTabOnBailLocator);
+                expect(yesNo, `An invalid Bail flag: ${onBail} found on the Appeal Tab`).toContain(onBail);
 
                 if (onBail === 'Yes') {
-                    bailApplicationNumber = await this.page.locator(bailApplicationNumberLocator).innerText();
-                    await expect(bailApplicationNumber, 'A valid Bail Application Number must exist on the Appeal Tab').toEqual(appellant.bailApplicationNumber);
+                    bailApplicationNumber = await this.page.innerText(bailApplicationNumberLocator);
+                    expect(bailApplicationNumber, 'A valid Bail Application Number must exist on the Appeal Tab').toEqual(appellant.bailApplicationNumber);
                 }
                 break;
             default:
-                hasCustodialSentence = await this.page.locator(custodialSentenceLocator).innerText();
-                await expect(yesNo, `An invalid Custodial Sentence flag: ${hasCustodialSentence} found on the Appeal Tab`).toContain(hasCustodialSentence);
+                hasCustodialSentence = await this.page.innerText(custodialSentenceLocator);
+                expect(yesNo, `An invalid Custodial Sentence flag: ${hasCustodialSentence} found on the Appeal Tab`).toContain(hasCustodialSentence);
 
                 if (hasCustodialSentence === 'Yes') {
-                    custodialReleaseDate = await this.page.locator(custodialSentenceReleaseDateLocator).innerText();
-                    await expect(custodialReleaseDate, 'A valid Custodial Release Date must exist on the Appeal Tab').toEqual(appellant.custodialSentence.day + ' ' + appellant.custodialSentence.shortMonthDesc + ' ' + appellant.custodialSentence.year);
+                    custodialReleaseDate = await this.page.innerText(custodialSentenceReleaseDateLocator);
+                    expect(custodialReleaseDate, 'A valid Custodial Release Date must exist on the Appeal Tab').toEqual(appellant.custodialSentence.day + ' ' + appellant.custodialSentence.shortMonthDesc + ' ' + appellant.custodialSentence.year);
                 } else {
-                    onBail = await this.page.locator(appealTabOnBailLocator).innerText();
-                    await expect(yesNo, `An invalid Bail flag: ${onBail} found on the Appeal Tab`).toContain(onBail);
+                    onBail = await this.page.innerText(appealTabOnBailLocator);
+                    expect(yesNo, `An invalid Bail flag: ${onBail} found on the Appeal Tab`).toContain(onBail);
 
                     if (onBail === 'Yes') {
-                        bailApplicationNumber = await this.page.locator(bailApplicationNumberLocator).innerText();
-                        await expect(bailApplicationNumber, 'A valid Bail Application Number must exist on the Appeal Tab').toEqual(appellant.bailApplicationNumber);
+                        bailApplicationNumber = await this.page.innerText(bailApplicationNumberLocator);
+                        expect(bailApplicationNumber, 'A valid Bail Application Number must exist on the Appeal Tab').toEqual(appellant.bailApplicationNumber);
                     }
                 }
                 break;
         }
 
         if (hasRemovalDirections === 'Yes') {
-            removalDirectionsDate = await this.page.locator(removalDirectionsDateLocator).innerText();
-            await expect(removalDirectionsDate, 'Incorrect removal date found on Appeal Tab')
+            removalDirectionsDate = await this.page.innerText(removalDirectionsDateLocator);
+            expect(removalDirectionsDate, 'Incorrect removal date found on Appeal Tab')
                 .toEqual(appellant.removalDirections.date.day + ' '
-                + appellant.removalDirections.date.shortMonthDesc + ' '
-                + appellant.removalDirections.date.year +', '
-                + appellant.removalDirections.time.hour12NoLeadingZero + ':'
-                + appellant.removalDirections.time.minutesWithLeadingZero + ':'
-                + appellant.removalDirections.time.secondsWithLeadingZero + ' '
-                + appellant.removalDirections.time.amPm);
+                    + appellant.removalDirections.date.shortMonthDesc + ' '
+                    + appellant.removalDirections.date.year +', '
+                    + appellant.removalDirections.time.hour12NoLeadingZero + ':'
+                    + appellant.removalDirections.time.minutesWithLeadingZero + ':'
+                    + appellant.removalDirections.time.secondsWithLeadingZero + ' '
+                    + appellant.removalDirections.time.amPm);
         }
     }
 
     async validateComplyDate(daysToAdd: number) {
-        const complyDate: string = await this.page.locator('#sendDirectionDateDue-day').inputValue() + '-'
-            + await this.page.locator('#sendDirectionDateDue-month').inputValue() + '-'
-            + await this.page.locator('#sendDirectionDateDue-year').inputValue();
+        const complyDate: string = await this.page.inputValue('#sendDirectionDateDue-day') + '-'
+            + await this.page.inputValue('#sendDirectionDateDue-month') + '-'
+            + await this.page.inputValue('#sendDirectionDateDue-year');
         const todayPlusDays = moment().add(daysToAdd, 'days').format('DD-MM-YYYY');
 
-        await expect(complyDate, `Request respondent evidence comply date should be ${daysToAdd} days from today: ${todayPlusDays}.`).toEqual(todayPlusDays)
-      //  await this.expectDeepEqual(complyDate, todayPlusDays, `Request respondent evidence comply date should be ${daysToAdd} days from today: ${todayPlusDays}.`);
+        expect(complyDate, `Request respondent evidence comply date should be ${daysToAdd} days from today: ${todayPlusDays}.`).toEqual(todayPlusDays)
     }
 
 }

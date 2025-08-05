@@ -51,7 +51,7 @@ let validationHelper: ValidationHelper;
 let updateDetentionLocation: UpdateDetentionLocation;
 
 
-test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing @LegalRepCreatesDetainedRepresentedPlaywright', () => {
+test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedRepresentedPlaywright' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.

@@ -12,7 +12,7 @@ export class UploadAppealResponse {
     async upload() {
         await new PageHelper(this.page).selectNextStep('Upload the appeal response');
 
-        await this.page.locator('#appealReviewOutcome-decisionMaintained').check();
+        await this.page.check('#appealReviewOutcome-decisionMaintained');
         await this.buttonHelper.continueButton.click();
         await this.page.locator('#homeOfficeAppealResponseDocument').setInputFiles('./tests/documents/TEST_DOCUMENT_4.pdf');
         await this.page.waitForSelector('.error-message', { state: 'hidden' });

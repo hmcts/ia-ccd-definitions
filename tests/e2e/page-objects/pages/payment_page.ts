@@ -42,11 +42,9 @@ export class PaymentPage {
     await this.payNow.click();
 
     if (paymentType === 'CC') {
-      await this.page.locator(this.cardPaymentLocator).check();
-    //   await I.clickButtonOrLinkWithoutRetry(this.cardPaymentLocator);
+      await this.page.check(this.cardPaymentLocator);
       await this.buttonHelper.continueButton.click();
-    //   await I.clickContinue();
-    //
+
       await this.page.fill(this.cardNoLocator, this.cardNumber);
       await this.page.fill(this.expiryMonthLocator, this.expiryMonth);
       await this.page.fill(this.expiryYearLocator, this.expiryYear);
@@ -58,12 +56,12 @@ export class PaymentPage {
       await this.page.fill(this.addressPostcodeLocator, this.postcode);
       await this.page.fill(this.emailLocator, this.email);
 
-      await this.page.locator(this.continueButtonLocator).click();
-      await this.page.locator(this.confirmButtonLocator).click();
+      await this.page.click(this.continueButtonLocator);
+      await this.page.click(this.confirmButtonLocator);
 
       await this.page.waitForSelector('#main-content', { state: 'visible' });
-      const message = await this.page.locator('#main-content').innerText();
-      await expect(message, 'Payment failed').toContain('Payment successful');
+      const message = await this.page.innerText('#main-content');
+      expect(message, 'Payment failed').toContain('Payment successful');
 
       // In preview "Return to service request" hyperlink forwards to an AAT address
       // To work around this for the moment will force the navigation back to the overview tab
