@@ -106,7 +106,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await linkHelper.signOut.click();
     });
 
-    test.only('Legal Officer adds s94b appeal status, updates detention location and creates Respondent Direction', async ({ page }) => {
+    test('Legal Officer adds s94b appeal status, updates detention location and creates Respondent Direction', async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new S94b(page).setStatus('Yes');
