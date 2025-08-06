@@ -45,10 +45,11 @@ test.describe('Detained Appeal - Represented ', { tag: '@NonDetainedToDetainedRe
         await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
         await createAppeal.uploadNoticeOfDecision();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);
+        await createAppeal.setGroundsOfAppeal(typeOfAppeal);
         await createAppeal.setAppellantBasicDetails(false);
         await createAppeal.setNationality(true);
-        await createAppeal.setAppellentContactPreference('EMAIL');
-        await createAppeal.setAppellentsAddress('nonDetained', 'Yes');
+        await createAppeal.setAppellantAddress('nonDetained', 'Yes');
+        await createAppeal.setAppellantContactPreference('EMAIL');
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder("No");
         await createAppeal.hasNewMatters('Yes');

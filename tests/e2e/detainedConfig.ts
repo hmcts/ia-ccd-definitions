@@ -24,8 +24,8 @@ export const legalOfficerCredentials = {
     password: " AldgateT0wer"
 }
 
-export const legalOfficerAdmin = {
-    email:"ia.adm1nofficer.ccd@gmail.com",
+export const legalOfficerAdminCredentials = {
+    username:"ia.adm1nofficer.ccd@gmail.com",
     password: " AldgateT0wer"
 }
 

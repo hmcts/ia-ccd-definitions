@@ -82,11 +82,19 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await createAppeal.setHomeOfficeDetails(inTime);
         await createAppeal.uploadNoticeOfDecision();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);
+
+        if (typeOfAppeal !== 'euSettlementScheme') {
+            await createAppeal.setGroundsOfAppeal(typeOfAppeal);
+        }
+
         await createAppeal.setAppellantBasicDetails(false);
+
+
+
         await createAppeal.setNationality(true);
 
         if (detentionLocation === 'other') {
-            await createAppeal.setAppellentsAddress('detained', 'Yes');
+            await createAppeal.setAppellantAddress('detained', 'Yes');
         }
 
         await createAppeal.hasSponsor('Yes');

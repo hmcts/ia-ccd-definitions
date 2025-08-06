@@ -43,6 +43,7 @@
     "test:LegalAdminDetainedRepresentedThenRemoveDetainedStatus": "MOCHAWESOME_REPORTFILENAME=LegalAdminDetainedRepresentedThenRemoveDetainedStatus-$(date \"+%Y-%m-%d_%H-%M-%S\") npx codeceptjs run --grep @LegalAdminDetainedRepresentedToNonDetained --reporter mocha-multi --verbose",
     "test:LegalRepCreatesDetainedRepresentedPlaywright": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalRepCreatesDetainedRepresentedPlaywright",
     "test:NonDetainedToDetainedRepresentedPlaywright": "yarn playwright install && npx playwright test --headed --project chromium --grep @NonDetainedToDetainedRepresentedPlaywright",
+    "test:LegalOfficerAdminDetainedAppellantInPersonPlaywright": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalOfficerAdminDetainedAppellantInPersonPlaywright",
     "clean": "rm -rf target/",
     "decrypt": "node bin/decrypt.js",
     "copy-json": "bin/copy-json.sh",
