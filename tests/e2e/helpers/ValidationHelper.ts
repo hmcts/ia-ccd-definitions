@@ -4,6 +4,9 @@ import {detentionFacility} from "../fixtures/detentionFacilities";
 import {appellant} from '../detainedConfig';
 import moment from "moment";
 
+const inDetentionLocator:string = '#case-viewer-field-read--appellantInDetention';
+const yesNo: string[] = ['Yes', 'No'];
+
 export class ValidationHelper {
     private tabsHelper: TabsHelper;
 
@@ -102,9 +105,21 @@ export class ValidationHelper {
         }
     }
 
+    async validateDataOnAppellantTabDetainedStatusRemoved(detentionLocation: string) {
+        const appellantTabDetentionFacilityTypeText: string = 'Detention facility type';
+        const appellantTabDetentionFacilityNameText: string = 'Detention facility name';
+        const appellantTabNomsNoText: string = 'NOMS number';
+
+        await this.tabsHelper.selectTab('Appellant');
+        await expect(this.page.getByText(appellantTabDetentionFacilityTypeText)).not.toBeVisible();
+        await expect(this.page.getByText(appellantTabDetentionFacilityNameText)).not.toBeVisible();
+        await expect(this.page.getByText(appellantTabNomsNoText)).not.toBeVisible();
+        await expect(this.page.getByText(detentionLocation === 'prison' ? detentionFacility.prison.building : detentionFacility.immigrationRemovalCentre.building)).not.toBeVisible();
+        await expect(this.page.getByText(detentionLocation === 'prison' ? detentionFacility.prison.address : detentionFacility.immigrationRemovalCentre.address)).not.toBeVisible();
+        await expect(this.page.getByText(detentionLocation === 'prison' ? detentionFacility.prison.postcode : detentionFacility.immigrationRemovalCentre.postcode)).not.toBeVisible();
+    }
 
     async validateDataOnAppealTab(detentionLocation: string = 'prison', checkForDetainedDate:boolean) {
-        const inDetentionLocator:string = '#case-viewer-field-read--appellantInDetention';
         const detainedDateLocator: string = '#case-viewer-field-read--appellantDetainedDate';
         const detainedReasonLocator: string = '#case-viewer-field-read--addReasonAppellantWasDetained';
         const removalDirectionsLocator: string = '#case-viewer-field-read--removalOrderOptions';
@@ -114,7 +129,6 @@ export class ValidationHelper {
         const custodialSentenceReleaseDateLocator: string = '#case-viewer-field-read--releaseDate';
         const removalDirectionsDateLocator: string = '#case-viewer-field-read--removalOrderDate';
 
-        const yesNo: string[] = ['Yes', 'No'];
         let onBail: string;
         let bailApplicationNumber:string;
         let removalDirectionsDate: string;
@@ -179,6 +193,28 @@ export class ValidationHelper {
                     + appellant.removalDirections.time.secondsWithLeadingZero + ' '
                     + appellant.removalDirections.time.amPm);
         }
+    }
+
+    async validateDataOnAppealTabDetainedStatusRemoved() {
+        const custodialText: string = 'Custodial Sentence';
+        const custodialDateText: string = 'Custodial sentence release date';
+        const bailPendingText: string = 'Pending bail application';
+        const bailNumberText: string = 'Bail application number';
+        const dateStatusRemovedText: string = 'Date detention status removed';
+        const removalReasonsText: string = 'Reasons for removal';
+
+        await this.tabsHelper.selectTab('Appeal');
+
+        const inDetention = await this.page.innerText(inDetentionLocator);
+        expect(yesNo, `An invalid Detention flag: ${inDetention} found on the Appeal Tab.`).toContain(inDetention);
+        expect(inDetention,`The Detention Flag value of: ${inDetention} on the Appeal Tab is invalid. It should be: No`).toEqual('No');
+
+        await expect(this.page.getByText(custodialText)).not.toBeVisible();
+        await expect(this.page.getByText(custodialDateText)).not.toBeVisible();
+        await expect(this.page.getByText(bailPendingText)).not.toBeVisible();
+        await expect(this.page.getByText(bailNumberText)).not.toBeVisible();
+        await expect(this.page.getByText(dateStatusRemovedText)).toBeVisible();
+        await expect(this.page.getByText(removalReasonsText)).toBeVisible();
     }
 
     async validateComplyDate(daysToAdd: number) {

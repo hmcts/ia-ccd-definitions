@@ -1,19 +1,9 @@
-import { Page, expect } from '@playwright/test';
+import { Page } from '@playwright/test';
 import { PageHelper } from '../../helpers/PageHelper';
 import { ButtonHelper } from '../../helpers/ButtonHelper';
 import { CreateAppeal } from '../createAppealPlaywright';
 import { appellant } from '../../detainedConfig';
 
-const appealTabInDetentionLocator: string = '//*[@id="case-viewer-field-read--appellantInDetention"]';
-const appealTabCustodialText: string = 'Custodial Sentence';
-const appealTabCustodialDateText: string = 'Custodial sentence release date';
-const appealTabBailPendingText: string = 'Pending bail application';
-const appealTabBailNumberText: string = 'Bail application number';
-const appealTabDateStatusRemovedText: string = 'Date detention status removed';
-const appealTabRemovalReasonsText: string = 'Reasons for removal';
-const appellantTabDetentionFacilityTypeText: string = 'Detention facility type';
-const appellantTabDetentionFacilityNameText: string = 'Detention facility name';
-const appellantTabNomsNoText: string = 'NOMS number';
 
 export class RemoveDetainedStatus {
     private createAppeal: CreateAppeal;
@@ -28,7 +18,7 @@ export class RemoveDetainedStatus {
 
 
     //Legally Represented
-    async removeStatus(contactPreference: 'Email' | 'Text' = 'Email') {
+     async removeStatus() {
         await new PageHelper(this.page).selectNextStep('Remove Detained Status');
         await this.detentionRemovalDetails();
         await this.appellantAddressManual();
