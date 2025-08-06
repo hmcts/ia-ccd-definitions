@@ -26,6 +26,15 @@ module.exports = defineConfig({
   },
   projects: [
     {
+      name: 'smokeChromium',
+      use: {
+        ...devices['Desktop Chrome'],
+        channel: 'chrome',
+        viewport: {width: 1929, height: 959},
+      },
+      testDir: './tests/e2e',
+    },
+    {
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],

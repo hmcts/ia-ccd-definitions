@@ -70,7 +70,7 @@ test.describe('Legal Admin creates Detained Appeal', { tag: '@LegalAdminDetained
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
         await submitYourAppeal.submit(false, inTime);
 
-        await new RemoveDetainedStatus(page).removeStatus('Email');
+        await new RemoveDetainedStatus(page).removeStatus();
         await validationHelper.validateCaseFlagExists('Detained individual', 'Inactive');
         await validationHelper.validateDataOnAppealTabDetainedStatusRemoved();
         await validationHelper.validateDataOnAppellantTabDetainedStatusRemoved(detentionLocation);
