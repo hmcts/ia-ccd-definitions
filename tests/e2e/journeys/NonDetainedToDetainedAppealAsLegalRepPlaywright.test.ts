@@ -49,7 +49,7 @@ test.describe('Detained Appeal - Represented ', { tag: '@NonDetainedToDetainedRe
         await createAppeal.setAppellantBasicDetails(false);
         await createAppeal.setNationality(true);
         await createAppeal.setAppellantAddress('nonDetained', 'Yes');
-        await createAppeal.setAppellantContactPreference('EMAIL');
+        await createAppeal.setAppellantContactPreference('Email');
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder("No");
         await createAppeal.hasNewMatters('Yes');

@@ -36,7 +36,7 @@ export class CreateAppeal {
             await this.page.fill('#appealWasNotSubmittedReason', 'Reason why appeal was not submitted on MyHMCTS');
 
             await this.page.locator('button:text("Add new")').click();
-            await this.page.locator('##appealNotSubmittedReasonDocuments_0_document').setInputFiles('./tests/documents/TEST_DOCUMENT_1.pdf');
+            await this.page.locator('#appealNotSubmittedReasonDocuments_0_document').setInputFiles('./tests/documents/TEST_DOCUMENT_1.pdf');
             await this.page.fill('#appealNotSubmittedReasonDocuments_0_description', 'Supporting document test');
             await this.page.waitForSelector('.error-message', { state: 'hidden' });
             await this.buttonHelper.continueButton.click();
@@ -51,7 +51,7 @@ export class CreateAppeal {
             await this.page.check(`#legalRepHasAddress_${hasPostalAddress}`);
             await this.page.fill('#legalRepAddressUK_legalRepAddressUK_postcodeInput',  legalRepresentative.address.postcode);
             await this.page.click('//button[contains(text(), "Find address")]');
-            await this.page.selectOption('#legalRepAddressUK_legalRepAddressUK_addressList', legalRepresentative.address.addressLine1); // First valid address
+            await this.page.selectOption('#legalRepAddressUK_legalRepAddressUK_addressList', legalRepresentative.address.addressLine1 + ', ' + legalRepresentative.address.postTown); // First valid address
             await this.buttonHelper.continueButton.click();
         } else {
             await this.buttonHelper.continueButton.click();
@@ -164,6 +164,9 @@ export class CreateAppeal {
            await this.page.fill('#releaseDate-month', appellant.custodialSentence.month.toString());
            await this.page.fill('#releaseDate-year', appellant.custodialSentence.year.toString());
        }
+       // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
+       // if we just try and click continue it stays on the Custodial Sentence page and the test fails - only happens in ICC
+       await this.page.keyboard.press('Tab');
        await this.buttonHelper.continueButton.click();
    }
 
@@ -191,6 +194,8 @@ export class CreateAppeal {
 
    async uploadNoticeOfDecision() {
        await this.page.locator('button:text("Add new")').click();
+       // getting rate cap error message - waiting for 2 secs to stop this happening
+       await this.page.waitForTimeout(2000); // waits for 2 seconds
        await this.page.locator('#uploadTheNoticeOfDecisionDocs_0_document').setInputFiles('./tests/documents/TEST_DOCUMENT_1.pdf');
        await this.page.fill('#uploadTheNoticeOfDecisionDocs_0_description', 'Test Notice of Decision document.');
        await this.page.waitForSelector('.error-message', { state: 'hidden' });
@@ -232,15 +237,15 @@ export class CreateAppeal {
    }
 
    // appellant contact preference: non-detained journey only
-   async setAppellantContactPreference(preference: string = 'EMAIL') {
-     if (preference === 'EMAIL') {
-       await this.page.check('#contactPreference-wantsEmail');
-       await this.page.fill('#email', appellant.email);
-     } else {
-         await this.page.check('#contactPreference-wantsSms');
-         await this.page.fill('#mobileNumber', appellant.mobile);
-     }
-     await this.buttonHelper.continueButton.click();
+   async setAppellantContactPreference(preference: 'Email' | 'Text') {
+       await this.page.check(`#contactPreference-wants${preference}`);
+       if (preference === 'Email') {
+           await this.page.fill('#email', appellant.email);
+       } else {
+           await this.page.fill('#mobileNumber', appellant.mobile);
+       }
+
+       await this.buttonHelper.continueButton.click();
 
    }
 
@@ -361,6 +366,8 @@ export class CreateAppeal {
    // uploadAppealDocs() - For Legal Admin journey
    async uploadAppealDocs() {
        await this.page.locator('button:text("Add new")').click();
+       // getting rate cap error message - waiting for 2 secs to stop this happening
+       await this.page.waitForTimeout(2000); // waits for 2 seconds
        await this.page.locator('#uploadTheAppealFormDocs_0_document').setInputFiles('./tests/documents/TEST_DOCUMENT_2.pdf');
        await this.page.fill('#uploadTheAppealFormDocs_0_description', 'Test Notice of Decision document.');
        await this.page.waitForSelector('.error-message', { state: 'hidden' });
