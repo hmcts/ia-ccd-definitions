@@ -40,11 +40,6 @@ test.describe('Detained Appeal - Represented ', { tag: '@NonDetainedToDetainedRe
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalRepresentativeCredentials);
         await new CreateCasePage(page).createCase();
-
-
-
-        //await loginPage.signIn(lawFirmUser);
-        //await createCasePage.createCase();
         await createAppeal.locationInUK('Yes');
         await createAppeal.inDetention('No');
         await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
