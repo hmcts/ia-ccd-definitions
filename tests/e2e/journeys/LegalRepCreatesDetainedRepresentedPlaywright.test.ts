@@ -65,7 +65,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await page.goto(envUrl);
     });
 
-    test.only('Create Detained Appeal', async ({ page }) => {
+    test('Create Detained Appeal', async ({ page }) => {
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalRepresentativeCredentials);
         await new CreateCasePage(page).createCase();
