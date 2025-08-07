@@ -46,7 +46,7 @@ export class SubmitYourAppeal {
         } else if (inTime){
             await expect(confirmationHeader).toHaveText('The appeal has been submitted');
         } else {
-            await new ValidationHelper(this.page).validateCorrectLabelDisplayed(outOfTimedImageLocator, 'outOfTimeConfirmation');
+            await new ValidationHelper(this.page).validateLabelDisplayed(outOfTimedImageLocator, 'outOfTimeConfirmation');
         }
 
         await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();

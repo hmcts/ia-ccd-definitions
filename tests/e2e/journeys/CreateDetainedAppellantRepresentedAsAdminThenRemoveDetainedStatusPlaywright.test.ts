@@ -10,6 +10,7 @@ import {CreateAppeal} from "../flows/createAppealPlaywright";
 import {CreateCasePage} from "../page-objects/pages/createCase_page";
 import { SubmitYourAppeal } from '../flows/events/submitYourAppealPlaywright';
 import {RemoveDetainedStatus} from "../flows/events/removeDetainedStatusPlaywright";
+import {imageLocators} from "../fixtures/imageLocators";
 
 let caseId: string;
 const inTime: boolean = true;
@@ -71,6 +72,7 @@ test.describe('Legal Admin creates Detained Appeal', { tag: '@LegalAdminDetained
         await submitYourAppeal.submit(false, inTime);
 
         await new RemoveDetainedStatus(page).removeStatus();
+        await validationHelper.validateLabelNotDisplayed(imageLocators.representedManual.locator);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Inactive');
         await validationHelper.validateDataOnAppealTabDetainedStatusRemoved();
         await validationHelper.validateDataOnAppellantTabDetainedStatusRemoved(detentionLocation);
@@ -114,6 +116,7 @@ test.describe('Legal Admin creates Detained Appeal', { tag: '@LegalAdminDetained
         await submitYourAppeal.submit(false, inTime);
 
         await new RemoveDetainedStatus(page).removeStatus();
+        await validationHelper.validateLabelNotDisplayed(imageLocators.representedManual.locator);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Inactive');
         await validationHelper.validateDataOnAppealTabDetainedStatusRemoved();
         await validationHelper.validateDataOnAppellantTabDetainedStatusRemoved(detentionLocation);

@@ -14,10 +14,17 @@ export class ValidationHelper {
         this.tabsHelper = new TabsHelper(this.page);
     }
 
-    async validateCorrectLabelDisplayed(locator: string, label: string) {
+    async validateLabelDisplayed(locator: string, label: string) {
+        await expect(this.page.locator(locator), 'Label is not being displayed when it should').toBeVisible();
         const src:string = await this.page.locator(locator).getAttribute('src');
         expect(src, 'Expected label not found').toContain(label);
     }
+
+    async validateLabelNotDisplayed(locator: string) {
+        await expect(this.page.locator(locator), 'The image is being displayed when it should not.').not.toBeVisible();
+    }
+
+
 
     async validateCaseFlagExists(caseFlag: string, activeInactive: string = 'Active') {
         await this.tabsHelper.selectTab('Case flags');

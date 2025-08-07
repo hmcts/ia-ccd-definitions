@@ -27,6 +27,7 @@ import { UploadAppealResponse } from '../flows/events/uploadAppealResponsePlaywr
 import { ForceCaseHearingReqs} from '../flows/events/ForceCaseHearingReqsPlaywright';
 import { SubmitHearingRequirements } from '../flows/events/submitHearingRequirementsPlaywright';
 import { ReviewHearingRequirements } from '../flows/events/reviewHearingRequirementsPlaywright';
+import { imageLocators } from '../fixtures/imageLocators';
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
@@ -42,8 +43,9 @@ const detentionLocation: string = 'immigrationRemovalCentre';
 //const typeOfAppeal: string = 'revocationOfProtection'; // Revocation of a protection status (no payment required)
 const typeOfAppeal:string = 'protection'; // Refusal of protection claim (payment required)
 
-const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
-const detainedRepresentedS94bImageLocator: string = '//*[@id="journey_type_legal_rep_detained_s9"]/dt/ccd-markdown/div/markdown/p/img';
+//const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
+//const detainedRepresentedS94bImageLocator: string = '//*[@id="journey_type_legal_rep_detained_s9"]/dt/ccd-markdown/div/markdown/p/img';
+
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
@@ -63,7 +65,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await page.goto(envUrl);
     });
 
-    test('Create Detained Appeal', async ({ page }) => {
+    test.only('Create Detained Appeal', async ({ page }) => {
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalRepresentativeCredentials);
         await new CreateCasePage(page).createCase();
@@ -135,8 +137,8 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await pageHelper.getCase(caseId);
         await new S94b(page).setStatus('Yes');
 
-        await validationHelper.validateCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
-        await validationHelper.validateCorrectLabelDisplayed(detainedRepresentedS94bImageLocator, 'legalRep_detained_s9');
+        await validationHelper.validateLabelDisplayed(imageLocators.detainedRepresented.locator, imageLocators.detainedRepresented.name);
+        await validationHelper.validateLabelDisplayed(imageLocators.s94b.locator, imageLocators.s94b.name);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
 
         await updateDetentionLocation.changeLocation(detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison'), detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));

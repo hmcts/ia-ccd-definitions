@@ -28,7 +28,7 @@ export class UpdateDetentionLocation {
                 await this.createAppeal.setBailApplication('Yes');
                 break;
             case 'other':
-                await this.createAppeal.setAppellentsAddress('detained', 'Yes', true);
+                await this.createAppeal.setAppellantAddress('detained', 'Yes', true);
                 if (hasCustodialSentence) {
                     await this.createAppeal.setCustodialSentence('Yes');
                 } else {

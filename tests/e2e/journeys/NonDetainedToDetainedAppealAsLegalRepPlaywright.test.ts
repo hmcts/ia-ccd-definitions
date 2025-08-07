@@ -8,16 +8,15 @@ import {IdamPage} from "../page-objects/pages/idam.po";
 import {LinkHelper} from "../helpers/LinkHelper";
 import {PageHelper} from "../helpers/PageHelper";
 import {ValidationHelper} from "../helpers/ValidationHelper";
-import { TabsHelper } from "../helpers/TabsHelper";
 import {UpdateDetentionLocation} from "../flows/events/updateDetentionLocationPlaywright";
 import {CreateAppeal} from "../flows/createAppealPlaywright";
 import {CreateCasePage} from "../page-objects/pages/createCase_page";
 import {SubmitYourAppeal} from "../flows/events/submitYourAppealPlaywright";
 import { MarkAppealAsDetained } from '../flows/events/markAppealAsDetainedPlaywright';
+import { imageLocators } from "../fixtures/imageLocators";
 
 let caseId: string;
 const inTime: boolean = true;
-const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
 const detentionLocation: string = 'immigrationRemovalCentre';
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
@@ -69,10 +68,10 @@ test.describe('Detained Appeal - Represented ', { tag: '@NonDetainedToDetainedRe
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new MarkAppealAsDetained(page).setAsDetained(detentionLocation);
+        await validationHelper.validateLabelDisplayed(imageLocators.detainedRepresented.locator, imageLocators.detainedRepresented.name);
         await new UpdateDetentionLocation(page).validateDataUpdated(detentionLocation, true);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
-        await new TabsHelper(page).selectTab('Overview');
-        await validationHelper.validateCorrectLabelDisplayed(detainedRepresentedImageLocator, 'legally_represented_detained_appeal');
+
         await linkHelper.signOut.click();
     });
 });

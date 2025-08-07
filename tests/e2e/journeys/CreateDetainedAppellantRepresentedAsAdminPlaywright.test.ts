@@ -24,6 +24,9 @@ import {UploadAppealResponse} from "../flows/events/uploadAppealResponsePlaywrig
 import {ForceCaseHearingReqs} from "../flows/events/ForceCaseHearingReqsPlaywright";
 import {SubmitHearingRequirements} from "../flows/events/submitHearingRequirementsPlaywright";
 import {ReviewHearingRequirements} from "../flows/events/reviewHearingRequirementsPlaywright";
+import {S94b} from "../flows/events/setS94bStatusPlaywright";
+import {imageLocators} from "../fixtures/imageLocators";
+import {ValidationHelper} from "../helpers/ValidationHelper";
 
 let caseId: string;
 const inTime: boolean = true;
@@ -89,6 +92,10 @@ test.describe('Legal Admin creates Detained Appeal (ICC)', { tag: '@LegalAdminDe
     test('Legal Officer creates Respondent Direction', async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
+
+        await new S94b(page).setStatus('Yes');
+
+        await new ValidationHelper(page).validateLabelDisplayed(imageLocators.representedManualS94b.locator, imageLocators.representedManualS94b.name);
 
         if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
             await new RequestHomeOfficeData(page).matchAppellantDetails();

@@ -1,5 +1,10 @@
 import { test } from '@playwright/test';
-import { envUrl, legalOfficerAdminCredentials } from '../detainedConfig';
+import {
+    envUrl,
+    homeOfficeOfficerCredentials,
+    legalOfficerAdminCredentials,
+    legalOfficerCredentials
+} from '../detainedConfig';
 import {IdamPage} from "../page-objects/pages/idam.po";
 import {LinkHelper} from "../helpers/LinkHelper";
 import {PageHelper} from "../helpers/PageHelper";
@@ -7,14 +12,31 @@ import { ButtonHelper } from "../helpers/ButtonHelper";
 import {CreateAppeal} from "../flows/createAppealPlaywright";
 import {CreateCasePage} from "../page-objects/pages/createCase_page";
 import { SubmitYourAppeal } from '../flows/events/submitYourAppealPlaywright';
+import {RequestHomeOfficeData} from "../flows/events/requestHomeOfficeDataPlaywright";
+import {GenerateListCMR} from "../flows/events/generateListCMRTaskPlaywright";
+import {RespondentEvidenceDirection} from "../flows/events/respondentEvidenceDirectionPlaywright";
+import {HomeOfficeBundle} from "../flows/events/homeOfficeBundlePlaywright";
+import {CaseBuildingDirection} from "../flows/events/caseBuildingDirectionPlaywright";
+import {BuildYourCase} from "../flows/events/buildYourCasePlaywright";
+import {RespondentReviewDirection} from "../flows/events/respondentReviewDirectionPlaywright";
+import {UploadAppealResponse} from "../flows/events/uploadAppealResponsePlaywright";
+import {ForceCaseHearingReqs} from "../flows/events/ForceCaseHearingReqsPlaywright";
+import {SubmitHearingRequirements} from "../flows/events/submitHearingRequirementsPlaywright";
+import {ReviewHearingRequirements} from "../flows/events/reviewHearingRequirementsPlaywright";
+import {S94b} from "../flows/events/setS94bStatusPlaywright";
+import {ValidationHelper} from "../helpers/ValidationHelper";
+import {imageLocators} from "../fixtures/imageLocators";
 
 let caseId: string;
 const inTime: boolean = true;
 const detentionLocation: string = 'immigrationRemovalCentre';
+const typeOfAppeal: string = 'deprivation'; //Deprivation of citizenship (no payment required) "deprivation"
+
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let buttonHelper: ButtonHelper;
+let validationHelper: ValidationHelper;
 
 test.describe('Legal Admin creates Detained Appeal', { tag: '@LegalOfficerAdminDetainedAppellantInPersonPlaywright' }, () => {
 
@@ -24,11 +46,12 @@ test.describe('Legal Admin creates Detained Appeal', { tag: '@LegalOfficerAdminD
         linkHelper = new LinkHelper(page);
         pageHelper = new PageHelper(page);
         buttonHelper = new ButtonHelper(page);
+        validationHelper = new ValidationHelper(page);
+
         await page.goto(envUrl);
     });
 
     test('Create Detained Appeal - Appellant In Person as Legal Admin - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({ page}) => {
-        const typeOfAppeal: string = 'deprivation'; //Deprivation of citizenship (no payment required) "deprivation"
         const createAppeal = new CreateAppeal(page);
 
         await idamPage.login(legalOfficerAdminCredentials);
@@ -61,5 +84,82 @@ test.describe('Legal Admin creates Detained Appeal', { tag: '@LegalOfficerAdminD
 
         await linkHelper.signOut.click();
     });
+
+    test('Legal Officer creates Respondent Direction', async ({ page }) => {
+        await idamPage.login(legalOfficerCredentials);
+        await pageHelper.getCase(caseId);
+
+        await new S94b(page).setStatus('Yes');
+
+        await validationHelper.validateLabelDisplayed(imageLocators.appellentInPersonManualS94b.locator, imageLocators.appellentInPersonManualS94b.name);
+        await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
+
+        if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
+            await new RequestHomeOfficeData(page).matchAppellantDetails();
+        }
+
+        await new GenerateListCMR(page).createTask();
+        await new RespondentEvidenceDirection(page).submit();
+
+        await linkHelper.signOut.click();
+    });
+
+
+    test('Home Office Officer (respondent) review appeal and upload Home Office bundle',   async ({ page }) => {
+        await idamPage.login(homeOfficeOfficerCredentials);
+        await page.goto(envUrl + '/cases/case-details/' + caseId);
+        await new HomeOfficeBundle(page).upload();
+        await linkHelper.signOut.click();
+    });
+
+    test('Legal Officer directs appellant/Legal Rep to build case',   async ({ page }) => {
+        await idamPage.login(legalOfficerCredentials);
+        await pageHelper.getCase(caseId);
+        await new CaseBuildingDirection(page).submit();
+        await linkHelper.signOut.click();
+    });
+
+    test('Legal Officer Admin build case (acting as Legal Rep)',   async ({ page }) => {
+        await idamPage.login(legalOfficerAdminCredentials);
+        await pageHelper.getCase(caseId);
+        await new BuildYourCase(page).build();
+        await linkHelper.signOut.click();
+    });
+
+    test('Legal Officer creates Respondent Review Direction',   async ({ page }) => {
+        await idamPage.login(legalOfficerCredentials);
+        await pageHelper.getCase(caseId);
+        await new RespondentReviewDirection(page).submit();
+        await linkHelper.signOut.click();
+    });
+
+    test('Home Office Officer (respondent) responds to appeal response from Appellant/Legal Rep',   async ({ page }) => {
+        await idamPage.login(homeOfficeOfficerCredentials);
+        await page.goto(envUrl + '/cases/case-details/' + caseId);
+        await new UploadAppealResponse(page).upload();
+        await linkHelper.signOut.click();
+    });
+
+    test('Legal Officer Force case - hearing reqs, thus bypassing Appellant/Legal Rep needing to review the HO decision',   async ({ page }) => {
+        await idamPage.login(legalOfficerCredentials);
+        await pageHelper.getCase(caseId);
+        await new ForceCaseHearingReqs(page).submit();
+        await linkHelper.signOut.click();
+    });
+
+    test('Legal Officer Admin submit hearing requirements (acting as Legal Rep)',   async ({ page }) => {
+        await idamPage.login(legalOfficerAdminCredentials);
+        await pageHelper.getCase(caseId);
+        await new SubmitHearingRequirements(page).submit()
+        await linkHelper.signOut.click();
+    });
+
+    test('Legal Officer to review hearing requirements',   async ({ page }) => {
+        await idamPage.login(legalOfficerCredentials);
+        await pageHelper.getCase(caseId);
+        await new ReviewHearingRequirements(page).submit();
+        await linkHelper.signOut.click();
+    });
+
 });
 
