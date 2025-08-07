@@ -1,6 +1,6 @@
 import moment from "moment/moment";
 import { Page } from "@playwright/test";
-import { appellant, sponsor, legalRepresentative, runningEnv } from '../detainedConfig';
+import { appellant, sponsor, legalRepresentative, runningEnv, outOfCountryAddress } from '../detainedConfig';
 import { detentionFacility } from '../fixtures/detentionFacilities';
 import { ButtonHelper } from '../helpers/ButtonHelper';
 
@@ -62,67 +62,70 @@ export class CreateAppeal {
       await this.page.check(`#appellantInUk_${yesNo}`);
       await this.buttonHelper.continueButton.click();
    }
-//
-//
-//   async outOfCountryDecision(appealDecision: string = 'refusalOfHumanRights', inTime: boolean = true) {
-//     let currentUrl: string;
-//     const inOutOfTimeDate = inTime
-//         ? moment().subtract(5, 'days')
-//         : moment().subtract(2, 'months');
-//
-//     switch (appealDecision) {
-//       case 'refusalOfHumanRights':
-//         await I.click('#outOfCountryDecisionType-refusalOfHumanRights');
-//         await I.clickContinue();
-//         currentUrl = await I.grabCurrentUrl();
-//         if (currentUrl.includes('startAppealentryClearanceDecision')) {
-//           await I.fillField('#gwfReferenceNumber', '123456789');
-//           await I.fillField('#dateEntryClearanceDecision-day', inOutOfTimeDate.date().toString());
-//           await I.fillField('#dateEntryClearanceDecision-month', (inOutOfTimeDate.month() + 1).toString());
-//           await I.fillField('#dateEntryClearanceDecision-year', inOutOfTimeDate.year().toString());
-//           await I.clickContinue();
-//         }
-//         break;
-//       case 'refusalOfProtection':
-//         await I.click('#outOfCountryDecisionType-refusalOfProtection');
-//         await I.clickContinue();
-//         currentUrl = await I.grabCurrentUrl();
-//         if (currentUrl.includes('startAppealdepartureDate')) {
-//           await I.fillField('#dateClientLeaveUk-day', inOutOfTimeDate.date().toString());
-//           await I.fillField('#dateClientLeaveUk-month', (inOutOfTimeDate.month() + 1).toString());
-//           await I.fillField('#dateClientLeaveUk-year', inOutOfTimeDate.year().toString());
-//           await I.clickContinue();
-//           await this.setHomeOfficeDetails(inTime, 'decisionLetterReceivedDate');
-//         }
-//         break;
-//       case 'removalOfClient':
-//         await I.click('#outOfCountryDecisionType-removalOfClient');
-//         await I.clickContinue();
-//         currentUrl = await I.grabCurrentUrl();
-//         if (currentUrl.includes('startAppealhomeOfficeDecision')) {
-//           await I.fillField('#homeOfficeReferenceNumber', '123456789');
-//           await I.fillField('#day-label-decisionLetterReceivedDate-day', inOutOfTimeDate.date().toString());
-//           await I.fillField('#month-label-decisionLetterReceivedDate-month', (inOutOfTimeDate.month() + 1).toString());
-//           await I.fillField('#year-label-decisionLetterReceivedDate-year', inOutOfTimeDate.year().toString());
-//           await I.clickContinue();
-//           await this.setHomeOfficeDetails(inTime, 'decisionLetterReceivedDate');
-//         }
-//         break;
-//       case 'refusePermit':
-//         await I.click('#outOfCountryDecisionType-refusePermit');
-//         await I.clickContinue();
-//         currentUrl = await I.grabCurrentUrl();
-//         if (currentUrl.includes('startAppealentryClearanceDecision')) {
-//           await I.fillField('#gwfReferenceNumber', '123456789');
-//           await I.fillField('#dateEntryClearanceDecision-day', inOutOfTimeDate.date().toString());
-//           await I.fillField('#dateEntryClearanceDecision-month', (inOutOfTimeDate.month() + 1).toString());
-//           await I.fillField('#dateEntryClearanceDecision-year', inOutOfTimeDate.year().toString());
-//           await I.clickContinue();
-//         }
-//         break;
-//     }
-//   }
-//
+
+   //Out of country flow
+    async outOfCountryDecision(appealDecision: string = 'refusalOfHumanRights', inTime: boolean = true): Promise<void> {
+        const { page } = this;
+        const inOutOfTimeDate = inTime
+            ? moment().subtract(5, 'days')
+            : moment().subtract(2, 'months');
+        let currentUrl: string;
+
+        switch (appealDecision) {
+            case 'refusalOfHumanRights':
+                await page.locator('#outOfCountryDecisionType-refusalOfHumanRights').click();
+                await this.buttonHelper.continueButton.click();
+                await this.page.waitForTimeout(2000);
+                currentUrl = page.url();
+                if (currentUrl.includes('startAppealentryClearanceDecision')) {
+                    await page.locator('#gwfReferenceNumber').fill('123456789');
+                    await page.locator('#dateEntryClearanceDecision-day').fill(inOutOfTimeDate.date().toString());
+                    await page.locator('#dateEntryClearanceDecision-month').fill((inOutOfTimeDate.month() + 1).toString());
+                    await page.locator('#dateEntryClearanceDecision-year').fill(inOutOfTimeDate.year().toString());
+                    await this.buttonHelper.continueButton.click();
+                }
+                break;
+            case 'refusalOfProtection':
+                await page.locator('#outOfCountryDecisionType-refusalOfProtection').click();
+                await this.buttonHelper.continueButton.click();
+                await this.page.waitForTimeout(2000);
+                currentUrl = page.url();
+                if (currentUrl.includes('startAppealdepartureDate')) {
+                    await page.locator('#dateClientLeaveUk-day').fill(inOutOfTimeDate.date().toString());
+                    await page.locator('#dateClientLeaveUk-month').fill((inOutOfTimeDate.month() + 1).toString());
+                    await page.locator('#dateClientLeaveUk-year').fill(inOutOfTimeDate.year().toString());
+                    // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
+                    // if we just try and click continue it stays on the tribunal page and the test fails - only happens in ICC
+                    await this.page.keyboard.press('Tab');
+                    await this.buttonHelper.continueButton.click();
+                    await this.setHomeOfficeDetails(inTime, 'decisionLetterReceivedDate');
+                }
+                break;
+            case 'removalOfClient':
+                await page.locator('#outOfCountryDecisionType-removalOfClient').click();
+                await this.buttonHelper.continueButton.click();
+                await this.page.waitForTimeout(2000);
+                currentUrl = page.url();
+                if (currentUrl.includes('startAppealhomeOfficeDecision')) {
+                    await this.setHomeOfficeDetails(inTime, 'decisionLetterReceivedDate');
+                    await this.buttonHelper.continueButton.click();
+                }
+                break;
+            case 'refusePermit':
+                await page.locator('#outOfCountryDecisionType-refusePermit').click();
+                await this.buttonHelper.continueButton.click();
+                await this.page.waitForTimeout(2000);
+                currentUrl = page.url();
+                if (currentUrl.includes('startAppealentryClearanceDecision')) {
+                    await page.locator('#gwfReferenceNumber').fill('123456789');
+                    await page.locator('#dateEntryClearanceDecision-day').fill(inOutOfTimeDate.date().toString());
+                    await page.locator('#dateEntryClearanceDecision-month').fill((inOutOfTimeDate.month() + 1).toString());
+                    await page.locator('#dateEntryClearanceDecision-year').fill(inOutOfTimeDate.year().toString());
+                    await this.buttonHelper.continueButton.click();
+                }
+                break;
+        }
+    }
    async inDetention(yesNo: string = 'Yes') {
       await this.page.check(`#appellantInDetention_${yesNo}`);
       await this.buttonHelper.continueButton.click();
@@ -178,19 +181,19 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
-    async setHomeOfficeDetails(inTime: boolean = true, fieldPrefix: string = 'homeOfficeDecisionDate') {
-        const homeOfficeLetterDate = inTime ? moment().subtract(5, 'days') : moment().subtract(20, 'days');
-
-        await this.page.fill('#homeOfficeReferenceNumber', '12345');
-        await this.page.fill(`#${fieldPrefix}-day`, homeOfficeLetterDate.date().toString());
-        await this.page.fill(`#${fieldPrefix}-month`, (homeOfficeLetterDate.month() + 1).toString());
-        await this.page.fill(`#${fieldPrefix}-year`, homeOfficeLetterDate.year().toString());
-        // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
-        // if we just try and click continue it stays on the tribunal page and the test fails - only happens in ICC
-        await this.page.keyboard.press('Tab');
-        await this.page.waitForSelector('.error-message', { state: 'hidden' });
-        await this.buttonHelper.continueButton.click();
-    }
+   async setHomeOfficeDetails(inTime: boolean = true, fieldPrefix: string = 'homeOfficeDecisionDate') {
+       const homeOfficeLetterDate = inTime ? moment().subtract(5, 'days') : moment().subtract(20, 'days');
+       await this.page.fill('#homeOfficeReferenceNumber', '12345');
+       // await this.page.keyboard.press('Tab');
+       await this.page.fill(`#${fieldPrefix}-day`, homeOfficeLetterDate.date().toString());
+       await this.page.fill(`#${fieldPrefix}-month`, (homeOfficeLetterDate.month() + 1).toString());
+       await this.page.fill(`#${fieldPrefix}-year`, homeOfficeLetterDate.year().toString());
+       // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
+       // if we just try and click continue it stays on the tribunal page and the test fails - only happens in ICC
+       await this.page.keyboard.press('Tab');
+       await this.page.waitForSelector('.error-message', { state: 'hidden' });
+       await this.buttonHelper.continueButton.click();
+   }
 
    async uploadNoticeOfDecision() {
        await this.page.locator('button:text("Add new")').click();
@@ -268,16 +271,13 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
-//   async setOutOfCountryAddress(hasAddress: 'Yes' | 'No' = 'Yes') {
-//     await I.click(`#hasCorrespondenceAddress_${hasAddress}`);
-//
-//     if (hasAddress === 'Yes') {
-//       const outOfCountryAddress = '123 Example Street, Example City, Example Country, AB12 3CD';
-//       await I.fillField('#appellantOutOfCountryAddress', outOfCountryAddress);
-//     }
-//
-//     await I.clickContinue();
-//   }
+    async setOutOfCountryAddress(hasAddress: 'Yes' | 'No' = 'Yes') {
+        await this.page.locator(`#hasCorrespondenceAddress_${hasAddress}`).click();
+        if (hasAddress === 'Yes') {
+            await this.page.locator('#appellantOutOfCountryAddress').fill(outOfCountryAddress);
+        }
+        await this.buttonHelper.continueButton.click();
+    }
 
    async groundsOfAppeal() {
        await this.page.click('#appealGroundsEuRefusal_values-appealGroundsEuRefusal');
@@ -299,6 +299,17 @@ export class CreateAppeal {
        await this.page.waitForSelector('.error-message', { state: 'hidden' });
        await this.buttonHelper.continueButton.click();
    }
+
+    async setAppellentContactPreference(preference: string = 'EMAIL') {
+        if (preference === 'EMAIL') {
+            await this.page.check('#contactPreference-wantsEmail');
+            await this.page.fill('#email', appellant.email);
+        } else {
+            await this.page.check('#contactPreference-wantsSms');
+            await this.page.fill('#mobileNumber', appellant.mobile);
+        }
+        await this.buttonHelper.continueButton.click();
+    }
 
    async setNationality(hasNationality: boolean = true){
        if (hasNationality){

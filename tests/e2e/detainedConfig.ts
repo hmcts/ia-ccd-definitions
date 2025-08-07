@@ -34,6 +34,8 @@ export const homeOfficeOfficerCredentials = {
     password: " AldgateT0wer"
 }
 
+export const outOfCountryAddress = '123 Example Street, Example City, Example Country, AB12 3CD';
+
 
 export const appellant = {
     title: 'Mr',
