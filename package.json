@@ -40,6 +40,7 @@
     "test:NonDetainedToDetainedRepresentedPlaywright": "yarn playwright install && npx playwright test --headed --project chromium --grep @NonDetainedToDetainedRepresentedPlaywright",
     "test:LegalOfficerAdminDetainedAppellantInPersonPlaywright": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalOfficerAdminDetainedAppellantInPersonPlaywright",
     "test:LegalAdminDetainedRepresentedToNonDetainedPlaywright": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalAdminDetainedRepresentedToNonDetainedPlaywright",
+    "test:LegalAdminDetainedRepresentedPlaywright":  "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalAdminDetainedRepresentedPlaywright",
     "clean": "rm -rf target/",
     "decrypt": "node bin/decrypt.js",
     "copy-json": "bin/copy-json.sh",
