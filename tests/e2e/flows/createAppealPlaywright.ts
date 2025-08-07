@@ -178,19 +178,19 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
-   async setHomeOfficeDetails(inTime: boolean = true) {
-       const homeOfficeLetterDate = inTime ? moment().subtract(5, 'days') : moment().subtract(20, 'days');
-       
-       await this.page.fill('#homeOfficeReferenceNumber', '12345');
-       await this.page.fill('#homeOfficeDecisionDate-day', homeOfficeLetterDate.date().toString());
-       await this.page.fill('#homeOfficeDecisionDate-month', (homeOfficeLetterDate.month() + 1).toString());
-       await this.page.fill('#homeOfficeDecisionDate-year', homeOfficeLetterDate.year().toString());
-       // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
-       // if we just try and click continue it stays on the tribunal page and the test fails - only happens in ICC
-       await this.page.keyboard.press('Tab');
-       await this.page.waitForSelector('.error-message', { state: 'hidden' });
-       await this.buttonHelper.continueButton.click();
-   }
+    async setHomeOfficeDetails(inTime: boolean = true, fieldPrefix: string = 'homeOfficeDecisionDate') {
+        const homeOfficeLetterDate = inTime ? moment().subtract(5, 'days') : moment().subtract(20, 'days');
+
+        await this.page.fill('#homeOfficeReferenceNumber', '12345');
+        await this.page.fill(`#${fieldPrefix}-day`, homeOfficeLetterDate.date().toString());
+        await this.page.fill(`#${fieldPrefix}-month`, (homeOfficeLetterDate.month() + 1).toString());
+        await this.page.fill(`#${fieldPrefix}-year`, homeOfficeLetterDate.year().toString());
+        // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
+        // if we just try and click continue it stays on the tribunal page and the test fails - only happens in ICC
+        await this.page.keyboard.press('Tab');
+        await this.page.waitForSelector('.error-message', { state: 'hidden' });
+        await this.buttonHelper.continueButton.click();
+    }
 
    async uploadNoticeOfDecision() {
        await this.page.locator('button:text("Add new")').click();
