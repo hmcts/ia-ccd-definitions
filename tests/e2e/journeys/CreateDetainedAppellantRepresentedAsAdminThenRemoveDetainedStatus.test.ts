@@ -1,16 +1,15 @@
 import { test } from '@playwright/test';
-import { envUrl, legalOfficerAdminCredentials} from '../detainedConfig';
-import {IdamPage} from "../page-objects/pages/idam.po";
-import {LinkHelper} from "../helpers/LinkHelper";
-import {PageHelper} from "../helpers/PageHelper";
-import { ButtonHelper } from "../helpers/ButtonHelper";
-import { ValidationHelper } from "../helpers/ValidationHelper";
-
-import {CreateAppeal} from "../flows/createAppealPlaywright";
-import {CreateCasePage} from "../page-objects/pages/createCase_page";
-import { SubmitYourAppeal } from '../flows/events/submitYourAppealPlaywright';
-import {RemoveDetainedStatus} from "../flows/events/removeDetainedStatusPlaywright";
-import {imageLocators} from "../fixtures/imageLocators";
+import { envUrl, legalOfficerAdminCredentials } from '../detainedConfig';
+import { IdamPage } from '../page-objects/pages/idam.po';
+import { LinkHelper } from '../helpers/LinkHelper';
+import { PageHelper } from '../helpers/PageHelper';
+import { ButtonHelper } from '../helpers/ButtonHelper';
+import { ValidationHelper } from '../helpers/ValidationHelper';
+import { CreateAppeal } from '../flows/createAppeal';
+import { CreateCasePage } from '../page-objects/pages/createCase_page';
+import { SubmitYourAppeal } from '../flows/events/submitYourAppeal';
+import { RemoveDetainedStatus } from '../flows/events/removeDetainedStatus';
+import { imageLocators } from '../fixtures/imageLocators';
 
 let caseId: string;
 const inTime: boolean = true;
@@ -23,7 +22,7 @@ let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
 let submitYourAppeal: SubmitYourAppeal;
 
-test.describe('Legal Admin creates Detained Appeal', { tag: '@LegalAdminDetainedRepresentedToNonDetainedPlaywright' }, () => {
+test.describe('Legal Admin creates Detained Appeal then removes detained status', { tag: '@LegalAdminDetainedRepresentedToNonDetainedICC' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -71,9 +70,13 @@ test.describe('Legal Admin creates Detained Appeal', { tag: '@LegalAdminDetained
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
         await submitYourAppeal.submit(false, inTime);
 
+        await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManual.locator, imageLocators.detained.representedManual.name);
+        await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
+
         await new RemoveDetainedStatus(page).removeStatus();
-        await validationHelper.validateLabelNotDisplayed(imageLocators.representedManual.locator);
-        await validationHelper.validateCaseFlagExists('Detained individual', 'Inactive');
+
+        await validationHelper.validateLabelNotDisplayed(imageLocators.detained.representedManual.locator);
+        await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.representedManual.locator, imageLocators.nonDetained.representedManual.name);
         await validationHelper.validateDataOnAppealTabDetainedStatusRemoved();
         await validationHelper.validateDataOnAppellantTabDetainedStatusRemoved(detentionLocation);
 
@@ -115,9 +118,13 @@ test.describe('Legal Admin creates Detained Appeal', { tag: '@LegalAdminDetained
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
         await submitYourAppeal.submit(false, inTime);
 
+        await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManual.locator, imageLocators.detained.representedManual.name);
+        await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
+
         await new RemoveDetainedStatus(page).removeStatus();
-        await validationHelper.validateLabelNotDisplayed(imageLocators.representedManual.locator);
-        await validationHelper.validateCaseFlagExists('Detained individual', 'Inactive');
+
+        await validationHelper.validateLabelNotDisplayed(imageLocators.detained.representedManual.locator);
+        await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.representedManual.locator, imageLocators.nonDetained.representedManual.name);
         await validationHelper.validateDataOnAppealTabDetainedStatusRemoved();
         await validationHelper.validateDataOnAppellantTabDetainedStatusRemoved(detentionLocation);
 

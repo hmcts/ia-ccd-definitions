@@ -15,12 +15,14 @@ export class ValidationHelper {
     }
 
     async validateLabelDisplayed(locator: string, label: string) {
+        await this.tabsHelper.selectTab('Overview');
         await expect(this.page.locator(locator), 'Label is not being displayed when it should').toBeVisible();
         const src:string = await this.page.locator(locator).getAttribute('src');
         expect(src, 'Expected label not found').toContain(label);
     }
 
     async validateLabelNotDisplayed(locator: string) {
+        await this.tabsHelper.selectTab('Overview');
         await expect(this.page.locator(locator), 'The image is being displayed when it should not.').not.toBeVisible();
     }
 

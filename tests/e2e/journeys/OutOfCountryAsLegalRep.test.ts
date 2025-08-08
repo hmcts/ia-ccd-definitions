@@ -1,14 +1,11 @@
 import { test } from '@playwright/test';
-import {
-    envUrl,
-    legalRepresentativeCredentials,
-} from '../detainedConfig';
+import { envUrl, legalRepresentativeCredentials } from '../detainedConfig';
 import { IdamPage } from '../page-objects/pages/idam.po';
 import { CreateCasePage } from '../page-objects/pages/createCase_page';
-import { CreateAppeal } from '../flows/createAppealPlaywright';
+import { CreateAppeal } from '../flows/createAppeal';
 import { LinkHelper } from'../helpers/LinkHelper';
 import { PageHelper } from '../helpers/PageHelper';
-import { SubmitYourAppeal } from '../flows/events/submitYourAppealPlaywright';
+import { SubmitYourAppeal } from '../flows/events/submitYourAppeal';
 
 let caseId: string;
 const inTime = true;
@@ -19,7 +16,7 @@ let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 
 
-test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@OutOfCountryAsLegalRepPlaywright' }, () => {
+test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@OutOfCountryAsLegalRep' }, () => {
 
     test.beforeEach(async ({ page }) => {
         idamPage = new IdamPage(page);

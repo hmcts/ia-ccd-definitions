@@ -7,26 +7,26 @@ import {
 } from '../detainedConfig';
 import { IdamPage } from '../page-objects/pages/idam.po';
 import { CreateCasePage } from '../page-objects/pages/createCase_page';
-import { CreateAppeal } from '../flows/createAppealPlaywright';
+import { CreateAppeal } from '../flows/createAppeal';
 import { LinkHelper } from'../helpers/LinkHelper';
 import { PageHelper } from '../helpers/PageHelper';
 import { ValidationHelper } from '../helpers/ValidationHelper';
-import { SubmitYourAppeal } from '../flows/events/submitYourAppealPlaywright';
-import { CreateServiceRequest } from '../flows/events/createServiceRequestPlaywright';
+import { SubmitYourAppeal } from '../flows/events/submitYourAppeal';
+import { CreateServiceRequest } from '../flows/events/createServiceRequest';
 import { PaymentPage } from '../page-objects/pages/payment_page';
-import { S94b } from '../flows/events/setS94bStatusPlaywright';
-import { UpdateDetentionLocation } from '../flows/events/updateDetentionLocationPlaywright';
-import { RequestHomeOfficeData } from '../flows/events/requestHomeOfficeDataPlaywright';
-import { GenerateListCMR } from  '../flows/events/generateListCMRTaskPlaywright';
-import { RespondentEvidenceDirection } from '../flows/events/respondentEvidenceDirectionPlaywright';
-import { HomeOfficeBundle } from '../flows/events/homeOfficeBundlePlaywright';
-import { CaseBuildingDirection } from '../flows/events/caseBuildingDirectionPlaywright';
-import { BuildYourCase } from '../flows/events/buildYourCasePlaywright';
-import { RespondentReviewDirection } from '../flows/events/respondentReviewDirectionPlaywright';
-import { UploadAppealResponse } from '../flows/events/uploadAppealResponsePlaywright';
-import { ForceCaseHearingReqs} from '../flows/events/ForceCaseHearingReqsPlaywright';
-import { SubmitHearingRequirements } from '../flows/events/submitHearingRequirementsPlaywright';
-import { ReviewHearingRequirements } from '../flows/events/reviewHearingRequirementsPlaywright';
+import { S94b } from '../flows/events/setS94bStatus';
+import { UpdateDetentionLocation } from '../flows/events/updateDetentionLocation';
+import { RequestHomeOfficeData } from '../flows/events/requestHomeOfficeData';
+import { GenerateListCMR } from '../flows/events/generateListCMRTask';
+import { RespondentEvidenceDirection } from '../flows/events/respondentEvidenceDirection';
+import { HomeOfficeBundle } from '../flows/events/homeOfficeBundle';
+import { CaseBuildingDirection } from '../flows/events/caseBuildingDirection';
+import { BuildYourCase } from '../flows/events/buildYourCase';
+import { RespondentReviewDirection } from '../flows/events/respondentReviewDirection';
+import { UploadAppealResponse } from '../flows/events/uploadAppealResponse';
+import { ForceCaseHearingReqs} from '../flows/events/ForceCaseHearingReqs';
+import { SubmitHearingRequirements } from '../flows/events/submitHearingRequirements';
+import { ReviewHearingRequirements } from '../flows/events/reviewHearingRequirements';
 import { imageLocators } from '../fixtures/imageLocators';
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
@@ -53,7 +53,7 @@ let validationHelper: ValidationHelper;
 let updateDetentionLocation: UpdateDetentionLocation;
 
 
-test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedRepresentedPlaywright' }, () => {
+test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedRepresented' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -135,11 +135,12 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
     test('Legal Officer adds s94b appeal status, updates detention location and creates Respondent Direction', async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
-        await new S94b(page).setStatus('Yes');
 
-        await validationHelper.validateLabelDisplayed(imageLocators.detainedRepresented.locator, imageLocators.detainedRepresented.name);
-        await validationHelper.validateLabelDisplayed(imageLocators.s94b.locator, imageLocators.s94b.name);
+        await validationHelper.validateLabelDisplayed(imageLocators.detained.represented.locator, imageLocators.detained.represented.name);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
+
+        await new S94b(page).setStatus('Yes');
+        await validationHelper.validateLabelDisplayed(imageLocators.detained.representedS94b.locator, imageLocators.detained.representedS94b.name);
 
         await updateDetentionLocation.changeLocation(detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison'), detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
         await updateDetentionLocation.validateDataUpdated(detentionLocation);

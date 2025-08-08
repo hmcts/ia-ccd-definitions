@@ -4,16 +4,16 @@ import {
     legalRepresentativeCredentials,
     legalOfficerCredentials
 } from '../detainedConfig';
-import {IdamPage} from "../page-objects/pages/idam.po";
-import {LinkHelper} from "../helpers/LinkHelper";
-import {PageHelper} from "../helpers/PageHelper";
-import {ValidationHelper} from "../helpers/ValidationHelper";
-import {UpdateDetentionLocation} from "../flows/events/updateDetentionLocationPlaywright";
-import {CreateAppeal} from "../flows/createAppealPlaywright";
-import {CreateCasePage} from "../page-objects/pages/createCase_page";
-import {SubmitYourAppeal} from "../flows/events/submitYourAppealPlaywright";
-import { MarkAppealAsDetained } from '../flows/events/markAppealAsDetainedPlaywright';
-import { imageLocators } from "../fixtures/imageLocators";
+import { IdamPage } from '../page-objects/pages/idam.po';
+import { LinkHelper } from '../helpers/LinkHelper';
+import { PageHelper } from '../helpers/PageHelper';
+import { ValidationHelper } from '../helpers/ValidationHelper';
+import { UpdateDetentionLocation } from '../flows/events/updateDetentionLocation';
+import { CreateAppeal } from '../flows/createAppeal';
+import { CreateCasePage } from '../page-objects/pages/createCase_page';
+import { SubmitYourAppeal } from '../flows/events/submitYourAppeal';
+import { MarkAppealAsDetained } from '../flows/events/markAppealAsDetained';
+import { imageLocators } from '../fixtures/imageLocators';
 
 let caseId: string;
 const inTime: boolean = true;
@@ -23,7 +23,7 @@ let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let validationHelper: ValidationHelper;
 
-test.describe('Detained Appeal - Represented ', { tag: '@NonDetainedToDetainedRepresentedPlaywright' }, () =>
+test.describe('Leg Representative creates Non-Detained Appeal and Legal Officer converts it to a Detained Appeal  ', { tag: '@NonDetainedToDetainedRepresented' }, () =>
 {
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -34,7 +34,7 @@ test.describe('Detained Appeal - Represented ', { tag: '@NonDetainedToDetainedRe
         await page.goto(envUrl);
     });
 
-    test('Create Non-Detained Appeal as Legal Representative', async ({ page }) => {
+    test.only('Create Non-Detained Appeal as Legal Representative', async ({ page }) => {
         const typeOfAppeal: string = 'deprivation'; // Deprivation of citizenship (no payment required)
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalRepresentativeCredentials);
@@ -47,10 +47,10 @@ test.describe('Detained Appeal - Represented ', { tag: '@NonDetainedToDetainedRe
         await createAppeal.setGroundsOfAppeal(typeOfAppeal);
         await createAppeal.setAppellantBasicDetails(false);
         await createAppeal.setNationality(true);
-        await createAppeal.setAppellantAddress('nonDetained', 'Yes');
         await createAppeal.setAppellantContactPreference('Email');
+        await createAppeal.setAppellantAddress('nonDetained', 'Yes');
         await createAppeal.hasSponsor('No');
-        await createAppeal.hasDeportationOrder("No");
+        await createAppeal.hasDeportationOrder('No');
         await createAppeal.hasNewMatters('Yes');
         await createAppeal.hasOtherAppeals('No');
         await createAppeal.setLegalRepresentativeDetails();
@@ -64,11 +64,14 @@ test.describe('Detained Appeal - Represented ', { tag: '@NonDetainedToDetainedRe
         await linkHelper.signOut.click();
     });
 
-    test('Legal Officer creates Respondent Direction', async ({ page }) => {
+    test('Legal Officer converts Appeal to Detained', async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
+
+        await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.represented.locator, imageLocators.nonDetained.represented.name);
+
         await new MarkAppealAsDetained(page).setAsDetained(detentionLocation);
-        await validationHelper.validateLabelDisplayed(imageLocators.detainedRepresented.locator, imageLocators.detainedRepresented.name);
+        await validationHelper.validateLabelDisplayed(imageLocators.detained.represented.locator, imageLocators.detained.represented.name);
         await new UpdateDetentionLocation(page).validateDataUpdated(detentionLocation, true);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
 

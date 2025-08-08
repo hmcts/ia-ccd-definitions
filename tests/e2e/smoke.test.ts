@@ -5,9 +5,8 @@ import { CreateCasePage } from './page-objects/pages/createCase_page';
 import { LinkHelper} from "./helpers/LinkHelper";
 
 
-test.describe('Smoke Test',  { tag: '@smokePlaywright'}, () =>
+test.describe('Smoke Test',  { tag: '@smoke'}, () =>
 {
-
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
         await page.goto(envUrl);
