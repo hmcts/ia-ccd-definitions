@@ -34,7 +34,7 @@ test.describe('Leg Representative creates Non-Detained Appeal and Legal Officer 
         await page.goto(envUrl);
     });
 
-    test.only('Create Non-Detained Appeal as Legal Representative', async ({ page }) => {
+    test('Create Non-Detained Appeal as Legal Representative', async ({ page }) => {
         const typeOfAppeal: string = 'deprivation'; // Deprivation of citizenship (no payment required)
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalRepresentativeCredentials);
