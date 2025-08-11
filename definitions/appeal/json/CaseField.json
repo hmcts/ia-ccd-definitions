@@ -42,6 +42,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detaineeAddressSubTitle", "Label": " \r\nAddress of where the appellant is detained.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantAddressTitle", "Label": "  ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantAddressTitleDetained", "Label": "  ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantHasFixedAddress", "Label": "Does the appellant have a postal address?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantHasFixedAddressLabel", "Label": "**We will use the address of your legal practice.**", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantAddress", "Label": "Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -8230,6 +8231,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addReasonAppellantWasDetained", "Label": "Reason appellant was detained", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionRemovalDate", "Label": "Date detention status removed", "HintText": "For example, 03 04 2023", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionRemovalReason", "Label": "Reasons for removal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionRemovalReason", "Label": "Reasons for removal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInPersonManualTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInPersonManualInstructions", "Label": "Once you've submitted the request</br><ul><li>This appeal will have to be continued by internal users</li><li>To update the detention location, select the \"Update detention location\" event</li></ul>", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"}
 
 ]
