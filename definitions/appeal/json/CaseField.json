@@ -54,6 +54,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "countryGovUkOocAdminJ", "Label": "Country", "FieldType": "FixedList", "FieldTypeParameter": "isoCountriesGovUk", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "searchPostcode", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantEmailAddress", "Label": "Email", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantPhoneNumber", "Label": "Phone", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
 
   {
     "LiveFrom": "01/01/2018",
