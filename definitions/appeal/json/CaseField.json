@@ -6092,7 +6092,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removalDirectionsTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removalOrderOptions", "Label": "Removal directions set", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removalOrderDate", "Label": "Removal date and time" , "HintText": "For example 16 4 2021, 14 30 00", "FieldType": "DateTime", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removalOrderDate", "Label": "Removal date and time" , "HintText": "For example 16 4 2021, 14 30 00", "FieldType": "DateTime", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentSuccessful", "Label": "## Payment successful", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentAccountList", "Label": "Select a Payment by Account number from the list", "Value": "Select a number", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
