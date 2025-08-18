@@ -1939,6 +1939,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "listAssistIntegration", "CaseFieldID": "legalRepFamilyName", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "listHearingInListAssist","PageDisplayOrder": 1, "FieldShowCondition": "isIntegrated=\"DO_NOT_SHOW_ON_UI\"","ShowSummaryChangeOption": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "restoreStateFromAdjourn", "CaseFieldID": "isIntegrated", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "isIntegratedrestoreStateFromAdjourn", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y", "Publish": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "restoreStateFromAdjourn", "CaseFieldID": "appellantInDetention", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "isIntegratedrestoreStateFromAdjourn", "FieldShowCondition": "isIntegrated=\"DUMMY_FIELD_TO_HIDE\"", "ShowSummaryChangeOption": "N", "Publish": "Y", "RetainHiddenValue": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "decisionWithoutHearingListed", "CaseFieldID": "decisionWithoutHearingListed", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "decisionWithoutHearingListed", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
 
