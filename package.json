@@ -40,7 +40,7 @@
     "validate:json": "node bin/json-validator.js",
     "check:auth-caseevent-dupes": "node bin/auth-caseevent-duplicate-checker.js",
     "check:duplicates": "node bin/run-duplicate-checks.js",
-    "verify:definitions": "yarn check:duplicates && node bin/check-missing-system-user-fields.js",
+    "verify:definitions": "yarn check:duplicates && node bin/check-missing-system-user-fields.js && node bin/check-publish-mismatches.js",
     "test": "yarn lint && yarn validate:json && yarn verify:definitions",
     "test:unit": "jest",
     "test:coverage": "jest --coverage",
