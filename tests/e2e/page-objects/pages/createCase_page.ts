@@ -1,4 +1,5 @@
 import { Page } from "@playwright/test";
+import {runningEnv} from "../../detainedConfig";
 
 export class CreateCasePage {
   private jurisdictionLocator: string;
@@ -12,8 +13,18 @@ export class CreateCasePage {
   readonly createCaseLink = this.page.getByRole('link', { name: 'Create case' });
   readonly startButton = this.page.getByRole('button', { name: 'Start' })
 
+
   async createCase() {
+    const jurisdiction = this.page.locator('#cc-jurisdiction');
+    const caseType = this.page.locator('#cc-case-type');
+
     await this.createCaseLink.click();
+
+    // On Demo we have to manually select the options as there are a number of them for Jurisdiction
+    if (!['preview'].includes(runningEnv)) {
+      await jurisdiction.selectOption('IA');
+      await caseType.selectOption('Asylum');
+    }
     await this.startButton.click();
   }
 }

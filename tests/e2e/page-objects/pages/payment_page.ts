@@ -69,7 +69,7 @@ export class PaymentPage {
       if (['preview'].includes(runningEnv)){
         await this.page.goto(envUrl + '/cases/case-details/' + caseId);
       } else {
-         await this.buttonHelper.continueButton.click();
+        await this.page.getByText('Return to service request').click();
       }
     }
   }
