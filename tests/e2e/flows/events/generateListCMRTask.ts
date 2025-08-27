@@ -5,7 +5,7 @@ export class GenerateListCMR {
 
     constructor(public page: Page) {}
 
-    readonly generateCMRTaskButton = this.page.getByRole('button', { name: 'Generate' });
+    readonly generateCMRTaskButton = this.page.getByRole('button', { name: 'Submit' });
 
     async createTask() {
         await new PageHelper(this.page).selectNextStep('Generate List CMR Task');
