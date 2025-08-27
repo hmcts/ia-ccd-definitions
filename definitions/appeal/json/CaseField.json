@@ -42,6 +42,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detaineeAddressSubTitle", "Label": " \r\nAddress of where the appellant is detained.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantAddressTitle", "Label": "  ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantAddressTitleDetained", "Label": "  ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantHasFixedAddress", "Label": "Does the appellant have a postal address?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantHasFixedAddressLabel", "Label": "**We will use the address of your legal practice.**", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantAddress", "Label": "Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -934,6 +935,15 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_paymentPending_aip",
+    "Label": "## Current progress of the case\r\n\r\n![Payment pending](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## What happens next\r\nThe appeal is awaiting payment.",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_paymentPending_aip_manual",
     "Label": "## Current progress of the case\r\n\r\n![Payment pending](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)\r\n\r\n## What happens next\r\nThe appeal is awaiting payment.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
@@ -6091,7 +6101,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removalDirectionsTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removalOrderOptions", "Label": "Removal directions set", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removalOrderDate", "Label": "Removal date and time" , "HintText": "For example 16 4 2021, 14 30 00", "FieldType": "DateTime", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removalOrderDate", "Label": "Removal date and time" , "HintText": "For example 16 4 2021, 14 30 00", "FieldType": "DateTime", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentSuccessful", "Label": "## Payment successful", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "paymentAccountList", "Label": "Select a Payment by Account number from the list", "Value": "Select a number", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -7684,7 +7694,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_ejp", "Label": "![This case is an EJP case](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ejp_onItsOwn.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_aip_legally_represented_manual", "Label": "![The appellant in this case is legally represented](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legally_represented_overview_label.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_aip_manual_detained", "Label": "![The appellant in this detained case is representing themselves](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/aipm_detained.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_aip_manual_detained_from_aip_digital", "Label": "![The appellant in this detained case is representing themselves](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/aipm_detained.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_aip_manual_detained_s9", "Label": "![The appellant in this detained s94b case is representing themselves](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/aipm_detained_s9.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_legal_rep_manual_detained", "Label": "![The appellant in this detained case is legally represented](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_manual_detained.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_legal_rep_manual_detained_s9", "Label": "![The appellant in this detained s94b case is legally represented](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_manual_detained_s9.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -8207,6 +8216,7 @@
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "ID": "currentHearingId", "Label": "Current Hearing ID", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingIdList", "Label": "List of hearing IDs associated with case", "FieldType": "Collection", "FieldTypeParameter": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingDecisionList", "Label": "List of hearing IDs and decisions associated with case", "FieldType": "Collection", "FieldTypeParameter": "hearingDecision", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isVirtualHearing", "Label": "Virtual Hearing", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "TTL", "Label": " ", "FieldType": "TTL", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistTitle4", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -8230,6 +8240,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addReasonAppellantWasDetained", "Label": "Reason appellant was detained", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionRemovalDate", "Label": "Date detention status removed", "HintText": "For example, 03 04 2023", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionRemovalReason", "Label": "Reasons for removal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionRemovalReason", "Label": "Reasons for removal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInPersonManualTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInPersonManualInstructions", "Label": "Once you've submitted the request</br><ul><li>This appeal will have to be continued by internal users</li><li>To update the detention location, select the \"Update detention location\" event</li></ul>", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"}
 
 ]
