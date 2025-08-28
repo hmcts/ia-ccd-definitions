@@ -1,7 +1,7 @@
 # IA CCD Definitions
 
 ### Purpose
-Repo to hold json ccd definition files for IA Team
+Repo to hold JSON CCD definition files for the IA team.
 
 ### Prerequisites
 - Node version >=10.16.3
@@ -10,111 +10,114 @@ Repo to hold json ccd definition files for IA Team
 - `IA_CCD_SECRET_KEY` environment variable. Only for generating CCD Definitions for PROD.
 
 Helpful link to set up specific Node version:
-https://davidwalsh.name/upgrade-nodejs
-Use `latest` instead of `stable`
 
-yarn command to upgrade version
+https://davidwalsh.name/upgrade-nodejs
+
+(Use `latest` instead of `stable`.)
+
+Yarn command to upgrade version:
 ```
 yarn upgrade --latest
 ```
 
-Remove Node version from your local in case you have got conflicts
+Remove Node version from your local in case you have conflicts.
 
 ### Settings
-There are a few commands to run before using ia-definitions converter:
+There are a few commands to run before using the `ia-ccd-definitions` converter:
 
-Clone project to your local
+Clone the project to your local:
 ```
-git clone git@github.com:hmcts/ia-ccd-definitions.git
+git clone --recursive https://github.com/hmcts/ia-ccd-definitions.git
 ```
+(HTTPS) or
+```
+git clone --recursive git@github.com:hmcts/ia-ccd-definitions.git
+```
+(SSH).  The `--recursive` ensures that the contents of the inner `ccd-definition-processor` repo are also fetched; otherwise, this directory will remain empty and the following commands won't work.
 
-Change folder
+Change directory:
 ```
 cd ia-ccd-definitions
 ```
 
-Install needed yarn libs
+Install the necessary Yarn libraries:
 ```
 yarn install
 ```
 
-Setup local repo for `ccd-definition-processor`
+Set the local repo up for `ccd-definition-processor`:
 ```
 yarn setup
 ```
 
-### Usages
+### Usage
 
 #### JSON to Excel
 
-Make your desired changes in `definitions/appeal/json/*.json` files
-
-Run command
+Make your desired changes in the `definitions/appeal/json/*.json` files.  Then run:
 ```
 yarn generate-dev
 ```
+The resulting Excel file is written to the `target/appeal/xlsx` folder.
 
-Your generated Excel file is put to `target/appeal/xlsx` folder
-
-You can run upload task to generate excel based on JSON files and upload the file directly to dev environment. The task needs to have `CCD_DOCKER_PATH` pre-set.
+You can run the `upload` task to generate an Excel file based on JSON and upload it directly to the Dev environment. This requires the environment variable `CCD_DOCKER_PATH` to be set.
 ```
 yarn upload
 ```
 
-If you need CCD Definitions Excel files for environments other than DEV,
-there are specific tasks to use:
+If you need CCD Definitions Excel files for environments other than Dev, there are specific tasks to use:
 
 `yarn generate-demo`, `yarn generate-ithc`, `yarn generate-perftest`, `yarn generate-aat`, `yarn generate-prod` or `yarn generate-all`
 
-Tasks `yarn generate-prod` and `yarn generate-all` need additional environment variable called `IA_CCD_SECRET_KEY` to decrypt UserProfile tab. Ask someone from IA Team to get correct value.
+Tasks `yarn generate-prod` and `yarn generate-all` need an additional environment variable called `IA_CCD_SECRET_KEY` to decrypt the UserProfile tab. Ask someone from IA Team to give you the correct value.
 
 #### Excel to JSON
 
-Put your Excel file as `definitions/appeal/xlsx/ccd-appeal-config-base.xlsx`
-
-Run command
+Call your Excel file `definitions/appeal/xlsx/ccd-appeal-config-base.xlsx` and run the command:
 ```
 yarn generate-json
 ```
 
-Your generated JSON files are put to `definitions/appeal/json` folder
+Your resulting JSON files will appear in the `definitions/appeal/json` folder.
 
-#### Callback urls
+#### Callback URLs
 
-In dev the callback url will default to http://ia-case-api:8090. If you want to set your own value set an environment 
-variable called IA_CASE_URL pointing to the value you want. On some OS's this can be set to 
-http://host.docker.internal:8090 rather than setting up ia-case-api to point to the host machine.
+In Dev the callback URL will default to http://ia-case-api:8090. If you want to set your own value, set an environment 
+variable called `IA_CASE_URL` pointing to the value you want. On some operating systems this can be set to 
+http://host.docker.internal:8090 rather than setting up `ia-case-api` to point to the host machine.
 
 #### Create state diagram
 
-To create a state diagram based on the CCD definition run
+To create a state diagram based on the CCD definition, run:
 
 ```
 yarn create-state-diagram
 ```
 
-This will generate an image target/state_diagram.png. If you just want to generate a state diagram for a set of roles
-set the environment variable ROLES and a comma separated list of roles.
+This will generate an image written to `target/state_diagram.png`. If you just want to generate a state diagram for a set of roles,
+set the environment variable `ROLES` and a comma separated list of roles.
 
 ```
-ROLES=role1,role2 yarn create-state-diagram
+ROLES=role1,role2
+yarn create-state-diagram
 ```
 
-NB. State diagram is produced using plantUml which needs Graphviz see this pages for details and to troubleshoot
+**Note**: The state diagram is produced using [PlantUML](https://plantuml.com/) which needs [Graphviz](https://graphviz.org/); see these pages for details and to troubleshoot:
+
 https://plantuml.com/graphviz-dot
 
 
 ## Adding Git Conventions
 
 ### Include the git conventions.
-* Make sure your git version is at least 2.9 using the `git --version` command
+* Make sure your Git version is at least 2.9 using the `git --version` command
 * Run the following command:
 ```
 git config --local core.hooksPath .git-config/hooks
 ```
 Once the above is done, you will be required to follow specific conventions for your commit messages and branch names.
 
-If you violate a convention, the git error message will report clearly the convention you should follow and provide
+If you violate a convention, the Git error message will report clearly the convention you should follow and provide
 additional information where necessary.
 
 *Optional:*
@@ -122,7 +125,7 @@ additional information where necessary.
 
   It will automatically set the title for new PRs according to the first commit message, so you won't have to change it manually.
 
-  Note that it will also alter other behaviours in GitHub. Hopefully these will also be improvements to you.
+  Note that it will also alter other behaviour in GitHub. Hopefully these will also be useful to you.
 
 *In case of problems*
 
@@ -132,7 +135,7 @@ additional information where necessary.
 
    `git config --local --unset core.hooksPath`
 
-   Still, you shouldn't be doing it so make sure you get in touch with a Technical Lead soon afterwards.
+   Still, you shouldn't have to do this, so make sure you get in touch with a Technical Lead soon afterwards.
 
 ## CCD Definition Generation
 
