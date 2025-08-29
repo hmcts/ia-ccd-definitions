@@ -64,7 +64,7 @@ test.describe('Leg Representative creates Non-Detained Appeal and Legal Officer 
         await linkHelper.signOut.click();
     });
 
-    test.skip('Legal Officer converts Appeal to Detained', async ({ page }) => {
+    test('Legal Officer converts Appeal to Detained', async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
 
