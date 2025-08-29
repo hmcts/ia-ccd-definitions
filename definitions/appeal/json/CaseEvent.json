@@ -1724,7 +1724,7 @@
     "Name": "Mark appeal as paid",
     "Description": "Mark appeal as paid",
     "DisplayOrder": 53,
-    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided",
+    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;awaitingReasonsForAppeal;reasonsForAppealSubmitted;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
@@ -2516,8 +2516,7 @@
     "SecurityClassification": "Public",
     "ShowSummary": "N",
     "ShowEventNotes": "N",
-    "EndButtonLabel": "Handle hearing exception",
-    "Publish": "Y"
+    "EndButtonLabel": "Handle hearing exception"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2691,6 +2690,23 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "removeCaseManagerBulk",
+    "Name": "Remove Case Manager bulk",
+    "Description": "For removing case-manager role from cases by ID",
+    "DisplayOrder": 1,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit",
+    "Publish": "N"
   },
   {
     "LiveFrom": "01/01/2018",
@@ -2892,5 +2908,26 @@
     "PostConditionState": "*",
     "SecurityClassification": "Public",
     "ShowEventNotes": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "appellantInPersonManual",
+    "Name": "Appellant in Person - Manual",
+    "Description": "Update the case to Appellant in Person - Manual",
+    "DisplayOrder": 123,
+    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;adjourned;ftpaSubmitted;ftpaDecided;awaitingReasonsForAppeal;reasonsForAppealSubmitted;clarifyingQuestionsAnswersSubmitted;awaitingClarifyingQuestionsAnswers;awaitingCmaRequirements;remitted",
+    "PostConditionState": "*",
+    "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
+    "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Appellant in Person - Manual",
+    "Publish": "N"
   }
 ]
