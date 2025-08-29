@@ -21,7 +21,7 @@ import { CaseBuildingDirection } from '../flows/events/caseBuildingDirection';
 import { BuildYourCase } from '../flows/events/buildYourCase';
 import { RespondentReviewDirection } from '../flows/events/respondentReviewDirection';
 import { UploadAppealResponse } from '../flows/events/uploadAppealResponse';
-import { ForceCaseHearingReqs } from '../flows/events/ForceCaseHearingReqs';
+import { ForceCaseHearingReqs } from '../flows/events/forceCaseHearingReqs';
 import { SubmitHearingRequirements } from '../flows/events/submitHearingRequirements';
 import { ReviewHearingRequirements } from '../flows/events/reviewHearingRequirements';
 import { S94b } from '../flows/events/setS94bStatus';

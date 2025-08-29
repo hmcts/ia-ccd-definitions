@@ -3,7 +3,8 @@ import {
     envUrl,
     legalRepresentativeCredentials,
     legalOfficerCredentials,
-    homeOfficeOfficerCredentials
+    homeOfficeOfficerCredentials,
+    legalOfficerAdminCredentials
 } from '../detainedConfig';
 import { IdamPage } from '../page-objects/pages/idam.po';
 import { CreateCasePage } from '../page-objects/pages/createCase_page';
@@ -24,9 +25,10 @@ import { CaseBuildingDirection } from '../flows/events/caseBuildingDirection';
 import { BuildYourCase } from '../flows/events/buildYourCase';
 import { RespondentReviewDirection } from '../flows/events/respondentReviewDirection';
 import { UploadAppealResponse } from '../flows/events/uploadAppealResponse';
-import { ForceCaseHearingReqs} from '../flows/events/ForceCaseHearingReqs';
+import { ForceCaseHearingReqs} from '../flows/events/forceCaseHearingReqs';
 import { SubmitHearingRequirements } from '../flows/events/submitHearingRequirements';
 import { ReviewHearingRequirements } from '../flows/events/reviewHearingRequirements';
+import {ListTheCase} from "../flows/events/listTheCase";
 import { imageLocators } from '../fixtures/imageLocators';
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
@@ -210,4 +212,12 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await new ReviewHearingRequirements(page).submit();
         await linkHelper.signOut.click();
     });
+
+    test('Admin Legal Officer Lists the case',   async ({ page }) => {
+        await idamPage.login(legalOfficerAdminCredentials);
+        await pageHelper.getCase(caseId);
+        await new ListTheCase(page).list('No');
+        await linkHelper.signOut.click();
+    });
+
 });
