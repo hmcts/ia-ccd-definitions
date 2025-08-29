@@ -755,7 +755,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "cmrListing", "CaseFieldID": "appellantInDetention", "PageID": "cmrListing", "PageDisplayOrder": 1,"DisplayContext": "MANDATORY", "PageFieldDisplayOrder": 1,"ShowSummaryChangeOption": "N", "Publish": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "cmrReListing", "CaseFieldID": "appellantInDetention", "PageID": "cmrReListing", "PageDisplayOrder": 1,"DisplayContext": "MANDATORY", "PageFieldDisplayOrder": 1,"ShowSummaryChangeOption": "N", "Publish": "Y"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "sendToPreHearing", "CaseFieldID": "appellantInDetention", "PageID": "sendToPreHearing", "PageDisplayOrder": 1,"DisplayContext": "MANDATORY", "PageFieldDisplayOrder": 1,"ShowSummaryChangeOption": "N", "Publish": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "sendToPreHearing", "CaseFieldID": "dummyEmptyLabel", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "sendToPreHearing", "PageDisplayOrder": 1,  "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "sendToPreHearing", "CaseFieldID": "appellantInDetention", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "sendToPreHearing", "ShowSummaryChangeOption": "N", "Publish": "Y", "FieldShowCondition": "dummyEmptyLabel=\"DUMMY_FIELD_TO_HIDE\"", "RetainHiddenValue": "Y"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "generateListCmrTask", "CaseFieldID": "dummyEmptyLabel", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "generateListCmrTask", "PageDisplayOrder": 1,  "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "generateListCmrTask", "CaseFieldID": "appellantInDetention",  "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "generateListCmrTask", "ShowSummaryChangeOption": "N", "Publish": "Y", "FieldShowCondition": "dummyEmptyLabel=\"DUMMY_FIELD_TO_HIDE\"", "RetainHiddenValue": "Y"},
 
