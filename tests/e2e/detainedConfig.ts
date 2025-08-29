@@ -29,6 +29,11 @@ export const legalOfficerAdminCredentials = {
     password: " AldgateT0wer"
 }
 
+export const listingOfficerCredentials = {
+    username:"CRD_func_test_aat_stcw22@justice.gov.uk",
+    password: " AldgateT0wer"
+}
+
 export const homeOfficeOfficerCredentials = {
     username:"ia.respondentoffice.ccd@gmail.com",
     password: " AldgateT0wer"

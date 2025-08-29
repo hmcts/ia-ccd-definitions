@@ -1,10 +1,11 @@
-import { test } from '@playwright/test';
+import {expect, test} from '@playwright/test';
 import {
     envUrl,
     legalRepresentativeCredentials,
     legalOfficerCredentials,
     homeOfficeOfficerCredentials,
-    legalOfficerAdminCredentials
+    legalOfficerAdminCredentials,
+    listingOfficerCredentials
 } from '../detainedConfig';
 import { IdamPage } from '../page-objects/pages/idam.po';
 import { CreateCasePage } from '../page-objects/pages/createCase_page';
@@ -28,13 +29,16 @@ import { UploadAppealResponse } from '../flows/events/uploadAppealResponse';
 import { ForceCaseHearingReqs} from '../flows/events/forceCaseHearingReqs';
 import { SubmitHearingRequirements } from '../flows/events/submitHearingRequirements';
 import { ReviewHearingRequirements } from '../flows/events/reviewHearingRequirements';
-import {ListTheCase} from "../flows/events/listTheCase";
+import { ListTheCase } from "../flows/events/listTheCase";
+import { CreateCaseSummary } from "../flows/events/createCaseSummary";
+import { GenerateHearingBundle } from '../flows/events/generateHearingBundle';
+import { StartDecisionAndReasons } from "../flows/events/startDecisionAndReasons";
 import { imageLocators } from '../fixtures/imageLocators';
+
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
-
-let caseId: string;
+let caseId: string = '1756471716949364';
 const inTime: boolean = true;
 const cmrListing: boolean = true;
 const detentionLocation: string = 'immigrationRemovalCentre';
@@ -44,9 +48,6 @@ const detentionLocation: string = 'immigrationRemovalCentre';
 //const typeOfAppeal: string  = 'euSettlementScheme'; // Refusal of application under the EU Settlement Scheme (payment required)
 //const typeOfAppeal: string = 'revocationOfProtection'; // Revocation of a protection status (no payment required)
 const typeOfAppeal:string = 'protection'; // Refusal of protection claim (payment required)
-
-//const detainedRepresentedImageLocator: string = '//*[@id="journey_type_legal_rep_detained_appeal"]/dt/ccd-markdown/div/markdown/p/img';
-//const detainedRepresentedS94bImageLocator: string = '//*[@id="journey_type_legal_rep_detained_s9"]/dt/ccd-markdown/div/markdown/p/img';
 
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
@@ -213,11 +214,36 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await linkHelper.signOut.click();
     });
 
-    test('Admin Legal Officer Lists the case',   async ({ page }) => {
+    test('Admin Legal Officer to list the case',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await pageHelper.getCase(caseId);
         await new ListTheCase(page).list('No');
         await linkHelper.signOut.click();
     });
 
+    test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
+        const maxRetries: number = 10;
+        let retry: number = 0;
+
+        await idamPage.login(listingOfficerCredentials);
+        await pageHelper.getCase(caseId);
+        await new CreateCaseSummary(page).create();
+        await new GenerateHearingBundle(page).submit();
+
+        // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decisions and reasons
+        while (await page.locator('#progress_caseOfficer_finalBundling_in_new').isVisible()) {
+            if (retry < maxRetries) {
+                retry = retry + 1;
+                console.log('Refreshing webpage, try: ', retry);
+                await page.reload();
+                const visibleElement = await page.locator('#next-step');
+                await visibleElement.waitFor({state: 'visible'});
+            } else {
+                break;
+            }
+        }
+        await expect(page.locator(' #progress_caseOfficer_preHearing')).toBeVisible();
+        await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
+        await linkHelper.signOut.click();
+    });
 });
