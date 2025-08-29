@@ -233,8 +233,8 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decisions and reasons
         while (await page.locator('#progress_caseOfficer_finalBundling_in_new').isVisible()) {
             if (retry < maxRetries) {
-                retry = retry + 1;
-                console.log('Refreshing webpage, try: ', retry);
+                retry++;
+                console.log('Refreshing webpage, try: ' + retry + ' of ' + maxRetries);
                 await page.reload();
                 const visibleElement = await page.locator('#next-step');
                 await visibleElement.waitFor({state: 'visible'});
