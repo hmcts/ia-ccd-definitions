@@ -47,8 +47,8 @@ test.describe('Leg Representative creates Non-Detained Appeal and Legal Officer 
         await createAppeal.setGroundsOfAppeal(typeOfAppeal);
         await createAppeal.setAppellantBasicDetails(false);
         await createAppeal.setNationality(true);
-        await createAppeal.setAppellantAddress('nonDetained', 'Yes');
         await createAppeal.setAppellantContactPreference('Email');
+        await createAppeal.setAppellantAddress('nonDetained', 'Yes');
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');
         await createAppeal.hasNewMatters('Yes');

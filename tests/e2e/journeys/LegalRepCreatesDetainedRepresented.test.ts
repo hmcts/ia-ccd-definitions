@@ -5,7 +5,7 @@ import {
     legalOfficerCredentials,
     homeOfficeOfficerCredentials,
     legalOfficerAdminCredentials,
-    listingOfficerCredentials
+    listingOfficerCredentials, judgeCredentials
 } from '../detainedConfig';
 import { IdamPage } from '../page-objects/pages/idam.po';
 import { CreateCasePage } from '../page-objects/pages/createCase_page';
@@ -33,12 +33,14 @@ import { ListTheCase } from "../flows/events/listTheCase";
 import { CreateCaseSummary } from "../flows/events/createCaseSummary";
 import { GenerateHearingBundle } from '../flows/events/generateHearingBundle';
 import { StartDecisionAndReasons } from "../flows/events/startDecisionAndReasons";
+import { PrepareDecisionAndReasons } from "../flows/events/prepareDecisionAndReasons";
+import { CompleteDecisionAndReasons } from "../flows/events/completeDecisionAndReasons";
 import { imageLocators } from '../fixtures/imageLocators';
 
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
-let caseId: string = '1756471716949364';
+let caseId: string = '';
 const inTime: boolean = true;
 const cmrListing: boolean = true;
 const detentionLocation: string = 'immigrationRemovalCentre';
@@ -246,4 +248,13 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
         await linkHelper.signOut.click();
     });
+
+    test('Judge to start decision and reasons',   async ({ page }) => {
+        await idamPage.login(judgeCredentials);
+        await pageHelper.getCase(caseId);
+        await new PrepareDecisionAndReasons(page).generate('Yes');
+        await new CompleteDecisionAndReasons(page).upload('allowed');
+        await linkHelper.signOut.click();
+    });
+
 });

@@ -39,6 +39,13 @@ export const homeOfficeOfficerCredentials = {
     password: " AldgateT0wer"
 }
 
+export const judgeCredentials = {
+    username:"ia.iacjudge.ccd@gmail.com",
+    password: " AldgateT0wer"
+}
+
+
+
 export const outOfCountryAddress = '123 Example Street, Example City, Example Country, AB12 3CD';
 
 
