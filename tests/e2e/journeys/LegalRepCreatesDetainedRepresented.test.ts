@@ -40,7 +40,7 @@ import { imageLocators } from '../fixtures/imageLocators';
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
-let caseId: string = '1756722228337864';
+let caseId: string = '';
 const inTime: boolean = true;
 const cmrListing: boolean = true;
 const detentionLocation: string = 'immigrationRemovalCentre';
