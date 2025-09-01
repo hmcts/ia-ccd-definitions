@@ -16,7 +16,7 @@ export class SubmitHearingRequirements {
         await this.isAppellantGivingOralEvidence('Yes');
         await this.isWitnessesAttending('No');
         await this.isEvidenceFromOutsideUkInCountry('No');
-        await this.isInterpreterServicesNeeded('No');
+        await this.isInterpreterServicesNeeded('Yes', 'spoken');
         await this.isHearingRoomNeeded('No');
         await this.isHearingLoopNeeded('No');
         await this.buttonHelper.continueButton.click(); // Additional requests help page
@@ -54,9 +54,35 @@ export class SubmitHearingRequirements {
         await this.buttonHelper.continueButton.click();
     };
 
-    async isInterpreterServicesNeeded(interpreterNeeded: string = 'Yes') {
-        //TODO - need to add Yes option - as this then loads further interpreter specific pages
+    async isInterpreterServicesNeeded(interpreterNeeded: string = 'Yes', interpreterType: string = 'spoken') {
+        const interpreterTypeUpperCaseFirstLetter = interpreterType[0].toUpperCase() + interpreterType.slice(1);
+
         await this.page.locator(`#isInterpreterServicesNeeded_${interpreterNeeded}`).check();
+        await this.buttonHelper.continueButton.click();
+
+        if (interpreterNeeded === 'Yes') {
+            if (interpreterType === 'spoken') {
+                await this.page.check(`#appellantInterpreterLanguageCategory-${interpreterType}LanguageInterpreter`);
+                await this.buttonHelper.continueButton.click();
+                await this.page.selectOption('#appellantInterpreter' + interpreterTypeUpperCaseFirstLetter + 'Language_languageRefData', 'French');
+            }
+
+            if (interpreterType === 'sign') {
+                await this.page.check(`appellantInterpreterLanguageCategory-${interpreterType}LanguageInterpreter`);
+                await this.buttonHelper.continueButton.click();
+                await this.page.selectOption('#appellantInterpreter' + interpreterTypeUpperCaseFirstLetter + 'Language_languageRefData', 'British Sign Language (BSL)');
+            }
+
+            if (interpreterType === 'both') {
+                await this.page.check('#appellantInterpreterLanguageCategory-spokenLanguageInterpreter');
+                await this.page.check('#appellantInterpreterLanguageCategory-signLanguageInterpreter');
+                await this.buttonHelper.continueButton.click();
+                await this.page.selectOption('#appellantInterpreterSpokenLanguage_languageRefData', 'French');
+                await this.buttonHelper.continueButton.click();
+                await this.page.selectOption('#appellantInterpreterSignLanguage_languageRefData', 'British Sign Language (BSL)');
+            }
+            await this.buttonHelper.continueButton.click();
+        }
         await this.buttonHelper.continueButton.click();
     };
 
