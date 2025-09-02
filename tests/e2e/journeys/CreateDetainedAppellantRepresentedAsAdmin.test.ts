@@ -1,9 +1,9 @@
-import { test } from '@playwright/test';
+import {expect, test} from '@playwright/test';
 import {
     envUrl,
-    homeOfficeOfficerCredentials,
+    homeOfficeOfficerCredentials, judgeCredentials,
     legalOfficerAdminCredentials,
-    legalOfficerCredentials
+    legalOfficerCredentials, listingOfficerCredentials
 } from '../detainedConfig';
 import { IdamPage } from '../page-objects/pages/idam.po';
 import { LinkHelper } from '../helpers/LinkHelper';
@@ -26,9 +26,15 @@ import { SubmitHearingRequirements } from '../flows/events/submitHearingRequirem
 import { ReviewHearingRequirements } from '../flows/events/reviewHearingRequirements';
 import { S94b } from '../flows/events/setS94bStatus';
 import { imageLocators } from '../fixtures/imageLocators';
+import {CreateCaseSummary} from "../flows/events/createCaseSummary";
+import {GenerateHearingBundle} from "../flows/events/generateHearingBundle";
+import {StartDecisionAndReasons} from "../flows/events/startDecisionAndReasons";
+import {PrepareDecisionAndReasons} from "../flows/events/prepareDecisionAndReasons";
+import {CompleteDecisionAndReasons} from "../flows/events/completeDecisionAndReasons";
+import {ListTheCase} from "../flows/events/listTheCase";
 
 
-let caseId: string;
+let caseId: string = '';
 const inTime: boolean = true;
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
@@ -164,6 +170,47 @@ test.describe('Legal Admin creates Detained Appeal (ICC)', { tag: '@LegalAdminDe
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new ReviewHearingRequirements(page).submit();
+        await linkHelper.signOut.click();
+    });
+
+    test('Admin Legal Officer to list the case',   async ({ page }) => {
+        await idamPage.login(legalOfficerAdminCredentials);
+        await pageHelper.getCase(caseId);
+        await new ListTheCase(page).list('No');
+        await linkHelper.signOut.click();
+    });
+
+    test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
+        const maxRetries: number = 10;
+        let retry: number = 0;
+
+        await idamPage.login(listingOfficerCredentials);
+        await pageHelper.getCase(caseId);
+        await new CreateCaseSummary(page).create();
+        await new GenerateHearingBundle(page).submit();
+
+        // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decisions and reasons
+        while (await page.locator('#progress_caseOfficer_finalBundling_in_new').isVisible()) {
+            if (retry < maxRetries) {
+                retry++;
+                console.log('Refreshing webpage, try: ' + retry + ' of ' + maxRetries);
+                await page.reload();
+                const visibleElement = await page.locator('#next-step');
+                await visibleElement.waitFor({state: 'visible'});
+            } else {
+                break;
+            }
+        }
+        await expect(page.locator(' #progress_caseOfficer_preHearing')).toBeVisible();
+        await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
+        await linkHelper.signOut.click();
+    });
+
+    test('Judge to start decision and reasons',   async ({ page }) => {
+        await idamPage.login(judgeCredentials);
+        await pageHelper.getCase(caseId);
+        await new PrepareDecisionAndReasons(page).generate('Yes');
+        await new CompleteDecisionAndReasons(page).upload('allowed');
         await linkHelper.signOut.click();
     });
 
