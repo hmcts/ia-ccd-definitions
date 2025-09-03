@@ -181,26 +181,13 @@ test.describe('Legal Admin creates Detained Appeal (ICC)', { tag: '@LegalAdminDe
     });
 
     test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
-        const maxRetries: number = 10;
-        let retry: number = 0;
-
         await idamPage.login(listingOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new CreateCaseSummary(page).create();
         await new GenerateHearingBundle(page).submit();
 
-        // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decisions and reasons
-        while (await page.locator('#progress_caseOfficer_finalBundling_in_new').isVisible()) {
-            if (retry < maxRetries) {
-                retry++;
-                console.log('Refreshing webpage, try: ' + retry + ' of ' + maxRetries);
-                await page.reload();
-                const visibleElement = await page.locator('#next-step');
-                await visibleElement.waitFor({state: 'visible'});
-            } else {
-                break;
-            }
-        }
+        // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decision and reasons
+        await pageHelper.waitForHearingBundleToBeGenerated();
         await expect(page.locator(' #progress_caseOfficer_preHearing')).toBeVisible();
         await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
         await linkHelper.signOut.click();

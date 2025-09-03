@@ -21,4 +21,20 @@ export class PageHelper {
         await this.page.fill('#exuiCaseReferenceSearch', caseId);
         await this.page.getByRole( 'button', { name: 'Find' }).click();
     }
+
+    async waitForHearingBundleToBeGenerated() {
+        const maxRetries: number = 10;
+        let retry: number = 0;
+        while (await this.page.locator('#progress_caseOfficer_finalBundling_in_new').isVisible()) {
+            if (retry < maxRetries) {
+                retry++;
+                console.log('Refreshing webpage, try: ' + retry + ' of ' + maxRetries);
+                await this.page.reload();
+                const visibleElement = await this.page.locator('#next-step');
+                await visibleElement.waitFor({state: 'visible'});
+            } else {
+                break;
+            }
+        }
+    }
 }
