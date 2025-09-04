@@ -1662,7 +1662,7 @@
     "Name": "Decision without a hearing",
     "Description": "Decision without a hearing",
     "DisplayOrder": 49,
-    "PreConditionState(s)": "adjourned;respondentReview;submitHearingRequirements;listing",
+    "PreConditionState(s)": "adjourned;respondentReview;submitHearingRequirements;listing;decided",
     "PostConditionState": "finalBundling",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
@@ -2690,6 +2690,23 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
     "Publish": "Y"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "removeCaseManagerBulk",
+    "Name": "Remove Case Manager bulk",
+    "Description": "For removing case-manager role from cases by ID",
+    "DisplayOrder": 1,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit",
+    "Publish": "N"
   },
   {
     "LiveFrom": "01/01/2018",
