@@ -14,17 +14,21 @@ import { CreateCasePage } from '../page-objects/pages/createCase_page';
 import { SubmitYourAppeal } from '../flows/events/submitYourAppeal';
 import { MarkAppealAsDetained } from '../flows/events/markAppealAsDetained';
 import { imageLocators } from '../fixtures/imageLocators';
+import { CaseIdHelper } from "../helpers/CaseIdHelper";
 
-let caseId: string;
 const inTime: boolean = true;
 const detentionLocation: string = 'immigrationRemovalCentre';
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let validationHelper: ValidationHelper;
+let caseIdHelper: CaseIdHelper;
 
-test.describe('Leg Representative creates Non-Detained Appeal and Legal Officer converts it to a Detained Appeal  ', { tag: '@NonDetainedToDetainedRepresented' }, () =>
-{
+test.describe('Leg Representative creates Non-Detained Appeal and Legal Officer converts it to a Detained Appeal  ', { tag: '@NonDetainedToDetainedRepresented' }, () => {
+    test.beforeAll(async () => {
+        caseIdHelper = new CaseIdHelper();
+    });
+
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
         idamPage = new IdamPage(page);
@@ -57,8 +61,8 @@ test.describe('Leg Representative creates Non-Detained Appeal and Legal Officer 
         await createAppeal.isHearingRequired(true);
         await createAppeal.checkMyAnswers();
 
-        caseId = await pageHelper.grabCaseNumber();
-        console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
+        await caseIdHelper.setCaseId(await pageHelper.grabCaseNumber());
+        console.log('caseId>>>>>>>>>>>>>>>' + await caseIdHelper.getCaseId() + '<<<<<<<<<<<<<<<<<<<');
 
         await new SubmitYourAppeal(page).submit(true, inTime);
         await linkHelper.signOut.click();
@@ -66,7 +70,7 @@ test.describe('Leg Representative creates Non-Detained Appeal and Legal Officer 
 
     test('Legal Officer converts Appeal to Detained', async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
-        await pageHelper.getCase(caseId);
+        await pageHelper.getCase(await caseIdHelper.getCaseId());
 
         await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.represented.locator, imageLocators.nonDetained.represented.name);
 

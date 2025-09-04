@@ -10,19 +10,24 @@ import { CreateCasePage } from '../page-objects/pages/createCase_page';
 import { SubmitYourAppeal } from '../flows/events/submitYourAppeal';
 import { RemoveDetainedStatus } from '../flows/events/removeDetainedStatus';
 import { imageLocators } from '../fixtures/imageLocators';
+import { CaseIdHelper } from "../helpers/CaseIdHelper";
 
-let caseId: string;
 const inTime: boolean = true;
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let buttonHelper: ButtonHelper;
 let validationHelper: ValidationHelper;
+let caseIdHelper: CaseIdHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
 let submitYourAppeal: SubmitYourAppeal;
 
 test.describe('Legal Admin creates Detained Appeal then removes detained status', { tag: '@LegalAdminDetainedRepresentedToNonDetainedICC' }, () => {
+
+    test.beforeAll(async () => {
+        caseIdHelper = new CaseIdHelper();
+    });
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -66,8 +71,8 @@ test.describe('Legal Admin creates Detained Appeal then removes detained status'
         await createAppeal.checkMyAnswers();
         await buttonHelper.closeAndReturnToCaseDetailsButton.click();
 
-        caseId = await pageHelper.grabCaseNumber();
-        console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
+        await caseIdHelper.setCaseId(await pageHelper.grabCaseNumber());
+        console.log('caseId>>>>>>>>>>>>>>>' + await caseIdHelper.getCaseId() + '<<<<<<<<<<<<<<<<<<<');
         await submitYourAppeal.submit(false, inTime);
 
         await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManual.locator, imageLocators.detained.representedManual.name);
@@ -114,8 +119,8 @@ test.describe('Legal Admin creates Detained Appeal then removes detained status'
         await createAppeal.checkMyAnswers();
         await buttonHelper.closeAndReturnToCaseDetailsButton.click();
 
-        caseId = await pageHelper.grabCaseNumber();
-        console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
+        await caseIdHelper.setCaseId(await pageHelper.grabCaseNumber());
+        console.log('caseId>>>>>>>>>>>>>>>' + await caseIdHelper.getCaseId() + '<<<<<<<<<<<<<<<<<<<');
         await submitYourAppeal.submit(false, inTime);
 
         await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManual.locator, imageLocators.detained.representedManual.name);

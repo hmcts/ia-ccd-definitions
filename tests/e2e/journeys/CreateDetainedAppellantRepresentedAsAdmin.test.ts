@@ -32,15 +32,15 @@ import {StartDecisionAndReasons} from "../flows/events/startDecisionAndReasons";
 import {PrepareDecisionAndReasons} from "../flows/events/prepareDecisionAndReasons";
 import {CompleteDecisionAndReasons} from "../flows/events/completeDecisionAndReasons";
 import {ListTheCase} from "../flows/events/listTheCase";
+import { CaseIdHelper } from "../helpers/CaseIdHelper";
 
-
-let caseId: string = '';
 const inTime: boolean = true;
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let buttonHelper: ButtonHelper;
 let validationHelper: ValidationHelper;
+let caseIdHelper: CaseIdHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
 let submitYourAppeal: SubmitYourAppeal;
@@ -48,6 +48,10 @@ let submitYourAppeal: SubmitYourAppeal;
 const typeOfAppeal: string = 'revocationOfProtection'; // Revocation of a protection status (no payment required)
 
 test.describe('Legal Admin creates Detained Appeal (ICC)', { tag: '@LegalAdminDetainedRepresentedICC' }, () => {
+
+    test.beforeAll(async () => {
+        caseIdHelper = new CaseIdHelper();
+    });
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -59,7 +63,6 @@ test.describe('Legal Admin creates Detained Appeal (ICC)', { tag: '@LegalAdminDe
         createAppeal = new CreateAppeal(page);
         createCasePage = new CreateCasePage(page);
         submitYourAppeal = new SubmitYourAppeal(page);
-
         await page.goto(envUrl);
     });
 
@@ -90,8 +93,8 @@ test.describe('Legal Admin creates Detained Appeal (ICC)', { tag: '@LegalAdminDe
         await createAppeal.checkMyAnswers();
         await buttonHelper.closeAndReturnToCaseDetailsButton.click();
 
-        caseId = await pageHelper.grabCaseNumber();
-        console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
+        await caseIdHelper.setCaseId(await pageHelper.grabCaseNumber());
+        console.log('caseId>>>>>>>>>>>>>>>' + await caseIdHelper.getCaseId() + '<<<<<<<<<<<<<<<<<<<');
         await submitYourAppeal.submit(false, inTime);
 
         await linkHelper.signOut.click();
@@ -99,7 +102,7 @@ test.describe('Legal Admin creates Detained Appeal (ICC)', { tag: '@LegalAdminDe
 
     test('Legal Officer creates Respondent Direction', async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
-        await pageHelper.getCase(caseId);
+        await pageHelper.getCase(await caseIdHelper.getCaseId());
 
         await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManual.locator, imageLocators.detained.representedManual.name);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
@@ -119,70 +122,70 @@ test.describe('Legal Admin creates Detained Appeal (ICC)', { tag: '@LegalAdminDe
 
     test('Home Office Officer (respondent) review appeal and upload Home Office bundle',   async ({ page }) => {
         await idamPage.login(homeOfficeOfficerCredentials);
-        await page.goto(envUrl + '/cases/case-details/' + caseId);
+        await page.goto(envUrl + '/cases/case-details/' + await caseIdHelper.getCaseId());
         await new HomeOfficeBundle(page).upload();
         await linkHelper.signOut.click();
     });
 
     test('Legal Officer directs appellant/Legal Rep to build case',   async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
-        await pageHelper.getCase(caseId);
+        await pageHelper.getCase(await caseIdHelper.getCaseId());
         await new CaseBuildingDirection(page).submit();
         await linkHelper.signOut.click();
     });
 
     test('Legal Officer Admin build case (acting as Legal Rep)',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
-        await pageHelper.getCase(caseId);
+        await pageHelper.getCase(await caseIdHelper.getCaseId());
         await new BuildYourCase(page).build();
         await linkHelper.signOut.click();
     });
 
     test('Legal Officer creates Respondent Review Direction',   async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
-        await pageHelper.getCase(caseId);
+        await pageHelper.getCase(await caseIdHelper.getCaseId());
         await new RespondentReviewDirection(page).submit();
         await linkHelper.signOut.click();
     });
 
     test('Home Office Officer (respondent) responds to appeal response from Appellant/Legal Rep',   async ({ page }) => {
         await idamPage.login(homeOfficeOfficerCredentials);
-        await page.goto(envUrl + '/cases/case-details/' + caseId);
+        await page.goto(envUrl + '/cases/case-details/' + await caseIdHelper.getCaseId());
         await new UploadAppealResponse(page).upload();
         await linkHelper.signOut.click();
     });
 
     test('Legal Officer Force case - hearing reqs, thus bypassing Appellant/Legal Rep needing to review the HO decision',   async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
-        await pageHelper.getCase(caseId);
+        await pageHelper.getCase(await caseIdHelper.getCaseId());
         await new ForceCaseHearingReqs(page).submit();
         await linkHelper.signOut.click();
     });
 
     test('Legal Officer Admin submit hearing requirements (acting as Legal Rep)',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
-        await pageHelper.getCase(caseId);
+        await pageHelper.getCase(await caseIdHelper.getCaseId());
         await new SubmitHearingRequirements(page).submit()
         await linkHelper.signOut.click();
     });
 
     test('Legal Officer to review hearing requirements',   async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
-        await pageHelper.getCase(caseId);
+        await pageHelper.getCase(await caseIdHelper.getCaseId());
         await new ReviewHearingRequirements(page).submit();
         await linkHelper.signOut.click();
     });
 
     test('Admin Legal Officer to list the case',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
-        await pageHelper.getCase(caseId);
+        await pageHelper.getCase(await caseIdHelper.getCaseId());
         await new ListTheCase(page).list('No');
         await linkHelper.signOut.click();
     });
 
     test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
         await idamPage.login(listingOfficerCredentials);
-        await pageHelper.getCase(caseId);
+        await pageHelper.getCase(await caseIdHelper.getCaseId());
         await new CreateCaseSummary(page).create();
         await new GenerateHearingBundle(page).submit();
 
@@ -193,9 +196,9 @@ test.describe('Legal Admin creates Detained Appeal (ICC)', { tag: '@LegalAdminDe
         await linkHelper.signOut.click();
     });
 
-    test('Judge to start decision and reasons',   async ({ page }) => {
+    test('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
         await idamPage.login(judgeCredentials);
-        await pageHelper.getCase(caseId);
+        await pageHelper.getCase(await caseIdHelper.getCaseId());
         await new PrepareDecisionAndReasons(page).generate('Yes');
         await new CompleteDecisionAndReasons(page).upload('allowed');
         await linkHelper.signOut.click();

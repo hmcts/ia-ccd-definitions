@@ -6,17 +6,21 @@ import { CreateAppeal } from '../flows/createAppeal';
 import { LinkHelper } from'../helpers/LinkHelper';
 import { PageHelper } from '../helpers/PageHelper';
 import { SubmitYourAppeal } from '../flows/events/submitYourAppeal';
+import { CaseIdHelper } from "../helpers/CaseIdHelper";
 
-let caseId: string;
 const inTime = true;
 const typeOfAppeal = 'revocationOfProtection'; // Revocation of a protection status (no payment required)
 
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
-
+let caseIdHelper: CaseIdHelper;
 
 test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@OutOfCountryAsLegalRep' }, () => {
+
+    test.beforeAll(async () => {
+        caseIdHelper = new CaseIdHelper();
+    });
 
     test.beforeEach(async ({ page }) => {
         idamPage = new IdamPage(page);
@@ -50,8 +54,8 @@ test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@O
         const submitYourAppeal = new SubmitYourAppeal(page);
         await submitYourAppeal.submit(inTime);
 
-        caseId = await pageHelper.grabCaseNumber();
-        console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
+        await caseIdHelper.setCaseId(await pageHelper.grabCaseNumber());
+        console.log('caseId>>>>>>>>>>>>>>>' + await caseIdHelper.getCaseId() + '<<<<<<<<<<<<<<<<<<<');
 
         await linkHelper.signOut.click();
     });
