@@ -69,7 +69,7 @@ export class ValidationHelper {
 
     async validateDataOnAppellantTab() {
         const detentionFacilityList: string[] = ['Immigration removal centre', 'Prison', 'Other'];
-        const otherFacilityNameLocator: string = '#case-viewer-field-read--otherDetentionFacilityName';
+        const otherFacilityNameLocator: string = '#case-viewer-field-read--otherDetentionFacilityName > span > ccd-field-read > div > ccd-field-read-label > div > ccd-read-complex-field > ccd-read-complex-field-table > div > table > tbody > tr > td > span > ccd-field-read > div > ccd-field-read-label > div > ccd-read-text-field > span';
         const detentionFacilityPrisonNameLocator: string = '#case-viewer-field-read--prisonName';
         const detentionFacilityIrcNameLocator: string = '#case-viewer-field-read--ircName';
         const detentionBuildingLocator: string = '#case-viewer-field-read--detentionBuilding';
@@ -86,6 +86,7 @@ export class ValidationHelper {
         expect(detentionFacilityList, `Invalid detention facility detected: ${facilityType}`).toContain(facilityType);
 
         const detentionFacilityName: string = (facilityType === 'Other' ? await this.page.innerText(otherFacilityNameLocator) : (facilityType === 'Prison' ? await this.page.innerText(detentionFacilityPrisonNameLocator) : await this.page.innerText(detentionFacilityIrcNameLocator)));
+
 
         const detentionFacilityBuilding: string = await this.page.innerText(detentionBuildingLocator);
         const detentionFacilityAddress: string = await this.page.innerText(detentionAddressLocator);
@@ -106,7 +107,7 @@ export class ValidationHelper {
                 expect(detentionFacilityPostcode, `${facilityType} postcode must exist on the Appellant Tab`).toEqual(detentionFacility.prison.postcode)
                 break;
             case 'Other':
-                expect(detentionFacilityName, `${facilityType} facility name must exist on the Appellant Tab`).toEqual(detentionFacility.other.name);
+                expect(detentionFacilityName, `${facilityType} facility name must exist on the Appellant Tab.  Expected: ${detentionFacility.other.name}, Got: ${facilityType} `).toEqual(detentionFacility.other.name);
                 expect(detentionFacilityBuilding, `${facilityType} facility building must exist on the Appellant Tab`).toEqual(detentionFacility.other.building);
                 expect(detentionFacilityAddress, `${facilityType} facility address must exist on the Appellant Tab`).toEqual(detentionFacility.other.address);
                 expect(detentionFacilityPostcode, `${facilityType} facility postcode must exist on the Appellant Tab`).toEqual(detentionFacility.other.postcode);

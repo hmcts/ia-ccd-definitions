@@ -253,16 +253,13 @@ export class CreateAppeal {
    }
 
    // appellant address: non-detained journey and detained journey where facility is "Other"
-   async setAppellantAddress(journeyType: string = "detained", hasPostalAddress: string = 'Yes', updateDetentionLocationEvent: boolean = false) {
+   async setAppellantAddress(journeyType: string = "detained", hasPostalAddress: string = 'Yes') {
         if (journeyType !== 'detained') {
            await this.page.check(`#appellantHasFixedAddress_${hasPostalAddress}`);
        }
 
-
        if (hasPostalAddress === 'Yes') {
-           if (!updateDetentionLocationEvent) {
-               await this.page.getByText("I can't enter a UK postcode").click();
-           }
+           await this.page.getByText("I can't enter a UK postcode").click();
            await this.page.fill('#appellantAddress__detailAddressLine1', appellant.address.addressLine1);
            await this.page.fill('#appellantAddress__detailPostTown', appellant.address.postTown);
            await this.page.fill('#appellantAddress__detailPostCode', appellant.address.postcode);
