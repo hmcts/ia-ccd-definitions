@@ -131,7 +131,7 @@ additional information where necessary.
 
 1. Get in touch with your Technical Lead and inform them, so they can adjust the git hooks accordingly
 2. Instruct IntelliJ not to use Git Hooks for that commit or use git's `--no-verify` option if you are using the command-line
-3. If the rare eventuality that the above is not possible, you can disable enforcement of conventions using the following command
+3. In the rare event that the above is not possible, you can disable enforcement of conventions using the following command
 
    `git config --local --unset core.hooksPath`
 
@@ -231,7 +231,7 @@ The configuration for different environments is stored in `package.json` under t
 
 ### Legacy Scripts
 
-The legacy scripts are still available but will be deprecated in future releases:
+These legacy scripts are still available but will be deprecated in future releases:
 
 - `bin/generate-dev.sh`
 - `bin/generate-preview.sh`
