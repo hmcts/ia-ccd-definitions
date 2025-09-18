@@ -25,7 +25,7 @@ export const legalOfficerCredentials = {
 }
 
 export const legalOfficerAdminCredentials = {
-    username:"ia.adm1nofficer.ccd@gmail.com",
+    username: process.env.ENVIRONMENT === 'preview' ? "CRD_func_test_aat_adm66@justice.gov.uk" : "CRD_func_test_demo_admuser045@justice.gov.uk",
     password: " AldgateT0wer"
 }
 
@@ -40,8 +40,8 @@ export const homeOfficeOfficerCredentials = {
 }
 
 export const judgeCredentials = {
-    username:"ia.iacjudge.ccd@gmail.com",
-    password: " AldgateT0wer"
+    username: process.env.ENVIRONMENT === 'preview' ? "ia.iacjudge.ccd@gmail.com" : "Gupta.Singh1@ejudiciary.net",
+    password: process.env.ENVIRONMENT === 'preview' ? "AldgateT0wer" : "Testing123"
 }
 
 

@@ -227,13 +227,13 @@ export class ValidationHelper {
         await expect(this.page.getByText(removalReasonsText)).toBeVisible();
     }
 
-    async validateComplyDate(daysToAdd: number) {
+    async validateComplyDate(daysToComply: number) {
         const complyDate: string = await this.page.inputValue('#sendDirectionDateDue-day') + '-'
             + await this.page.inputValue('#sendDirectionDateDue-month') + '-'
             + await this.page.inputValue('#sendDirectionDateDue-year');
-        const todayPlusDays = moment().add(daysToAdd, 'days').format('DD-MM-YYYY');
+        const todayPlusDays = moment().add(daysToComply, 'days').format('DD-MM-YYYY');
 
-        expect(complyDate, `Request respondent evidence comply date should be ${daysToAdd} days from today: ${todayPlusDays}.`).toEqual(todayPlusDays)
+        expect(complyDate, `Request respondent evidence comply date should be ${daysToComply} days from today: ${todayPlusDays}.`).toEqual(todayPlusDays)
     }
 
 }

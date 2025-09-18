@@ -6,7 +6,6 @@ import { CreateAppeal } from '../flows/createAppeal';
 import { LinkHelper } from'../helpers/LinkHelper';
 import { PageHelper } from '../helpers/PageHelper';
 import { SubmitYourAppeal } from '../flows/events/submitYourAppeal';
-import { CaseIdHelper } from "../helpers/CaseIdHelper";
 
 const inTime = true;
 const typeOfAppeal = 'revocationOfProtection'; // Revocation of a protection status (no payment required)
@@ -14,13 +13,10 @@ const typeOfAppeal = 'revocationOfProtection'; // Revocation of a protection sta
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
-let caseIdHelper: CaseIdHelper;
+let caseId: string;
 
+test.describe.configure({ mode: 'serial'});
 test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@OutOfCountryAsLegalRep' }, () => {
-
-    test.beforeAll(async () => {
-        caseIdHelper = new CaseIdHelper();
-    });
 
     test.beforeEach(async ({ page }) => {
         idamPage = new IdamPage(page);
@@ -54,8 +50,8 @@ test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@O
         const submitYourAppeal = new SubmitYourAppeal(page);
         await submitYourAppeal.submit(inTime);
 
-        await caseIdHelper.setCaseId(await pageHelper.grabCaseNumber());
-        console.log('caseId>>>>>>>>>>>>>>>' + await caseIdHelper.getCaseId() + '<<<<<<<<<<<<<<<<<<<');
+        caseId = await pageHelper.grabCaseNumber();
+        console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
 
         await linkHelper.signOut.click();
     });

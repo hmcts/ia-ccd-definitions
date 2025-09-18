@@ -10,9 +10,9 @@ export class RespondentEvidenceDirection {
         this.buttonHelper = new ButtonHelper(this.page);
     }
 
-    async submit() {
+    async submit(daysToComply: number = 7) {
         await new PageHelper(this.page).selectNextStep('Request respondent evidence');
-        await new ValidationHelper(this.page).validateComplyDate(7);
+        await new ValidationHelper(this.page).validateComplyDate(daysToComply);
         await this.buttonHelper.continueButton.click();
         await this.buttonHelper.sendDirectionButton.click();
     };

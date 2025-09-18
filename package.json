@@ -42,6 +42,7 @@
     "test:LegalRepCreatesDetainedRepresented": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalRepCreatesDetainedRepresented",
     "test:DetainedRepresentedAdminEndsTheAppeal": "yarn playwright install && npx playwright test --headed --project chromium --grep @DetainedRepresentedAdminEndsTheAppeal",
     "test:NonDetainedToDetainedRepresented": "yarn playwright install && npx playwright test --headed --project chromium --grep @NonDetainedToDetainedRepresented",
+    "test:NonDetainedRepresented": "yarn playwright install && npx playwright test --headed --project chromium --grep @NonDetainedRepresented",
     "test:OutOfCountryAsLegalRep": "yarn playwright install && npx playwright test --headed --project chromium --grep @OutOfCountryAsLegalRep",
     "clean": "rm -rf target/",
     "decrypt": "node bin/decrypt.js",

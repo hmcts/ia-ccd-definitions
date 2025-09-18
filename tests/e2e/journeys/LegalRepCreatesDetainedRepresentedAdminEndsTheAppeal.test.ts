@@ -32,7 +32,7 @@ let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let validationHelper: ValidationHelper;
-const caseIdHelper = new CaseIdHelper();
+let caseId: string;
 
 test.describe.configure({ mode: 'serial'});
 test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time'), { tag: '@DetainedRepresentedAdminEndsTheAppeal' }, () => {
@@ -46,7 +46,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await page.goto(envUrl);
     });
 
-    test.only('Create Detained Appeal', async ({ page } ) => {
+    test('Create Detained Appeal', async ({ page } ) => {
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalRepresentativeCredentials);
         await new CreateCasePage(page).createCase();
@@ -98,8 +98,8 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
 
         await createAppeal.checkMyAnswers();
 
-        await caseIdHelper.setCaseId(await pageHelper.grabCaseNumber());
-        console.log('caseId>>>>>>>>>>>>>>>' + await caseIdHelper.getCaseId() + '<<<<<<<<<<<<<<<<<<<');
+        caseId = await pageHelper.grabCaseNumber();
+        console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
         await new SubmitYourAppeal(page).submit(true, inTime);
 
         if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
@@ -107,7 +107,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
             await new CreateServiceRequest(page).submit();
 
             // make payment - will remove caseId from parameters and function when successful payment hyperlink points to correct env
-            await new PaymentPage(page).makePayment('CC', await caseIdHelper.getCaseId());
+            await new PaymentPage(page).makePayment('CC', caseId);
         }
 
         await linkHelper.signOut.click();
@@ -115,7 +115,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
 
     test('Legal Officer Admin ends the appeal', async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
-        await pageHelper.getCase(await caseIdHelper.getCaseId());
+        await pageHelper.getCase(caseId);
 
         await validationHelper.validateLabelDisplayed(imageLocators.detained.represented.locator, imageLocators.detained.represented.name);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');

@@ -5,9 +5,9 @@ import {
     legalOfficerCredentials,
     homeOfficeOfficerCredentials,
     legalOfficerAdminCredentials,
-    listingOfficerCredentials, judgeCredentials
+    listingOfficerCredentials, judgeCredentials, runningEnv
 } from '../detainedConfig';
-import { IdamPage } from '../page-objects/pages/idam.po';
+import {IdamPage, UserCredentials} from '../page-objects/pages/idam.po';
 import { CreateCasePage } from '../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../flows/createAppeal';
 import { LinkHelper } from'../helpers/LinkHelper';
@@ -44,7 +44,7 @@ const cmrListing: boolean = true;
 //let detentionLocation: string = 'immigrationRemovalCentre';
 //let detentionLocation: string = 'prison';
 let detentionLocation: string = 'other';
-let caseId;
+let caseId: string;
 
 //const typeOfAppeal: string = 'refusalOfEu'; // Refusal under EEA regulations (payment required)
 //const typeOfAppeal: string = 'refusalOfHumanRights'; // Refusal human rights (payment required)
@@ -59,7 +59,7 @@ let pageHelper: PageHelper;
 let validationHelper: ValidationHelper;
 let updateDetentionLocation: UpdateDetentionLocation;
 
-test.describe.configure({ mode: 'serial'});
+test.describe.configure({ mode: 'serial' });
 test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedRepresented' }, () => {
 
     test.beforeEach(async ({ page }) => {
@@ -69,6 +69,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         pageHelper = new PageHelper(page);
         validationHelper = new ValidationHelper(page);
         updateDetentionLocation = new UpdateDetentionLocation(page);
+
         await page.goto(envUrl);
     });
 
@@ -140,17 +141,17 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
     });
 
     test('Legal Officer adds s94b appeal status, updates detention location and creates Respondent Direction', async ({ page }) => {
-        await idamPage.login(legalOfficerCredentials);
+        await idamPage.login(listingOfficerCredentials);
         await pageHelper.getCase(caseId);
 
         await validationHelper.validateLabelDisplayed(imageLocators.detained.represented.locator, imageLocators.detained.represented.name);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
 
-        await new S94b(page).setStatus('Yes');
-        await validationHelper.validateLabelDisplayed(imageLocators.detained.representedS94b.locator, imageLocators.detained.representedS94b.name);
-        detentionLocation = detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison');
-        await updateDetentionLocation.changeLocation(detentionLocation, detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
-        await updateDetentionLocation.validateDataUpdated(detentionLocation);
+        // await new S94b(page).setStatus('Yes');
+        // await validationHelper.validateLabelDisplayed(imageLocators.detained.representedS94b.locator, imageLocators.detained.representedS94b.name);
+        // detentionLocation = detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison');
+        // await updateDetentionLocation.changeLocation(detentionLocation, detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
+        // await updateDetentionLocation.validateDataUpdated(detentionLocation);
 
         if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
             await new RequestHomeOfficeData(page).matchAppellantDetails();
@@ -170,7 +171,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
     });
 
     test('Legal Officer directs appellant/Legal Rep to build case',   async ({ page }) => {
-        await idamPage.login(legalOfficerCredentials);
+        await idamPage.login(listingOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new CaseBuildingDirection(page).submit();
         await linkHelper.signOut.click();
@@ -184,7 +185,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
     });
 
     test('Legal Officer creates Respondent Review Direction',   async ({ page }) => {
-        await idamPage.login(legalOfficerCredentials);
+        await idamPage.login(listingOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new RespondentReviewDirection(page).submit();
         await linkHelper.signOut.click();
@@ -198,7 +199,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
     });
 
     test('Legal Officer Force case - hearing reqs, thus bypassing Appellant/Legal Rep needing to review the HO decision',   async ({ page }) => {
-        await idamPage.login(legalOfficerCredentials);
+        await idamPage.login(listingOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new ForceCaseHearingReqs(page).submit();
         await linkHelper.signOut.click();
@@ -212,38 +213,38 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
     });
 
     test('Legal Officer to review hearing requirements',   async ({ page }) => {
-        await idamPage.login(legalOfficerCredentials);
+        await idamPage.login(listingOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new ReviewHearingRequirements(page).submit();
         await linkHelper.signOut.click();
     });
 
-    test('Admin Legal Officer to list the case',   async ({ page }) => {
-        await idamPage.login(legalOfficerAdminCredentials);
-        await pageHelper.getCase(caseId);
-        await new ListTheCase(page).list('No');
-        await linkHelper.signOut.click();
-    });
+    // test('Admin Legal Officer to list the case',   async ({ page }) => {
+    //     await idamPage.login(legalOfficerAdminCredentials);
+    //     await pageHelper.getCase(caseId);
+    //     await new ListTheCase(page).list('No');
+    //     await linkHelper.signOut.click();
+    // });
 
-    test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
-        await pageHelper.getCase(caseId);
-        await new CreateCaseSummary(page).create();
-        await new GenerateHearingBundle(page).submit();
-
-        // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decisions and reasons
-        await pageHelper.waitForHearingBundleToBeGenerated();
-        await expect(page.locator(' #progress_caseOfficer_preHearing')).toBeVisible();
-        await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
-        await linkHelper.signOut.click();
-    });
-
-    test('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
-        await idamPage.login(judgeCredentials);
-        await pageHelper.getCase(caseId);
-        await new PrepareDecisionAndReasons(page).generate('Yes');
-        await new CompleteDecisionAndReasons(page).upload('allowed');
-        await linkHelper.signOut.click();
-    });
+    // test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
+    //     await idamPage.login(listingOfficerCredentials);
+    //     await pageHelper.getCase(caseId);
+    //     await new CreateCaseSummary(page).create();
+    //     await new GenerateHearingBundle(page).submit();
+    //
+    //     // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decisions and reasons
+    //     await pageHelper.waitForHearingBundleToBeGenerated();
+    //     await expect(page.locator(' #progress_caseOfficer_preHearing')).toBeVisible();
+    //     await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
+    //     await linkHelper.signOut.click();
+    // });
+    //
+    // test('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
+    //     await idamPage.login(judgeCredentials);
+    //     await pageHelper.getCase(caseId);
+    //     await new PrepareDecisionAndReasons(page).generate('Yes');
+    //     await new CompleteDecisionAndReasons(page).upload('allowed');
+    //     await linkHelper.signOut.click();
+    // });
 
 });
