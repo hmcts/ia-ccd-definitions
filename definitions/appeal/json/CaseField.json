@@ -19,12 +19,12 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistOutOfCountry", "Label": " ", "FieldType": "checklistOutOfCountry", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeDecisionTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeReferenceNumberTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeReferenceNumber", "Label": "Home Office UAN or GWF reference", "HintText": "Enter the 16-digit UAN reference (four groups of four digits) or the 9-digit GWF reference (including the GWF prefix) in the decision letter", "FieldType": "Text", "RegularExpression": "([0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}|GWF[0-9]{9})", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeReferenceNumber", "Label": "Home Office UAN or GWF reference", "HintText": "Enter the 16-digit UAN reference (four groups of four digits) or the 9-digit GWF reference (including the GWF prefix) in the decision letter", "FieldType": "Text", "RegularExpression": "([0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}|GWF[0-9]{9}|.*)", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {
     "LiveFrom": "02/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "homeOfficeReferenceNumberTips",
-    "Label": "Advice for entering the correct number:\n\n- The decision letter will include either a 16-digit UAN reference (with dashes), for example 1234-1234-1234-1234, or a 9-digit GWF reference, for example GWF123456789\n- If your letter includes the 16-digit UAN reference, please enter it in the box above\n- If your letter does _not_ include the 16-digit UAN reference but includes the 9-digit GWF reference (with the GWF prefix), please use that instead\n- If your letter does not include either the UAN or the GWF reference but shows a 9-digit Case ID (_without_ the GWF prefix, e.g. 234567890), do *not* try to use it. Contact _XYZ_ to ask for your Unique Application Number (UAN) and use that instead.\n- Call +44 (0)161 877 5919 (9am-3pm, Mon-Fri) if you cannot find any of these numbers",
+    "Label": "Advice for entering the correct number:\n\n- You should enter your UAN or GWF reference exactly as it appears on your decision letter\n-  Your UAN reference will be a 16-digit number, for example 1234-1234-1234-1234; you should include all the numbers with the dashes as they appear\n- Your GWF reference will be a 9-digit number starting with GWF, for example GWF123456789\n- If you need help, contact the Home Office on _XYZ_",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC",
     "Searchable": "N"
