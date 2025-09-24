@@ -2341,8 +2341,8 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "migrateCase",
-    "Name": "migrate case",
-    "Description": "migrate case",
+    "Name": "migrate HU EA EU appeals",
+    "Description": "migrate HU EA EU appeals to progress to appeal submitted state",
     "DisplayOrder": 99,
     "PreConditionState(s)": "*",
     "PostConditionState": "*",
@@ -2350,7 +2350,7 @@
     "ShowSummary": "N",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
-    "Publish": "N"
+    "Publish": "Y"
   },
   {
     "LiveFrom": "01/01/2018",

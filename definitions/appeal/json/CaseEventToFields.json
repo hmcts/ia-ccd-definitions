@@ -1912,7 +1912,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "removeCaseManagerBulk", "CaseFieldID": "removeCaseManagerCaseIdList", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "1.0", "PageDisplayOrder": 1,  "ShowSummaryChangeOption": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "ManageTTL", "CaseFieldID": "TTL", "PageID": 1, "PageDisplayOrder": 1,"DisplayContext": "COMPLEX", "PageFieldDisplayOrder": 1},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "migrateCase", "CaseFieldID": "TTL", "PageID": 1, "PageDisplayOrder": 1,"DisplayContext": "COMPLEX", "PageFieldDisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "migrateCase", "CaseFieldID": "appealType", "PageID": 1, "PageDisplayOrder": 1, "DisplayContext": "READONLY", "Publish": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "appellantInPersonManual", "CaseFieldID": "appellantAddressTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appellantInPersonManual_appellantAddress", "PageLabel": "Appellant's address", "PageDisplayOrder": 2, "ShowSummaryChangeOption": "N" },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "appellantInPersonManual", "CaseFieldID": "appellantAddress", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "appellantInPersonManual_appellantAddress", "ShowSummaryChangeOption": "Y"}
