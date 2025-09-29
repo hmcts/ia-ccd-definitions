@@ -20,7 +20,7 @@ export class ListTheCase {
         await this.page.selectOption('#listingLocation', 'Atlantic Quay - Glasgow');
         await this.page.check(`#isRemoteHearing_${isRemoteHearing}`);
         await this.page.fill('#listingLength_hours', '1');
-        await this.page.fill('#listCaseHearingDate-day', todayPlus14days.day().toString());
+        await this.page.fill('#listCaseHearingDate-day', todayPlus14days.date().toString());
         await this.page.fill('#listCaseHearingDate-month', (todayPlus14days.month()+1).toString());
         await this.page.fill('#listCaseHearingDate-year', todayPlus14days.year().toString());
         await this.page.fill('#listCaseHearingDate-hour', '10');
