@@ -1915,5 +1915,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "migrateCase", "CaseFieldID": "TTL", "PageID": 1, "PageDisplayOrder": 1,"DisplayContext": "COMPLEX", "PageFieldDisplayOrder": 1},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "appellantInPersonManual", "CaseFieldID": "appellantAddressTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appellantInPersonManual_appellantAddress", "PageLabel": "Appellant's address", "PageDisplayOrder": 2, "ShowSummaryChangeOption": "N" },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "appellantInPersonManual", "CaseFieldID": "appellantAddress", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "appellantInPersonManual_appellantAddress", "ShowSummaryChangeOption": "Y"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "appellantInPersonManual", "CaseFieldID": "appellantAddress", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "appellantInPersonManual_appellantAddress", "ShowSummaryChangeOption": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "add24WeekFlag", "CaseFieldID": "24weeksStatus", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "add24WeekFlag","PageDisplayOrder": 1,"ShowSummaryChangeOption": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "add24WeekFlag", "CaseFieldID": "24weeksStatusReason", "PageFieldDisplayOrder": 2, "DisplayContext": "OPTIONAL", "PageID": "add24WeekFlag","PageDisplayOrder": 1,"ShowSummaryChangeOption": "Y"}
 ]
