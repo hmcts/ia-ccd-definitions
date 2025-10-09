@@ -2116,7 +2116,7 @@
     "Name": "Request a fee remission",
     "Description": "Request a fee remission",
     "DisplayOrder": 80,
-    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;adjourned",
+    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;adjourned;appealStarted;appealStartedByAdmin;ended;appealTakenOffline;reasonsForAppealSubmitted;awaitingClarifyingQuestionsAnswers;ftpaSubmitted;awaitingReasonsForAppeal;remitted;clarifyingQuestionsAnswersSubmitted;ftpaDecided;listing",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
