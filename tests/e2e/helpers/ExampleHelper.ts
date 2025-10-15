@@ -1,4 +1,4 @@
-export class CaseIdHelper {
+export class ExampleHelper {
     private caseId: string;
 
     async setCaseId(caseId: string): Promise<void> {

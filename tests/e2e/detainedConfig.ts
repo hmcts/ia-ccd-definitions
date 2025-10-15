@@ -20,7 +20,7 @@ export const legalRepresentativeCredentials = {
 }
 
 export const legalOfficerCredentials = {
-    username: "ia.caseofficer.ccd@gmail.com",
+    username: process.env.ENVIRONMENT === 'preview' ? "CRD_func_test_aat_stcw@justice.gov.uk" : 'CRD_func_test_demo_stcwuser053@justice.gov.uk',
     password: " AldgateT0wer"
 }
 
@@ -63,6 +63,13 @@ export const appellant = {
         postTown: 'London',
         postcode: 'SW1A 1AA',
         country: 'United Kingdom'
+    },
+    outsideUKAddress: {
+        addressLine1: 'Outside UK address 1',
+        addressLine2: 'Outside UK address 2',
+        addressLine3: 'Outside UK address 3',
+        addressLine4: 'Outside UK address 4',
+        country: 'USA'
     },
     mobile: '07890667755',
     email: 'appellantEmail@test.com',

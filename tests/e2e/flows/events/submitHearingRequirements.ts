@@ -9,13 +9,21 @@ export class SubmitHearingRequirements {
         this.buttonHelper = new ButtonHelper(this.page);
     }
 
-    async submit() {
+    async submit(isInCountry: boolean = true) {
         await new PageHelper(this.page).selectNextStep('Submit hearing requirements');
         await this.buttonHelper.continueButton.click();
-        await this.isAppellantAttendingTheHearing('Yes');
-        await this.isAppellantGivingOralEvidence('Yes');
+
+        if (isInCountry) {
+            await this.isAppellantAttendingTheHearing('Yes');
+        }
+
+        await this.isAppellantGivingOralEvidence('Yes', isInCountry);
         await this.isWitnessesAttending('No');
-        await this.isEvidenceFromOutsideUkInCountry('No');
+
+        if (isInCountry) {
+            await this.isEvidenceFromOutsideUkInCountry('No');
+        }
+
         await this.isInterpreterServicesNeeded('Yes', 'spoken');
         await this.isHearingRoomNeeded('No');
         await this.isHearingLoopNeeded('No');
@@ -38,8 +46,12 @@ export class SubmitHearingRequirements {
         await this.buttonHelper.continueButton.click();
     };
 
-    async isAppellantGivingOralEvidence(isGivingEvidence: string = 'Yes'){
-        await this.page.locator(`#isAppellantGivingOralEvidence_${isGivingEvidence}`).check();
+    async isAppellantGivingOralEvidence(isGivingEvidence: string = 'Yes', isInCountry: boolean = true){
+        if (isInCountry) {
+            await this.page.locator(`#isAppellantGivingOralEvidence_${isGivingEvidence}`).check();
+        } else {
+            await this.page.locator(`#isEvidenceFromOutsideUkOoc_${isGivingEvidence}`).check();
+        }
         await this.buttonHelper.continueButton.click();
     };
 

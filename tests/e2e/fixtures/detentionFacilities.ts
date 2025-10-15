@@ -1,6 +1,6 @@
 export const detentionFacility = {
         immigrationRemovalCentre: {
-            name: 'Brookhouse',
+            name: 'Brook House',
             building: 'Brook House IRC',
             address: 'Perimeter Road South, London Gatwick Airport, Gatwick',
             postcode: 'RH6 0PQ',

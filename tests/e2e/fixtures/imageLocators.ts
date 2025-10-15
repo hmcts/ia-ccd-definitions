@@ -33,6 +33,10 @@ export const imageLocators = {
         represented: {
             locator: '//*[@id="journey_type_legal_rep"]/dt/ccd-markdown/div/markdown/p/img',
             name: 'journey_type_legally_represented',
+        },
+        appellantInPersonManual: {
+            locator: '//*[@id="journey_type_aip_manual"]/dt/ccd-markdown/div/markdown/p/img',
+            name: 'appellant_in_person_manual',
         }
     },
 };

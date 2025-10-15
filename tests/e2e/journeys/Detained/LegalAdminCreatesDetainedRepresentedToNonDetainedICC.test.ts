@@ -1,15 +1,15 @@
 import { test } from '@playwright/test';
-import { envUrl, legalOfficerAdminCredentials } from '../detainedConfig';
-import { IdamPage } from '../page-objects/pages/idam.po';
-import { LinkHelper } from '../helpers/LinkHelper';
-import { PageHelper } from '../helpers/PageHelper';
-import { ButtonHelper } from '../helpers/ButtonHelper';
-import { ValidationHelper } from '../helpers/ValidationHelper';
-import { CreateAppeal } from '../flows/createAppeal';
-import { CreateCasePage } from '../page-objects/pages/createCase_page';
-import { SubmitYourAppeal } from '../flows/events/submitYourAppeal';
-import { RemoveDetainedStatus } from '../flows/events/removeDetainedStatus';
-import { imageLocators } from '../fixtures/imageLocators';
+import { envUrl, legalOfficerAdminCredentials } from '../../detainedConfig';
+import { IdamPage } from '../../page-objects/pages/idam.po';
+import { LinkHelper } from '../../helpers/LinkHelper';
+import { PageHelper } from '../../helpers/PageHelper';
+import { ButtonHelper } from '../../helpers/ButtonHelper';
+import { ValidationHelper } from '../../helpers/ValidationHelper';
+import { CreateAppeal } from '../../flows/createAppeal';
+import { CreateCasePage } from '../../page-objects/pages/createCase_page';
+import { SubmitYourAppeal } from '../../flows/events/submitYourAppeal';
+import { RemoveDetainedStatus } from '../../flows/events/removeDetainedStatus';
+import { imageLocators } from '../../fixtures/imageLocators';
 
 const inTime: boolean = true;
 let idamPage: IdamPage;
@@ -23,7 +23,7 @@ let submitYourAppeal: SubmitYourAppeal;
 let caseId: string;
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Detained Appeal then removes detained status', { tag: '@LegalAdminDetainedRepresentedToNonDetainedICC' }, () => {
+test.describe('Legal Admin creates Detained, Represented Appeal then removes detained status (becomes Non-Detained)', { tag: '@LegalAdminCreatesDetainedRepresentedToNonDetainedICC' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -39,7 +39,7 @@ test.describe('Legal Admin creates Detained Appeal then removes detained status'
         await page.goto(envUrl);
     });
 
-    test('Create Represented Detained Appeal in Prison with Custodial sentence - ' + (inTime ? 'In Time' : 'Out of Time') + ' - Then remove detained status',   async ({ page }) => {
+    test('Create Represented Detained Appeal in Prison with Custodial sentence - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({ page }) => {
         const typeOfAppeal: string = 'revocationOfProtection'; // Revocation of a protection status (no payment required)
         const detentionLocation: string = 'prison';
 
@@ -82,8 +82,7 @@ test.describe('Legal Admin creates Detained Appeal then removes detained status'
         await validationHelper.validateDataOnAppellantTabDetainedStatusRemoved(detentionLocation);
 
         await linkHelper.signOut.click();
-});
-
+    });
 
     test('Create Represented Detained Appeal in Immigration Removal Centre - ' + (inTime ? 'In Time' : 'Out of Time') + ' - Then remove detained status',   async ({ page }) => {
         const typeOfAppeal: string = 'revocationOfProtection';// Revocation of a protection status (no payment required)

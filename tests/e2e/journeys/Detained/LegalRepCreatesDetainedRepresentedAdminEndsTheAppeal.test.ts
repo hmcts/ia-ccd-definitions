@@ -2,30 +2,22 @@ import {
     envUrl,
     legalRepresentativeCredentials,
     legalOfficerAdminCredentials,
-} from '../detainedConfig';
-import { IdamPage } from '../page-objects/pages/idam.po';
-import { CreateCasePage } from '../page-objects/pages/createCase_page';
-import { CreateAppeal } from '../flows/createAppeal';
-import { LinkHelper } from'../helpers/LinkHelper';
-import { PageHelper } from '../helpers/PageHelper';
-import { ValidationHelper } from '../helpers/ValidationHelper';
-import { SubmitYourAppeal } from '../flows/events/submitYourAppeal';
-import { CreateServiceRequest } from '../flows/events/createServiceRequest';
-import { PaymentPage } from '../page-objects/pages/payment_page';
-import { imageLocators } from '../fixtures/imageLocators';
-import { CaseIdHelper } from "../helpers/CaseIdHelper";
-import { EndTheAppeal } from "../flows/events/endTheAppeal";
-import { test } from '../fixtures/myFixture';
-
-//await this.page.waitForTimeout(10000); // waits for 2 seconds
+} from '../../detainedConfig';
+import { IdamPage } from '../../page-objects/pages/idam.po';
+import { CreateCasePage } from '../../page-objects/pages/createCase_page';
+import { CreateAppeal } from '../../flows/createAppeal';
+import { LinkHelper } from '../../helpers/LinkHelper';
+import { PageHelper } from '../../helpers/PageHelper';
+import { ValidationHelper } from '../../helpers/ValidationHelper';
+import { SubmitYourAppeal } from '../../flows/events/submitYourAppeal';
+import { CreateServiceRequest } from '../../flows/events/createServiceRequest';
+import { PaymentPage } from '../../page-objects/pages/payment_page';
+import { imageLocators } from '../../fixtures/imageLocators';
+import { EndTheAppeal } from "../../flows/events/endTheAppeal";
+import { test } from '../../fixtures/myFixture';
 
 const inTime: boolean = true;
 const detentionLocation: string = 'immigrationRemovalCentre';
-//const typeOfAppeal: string = 'refusalOfEu'; // Refusal under EEA regulations (payment required)
-//const typeOfAppeal: string = 'refusalOfHumanRights'; // Refusal human rights (payment required)
-//const typeOfAppeal: string  = 'deprivation'; // Deprivation of citizenship (no payment required)
-//const typeOfAppeal: string  = 'euSettlementScheme'; // Refusal of application under the EU Settlement Scheme (payment required)
-//const typeOfAppeal: string = 'revocationOfProtection'; // Revocation of a protection status (no payment required)
 const typeOfAppeal:string = 'protection'; // Refusal of protection claim (payment required)
 
 let idamPage: IdamPage;
@@ -35,7 +27,7 @@ let validationHelper: ValidationHelper;
 let caseId: string;
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time'), { tag: '@DetainedRepresentedAdminEndsTheAppeal' }, () => {
+test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time' + ' Admin then ends the appeal'), { tag: '@LegalRepCreatesDetainedRepresentedAdminEndsTheAppeal' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -46,7 +38,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await page.goto(envUrl);
     });
 
-    test('Create Detained Appeal', async ({ page } ) => {
+    test('Legal Representative create Detained Appeal', async ({ page } ) => {
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalRepresentativeCredentials);
         await new CreateCasePage(page).createCase();

@@ -1,19 +1,18 @@
 import { test } from '@playwright/test';
 import {
     envUrl,
-    legalRepresentativeCredentials,
-    legalOfficerCredentials, runningEnv, listingOfficerCredentials
-} from '../detainedConfig';
-import {IdamPage, UserCredentials} from '../page-objects/pages/idam.po';
-import { LinkHelper } from '../helpers/LinkHelper';
-import { PageHelper } from '../helpers/PageHelper';
-import { ValidationHelper } from '../helpers/ValidationHelper';
-import { UpdateDetentionLocation } from '../flows/events/updateDetentionLocation';
-import { CreateAppeal } from '../flows/createAppeal';
-import { CreateCasePage } from '../page-objects/pages/createCase_page';
-import { SubmitYourAppeal } from '../flows/events/submitYourAppeal';
-import { MarkAppealAsDetained } from '../flows/events/markAppealAsDetained';
-import { imageLocators } from '../fixtures/imageLocators';
+    legalRepresentativeCredentials, listingOfficerCredentials
+} from '../../detainedConfig';
+import {IdamPage} from '../../page-objects/pages/idam.po';
+import { LinkHelper } from '../../helpers/LinkHelper';
+import { PageHelper } from '../../helpers/PageHelper';
+import { ValidationHelper } from '../../helpers/ValidationHelper';
+import { UpdateDetentionLocation } from '../../flows/events/updateDetentionLocation';
+import { CreateAppeal } from '../../flows/createAppeal';
+import { CreateCasePage } from '../../page-objects/pages/createCase_page';
+import { SubmitYourAppeal } from '../../flows/events/submitYourAppeal';
+import { MarkAppealAsDetained } from '../../flows/events/markAppealAsDetained';
+import { imageLocators } from '../../fixtures/imageLocators';
 
 const inTime: boolean = true;
 const detentionLocation: string = 'immigrationRemovalCentre';
@@ -24,7 +23,7 @@ let validationHelper: ValidationHelper;
 let caseId: string;
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Representative creates Non-Detained Appeal and Legal Officer converts it to a Detained Appeal', { tag: '@NonDetainedToDetainedRepresented' }, () => {
+test.describe('Legal Representative creates Non-Detained Appeal and Legal Officer converts appeal to a Detained', { tag: '@LegalRepCreatesNonDetainedAdminConvertsToDetained' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -49,7 +48,6 @@ test.describe('Legal Representative creates Non-Detained Appeal and Legal Office
         await createAppeal.setGroundsOfAppeal(typeOfAppeal);
         await createAppeal.setAppellantBasicDetails(false);
         await createAppeal.setNationality(true);
-//        await createAppeal.setAppellantAddress('nonDetained', 'Yes');
         await createAppeal.setAppellantContactPreference('Email');
         await createAppeal.setAppellantAddress('nonDetained', 'Yes');
         await createAppeal.hasSponsor('No');
@@ -58,7 +56,7 @@ test.describe('Legal Representative creates Non-Detained Appeal and Legal Office
         await createAppeal.hasOtherAppeals('No');
         await createAppeal.setLegalRepresentativeDetails();
         await createAppeal.isHearingRequired(true);
-        await createAppeal.checkMyAnswers();
+        await createAppeal.checkMyAnswers(true); //skip for preview as close and continue screen displaying
 
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
@@ -67,7 +65,7 @@ test.describe('Legal Representative creates Non-Detained Appeal and Legal Office
         await linkHelper.signOut.click();
     });
 
-    test.skip('Legal Officer converts Appeal to Detained', async ({ page }) => {
+    test('Legal Officer converts Appeal to Detained', async ({ page }) => {
         await idamPage.login(listingOfficerCredentials);
         await pageHelper.getCase(caseId);
 

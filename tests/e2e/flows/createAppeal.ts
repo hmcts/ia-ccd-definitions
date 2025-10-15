@@ -117,15 +117,32 @@ export class CreateAppeal {
                 await this.page.waitForTimeout(2000);
                 currentUrl = page.url();
                 if (currentUrl.includes('startAppealentryClearanceDecision')) {
-                    await page.locator('#gwfReferenceNumber').fill('123456789');
-                    await page.locator('#dateEntryClearanceDecision-day').fill(inOutOfTimeDate.date().toString());
-                    await page.locator('#dateEntryClearanceDecision-month').fill((inOutOfTimeDate.month() + 1).toString());
-                    await page.locator('#dateEntryClearanceDecision-year').fill(inOutOfTimeDate.year().toString());
-                    await this.buttonHelper.continueButton.click();
+                    await this.setEntryClearanceDecision(inTime);
                 }
                 break;
         }
     }
+
+   // non-detained ICC
+   async setOutOfCountryCircumstance(circumstance:string = 'entryClearanceDecision') {
+       await this.page.locator(`#oocAppealAdminJ-${circumstance}`).check();
+       await this.buttonHelper.continueButton.click();
+   }
+
+   async setEntryClearanceDecision(inTime: boolean = true) {
+       const inOutOfTimeDate = inTime
+           ? moment().subtract(5, 'days')
+           : moment().subtract(2, 'months');
+       await this.page.locator('#gwfReferenceNumber').fill('123456789');
+       await this.page.locator('#dateEntryClearanceDecision-day').fill(inOutOfTimeDate.date().toString());
+       await this.page.locator('#dateEntryClearanceDecision-month').fill((inOutOfTimeDate.month() + 1).toString());
+       await this.page.locator('#dateEntryClearanceDecision-year').fill(inOutOfTimeDate.year().toString());
+       // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
+       // if we just try and click continue it stays on the clearance decision page and the test fails - only happens in ICC
+       await this.page.keyboard.press('Tab');
+       await this.buttonHelper.continueButton.click();
+   }
+
    async inDetention(yesNo: string = 'Yes') {
       await this.page.check(`#appellantInDetention_${yesNo}`);
       await this.buttonHelper.continueButton.click();
@@ -155,7 +172,7 @@ export class CreateAppeal {
    }
 
     async setDetentionCentre() {
-      await this.page.selectOption('#ircName','Brookhouse');
+      await this.page.selectOption('#ircName', detentionFacility.immigrationRemovalCentre.name);
       await this.buttonHelper.continueButton.click();
    }
 
@@ -250,6 +267,17 @@ export class CreateAppeal {
 
        await this.buttonHelper.continueButton.click();
 
+   }
+
+   async setAppellantAddressOutsideUK(hasPostalAddress: string = 'Yes') {
+       await this.page.check(`#appellantHasFixedAddressAdminJ_${hasPostalAddress}`);
+       await this.page.fill('#addressLine1AdminJ', appellant.outsideUKAddress.addressLine1);
+       await this.page.fill('#addressLine2AdminJ', appellant.outsideUKAddress.addressLine2);
+       await this.page.fill('#addressLine3AdminJ', appellant.outsideUKAddress.addressLine3);
+       await this.page.fill('#addressLine4AdminJ', appellant.outsideUKAddress.addressLine4);
+       await this.page.selectOption('#countryGovUkOocAdminJ',appellant.outsideUKAddress.country);
+
+       await this.buttonHelper.continueButton.click();
    }
 
    // appellant address: non-detained journey and detained journey where facility is "Other"
@@ -438,10 +466,9 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
-   async checkMyAnswers() {
+   async checkMyAnswers(skipCloseAndReturnCheck:boolean = false) {
        await this.buttonHelper.continueButton.click();
-
-       if(['demo'].includes(runningEnv)) {
+       if (!skipCloseAndReturnCheck || (skipCloseAndReturnCheck && !['preview'].includes(runningEnv))) {
            await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
        }
    }
