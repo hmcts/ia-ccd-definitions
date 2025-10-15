@@ -1,9 +1,10 @@
+import {test} from '@playwright/test';
 import {
     envUrl,
     legalRepresentativeCredentials,
-    legalOfficerAdminCredentials,
+    listingOfficerCredentials
 } from '../../detainedConfig';
-import { IdamPage } from '../../page-objects/pages/idam.po';
+import {IdamPage} from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../../flows/createAppeal';
 import { LinkHelper } from '../../helpers/LinkHelper';
@@ -13,21 +14,32 @@ import { SubmitYourAppeal } from '../../flows/events/submitYourAppeal';
 import { CreateServiceRequest } from '../../flows/events/createServiceRequest';
 import { PaymentPage } from '../../page-objects/pages/payment_page';
 import { imageLocators } from '../../fixtures/imageLocators';
-import { EndTheAppeal } from "../../flows/events/endTheAppeal";
-import { test } from '../../fixtures/myFixture';
+import {MakeAnApplication} from "../../flows/events/makeAnApplication";
+import {DecideAnApplication} from "../../flows/events/decideAnApplication";
+
+//await this.page.waitForTimeout(10000); // waits for 2 seconds
 
 const inTime: boolean = true;
-const detentionLocation: string = 'immigrationRemovalCentre';
-const typeOfAppeal:string = 'protection'; // Refusal of protection claim (payment required)
+const cmrListing: boolean = true;
+//let detentionLocation: string = 'immigrationRemovalCentre';
+let detentionLocation: string = 'prison';
+//let detentionLocation: string = 'other';
+let caseId: string = '';
+
+//const typeOfAppeal: string = 'refusalOfEu'; // Refusal under EEA regulations (payment required)
+//const typeOfAppeal: string = 'refusalOfHumanRights'; // Refusal human rights (payment required)
+const typeOfAppeal: string  = 'deprivation'; // Deprivation of citizenship (no payment required)
+//const typeOfAppeal: string  = 'euSettlementScheme'; // Refusal of application under the EU Settlement Scheme (payment required)
+//const typeOfAppeal: string = 'revocationOfProtection'; // Revocation of a protection status (no payment required)
+//const typeOfAppeal:string = 'protection'; // Refusal of protection claim (payment required)
 
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let validationHelper: ValidationHelper;
-let caseId: string;
 
-test.describe.configure({ mode: 'serial'});
-test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time' + ' Admin then ends the appeal'), { tag: '@LegalRepCreatesDetainedRepresentedAdminEndsTheAppeal' }, () => {
+test.describe.configure({ mode: 'serial' });
+test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedWithApplicationGrantedByLegalOfficer' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -38,7 +50,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await page.goto(envUrl);
     });
 
-    test('Legal Representative create Detained Appeal', async ({ page } ) => {
+    test('Create Detained Appeal', async ({ page }) => {
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalRepresentativeCredentials);
         await new CreateCasePage(page).createCase();
@@ -102,17 +114,19 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
             await new PaymentPage(page).makePayment('CC', caseId);
         }
 
+        await new MakeAnApplication(page).submit('Expedite');
+
         await linkHelper.signOut.click();
     });
 
-    test('Legal Officer Admin ends the appeal', async ({ page }) => {
-        await idamPage.login(legalOfficerAdminCredentials);
+    test('Legal Officer Grants application', async ({ page }) => {
+        await idamPage.login(listingOfficerCredentials);
         await pageHelper.getCase(caseId);
 
         await validationHelper.validateLabelDisplayed(imageLocators.detained.represented.locator, imageLocators.detained.represented.name);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
 
-        await new EndTheAppeal(page).end('No valid appeal', 'Case Worker');
+        await new DecideAnApplication(page).submit('Granted');
         await linkHelper.signOut.click();
     });
 
