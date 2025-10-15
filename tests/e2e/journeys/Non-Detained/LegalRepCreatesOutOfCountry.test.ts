@@ -60,7 +60,7 @@ test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@L
         await createAppeal.setGroundsOfAppeal(typeOfAppeal);
         await createAppeal.setAppellantBasicDetails(false);
         await createAppeal.setNationality(true);
-        await createAppeal.setAppellentContactPreference('EMAIL');
+        await createAppeal.setAppellantContactPreference('Email');
         await createAppeal.setOutOfCountryAddress('Yes');
         await createAppeal.hasSponsor('Yes');
         await createAppeal.hasDeportationOrder('Yes');

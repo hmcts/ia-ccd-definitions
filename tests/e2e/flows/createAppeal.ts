@@ -325,17 +325,6 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
-    async setAppellentContactPreference(preference: string = 'EMAIL') {
-        if (preference === 'EMAIL') {
-            await this.page.check('#contactPreference-wantsEmail');
-            await this.page.fill('#email', appellant.email);
-        } else {
-            await this.page.check('#contactPreference-wantsSms');
-            await this.page.fill('#mobileNumber', appellant.mobile);
-        }
-        await this.buttonHelper.continueButton.click();
-    }
-
    async setNationality(hasNationality: boolean = true){
        if (hasNationality){
            await this.page.check('#appellantStateless-hasNationality');
