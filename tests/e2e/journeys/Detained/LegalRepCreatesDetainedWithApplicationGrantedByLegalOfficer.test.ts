@@ -21,9 +21,9 @@ import {DecideAnApplication} from "../../flows/events/decideAnApplication";
 
 const inTime: boolean = true;
 const cmrListing: boolean = true;
-//let detentionLocation: string = 'immigrationRemovalCentre';
-let detentionLocation: string = 'prison';
-//let detentionLocation: string = 'other';
+//const detentionLocation: string = 'immigrationRemovalCentre';
+const detentionLocation: string = 'prison';
+//const detentionLocation: string = 'other';
 let caseId: string = '';
 
 //const typeOfAppeal: string = 'refusalOfEu'; // Refusal under EEA regulations (payment required)
