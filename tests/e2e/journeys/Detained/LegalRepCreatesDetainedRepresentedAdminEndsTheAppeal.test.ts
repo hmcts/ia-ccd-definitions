@@ -88,7 +88,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
             await createAppeal.setPayNowLater('Now');
         }
 
-        await createAppeal.checkMyAnswers();
+        await createAppeal.checkMyAnswers(true);
 
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
