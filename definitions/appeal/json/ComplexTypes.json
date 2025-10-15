@@ -353,5 +353,10 @@
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationErrorMessage", "FieldType": "Text", "ElementLabel": "Error", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "ID": "hearingDecision", "ListElementCode": "hearingId", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "ID": "hearingDecision", "ListElementCode": "decision", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"}
+  {"LiveFrom": "01/01/2018", "ID": "hearingDecision", "ListElementCode": "decision", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "ID": "fasterCaseStatus", "ListElementCode": "status", "FieldType": "YesOrNo", "ElementLabel": "24 weeks status", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "fasterCaseStatus", "ListElementCode": "reason", "FieldType": "TextArea", "ElementLabel": "Reason", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "fasterCaseStatus", "ListElementCode": "user", "FieldType": "Text", "ElementLabel": "User", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "fasterCaseStatus", "ListElementCode": "dateAdded", "FieldType": "Date", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC", "Searchable": "N"}
 ]
