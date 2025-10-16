@@ -62,8 +62,11 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         await page.goto(envUrl);
     });
 
-    test('Create Represented Detained Appeal in Prison with Custodial sentence - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({page}) => {
-        const detentionLocation: string = 'prison';
+    test('Create Represented Detained Appeal with Custodial sentence - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({page}) => {
+        const detentionLocation: string = 'immigrationRemovalCentre';
+        // const detentionLocation: string = 'prison';
+        // const detentionLocation: string = 'other';
+
 
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();
@@ -73,12 +76,25 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         await createAppeal.locationInUK('Yes');
         await createAppeal.inDetention('Yes');
         await createAppeal.setDetentionLocation(detentionLocation);
-        await createAppeal.setCustodialSentence('Yes');
+
+        if (detentionLocation === 'prison' || detentionLocation === 'other') {
+            await createAppeal.setCustodialSentence('Yes');
+        }
+        else {
+            await createAppeal.setBailApplication('No');
+        }
+
+
         await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
         await createAppeal.uploadNoticeOfDecision();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);
         await createAppeal.setAppellantBasicDetails(true);
         await createAppeal.setNationality(true);
+
+        if (detentionLocation === 'other') {
+            await createAppeal.setAppellantAddress('detained', 'Yes');
+        }
+
         await createAppeal.appellantDetails();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');
