@@ -37,6 +37,7 @@ import {ListTheCase} from "../../flows/events/listTheCase";
 
 const inTime: boolean = true;
 const detentionLocation: string = 'prison';
+//const detentionLocation: string = 'immigrationRemovalCentre';
 const typeOfAppeal: string  = 'deprivation'; // Deprivation of citizenship (no payment required)
 
 let idamPage: IdamPage;
@@ -144,7 +145,6 @@ test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', {
         await linkHelper.signOut.click();
     });
 
-
     test('Home Office Officer (respondent) review appeal and upload Home Office bundle',   async ({ page }) => {
         await idamPage.login(homeOfficeOfficerCredentials);
         await page.goto(envUrl + '/cases/case-details/' + caseId);
@@ -209,7 +209,6 @@ test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', {
         await new ListTheCase(page).list('No');
         await linkHelper.signOut.click();
     });
-
 
     test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
         await idamPage.login(listingOfficerCredentials);

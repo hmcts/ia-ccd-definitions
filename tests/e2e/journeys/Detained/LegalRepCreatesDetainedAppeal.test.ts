@@ -42,10 +42,10 @@ import {TabsHelper} from "../../helpers/TabsHelper";
 
 const inTime: boolean = true;
 const cmrListing: boolean = true;
-//let detentionLocation: string = 'immigrationRemovalCentre';
-let detentionLocation: string = 'prison';
+let detentionLocation: string = 'immigrationRemovalCentre';
+//let detentionLocation: string = 'prison';
 //let detentionLocation: string = 'other';
-let caseId: string = '';
+let caseId: string;
 
 //const typeOfAppeal: string = 'refusalOfEu'; // Refusal under EEA regulations (payment required)
 //const typeOfAppeal: string = 'refusalOfHumanRights'; // Refusal human rights (payment required)
@@ -62,7 +62,7 @@ let updateDetentionLocation: UpdateDetentionLocation;
 let createHearingRequest: CreateHearingRequest;
 
 test.describe.configure({ mode: 'serial' });
-test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetained' }, () => {
+test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedAppeal' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -125,7 +125,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
             await createAppeal.setPayNowLater('Now');
         }
 
-        await createAppeal.checkMyAnswers();
+        await createAppeal.checkMyAnswers(true);
 
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
@@ -161,7 +161,6 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
 
          // await new GenerateListCMR(page).createTask();
          await new RespondentEvidenceDirection(page).submit();
-
          await linkHelper.signOut.click();
     });
 

@@ -39,7 +39,7 @@ let pageHelper: PageHelper;
 let caseId: string = '';
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@LegalRepCreatesOutOfCountry' }, () => {
+test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@LegalRepCreatesOutOfCountryAppeal' }, () => {
 
     test.beforeEach(async ({ page }) => {
         idamPage = new IdamPage(page);

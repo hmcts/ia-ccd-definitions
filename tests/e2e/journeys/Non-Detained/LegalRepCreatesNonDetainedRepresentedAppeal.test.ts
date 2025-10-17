@@ -41,7 +41,7 @@ const daysToComply: number = 14;
 const typeOfAppeal: string = 'deprivation'; // Deprivation of citizenship (no payment required)
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@LegalRepCreatesNonDetainedRepresented' }, () => {
+test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@LegalRepCreatesNonDetainedRepresentedAppeal' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
