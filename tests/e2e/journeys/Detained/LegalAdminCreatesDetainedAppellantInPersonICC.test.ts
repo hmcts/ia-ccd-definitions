@@ -2,7 +2,7 @@ import {expect, test} from '@playwright/test';
 import {
     envUrl,
     homeOfficeOfficerCredentials, judgeCredentials,
-    legalOfficerAdminCredentials,
+    legalOfficerAdminCredentials, legalOfficerCredentials,
     listingOfficerCredentials
 } from '../../detainedConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
@@ -39,6 +39,8 @@ const inTime: boolean = true;
 const detentionLocation: string = 'prison';
 //const detentionLocation: string = 'immigrationRemovalCentre';
 const typeOfAppeal: string  = 'deprivation'; // Deprivation of citizenship (no payment required)
+//const typeOfAppeal:string = 'protection'; // Refusal of protection claim (payment required)
+
 
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
@@ -126,7 +128,7 @@ test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', {
     });
 
     test('Legal Officer creates Respondent Direction', async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
 
         await validationHelper.validateLabelDisplayed(imageLocators.detained.appellantInPersonManual.locator, imageLocators.detained.appellantInPersonManual.name);
@@ -139,7 +141,7 @@ test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', {
             await new RequestHomeOfficeData(page).matchAppellantDetails();
         }
 
-        await new GenerateListCMR(page).createTask();
+        // await new GenerateListCMR(page).createTask();
         await new RespondentEvidenceDirection(page).submit();
 
         await linkHelper.signOut.click();

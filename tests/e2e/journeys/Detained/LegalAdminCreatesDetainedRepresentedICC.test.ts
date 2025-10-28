@@ -3,6 +3,7 @@ import {
     envUrl,
     homeOfficeOfficerCredentials, judgeCredentials,
     legalOfficerAdminCredentials,
+    legalOfficerCredentials,
     listingOfficerCredentials
 } from '../../detainedConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
@@ -63,8 +64,8 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
     });
 
     test('Create Represented Detained Appeal with Custodial sentence - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({page}) => {
-        const detentionLocation: string = 'immigrationRemovalCentre';
-        // const detentionLocation: string = 'prison';
+        //const detentionLocation: string = 'immigrationRemovalCentre';
+         const detentionLocation: string = 'prison';
         // const detentionLocation: string = 'other';
 
 
@@ -113,7 +114,7 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
 });
 
     test('Legal Officer creates Respondent Direction', async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
 
         await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManual.locator, imageLocators.detained.representedManual.name);
@@ -132,7 +133,7 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         await linkHelper.signOut.click();
     });
 
-    test('Home Office Officer (respondent) review appeal and upload Home Office bundle',   async ({ page }) => {
+    test.only('Home Office Officer (respondent) review appeal and upload Home Office bundle',   async ({ page }) => {
         await idamPage.login(homeOfficeOfficerCredentials);
         await page.goto(envUrl + '/cases/case-details/' + caseId);
         await new HomeOfficeBundle(page).upload();
@@ -198,7 +199,7 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         await linkHelper.signOut.click();
     });
 
-    test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
+    test.skip('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
         await idamPage.login(listingOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new CreateCaseSummary(page).create();

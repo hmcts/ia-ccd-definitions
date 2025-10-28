@@ -3,6 +3,7 @@ import {
     envUrl,
     homeOfficeOfficerCredentials,
     legalOfficerAdminCredentials,
+    legalOfficerCredentials,
     listingOfficerCredentials,
     judgeCredentials
 } from '../../detainedConfig';
@@ -87,7 +88,7 @@ test.describe('Legal Admin creates Non-Detained Appellant in Person Appeal', { t
     });
 
     test('Legal Officer creates Respondent Evidence Direction', async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
 
         await new ValidationHelper(page).validateLabelDisplayed(imageLocators.nonDetained.appellantInPersonManual.locator, imageLocators.nonDetained.appellantInPersonManual.name);

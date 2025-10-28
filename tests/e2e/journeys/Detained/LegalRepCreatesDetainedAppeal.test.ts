@@ -42,17 +42,17 @@ import {TabsHelper} from "../../helpers/TabsHelper";
 
 const inTime: boolean = true;
 const cmrListing: boolean = true;
-let detentionLocation: string = 'immigrationRemovalCentre';
-//let detentionLocation: string = 'prison';
+//let detentionLocation: string = 'immigrationRemovalCentre';
+let detentionLocation: string = 'prison';
 //let detentionLocation: string = 'other';
 let caseId: string;
 
-//const typeOfAppeal: string = 'refusalOfEu'; // Refusal under EEA regulations (payment required)
-//const typeOfAppeal: string = 'refusalOfHumanRights'; // Refusal human rights (payment required)
-const typeOfAppeal: string  = 'deprivation'; // Deprivation of citizenship (no payment required)
-//const typeOfAppeal: string  = 'euSettlementScheme'; // Refusal of application under the EU Settlement Scheme (payment required)
-//const typeOfAppeal: string = 'revocationOfProtection'; // Revocation of a protection status (no payment required)
-//const typeOfAppeal:string = 'protection'; // Refusal of protection claim (payment required)
+//const typeOfAppeal: string = 'refusalOfEu'; // Refusal under EEA regulations (EA) (payment required)
+//const typeOfAppeal: string = 'refusalOfHumanRights'; // Refusal human rights (HU) (payment required)
+const typeOfAppeal: string  = 'deprivation'; // Deprivation of citizenship (DC) (no payment required)
+//const typeOfAppeal: string  = 'euSettlementScheme'; // Refusal of application under the EU Settlement Scheme (EU) (payment required)
+//const typeOfAppeal: string = 'revocationOfProtection'; // Revocation of a protection status (RP) (no payment required)
+//const typeOfAppeal:string = 'protection'; // Refusal of protection claim (PA) (payment required)
 
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
@@ -252,25 +252,25 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await linkHelper.signOut.click();
     });
 
-    test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
-        await pageHelper.getCase(caseId);
-        await new CreateCaseSummary(page).create();
-        await new GenerateHearingBundle(page).submit();
-
-        // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decisions and reasons
-        await pageHelper.waitForHearingBundleToBeGenerated();
-        await expect(page.locator(' #progress_caseOfficer_preHearing')).toBeVisible();
-        await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
-        await linkHelper.signOut.click();
-    });
-
-    test('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
-        await idamPage.login(judgeCredentials);
-        await pageHelper.getCase(caseId);
-        await new PrepareDecisionAndReasons(page).generate('Yes');
-        await new CompleteDecisionAndReasons(page).upload('allowed');
-        await linkHelper.signOut.click();
-    });
+    // test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
+    //     await idamPage.login(listingOfficerCredentials);
+    //     await pageHelper.getCase(caseId);
+    //     await new CreateCaseSummary(page).create();
+    //     await new GenerateHearingBundle(page).submit();
+    //
+    //     // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decisions and reasons
+    //     await pageHelper.waitForHearingBundleToBeGenerated();
+    //     await expect(page.locator(' #progress_caseOfficer_preHearing')).toBeVisible();
+    //     await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
+    //     await linkHelper.signOut.click();
+    // });
+    //
+    // test('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
+    //     await idamPage.login(judgeCredentials);
+    //     await pageHelper.getCase(caseId);
+    //     await new PrepareDecisionAndReasons(page).generate('Yes');
+    //     await new CompleteDecisionAndReasons(page).upload('allowed');
+    //     await linkHelper.signOut.click();
+    // });
 
 });

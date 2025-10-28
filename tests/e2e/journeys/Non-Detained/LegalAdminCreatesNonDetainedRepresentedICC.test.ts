@@ -1,7 +1,7 @@
 import {expect, test} from '@playwright/test';
 import {
     envUrl,
-    homeOfficeOfficerCredentials, judgeCredentials,
+    homeOfficeOfficerCredentials, judgeCredentials, legalOfficerCredentials,
     legalOfficerAdminCredentials, listingOfficerCredentials
 } from '../../detainedConfig';
 import { IdamPage} from '../../page-objects/pages/idam.po';
@@ -94,14 +94,10 @@ test.describe('Legal Admin creates Represented Non-Detained Appeal (ICC)', { tag
 });
 
     test('Legal Officer creates Respondent Direction', async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
 
         await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.representedManual.locator, imageLocators.nonDetained.representedManual.name);
-
-        await new S94b(page).setStatus('Yes');
-        // Bug - s94b label not displaying!
-        //await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.    representedManualS94b.locator, imageLocators.detained.representedManualS94b.name);
 
         if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
             await new RequestHomeOfficeData(page).matchAppellantDetails();

@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import {
     envUrl,
     homeOfficeOfficerCredentials, judgeCredentials, legalOfficerAdminCredentials,
-    listingOfficerCredentials
+    legalOfficerCredentials, listingOfficerCredentials
 } from '../../detainedConfig';
 import { IdamPage } from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
@@ -83,7 +83,7 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
     });
 
     test('Legal Officer creates Respondent Evidence Direction', async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
 
         await new ValidationHelper(page).validateLabelDisplayed(imageLocators.nonDetained.representedManual.locator, imageLocators.nonDetained.representedManual.name);
