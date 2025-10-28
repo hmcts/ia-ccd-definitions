@@ -1419,5 +1419,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "validation_caseOfficer_noMatch", "TabFieldDisplayOrder": 4, "FieldShowCondition": "homeOfficeSearchNoMatch=\"NO_MATCH\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "validation", "CaseFieldID": "validationAppealData", "TabFieldDisplayOrder": 5, "FieldShowCondition": "homeOfficeSearchStatus=\"SUCCESS\""},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseHistory", "TabLabel": "Case history", "TabDisplayOrder": 16, "CaseFieldID": "caseHistoryViewer", "TabFieldDisplayOrder": 1}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseHistory", "TabLabel": "Case history", "TabDisplayOrder": 16, "CaseFieldID": "caseHistoryViewer", "TabFieldDisplayOrder": 1},
+
+  {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "sourceOfAppeal", "TabFieldDisplayOrder": 1, "FieldShowCondition": "isAdmin=\"DUMMY_VALUE_TO_HIDE_FIELD\""}
 ]
