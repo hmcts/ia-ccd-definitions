@@ -150,7 +150,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAddressLine4", "Label": "Address line 4", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocLrCountryGovUkAdminJ", "Label": "Country", "FieldType": "FixedList", "FieldTypeParameter": "isoCountriesGovUk", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealReferenceNumber", "Label": "Please enter the reference in the following format: XX/00000/0000", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealReferenceNumber", "Label": "Appeal reference", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ccdReferenceNumberForDisplay", "Label": "Online case reference number", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantNameForDisplay", "Label": "Appellant name", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealGroundsForDisplay", "Label": "Grounds of appeal", "FieldType": "MultiSelectList", "FieldTypeParameter": "appealGrounds", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -8250,8 +8250,5 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeCaseManagerCaseIdList", "Label": "Case IDs", "HintText": "Enter the list of caseIds without hyphens and separated by commas, e.g. 1234567812345678,1234567812345679,1234567812345680", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
 
-  {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "ID": "sourceOfAppeal", "Label": "Source of appeal", "FieldType": "FixedRadioList", "FieldTypeParameter": "sourceOfAppeal", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-
-  {"LiveFrom": "29/10/2025", "CaseTypeID": "Asylum", "ID": "outOfTimeRehydratedAppeal", "Label": "In the context of rehydrated appeals, this response will be used to assess whether the appeal has been submitted within the permitted time frame", "FieldType": "FixedRadioList", "FieldTypeParameter": "outOfTimeRehydratedAppeal", "SecurityClassification": "PUBLIC", "Searchable": "N"}
-
+  {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "ID": "sourceOfAppeal", "Label": "Source of appeal", "FieldType": "FixedRadioList", "FieldTypeParameter": "sourceOfAppeal", "SecurityClassification": "PUBLIC", "Searchable": "N"}
 ]
