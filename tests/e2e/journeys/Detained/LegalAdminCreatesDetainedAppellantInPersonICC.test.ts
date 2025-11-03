@@ -22,7 +22,6 @@ import { UploadAppealResponse } from '../../flows/events/uploadAppealResponse';
 import { ForceCaseHearingReqs } from '../../flows/events/forceCaseHearingReqs';
 import { SubmitHearingRequirements } from '../../flows/events/submitHearingRequirements';
 import { ReviewHearingRequirements } from '../../flows/events/reviewHearingRequirements';
-import { S94b } from '../../flows/events/setS94bStatus';
 import { ValidationHelper } from '../../helpers/ValidationHelper';
 import { imageLocators } from '../../fixtures/imageLocators';
 import {CreateCaseSummary} from "../../flows/events/createCaseSummary";
@@ -32,12 +31,11 @@ import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndRe
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
 import {CreateServiceRequest} from "../../flows/events/createServiceRequest";
 import {PaymentPage} from "../../page-objects/pages/payment_page";
-import {GenerateListCMR} from "../../flows/events/generateListCMRTask";
 import {ListTheCase} from "../../flows/events/listTheCase";
 
 const inTime: boolean = true;
-const detentionLocation: string = 'prison';
-//const detentionLocation: string = 'immigrationRemovalCentre';
+//const detentionLocation: string = 'prison';
+const detentionLocation: string = 'immigrationRemovalCentre';
 const typeOfAppeal: string  = 'deprivation'; // Deprivation of citizenship (no payment required)
 //const typeOfAppeal:string = 'protection'; // Refusal of protection claim (payment required)
 
@@ -134,14 +132,10 @@ test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', {
         await validationHelper.validateLabelDisplayed(imageLocators.detained.appellantInPersonManual.locator, imageLocators.detained.appellantInPersonManual.name);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
 
-        await new S94b(page).setStatus('Yes');
-        await validationHelper.validateLabelDisplayed(imageLocators.detained.appellantInPersonManualS94b.locator, imageLocators.detained.appellantInPersonManualS94b.name);
-
         if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
             await new RequestHomeOfficeData(page).matchAppellantDetails();
         }
 
-        // await new GenerateListCMR(page).createTask();
         await new RespondentEvidenceDirection(page).submit();
 
         await linkHelper.signOut.click();
@@ -155,7 +149,7 @@ test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', {
     });
 
     test('Legal Officer directs Appellant (Legal Officer Admin) to build case',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new CaseBuildingDirection(page).submit();
         await linkHelper.signOut.click();
@@ -169,7 +163,7 @@ test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', {
     });
 
     test('Legal Officer creates Respondent Review Direction',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new RespondentReviewDirection(page).submit();
         await linkHelper.signOut.click();
@@ -229,8 +223,8 @@ test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', {
         await idamPage.login(judgeCredentials);
         await pageHelper.getCase(caseId);
         await new PrepareDecisionAndReasons(page).generate('Yes');
-        await new CompleteDecisionAndReasons(page).upload('allowed');
+        await new CompleteDecisionAndReasons(page).upload('allowed'); // or dismissed
         await linkHelper.signOut.click();
-    });
+   });
 });
 

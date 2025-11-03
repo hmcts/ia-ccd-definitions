@@ -141,7 +141,7 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
     });
 
     test('Legal Officer directs appellant/Legal Rep to build case',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new CaseBuildingDirection(page).submit();
         await linkHelper.signOut.click();
@@ -155,7 +155,7 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
     });
 
     test('Legal Officer creates Respondent Review Direction',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new RespondentReviewDirection(page).submit();
         await linkHelper.signOut.click();
@@ -199,7 +199,7 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         await linkHelper.signOut.click();
     });
 
-    test.skip('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
+    test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
         await idamPage.login(listingOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new CreateCaseSummary(page).create();

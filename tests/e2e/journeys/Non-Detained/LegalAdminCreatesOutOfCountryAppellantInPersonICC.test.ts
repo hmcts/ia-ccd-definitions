@@ -100,7 +100,7 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Appellant in
     });
 
     test('Legal Officer directs appellant/Legal Rep to build case',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new CaseBuildingDirection(page).submit();
         await linkHelper.signOut.click();
@@ -114,7 +114,7 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Appellant in
     });
 
     test('Legal Officer creates Respondent Review Direction',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new RespondentReviewDirection(page).submit(daysToComply);
         await linkHelper.signOut.click();

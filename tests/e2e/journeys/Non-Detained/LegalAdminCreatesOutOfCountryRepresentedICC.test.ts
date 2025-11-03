@@ -101,7 +101,7 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
     });
 
     test('Legal Officer directs appellant/Legal Rep to build case',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new CaseBuildingDirection(page).submit();
         await linkHelper.signOut.click();
@@ -115,7 +115,7 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
     });
 
     test('Legal Officer creates Respondent Review Direction',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new RespondentReviewDirection(page).submit(daysToComply);
         await linkHelper.signOut.click();
@@ -135,7 +135,7 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
         await linkHelper.signOut.click();
     });
 
-    test('dmin Legal Officer submit hearing requirements as Legal Rep',   async ({ page }) => {
+    test('Admin Legal Officer submit hearing requirements as Legal Rep',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await page.goto(envUrl + '/cases/case-details/' + await caseId);
         await new SubmitHearingRequirements(page).submit(false);

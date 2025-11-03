@@ -22,7 +22,6 @@ import {UploadAppealResponse} from '../../flows/events/uploadAppealResponse';
 import {ForceCaseHearingReqs} from '../../flows/events/forceCaseHearingReqs';
 import {SubmitHearingRequirements} from '../../flows/events/submitHearingRequirements';
 import {ReviewHearingRequirements} from '../../flows/events/reviewHearingRequirements';
-import {S94b} from '../../flows/events/setS94bStatus';
 import {imageLocators} from '../../fixtures/imageLocators';
 import {CreateCaseSummary} from "../../flows/events/createCaseSummary";
 import {GenerateHearingBundle} from "../../flows/events/generateHearingBundle";
@@ -116,7 +115,7 @@ test.describe('Legal Admin creates Represented Non-Detained Appeal (ICC)', { tag
     });
 
     test('Legal Officer directs appellant/Legal Rep to build case',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new CaseBuildingDirection(page).submit();
         await linkHelper.signOut.click();
@@ -130,7 +129,7 @@ test.describe('Legal Admin creates Represented Non-Detained Appeal (ICC)', { tag
     });
 
     test('Legal Officer creates Respondent Review Direction',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new RespondentReviewDirection(page).submit(daysToComply);
         await linkHelper.signOut.click();

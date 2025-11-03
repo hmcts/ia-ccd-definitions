@@ -37,6 +37,7 @@ import { CompleteDecisionAndReasons } from "../../flows/events/completeDecisionA
 import { imageLocators } from '../../fixtures/imageLocators';
 import {CreateHearingRequest} from "../../flows/createHearingRequest";
 import {TabsHelper} from "../../helpers/TabsHelper";
+import {GenerateListCMR} from "../../flows/events/generateListCMRTask";
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
@@ -159,7 +160,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
              await new RequestHomeOfficeData(page).matchAppellantDetails();
          }
 
-         // await new GenerateListCMR(page).createTask();
+         await new GenerateListCMR(page).createTask();
          await new RespondentEvidenceDirection(page).submit();
          await linkHelper.signOut.click();
     });
@@ -252,25 +253,25 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await linkHelper.signOut.click();
     });
 
-    // test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
-    //     await idamPage.login(listingOfficerCredentials);
-    //     await pageHelper.getCase(caseId);
-    //     await new CreateCaseSummary(page).create();
-    //     await new GenerateHearingBundle(page).submit();
-    //
-    //     // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decisions and reasons
-    //     await pageHelper.waitForHearingBundleToBeGenerated();
-    //     await expect(page.locator(' #progress_caseOfficer_preHearing')).toBeVisible();
-    //     await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
-    //     await linkHelper.signOut.click();
-    // });
-    //
-    // test('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
-    //     await idamPage.login(judgeCredentials);
-    //     await pageHelper.getCase(caseId);
-    //     await new PrepareDecisionAndReasons(page).generate('Yes');
-    //     await new CompleteDecisionAndReasons(page).upload('allowed');
-    //     await linkHelper.signOut.click();
-    // });
+    test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
+        await idamPage.login(listingOfficerCredentials);
+        await pageHelper.getCase(caseId);
+        await new CreateCaseSummary(page).create();
+        await new GenerateHearingBundle(page).submit();
+
+        // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decisions and reasons
+        await pageHelper.waitForHearingBundleToBeGenerated();
+        await expect(page.locator(' #progress_caseOfficer_preHearing')).toBeVisible();
+        await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
+        await linkHelper.signOut.click();
+    });
+
+    test('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
+        await idamPage.login(judgeCredentials);
+        await pageHelper.getCase(caseId);
+        await new PrepareDecisionAndReasons(page).generate('Yes');
+        await new CompleteDecisionAndReasons(page).upload('allowed');
+        await linkHelper.signOut.click();
+    });
 
 });

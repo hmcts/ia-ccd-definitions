@@ -4,7 +4,7 @@ import {
     legalRepresentativeCredentials,
     homeOfficeOfficerCredentials,
     listingOfficerCredentials,
-    judgeCredentials, legalOfficerAdminCredentials
+    judgeCredentials, legalOfficerAdminCredentials, legalOfficerCredentials
 } from '../../detainedConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import { LinkHelper } from '../../helpers/LinkHelper';
@@ -105,7 +105,7 @@ test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@Legal
     });
 
     test('Legal Officer directs appellant/Legal Rep to build case',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new CaseBuildingDirection(page).submit();
         await linkHelper.signOut.click();
@@ -119,7 +119,7 @@ test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@Legal
     });
 
     test('Legal Officer creates Respondent Review Direction',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new RespondentReviewDirection(page).submit(daysToComply);
         await linkHelper.signOut.click();

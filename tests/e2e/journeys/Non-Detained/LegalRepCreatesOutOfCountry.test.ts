@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import {
     envUrl,
-    homeOfficeOfficerCredentials, judgeCredentials, legalOfficerAdminCredentials,
+    homeOfficeOfficerCredentials, judgeCredentials, legalOfficerAdminCredentials, legalOfficerCredentials,
     legalRepresentativeCredentials,
     listingOfficerCredentials
 } from '../../detainedConfig';
@@ -98,7 +98,7 @@ test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@L
     });
 
     test('Legal Officer directs appellant/Legal Rep to build case',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
+        await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new CaseBuildingDirection(page).submit();
         await linkHelper.signOut.click();
