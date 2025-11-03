@@ -92,7 +92,10 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "uploadTheNoticeOfDecisionTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "uploadTheNoticeOfDecision", "PageLabel": "Upload the Notice of Decision", "PageDisplayOrder": 60, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "uploadTheNoticeOfDecisionTips", "PageFieldDisplayOrder": 2, "DisplayContext": "READONLY", "PageID": "uploadTheNoticeOfDecision", "FieldShowCondition": "isAdmin!=\"Yes\"", "ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "uploadTheNoticeOfDecisionDocs", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "uploadTheNoticeOfDecision", "ShowSummaryChangeOption": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "uploadTheNoticeOfDecisionDocs", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "uploadTheNoticeOfDecision", "FieldShowCondition": "sourceOfAppeal!=\"rehydratedAppeal\"", "ShowSummaryChangeOption": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "uploadRehydratedNod", "PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "uploadTheNoticeOfDecision", "FieldShowCondition": "sourceOfAppeal=\"rehydratedAppeal\"", "ShowSummaryChangeOption": "Y"},
+
+
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealTypeTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appealType", "PageLabel": "Type of appeal", "PageDisplayOrder": 61, "FieldShowCondition": "isAdmin!=\"Yes\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealTypeTitleAdminJ", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appealType", "PageLabel": "Type of appeal", "FieldShowCondition": "isAdmin=\"Yes\"", "ShowSummaryChangeOption": "N"},
