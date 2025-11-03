@@ -133,7 +133,7 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         await linkHelper.signOut.click();
     });
 
-    test.only('Home Office Officer (respondent) review appeal and upload Home Office bundle',   async ({ page }) => {
+    test('Home Office Officer (respondent) review appeal and upload Home Office bundle',   async ({ page }) => {
         await idamPage.login(homeOfficeOfficerCredentials);
         await page.goto(envUrl + '/cases/case-details/' + caseId);
         await new HomeOfficeBundle(page).upload();
