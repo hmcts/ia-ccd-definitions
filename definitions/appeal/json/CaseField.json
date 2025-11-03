@@ -58,6 +58,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantEmailAddress", "Label": "Email", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantPhoneNumber", "Label": "Phone", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isRehydratedCase", "Label": "Internal flag managed by API to allow admin users to create a case on behalf of an unrepresented appellant", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+
+
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
