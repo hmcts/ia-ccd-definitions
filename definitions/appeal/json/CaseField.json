@@ -5685,6 +5685,7 @@
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaApplicantType", "Label": "Who made the application?", "HintText": "If you are recording a decision based on two applications, select the party that has had the biggest impact on your decision.", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaApplicantType", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionOutcomeType", "Label": "The outcome of the application", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaDecisionOutcomeType", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionOutcomeTypeRehydrated", "Label": "The outcome of the application", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaDecisionOutcomeType", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -5715,6 +5716,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isFtpaAppellantDecided", "Label": "Internal flag managed by API for ftpa appellant decided by leadership judge", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionDetails", "Label": "![]()\r\n## Appellant: Decision on permission to appeal", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionDate", "Label": "Decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionDateRehydrated", "Label": "Decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionOutcomeType", "Label": "The outcome of the application", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaDecisionOutcomeType", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {
     "LiveFrom": "01/01/2018",
@@ -5787,6 +5789,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isAppellantFtpaDecisionVisibleToRespondent", "Label": "Internal flag managed by API for leadership judge appellant ftpa decision visible to respondent", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isRespondentFtpaDecisionVisibleToAppellant", "Label": "Internal flag managed by API for leadership judge respondent ftpa decision visible to appellant", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionTitle", "Label": "![]()\r\n## FTPA decision", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionTitleRehydrated", "Label": "![]()\r\n## FTPA decision", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantDecisionTitleDlrm", "Label": "![]()\r\n## Rehearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaAppellantReasonRehearing", "Label": "Reason for rehearing", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "ftpaRespondentDecisionTitle", "Label": "![]()\r\n## FTPA decision", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
