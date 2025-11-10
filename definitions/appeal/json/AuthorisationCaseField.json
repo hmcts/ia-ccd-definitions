@@ -2504,6 +2504,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "decisionAndReasonsAvailable", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "decisionAndReasonsAvailable", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "decisionAndReasonsAvailable", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "notifications_turned_off_banner", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "notifications_turned_off_banner", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRepresentative_appealStarted_dcRp", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_admin_appealStarted", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "progress_legalRepresentative_appealStarted_new", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
@@ -9500,21 +9504,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheNoticeOfDecisionDocs", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheNoticeOfDecisionDocs", "UserRole": "citizen", "CRUD": "CRUD"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadRehydratedNod", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadRehydratedNod", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadRehydratedNod", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadRehydratedNod", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadRehydratedNod", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadRehydratedNod", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadRehydratedNod", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadRehydratedNod", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadRehydratedNod", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadRehydratedNod", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadRehydratedNod", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadRehydratedNod", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadRehydratedNod", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadRehydratedNod", "UserRole": "citizen", "CRUD": "CRUD"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "deportationOrderOptions", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "deportationOrderOptions", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "deportationOrderOptions", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRUD"},
@@ -14530,7 +14519,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheNoticeOfDecisionTitle", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheNoticeOfDecisionTips", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheNoticeOfDecisionDocs", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadRehydratedNod", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheNoticeOfDecisionDocument", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheNoticeOfDecisionExplanation", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "uploadTheAppealFormDocs", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
@@ -15614,20 +15602,5 @@
   {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "sourceOfAppeal", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
   {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "sourceOfAppeal", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
   {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "sourceOfAppeal", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
-  {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "sourceOfAppeal", "UserRole": "citizen", "CRUD": "R"},
-
-  {"LiveFrom": "29/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "outOfTimeRehydratedAppeal", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "29/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "outOfTimeRehydratedAppeal", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
-  {"LiveFrom": "29/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "outOfTimeRehydratedAppeal", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
-  {"LiveFrom": "29/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "outOfTimeRehydratedAppeal", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
-  {"LiveFrom": "29/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "outOfTimeRehydratedAppeal", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
-  {"LiveFrom": "29/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "outOfTimeRehydratedAppeal", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
-  {"LiveFrom": "29/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "outOfTimeRehydratedAppeal", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
-  {"LiveFrom": "29/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "outOfTimeRehydratedAppeal", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "R"},
-  {"LiveFrom": "29/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "outOfTimeRehydratedAppeal", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "R"},
-  {"LiveFrom": "29/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "outOfTimeRehydratedAppeal", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "R"},
-  {"LiveFrom": "29/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "outOfTimeRehydratedAppeal", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
-  {"LiveFrom": "29/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "outOfTimeRehydratedAppeal", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
-  {"LiveFrom": "29/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "outOfTimeRehydratedAppeal", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
-  {"LiveFrom": "29/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "outOfTimeRehydratedAppeal", "UserRole": "citizen", "CRUD": "R"}
+  {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "sourceOfAppeal", "UserRole": "citizen", "CRUD": "R"}
 ]
