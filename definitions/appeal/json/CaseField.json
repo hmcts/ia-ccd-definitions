@@ -6172,15 +6172,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "journey_type_rehydrated",
-    "Label": "![The appeal is rehydrated](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/Tag-single-Rehydrated.svg)",
-    "FieldType": "Label",
-    "SecurityClassification":"PUBLIC",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
     "ID": "validation_caseOfficer_requestHomeOfficeData",
     "Label": "${homeOfficeSearchStatusMessage}",
     "FieldType": "Label",
