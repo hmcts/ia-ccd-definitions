@@ -960,8 +960,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "sponsorMobileNumberAdminJ", "TabFieldDisplayOrder": 120, "FieldShowCondition": "hasSponsor=\"Yes\" AND isAdmin=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "aipSponsorEmailForDisplay", "TabFieldDisplayOrder": 125, "FieldShowCondition": "journeyType=\"aip\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "aipSponsorMobileNumberForDisplay", "TabFieldDisplayOrder": 126, "FieldShowCondition": "journeyType=\"aip\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "sponsorEmailAdminJ", "TabFieldDisplayOrder": 126, "FieldShowCondition": "isAdmin=\"Yes\" AND sponsorEmailAdminJ!=\"\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "sponsorMobileNumberAdminJ", "TabFieldDisplayOrder": 126, "FieldShowCondition": "isAdmin=\"Yes\" AND sponsorMobileNumberAdminJ!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "sponsorAuthorisation", "TabFieldDisplayOrder": 130, "FieldShowCondition": "hasSponsor=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantPhoneNumber", "TabFieldDisplayOrder": 135, "FieldShowCondition": "journeyType=\"aip\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantEmailAddress", "TabFieldDisplayOrder": 136, "FieldShowCondition": "journeyType=\"aip\""},
