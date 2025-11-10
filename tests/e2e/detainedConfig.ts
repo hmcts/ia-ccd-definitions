@@ -6,7 +6,7 @@ const monthAgo = moment().subtract(1, 'month');
 
 export const runningEnv =  process.env.ENVIRONMENT;
 
-export const envUrl: string = process.env.ENVIRONMENT === 'preview' ? 'https://xui-ia-case-api-pr-2525.preview.platform.hmcts.net' : 'https://manage-case.demo.platform.hmcts.net';
+export const envUrl: string = process.env.ENVIRONMENT === 'preview' ? 'https://xui-ia-case-api-pr-2848.preview.platform.hmcts.net' : (process.env.ENVIRONMENT === 'demo' ? 'https://manage-case.demo.platform.hmcts.net' : 'https://manage-case.aat.platform.hmcts.net');
 
 export const createCase = {
     jurisdictionCode: 'IA',
@@ -20,17 +20,17 @@ export const legalRepresentativeCredentials = {
 }
 
 export const legalOfficerCredentials = {
-    username: process.env.ENVIRONMENT === 'preview' ? "CRD_func_test_aat_stcw@justice.gov.uk" : 'CRD_func_test_demo_stcwuser053@justice.gov.uk',
+    username: process.env.ENVIRONMENT === 'preview' ? "CRD_func_test_aat_stcw@justice.gov.uk" : (process.env.ENVIRONMENT === 'demo' ? 'CRD_func_test_demo_stcwuser053@justice.gov.uk' : 'CRD_func_test_aat_stcw@justice.gov.uk'),
     password: " AldgateT0wer"
 }
 
 export const legalOfficerAdminCredentials = {
-    username: process.env.ENVIRONMENT === 'preview' ? "CRD_func_test_aat_adm66@justice.gov.uk" : "CRD_func_test_demo_admuser045@justice.gov.uk",
+    username: process.env.ENVIRONMENT === 'preview' ? "CRD_func_test_aat_adm66@justice.gov.uk" : (process.env.ENVIRONMENT === 'demo' ? 'CRD_func_test_demo_admuser045@justice.gov.uk' : 'CRD_func_test_aat_ctscAdm1@justice.gov.uk'),
     password: " AldgateT0wer"
 }
 
 export const listingOfficerCredentials = {
-    username: process.env.ENVIRONMENT === 'preview' ? 'CRD_func_test_aat_stcw@justice.gov.uk' : 'CRD_func_test_demo_stcwuser053@justice.gov.uk',
+    username: process.env.ENVIRONMENT === 'preview' ? 'CRD_func_test_aat_stcw@justice.gov.uk' : (process.env.ENVIRONMENT === 'demo' ? 'CRD_func_test_demo_stcwuser053@justice.gov.uk' : 'CRD_func_test_aat_stcw22@justice.gov.uk'),
     password: " AldgateT0wer"
 }
 

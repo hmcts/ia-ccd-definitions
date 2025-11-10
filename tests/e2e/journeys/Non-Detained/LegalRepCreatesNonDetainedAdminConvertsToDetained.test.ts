@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import {
     envUrl,
-    legalRepresentativeCredentials, listingOfficerCredentials
+    legalRepresentativeCredentials, listingOfficerCredentials, runningEnv
 } from '../../detainedConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import { LinkHelper } from '../../helpers/LinkHelper';
@@ -41,7 +41,11 @@ test.describe('Legal Representative creates Non-Detained Appeal and Legal Office
         await idamPage.login(legalRepresentativeCredentials);
         await new CreateCasePage(page).createCase();
         await createAppeal.locationInUK('Yes');
-        await createAppeal.inDetention('No');
+
+        if (['preview', 'demo'].includes(runningEnv)) {
+            await createAppeal.inDetention('No');
+        }
+
         await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
         await createAppeal.uploadNoticeOfDecision();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);

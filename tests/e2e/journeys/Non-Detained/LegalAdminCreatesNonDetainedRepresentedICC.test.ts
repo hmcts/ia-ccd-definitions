@@ -2,7 +2,7 @@ import {expect, test} from '@playwright/test';
 import {
     envUrl,
     homeOfficeOfficerCredentials, judgeCredentials, legalOfficerCredentials,
-    legalOfficerAdminCredentials, listingOfficerCredentials
+    legalOfficerAdminCredentials, listingOfficerCredentials, runningEnv
 } from '../../detainedConfig';
 import { IdamPage} from '../../page-objects/pages/idam.po';
 import {LinkHelper} from '../../helpers/LinkHelper';
@@ -69,7 +69,11 @@ test.describe('Legal Admin creates Represented Non-Detained Appeal (ICC)', { tag
         await createAppeal.setTribunalAppealReceived();
         await createAppeal.appellantInPerson('No', 'Yes');
         await createAppeal.locationInUK('Yes');
-        await createAppeal.inDetention('No');
+
+        if (['preview', 'demo'].includes(runningEnv)) {
+            await createAppeal.inDetention('No');
+        }
+
         await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
         await createAppeal.uploadNoticeOfDecision();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);

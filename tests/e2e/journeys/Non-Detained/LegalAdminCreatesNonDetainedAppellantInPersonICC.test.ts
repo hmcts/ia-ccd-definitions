@@ -5,7 +5,7 @@ import {
     legalOfficerAdminCredentials,
     legalOfficerCredentials,
     listingOfficerCredentials,
-    judgeCredentials
+    judgeCredentials, runningEnv
 } from '../../detainedConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import { LinkHelper } from '../../helpers/LinkHelper';
@@ -65,7 +65,11 @@ test.describe('Legal Admin creates Non-Detained Appellant in Person Appeal', { t
         await createAppeal.setTribunalAppealReceived();
         await createAppeal.appellantInPerson('Yes');
         await createAppeal.locationInUK('Yes');
-        await createAppeal.inDetention('No');
+
+        if (['preview', 'demo'].includes(runningEnv)) {
+            await createAppeal.inDetention('No');
+        }
+
         await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
         await createAppeal.uploadNoticeOfDecision();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);

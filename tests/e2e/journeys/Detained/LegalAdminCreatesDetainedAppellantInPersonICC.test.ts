@@ -32,6 +32,7 @@ import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAnd
 import {CreateServiceRequest} from "../../flows/events/createServiceRequest";
 import {PaymentPage} from "../../page-objects/pages/payment_page";
 import {ListTheCase} from "../../flows/events/listTheCase";
+import {S94b} from "../../flows/events/setS94bStatus";
 
 const inTime: boolean = true;
 //const detentionLocation: string = 'prison';
@@ -131,6 +132,9 @@ test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', {
 
         await validationHelper.validateLabelDisplayed(imageLocators.detained.appellantInPersonManual.locator, imageLocators.detained.appellantInPersonManual.name);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
+
+        await new S94b(page).setStatus('Yes');
+        await validationHelper.validateLabelDisplayed(imageLocators.detained.appellantInPersonManualS94b.locator, imageLocators.detained.appellantInPersonManualS94b.name);
 
         if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
             await new RequestHomeOfficeData(page).matchAppellantDetails();

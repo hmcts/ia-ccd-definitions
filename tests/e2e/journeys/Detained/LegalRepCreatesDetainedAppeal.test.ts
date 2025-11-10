@@ -152,6 +152,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
 
         await new S94b(page).setStatus('Yes');
         await validationHelper.validateLabelDisplayed(imageLocators.detained.representedS94b.locator, imageLocators.detained.representedS94b.name);
+
         detentionLocation = detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison');
         await updateDetentionLocation.changeLocation(detentionLocation, detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
         await updateDetentionLocation.validateDataUpdated(detentionLocation);

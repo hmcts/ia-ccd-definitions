@@ -4,7 +4,7 @@ import {
     legalRepresentativeCredentials,
     homeOfficeOfficerCredentials,
     listingOfficerCredentials,
-    judgeCredentials, legalOfficerAdminCredentials, legalOfficerCredentials
+    judgeCredentials, legalOfficerAdminCredentials, legalOfficerCredentials, runningEnv
 } from '../../detainedConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import { LinkHelper } from '../../helpers/LinkHelper';
@@ -57,7 +57,11 @@ test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@Legal
         await idamPage.login(legalRepresentativeCredentials);
         await new CreateCasePage(page).createCase();
         await createAppeal.locationInUK('Yes');
-        await createAppeal.inDetention('No');
+
+        if (['preview', 'demo'].includes(runningEnv)) {
+            await createAppeal.inDetention('No');
+        }
+
         await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
         await createAppeal.uploadNoticeOfDecision();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);
