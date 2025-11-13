@@ -74,5 +74,6 @@ test.describe('Legal Admin creates Rehydrated Case ' + (inTime ? 'In Time' : 'Ou
         await createAppeal.setSourceOfAppeal('rehydratedAppeal');
         await buttonHelper.continueButton.click(); // Before you start page
         await createAppeal.enterAriaReferenceNumber();
+        await createAppeal.isAppealOutOfTime('No');
     });
 });

@@ -473,4 +473,10 @@ export class CreateAppeal {
         await this.buttonHelper.continueButton.click();
     }
 
+    // Rehydrate flow for Legal Admin
+    async isAppealOutOfTime(outOfTime: string = 'No') {
+        await this.page.check(`#submissionOutOfTime_${outOfTime}`);
+        await this.buttonHelper.continueButton.click();
+    }
+
 }
