@@ -11,7 +11,7 @@ import {IdamPage} from '../../page-objects/pages/idam.po';
 //import {PageHelper} from '../../helpers/PageHelper';
 import {ButtonHelper} from '../../helpers/ButtonHelper';
 //import {ValidationHelper} from '../../helpers/ValidationHelper'
-//import {CreateAppeal} from '../../flows/createAppeal';
+import {CreateAppeal} from '../../flows/createAppeal';
 import {CreateCasePage} from '../../page-objects/pages/createCase_page';
 //import {SubmitYourAppeal} from '../../flows/events/submitYourAppeal';
 //import {RequestHomeOfficeData} from '../../flows/events/requestHomeOfficeData';
@@ -40,7 +40,7 @@ let idamPage: IdamPage;
 //let pageHelper: PageHelper;
 let buttonHelper: ButtonHelper;
 //let validationHelper: ValidationHelper;
-//let createAppeal: CreateAppeal;
+let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
 //let caseId: string;
 
@@ -57,13 +57,13 @@ test.describe('Legal Admin creates Rehydrated Case ' + (inTime ? 'In Time' : 'Ou
 //        pageHelper = new PageHelper(page);
         buttonHelper = new ButtonHelper(page);
 //        validationHelper = new ValidationHelper(page);
-//        createAppeal = new CreateAppeal(page);
+        createAppeal = new CreateAppeal(page);
         createCasePage = new CreateCasePage(page);
 
         await page.goto(envUrl);
     });
 
-    test('Create Rehydrated case',   async () => {
+    test('Create Rehydrated case',   async ({ page }) => {
         // const detentionLocation: string = 'immigrationRemovalCentre';
        //  const detentionLocation: string = 'prison';
         // const detentionLocation: string = 'other';
@@ -71,6 +71,7 @@ test.describe('Legal Admin creates Rehydrated Case ' + (inTime ? 'In Time' : 'Ou
 
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();
+        await createAppeal.setSourceOfAppeal('rehydratedAppeal');
         await buttonHelper.continueButton.click(); // Before you start page
     });
 });
