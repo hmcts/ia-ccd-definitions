@@ -461,10 +461,16 @@ export class CreateAppeal {
            await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
        }
    }
-
    // Rehydrate flow for Legal Admin
-    async setSourceOfAppeal(source: string = 'paperForm') {
+   async setSourceOfAppeal(source: string = 'paperForm') {
         await this.page.check(`#sourceOfAppeal-${source}`);
         await this.buttonHelper.continueButton.click();
+   }
+
+    // Rehydrate flow for Legal Admin
+    async enterAriaReferenceNumber() {
+        await this.page.fill('#appealReferenceNumber', 'AA/12345/1234');
+        await this.buttonHelper.continueButton.click();
     }
+
 }
