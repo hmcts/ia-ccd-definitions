@@ -3,7 +3,7 @@ import { PageHelper } from '../../helpers/PageHelper';
 import { ButtonHelper } from '../../helpers/ButtonHelper';
 import { ValidationHelper } from '../../helpers/ValidationHelper';
 
-const outOfTimedImageLocator: string = '//*[@id="confirmation-body"]/ccd-markdown/div/markdown/p[1]/img';
+const outOfTimeImageLocator: string = '//*[@id="confirmation-body"]/ccd-markdown/div/markdown/p[1]/img';
 
 export class SubmitYourAppeal {
     private buttonHelper: ButtonHelper;
@@ -25,7 +25,7 @@ export class SubmitYourAppeal {
     async setAppealOutOfTime(){
         await this.page.fill('#applicationOutOfTimeExplanation', 'Test explanation of why out of time.');
         await this.page.locator('#applicationOutOfTimeDocument').setInputFiles('./tests/documents/TEST_DOCUMENT_1.pdf');
-        await this.page.fill('#uploadTheNoticeOfDecisionDocs_0_description', 'Test Notice of Decision document.');
+        //await this.page.fill('#uploadTheNoticeOfDecisionDocs_0_description', 'Test Notice of Decision document.');
         await this.page.waitForSelector('.error-message', { state: 'hidden' });
         await this.buttonHelper.continueButton.click();
     }
@@ -46,7 +46,7 @@ export class SubmitYourAppeal {
         } else if (inTime){
             await expect(confirmationHeader).toHaveText('The appeal has been submitted');
         } else {
-            await new ValidationHelper(this.page).validateLabelDisplayed(outOfTimedImageLocator, 'outOfTimeConfirmation');
+            await new ValidationHelper(this.page).validateLabelDisplayed(outOfTimeImageLocator, 'outOfTimeConfirmation', false);
         }
 
         await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();

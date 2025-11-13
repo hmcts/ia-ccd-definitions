@@ -14,8 +14,11 @@ export class ValidationHelper {
         this.tabsHelper = new TabsHelper(this.page);
     }
 
-    async validateLabelDisplayed(locator: string, label: string) {
-        await this.tabsHelper.selectTab('Overview');
+    async validateLabelDisplayed(locator: string, label: string, moveToOverviewTab: boolean = true) {
+        if (moveToOverviewTab) {
+            await this.tabsHelper.selectTab('Overview');
+        }
+
         await expect(this.page.locator(locator), 'Label is not being displayed when it should').toBeVisible();
         const src:string = await this.page.locator(locator).getAttribute('src');
         expect(src, 'Expected label not found').toContain(label);

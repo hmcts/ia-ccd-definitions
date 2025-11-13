@@ -65,8 +65,8 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
 
     test('Create Represented Detained Appeal with Custodial sentence - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({page}) => {
         // const detentionLocation: string = 'immigrationRemovalCentre';
-        // const detentionLocation: string = 'prison';
-         const detentionLocation: string = 'other';
+         const detentionLocation: string = 'prison';
+        // const detentionLocation: string = 'other';
 
 
         await idamPage.login(legalOfficerAdminCredentials);

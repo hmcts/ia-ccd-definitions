@@ -457,7 +457,7 @@ export class CreateAppeal {
 
    async checkMyAnswers(skipCloseAndReturnCheck:boolean = false) {
        await this.buttonHelper.continueButton.click();
-       if (!skipCloseAndReturnCheck || (skipCloseAndReturnCheck && !['preview'].includes(runningEnv))) {
+       if (!skipCloseAndReturnCheck || (skipCloseAndReturnCheck && !['preview', 'aat'].includes(runningEnv))) {
            await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
        }
    }

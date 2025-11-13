@@ -38,15 +38,16 @@ import { imageLocators } from '../../fixtures/imageLocators';
 import {CreateHearingRequest} from "../../flows/createHearingRequest";
 import {TabsHelper} from "../../helpers/TabsHelper";
 import {GenerateListCMR} from "../../flows/events/generateListCMRTask";
+import {RecordOutOfTimeDecision} from "../../flows/events/recordOutOfTimeDecision";
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
 const inTime: boolean = true;
-const cmrListing: boolean = true;
+const cmrListing: boolean = false;
 //let detentionLocation: string = 'immigrationRemovalCentre';
 let detentionLocation: string = 'prison';
 //let detentionLocation: string = 'other';
-let caseId: string;
+let caseId: string = '';
 
 //const typeOfAppeal: string = 'refusalOfEu'; // Refusal under EEA regulations (EA) (payment required)
 //const typeOfAppeal: string = 'refusalOfHumanRights'; // Refusal human rights (HU) (payment required)
@@ -143,9 +144,13 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await linkHelper.signOut.click();
     });
 
-    test('Legal Officer adds s94b appeal status, updates detention location and creates Respondent Direction', async ({ page }) => {
+    test('Legal Officer' + (!inTime ? ' records Out of Time decision, ': ' ') + 'adds s94b appeal status, updates detention location and creates Respondent Direction', async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
+
+        if (!inTime) {
+            await new RecordOutOfTimeDecision(page).submit('approved');
+        }
 
         await validationHelper.validateLabelDisplayed(imageLocators.detained.represented.locator, imageLocators.detained.represented.name);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
@@ -161,7 +166,10 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
              await new RequestHomeOfficeData(page).matchAppellantDetails();
          }
 
-         await new GenerateListCMR(page).createTask();
+         if (cmrListing) {
+             await new GenerateListCMR(page).createTask();
+         }
+
          await new RespondentEvidenceDirection(page).submit();
          await linkHelper.signOut.click();
     });
@@ -232,7 +240,13 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
 
         await createHearingRequest.checkHearingRequirements();
         await createHearingRequest.setAdditionalFacilities();
-        await createHearingRequest.setHearingStage('SUB');
+
+        if (cmrListing) {
+            await createHearingRequest.setHearingStage('CMR');
+        } else {
+            await createHearingRequest.setHearingStage('SUB');
+        }
+
         await createHearingRequest.setParticipantAttendance();
         await createHearingRequest.setVenueLocation('Glasgow');
         await createHearingRequest.setSpecificJudge('No');
