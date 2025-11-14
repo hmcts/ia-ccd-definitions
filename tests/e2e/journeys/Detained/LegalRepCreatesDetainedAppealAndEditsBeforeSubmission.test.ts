@@ -8,14 +8,11 @@ import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../../flows/createAppeal';
 import { LinkHelper } from '../../helpers/LinkHelper';
 import { PageHelper } from '../../helpers/PageHelper';
-import { ValidationHelper } from '../../helpers/ValidationHelper';
-import { UpdateDetentionLocation } from '../../flows/events/updateDetentionLocation';
 import { EditAppeal } from '../../flows/events/editAppeal';
+import {ButtonHelper} from "../../helpers/ButtonHelper";
 
-import {CreateHearingRequest} from "../../flows/createHearingRequest";
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
-console.log('>>>>',!['false'].includes(process.env.IN_TIME));
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 let detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
@@ -34,6 +31,7 @@ const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivatio
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
+let buttonHelper: ButtonHelper;
 
 test.describe.configure({ mode: 'serial' });
 test.describe('Create Detained Appeal as Legal Representative with detention location: ' + detentionLocation + ', ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrHearing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedAppealEditBeforeSubmission' }, () => {
@@ -43,6 +41,7 @@ test.describe('Create Detained Appeal as Legal Representative with detention loc
         idamPage = new IdamPage(page);
         linkHelper = new LinkHelper(page);
         pageHelper = new PageHelper(page);
+        buttonHelper = new ButtonHelper(page);
 
         await page.goto(envUrl);
     });
@@ -103,6 +102,53 @@ test.describe('Create Detained Appeal as Legal Representative with detention loc
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
 
         await new EditAppeal(page).edit();
+        await createAppeal.locationInUK('Yes');
+        await createAppeal.inDetention('Yes');
+        await createAppeal.setDetentionLocation('other');
+
+        if (detentionLocation === 'prison' || detentionLocation === 'other') {
+            await createAppeal.setCustodialSentence('Yes');
+        }
+
+        if (detentionLocation === 'immigrationRemovalCentre') {
+            await createAppeal.setBailApplication('Yes');
+        }
+
+        await createAppeal.setHomeOfficeDetails(inTime);
+        await buttonHelper.continueButton.click(); // Upload Notice of Decision - no need to load another document
+        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+
+        if (typeOfAppeal !== 'euSettlementScheme') {
+            await createAppeal.setGroundsOfAppeal(typeOfAppeal);
+        }
+
+        await createAppeal.setAppellantBasicDetails(false);
+
+
+
+        await buttonHelper.continueButton.click(); // Nationality - no need to load another one
+
+        if (detentionLocation === 'other') {
+            await createAppeal.setAppellantAddress('detained', 'Yes');
+        }
+
+        await createAppeal.hasSponsor('Yes');
+        await createAppeal.hasDeportationOrder('Yes');
+        await createAppeal.hasRemovalDirections('Yes');
+        await createAppeal.hasNewMatters('Yes');
+        await createAppeal.hasOtherAppeals('No');
+        await createAppeal.setLegalRepresentativeDetails();
+        await createAppeal.isHearingRequired(true);
+
+        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+            await createAppeal.hasFeeRemission('No');
+        }
+
+        if (typeOfAppeal === 'protection') {
+            await createAppeal.setPayNowLater('Now');
+        }
+
+        await createAppeal.checkMyAnswers(true);
         // await new SubmitYourAppeal(page).submit(true, inTime);
         //
         // if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {

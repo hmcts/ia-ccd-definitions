@@ -35,10 +35,9 @@ import {ListTheCase} from "../../flows/events/listTheCase";
 import {S94b} from "../../flows/events/setS94bStatus";
 
 const inTime: boolean = true;
-const detentionLocation: string = 'prison';
-//const detentionLocation: string = 'immigrationRemovalCentre';
-const typeOfAppeal: string  = 'deprivation'; // Deprivation of citizenship (no payment required)
-//const typeOfAppeal:string = 'protection'; // Refusal of protection claim (payment required)
+const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
+const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
+
 
 
 let idamPage: IdamPage;
