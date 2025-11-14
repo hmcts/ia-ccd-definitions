@@ -1915,7 +1915,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "reTriggerWaBulkTasks", "CaseFieldID": "caseIdList", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "1.0", "PageDisplayOrder": 1,  "ShowSummaryChangeOption": "N"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "reTriggerWaTasks", "CaseFieldID": "journeyType", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "1.0", "PageDisplayOrder": 2, "ShowSummaryChangeOption": "N", "Publish": "Y", "RetainHiddenValue": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "reTriggerWaTasks", "CaseFieldID": "journeyType", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "1.0", "PageDisplayOrder": 2, "ShowSummaryChangeOption": "N", "Publish": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "reTriggerWaTasks", "CaseFieldID": "remissionOption", "PageFieldDisplayOrder": 2, "DisplayContext": "READONLY", "PageID": "1.0", "PageDisplayOrder": 2, "ShowSummaryChangeOption": "N", "FieldShowCondition": "journeyType=\"DO_NOT_SHOW_ON_UI\"", "Publish": "Y", "RetainHiddenValue": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "reTriggerWaTasks", "CaseFieldID": "helpWithFeesOption", "PageFieldDisplayOrder": 3, "DisplayContext": "READONLY", "PageID": "1.0", "PageDisplayOrder": 2, "ShowSummaryChangeOption": "N", "FieldShowCondition": "journeyType=\"DO_NOT_SHOW_ON_UI\"", "Publish": "Y", "RetainHiddenValue": "Y"},
 
