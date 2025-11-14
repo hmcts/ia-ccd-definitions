@@ -44,19 +44,19 @@ import {RecordOutOfTimeDecision} from "../../flows/events/recordOutOfTimeDecisio
 
 const inTime: boolean = true;
 const cmrListing: boolean = false;
-//let detentionLocation: string = 'immigrationRemovalCentre';
-//let detentionLocation: string = 'prison';
-let detentionLocation: string = !['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.ENVIRONMENT) ? process.env.DETENTION_LOCATION : 'Prison';
-//let detentionLocation: string = 'other';
+
+let detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 let caseId: string = '';
 
 
-//const typeOfAppeal: string = 'refusalOfEu'; // Refusal under EEA regulations (EA) (payment required)
-//const typeOfAppeal: string = 'refusalOfHumanRights'; // Refusal human rights (HU) (payment required)
-const typeOfAppeal: string  = 'deprivation'; // Deprivation of citizenship (DC) (no payment required)
-//const typeOfAppeal: string  = 'euSettlementScheme'; // Refusal of application under the EU Settlement Scheme (EU) (payment required)
-//const typeOfAppeal: string = 'revocationOfProtection'; // Revocation of a protection status (RP) (no payment required)
-//const typeOfAppeal:string = 'protection'; // Refusal of protection claim (PA) (payment required)
+//refusalOfEu - Refusal under EEA regulations (EA) (payment required)
+//refusalOfHumanRights - Refusal human rights (HU) (payment required)
+//deprivation -  Deprivation of citizenship (DC) (no payment required)
+//euSettlementScheme - Refusal of application under the EU Settlement Scheme (EU) (payment required)
+//revocationOfProtection - Revocation of a protection status (RP) (no payment required)
+//protection - Refusal of protection claim (PA) (payment required)
+const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
+
 
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
@@ -126,7 +126,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
             await createAppeal.hasFeeRemission('No');
         }
 
-        if (typeOfAppeal === 'protection') {
+            if (typeOfAppeal === ' ') {
             await createAppeal.setPayNowLater('Now');
         }
 
