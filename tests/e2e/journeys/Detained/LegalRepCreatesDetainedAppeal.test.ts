@@ -42,9 +42,8 @@ import {RecordOutOfTimeDecision} from "../../flows/events/recordOutOfTimeDecisio
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
-const inTime: boolean = true;
-const cmrListing: boolean = false;
-
+const inTime: boolean = ['false'].includes(process.env.IN_TIME) ? false : true;
+const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING) ? true : false;
 let detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 let caseId: string = '';
 
@@ -66,11 +65,10 @@ let updateDetentionLocation: UpdateDetentionLocation;
 let createHearingRequest: CreateHearingRequest;
 
 test.describe.configure({ mode: 'serial' });
-test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedAppeal' }, () => {
+test.describe('Create Detained Appeal as Legal Representative with detention location: ' + detentionLocation + ', ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrHearing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedAppeal' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
-        console.log('detention location....', detentionLocation);
         idamPage = new IdamPage(page);
         linkHelper = new LinkHelper(page);
         pageHelper = new PageHelper(page);
@@ -169,7 +167,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
              await new RequestHomeOfficeData(page).matchAppellantDetails();
          }
 
-         if (cmrListing) {
+         if (cmrHearing) {
              await new GenerateListCMR(page).createTask();
          }
 
@@ -244,7 +242,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await createHearingRequest.checkHearingRequirements();
         await createHearingRequest.setAdditionalFacilities();
 
-        if (cmrListing) {
+        if (cmrHearing) {
             await createHearingRequest.setHearingStage('CMR');
         } else {
             await createHearingRequest.setHearingStage('SUB');
