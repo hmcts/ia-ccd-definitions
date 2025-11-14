@@ -124,7 +124,7 @@ test.describe('Create Detained Appeal as Legal Representative with detention loc
             await createAppeal.hasFeeRemission('No');
         }
 
-            if (typeOfAppeal === ' ') {
+        if (typeOfAppeal === 'protection') {
             await createAppeal.setPayNowLater('Now');
         }
 

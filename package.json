@@ -52,6 +52,8 @@
     "test:LegalRepCreatesDetainedAppealImmigrationRemovalCentreProtection": "yarn playwright install && DETENTION_LOCATION=immigrationRemovalCentre APPEAL_TYPE=protection npx playwright test --headed --project chromium --grep @LegalRepCreatesDetainedAppeal",
     "test:LegalRepCreatesDetainedAppealOtherProtectionListAsCMR": "yarn playwright install && DETENTION_LOCATION=other APPEAL_TYPE=protection CMR_HEARING=true npx playwright test --headed --project chromium --grep @LegalRepCreatesDetainedAppeal",
 
+    "test:LegalRepCreatesDetainedAppealPrisonEditBeforeSubmission": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection npx playwright test --headed --project chromium --grep @LegalRepCreatesDetainedAppealEditBeforeSubmission",
+
     "test:LegalRepCreatesDetainedAdminEndsTheAppeal": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalRepCreatesDetainedAdminEndsTheAppeal",
     "test:LegalRepCreatesDetainedWithApplicationGrantedByLegalOfficer": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalRepCreatesDetainedWithApplicationGrantedByLegalOfficer ",
     "test:LegalAdminCreatesNonDetainedRepresentedICC": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalAdminCreatesNonDetainedRepresentedICC",
