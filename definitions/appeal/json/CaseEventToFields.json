@@ -2,6 +2,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "isAdmin", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "sourceOfAppeal","PageDisplayOrder": 1, "PageLabel": "Where has the appeal come from?", "FieldShowCondition": "checklistTitle=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N", "Publish": "Y"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "sourceOfAppeal", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "sourceOfAppeal", "PageLabel": "Where has the appeal come from?", "PageDisplayOrder": 1, "PageShowCondition": "isAdmin=\"Yes\"", "ShowSummaryChangeOption": "Y"},
 
+
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "beforeYouStartLabel", "PageFieldDisplayOrder": 2, "DisplayContext": "READONLY", "PageID": "beforeYouStart", "PageLabel": "Before you start", "PageDisplayOrder": 2, "PageShowCondition": "sourceOfAppeal=\"paperForm\" AND isAdmin=\"Yes\"", "ShowSummaryChangeOption": "N"},
 
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "beforeYouStartRehydrateAppealLabel", "PageFieldDisplayOrder": 2, "DisplayContext": "READONLY", "PageID": "beforeYouStartRehydrateAppeal", "PageLabel": "Before you start", "PageDisplayOrder": 3, "PageShowCondition": "sourceOfAppeal=\"rehydratedAppeal\" AND isAdmin=\"Yes\"", "ShowSummaryChangeOption": "N"},
@@ -93,7 +94,10 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "uploadTheNoticeOfDecisionTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "uploadTheNoticeOfDecision", "PageLabel": "Upload the Notice of Decision", "PageDisplayOrder": 60, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "uploadTheNoticeOfDecisionTips", "PageFieldDisplayOrder": 2, "DisplayContext": "READONLY", "PageID": "uploadTheNoticeOfDecision", "FieldShowCondition": "isAdmin!=\"Yes\"", "ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "uploadTheNoticeOfDecisionDocs", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "uploadTheNoticeOfDecision", "ShowSummaryChangeOption": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "uploadTheNoticeOfDecisionDocs", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "uploadTheNoticeOfDecision", "FieldShowCondition": "!=\"rehydratedAppeal\"", "ShowSummaryChangeOption": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "uploadRehydratedNod", "PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "uploadTheNoticeOfDecision", "FieldShowCondition": "=\"rehydratedAppeal\"", "ShowSummaryChangeOption": "Y"},
+
+
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealTypeTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appealType", "PageLabel": "Type of appeal", "PageDisplayOrder": 61, "FieldShowCondition": "isAdmin!=\"Yes\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "appealTypeTitleAdminJ", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appealType", "PageLabel": "Type of appeal", "FieldShowCondition": "isAdmin=\"Yes\"", "ShowSummaryChangeOption": "N"},
@@ -256,6 +260,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "startAppeal", "CaseFieldID": "uploadTheAppealFormDocs", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "uploadAppealForm", "ShowSummaryChangeOption": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "isAdmin", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "tribunalReceivedAppeal","PageDisplayOrder": 3, "PageLabel": "When did the Tribunal receive the appeal?", "FieldShowCondition": "checklistTitle=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N", "Publish": "N"},
+
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "dateWillBeUsedToDetermineLabel", "PageFieldDisplayOrder": 2, "DisplayContext": "READONLY", "PageID": "tribunalReceivedAppeal", "PageShowCondition": "isAdmin=\"Yes\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "tribunalReceivedDate", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "CaseEventFieldLabel": "Date appeal received", "PageID": "tribunalReceivedAppeal", "ShowSummaryChangeOption": "Y"},
 
@@ -336,7 +341,8 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "uploadTheNoticeOfDecisionTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "uploadTheNoticeOfDecision", "PageLabel": "Upload the Notice of Decision", "PageDisplayOrder": 42, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "uploadTheNoticeOfDecisionTips", "PageFieldDisplayOrder": 2, "DisplayContext": "READONLY", "PageID": "uploadTheNoticeOfDecision", "FieldShowCondition": "isAdmin!=\"Yes\"", "ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "uploadTheNoticeOfDecisionDocs", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "uploadTheNoticeOfDecision", "ShowSummaryChangeOption": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "uploadTheNoticeOfDecisionDocs", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "uploadTheNoticeOfDecision", "FieldShowCondition": "sourceOfAppeal!=\"rehydratedAppeal\"", "ShowSummaryChangeOption": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "uploadRehydratedNod", "PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "uploadTheNoticeOfDecision", "FieldShowCondition": "sourceOfAppeal=\"rehydratedAppeal\"", "ShowSummaryChangeOption": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "appealTypeTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appealType", "PageLabel": "Type of appeal", "PageDisplayOrder": 45, "FieldShowCondition": "isAdmin!=\"Yes\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppeal", "CaseFieldID": "appealTypeTitleAdminJ", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appealType", "PageLabel": "Type of appeal", "FieldShowCondition": "isAdmin=\"Yes\"", "ShowSummaryChangeOption": "N"},
@@ -1453,6 +1459,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "homeOfficeReferenceNumberBeforeEdit", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "checklist", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "isAdmin", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "checklist", "PageLabel": "", "FieldShowCondition": "checklistTitle4=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N", "Publish": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "appellantInDetention", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "checklist", "PageLabel": "", "FieldShowCondition": "checklistTitle4=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N", "Publish": "N"},
+  
 
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "dateWillBeUsedToDetermineLabel", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "tribunalReceivedAppeal", "PageLabel": "When did the Tribunal receive the appeal?", "PageDisplayOrder": 1, "PageShowCondition": "isAdmin=\"Yes\"", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "tribunalReceivedDate", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "CaseEventFieldLabel": "Date appeal received", "PageID": "tribunalReceivedAppeal",  "ShowSummaryChangeOption": "Y"},
@@ -1506,7 +1513,9 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "uploadTheNoticeOfDecisionTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "uploadTheNoticeOfDecision", "PageLabel": "Upload the Notice of Decision", "PageDisplayOrder": 13, "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "uploadTheNoticeOfDecisionTips", "PageFieldDisplayOrder": 2, "DisplayContext": "READONLY", "PageID": "uploadTheNoticeOfDecision", "FieldShowCondition": "isAdmin!=\"Yes\"", "ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "uploadTheNoticeOfDecisionDocs", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "uploadTheNoticeOfDecision", "ShowSummaryChangeOption": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "uploadTheNoticeOfDecisionDocs", "PageFieldDisplayOrder": 3, "DisplayContext": "MANDATORY", "PageID": "uploadTheNoticeOfDecision", "FieldShowCondition": "sourceOfAppeal!=\"rehydratedAppeal\"", "ShowSummaryChangeOption": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "uploadRehydratedNod", "PageFieldDisplayOrder": 3, "DisplayContext": "OPTIONAL", "PageID": "uploadTheNoticeOfDecision", "FieldShowCondition": "sourceOfAppeal=\"rehydratedAppeal\"", "ShowSummaryChangeOption": "Y"},
+
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "appellantBasicDetailsTitle", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "appellantBasicDetails", "PageLabel": "Basic details", "PageDisplayOrder": 19, "CallBackURLMidEvent": "${CCD_DEF_IA_URL}/asylum/ccdMidEvent", "ShowSummaryChangeOption": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "CaseFieldID": "appellantTitle", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "appellantBasicDetails", "FieldShowCondition": "isAdmin!=\"Yes\"", "ShowSummaryChangeOption": "Y"},
