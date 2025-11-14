@@ -39,7 +39,6 @@
     "test:LegalAdminCreatesDetainedAppellantInPersonICC": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
     "test:LegalAdminCreatesDetainedRepresentedToNonDetainedICC": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedToNonDetainedICC",
     "test:LegalAdminCreatesDetainedRepresentedICC": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedICC",
-    "test:LegalRepCreatesDetainedAppeal": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalRepCreatesDetainedAppeal",
 
     "test:LegalRepCreatesDetainedAppealPrisonDeprivation": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=deprivation npx playwright test --headed --project chromium --grep @LegalRepCreatesDetainedAppeal",
     "test:LegalRepCreatesDetainedAppealImmigrationRemovalCentreDeprivation": "yarn playwright install && DETENTION_LOCATION=immigrationRemovalCentre APPEAL_TYPE=deprivation npx playwright test --headed --project chromium --grep @LegalRepCreatesDetainedAppeal",
