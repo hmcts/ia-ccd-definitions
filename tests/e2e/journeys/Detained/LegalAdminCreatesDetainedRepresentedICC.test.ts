@@ -33,8 +33,10 @@ import {StartDecisionAndReasons} from "../../flows/events/startDecisionAndReason
 import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndReasons";
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
 import {ListTheCase} from "../../flows/events/listTheCase";
+import {RecordOutOfTimeDecision} from "../../flows/events/recordOutOfTimeDecision";
 
-const inTime: boolean = true;
+const inTime: boolean = ['false'].includes(process.env.IN_TIME) ? false : true;
+const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING) ? true : false;
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
@@ -42,10 +44,17 @@ let buttonHelper: ButtonHelper;
 let validationHelper: ValidationHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
+let detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
+
 let caseId: string;
 
-
-const typeOfAppeal: string = 'revocationOfProtection'; // Revocation of a protection status (no payment required)
+//refusalOfEu - Refusal under EEA regulations (EA) (payment required)
+//refusalOfHumanRights - Refusal human rights (HU) (payment required)
+//deprivation -  Deprivation of citizenship (DC) (no payment required)
+//euSettlementScheme - Refusal of application under the EU Settlement Scheme (EU) (payment required)
+//revocationOfProtection - Revocation of a protection status (RP) (no payment required)
+//protection - Refusal of protection claim (PA) (payment required)
+const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'revocationOfProtection';
 
 test.describe.configure({ mode: 'serial'});
 test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@LegalAdminCreatesDetainedRepresentedICC' }, () => {
@@ -64,11 +73,6 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
     });
 
     test('Create Represented Detained Appeal with Custodial sentence - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({page}) => {
-        // const detentionLocation: string = 'immigrationRemovalCentre';
-         const detentionLocation: string = 'prison';
-        // const detentionLocation: string = 'other';
-
-
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();
         await buttonHelper.continueButton.click(); // Before you start page
@@ -102,6 +106,11 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         await createAppeal.hasRemovalDirections('No');
         await createAppeal.hasOtherAppeals('No');
         await createAppeal.isHearingRequired(true);
+
+        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+            await createAppeal.hasFeeRemission('No');
+        }
+
         await createAppeal.uploadAppealDocs();
         await createAppeal.checkMyAnswers();
         await buttonHelper.closeAndReturnToCaseDetailsButton.click();
@@ -113,9 +122,13 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         await linkHelper.signOut.click();
     });
 
-    test('Legal Officer creates Respondent Direction', async ({ page }) => {
+    test('Legal Officer' + (!inTime ? ' records Out of Time decision, ': ' ') + 'creates Respondent Direction', async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
+
+        if (!inTime) {
+            await new RecordOutOfTimeDecision(page).submit('approved');
+        }
 
         await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManual.locator, imageLocators.detained.representedManual.name);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
@@ -127,7 +140,10 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
             await new RequestHomeOfficeData(page).matchAppellantDetails();
         }
 
-        await new GenerateListCMR(page).createTask();
+        if (cmrHearing) {
+            await new GenerateListCMR(page).createTask();
+        }
+
         await new RespondentEvidenceDirection(page).submit();
 
         await linkHelper.signOut.click();
