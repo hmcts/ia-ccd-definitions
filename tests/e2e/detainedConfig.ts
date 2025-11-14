@@ -41,8 +41,8 @@ export const homeOfficeOfficerCredentials = {
 }
 
 export const judgeCredentials = {
-    username: process.env.ENVIRONMENT === 'preview' ? 'ia.iacjudge.ccd@gmail.com' : 'Gupta.Singh1@ejudiciary.net',
-    password: process.env.ENVIRONMENT === 'preview' ? 'AldgateT0wer' : 'Testing123'
+    username: ['preview', 'aat'].includes(process.env.ENVIRONMENT) ? 'ia.iacjudge.ccd@gmail.com' : 'Gupta.Singh1@ejudiciary.net',
+    password: ['preview', 'aat'].includes(process.env.ENVIRONMENT) ? 'AldgateT0wer' : 'Testing123'
 }
 
 

@@ -45,9 +45,11 @@ import {RecordOutOfTimeDecision} from "../../flows/events/recordOutOfTimeDecisio
 const inTime: boolean = true;
 const cmrListing: boolean = false;
 //let detentionLocation: string = 'immigrationRemovalCentre';
-let detentionLocation: string = 'prison';
+//let detentionLocation: string = 'prison';
+let detentionLocation: string = !['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.ENVIRONMENT) ? process.env.DETENTION_LOCATION : 'Prison';
 //let detentionLocation: string = 'other';
 let caseId: string = '';
+
 
 //const typeOfAppeal: string = 'refusalOfEu'; // Refusal under EEA regulations (EA) (payment required)
 //const typeOfAppeal: string = 'refusalOfHumanRights'; // Refusal human rights (HU) (payment required)
@@ -68,6 +70,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
+        console.log('detention location....', detentionLocation);
         idamPage = new IdamPage(page);
         linkHelper = new LinkHelper(page);
         pageHelper = new PageHelper(page);
