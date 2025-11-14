@@ -35,8 +35,8 @@ import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAnd
 import {ListTheCase} from "../../flows/events/listTheCase";
 import {RecordOutOfTimeDecision} from "../../flows/events/recordOutOfTimeDecision";
 
-const inTime: boolean = ['false'].includes(process.env.IN_TIME) ? false : true;
-const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING) ? true : false;
+const inTime: boolean = !['false'].includes(process.env.IN_TIME);
+const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;

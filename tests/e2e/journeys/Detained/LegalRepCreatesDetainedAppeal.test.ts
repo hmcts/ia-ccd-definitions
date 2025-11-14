@@ -42,8 +42,8 @@ import {RecordOutOfTimeDecision} from "../../flows/events/recordOutOfTimeDecisio
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
-const inTime: boolean = ['false'].includes(process.env.IN_TIME) ? false : true;
-const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING) ? true : false;
+const inTime: boolean = !['false'].includes(process.env.IN_TIME);
+const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 let detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 let caseId: string = '';
 
