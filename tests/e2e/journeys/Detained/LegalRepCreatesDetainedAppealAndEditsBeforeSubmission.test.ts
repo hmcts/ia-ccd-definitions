@@ -27,7 +27,6 @@ let caseId: string = '';
 //protection - Refusal of protection claim (PA) (payment required)
 const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
 
-
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
@@ -50,116 +49,83 @@ test.describe('Create Detained Appeal as Legal Representative with detention loc
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalRepresentativeCredentials);
         await new CreateCasePage(page).createCase();
-        await createAppeal.locationInUK('Yes');
-        await createAppeal.inDetention('Yes');
-        await createAppeal.setDetentionLocation(detentionLocation);
 
-        if (detentionLocation === 'prison' || detentionLocation === 'other') {
-            await createAppeal.setCustodialSentence('Yes');
-        }
-
-        if (detentionLocation === 'immigrationRemovalCentre') {
-            await createAppeal.setBailApplication('Yes');
-        }
-
-        await createAppeal.setHomeOfficeDetails(inTime);
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
-
-        if (typeOfAppeal !== 'euSettlementScheme') {
-            await createAppeal.setGroundsOfAppeal(typeOfAppeal);
-        }
-
-        await createAppeal.setAppellantBasicDetails(false);
-
-
-
-        await createAppeal.setNationality(true);
-
-        if (detentionLocation === 'other') {
-            await createAppeal.setAppellantAddress('detained', 'Yes');
-        }
-
-        await createAppeal.hasSponsor('Yes');
-        await createAppeal.hasDeportationOrder('Yes');
-        await createAppeal.hasRemovalDirections('Yes');
-        await createAppeal.hasNewMatters('Yes');
-        await createAppeal.hasOtherAppeals('No');
-        await createAppeal.setLegalRepresentativeDetails();
-        await createAppeal.isHearingRequired(true);
-
-        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
-            await createAppeal.hasFeeRemission('No');
-        }
-
-        if (typeOfAppeal === 'protection') {
-            await createAppeal.setPayNowLater('Now');
-        }
-
-        await createAppeal.checkMyAnswers(true);
+        await buildAppeal('create');
 
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
 
         await new EditAppeal(page).edit();
-        await createAppeal.locationInUK('Yes');
-        await createAppeal.inDetention('Yes');
-        await createAppeal.setDetentionLocation('other');
-
-        if (detentionLocation === 'prison' || detentionLocation === 'other') {
-            await createAppeal.setCustodialSentence('Yes');
-        }
-
-        if (detentionLocation === 'immigrationRemovalCentre') {
-            await createAppeal.setBailApplication('Yes');
-        }
-
-        await createAppeal.setHomeOfficeDetails(inTime);
-        await buttonHelper.continueButton.click(); // Upload Notice of Decision - no need to load another document
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
-
-        if (typeOfAppeal !== 'euSettlementScheme') {
-            await createAppeal.setGroundsOfAppeal(typeOfAppeal);
-        }
-
-        await createAppeal.setAppellantBasicDetails(false);
-
-
-
-        await buttonHelper.continueButton.click(); // Nationality - no need to load another one
-
-        if (detentionLocation === 'other') {
-            await createAppeal.setAppellantAddress('detained', 'Yes');
-        }
-
-        await createAppeal.hasSponsor('Yes');
-        await createAppeal.hasDeportationOrder('Yes');
-        await createAppeal.hasRemovalDirections('Yes');
-        await createAppeal.hasNewMatters('Yes');
-        await createAppeal.hasOtherAppeals('No');
-        await createAppeal.setLegalRepresentativeDetails();
-        await createAppeal.isHearingRequired(true);
-
-        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
-            await createAppeal.hasFeeRemission('No');
-        }
-
-        if (typeOfAppeal === 'protection') {
-            await createAppeal.setPayNowLater('Now');
-        }
-
-        await createAppeal.checkMyAnswers(true);
-        // await new SubmitYourAppeal(page).submit(true, inTime);
-        //
-        // if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
-        //     // create service request
-        //     await new CreateServiceRequest(page).submit();
-        //
-        //     // make payment - will remove caseId from parameters and function when successful payment hyperlink points to correct env
-        //     await new PaymentPage(page).makePayment('CC', caseId);
-        // }
+        detentionLocation = 'other';
+        await buildAppeal('edit');
 
         await linkHelper.signOut.click();
-    });
 
+        /*************************/
+        async function buildAppeal(stage: string = 'create') {
+            await createAppeal.locationInUK('Yes');
+            await createAppeal.inDetention('Yes');
+            await createAppeal.setDetentionLocation(detentionLocation);
+
+            if (detentionLocation === 'prison' || detentionLocation === 'other') {
+                await createAppeal.setCustodialSentence('Yes');
+            }
+
+            if (detentionLocation === 'immigrationRemovalCentre') {
+                await createAppeal.setBailApplication('Yes');
+            }
+
+            await createAppeal.setHomeOfficeDetails(inTime);
+
+            if (stage === 'create') {
+                await createAppeal.uploadNoticeOfDecision();
+            } else {
+                 await buttonHelper.continueButton.click(); // Upload Notice of Decision - no need to load another document
+            }
+            await createAppeal.setTypeOfAppeal(typeOfAppeal);
+
+            if (typeOfAppeal !== 'euSettlementScheme') {
+                await createAppeal.setGroundsOfAppeal(typeOfAppeal);
+            }
+
+            await createAppeal.setAppellantBasicDetails(false);
+
+            if (stage === 'create') {
+                await createAppeal.setNationality(true);
+            } else {
+                await buttonHelper.continueButton.click(); // Nationality - no need to load another one
+            }
+
+            if (detentionLocation === 'other') {
+                await createAppeal.setAppellantAddress('detained', 'Yes');
+            }
+
+            if (stage === 'create') {
+                await createAppeal.hasSponsor('Yes');
+            } else {
+                await createAppeal.hasSponsor('No');
+            }
+            await createAppeal.hasDeportationOrder('Yes');
+            await createAppeal.hasRemovalDirections('Yes');
+            await createAppeal.hasNewMatters('Yes');
+            await createAppeal.hasOtherAppeals('No');
+            await createAppeal.setLegalRepresentativeDetails();
+            await createAppeal.isHearingRequired(true);
+
+            if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+                await createAppeal.hasFeeRemission('No');
+            }
+
+            if (typeOfAppeal === 'protection') {
+                await createAppeal.setPayNowLater('Now');
+            }
+
+            await createAppeal.checkMyAnswers(true);
+
+        }
+
+    });
 });
+
+
+
