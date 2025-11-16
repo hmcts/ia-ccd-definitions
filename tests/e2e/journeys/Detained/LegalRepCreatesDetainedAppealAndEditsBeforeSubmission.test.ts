@@ -33,7 +33,7 @@ let pageHelper: PageHelper;
 let buttonHelper: ButtonHelper;
 
 test.describe.configure({ mode: 'serial' });
-test.describe('Create Detained Appeal as Legal Representative with detention location: ' + detentionLocation + ', ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrHearing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedAppealEditBeforeSubmission' }, () => {
+test.describe('Create Detained Appeal as Legal Representative with detention location: ' + detentionLocation + ', ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrHearing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepEditsDetainedAppealBeforeSubmission' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.

@@ -96,24 +96,22 @@ test.describe('Create Detained Appeal as Legal Representative with detention loc
             await createAppeal.setBailApplication('Yes');
         }
 
-        await createAppeal.setHomeOfficeDetails(inTime);
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
-
-        if (typeOfAppeal !== 'euSettlementScheme') {
-            await createAppeal.setGroundsOfAppeal(typeOfAppeal);
-        }
-
+        await createAppeal.setHomeOfficeDetailsHO();
         await createAppeal.setAppellantBasicDetails(false);
-
-
-
         await createAppeal.setNationality(true);
 
         if (detentionLocation === 'other') {
             await createAppeal.setAppellantAddress('detained', 'Yes');
         }
 
+        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+
+        if (typeOfAppeal !== 'euSettlementScheme') {
+            await createAppeal.setGroundsOfAppeal(typeOfAppeal);
+        }
+
+        await createAppeal.setDecisionDateHO(inTime);
+        await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('Yes');
         await createAppeal.hasDeportationOrder('Yes');
         await createAppeal.hasRemovalDirections('Yes');

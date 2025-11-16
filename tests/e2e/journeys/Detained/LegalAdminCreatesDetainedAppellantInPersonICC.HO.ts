@@ -2,54 +2,41 @@ import {expect, test} from '@playwright/test';
 import {
     envUrl,
     homeOfficeOfficerCredentials, judgeCredentials,
-    legalOfficerAdminCredentials,
-    legalOfficerCredentials,
+    legalOfficerAdminCredentials, legalOfficerCredentials,
     listingOfficerCredentials
 } from '../../detainedConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
-import {LinkHelper} from '../../helpers/LinkHelper';
-import {PageHelper} from '../../helpers/PageHelper';
-import {ButtonHelper} from '../../helpers/ButtonHelper';
-import {ValidationHelper} from '../../helpers/ValidationHelper'
-import {CreateAppeal} from '../../flows/createAppeal';
-import {CreateCasePage} from '../../page-objects/pages/createCase_page';
-import {SubmitYourAppeal} from '../../flows/events/submitYourAppeal';
-import {RequestHomeOfficeData} from '../../flows/events/requestHomeOfficeData';
-import {GenerateListCMR} from '../../flows/events/generateListCMRTask';
-import {RespondentEvidenceDirection} from '../../flows/events/respondentEvidenceDirection';
-import {HomeOfficeBundle} from '../../flows/events/homeOfficeBundle';
-import {CaseBuildingDirection} from '../../flows/events/caseBuildingDirection';
-import {BuildYourCase} from '../../flows/events/buildYourCase';
-import {RespondentReviewDirection} from '../../flows/events/respondentReviewDirection';
-import {UploadAppealResponse} from '../../flows/events/uploadAppealResponse';
-import {ForceCaseHearingReqs} from '../../flows/events/forceCaseHearingReqs';
-import {SubmitHearingRequirements} from '../../flows/events/submitHearingRequirements';
-import {ReviewHearingRequirements} from '../../flows/events/reviewHearingRequirements';
-import {S94b} from '../../flows/events/setS94bStatus';
-import {imageLocators} from '../../fixtures/imageLocators';
+import { LinkHelper } from '../../helpers/LinkHelper';
+import { PageHelper } from '../../helpers/PageHelper';
+import { ButtonHelper } from '../../helpers/ButtonHelper';
+import { CreateAppeal } from '../../flows/createAppeal';
+import { CreateCasePage } from '../../page-objects/pages/createCase_page';
+import { SubmitYourAppeal } from '../../flows/events/submitYourAppeal';
+import { RequestHomeOfficeData } from '../../flows/events/requestHomeOfficeData';
+import { RespondentEvidenceDirection } from '../../flows/events/respondentEvidenceDirection';
+import { HomeOfficeBundle } from '../../flows/events/homeOfficeBundle';
+import { CaseBuildingDirection } from '../../flows/events/caseBuildingDirection';
+import { BuildYourCase } from '../../flows/events/buildYourCase';
+import { RespondentReviewDirection } from '../../flows/events/respondentReviewDirection';
+import { UploadAppealResponse } from '../../flows/events/uploadAppealResponse';
+import { ForceCaseHearingReqs } from '../../flows/events/forceCaseHearingReqs';
+import { SubmitHearingRequirements } from '../../flows/events/submitHearingRequirements';
+import { ReviewHearingRequirements } from '../../flows/events/reviewHearingRequirements';
+import { ValidationHelper } from '../../helpers/ValidationHelper';
+import { imageLocators } from '../../fixtures/imageLocators';
 import {CreateCaseSummary} from "../../flows/events/createCaseSummary";
 import {GenerateHearingBundle} from "../../flows/events/generateHearingBundle";
 import {StartDecisionAndReasons} from "../../flows/events/startDecisionAndReasons";
 import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndReasons";
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
-import {ListTheCase} from "../../flows/events/listTheCase";
-import {RecordOutOfTimeDecision} from "../../flows/events/recordOutOfTimeDecision";
-import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 import {MarkAppealAsPaid} from "../../flows/events/markAppealAsPaid";
+import {ListTheCase} from "../../flows/events/listTheCase";
+import {S94b} from "../../flows/events/setS94bStatus";
+import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 
-const inTime: boolean = !['false'].includes(process.env.IN_TIME);
-const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
-const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
-let idamPage: IdamPage;
-let linkHelper: LinkHelper;
-let pageHelper: PageHelper;
-let buttonHelper: ButtonHelper;
-let validationHelper: ValidationHelper;
-let createAppeal: CreateAppeal;
-let createCasePage: CreateCasePage;
+const inTime: boolean = true;
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
-
-let caseId: string;
+const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 
 //refusalOfEu - Refusal under EEA regulations (EA) (payment required)
 //refusalOfHumanRights - Refusal human rights (HU) (payment required)
@@ -57,10 +44,17 @@ let caseId: string;
 //euSettlementScheme - Refusal of application under the EU Settlement Scheme (EU) (payment required)
 //revocationOfProtection - Revocation of a protection status (RP) (no payment required)
 //protection - Refusal of protection claim (PA) (payment required)
-const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'revocationOfProtection';
+const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
+
+let idamPage: IdamPage;
+let linkHelper: LinkHelper;
+let pageHelper: PageHelper;
+let buttonHelper: ButtonHelper;
+let validationHelper: ValidationHelper;
+let caseId: string;
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@LegalAdminCreatesDetainedRepresentedICC' }, () => {
+test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', { tag: '@LegalAdminCreatesDetainedAppellantInPersonICC' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -69,18 +63,18 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         pageHelper = new PageHelper(page);
         buttonHelper = new ButtonHelper(page);
         validationHelper = new ValidationHelper(page);
-        createAppeal = new CreateAppeal(page);
-        createCasePage = new CreateCasePage(page);
 
         await page.goto(envUrl);
     });
 
-    test('Create Represented Detained Appeal with Custodial sentence - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({page}) => {
+    test('Create Detained Appeal - Appellant In Person as Legal Admin - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({ page}) => {
+        const createAppeal = new CreateAppeal(page);
+
         await idamPage.login(legalOfficerAdminCredentials);
-        await createCasePage.createCase();
+        await new CreateCasePage(page).createCase();
         await buttonHelper.continueButton.click(); // Before you start page
         await createAppeal.setTribunalAppealReceived();
-        await createAppeal.appellantInPerson('No', 'Yes');
+        await createAppeal.appellantInPerson('Yes');
         await createAppeal.locationInUK('Yes');
         await createAppeal.inDetention('Yes');
         await createAppeal.setDetentionLocation(detentionLocation);
@@ -92,10 +86,7 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
             await createAppeal.setBailApplication('No');
         }
 
-
-        await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+        await createAppeal.setHomeOfficeDetailsHO();
         await createAppeal.setAppellantBasicDetails(true);
         await createAppeal.setNationality(true);
 
@@ -104,6 +95,9 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         }
 
         await createAppeal.appellantDetails();
+        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+        await createAppeal.setDecisionDateHO();
+        await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');
         await createAppeal.hasRemovalDirections('No');
@@ -124,6 +118,7 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
 
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
+
         await new SubmitYourAppeal(page).submit(false, inTime);
 
         if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
@@ -137,26 +132,18 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         await linkHelper.signOut.click();
     });
 
-    test('Legal Officer' + (!inTime ? ' records Out of Time decision, ': ' ') + 'creates Respondent Direction', async ({ page }) => {
+    test('Legal Officer creates Respondent Direction', async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
 
-        if (!inTime) {
-            await new RecordOutOfTimeDecision(page).submit('approved');
-        }
-
-        await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManual.locator, imageLocators.detained.representedManual.name);
+        await validationHelper.validateLabelDisplayed(imageLocators.detained.appellantInPersonManual.locator, imageLocators.detained.appellantInPersonManual.name);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
 
         await new S94b(page).setStatus('Yes');
-        await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManualS94b.locator, imageLocators.detained.representedManualS94b.name);
+        await validationHelper.validateLabelDisplayed(imageLocators.detained.appellantInPersonManualS94b.locator, imageLocators.detained.appellantInPersonManualS94b.name);
 
         if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
             await new RequestHomeOfficeData(page).matchAppellantDetails();
-        }
-
-        if (cmrHearing) {
-            await new GenerateListCMR(page).createTask();
         }
 
         await new RespondentEvidenceDirection(page).submit();
@@ -171,14 +158,14 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         await linkHelper.signOut.click();
     });
 
-    test('Legal Officer directs appellant/Legal Rep to build case',   async ({ page }) => {
+    test('Legal Officer directs Appellant (Legal Officer Admin) to build case',   async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new CaseBuildingDirection(page).submit();
         await linkHelper.signOut.click();
     });
 
-    test('Legal Officer Admin build case (acting as Legal Rep)',   async ({ page }) => {
+    test('Legal Officer Admin build case (acting as AIP)',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await pageHelper.getCase(caseId);
         await new BuildYourCase(page).build();
@@ -192,21 +179,21 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         await linkHelper.signOut.click();
     });
 
-    test('Home Office Officer (respondent) responds to appeal response from Appellant/Legal Rep',   async ({ page }) => {
+    test('Home Office Officer (respondent) responds to appeal response from Appellant',   async ({ page }) => {
         await idamPage.login(homeOfficeOfficerCredentials);
-        await page.goto(envUrl + '/cases/case-details/' + caseId);
+        await page.goto(envUrl + '/cases/case-details/' + await caseId);
         await new UploadAppealResponse(page).upload();
         await linkHelper.signOut.click();
     });
 
-    test('Legal Officer Force case - hearing reqs, thus bypassing Appellant/Legal Rep needing to review the HO decision',   async ({ page }) => {
+    test('Legal Officer Force case - hearing reqs, thus bypassing Appellant needing to review the HO decision',   async ({ page }) => {
         await idamPage.login(listingOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new ForceCaseHearingReqs(page).submit();
         await linkHelper.signOut.click();
     });
 
-    test('Legal Officer Admin submit hearing requirements (acting as Legal Rep)',   async ({ page }) => {
+    test('Legal Officer Admin submit hearing requirements (acting as AIP)',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await pageHelper.getCase(caseId);
         await new SubmitHearingRequirements(page).submit()
@@ -219,7 +206,6 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         await new ReviewHearingRequirements(page).submit();
         await linkHelper.signOut.click();
     });
-
 
     // This is not the route the caseworker would use, however, we use it in the tests to get to the state of: Prepare for hearing
     // This state is only available when the hearing is listed - this event mimics the List Assist integration for us and thus allows us to complete the journey
@@ -247,8 +233,8 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         await idamPage.login(judgeCredentials);
         await pageHelper.getCase(caseId);
         await new PrepareDecisionAndReasons(page).generate('Yes');
-        await new CompleteDecisionAndReasons(page).upload('allowed');
+        await new CompleteDecisionAndReasons(page).upload('allowed'); // or dismissed
         await linkHelper.signOut.click();
-    });
-
+   });
 });
+

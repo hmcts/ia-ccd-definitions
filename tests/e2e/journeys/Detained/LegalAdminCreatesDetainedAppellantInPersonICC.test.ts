@@ -29,16 +29,22 @@ import {GenerateHearingBundle} from "../../flows/events/generateHearingBundle";
 import {StartDecisionAndReasons} from "../../flows/events/startDecisionAndReasons";
 import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndReasons";
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
-import {CreateServiceRequest} from "../../flows/events/createServiceRequest";
-import {PaymentPage} from "../../page-objects/pages/payment_page";
+import {MarkAppealAsPaid} from "../../flows/events/markAppealAsPaid";
 import {ListTheCase} from "../../flows/events/listTheCase";
 import {S94b} from "../../flows/events/setS94bStatus";
+import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 
 const inTime: boolean = true;
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
+const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
+
+//refusalOfEu - Refusal under EEA regulations (EA) (payment required)
+//refusalOfHumanRights - Refusal human rights (HU) (payment required)
+//deprivation -  Deprivation of citizenship (DC) (no payment required)
+//euSettlementScheme - Refusal of application under the EU Settlement Scheme (EU) (payment required)
+//revocationOfProtection - Revocation of a protection status (RP) (no payment required)
+//protection - Refusal of protection claim (PA) (payment required)
 const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
-
-
 
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
@@ -98,7 +104,7 @@ test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', {
         await createAppeal.isHearingRequired(true);
 
         if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
-            await createAppeal.hasFeeRemission('No');
+            await createAppeal.hasFeeRemission(feeRemission);
         }
 
         if (typeOfAppeal === 'protection') {
@@ -115,11 +121,11 @@ test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', {
         await new SubmitYourAppeal(page).submit(false, inTime);
 
         if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
-            // create service request
-            await new CreateServiceRequest(page).submit();
-
-            // make payment - will remove caseId from parameters and function when successful payment hyperlink points to correct env
-            await new PaymentPage(page).makePayment('CC', caseId);
+            if (feeRemission === 'Yes') {
+                await new RecordRemissionDecision(page).submit('approved');
+            } else {
+                await new MarkAppealAsPaid(page).recordPayment();
+            }
         }
 
         await linkHelper.signOut.click();

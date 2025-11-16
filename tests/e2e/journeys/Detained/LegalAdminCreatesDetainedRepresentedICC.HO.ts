@@ -92,10 +92,7 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
             await createAppeal.setBailApplication('No');
         }
 
-
-        await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+        await createAppeal.setHomeOfficeDetailsHO();
         await createAppeal.setAppellantBasicDetails(true);
         await createAppeal.setNationality(true);
 
@@ -104,6 +101,9 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         }
 
         await createAppeal.appellantDetails();
+        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+        await createAppeal.setDecisionDateHO(inTime);
+        await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');
         await createAppeal.hasRemovalDirections('No');

@@ -198,19 +198,41 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
-   async setHomeOfficeDetails(inTime: boolean = true, fieldPrefix: string = 'homeOfficeDecisionDate') {
-       const homeOfficeLetterDate = inTime ? moment().subtract(5, 'days') : moment().subtract(20, 'days');
-       await this.page.fill('#homeOfficeReferenceNumber', '12345');
-       // await this.page.keyboard.press('Tab');
-       await this.page.fill(`#${fieldPrefix}-day`, homeOfficeLetterDate.date().toString());
-       await this.page.fill(`#${fieldPrefix}-month`, (homeOfficeLetterDate.month() + 1).toString());
-       await this.page.fill(`#${fieldPrefix}-year`, homeOfficeLetterDate.year().toString());
-       // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
-       // if we just try and click continue it stays on the tribunal page and the test fails - only happens in ICC
-       await this.page.keyboard.press('Tab');
-       await this.page.waitForSelector('.error-message', { state: 'hidden' });
-       await this.buttonHelper.continueButton.click();
+   // Keeping in case HO screens do change in the near future
+   async setHomeOfficeDetailsHO() {
+        await this.page.fill('#homeOfficeReferenceNumber', '12345');
+        // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
+        // if we just try and click continue it stays on the tribunal page and the test fails - only happens in ICC
+        await this.page.keyboard.press('Tab');
+        await this.page.waitForSelector('.error-message', { state: 'hidden' });
+        await this.buttonHelper.continueButton.click();
    }
+
+    async setHomeOfficeDetails(inTime: boolean = true, fieldPrefix: string = 'homeOfficeDecisionDate') {
+        const homeOfficeLetterDate = inTime ? moment().subtract(5, 'days') : moment().subtract(20, 'days');
+        await this.page.fill('#homeOfficeReferenceNumber', '12345');
+        await this.page.fill(`#${fieldPrefix}-day`, homeOfficeLetterDate.date().toString());
+        await this.page.fill(`#${fieldPrefix}-month`, (homeOfficeLetterDate.month() + 1).toString());
+        await this.page.fill(`#${fieldPrefix}-year`, homeOfficeLetterDate.year().toString());
+        // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
+        // if we just try and click continue it stays on the tribunal page and the test fails - only happens in ICC
+        await this.page.keyboard.press('Tab');
+        await this.page.waitForSelector('.error-message', { state: 'hidden' });
+        await this.buttonHelper.continueButton.click();
+    }
+
+    // keeping in case HO screen changes are implemented
+    async setDecisionDateHO(inTime: boolean = true, fieldPrefix: string = 'homeOfficeDecisionDate') {
+        const homeOfficeLetterDate = inTime ? moment().subtract(5, 'days') : moment().subtract(20, 'days');
+        await this.page.fill(`#${fieldPrefix}-day`, homeOfficeLetterDate.date().toString());
+        await this.page.fill(`#${fieldPrefix}-month`, (homeOfficeLetterDate.month() + 1).toString());
+        await this.page.fill(`#${fieldPrefix}-year`, homeOfficeLetterDate.year().toString());
+        // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
+        // if we just try and click continue it stays on the tribunal page and the test fails - only happens in ICC
+        await this.page.keyboard.press('Tab');
+        await this.page.waitForSelector('.error-message', { state: 'hidden' });
+        await this.buttonHelper.continueButton.click();
+    }
 
    async uploadNoticeOfDecision() {
        await this.page.locator('button:text("Add new")').click();
@@ -391,8 +413,8 @@ export class CreateAppeal {
    // uploadAppealDocs() - For Legal Admin journey
    async uploadAppealDocs() {
        await this.page.locator('button:text("Add new")').click();
-       // getting rate cap error message - waiting for 2 secs to stop this happening
-       await this.page.waitForTimeout(2000); // waits for 2 seconds
+       // getting rate cap error message - waiting for 4 secs to stop this happening
+       await this.page.waitForTimeout(4000); // waits for 4 seconds
        await this.page.locator('#uploadTheAppealFormDocs_0_document').setInputFiles('./tests/documents/TEST_DOCUMENT_2.pdf');
        await this.page.fill('#uploadTheAppealFormDocs_0_description', 'Test Notice of Decision document.');
        await this.page.waitForSelector('.error-message', { state: 'hidden' });
@@ -439,11 +461,20 @@ export class CreateAppeal {
    }
 
    async hasFeeRemission(feeRemission: string = 'No') {
-     // TODO: Needs other options added
        switch (feeRemission) {
            case 'No':
                await this.page.check('#remissionType-noRemission');
                break;
+           case 'Yes':
+               await this.page.check('#remissionType-hoWaiverRemission');
+               await this.buttonHelper.continueButton.click();
+               await this.page.check('#remissionClaim-section20');
+               await this.buttonHelper.continueButton.click();
+
+               // getting rate cap error message - waiting for 2 secs to stop this happening
+               await this.page.waitForTimeout(2000); // waits for 2 seconds
+               await this.page.locator('#section20Document').setInputFiles('./tests/documents/TEST_DOCUMENT_1.pdf');
+               await this.page.waitForSelector('.error-message', { state: 'hidden' });
        }
        
        await this.buttonHelper.continueButton.click();
