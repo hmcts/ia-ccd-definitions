@@ -492,6 +492,7 @@ export class CreateAppeal {
            await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
        }
    }
+
    // Rehydrate flow for Legal Admin
    async setSourceOfAppeal(source: string = 'paperForm') {
         await this.page.check(`#sourceOfAppeal-${source}`);

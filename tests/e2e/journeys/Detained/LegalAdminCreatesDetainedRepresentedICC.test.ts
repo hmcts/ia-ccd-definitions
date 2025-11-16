@@ -120,7 +120,6 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
 
         await createAppeal.uploadAppealDocs();
         await createAppeal.checkMyAnswers();
-        await buttonHelper.closeAndReturnToCaseDetailsButton.click();
 
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');

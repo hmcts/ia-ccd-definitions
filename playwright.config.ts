@@ -40,6 +40,9 @@ module.exports = defineConfig({
         ...devices['Desktop Chrome'],
         channel: 'chrome',
         viewport: { width: 1929, height: 959 },
+        launchOptions: {
+          //slowMo: 1000,
+        }
       },
     },
     {

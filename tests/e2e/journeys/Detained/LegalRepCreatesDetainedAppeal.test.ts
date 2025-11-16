@@ -105,9 +105,6 @@ test.describe('Create Detained Appeal as Legal Representative with detention loc
         }
 
         await createAppeal.setAppellantBasicDetails(false);
-
-
-
         await createAppeal.setNationality(true);
 
         if (detentionLocation === 'other') {

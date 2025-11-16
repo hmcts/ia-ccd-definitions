@@ -114,7 +114,7 @@ test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', {
 
         await createAppeal.uploadAppealDocs();
         await createAppeal.checkMyAnswers();
-        await buttonHelper.closeAndReturnToCaseDetailsButton.click();
+        //await buttonHelper.closeAndReturnToCaseDetailsButton.click();
 
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
