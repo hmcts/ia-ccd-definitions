@@ -38,13 +38,13 @@
     "test:smoke": "yarn playwright install && npx playwright test --headed --project smokeChromium --grep @smoke",
     "test:LegalAdminCreatesDetainedAppellantInPersonPrisonProtection": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
     "test:LegalAdminCreatesDetainedAppellantInPersonPrisonDeprivation": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=deprivation npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
-    "test:LegalAdminCreatesDetainedAppellantInPersonPrisonEuSettlementSchemeFeeRemission": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=euSettlementScheme FEE_REMISSION=Yes npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
+    "test:LegalAdminCreatesDetainedAppellantInPersonPrisonEuSettlementSchemeFeeRemission": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=euSettlementScheme FEE_REMISSION=Yes npx playwright test --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
     "test:LegalAdminCreatesDetainedAppellantInPersonPrisonProtectionOutOfTime": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection IN_TIME=false npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
 
     "test:LegalAdminCreatesDetainedAppellantInPersonImmigrationRemovalCentreProtection": "yarn playwright install && DETENTION_LOCATION=immigrationRemovalCentre APPEAL_TYPE=protection npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
-    "test:LegalAdminCreatesDetainedAppellantInPersonImmigrationRemovalCentreDeprivation": "yarn playwright install && DETENTION_LOCATION=immigrationRemovalCentre APPEAL_TYPE=deprivation npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
+    "test:LegalAdminCreatesDetainedAppellantInPersonImmigrationRemovalCentreDeprivation": "yarn playwright install && DETENTION_LOCATION=immigrationRemovalCentre APPEAL_TYPE=deprivation npx playwright test --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
     "test:LegalAdminCreatesDetainedAppellantInPersonImmigrationRemovalCentreRefusalOfHumanRights": "yarn playwright install && DETENTION_LOCATION=immigrationRemovalCentre APPEAL_TYPE=refusalOfHumanRights npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
-    "test:LegalAdminCreatesDetainedAppellantInPersonImmigrationRemovalCentreEuSettlementSchemeFeeRemission": "yarn playwright install && DETENTION_LOCATION=immigrationRemovalCentre APPEAL_TYPE=euSettlementScheme FEE_REMISSION=Yes npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
+    "test:LegalAdminCreatesDetainedAppellantInPersonImmigrationRemovalCentreEuSettlementSchemeFeeRemission": "yarn playwright install && DETENTION_LOCATION=immigrationRemovalCentre APPEAL_TYPE=euSettlementScheme FEE_REMISSION=Yes npx playwright test  --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
 
     "test:LegalAdminCreatesDetainedAppellantInPersonOtherDeprivation": "yarn playwright install && DETENTION_LOCATION=other APPEAL_TYPE=deprivation npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
     "test:LegalAdminCreatesDetainedAppellantInPersonOtherRefusalOfHumanRights": "yarn playwright install && DETENTION_LOCATION=other APPEAL_TYPE=refusalOfHumanRights npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
@@ -54,7 +54,7 @@
     "test:LegalAdminCreatesDetainedRepresentedPrisonProtectionToNonDetained": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedToNonDetainedICC",
 
     "test:LegalAdminCreatesDetainedRepresentedPrisonDeprivation": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=deprivation npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedICC",
-    "test:LegalAdminCreatesDetainedRepresentedPrisonRefusalOfEu": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=RefusalOfEu npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedICC",
+    "test:LegalAdminCreatesDetainedRepresentedPrisonRefusalOfEu": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=refusalOfEu npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedICC",
     "test:LegalAdminCreatesDetainedRepresentedPrisonEuSettlementSchemeFeeRemission": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection FEE_REMISSION=Yes npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedICC",
     "test:LegalAdminCreatesDetainedRepresentedPrisonDeprivationListAsCMR": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=deprivation CMR_HEARING=true npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedICC",
 
@@ -68,7 +68,7 @@
     "test:LegalAdminCreatesDetainedRepresentedOtherRevocationOfProtectionOutOfTime": "yarn playwright install && DETENTION_LOCATION=other APPEAL_TYPE=revocationOfProtection IN_TIME=false npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedICC",
 
     "test:LegalRepCreatesDetainedAppealPrisonProtection": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection npx playwright test --headed --project chromium --grep @LegalRepCreatesDetainedAppeal",
-    "test:LegalRepCreatesDetainedAppealPrisonRefusalOfEu": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=RefusalOfEu npx playwright test --headed --project chromium --grep @LegalRepCreatesDetainedAppeal",
+    "test:LegalRepCreatesDetainedAppealPrisonRefusalOfEu": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=refusalOfEu npx playwright test --headed --project chromium --grep @LegalRepCreatesDetainedAppeal",
     "test:LegalRepCreatesDetainedAppealPrisonProtectionFeeRemission": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection FEE_REMISSION=Yes npx playwright test --headed --project chromium --grep @LegalRepCreatesDetainedAppeal",
 
     "test:LegalRepCreatesDetainedAppealImmigrationRemovalCentreDeprivation": "yarn playwright install && DETENTION_LOCATION=immigrationRemovalCentre APPEAL_TYPE=deprivation npx playwright test --headed --project chromium --grep @LegalRepCreatesDetainedAppeal",
