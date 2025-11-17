@@ -60,194 +60,194 @@ let caseId: string;
 const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'revocationOfProtection';
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@LegalAdminCreatesDetainedRepresentedICC' }, () => {
+test.describe('Legal Admin creates Represented Detained ' + typeOfAppeal + ' Appeal (ICC) with detention location: ' + detentionLocation + ', ' + (inTime ? 'In Time' : 'Out of Time') + (feeRemission === 'Yes' ? ' with fee remission.':  '.'), { tag: '@LegalAdminCreatesDetainedRepresentedICC' }, () => {
 
-    test.beforeEach(async ({ page }) => {
-        // Go to the starting url before each test.
-        idamPage = new IdamPage(page);
-        linkHelper = new LinkHelper(page);
-        pageHelper = new PageHelper(page);
-        buttonHelper = new ButtonHelper(page);
-        validationHelper = new ValidationHelper(page);
-        createAppeal = new CreateAppeal(page);
-        createCasePage = new CreateCasePage(page);
+        test.beforeEach(async ({ page }) => {
+            // Go to the starting url before each test.
+            idamPage = new IdamPage(page);
+            linkHelper = new LinkHelper(page);
+            pageHelper = new PageHelper(page);
+            buttonHelper = new ButtonHelper(page);
+            validationHelper = new ValidationHelper(page);
+            createAppeal = new CreateAppeal(page);
+            createCasePage = new CreateCasePage(page);
 
-        await page.goto(envUrl);
-    });
+            await page.goto(envUrl);
+        });
 
-    test('Create Represented Detained Appeal with Custodial sentence - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({page}) => {
-        await idamPage.login(legalOfficerAdminCredentials);
-        await createCasePage.createCase();
-        await buttonHelper.continueButton.click(); // Before you start page
-        await createAppeal.setTribunalAppealReceived();
-        await createAppeal.appellantInPerson('No', 'Yes');
-        await createAppeal.locationInUK('Yes');
-        await createAppeal.inDetention('Yes');
-        await createAppeal.setDetentionLocation(detentionLocation);
+        test('Create LR-manual Detained Appeal',   async ({page}) => {
+            await idamPage.login(legalOfficerAdminCredentials);
+            await createCasePage.createCase();
+            await buttonHelper.continueButton.click(); // Before you start page
+            await createAppeal.setTribunalAppealReceived();
+            await createAppeal.appellantInPerson('No', 'Yes');
+            await createAppeal.locationInUK('Yes');
+            await createAppeal.inDetention('Yes');
+            await createAppeal.setDetentionLocation(detentionLocation);
 
-        if (detentionLocation === 'prison' || detentionLocation === 'other') {
-            await createAppeal.setCustodialSentence('Yes');
-        }
-        else {
-            await createAppeal.setBailApplication('No');
-        }
-
-
-        await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
-        await createAppeal.setAppellantBasicDetails(true);
-        await createAppeal.setNationality(true);
-
-        if (detentionLocation === 'other') {
-            await createAppeal.setAppellantAddress('detained', 'Yes');
-        }
-
-        await createAppeal.appellantDetails();
-        await createAppeal.hasSponsor('No');
-        await createAppeal.hasDeportationOrder('No');
-        await createAppeal.hasRemovalDirections('No');
-        await createAppeal.hasOtherAppeals('No');
-        await createAppeal.isHearingRequired(true);
-
-        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
-            await createAppeal.hasFeeRemission(feeRemission);
-        }
-
-        if (typeOfAppeal === 'protection') {
-            await createAppeal.setPayNowLater('Now');
-        }
-
-        await createAppeal.uploadAppealDocs();
-        await createAppeal.checkMyAnswers();
-
-        caseId = await pageHelper.grabCaseNumber();
-        console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
-        await new SubmitYourAppeal(page).submit(false, inTime);
-
-        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
-            if (feeRemission === 'Yes') {
-                await new RecordRemissionDecision(page).submit('approved');
-            } else {
-                await new MarkAppealAsPaid(page).recordPayment();
+            if (detentionLocation === 'prison' || detentionLocation === 'other') {
+                await createAppeal.setCustodialSentence('Yes');
             }
-        }
-
-        await linkHelper.signOut.click();
-    });
-
-    test('Legal Officer' + (!inTime ? ' records Out of Time decision, ': ' ') + 'creates Respondent Direction', async ({ page }) => {
-        await idamPage.login(legalOfficerCredentials);
-        await pageHelper.getCase(caseId);
-
-        if (!inTime) {
-            await new RecordOutOfTimeDecision(page).submit('approved');
-        }
-
-        await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManual.locator, imageLocators.detained.representedManual.name);
-        await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
-
-        await new S94b(page).setStatus('Yes');
-        await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManualS94b.locator, imageLocators.detained.representedManualS94b.name);
-
-        if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
-            await new RequestHomeOfficeData(page).matchAppellantDetails();
-        }
-
-        if (cmrHearing) {
-            await new GenerateListCMR(page).createTask();
-        }
-
-        await new RespondentEvidenceDirection(page).submit();
-
-        await linkHelper.signOut.click();
-    });
-
-    test('Home Office Officer (respondent) review appeal and upload Home Office bundle',   async ({ page }) => {
-        await idamPage.login(homeOfficeOfficerCredentials);
-        await page.goto(envUrl + '/cases/case-details/' + caseId);
-        await new HomeOfficeBundle(page).upload();
-        await linkHelper.signOut.click();
-    });
-
-    test('Legal Officer directs appellant/Legal Rep to build case',   async ({ page }) => {
-        await idamPage.login(legalOfficerCredentials);
-        await pageHelper.getCase(caseId);
-        await new CaseBuildingDirection(page).submit();
-        await linkHelper.signOut.click();
-    });
-
-    test('Legal Officer Admin build case (acting as Legal Rep)',   async ({ page }) => {
-        await idamPage.login(legalOfficerAdminCredentials);
-        await pageHelper.getCase(caseId);
-        await new BuildYourCase(page).build();
-        await linkHelper.signOut.click();
-    });
-
-    test('Legal Officer creates Respondent Review Direction',   async ({ page }) => {
-        await idamPage.login(legalOfficerCredentials);
-        await pageHelper.getCase(caseId);
-        await new RespondentReviewDirection(page).submit();
-        await linkHelper.signOut.click();
-    });
-
-    test('Home Office Officer (respondent) responds to appeal response from Appellant/Legal Rep',   async ({ page }) => {
-        await idamPage.login(homeOfficeOfficerCredentials);
-        await page.goto(envUrl + '/cases/case-details/' + caseId);
-        await new UploadAppealResponse(page).upload();
-        await linkHelper.signOut.click();
-    });
-
-    test('Legal Officer Force case - hearing reqs, thus bypassing Appellant/Legal Rep needing to review the HO decision',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
-        await pageHelper.getCase(caseId);
-        await new ForceCaseHearingReqs(page).submit();
-        await linkHelper.signOut.click();
-    });
-
-    test('Legal Officer Admin submit hearing requirements (acting as Legal Rep)',   async ({ page }) => {
-        await idamPage.login(legalOfficerAdminCredentials);
-        await pageHelper.getCase(caseId);
-        await new SubmitHearingRequirements(page).submit()
-        await linkHelper.signOut.click();
-    });
-
-    test('Legal Officer to review hearing requirements',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
-        await pageHelper.getCase(caseId);
-        await new ReviewHearingRequirements(page).submit();
-        await linkHelper.signOut.click();
-    });
+            else {
+                await createAppeal.setBailApplication('No');
+            }
 
 
-    // This is not the route the caseworker would use, however, we use it in the tests to get to the state of: Prepare for hearing
-    // This state is only available when the hearing is listed - this event mimics the List Assist integration for us and thus allows us to complete the journey
-    test('Admin Legal Officer to list the case',   async ({ page }) => {
-        await idamPage.login(legalOfficerAdminCredentials);
-        await pageHelper.getCase(caseId);
-        await new ListTheCase(page).list('No');
-        await linkHelper.signOut.click();
-    });
+            await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
+            await createAppeal.uploadNoticeOfDecision();
+            await createAppeal.setTypeOfAppeal(typeOfAppeal);
+            await createAppeal.setAppellantBasicDetails(true);
+            await createAppeal.setNationality(true);
 
-    test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
-        await pageHelper.getCase(caseId);
-        await new CreateCaseSummary(page).create();
-        await new GenerateHearingBundle(page).submit();
+            if (detentionLocation === 'other') {
+                await createAppeal.setAppellantAddress('detained', 'Yes');
+            }
 
-        // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decision and reasons
-        await pageHelper.waitForHearingBundleToBeGenerated();
-        await expect(page.locator(' #progress_caseOfficer_preHearing')).toBeVisible();
-        await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
-        await linkHelper.signOut.click();
-    });
+            await createAppeal.appellantDetails();
+            await createAppeal.hasSponsor('No');
+            await createAppeal.hasDeportationOrder('No');
+            await createAppeal.hasRemovalDirections('No');
+            await createAppeal.hasOtherAppeals('No');
+            await createAppeal.isHearingRequired(true);
 
-    test('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
-        await idamPage.login(judgeCredentials);
-        await pageHelper.getCase(caseId);
-        await new PrepareDecisionAndReasons(page).generate('Yes');
-        await new CompleteDecisionAndReasons(page).upload('allowed');
-        await linkHelper.signOut.click();
-    });
+            if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+                await createAppeal.hasFeeRemission(feeRemission);
+            }
 
+            if (typeOfAppeal === 'protection' && feeRemission === 'No') {
+                await createAppeal.setPayNowLater('Now');
+            }
+
+            await createAppeal.uploadAppealDocs();
+            await createAppeal.checkMyAnswers();
+
+            caseId = await pageHelper.grabCaseNumber();
+            console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
+            await new SubmitYourAppeal(page).submit(false, inTime);
+
+            if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+                if (feeRemission === 'Yes') {
+                    await new RecordRemissionDecision(page).submit('approved');
+                } else {
+                    await new MarkAppealAsPaid(page).recordPayment();
+                }
+            }
+
+            await linkHelper.signOut.click();
+        });
+
+        test('Legal Officer' + (!inTime ? ' records Out of Time decision, ': ' ') + 'creates Respondent Direction', async ({ page }) => {
+            await idamPage.login(legalOfficerCredentials);
+            await pageHelper.getCase(caseId);
+
+            if (!inTime) {
+                await new RecordOutOfTimeDecision(page).submit('approved');
+            }
+
+            await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManual.locator, imageLocators.detained.representedManual.name);
+            await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
+
+            await new S94b(page).setStatus('Yes');
+            await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManualS94b.locator, imageLocators.detained.representedManualS94b.name);
+
+            if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
+                await new RequestHomeOfficeData(page).matchAppellantDetails();
+            }
+
+            if (cmrHearing) {
+                await new GenerateListCMR(page).createTask();
+            }
+
+            await new RespondentEvidenceDirection(page).submit();
+
+            await linkHelper.signOut.click();
+        });
+
+        test('Home Office Officer (respondent) review appeal and upload Home Office bundle',   async ({ page }) => {
+            await idamPage.login(homeOfficeOfficerCredentials);
+            await page.goto(envUrl + '/cases/case-details/' + caseId);
+            await new HomeOfficeBundle(page).upload();
+            await linkHelper.signOut.click();
+        });
+
+        test('Legal Officer directs appellant/Legal Rep to build case',   async ({ page }) => {
+            await idamPage.login(legalOfficerCredentials);
+            await pageHelper.getCase(caseId);
+            await new CaseBuildingDirection(page).submit();
+            await linkHelper.signOut.click();
+        });
+
+        test('Legal Officer Admin build case (acting as Legal Rep)',   async ({ page }) => {
+            await idamPage.login(legalOfficerAdminCredentials);
+            await pageHelper.getCase(caseId);
+            await new BuildYourCase(page).build();
+            await linkHelper.signOut.click();
+        });
+
+        test('Legal Officer creates Respondent Review Direction',   async ({ page }) => {
+            await idamPage.login(legalOfficerCredentials);
+            await pageHelper.getCase(caseId);
+            await new RespondentReviewDirection(page).submit();
+            await linkHelper.signOut.click();
+        });
+
+        test('Home Office Officer (respondent) responds to appeal response from Appellant/Legal Rep',   async ({ page }) => {
+            await idamPage.login(homeOfficeOfficerCredentials);
+            await page.goto(envUrl + '/cases/case-details/' + caseId);
+            await new UploadAppealResponse(page).upload();
+            await linkHelper.signOut.click();
+        });
+
+        test('Legal Officer Force case - hearing reqs, thus bypassing Appellant/Legal Rep needing to review the HO decision',   async ({ page }) => {
+            await idamPage.login(listingOfficerCredentials);
+            await pageHelper.getCase(caseId);
+            await new ForceCaseHearingReqs(page).submit();
+            await linkHelper.signOut.click();
+        });
+
+        test('Legal Officer Admin submit hearing requirements (acting as Legal Rep)',   async ({ page }) => {
+            await idamPage.login(legalOfficerAdminCredentials);
+            await pageHelper.getCase(caseId);
+            await new SubmitHearingRequirements(page).submit()
+            await linkHelper.signOut.click();
+        });
+
+        test('Legal Officer to review hearing requirements',   async ({ page }) => {
+            await idamPage.login(listingOfficerCredentials);
+            await pageHelper.getCase(caseId);
+            await new ReviewHearingRequirements(page).submit();
+            await linkHelper.signOut.click();
+        });
+
+
+        // This is not the route the caseworker would use, however, we use it in the tests to get to the state of: Prepare for hearing
+        // This state is only available when the hearing is listed - this event mimics the List Assist integration for us and thus allows us to complete the journey
+        test('Admin Legal Officer to list the case',   async ({ page }) => {
+            await idamPage.login(legalOfficerAdminCredentials);
+            await pageHelper.getCase(caseId);
+            await new ListTheCase(page).list('No');
+            await linkHelper.signOut.click();
+        });
+
+        test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
+            await idamPage.login(listingOfficerCredentials);
+            await pageHelper.getCase(caseId);
+            await new CreateCaseSummary(page).create();
+            await new GenerateHearingBundle(page).submit();
+
+            // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decision and reasons
+            await pageHelper.waitForHearingBundleToBeGenerated();
+            await expect(page.locator(' #progress_caseOfficer_preHearing')).toBeVisible();
+            await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
+            await linkHelper.signOut.click();
+        });
+
+        test('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
+            await idamPage.login(judgeCredentials);
+            await pageHelper.getCase(caseId);
+            await new PrepareDecisionAndReasons(page).generate('Yes');
+            await new CompleteDecisionAndReasons(page).upload('allowed');
+            await linkHelper.signOut.click();
+        });
 });
+

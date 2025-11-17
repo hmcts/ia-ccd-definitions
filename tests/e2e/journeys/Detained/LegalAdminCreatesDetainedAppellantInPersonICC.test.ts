@@ -34,7 +34,7 @@ import {ListTheCase} from "../../flows/events/listTheCase";
 import {S94b} from "../../flows/events/setS94bStatus";
 import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 
-const inTime: boolean = true;
+const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 
@@ -54,7 +54,7 @@ let validationHelper: ValidationHelper;
 let caseId: string;
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', { tag: '@LegalAdminCreatesDetainedAppellantInPersonICC' }, () => {
+test.describe('Legal Admin creates Detained Appellant in Person, ' + typeOfAppeal + ' Appeal (ICC) with detention location: ' + detentionLocation + ', ' + (inTime ? 'In Time' : 'Out of Time') + (feeRemission === 'Yes' ? ' with fee remission.':  '.'), { tag: '@LegalAdminCreatesDetainedAppellantInPersonICC' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -67,7 +67,7 @@ test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', {
         await page.goto(envUrl);
     });
 
-    test('Create Detained Appeal - Appellant In Person as Legal Admin - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({ page}) => {
+    test('Create Detained Appeal - AIP-manual',   async ({ page}) => {
         const createAppeal = new CreateAppeal(page);
 
         await idamPage.login(legalOfficerAdminCredentials);
@@ -107,7 +107,7 @@ test.describe('Legal Admin creates Detained Appellant in Person Appeal (ICC)', {
             await createAppeal.hasFeeRemission(feeRemission);
         }
 
-        if (typeOfAppeal === 'protection') {
+        if (typeOfAppeal === 'protection' && feeRemission === 'No') {
             await createAppeal.setPayNowLater('Now');
         }
 

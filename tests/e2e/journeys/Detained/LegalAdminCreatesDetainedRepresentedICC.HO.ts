@@ -60,7 +60,7 @@ let caseId: string;
 const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'revocationOfProtection';
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@LegalAdminCreatesDetainedRepresentedICC' }, () => {
+test.describe('Legal Admin creates Represented Detained ' + typeOfAppeal + ' Appeal (ICC) with detention location: ' + detentionLocation + ', ' + (inTime ? 'In Time' : 'Out of Time') + (feeRemission === 'Yes' ? ' with fee remission.':  '.'), { tag: '@LegalAdminCreatesDetainedRepresentedICC' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -75,7 +75,7 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
         await page.goto(envUrl);
     });
 
-    test('Create Represented Detained Appeal with Custodial sentence - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({page}) => {
+    test('Create LR-manual Detained Appeal' ,   async ({page}) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();
         await buttonHelper.continueButton.click(); // Before you start page
@@ -114,7 +114,7 @@ test.describe('Legal Admin creates Represented Detained Appeal (ICC)', { tag: '@
             await createAppeal.hasFeeRemission(feeRemission);
         }
 
-        if (typeOfAppeal === 'protection') {
+        if (typeOfAppeal === 'protection' && feeRemission === 'No') {
             await createAppeal.setPayNowLater('Now');
         }
 
