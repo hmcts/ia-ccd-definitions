@@ -67,7 +67,7 @@ let updateDetentionLocation: UpdateDetentionLocation;
 let createHearingRequest: CreateHearingRequest;
 
 test.describe.configure({ mode: 'serial' });
-test.describe('Create Detained Appeal as Legal Representative with detention location: ' + detentionLocation + ', ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrHearing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedAppeal' }, () => {
+test.describe('Create Detained ' + typeOfAppeal + ' Appeal as Legal Representative with detention location: ' + detentionLocation + ', ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrHearing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedAppeal' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.

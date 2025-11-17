@@ -35,7 +35,7 @@ const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivatio
 
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Detained, Represented Appeal then removes detained status (becomes Non-Detained)', { tag: '@LegalAdminCreatesDetainedRepresentedToNonDetainedICC' }, () => {
+test.describe('Legal Admin creates Represented Detained ' + typeOfAppeal + ' Appeal (ICC) with detention location: ' + detentionLocation + ', ' + (inTime ? 'In Time' : 'Out of Time') + (feeRemission === 'Yes' ? ' with fee remission.':  '.'), { tag: '@LegalAdminCreatesDetainedRepresentedToNonDetainedICC' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -51,7 +51,7 @@ test.describe('Legal Admin creates Detained, Represented Appeal then removes det
         await page.goto(envUrl);
     });
 
-    test('Create Represented Detained Appeal in Prison with Custodial sentence - ' + (inTime ? 'In Time' : 'Out of Time'),   async ({ page }) => {
+    test('Create LR-manual Detained Appeal, then convert to Non-Detained',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();
         await buttonHelper.continueButton.click(); // Before you start page
@@ -61,68 +61,37 @@ test.describe('Legal Admin creates Detained, Represented Appeal then removes det
         await createAppeal.inDetention('Yes');
         await createAppeal.setDetentionLocation(detentionLocation);
         await createAppeal.setCustodialSentence('Yes');
-        await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+        await createAppeal.setHomeOfficeDetailsHO();
         await createAppeal.setAppellantBasicDetails(true);
         await createAppeal.setNationality(true);
+
+        if (detentionLocation === 'other') {
+            await createAppeal.setAppellantAddress('detained', 'Yes');
+        }
+
         await createAppeal.appellantDetails();
+        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+        await createAppeal.setDecisionDateHO(inTime);
+        await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');
         await createAppeal.hasRemovalDirections('No');
         await createAppeal.hasOtherAppeals('No');
         await createAppeal.isHearingRequired(true);
+
+        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+            await createAppeal.hasFeeRemission(feeRemission);
+        }
+
+        if (typeOfAppeal === 'protection' && feeRemission === 'No') {
+            await createAppeal.setPayNowLater('Now');
+        }
+
         await createAppeal.uploadAppealDocs();
         await createAppeal.checkMyAnswers();
         await buttonHelper.closeAndReturnToCaseDetailsButton.click();
 
         caseId = await pageHelper.grabCaseNumber();
-        console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
-        await submitYourAppeal.submit(false, inTime);
-
-        await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManual.locator, imageLocators.detained.representedManual.name);
-        await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
-
-        await new RemoveDetainedStatus(page).removeStatus();
-
-        await validationHelper.validateLabelNotDisplayed(imageLocators.detained.representedManual.locator);
-        await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.representedManual.locator, imageLocators.nonDetained.representedManual.name);
-        await validationHelper.validateDataOnAppealTabDetainedStatusRemoved();
-        await validationHelper.validateDataOnAppellantTabDetainedStatusRemoved(detentionLocation);
-
-        await linkHelper.signOut.click();
-    });
-
-    test('Create Represented Detained Appeal in Immigration Removal Centre - ' + (inTime ? 'In Time' : 'Out of Time') + ' - Then remove detained status',   async ({ page }) => {
-        const typeOfAppeal: string = 'revocationOfProtection';// Revocation of a protection status (no payment required)
-        const detentionLocation: string = 'immigrationRemovalCentre';
-
-
-        await idamPage.login(legalOfficerAdminCredentials);
-        await createCasePage.createCase();
-        await buttonHelper.continueButton.click(); // Before you start page
-        await createAppeal.setTribunalAppealReceived();
-        await createAppeal.appellantInPerson('No', 'Yes');
-        await createAppeal.locationInUK('Yes');
-        await createAppeal.inDetention('Yes');
-        await createAppeal.setDetentionLocation(detentionLocation);
-        await createAppeal.setBailApplication('Yes');
-        await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
-        await createAppeal.setAppellantBasicDetails(true);
-        await createAppeal.setNationality(true);
-        await createAppeal.appellantDetails();
-        await createAppeal.hasSponsor('No');
-        await createAppeal.hasDeportationOrder('No');
-        await createAppeal.hasRemovalDirections('No');
-        await createAppeal.hasOtherAppeals('No');
-        await createAppeal.isHearingRequired(true);
-        await createAppeal.uploadAppealDocs();
-        await createAppeal.checkMyAnswers();
-        await buttonHelper.closeAndReturnToCaseDetailsButton.click();
-
-        caseId = await pageHelper.grabCaseNumber()
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
         await submitYourAppeal.submit(false, inTime);
 
