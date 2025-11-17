@@ -67,7 +67,7 @@ let updateDetentionLocation: UpdateDetentionLocation;
 let createHearingRequest: CreateHearingRequest;
 
 test.describe.configure({ mode: 'serial' });
-test.describe('Create Detained Appeal as Legal Representative with detention location: ' + detentionLocation + ', ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrHearing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedAppeal' }, () => {
+test.describe('Create Detained ' + typeOfAppeal + ' Appeal as Legal Representative with detention location: ' + detentionLocation + ', ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrHearing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedAppeal' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -96,14 +96,7 @@ test.describe('Create Detained Appeal as Legal Representative with detention loc
             await createAppeal.setBailApplication('Yes');
         }
 
-        await createAppeal.setHomeOfficeDetails(inTime);
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
-
-        if (typeOfAppeal !== 'euSettlementScheme') {
-            await createAppeal.setGroundsOfAppeal(typeOfAppeal);
-        }
-
+        await createAppeal.setHomeOfficeDetailsHO();
         await createAppeal.setAppellantBasicDetails(false);
         await createAppeal.setNationality(true);
 
@@ -111,6 +104,14 @@ test.describe('Create Detained Appeal as Legal Representative with detention loc
             await createAppeal.setAppellantAddress('detained', 'Yes');
         }
 
+        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+
+        if (typeOfAppeal !== 'euSettlementScheme') {
+            await createAppeal.setGroundsOfAppeal(typeOfAppeal);
+        }
+
+        await createAppeal.setDecisionDateHO(inTime);
+        await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('Yes');
         await createAppeal.hasDeportationOrder('Yes');
         await createAppeal.hasRemovalDirections('Yes');
