@@ -114,7 +114,6 @@ test.describe('Legal Admin creates Detained Appellant in Person, ' + typeOfAppea
 
         await createAppeal.uploadAppealDocs();
         await createAppeal.checkMyAnswers();
-        //await buttonHelper.closeAndReturnToCaseDetailsButton.click();
 
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');

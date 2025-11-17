@@ -17,7 +17,7 @@ export class MarkAppealAsPaid {
         await new PageHelper(this.page).selectNextStep('Mark appeal as paid');
 
         await this.page.fill('#paidAmount', '140.00');
-        await this.page.fill('#paidDate-day', yesterday.day().toString());
+        await this.page.fill('#paidDate-day', yesterday.date().toString());
         await this.page.fill('#paidDate-month', (yesterday.month()+1).toString());
         await this.page.fill('#paidDate-year', yesterday.year().toString());
         await this.page.fill('#additionalPaymentInfo', 'Additional payment info test text.');
