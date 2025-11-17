@@ -2158,6 +2158,15 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceDecidedState", "CaseFieldID": "appealDate", "CaseEventFieldLabel": "When was the appeal decided?", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "moveToDecidedDatePage", "Publish": "Y", "ShowSummaryChangeOption": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceDecidedState", "CaseFieldID": "moveToDecidedDecisionLabel1", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "moveToDecidedDecisionPage", "PageDisplayOrder": 2, "ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceDecidedState", "CaseFieldID": "isDecisionAllowed", "CaseEventFieldLabel": "Decision", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "moveToDecidedDecisionPage", "Publish": "Y", "ShowSummaryChangeOption": "Y"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceDecidedState", "CaseFieldID": "isDecisionAllowed", "CaseEventFieldLabel": "Decision", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "moveToDecidedDecisionPage", "Publish": "Y", "ShowSummaryChangeOption": "Y"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceFtpaDecidedState", "CaseFieldID": "moveToFtpaDecidedDateLabel1", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "moveToFtpaDecidedDatePage", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceFtpaDecidedState", "CaseFieldID": "ftpaAppellantDecisionDate", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "moveToFtpaDecidedDatePage", "ShowSummaryChangeOption": "Y", "Publish": "Y"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceFtpaDecidedState", "CaseFieldID": "moveToFtpaDecidedApplicantLabel1", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "moveToFtpaDecidedApplicantPage", "PageDisplayOrder": 2, "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceFtpaDecidedState", "CaseFieldID": "ftpaApplicantType", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "moveToFtpaDecidedApplicantPage",  "ShowSummaryChangeOption": "Y", "Publish": "Y"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceFtpaDecidedState", "CaseFieldID": "ftpaAppellantRjDecisionOutcomeType", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "ftpaAppellantDecisionOutcome", "PageLabel": "Decision", "PageDisplayOrder": 3, "PageShowCondition": "ftpaApplicantType=\"appellant\"", "ShowSummaryChangeOption": "Y", "Publish": "Y"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceFtpaDecidedState", "CaseFieldID": "ftpaRespondentRjDecisionOutcomeType", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageLabel": "Decision", "PageID": "ftpaRespondentDecisionOutcome", "PageDisplayOrder": 3, "PageShowCondition": "ftpaApplicantType=\"respondent\"", "ShowSummaryChangeOption": "Y", "Publish": "Y"}
 ]
