@@ -412,12 +412,9 @@ export class CreateAppeal {
 
    // uploadAppealDocs() - For Legal Admin journey
    async uploadAppealDocs() {
-        console.log('here1');
        await this.page.locator('button:text("Add new")').click();
-       console.log('here2');
        // getting rate cap error message - waiting for 4 secs to stop this happening
        await this.page.waitForTimeout(4000); // waits for 4 seconds
-       console.log('here3');
        await this.page.locator('#uploadTheAppealFormDocs_0_document').setInputFiles('./tests/documents/TEST_DOCUMENT_2.pdf');
        await this.page.fill('#uploadTheAppealFormDocs_0_description', 'Test Notice of Decision document.');
        await this.page.waitForSelector('.error-message', { state: 'hidden' });

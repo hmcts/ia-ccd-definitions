@@ -13,11 +13,11 @@ export class GenerateHearingBundle {
 
     async submit(){
         await new PageHelper(this.page).selectNextStep('Generate hearing bundle');
-        if (['preview', 'demo'].includes(runningEnv)) {
+        //if (['preview', 'demo'].includes(runningEnv)) {
             await this.buttonHelper.submitButton.click();
-        } else {
-            await this.generateButton.click();
-        }
+       // } else {
+       //     await this.generateButton.click();
+        //}
         await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
     }
 }
