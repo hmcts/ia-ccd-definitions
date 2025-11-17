@@ -6145,6 +6145,42 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "journey_type_rehydrated_legally_represented_manual",
+    "Label": "![The appellant in this manual rehydrated case has legal representation](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/RehydratedLegallyRepManual.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "journey_type_rehydrated_in_person_manual_s9",
+    "Label": "![The appellant in this manual rehydrated case has no legal representation-s9](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/RehydratedAipManualS9.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "journey_type_rehydrated_manual",
+    "Label": "![The appellant in this manual rehydrated case has no legal representation](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/RehydratedAipManual.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "journey_type_rehydrated_legally_represented_manual_s9",
+    "Label": "![The appellant in this manual rehydrated case has legal representation-S94](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/RehydratedLegalRepS9.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "validation_caseOfficer_requestHomeOfficeData",
     "Label": "${homeOfficeSearchStatusMessage}",
     "FieldType": "Label",
