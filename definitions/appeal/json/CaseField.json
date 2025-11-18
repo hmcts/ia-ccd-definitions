@@ -8243,6 +8243,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingDecisionList", "Label": "List of hearing IDs and decisions associated with case", "FieldType": "Collection", "FieldTypeParameter": "hearingDecision", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isVirtualHearing", "Label": "Virtual Hearing", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseIdList", "Label": "Case IDs", "HintText": "Enter the list of caseIds without hyphens and separated by commas, e.g. 1234567812345678,1234567812345679,1234567812345680", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "TTL", "Label": " ", "FieldType": "TTL", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistTitle4", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -8269,8 +8270,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionRemovalReason", "Label": "Reasons for removal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInPersonManualTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInPersonManualInstructions", "Label": "Once you've submitted the request</br><ul><li>This appeal will have to be continued by internal users</li><li>To update the detention location, select the \"Update detention location\" event</li></ul>", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInPersonManualInstructions", "Label": "Once you've submitted the request</br><ul><li>This appeal will have to be continued by internal users</li><li>To update the detention location, select the \"Update detention location\" event</li></ul>", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"}
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removeCaseManagerCaseIdList", "Label": "Case IDs", "HintText": "Enter the list of caseIds without hyphens and separated by commas, e.g. 1234567812345678,1234567812345679,1234567812345680", "FieldType": "Text", "SecurityClassification": "PUBLIC"}
-  
 ]
