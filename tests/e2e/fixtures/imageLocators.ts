@@ -39,4 +39,22 @@ export const imageLocators = {
             name: 'appellant_in_person_manual',
         }
     },
+    rehydrated: {
+        representedManual: {
+            locator: '//*[@id="journey_type_rehydrated_lr_manual_detained"]/dt/ccd-markdown/div/markdown/p/img',
+            name: 'Tag-combo-R-LRM-DA',
+        },
+        representedManualS94b: {
+            locator: '//*[@id="journey_type_rehydrated_lr_manual_detained_s9"]/dt/ccd-markdown/div/markdown/p/img',
+            name: 'Tag-combo-R-LRM-DA-S9',
+        },
+        appellantInPersonManual: {
+            locator: '//*[@id="journey_type_rehydrated_aip_manual_detained"]/dt/ccd-markdown/div/markdown/p/img',
+            name: 'Tag-combo-R-AIPM-DA',
+        },
+        notifications: {
+            locator: '//*[@id="notifications_turned_off_banner"]/dt/ccd-markdown/div/markdown/p/img',
+            name: 'redydrate_turnoff',
+        },
+    },
 };

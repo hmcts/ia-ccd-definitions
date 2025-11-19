@@ -100,7 +100,13 @@
     "test:LegalAdminCreatesOutOfCountryRepresentedICC": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalAdminCreatesOutOfCountryRepresentedICC",
     "test:LegalAdminCreatesOutOfCountryAppellantInPersonICC": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalAdminCreatesOutOfCountryAppellantInPersonICC",
 
-    "test:LegalAdminCreatesRehydratedCase": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalAdminCreatesRehydratedCase",
+    "test:LegalAdminCreatesDetainedRepresentedPrisonDeprivationRehydratedCase": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=deprivation IN_TIME=true npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedRehydratedCase",
+    "test:LegalAdminCreatesDetainedRepresentedPrisonProtectionRehydratedCase": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection IN_TIME=true npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedRehydratedCase",
+    "test:LegalAdminCreatesDetainedRepresentedPrisonEuSettlementSchemeFeeRemissionRehydratedCase": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=euSettlementScheme IN_TIME=true FEE_REMISSION=Yes npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedRehydratedCase",
+
+    "test:LegalAdminCreatesDetainedAppellantInPersonPrisonProtectionRehydratedCase": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection IN_TIME=true npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonRehydratedCase",
+
+
     "clean": "rm -rf target/",
     "decrypt": "node bin/decrypt.js",
     "copy-json": "bin/copy-json.sh",

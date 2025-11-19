@@ -1,5 +1,5 @@
 import moment from "moment/moment";
-import { Page } from "@playwright/test";
+import {expect, Page} from "@playwright/test";
 import { appellant, sponsor, legalRepresentative, runningEnv, outOfCountryAddress } from '../detainedConfig';
 import { detentionFacility } from '../fixtures/detentionFacilities';
 import { ButtonHelper } from '../helpers/ButtonHelper';
@@ -234,15 +234,15 @@ export class CreateAppeal {
         await this.buttonHelper.continueButton.click();
     }
 
-   async uploadNoticeOfDecision() {
-       await this.page.locator('button:text("Add new")').click();
-       // getting rate cap error message - waiting for 2 secs to stop this happening
-       await this.page.waitForTimeout(2000); // waits for 2 seconds
-       await this.page.locator('#uploadTheNoticeOfDecisionDocs_0_document').setInputFiles('./tests/documents/TEST_DOCUMENT_1.pdf');
-       await this.page.fill('#uploadTheNoticeOfDecisionDocs_0_description', 'Test Notice of Decision document.');
-       await this.page.waitForSelector('.error-message', { state: 'hidden' });
-       await this.buttonHelper.continueButton.click();
-   }
+   async uploadNoticeOfDecision(documentType: string = 'TheNoticeOfDecisionDocs') {
+        await this.page.click('button:text("Add new")');
+        // getting rate cap error message - waiting for 2 secs to stop this happening
+        await this.page.waitForTimeout(2000); // waits for 2 seconds
+        await this.page.locator(`#upload${documentType}_0_document`).setInputFiles('./tests/documents/TEST_DOCUMENT_1.pdf');
+        await this.page.fill(`#upload${documentType}_0_description`, 'Test Notice of Decision document.');
+        await this.page.waitForSelector('.error-message', { state: 'hidden' });
+        await this.buttonHelper.continueButton.click();
+    }
 
    async setTypeOfAppeal(appealType: string = 'refusalOfEu') {
        await this.page.check(`#appealType-${appealType}`);
