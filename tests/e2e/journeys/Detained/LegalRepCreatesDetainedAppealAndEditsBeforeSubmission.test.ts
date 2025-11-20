@@ -92,7 +92,7 @@ test.describe('Create Detained Appeal as Legal Representative with detention loc
                 await createAppeal.setBailApplication('Yes');
             }
 
-            await createAppeal.setHomeOfficeDetailsHO();
+            await createAppeal.setHomeOfficeReferenceNumber();
             await createAppeal.setAppellantBasicDetails(false);
 
             if (stage === 'create') {
@@ -111,7 +111,7 @@ test.describe('Create Detained Appeal as Legal Representative with detention loc
                 await createAppeal.setGroundsOfAppeal(typeOfAppeal);
             }
 
-            await createAppeal.setDecisionDateHO(inTime);
+            await createAppeal.setHomeOfficeDecisionDate(inTime);
 
             if (stage === 'create') {
                 await createAppeal.uploadNoticeOfDecision();

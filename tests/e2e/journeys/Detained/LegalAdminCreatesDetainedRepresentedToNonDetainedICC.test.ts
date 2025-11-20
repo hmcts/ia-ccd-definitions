@@ -61,7 +61,7 @@ test.describe('Legal Admin creates Represented Detained ' + typeOfAppeal + ' App
         await createAppeal.inDetention('Yes');
         await createAppeal.setDetentionLocation(detentionLocation);
         await createAppeal.setCustodialSentence('Yes');
-        await createAppeal.setHomeOfficeDetailsHO();
+        await createAppeal.setHomeOfficeReferenceNumber();
         await createAppeal.setAppellantBasicDetails(true);
         await createAppeal.setNationality(true);
 
@@ -71,7 +71,7 @@ test.describe('Legal Admin creates Represented Detained ' + typeOfAppeal + ' App
 
         await createAppeal.appellantDetails();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);
-        await createAppeal.setDecisionDateHO(inTime);
+        await createAppeal.setHomeOfficeDecisionDate(inTime);
         await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');

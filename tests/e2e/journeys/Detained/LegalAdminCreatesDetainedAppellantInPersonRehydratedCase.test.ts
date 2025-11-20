@@ -103,7 +103,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
             await createAppeal.setBailApplication('No');
         }
 
-        await createAppeal.setHomeOfficeDetailsHO();
+        await createAppeal.setHomeOfficeReferenceNumber();
         await createAppeal.setAppellantBasicDetails(true);
         await createAppeal.setNationality(true);
 
@@ -113,7 +113,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
 
         await createAppeal.appellantDetails();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);
-        await createAppeal.setDecisionDateHO(inTime);
+        await createAppeal.setHomeOfficeDecisionDate(inTime);
         await createAppeal.uploadNoticeOfDecision('RehydratedNod');
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');

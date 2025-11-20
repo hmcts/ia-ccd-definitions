@@ -67,7 +67,7 @@ test.describe('Create Detained ' + + typeOfAppeal + ' Appeal as Legal Representa
             await createAppeal.setBailApplication('Yes');
         }
 
-        await createAppeal.setHomeOfficeDetailsHO();
+        await createAppeal.setHomeOfficeReferenceNumber();
         await createAppeal.setAppellantBasicDetails(false);
         await createAppeal.setNationality(true);
 
@@ -81,7 +81,7 @@ test.describe('Create Detained ' + + typeOfAppeal + ' Appeal as Legal Representa
             await createAppeal.setGroundsOfAppeal(typeOfAppeal);
         }
 
-        await createAppeal.setDecisionDateHO(inTime);
+        await createAppeal.setHomeOfficeDecisionDate(inTime);
         await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('Yes');
         await createAppeal.hasDeportationOrder('Yes');
