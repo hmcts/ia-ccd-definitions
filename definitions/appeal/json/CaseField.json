@@ -6891,9 +6891,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionAndReasonDocsUpload", "Label": "Decision and Reasons document", "FieldType": "Document", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionOption", "Label": "Fee remission type", "FieldType": "FixedList", "FieldTypeParameter": "remissionOptions", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "asylumSupportRefNumber", "Label": "Asylum support reference number", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "asylumSupportRefNumber", "Label": "Asylum support reference number supplied by Appellant", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesOption", "Label": " ", "FieldType": "FixedList", "FieldTypeParameter": "helpWithFeesOptions", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesRefNumber", "Label": "Help with Fees reference number", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "helpWithFeesRefNumber", "Label": "Help with Fees reference number supplied by Appellant", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "localAuthorityLetters", "Label": "Local Authority Support Documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeSupportPersisted", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {
@@ -8141,6 +8141,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "lateHelpWithFeesOption", "Label": " ", "FieldType": "FixedList", "FieldTypeParameter": "helpWithFeesOptions", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "lateHelpWithFeesRefNumber", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "lateLocalAuthorityLetters", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "remissionRequestedBy", "Label": "Remission requested by", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasPreviousRemission", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "refundRequested", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
