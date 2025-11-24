@@ -51,11 +51,11 @@ export const imageLocators = {
             },
             appellantInPersonManual: {
                 locator: '//*[@id="journey_type_rehydrated_aip_manual_detained"]/dt/ccd-markdown/div/markdown/p/img',
-                name: 'Tag-combo-R-AIPM-DA',
+                name: 'Tag-Rehydrated-AIPM-Detained',
             },
             appellantInPersonManualS94b: {
                 locator: '//*[@id="journey_type_rehydrated_aip_manual_detained_s9"]/dt/ccd-markdown/div/markdown/p/img',
-                name: 'Tag-combo-R-AIPM-DA-S9',
+                name: 'Tag-Rehydrated-AIPM-Detained-S9.svg',
             },
         },
         nonDetained: {
