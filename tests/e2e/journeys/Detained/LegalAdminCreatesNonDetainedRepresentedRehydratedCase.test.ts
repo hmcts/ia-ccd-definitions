@@ -1,6 +1,6 @@
 import {expect, test} from '@playwright/test';
 import {
-    envUrl, homeOfficeOfficerCredentials,
+    envUrl, homeOfficeOfficerCredentials, judgeCredentials,
     legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials,
 } from '../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
@@ -31,26 +31,8 @@ import {ListTheCase} from "../../flows/events/listTheCase";
 import {CreateCaseSummary} from "../../flows/events/createCaseSummary";
 import {GenerateHearingBundle} from "../../flows/events/generateHearingBundle";
 import {StartDecisionAndReasons} from "../../flows/events/startDecisionAndReasons";
-//import {SubmitYourAppeal} from '../../flows/events/submitYourAppeal';
-//import {RequestHomeOfficeData} from '../../flows/events/requestHomeOfficeData';
-//import {GenerateListCMR} from '../../flows/events/generateListCMRTask';
-//import {RespondentEvidenceDirection} from '../../flows/events/respondentEvidenceDirection';
-//import {HomeOfficeBundle} from '../../flows/events/homeOfficeBundle';
-//import {CaseBuildingDirection} from '../../flows/events/caseBuildingDirection';
-//import {BuildYourCase} from '../../flows/events/buildYourCase';
-//import {RespondentReviewDirection} from '../../flows/events/respondentReviewDirection';
-//import {UploadAppealResponse} from '../../flows/events/uploadAppealResponse';
-//import {ForceCaseHearingReqs} from '../../flows/events/forceCaseHearingReqs';
-//import {SubmitHearingRequirements} from '../../flows/events/submitHearingRequirements';
-//import {ReviewHearingRequirements} from '../../flows/events/reviewHearingRequirements';
-//import {S94b} from '../../flows/events/setS94bStatus';
-//import {imageLocators} from '../../fixtures/imageLocators';
-//import {CreateCaseSummary} from "../../flows/events/createCaseSummary";
-//import {GenerateHearingBundle} from "../../flows/events/generateHearingBundle";
-//import {StartDecisionAndReasons} from "../../flows/events/startDecisionAndReasons";
-//import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndReasons";
-//import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
-//import {ListTheCase} from "../../flows/events/listTheCase";
+import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndReasons";
+import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
@@ -74,10 +56,10 @@ let buttonHelper: ButtonHelper;
 let validationHelper: ValidationHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
-
+let s94b: S94b;
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal + ' Rehydrated Case ' + (inTime ? 'In Time' : 'Out of Time'), { tag: '@LegalAdminCreatesDetainedAppellantInPersonRehydratedCase' }, () => {
+test.describe('Legal Admin creates Non-Detained Represented ' + typeOfAppeal + ' Rehydrated Case ' + (inTime ? 'In Time' : 'Out of Time'), { tag: '@LegalAdminCreatesNonDetainedRepresentedRehydratedCase' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -88,7 +70,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         validationHelper = new ValidationHelper(page);
         createAppeal = new CreateAppeal(page);
         createCasePage = new CreateCasePage(page);
-
+        s94b = new S94b(page);
         await page.goto(envUrl);
     });
 
@@ -100,33 +82,20 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await createAppeal.enterAriaReferenceNumber();
         await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
         await createAppeal.setTribunalAppealReceived();
-        await createAppeal.appellantInPerson('Yes');
+        await createAppeal.appellantInPerson('No', 'Yes');
         await createAppeal.locationInUK('Yes');
-        await createAppeal.inDetention('Yes');
-        await createAppeal.setDetentionLocation(detentionLocation);
-
-        if (detentionLocation === 'prison' || detentionLocation === 'other') {
-            await createAppeal.setCustodialSentence('Yes');
-        }
-        else {
-            await createAppeal.setBailApplication('No');
-        }
-
+        await createAppeal.inDetention('No');
         await createAppeal.setHomeOfficeReferenceNumber();
         await createAppeal.setAppellantBasicDetails(true);
         await createAppeal.setNationality(true);
-
-        if (detentionLocation === 'other') {
-            await createAppeal.setAppellantAddress('detained', 'Yes');
-        }
-
+        await createAppeal.setAppellantAddress('rehydrated', 'Yes');
         await createAppeal.setAppellantContactDetails();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);
         await createAppeal.setHomeOfficeDecisionDate(inTime);
         await createAppeal.uploadNoticeOfDecision('RehydratedNod');
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');
-        await createAppeal.hasRemovalDirections('No');
+       // await createAppeal.hasRemovalDirections('No');
         await createAppeal.hasOtherAppeals('No');
         await createAppeal.isHearingRequired(true);
 
@@ -156,14 +125,13 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
             }
         }
 
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.appellantInPersonManual.locator, imageLocators.rehydrated.detained.appellantInPersonManual.name);
+        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
-
 
         await linkHelper.signOut.click();
     });
 
-    test('Legal Officer' + (!inTime ? ' records Out of Time decision, ': ' ') + 'creates Respondent Direction and adds then removes s94b', async ({ page }) => {
+    test('Legal Officer' + (!inTime ? ' records Out of Time decision, ': ' ') + 'creates Respondent Direction', async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
 
@@ -171,15 +139,15 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
             await new RecordOutOfTimeDecision(page).submit('approved');
         }
 
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.appellantInPersonManual.locator, imageLocators.rehydrated.detained.appellantInPersonManual.name);
+        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.representedManual.locator, imageLocators.rehydrated.detained.representedManual.name);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
 
-        await new S94b(page).setStatus('Yes');
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.appellantInPersonManualS94b.locator, imageLocators.rehydrated.detained.appellantInPersonManualS94b.name);
 
-        await new S94b(page).setStatus('No');
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.appellantInPersonManual.locator, imageLocators.rehydrated.detained.appellantInPersonManual.name);
+        await s94b.setStatus('Yes');
+        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.representedManualS94b.locator, imageLocators.rehydrated.detained.representedManualS94b.name);
 
+        await s94b.setStatus('No');
+        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.representedManual.locator, imageLocators.rehydrated.detained.representedManual.name);
 
 
         if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
@@ -273,5 +241,14 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
         await linkHelper.signOut.click();
     });
+
+    test('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
+        await idamPage.login(judgeCredentials);
+        await pageHelper.getCase(caseId);
+        await new PrepareDecisionAndReasons(page).generate('Yes');
+        await new CompleteDecisionAndReasons(page).upload('allowed');
+        await linkHelper.signOut.click();
+    });
+
 
 });

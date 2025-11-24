@@ -1,10 +1,7 @@
 import {expect, test} from '@playwright/test';
 import {
     envUrl, homeOfficeOfficerCredentials, judgeCredentials,
-//    homeOfficeOfficerCredentials, judgeCredentials,
-    legalOfficerAdminCredentials, legalOfficerCredentials, legalRepresentativeCredentials, listingOfficerCredentials,
-//    legalOfficerCredentials,
-//    listingOfficerCredentials
+    legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials,
 } from '../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import {LinkHelper} from '../../helpers/LinkHelper';
@@ -30,7 +27,6 @@ import {UploadAppealResponse} from "../../flows/events/uploadAppealResponse";
 import {ForceCaseHearingReqs} from "../../flows/events/forceCaseHearingReqs";
 import {SubmitHearingRequirements} from "../../flows/events/submitHearingRequirements";
 import {ReviewHearingRequirements} from "../../flows/events/reviewHearingRequirements";
-import {TabsHelper} from "../../helpers/TabsHelper";
 import {ListTheCase} from "../../flows/events/listTheCase";
 import {CreateCaseSummary} from "../../flows/events/createCaseSummary";
 import {GenerateHearingBundle} from "../../flows/events/generateHearingBundle";

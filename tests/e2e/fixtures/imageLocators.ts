@@ -43,11 +43,11 @@ export const imageLocators = {
         detained: {
             representedManual: {
                 locator: '//*[@id="journey_type_rehydrated_lr_manual_detained"]/dt/ccd-markdown/div/markdown/p/img',
-                name: 'Tag-combo-R-LRM-DA',
+                name: 'Tag-Rehydrated-LR-Detained',
             },
             representedManualS94b: {
                 locator: '//*[@id="journey_type_rehydrated_lr_manual_detained_s9"]/dt/ccd-markdown/div/markdown/p/img',
-                name: 'Tag-combo-R-LRM-DA-S9',
+                name: 'Tag-Rehydrated-LR-Detained-S9',
             },
             appellantInPersonManual: {
                 locator: '//*[@id="journey_type_rehydrated_aip_manual_detained"]/dt/ccd-markdown/div/markdown/p/img',
@@ -55,11 +55,18 @@ export const imageLocators = {
             },
             appellantInPersonManualS94b: {
                 locator: '//*[@id="journey_type_rehydrated_aip_manual_detained_s9"]/dt/ccd-markdown/div/markdown/p/img',
-                name: 'Tag-Rehydrated-AIPM-Detained-S9.svg',
+                name: 'Tag-Rehydrated-AIPM-Detained-S9',
             },
         },
         nonDetained: {
-
+            representedManual: {
+                locator: '//*[@id="journey_type_rehydrated_legally_represented_manual"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'RehydratedLegallyRepManual',
+            },
+            representedManualS94b: {
+                locator: '//*[@id="journey_type_rehydrated_legally_represented_manual_s9"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'RehydratedLegalRepS9',
+            },
         },
         notifications: {
             locator: '//*[@id="notifications_turned_off_banner"]/dt/ccd-markdown/div/markdown/p/img',
