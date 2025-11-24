@@ -4,7 +4,7 @@ import {
     homeOfficeOfficerCredentials, judgeCredentials, legalOfficerAdminCredentials, legalOfficerCredentials,
     legalRepresentativeCredentials,
     listingOfficerCredentials
-} from '../../detainedConfig';
+} from '../../iacConfig';
 import { IdamPage } from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../../flows/createAppeal';
@@ -37,6 +37,7 @@ let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let caseId: string = '';
+const outOfCountryDecision: string = 'refusePermit';
 
 test.describe.configure({ mode: 'serial'});
 test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@LegalRepCreatesOutOfCountryAppeal' }, () => {
@@ -54,14 +55,22 @@ test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@L
         await idamPage.login(legalRepresentativeCredentials);
         await new CreateCasePage(page).createCase();
         await createAppeal.locationInUK('No');
-        await createAppeal.outOfCountryDecision('refusePermit', inTime);
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
-        await createAppeal.setGroundsOfAppeal(typeOfAppeal);
+        await createAppeal.outOfCountryDecision(outOfCountryDecision, inTime);
+        await createAppeal.setHomeOfficeReferenceNumber(true);
         await createAppeal.setAppellantBasicDetails(false);
         await createAppeal.setNationality(true);
-        await createAppeal.setAppellantContactPreference('Email');
         await createAppeal.setOutOfCountryAddress('Yes');
+        await createAppeal.setAppellantContactPreference('Email');
+        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+        await createAppeal.setGroundsOfAppeal(typeOfAppeal);
+
+        if (outOfCountryDecision === 'refusePermit') {
+            await createAppeal.setEntryClearanceDecisionDate(inTime);
+        } else {
+            await createAppeal.setHomeOfficeDecisionDate(inTime);
+        }
+
+        await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('Yes');
         await createAppeal.hasDeportationOrder('Yes');
         await createAppeal.hasNewMatters('No');

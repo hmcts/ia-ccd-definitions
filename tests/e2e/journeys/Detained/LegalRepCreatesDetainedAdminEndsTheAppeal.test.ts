@@ -2,7 +2,7 @@ import {
     envUrl,
     legalRepresentativeCredentials,
     legalOfficerAdminCredentials,
-} from '../../detainedConfig';
+} from '../../iacConfig';
 import { IdamPage } from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../../flows/createAppeal';
@@ -18,7 +18,7 @@ import { test } from '../../fixtures/myFixture';
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
-let detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
+const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;

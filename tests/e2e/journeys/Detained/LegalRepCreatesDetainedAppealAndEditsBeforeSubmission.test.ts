@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import {
     envUrl,
     legalRepresentativeCredentials,
-} from '../../detainedConfig';
+} from '../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../../flows/createAppeal';

@@ -6,7 +6,7 @@ import {
     homeOfficeOfficerCredentials,
     legalOfficerAdminCredentials,
     listingOfficerCredentials, judgeCredentials
-} from '../../detainedConfig';
+} from '../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../../flows/createAppeal';
@@ -170,9 +170,9 @@ test.describe('Create Detained ' + typeOfAppeal + ' Appeal as Legal Representati
         await new S94b(page).setStatus('Yes');
         await validationHelper.validateLabelDisplayed(imageLocators.detained.representedS94b.locator, imageLocators.detained.representedS94b.name);
 
-        // detentionLocation = detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison');
-        // await updateDetentionLocation.changeLocation(detentionLocation, detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
-        // await updateDetentionLocation.validateDataUpdated(detentionLocation);
+        detentionLocation = detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison');
+        await updateDetentionLocation.changeLocation(detentionLocation, detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
+        await updateDetentionLocation.validateDataUpdated(detentionLocation);
 
          if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
              await new RequestHomeOfficeData(page).matchAppellantDetails();

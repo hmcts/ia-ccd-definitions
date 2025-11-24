@@ -2,7 +2,7 @@ import { Page, expect } from '@playwright/test';
 import { PageHelper } from '../../helpers/PageHelper';
 import { ButtonHelper } from '../../helpers/ButtonHelper';
 import { CreateAppeal } from '../createAppeal';
-import { appellant } from '../../detainedConfig';
+import { appellant } from '../../iacConfig';
 
 export class MarkAppealAsDetained {
     private createAppeal: CreateAppeal;

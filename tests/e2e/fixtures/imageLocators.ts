@@ -40,17 +40,26 @@ export const imageLocators = {
         }
     },
     rehydrated: {
-        representedManual: {
-            locator: '//*[@id="journey_type_rehydrated_lr_manual_detained"]/dt/ccd-markdown/div/markdown/p/img',
-            name: 'Tag-combo-R-LRM-DA',
+        detained: {
+            representedManual: {
+                locator: '//*[@id="journey_type_rehydrated_lr_manual_detained"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'Tag-combo-R-LRM-DA',
+            },
+            representedManualS94b: {
+                locator: '//*[@id="journey_type_rehydrated_lr_manual_detained_s9"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'Tag-combo-R-LRM-DA-S9',
+            },
+            appellantInPersonManual: {
+                locator: '//*[@id="journey_type_rehydrated_aip_manual_detained"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'Tag-combo-R-AIPM-DA',
+            },
+            appellantInPersonManualS94b: {
+                locator: '//*[@id="journey_type_rehydrated_aip_manual_detained_s9"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'Tag-combo-R-AIPM-DA-S9',
+            },
         },
-        representedManualS94b: {
-            locator: '//*[@id="journey_type_rehydrated_lr_manual_detained_s9"]/dt/ccd-markdown/div/markdown/p/img',
-            name: 'Tag-combo-R-LRM-DA-S9',
-        },
-        appellantInPersonManual: {
-            locator: '//*[@id="journey_type_rehydrated_aip_manual_detained"]/dt/ccd-markdown/div/markdown/p/img',
-            name: 'Tag-combo-R-AIPM-DA',
+        nonDetained: {
+
         },
         notifications: {
             locator: '//*[@id="notifications_turned_off_banner"]/dt/ccd-markdown/div/markdown/p/img',

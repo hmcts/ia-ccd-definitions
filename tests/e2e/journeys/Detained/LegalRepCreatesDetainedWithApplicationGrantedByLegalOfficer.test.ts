@@ -3,7 +3,7 @@ import {
     envUrl,
     legalRepresentativeCredentials,
     listingOfficerCredentials
-} from '../../detainedConfig';
+} from '../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../../flows/createAppeal';
@@ -22,7 +22,7 @@ import {DecideAnApplication} from "../../flows/events/decideAnApplication";
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
-let detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
+const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 let caseId: string = '';
 
 //refusalOfEu - Refusal under EEA regulations (EA) (payment required)

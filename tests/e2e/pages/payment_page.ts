@@ -1,4 +1,4 @@
-import {envUrl, runningEnv} from '../detainedConfig'
+import {envUrl, runningEnv} from '../iacConfig'
 
 const { I } = inject();
 

@@ -1,5 +1,5 @@
 import { Page } from "@playwright/test";
-import {runningEnv} from "../../detainedConfig";
+import {runningEnv} from "../../iacConfig";
 
 export class CreateCasePage {
   private jurisdictionLocator: string;

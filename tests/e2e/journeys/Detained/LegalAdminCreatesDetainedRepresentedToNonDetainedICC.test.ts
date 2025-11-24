@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { envUrl, legalOfficerAdminCredentials } from '../../detainedConfig';
+import { envUrl, legalOfficerAdminCredentials } from '../../iacConfig';
 import { IdamPage } from '../../page-objects/pages/idam.po';
 import { LinkHelper } from '../../helpers/LinkHelper';
 import { PageHelper } from '../../helpers/PageHelper';
@@ -12,7 +12,6 @@ import { RemoveDetainedStatus } from '../../flows/events/removeDetainedStatus';
 import { imageLocators } from '../../fixtures/imageLocators';
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
-const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
@@ -69,7 +68,7 @@ test.describe('Legal Admin creates Represented Detained ' + typeOfAppeal + ' App
             await createAppeal.setAppellantAddress('detained', 'Yes');
         }
 
-        await createAppeal.appellantDetails();
+        await createAppeal.setAppellantContactDetails();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);
         await createAppeal.setHomeOfficeDecisionDate(inTime);
         await createAppeal.uploadNoticeOfDecision();

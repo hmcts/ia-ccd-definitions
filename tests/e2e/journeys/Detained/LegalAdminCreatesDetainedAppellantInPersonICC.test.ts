@@ -4,7 +4,7 @@ import {
     homeOfficeOfficerCredentials, judgeCredentials,
     legalOfficerAdminCredentials, legalOfficerCredentials,
     listingOfficerCredentials
-} from '../../detainedConfig';
+} from '../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import { LinkHelper } from '../../helpers/LinkHelper';
 import { PageHelper } from '../../helpers/PageHelper';
@@ -94,7 +94,7 @@ test.describe('Legal Admin creates Detained Appellant in Person, ' + typeOfAppea
             await createAppeal.setAppellantAddress('detained', 'Yes');
         }
 
-        await createAppeal.appellantDetails();
+        await createAppeal.setAppellantContactDetails();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);
         await createAppeal.setHomeOfficeDecisionDate(inTime);
         await createAppeal.uploadNoticeOfDecision();

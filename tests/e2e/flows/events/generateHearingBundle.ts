@@ -1,7 +1,6 @@
 import { Page } from "@playwright/test";
 import { PageHelper } from '../../helpers/PageHelper';
 import { ButtonHelper } from "../../helpers/ButtonHelper";
-import { runningEnv } from "../../detainedConfig";
 
 export class GenerateHearingBundle {
     private buttonHelper: ButtonHelper;
@@ -13,11 +12,7 @@ export class GenerateHearingBundle {
 
     async submit(){
         await new PageHelper(this.page).selectNextStep('Generate hearing bundle');
-        //if (['preview', 'demo'].includes(runningEnv)) {
-            await this.buttonHelper.submitButton.click();
-       // } else {
-       //     await this.generateButton.click();
-        //}
+        await this.buttonHelper.submitButton.click();
         await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
     }
 }

@@ -4,8 +4,8 @@ import {
     legalRepresentativeCredentials,
     homeOfficeOfficerCredentials,
     listingOfficerCredentials,
-    judgeCredentials, legalOfficerAdminCredentials, legalOfficerCredentials, runningEnv
-} from '../../detainedConfig';
+    judgeCredentials, legalOfficerAdminCredentials, legalOfficerCredentials,
+} from '../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import { LinkHelper } from '../../helpers/LinkHelper';
 import { PageHelper } from '../../helpers/PageHelper';
@@ -57,19 +57,16 @@ test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@Legal
         await idamPage.login(legalRepresentativeCredentials);
         await new CreateCasePage(page).createCase();
         await createAppeal.locationInUK('Yes');
-
-        if (['preview', 'demo'].includes(runningEnv)) {
-            await createAppeal.inDetention('No');
-        }
-
-        await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
-        await createAppeal.setGroundsOfAppeal(typeOfAppeal);
+        await createAppeal.inDetention('No');
+        await createAppeal.setHomeOfficeReferenceNumber();
         await createAppeal.setAppellantBasicDetails(false);
         await createAppeal.setNationality(true);
-        await createAppeal.setAppellantContactPreference('Email');
         await createAppeal.setAppellantAddress('nonDetained', 'Yes');
+        await createAppeal.setAppellantContactPreference('Email');
+        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+        await createAppeal.setGroundsOfAppeal(typeOfAppeal);
+        await createAppeal.setHomeOfficeDecisionDate(inTime);
+        await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');
         await createAppeal.hasNewMatters('Yes');

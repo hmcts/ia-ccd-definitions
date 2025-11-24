@@ -1,6 +1,6 @@
 import moment from "moment/moment";
-import {expect, Page} from "@playwright/test";
-import { appellant, sponsor, legalRepresentative, runningEnv, outOfCountryAddress } from '../detainedConfig';
+import { Page } from "@playwright/test";
+import { appellant, sponsor, legalRepresentative, runningEnv, outOfCountryAddress } from '../iacConfig';
 import { detentionFacility } from '../fixtures/detentionFacilities';
 import { ButtonHelper } from '../helpers/ButtonHelper';
 
@@ -117,7 +117,7 @@ export class CreateAppeal {
                 await this.page.waitForTimeout(2000);
                 currentUrl = page.url();
                 if (currentUrl.includes('startAppealentryClearanceDecision')) {
-                    await this.setEntryClearanceDecision(inTime);
+                    await this.setEntryClearanceDecisionDate(inTime);
                 }
                 break;
         }
@@ -129,11 +129,10 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
-   async setEntryClearanceDecision(inTime: boolean = true) {
+   async setEntryClearanceDecisionDate(inTime: boolean = true) {
        const inOutOfTimeDate = inTime
            ? moment().subtract(5, 'days')
            : moment().subtract(2, 'months');
-       await this.page.locator('#gwfReferenceNumber').fill('123456789');
        await this.page.locator('#dateEntryClearanceDecision-day').fill(inOutOfTimeDate.date().toString());
        await this.page.locator('#dateEntryClearanceDecision-month').fill((inOutOfTimeDate.month() + 1).toString());
        await this.page.locator('#dateEntryClearanceDecision-year').fill(inOutOfTimeDate.year().toString());
@@ -198,18 +197,14 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
-   // Keeping in case HO screens do change in the near future
-   async setHomeOfficeDetailsHO() {
-        await this.page.fill('#homeOfficeReferenceNumber', '12345');
-        // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
-        // if we just try and click continue it stays on the tribunal page and the test fails - only happens in ICC
-        await this.page.keyboard.press('Tab');
-        await this.page.waitForSelector('.error-message', { state: 'hidden' });
-        await this.buttonHelper.continueButton.click();
-   }
+    async setHomeOfficeReferenceNumber(outOfCountry: boolean = false) {
+        if (outOfCountry) {
+            await this.page.fill('#gwfReferenceNumber','12345');
+        } else {
+            await this.page.fill('#homeOfficeReferenceNumber', '12345');
+        }
 
-    async setHomeOfficeReferenceNumber() {
-        await this.page.fill('#homeOfficeReferenceNumber', '12345');
+
         // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
         // if we just try and click continue it stays on the tribunal page and the test fails - only happens in ICC
         await this.page.keyboard.press('Tab');
@@ -244,8 +239,13 @@ export class CreateAppeal {
     }
 
    async uploadNoticeOfDecision(documentType: string = 'TheNoticeOfDecisionDocs') {
-        await this.page.click('button:text("Add new")');
-        // getting rate cap error message - waiting for 2 secs to stop this happening
+        if (documentType === 'TheNoticeOfDecisionDocs') {
+            await this.page.locator('#uploadTheNoticeOfDecisionDocs').getByText('Add new').click();
+        } else {
+            await this.page.locator('//*[@id="uploadRehydratedNod"]/div/button').click();
+        }
+
+       // getting rate cap error message - waiting for 2 secs to stop this happening
         await this.page.waitForTimeout(2000); // waits for 2 seconds
         await this.page.locator(`#upload${documentType}_0_document`).setInputFiles('./tests/documents/TEST_DOCUMENT_1.pdf');
         await this.page.fill(`#upload${documentType}_0_description`, 'Test Notice of Decision document.');
@@ -281,7 +281,7 @@ export class CreateAppeal {
 
 
    // appellantDetails() - Legal Admin journey only
-   async appellantDetails() {
+   async setAppellantContactDetails() {
        await this.page.fill('#internalAppellantMobileNumber', appellant.mobile);
        await this.page.fill('#internalAppellantEmail', appellant.email);
        await this.buttonHelper.continueButton.click();
@@ -367,7 +367,7 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
-   async hasSponsor(isSponsored: string = 'No', sponsorComms: string = 'email', sponsorAuthorised: string = 'Yes'){
+    async hasSponsor(isSponsored: string = 'No', sponsorComms: string = 'email', sponsorAuthorised: string = 'Yes'){
        await this.page.click(`#hasSponsor_${isSponsored}`);
        await this.buttonHelper.continueButton.click();
        

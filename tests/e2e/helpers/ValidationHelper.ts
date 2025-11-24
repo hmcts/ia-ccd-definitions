@@ -1,7 +1,7 @@
 import { Page, expect } from "@playwright/test";
 import { TabsHelper } from "./TabsHelper";
 import {detentionFacility} from "../fixtures/detentionFacilities";
-import {appellant} from '../detainedConfig';
+import {appellant} from '../iacConfig';
 import moment from "moment";
 
 const inDetentionLocator:string = '#case-viewer-field-read--appellantInDetention';
