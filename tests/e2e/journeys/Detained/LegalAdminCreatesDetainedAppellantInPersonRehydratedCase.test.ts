@@ -166,7 +166,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await linkHelper.signOut.click();
     });
 
-    test('Legal Officer' + (!inTime ? ' records Out of Time decision, ': ' ') + 'creates Respondent Direction', async ({ page }) => {
+    test('Legal Officer' + (!inTime ? ' records Out of Time decision, ': ' ') + 'creates Respondent Direction and adds then removes s94b', async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
 
@@ -178,7 +178,12 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
 
         await new S94b(page).setStatus('Yes');
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.representedManualS94b.locator, imageLocators.rehydrated.detained.representedManualS94b.name);
+        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.appellantInPersonManualS94b.locator, imageLocators.rehydrated.detained.representedManualS94b.name);
+
+        await new S94b(page).setStatus('No');
+        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.appellantInPersonManual.locator, imageLocators.rehydrated.detained.representedManualS94b.name);
+
+
 
         if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
             await new RequestHomeOfficeData(page).matchAppellantDetails();
