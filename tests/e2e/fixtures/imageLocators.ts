@@ -67,6 +67,14 @@ export const imageLocators = {
                 locator: '//*[@id="journey_type_rehydrated_legally_represented_manual_s9"]/dt/ccd-markdown/div/markdown/p/img',
                 name: 'RehydratedLegalRepS9',
             },
+            appellantInPersonManual: {
+                locator: '//*[@id="journey_type_rehydrated_manual"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'RehydratedAipManual',
+            },
+            appellantInPersonManualS94b: {
+                locator: '//*[@id="journey_type_rehydrated_in_person_manual_s9"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'RehydratedAipManualS9',
+            }
         },
         notifications: {
             locator: '//*[@id="notifications_turned_off_banner"]/dt/ccd-markdown/div/markdown/p/img',

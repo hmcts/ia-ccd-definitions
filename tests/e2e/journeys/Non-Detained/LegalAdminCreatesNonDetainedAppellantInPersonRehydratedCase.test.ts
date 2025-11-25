@@ -59,7 +59,7 @@ const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 let caseId: string = '';
-
+const daysToComply: number = 14;
 
 //refusalOfEu - Refusal under EEA regulations (EA) (payment required)
 //refusalOfHumanRights - Refusal human rights (HU) (payment required)
@@ -79,7 +79,7 @@ let createCasePage: CreateCasePage;
 
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal + ' Rehydrated Case ' + (inTime ? 'In Time' : 'Out of Time'), { tag: '@LegalAdminCreatesDetainedAppellantInPersonRehydratedCase' }, () => {
+test.describe('Legal Admin creates Non-Detained Appellant in Person ' + typeOfAppeal + ' Rehydrated Case ' + (inTime ? 'In Time' : 'Out of Time'), { tag: '@LegalAdminCreatesNonDetainedAppellantInPersonRehydratedCase' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -104,31 +104,18 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await createAppeal.setTribunalAppealReceived();
         await createAppeal.appellantInPerson('Yes');
         await createAppeal.locationInUK('Yes');
-        await createAppeal.inDetention('Yes');
-        await createAppeal.setDetentionLocation(detentionLocation);
-
-        if (detentionLocation === 'prison' || detentionLocation === 'other') {
-            await createAppeal.setCustodialSentence('Yes');
-        }
-        else {
-            await createAppeal.setBailApplication('No');
-        }
-
+        await createAppeal.inDetention('No');
         await createAppeal.setHomeOfficeReferenceNumber();
         await createAppeal.setAppellantBasicDetails(true);
         await createAppeal.setNationality(true);
-
-        if (detentionLocation === 'other') {
-            await createAppeal.setAppellantAddress('detained', 'Yes');
-        }
-
+        await createAppeal.setAppellantAddress('rehydrated', 'Yes');
         await createAppeal.setAppellantContactDetails();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);
         await createAppeal.setHomeOfficeDecisionDate(inTime);
         await createAppeal.uploadNoticeOfDecision('RehydratedNod');
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');
-        await createAppeal.hasRemovalDirections('No');
+      //  await createAppeal.hasRemovalDirections('No');
         await createAppeal.hasOtherAppeals('No');
         await createAppeal.isHearingRequired(true);
 
@@ -158,9 +145,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
             }
         }
 
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.appellantInPersonManual.locator, imageLocators.rehydrated.detained.appellantInPersonManual.name);
-        await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
-
+        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManual.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManual.name);
 
         await linkHelper.signOut.click();
     });
@@ -173,14 +158,13 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
             await new RecordOutOfTimeDecision(page).submit('approved');
         }
 
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.appellantInPersonManual.locator, imageLocators.rehydrated.detained.appellantInPersonManual.name);
-        await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
+        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManual.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManual.name);
 
         await new S94b(page).setStatus('Yes');
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.appellantInPersonManualS94b.locator, imageLocators.rehydrated.detained.appellantInPersonManualS94b.name);
+        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManualS94b.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManualS94b.name);
 
         await new S94b(page).setStatus('No');
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.appellantInPersonManual.locator, imageLocators.rehydrated.detained.appellantInPersonManual.name);
+        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManual.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManual.name);
 
 
 
@@ -192,7 +176,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
             await new GenerateListCMR(page).createTask();
         }
 
-        await new RespondentEvidenceDirection(page).submit();
+        await new RespondentEvidenceDirection(page).submit(daysToComply);
 
         await linkHelper.signOut.click();
 
@@ -222,7 +206,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
     test('Legal Officer creates Respondent Review Direction',   async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
-        await new RespondentReviewDirection(page).submit();
+        await new RespondentReviewDirection(page).submit(daysToComply);
         await linkHelper.signOut.click();
     });
 
