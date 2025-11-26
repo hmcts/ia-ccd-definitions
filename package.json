@@ -102,7 +102,7 @@
 
     "test:LegalAdminCreatesDetainedAppellantInPersonPrisonProtectionRehydratedCase": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection IN_TIME=true npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonRehydratedCase",
 
-    "test:LegalAdminCreatesNonDetainedRepresentedRehydratedCase": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection IN_TIME=true npx playwright test --headed --project chromium --grep @LegalAdminCreatesNonDetainedRepresentedRehydratedCase",
+    "test:LegalAdminCreatesNonDetainedRepresentedDeprivationRehydratedCase": "yarn playwright install && APPEAL_TYPE=protection IN_TIME=true npx playwright test --headed --project chromium --grep @LegalAdminCreatesNonDetainedRepresentedRehydratedCase",
 
     "test:LegalAdminCreatesNonDetainedAppellantInPersonRehydratedCase": "yarn playwright install && APPEAL_TYPE=protection IN_TIME=true npx playwright test --headed --project chromium --grep @LegalAdminCreatesNonDetainedAppellantInPersonRehydratedCase",
 
