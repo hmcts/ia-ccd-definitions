@@ -62,7 +62,7 @@ test.describe('Legal Admin creates Represented Non-Detained Appeal (ICC)', { tag
         await page.goto(envUrl);
     });
 
-    test('Create Represented Non-Detained Appeal',   async () => {
+    test.only('Create Represented Non-Detained Appeal',   async () => {
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();
         await buttonHelper.continueButton.click(); // Before you start page

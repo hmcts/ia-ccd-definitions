@@ -38,6 +38,7 @@ const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
+const daysToComply: number = 14;
 let caseId: string = '';
 
 
@@ -139,8 +140,6 @@ test.describe('Legal Admin creates Non-Detained Represented ' + typeOfAppeal + '
         }
 
         await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name);
-        await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
-
 
         await s94b.setStatus('Yes');
         await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManualS94b.locator, imageLocators.rehydrated.nonDetained.representedManualS94b.name);
@@ -157,7 +156,7 @@ test.describe('Legal Admin creates Non-Detained Represented ' + typeOfAppeal + '
             await new GenerateListCMR(page).createTask();
         }
 
-        await new RespondentEvidenceDirection(page).submit();
+        await new RespondentEvidenceDirection(page).submit(daysToComply);
 
         await linkHelper.signOut.click();
 
@@ -187,7 +186,7 @@ test.describe('Legal Admin creates Non-Detained Represented ' + typeOfAppeal + '
     test('Legal Officer creates Respondent Review Direction',   async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
-        await new RespondentReviewDirection(page).submit();
+        await new RespondentReviewDirection(page).submit(daysToComply);
         await linkHelper.signOut.click();
     });
 

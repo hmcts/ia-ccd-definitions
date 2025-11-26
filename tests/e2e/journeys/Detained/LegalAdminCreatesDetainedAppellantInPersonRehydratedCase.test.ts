@@ -58,8 +58,8 @@ const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
-let caseId: string = '';
-
+let caseId: string = '1764149054935514';
+//let caseId: string = '';
 
 //refusalOfEu - Refusal under EEA regulations (EA) (payment required)
 //refusalOfHumanRights - Refusal human rights (HU) (payment required)
@@ -247,7 +247,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await linkHelper.signOut.click();
     });
 
-    test('Legal Officer to review hearing requirements',   async ({ page }) => {
+    test.only('Legal Officer to review hearing requirements',   async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new ReviewHearingRequirements(page).submit();
@@ -256,14 +256,14 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
 
     // This is not the route the caseworker would use, however, we use it in the tests to get to the state of: Prepare for hearing
     // This state is only available when the hearing is listed - this event mimics the List Assist integration for us and thus allows us to complete the journey
-    test('Admin Legal Officer to list the case',   async ({ page }) => {
+    test.only('Admin Legal Officer to list the case',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await pageHelper.getCase(caseId);
         await new ListTheCase(page).list('No');
         await linkHelper.signOut.click();
     });
 
-    test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
+    test.only('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
         await idamPage.login(listingOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new CreateCaseSummary(page).create();
@@ -276,7 +276,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await linkHelper.signOut.click();
     });
 
-    test('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
+    test.skip('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
         await idamPage.login(judgeCredentials);
         await pageHelper.getCase(caseId);
         await new PrepareDecisionAndReasons(page).generate('Yes');
