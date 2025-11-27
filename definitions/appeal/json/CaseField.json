@@ -6157,8 +6157,8 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "journey_type_rehydrated_legally_represented_manual",
-    "Label": "![The appellant in this manual rehydrated case has legal representation](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/RehydratedLegallyRepManual.svg)",
+    "ID": "journey_type_rehydrated_lr_manual",
+    "Label": "![The appellant in this manual rehydrated case has legal representation](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/Tag-Rehydrated-LR-manual.svg)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -6166,8 +6166,8 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "journey_type_rehydrated_in_person_manual_s9",
-    "Label": "![The appellant in this manual rehydrated case has no legal representation-s9](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/RehydratedAipManualS9.svg)",
+    "ID": "journey_type_rehydrated_aip_manual_s9",
+    "Label": "![The appellant in this manual rehydrated case has no legal representation-s9](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/Tag-Rehydrated-AIP-manual-S9.svg)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -6175,8 +6175,8 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "journey_type_rehydrated_manual",
-    "Label": "![The appellant in this manual rehydrated case has no legal representation](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/RehydratedAipManual.svg)",
+    "ID": "journey_type_rehydrated_aip_manual",
+    "Label": "![The appellant in this manual rehydrated case has no legal representation](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/Tag-Rehydrated-AIP-manual.svg)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -6184,10 +6184,46 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "journey_type_rehydrated_legally_represented_manual_s9",
-    "Label": "![The appellant in this manual rehydrated case has legal representation-S94](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/RehydratedLegalRepS9.svg)",
+    "ID": "journey_type_rehydrated_lr_manual_s9",
+    "Label": "![The appellant in this manual rehydrated case has legal representation-S94](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/Tag-Rehydrated-LR-manual-S9.svg)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "journey_type_rehydrated_aip_manual_detained",
+    "Label": "![The appellant in this rehydrated detained case is representing themselves](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/Tag-Rehydrated-AIP-manual-Detained.svg)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "journey_type_rehydrated_aip_manual_detained_s9",
+    "Label": "![The appellant in this rehydrated detained s94b case is representing themselves](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/Tag-Rehydrated-AIP-manual-Detained-S9.svg)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "journey_type_rehydrated_lr_manual_detained",
+    "Label": "![The appellant in this rehydrated detained case is legally represented](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/Tag-Rehydrated-LR-manual-Detained.svg)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "journey_type_rehydrated_lr_manual_detained_s9",
+    "Label": "![The appellant in this rehydrated detained s94b case is legally represented](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/Tag-Rehydrated-LR-manual-Detained-S9.svg)",
+    "FieldType": "Label",
+    "SecurityClassification": "PUBLIC",
     "Searchable": "N"
   },
   {
@@ -7772,11 +7808,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_legal_rep_manual_detained_s9", "Label": "![The appellant in this detained s94b case is legally represented](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_manual_detained_s9.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_legal_rep_detained_s9", "Label": "![The appellant in this detained s94b case is legally represented](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRep_detained_s9.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_rehydrated_aip_manual_detained", "Label": "![The appellant in this rehydrated detained case is representing themselves](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/Tag-combo-R-AIPM-DA.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_rehydrated_aip_manual_detained_s9", "Label": "![The appellant in this rehydrated detained case is representing themselves](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/Tag-combo-R-AIPM-DA-S9.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_rehydrated_lr_manual_detained", "Label": "![The appellant in this rehydrated detained s94b case is legally represented](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/Tag-combo-R-LRM-DA.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "journey_type_rehydrated_lr_manual_detained_s9", "Label": "![The appellant in this rehydrated detained s94b case is legally represented](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/Tag-combo-R-LRM-DA-S9.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "customTribunalDocuments", "Label": "Tribunal documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadTheAppealFormTitle", "Label": "Upload a copy of the appeal form.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removalOrderTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -8324,7 +8355,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "detentionRemovalReason", "Label": "Reasons for removal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInPersonManualTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInPersonManualInstructions", "Label": "Once you've submitted the request</br><ul><li>This appeal will have to be continued by internal users</li><li>To update the detention location, select the \"Update detention location\" event</li></ul>", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"}, 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantInPersonManualInstructions", "Label": "Once you've submitted the request</br><ul><li>This appeal will have to be continued by internal users</li><li>To update the detention location, select the \"Update detention location\" event</li></ul>", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "ID": "sourceOfAppeal", "Label": "Source of appeal", "FieldType": "FixedRadioList", "FieldTypeParameter": "sourceOfAppeal", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {
@@ -8335,5 +8366,11 @@
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
-  }
+  },
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "ID": "moveToDecidedDateLabel1", "Label": "This event will move the appeal to the decided state\n\r\n\rBefore continuing, please ensure that case notes have been updated and any relevant documents relating to the decision have been updated", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "ID": "moveToDecidedDecisionLabel1", "Label": "### What is your decision?\n\r\n\rIf the decicion is dismissed on all grounds, select 'Dismissed on all grounds'. If the appeal is allowed on any grounds, you must select 'Allowed'", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasBeenDecided", "Label": "Internal flag managed by API to allow recording if a case has been entered the decided state", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"}
+
 ]
