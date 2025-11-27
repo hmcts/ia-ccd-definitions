@@ -3046,6 +3046,6 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Force to decided",
     "EventEnablingCondition": "[STATE]!=\"appealStarted\" AND [STATE]!=\"appealStartedByAdmin\" AND isRehydratedAppeal=\"Yes\" AND isAdmin=\"Yes\" AND hasBeenDecided!=\"Yes\"",
-    "Publish": "Y"
+    "Publish": "N"
   }
 ]
