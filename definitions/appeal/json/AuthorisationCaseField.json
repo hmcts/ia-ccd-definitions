@@ -5117,7 +5117,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealDate", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealDate", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealDate", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealDate", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealDate", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealDate", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealDate", "UserRole": "ia_specific_access_judge_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appealDate", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
@@ -15802,5 +15802,11 @@
   {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "sourceOfAppeal", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "R"},
   {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "sourceOfAppeal", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
   {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "sourceOfAppeal", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
-  {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "sourceOfAppeal", "UserRole": "citizen", "CRUD": "R"}
+  {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "sourceOfAppeal", "UserRole": "citizen", "CRUD": "R"},
+
+  {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "moveToDecidedDateLabel1", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "CaseFieldID": "moveToDecidedDecisionLabel1", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hasBeenDecided", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "hasBeenDecided", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"}
 ]
