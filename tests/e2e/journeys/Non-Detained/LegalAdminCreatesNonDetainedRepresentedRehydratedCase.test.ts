@@ -33,6 +33,7 @@ import {GenerateHearingBundle} from "../../flows/events/generateHearingBundle";
 import {StartDecisionAndReasons} from "../../flows/events/startDecisionAndReasons";
 import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndReasons";
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
+import {TurnOnNotifications} from "../../flows/events/turnOnNotifications";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
@@ -155,6 +156,12 @@ test.describe('Legal Admin creates Non-Detained Represented ' + typeOfAppeal + '
         if (cmrHearing) {
             await new GenerateListCMR(page).createTask();
         }
+
+
+        // Turn on Notifications/WA tasks
+        await new TurnOnNotifications(page).submit();
+        await validationHelper.validateNextStepNotAvailable('Turn on notifications/WA tasks');
+        await validationHelper.validateLabelNotDisplayed(imageLocators.rehydrated.notifications.locator);
 
         await new RespondentEvidenceDirection(page).submit(daysToComply);
 

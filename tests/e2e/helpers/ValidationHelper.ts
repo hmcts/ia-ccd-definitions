@@ -24,8 +24,11 @@ export class ValidationHelper {
         expect(src, 'Expected label not found').toContain(label);
     }
 
-    async validateLabelNotDisplayed(locator: string) {
-        await this.tabsHelper.selectTab('Overview');
+    async validateLabelNotDisplayed(locator: string, moveToOverviewTab: boolean = true) {
+        if (moveToOverviewTab) {
+            await this.tabsHelper.selectTab('Overview');
+        }
+
         await expect(this.page.locator(locator), 'The image is being displayed when it should not.').not.toBeVisible();
     }
 
@@ -239,4 +242,8 @@ export class ValidationHelper {
         expect(complyDate, `Request respondent evidence comply date should be ${daysToComply} days from today: ${todayPlusDays}.`).toEqual(todayPlusDays)
     }
 
+    async validateNextStepNotAvailable(nextStep: string) {
+        const options: string[] = await this.page.locator('#next-step > option').allTextContents();
+        expect(options, `The next step event: ${nextStep} should not be available to the user.`).not.toContain(nextStep);
+    }
 }
