@@ -1311,5 +1311,8 @@
   {"LiveFrom": "01/01/2018", "ID": "pendingBailApplication", "ListElementCode": "Yes", "ListElement": "Yes", "DisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "ID": "pendingBailApplication", "ListElementCode": "YesWithoutBailApplicationNumber", "ListElement": "Yes, but the bail application number was not provided", "DisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "ID": "pendingBailApplication", "ListElementCode": "No", "ListElement": "No", "DisplayOrder": 3},
-  {"LiveFrom": "01/01/2018", "ID": "pendingBailApplication", "ListElementCode": "NotSure", "ListElement": "I'm not sure", "DisplayOrder": 4}
+  {"LiveFrom": "01/01/2018", "ID": "pendingBailApplication", "ListElementCode": "NotSure", "ListElement": "I'm not sure", "DisplayOrder": 4},
+
+  {"LiveFrom": "28/10/2025", "ID": "sourceOfAppeal", "ListElementCode": "paperForm", "ListElement": "Paper form", "DisplayOrder": 1},
+  {"LiveFrom": "28/10/2025", "ID": "sourceOfAppeal", "ListElementCode": "rehydratedAppeal", "ListElement": "Rehydrated appeal", "DisplayOrder": 2}
 ]
