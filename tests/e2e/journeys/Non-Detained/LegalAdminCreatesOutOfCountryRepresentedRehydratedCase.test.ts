@@ -28,6 +28,7 @@ import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAnd
 import {ListTheCase} from "../../flows/events/listTheCase";
 import {ValidationHelper} from "../../helpers/ValidationHelper";
 import {imageLocators} from "../../fixtures/imageLocators";
+import {S94b} from "../../flows/events/setS94bStatus";
 
 const inTime = true;
 const typeOfAppeal: string = 'deprivation'; // Deprivation of citizenship (no payment required)
@@ -39,6 +40,7 @@ let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let buttonHelper: ButtonHelper;
 let validationHelper: ValidationHelper;
+let s94b: S94b;
 let caseId: string = '';
 
 test.describe.configure({ mode: 'serial'});
@@ -50,6 +52,7 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
         pageHelper = new PageHelper(page);
         buttonHelper = new ButtonHelper(page);
         validationHelper = new ValidationHelper(page);
+        s94b = new S94b(page);
         await page.goto(envUrl);
     });
 
@@ -100,6 +103,12 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
         await pageHelper.getCase(caseId);
 
         await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name);
+
+        await s94b.setStatus('Yes');
+        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManualS94b.locator, imageLocators.rehydrated.nonDetained.representedManualS94b.name);
+
+        // await s94b.setStatus('No');
+        // await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name);
 
         await new RespondentEvidenceDirection(page).submit(daysToComply);
 

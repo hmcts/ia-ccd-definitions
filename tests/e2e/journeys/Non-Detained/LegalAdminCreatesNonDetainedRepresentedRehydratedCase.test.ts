@@ -148,7 +148,6 @@ test.describe('Legal Admin creates Non-Detained Represented ' + typeOfAppeal + '
         await s94b.setStatus('No');
         await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name);
 
-
         if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
             await new RequestHomeOfficeData(page).matchAppellantDetails();
         }
