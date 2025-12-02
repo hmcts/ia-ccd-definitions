@@ -56,7 +56,7 @@ test.describe('Legal Admin creates Non-Detained Appellant in Person Appeal', { t
         await page.goto(envUrl);
     });
 
-    test('Create Non-Detained Appeal as Appellant in Person (ICC)', async ({ page }) => {
+    test.only('Create Non-Detained Appeal as Appellant in Person (ICC)', async ({ page }) => {
         const createAppeal = new CreateAppeal(page);
 
         await idamPage.login(legalOfficerAdminCredentials);
@@ -66,7 +66,7 @@ test.describe('Legal Admin creates Non-Detained Appellant in Person Appeal', { t
         await createAppeal.appellantInPerson('Yes');
         await createAppeal.locationInUK('Yes');
         await createAppeal.inDetention('No');
-        await createAppeal.setHomeOfficeDetails('1234-5678-9012-3456'); //false if out of time
+        await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
         await createAppeal.setAppellantBasicDetails(true);
         await createAppeal.setNationality(true);
         await createAppeal.setAppellantAddress('nonDetained', 'Yes');
