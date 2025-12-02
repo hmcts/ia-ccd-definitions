@@ -63,6 +63,20 @@ export class CreateAppeal {
       await this.buttonHelper.continueButton.click();
    }
 
+   async entryClearenceDecisionDate(inTime: boolean = true) {
+    const inOutOfTimeDate = inTime
+            ? moment().subtract(5, 'days')
+            : moment().subtract(2, 'months');
+       await this.page.locator('#dateEntryClearanceDecision-day').fill(inOutOfTimeDate.date().toString());
+       await this.page.locator('#dateEntryClearanceDecision-month').fill((inOutOfTimeDate.month() + 1).toString());
+       await this.page.locator('#dateEntryClearanceDecision-year').fill(inOutOfTimeDate.year().toString());
+       // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
+       // if we just try and click continue it stays on the clearance decision page and the test fails - only happens in ICC
+       await this.page.keyboard.press('Tab');
+       await this.page.waitForTimeout(2000);
+       await this.buttonHelper.continueButton.click();
+   }
+
    //Out of country flow
     async outOfCountryDecision(appealDecision: string = 'refusalOfHumanRights', inTime: boolean = true): Promise<void> {
         const { page } = this;
@@ -116,8 +130,8 @@ export class CreateAppeal {
                 await this.buttonHelper.continueButton.click();
                 await this.page.waitForTimeout(2000);
                 currentUrl = page.url();
-                if (currentUrl.includes('startAppealentryClearanceDecision')) {
-                    await this.setEntryClearanceDecision(inTime);
+                if (currentUrl.includes('startAppealoocHomeOfficeReferenceNumber')) {
+                    await this.setEntryClearanceDecision();
                 }
                 await this.page.waitForTimeout(1000);
                 currentUrl = page.url();
@@ -224,14 +238,8 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
-   async setEntryClearanceDecision(inTime: boolean = true) {
-       const inOutOfTimeDate = inTime
-           ? moment().subtract(5, 'days')
-           : moment().subtract(2, 'months');
+   async setEntryClearanceDecision() {
        await this.page.locator('#gwfReferenceNumber').fill('123456789');
-       await this.page.locator('#dateEntryClearanceDecision-day').fill(inOutOfTimeDate.date().toString());
-       await this.page.locator('#dateEntryClearanceDecision-month').fill((inOutOfTimeDate.month() + 1).toString());
-       await this.page.locator('#dateEntryClearanceDecision-year').fill(inOutOfTimeDate.year().toString());
        // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
        // if we just try and click continue it stays on the clearance decision page and the test fails - only happens in ICC
        await this.page.keyboard.press('Tab');
