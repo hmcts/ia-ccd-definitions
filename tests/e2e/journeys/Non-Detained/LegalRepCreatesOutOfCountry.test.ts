@@ -53,6 +53,8 @@ test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@L
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalRepresentativeCredentials);
         await new CreateCasePage(page).createCase();
+        //await createAppeal.inDetention('No');
+
         await createAppeal.locationInUK('No');
         await createAppeal.outOfCountryDecision('refusePermit', inTime);
         await createAppeal.uploadNoticeOfDecision();

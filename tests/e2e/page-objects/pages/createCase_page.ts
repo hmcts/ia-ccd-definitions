@@ -19,12 +19,12 @@ export class CreateCasePage {
     const caseType = this.page.locator('#cc-case-type');
 
     await this.createCaseLink.click();
-
+ await caseType.selectOption('Asylum');
     // On Demo we have to manually select the options as there are a number of them for Jurisdiction
-    if (!['preview'].includes(runningEnv)) {
-      await jurisdiction.selectOption('IA');
-      await caseType.selectOption('Asylum');
-    }
+    // if (!['preview'].includes(runningEnv)) {
+    //   await jurisdiction.selectOption('IA');
+    //   await caseType.selectOption('Asylum');
+    // }
     await this.startButton.click();
   }
 }

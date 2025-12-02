@@ -49,6 +49,8 @@
     "test:LegalRepCreatesOutOfCountryAppeal": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalRepCreatesOutOfCountryAppeal",
     "test:LegalAdminCreatesOutOfCountryRepresentedICC": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalAdminCreatesOutOfCountryRepresentedICC",
     "test:LegalAdminCreatesOutOfCountryAppellantInPersonICC": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalAdminCreatesOutOfCountryAppellantInPersonICC",
+    "test:LegalAdminCreatesOutOfCountryAppellantInPersonICCQA": "npx playwright test --ui --headed --project chromium --grep @LegalAdminCreatesOutOfCountryAppellantInPersonICC",
+    "test:ui": "npx playwright test --ui --project chromium --headed",
     "clean": "rm -rf target/",
     "decrypt": "node bin/decrypt.js",
     "copy-json": "bin/copy-json.sh",

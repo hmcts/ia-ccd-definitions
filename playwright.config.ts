@@ -11,6 +11,8 @@ module.exports = defineConfig({
   retries: parseInt(process.env.RETRIES || '1'), // Set the number of retries for all projects
 
   timeout: 8 * 60 * 1000,
+  // headless: false,
+
   expect: {
     timeout: 60 * 1000,
   },

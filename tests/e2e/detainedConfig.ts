@@ -6,7 +6,7 @@ const monthAgo = moment().subtract(1, 'month');
 
 export const runningEnv =  process.env.ENVIRONMENT;
 
-export const envUrl: string = process.env.ENVIRONMENT === 'preview' ? 'https://xui-ia-case-api-pr-2525.preview.platform.hmcts.net' : 'https://manage-case.demo.platform.hmcts.net';
+export const envUrl: string = process.env.ENVIRONMENT === 'preview' ? 'https://xui-ia-case-api-pr-2893.preview.platform.hmcts.net' : 'https://xui-ia-case-api-pr-2893.preview.platform.hmcts.net';
 
 export const createCase = {
     jurisdictionCode: 'IA',
