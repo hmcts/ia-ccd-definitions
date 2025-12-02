@@ -33,6 +33,8 @@ import {GenerateHearingBundle} from "../../flows/events/generateHearingBundle";
 import {StartDecisionAndReasons} from "../../flows/events/startDecisionAndReasons";
 import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndReasons";
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
+import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
+import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 //import {SubmitYourAppeal} from '../../flows/events/submitYourAppeal';
 //import {RequestHomeOfficeData} from '../../flows/events/requestHomeOfficeData';
 //import {GenerateListCMR} from '../../flows/events/generateListCMRTask';
@@ -58,6 +60,7 @@ const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
+const judgeDecision: string = 'dismissed';
 let caseId: string = '';
 
 //refusalOfEu - Refusal under EEA regulations (EA) (payment required)
@@ -279,7 +282,23 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await idamPage.login(judgeCredentials);
         await pageHelper.getCase(caseId);
         await new PrepareDecisionAndReasons(page).generate('Yes');
-        await new CompleteDecisionAndReasons(page).upload('allowed');
+        await new CompleteDecisionAndReasons(page).upload(judgeDecision);
         await linkHelper.signOut.click();
     });
+
+    test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({ page }) => {
+        await idamPage.login(judgeDecision === 'allowed' ? homeOfficeOfficerCredentials : legalOfficerAdminCredentials);
+        await pageHelper.getCase(caseId);
+        await new ApplyForPermissionToAppeal(page).apply(judgeDecision === 'allowed' ? 'Respondent' :  'Appellant');
+        await linkHelper.signOut.click();
+    });
+
+    test('Judge decides FTPA application', async ({ page }) => {
+        await idamPage.login(judgeCredentials);
+        await pageHelper.getCase(caseId);
+        await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
+        await linkHelper.signOut.click();
+    });
+
+
 });
