@@ -1,5 +1,4 @@
 import { Page } from "@playwright/test";
-import {runningEnv} from "../../detainedConfig";
 
 export class CreateCasePage {
   private jurisdictionLocator: string;
@@ -15,7 +14,6 @@ export class CreateCasePage {
 
 
   async createCase() {
-    const jurisdiction = this.page.locator('#cc-jurisdiction');
     const caseType = this.page.locator('#cc-case-type');
 
     await this.createCaseLink.click();
