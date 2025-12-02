@@ -43,13 +43,14 @@ test.describe('Legal Representative creates Non-Detained Appeal and Legal Office
         await createAppeal.locationInUK('Yes');
         await createAppeal.inDetention('No');
         await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
-        await createAppeal.setGroundsOfAppeal(typeOfAppeal);
         await createAppeal.setAppellantBasicDetails(false);
         await createAppeal.setNationality(true);
-        await createAppeal.setAppellantContactPreference('Email');
         await createAppeal.setAppellantAddress('nonDetained', 'Yes');
+        await createAppeal.setAppellantContactPreference('Email');
+        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+        await createAppeal.setGroundsOfAppeal(typeOfAppeal);
+        await createAppeal.setEntryClearanceDecisionDateAdmin(inTime);
+        await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');
         await createAppeal.hasNewMatters('Yes');
