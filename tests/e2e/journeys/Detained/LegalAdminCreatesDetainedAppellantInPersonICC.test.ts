@@ -35,26 +35,6 @@ import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndRe
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
 import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
-//import {SubmitYourAppeal} from '../../flows/events/submitYourAppeal';
-//import {RequestHomeOfficeData} from '../../flows/events/requestHomeOfficeData';
-//import {GenerateListCMR} from '../../flows/events/generateListCMRTask';
-//import {RespondentEvidenceDirection} from '../../flows/events/respondentEvidenceDirection';
-//import {HomeOfficeBundle} from '../../flows/events/homeOfficeBundle';
-//import {CaseBuildingDirection} from '../../flows/events/caseBuildingDirection';
-//import {BuildYourCase} from '../../flows/events/buildYourCase';
-//import {RespondentReviewDirection} from '../../flows/events/respondentReviewDirection';
-//import {UploadAppealResponse} from '../../flows/events/uploadAppealResponse';
-//import {ForceCaseHearingReqs} from '../../flows/events/forceCaseHearingReqs';
-//import {SubmitHearingRequirements} from '../../flows/events/submitHearingRequirements';
-//import {ReviewHearingRequirements} from '../../flows/events/reviewHearingRequirements';
-//import {S94b} from '../../flows/events/setS94bStatus';
-//import {imageLocators} from '../../fixtures/imageLocators';
-//import {CreateCaseSummary} from "../../flows/events/createCaseSummary";
-//import {GenerateHearingBundle} from "../../flows/events/generateHearingBundle";
-//import {StartDecisionAndReasons} from "../../flows/events/startDecisionAndReasons";
-//import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndReasons";
-//import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
-//import {ListTheCase} from "../../flows/events/listTheCase";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
