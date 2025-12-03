@@ -71,12 +71,13 @@ test.describe('Legal Admin creates Represented Non-Detained Appeal (ICC)', { tag
         await createAppeal.locationInUK('Yes');
         await createAppeal.inDetention('No');
         await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
         await createAppeal.setAppellantBasicDetails(true);
         await createAppeal.setNationality(true);
         await createAppeal.setAppellantAddress('nonDetained', 'Yes');
         await createAppeal.appellantDetails();
+        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+        await createAppeal.setEntryClearanceDecisionDateAdmin(inTime);
+        await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');
         await createAppeal.hasOtherAppeals('No');

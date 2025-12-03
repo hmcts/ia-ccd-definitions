@@ -1,7 +1,7 @@
 import { Page } from "@playwright/test";
 
 export class PageHelper {
-
+    
     constructor(public page: Page) {}
 
     async grabCaseNumber() {

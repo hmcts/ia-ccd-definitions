@@ -32,6 +32,7 @@ import {ButtonHelper} from "../../helpers/ButtonHelper";
 import {ListTheCase} from "../../flows/events/listTheCase";
 import {imageLocators} from "../../fixtures/imageLocators";
 import {ValidationHelper} from "../../helpers/ValidationHelper";
+import { Add24WeeksStatutoryTimeframe, Add24WeeksStatutoryTimeframeIsDisabled, Remove24WeeksStatutoryTimeframe } from "../../flows/events/addStatutoryTimeframe";
 
 const inTime: boolean = true;
 let idamPage: IdamPage;
@@ -187,6 +188,22 @@ test.describe('Legal Admin creates Non-Detained Appellant in Person Appeal', { t
         await pageHelper.getCase(caseId);
         await new PrepareDecisionAndReasons(page).generate('Yes');
         await new CompleteDecisionAndReasons(page).upload('allowed');
+        await linkHelper.signOut.click();
+    });
+
+    test('Caseworker adds Statutory Timeframe and verifies it is removed from dropdown',   async ({ page }) => {
+        await idamPage.login(legalOfficerCredentials);
+        await pageHelper.getCase(caseId);
+
+        await Add24WeeksStatutoryTimeframe(page, 'TCW will be adding statutory timeframe');
+        await Add24WeeksStatutoryTimeframeIsDisabled(page);    
+        await linkHelper.signOut.click();
+    });
+
+    test('Judge verifies Statutory Timeframe is available in dropdown',   async ({ page }) => {
+        await idamPage.login(judgeCredentials);
+        await pageHelper.getCase(caseId);
+        await Remove24WeeksStatutoryTimeframe(page, 'Judge Will be removing statutory timeframe');        
         await linkHelper.signOut.click();
     });
 

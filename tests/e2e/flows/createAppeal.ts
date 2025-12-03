@@ -246,6 +246,20 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
+   async setEntryClearanceDecisionDate(inTime: boolean = true) {
+        const inOutOfTimeDate = inTime
+           ? moment().subtract(5, 'days')
+           : moment().subtract(2, 'months');
+    await this.page.locator('#dateEntryClearanceDecision-day').fill(inOutOfTimeDate.date().toString());
+    await this.page.locator('#dateEntryClearanceDecision-month').fill((inOutOfTimeDate.month() + 1).toString());
+    await this.page.locator('#dateEntryClearanceDecision-year').fill(inOutOfTimeDate.year().toString());
+       // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
+       // if we just try and click continue it stays on the clearance decision page and the test fails - only happens in ICC
+       await this.page.keyboard.press('Tab');
+       await this.buttonHelper.continueButton.click();
+   }
+
+
    async inDetention(yesNo: string = 'Yes') {
       if (yesNo === 'No') {
           await this.page.check('#appellantInDetention_No');
@@ -305,37 +319,10 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
-//    async setHomeOfficeDetails(inTime: boolean = true, fieldPrefix: string = 'homeOfficeDecisionDate') {
-//        const homeOfficeLetterDate = inTime ? moment().subtract(5, 'days') : moment().subtract(20, 'days');
-       
-//        // Fill reference number if the field exists
-//        const refNumberField = await this.page.locator('#homeOfficeReferenceNumber').count();
-//        if (refNumberField > 0) {
-//            await this.page.fill('#homeOfficeReferenceNumber', '12345');
-//        }
-       
-//        // Check if date fields exist before trying to fill them
-//        try {
-//            const dayField = await this.page.locator(`#${fieldPrefix}-day`).count();
-//            if (dayField > 0) {
-//                await this.page.fill(`#${fieldPrefix}-day`, homeOfficeLetterDate.date().toString());
-//                await this.page.fill(`#${fieldPrefix}-month`, (homeOfficeLetterDate.month() + 1).toString());
-//                await this.page.fill(`#${fieldPrefix}-year`, homeOfficeLetterDate.year().toString());
-//                // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
-//                // if we just try and click continue it stays on the tribunal page and the test fails - only happens in ICC
-//                await this.page.keyboard.press('Tab');
-//                await this.page.waitForSelector('.error-message', { state: 'hidden' });
-//            }
-//        } catch (error) {
-//            // Date fields don't exist on this screen, skip them
-//        }
-       
-//        await this.buttonHelper.continueButton.click();
-//    }
-async setHomeOfficeDetails(
-inTime: boolean, referenceNumber: string = '1234-5678-9012-3456'  ) {
-    await this.page.fill('#homeOfficeReferenceNumber', referenceNumber);
-    await this.buttonHelper.continueButton.click();
+   async setHomeOfficeDetails(
+     inTime: boolean, referenceNumber: string = '1234-5678-9012-3456'  ) {
+     await this.page.fill('#homeOfficeReferenceNumber', referenceNumber);
+     await this.buttonHelper.continueButton.click();
   }
 
    async uploadNoticeOfDecision() {

@@ -61,12 +61,13 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
         await createAppeal.locationInUK('No');
         await createAppeal.setOutOfCountryCircumstance('entryClearanceDecision');
         await createAppeal.setEntryClearanceDecision();
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
         await createAppeal.setAppellantBasicDetails(true);
         await createAppeal.setNationality(true);
         await createAppeal.setAppellantAddressOutsideUK('Yes');
         await createAppeal.appellantDetails();
+        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+        await createAppeal.setEntryClearanceDecisionDate(inTime);
+        await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasOtherAppeals('No');
         await createAppeal.isHearingRequired(true);
