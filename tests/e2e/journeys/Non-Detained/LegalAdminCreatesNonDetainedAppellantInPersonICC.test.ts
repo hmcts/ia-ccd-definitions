@@ -35,12 +35,10 @@ import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndRe
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
 import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
-import {TurnOnNotifications} from "../../flows/events/turnOnNotifications";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
-const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
 const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
 let caseId: string = '';
@@ -94,10 +92,7 @@ test.describe('Legal Admin creates Non-Detained Appellant in Person ' + typeOfAp
         } else {
             await buttonHelper.continueButton.click(); // Before you start screen
         }
-     //   await createAppeal.setSourceOfAppeal('rehydratedAppeal');
-       // await buttonHelper.continueButton.click(); // Before you start screen
-      //  await createAppeal.enterAriaReferenceNumber();
-       // await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
+
         await createAppeal.setTribunalAppealReceived();
         await createAppeal.appellantInPerson('Yes');
         await createAppeal.locationInUK('Yes');

@@ -60,6 +60,8 @@
     "test:LegalAdminCreatesNonDetainedAppellantInPersonProtectionPaper": "yarn playwright install && APPEAL_TYPE=protection IN_TIME=true IS_REHYDRATED=false JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalAdminCreatesNonDetainedAppellantInPersonICC",
 
 
+    "test:LegalAdminCreatesOutOfCountryAppellantInPersonDeprivationRehydratedCase": "yarn playwright install && APPEAL_TYPE=deprivation IS_REHYDRATED=true JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalAdminCreatesOutOfCountryAppellantInPersonRehydratedCase",
+    "test:LegalAdminCreatesOutOfCountryAppellantInPersonDeprivationPaperCase": "yarn playwright install && APPEAL_TYPE=deprivation IS_REHYDRATED=false JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalAdminCreatesOutOfCountryAppellantInPersonRehydratedCase",
 
 
 
@@ -129,7 +131,6 @@
 
 
 
-    "test:LegalAdminCreatesOutOfCountryAppellantInPersonRehydratedCase": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalAdminCreatesOutOfCountryAppellantInPersonRehydratedCase",
     "test:LegalAdminCreatesOutOfCountryRepresentedRehydratedCase": "yarn playwright install && npx playwright test --headed --project chromium --grep @LegalAdminCreatesOutOfCountryRepresentedRehydratedCase",
 
     "clean": "rm -rf target/",

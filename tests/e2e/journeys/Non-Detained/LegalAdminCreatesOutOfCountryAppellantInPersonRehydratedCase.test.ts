@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import {
     envUrl,
     homeOfficeOfficerCredentials, judgeCredentials, legalOfficerAdminCredentials,
-    legalOfficerCredentials, listingOfficerCredentials
+    legalOfficerCredentials, listingOfficerCredentials, runningEnv
 } from '../../iacConfig';
 import { IdamPage } from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
@@ -29,11 +29,24 @@ import {ListTheCase} from "../../flows/events/listTheCase";
 import {ValidationHelper} from "../../helpers/ValidationHelper";
 import {imageLocators} from "../../fixtures/imageLocators";
 import {S94b} from "../../flows/events/setS94bStatus";
+import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
+import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 
 const inTime = true;
-const typeOfAppeal: string = 'deprivation'; // Deprivation of citizenship (no payment required)
+const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
+const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
+const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
+
 const daysToComply: number = 14;
 const outOfCountryCircumstance: string = 'entryClearanceDecision';
+
+//refusalOfEu - Refusal under EEA regulations (EA) (payment required)
+//refusalOfHumanRights - Refusal human rights (HU) (payment required)
+//deprivation -  Deprivation of citizenship (DC) (no payment required)
+//euSettlementScheme - Refusal of application under the EU Settlement Scheme (EU) (payment required)
+//revocationOfProtection - Revocation of a protection status (RP) (no payment required)
+//protection - Refusal of protection claim (PA) (payment required)
+const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
 
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
@@ -60,10 +73,19 @@ test.describe('Legal Admin Officer Creates Out of Country, Appellant in  Person 
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalOfficerAdminCredentials);
         await new CreateCasePage(page).createCase();
-        await createAppeal.setSourceOfAppeal('rehydratedAppeal');
-        await buttonHelper.continueButton.click(); // Before you start page
-        await createAppeal.enterAriaReferenceNumber();
-        await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
+
+        if (['preview'].includes(runningEnv)) {
+            isRehydrated ? await createAppeal.setSourceOfAppeal('rehydratedAppeal') : await createAppeal.setSourceOfAppeal('paperForm');
+            await buttonHelper.continueButton.click(); // Before you start screen
+
+            if (isRehydrated) {
+                await createAppeal.enterAriaReferenceNumber();
+                await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
+            }
+        } else {
+            await buttonHelper.continueButton.click(); // Before you start screen
+        }
+
         await createAppeal.setTribunalAppealReceived();
         await createAppeal.appellantInPerson('Yes');
         await createAppeal.locationInUK('No');
@@ -81,19 +103,25 @@ test.describe('Legal Admin Officer Creates Out of Country, Appellant in  Person 
             await createAppeal.setHomeOfficeDecisionDate(inTime);
         }
 
-        await createAppeal.uploadNoticeOfDecision('RehydratedNod');
+        isRehydrated ? await createAppeal.uploadNoticeOfDecision('RehydratedNod') : await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasOtherAppeals('No');
         await createAppeal.isHearingRequired(true);
         await createAppeal.uploadAppealDocs();
         await createAppeal.checkMyAnswers();
 
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.notifications.locator, imageLocators.rehydrated.notifications.name);
+        if (isRehydrated) {
+            await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.notifications.locator, imageLocators.rehydrated.notifications.name);
+            await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManual.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManual.name);
+        } else {
+            await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.appellantInPersonManual.locator, imageLocators.nonDetained.appellantInPersonManual.name);
+        }
 
         await new SubmitYourAppeal(page).submit(false, inTime);
 
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
+
 
         await linkHelper.signOut.click();
     });
@@ -102,14 +130,16 @@ test.describe('Legal Admin Officer Creates Out of Country, Appellant in  Person 
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
 
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManual.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManual.name);
+        isRehydrated ? await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManual.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManual.name) :
+            await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.appellantInPersonManual.locator, imageLocators.nonDetained.appellantInPersonManual.name);
 
-        await s94b.setStatus('Yes');
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManualS94b.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManualS94b.name);
+        await new S94b(page).setStatus('Yes');
+        isRehydrated ? await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManualS94b.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManualS94b.name) :
+            await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.appellantInPersonManualS94b.locator, imageLocators.nonDetained.appellantInPersonManualS94b.name);
 
-        // await s94b.setStatus('No');
-        // await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManual.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManual.name);
-
+        await new S94b(page).setStatus('No');
+        isRehydrated ? await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManual.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManual.name) :
+            await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.appellantInPersonManual.locator, imageLocators.nonDetained.appellantInPersonManual.name);
 
         await new RespondentEvidenceDirection(page).submit(daysToComply);
 
@@ -203,5 +233,18 @@ test.describe('Legal Admin Officer Creates Out of Country, Appellant in  Person 
         await linkHelper.signOut.click();
     });
 
+    test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({ page }) => {
+        await idamPage.login(judgeDecision === 'allowed' ? homeOfficeOfficerCredentials : legalOfficerAdminCredentials);
+        judgeDecision === 'allowed' ? await page.goto(envUrl + '/cases/case-details/' + caseId) : await pageHelper.getCase(caseId);
+        await new ApplyForPermissionToAppeal(page).apply(judgeDecision === 'allowed' ? 'Respondent' :  'Appellant');
+        await linkHelper.signOut.click();
+    });
+
+    test('Judge decides FTPA application', async ({ page }) => {
+        await idamPage.login(judgeCredentials);
+        await pageHelper.getCase(caseId);
+        await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
+        await linkHelper.signOut.click();
+    });
 
 });
