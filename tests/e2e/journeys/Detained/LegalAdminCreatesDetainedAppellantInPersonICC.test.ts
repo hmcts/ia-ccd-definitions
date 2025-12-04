@@ -35,6 +35,7 @@ import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndRe
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
 import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
+import {TurnOnNotifications} from "../../flows/events/turnOnNotifications";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
@@ -182,10 +183,8 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
             await validationHelper.validateLabelDisplayed(imageLocators.detained.appellantInPersonManual.locator, imageLocators.detained.appellantInPersonManual.name);
 
 
-        if (!isRehydrated) {
-            if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
-                await new RequestHomeOfficeData(page).matchAppellantDetails();
-            }
+        if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
+            await new RequestHomeOfficeData(page).matchAppellantDetails();
         }
 
         if (cmrHearing) {

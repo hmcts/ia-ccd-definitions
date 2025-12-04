@@ -35,6 +35,7 @@ import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndRe
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
 import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
+import {TurnOnNotifications} from "../../flows/events/turnOnNotifications";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
@@ -136,7 +137,6 @@ test.describe('Legal Admin creates Non-Detained Appellant in Person ' + typeOfAp
             await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.appellantInPersonManual.locator, imageLocators.nonDetained.appellantInPersonManual.name);
         }
 
-
         await new SubmitYourAppeal(page).submit(false, inTime);
 
         if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
@@ -169,10 +169,8 @@ test.describe('Legal Admin creates Non-Detained Appellant in Person ' + typeOfAp
         isRehydrated ? await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManual.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManual.name) :
             await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.appellantInPersonManual.locator, imageLocators.nonDetained.appellantInPersonManual.name);
 
-        if (!isRehydrated) {
-            if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
-                await new RequestHomeOfficeData(page).matchAppellantDetails();
-            }
+        if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
+            await new RequestHomeOfficeData(page).matchAppellantDetails();
         }
 
         if (cmrHearing) {
