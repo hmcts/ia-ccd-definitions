@@ -37,7 +37,11 @@ export const imageLocators = {
         appellantInPersonManual: {
             locator: '//*[@id="journey_type_aip_manual"]/dt/ccd-markdown/div/markdown/p/img',
             name: 'appellant_in_person_manual',
-        }
+        },
+        appellantInPersonManualS94b: {
+            locator: '//*[@id="journey_type_aip_manual_s94b"]/dt/ccd-markdown/div/markdown/p/img',
+            name: 'appellant_in_person_manual_s94b',
+        },
     },
     rehydrated: {
         detained: {
