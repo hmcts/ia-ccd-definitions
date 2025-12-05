@@ -1,8 +1,8 @@
 import { test } from '@playwright/test';
 import {
     envUrl,
-    legalRepresentativeCredentials, listingOfficerCredentials
-} from '../../detainedConfig';
+    legalRepresentativeCredentials, listingOfficerCredentials,
+} from '../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import { LinkHelper } from '../../helpers/LinkHelper';
 import { PageHelper } from '../../helpers/PageHelper';
@@ -42,14 +42,14 @@ test.describe('Legal Representative creates Non-Detained Appeal and Legal Office
         await new CreateCasePage(page).createCase();
         await createAppeal.locationInUK('Yes');
         await createAppeal.inDetention('No');
-        await createAppeal.setHomeOfficeDetails(inTime); //false if out of time
+        await createAppeal.setHomeOfficeReferenceNumber();
         await createAppeal.setAppellantBasicDetails(false);
         await createAppeal.setNationality(true);
         await createAppeal.setAppellantAddress('nonDetained', 'Yes');
         await createAppeal.setAppellantContactPreference('Email');
         await createAppeal.setTypeOfAppeal(typeOfAppeal);
         await createAppeal.setGroundsOfAppeal(typeOfAppeal);
-        await createAppeal.setEntryClearanceDecisionDateAdmin(inTime);
+        await createAppeal.setHomeOfficeDecisionDate(inTime);
         await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');
@@ -58,6 +58,7 @@ test.describe('Legal Representative creates Non-Detained Appeal and Legal Office
         await createAppeal.setLegalRepresentativeDetails();
         await createAppeal.isHearingRequired(true);
         await createAppeal.checkMyAnswers(true); //skip for preview as close and continue screen displaying
+
 
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');

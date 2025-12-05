@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { envUrl, legalRepresentativeCredentials } from './detainedConfig';
+import { envUrl, legalRepresentativeCredentials } from './iacConfig';
 import {IdamPage} from './page-objects/pages/idam.po';
 import { CreateCasePage } from './page-objects/pages/createCase_page';
 import { LinkHelper} from "./helpers/LinkHelper";

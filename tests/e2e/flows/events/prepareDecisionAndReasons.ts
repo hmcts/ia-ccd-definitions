@@ -1,7 +1,7 @@
 import { Page } from "@playwright/test";
 import { PageHelper } from '../../helpers/PageHelper';
 import { ButtonHelper } from "../../helpers/ButtonHelper";
-import { legalRepresentative } from "../../detainedConfig";
+import { legalRepresentative } from "../../iacConfig";
 
 export class PrepareDecisionAndReasons {
     private buttonHelper: ButtonHelper;

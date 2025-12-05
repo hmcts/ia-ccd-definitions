@@ -3,7 +3,7 @@ import {
     envUrl,
     homeOfficeOfficerCredentials, judgeCredentials, legalOfficerAdminCredentials,
     legalOfficerCredentials, listingOfficerCredentials
-} from '../../detainedConfig';
+} from '../../iacConfig';
 import { IdamPage } from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../../flows/createAppeal';
@@ -32,6 +32,7 @@ import {imageLocators} from "../../fixtures/imageLocators";
 const inTime = true;
 const typeOfAppeal: string = 'deprivation'; // Deprivation of citizenship (no payment required)
 const daysToComply: number = 14;
+const outOfCountryCircumstance: string = 'entryClearanceDecision';
 
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
@@ -59,14 +60,21 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
         await createAppeal.setTribunalAppealReceived();
         await createAppeal.appellantInPerson('No');
         await createAppeal.locationInUK('No');
-        await createAppeal.setOutOfCountryCircumstance('entryClearanceDecision');
-        await createAppeal.setEntryClearanceDecision();
+        await createAppeal.setOutOfCountryCircumstance(outOfCountryCircumstance);
+        await createAppeal.setHomeOfficeReferenceNumber(true);
         await createAppeal.setAppellantBasicDetails(true);
         await createAppeal.setNationality(true);
         await createAppeal.setAppellantAddressOutsideUK('Yes');
-        await createAppeal.appellantDetails();
+        await createAppeal.setAppellantContactDetails();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);
-        await createAppeal.setEntryClearanceDecisionDate(inTime);
+
+
+        if (outOfCountryCircumstance === 'entryClearanceDecision') {
+            await createAppeal.setEntryClearanceDecisionDate();
+        } else {
+            await createAppeal.setHomeOfficeDecisionDate(inTime);
+        }
+
         await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasOtherAppeals('No');

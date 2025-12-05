@@ -1,7 +1,7 @@
 import { Page, expect } from "@playwright/test";
 import { TabsHelper } from "./TabsHelper";
 import {detentionFacility} from "../fixtures/detentionFacilities";
-import {appellant} from '../detainedConfig';
+import {appellant} from '../iacConfig';
 import moment from "moment";
 
 const inDetentionLocator:string = '#case-viewer-field-read--appellantInDetention';
@@ -14,15 +14,21 @@ export class ValidationHelper {
         this.tabsHelper = new TabsHelper(this.page);
     }
 
-    async validateLabelDisplayed(locator: string, label: string) {
-        await this.tabsHelper.selectTab('Overview');
+    async validateLabelDisplayed(locator: string, label: string, moveToOverviewTab: boolean = true) {
+        if (moveToOverviewTab) {
+            await this.tabsHelper.selectTab('Overview');
+        }
+
         await expect(this.page.locator(locator), 'Label is not being displayed when it should').toBeVisible();
         const src:string = await this.page.locator(locator).getAttribute('src');
         expect(src, 'Expected label not found').toContain(label);
     }
 
-    async validateLabelNotDisplayed(locator: string) {
-        await this.tabsHelper.selectTab('Overview');
+    async validateLabelNotDisplayed(locator: string, moveToOverviewTab: boolean = true) {
+        if (moveToOverviewTab) {
+            await this.tabsHelper.selectTab('Overview');
+        }
+
         await expect(this.page.locator(locator), 'The image is being displayed when it should not.').not.toBeVisible();
     }
 
@@ -236,4 +242,8 @@ export class ValidationHelper {
         expect(complyDate, `Request respondent evidence comply date should be ${daysToComply} days from today: ${todayPlusDays}.`).toEqual(todayPlusDays)
     }
 
+    async validateNextStepNotAvailable(nextStep: string) {
+        const options: string[] = await this.page.locator('#next-step > option').allTextContents();
+        expect(options, `The next step event: ${nextStep} should not be available to the user.`).not.toContain(nextStep);
+    }
 }

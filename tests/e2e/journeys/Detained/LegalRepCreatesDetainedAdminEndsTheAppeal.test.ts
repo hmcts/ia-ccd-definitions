@@ -2,7 +2,7 @@ import {
     envUrl,
     legalRepresentativeCredentials,
     legalOfficerAdminCredentials,
-} from '../../detainedConfig';
+} from '../../iacConfig';
 import { IdamPage } from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../../flows/createAppeal';
@@ -16,9 +16,9 @@ import { imageLocators } from '../../fixtures/imageLocators';
 import { EndTheAppeal } from "../../flows/events/endTheAppeal";
 import { test } from '../../fixtures/myFixture';
 
-const inTime: boolean = true;
-const detentionLocation: string = 'immigrationRemovalCentre';
-const typeOfAppeal:string = 'protection'; // Refusal of protection claim (payment required)
+const inTime: boolean = !['false'].includes(process.env.IN_TIME);
+const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
+const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
@@ -26,8 +26,16 @@ let pageHelper: PageHelper;
 let validationHelper: ValidationHelper;
 let caseId: string;
 
+//refusalOfEu - Refusal under EEA regulations (EA) (payment required)
+//refusalOfHumanRights - Refusal human rights (HU) (payment required)
+//deprivation -  Deprivation of citizenship (DC) (no payment required)
+//euSettlementScheme - Refusal of application under the EU Settlement Scheme (EU) (payment required)
+//revocationOfProtection - Revocation of a protection status (RP) (no payment required)
+//protection - Refusal of protection claim (PA) (payment required)
+const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
+
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Rep creates Detained Appeal ' + (inTime ? 'In Time' : 'Out of Time' + ' Admin then ends the appeal'), { tag: '@LegalRepCreatesRepresentedAdminEndsTheAppeal' }, () => {
+test.describe('Legal Rep creates Detained ' + typeOfAppeal + ' Appeal ' + (inTime ? 'In Time' : 'Out of Time' + ' Admin then ends the appeal'), { tag: '@LegalRepCreatesDetainedAdminEndsTheAppeal' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -54,24 +62,22 @@ test.describe('Legal Rep creates Detained Appeal ' + (inTime ? 'In Time' : 'Out 
             await createAppeal.setBailApplication('Yes');
         }
 
-        await createAppeal.setHomeOfficeDetails(inTime);
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
-
-        if (typeOfAppeal !== 'euSettlementScheme') {
-            await createAppeal.setGroundsOfAppeal(typeOfAppeal);
-        }
-
+        await createAppeal.setHomeOfficeReferenceNumber();
         await createAppeal.setAppellantBasicDetails(false);
-
-
-
         await createAppeal.setNationality(true);
 
         if (detentionLocation === 'other') {
             await createAppeal.setAppellantAddress('detained', 'Yes');
         }
 
+        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+
+        if (typeOfAppeal !== 'euSettlementScheme') {
+            await createAppeal.setGroundsOfAppeal(typeOfAppeal);
+        }
+
+        await createAppeal.setHomeOfficeDecisionDate(inTime);
+        await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('Yes');
         await createAppeal.hasDeportationOrder('Yes');
         await createAppeal.hasRemovalDirections('Yes');
@@ -81,10 +87,10 @@ test.describe('Legal Rep creates Detained Appeal ' + (inTime ? 'In Time' : 'Out 
         await createAppeal.isHearingRequired(true);
 
         if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
-            await createAppeal.hasFeeRemission('No');
+            await createAppeal.hasFeeRemission(feeRemission);
         }
 
-        if (typeOfAppeal === 'protection') {
+        if (typeOfAppeal === 'protection' && feeRemission === 'No') {
             await createAppeal.setPayNowLater('Now');
         }
 
@@ -94,7 +100,7 @@ test.describe('Legal Rep creates Detained Appeal ' + (inTime ? 'In Time' : 'Out 
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
         await new SubmitYourAppeal(page).submit(true, inTime);
 
-        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+        if ((typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') && feeRemission === 'No') {
             // create service request
             await new CreateServiceRequest(page).submit();
 
@@ -103,6 +109,7 @@ test.describe('Legal Rep creates Detained Appeal ' + (inTime ? 'In Time' : 'Out 
         }
 
         await linkHelper.signOut.click();
+
     });
 
     test('Legal Officer Admin ends the appeal', async ({ page }) => {

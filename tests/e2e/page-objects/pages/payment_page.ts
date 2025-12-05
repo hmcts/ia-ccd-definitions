@@ -1,5 +1,5 @@
 import {expect, Page} from "@playwright/test";
-import {envUrl, runningEnv} from '../../detainedConfig';
+import {envUrl, runningEnv} from '../../iacConfig';
 import { TabsHelper } from '../../helpers/TabsHelper';
 import { ButtonHelper} from "../../helpers/ButtonHelper";
 

@@ -6,7 +6,7 @@ const monthAgo = moment().subtract(1, 'month');
 
 export const runningEnv =  process.env.ENVIRONMENT;
 
-export const envUrl: string = process.env.ENVIRONMENT === 'preview' ? 'https://xui-ia-case-api-pr-2893.preview.platform.hmcts.net' : 'https://xui-ia-case-api-pr-2893.preview.platform.hmcts.net';
+export const envUrl: string = process.env.ENVIRONMENT === 'preview' ? 'https://xui-ia-case-api-pr-2887.preview.platform.hmcts.net' : (process.env.ENVIRONMENT === 'demo' ? 'https://manage-case.demo.platform.hmcts.net' : 'https://manage-case.aat.platform.hmcts.net');
 
 export const createCase = {
     jurisdictionCode: 'IA',
@@ -14,34 +14,35 @@ export const createCase = {
     eventCode: 'startAppeal',
 }
 
+
 export const legalRepresentativeCredentials = {
-    username: process.env.ENVIRONMENT === 'preview' ? "ialegalreporgcreator12@mailnesia.com" : "ialegalreporgcreator12@mailinator.com",
-    password: process.env.ENVIRONMENT === 'preview' ? "Aldg@teT0wer" : 'AldgateT0wer',
+    username: ['preview', 'aat'].includes(process.env.ENVIRONMENT) ? 'ialegalreporgcreator12@mailnesia.com' : 'ialegalreporgcreator12@mailinator.com',
+    password: ['preview', 'aat'].includes(process.env.ENVIRONMENT) ? 'Aldg@teT0wer' : 'AldgateT0wer',
 }
 
 export const legalOfficerCredentials = {
-    username: process.env.ENVIRONMENT === 'preview' ? "CRD_func_test_aat_stcw@justice.gov.uk" : 'CRD_func_test_demo_stcwuser053@justice.gov.uk',
-    password: " AldgateT0wer"
+    username: process.env.ENVIRONMENT === 'preview' ? 'CRD_func_test_aat_stcw@justice.gov.uk' : (process.env.ENVIRONMENT === 'demo' ? 'CRD_func_test_demo_stcwuser053@justice.gov.uk' : 'CRD_func_test_aat_stcw@justice.gov.uk'),
+    password: 'AldgateT0wer'
 }
 
 export const legalOfficerAdminCredentials = {
-    username: process.env.ENVIRONMENT === 'preview' ? "CRD_func_test_aat_adm66@justice.gov.uk" : "CRD_func_test_demo_admuser045@justice.gov.uk",
-    password: " AldgateT0wer"
+    username: process.env.ENVIRONMENT === 'preview' ? "CRD_func_test_aat_adm66@justice.gov.uk" : (process.env.ENVIRONMENT === 'demo' ? 'CRD_func_test_demo_admuser045@justice.gov.uk' : 'CRD_func_test_aat_ctscAdm1@justice.gov.uk'),
+    password: 'AldgateT0wer'
 }
 
 export const listingOfficerCredentials = {
-    username: process.env.ENVIRONMENT === 'preview' ? 'CRD_func_test_aat_stcw@justice.gov.uk' : 'CRD_func_test_demo_stcwuser053@justice.gov.uk',
-    password: " AldgateT0wer"
+    username: process.env.ENVIRONMENT === 'preview' ? 'CRD_func_test_aat_stcw@justice.gov.uk' : (process.env.ENVIRONMENT === 'demo' ? 'CRD_func_test_demo_stcwuser053@justice.gov.uk' : 'CRD_func_test_aat_stcw22@justice.gov.uk'),
+    password: 'AldgateT0wer'
 }
 
 export const homeOfficeOfficerCredentials = {
-    username:"ia.respondentoffice.ccd@gmail.com",
-    password: " AldgateT0wer"
+    username: 'ia.respondentoffice.ccd@gmail.com',
+    password: 'AldgateT0wer'
 }
 
 export const judgeCredentials = {
-    username: process.env.ENVIRONMENT === 'preview' ? "ia.iacjudge.ccd@gmail.com" : "Gupta.Singh1@ejudiciary.net",
-    password: process.env.ENVIRONMENT === 'preview' ? "AldgateT0wer" : "Testing123"
+    username: ['preview', 'aat'].includes(process.env.ENVIRONMENT) ? 'ia.iacjudge.ccd@gmail.com' : 'Gupta.Singh1@ejudiciary.net',
+    password: ['preview', 'aat'].includes(process.env.ENVIRONMENT) ? 'AldgateT0wer' : 'Testing123'
 }
 
 

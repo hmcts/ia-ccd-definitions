@@ -1,6 +1,6 @@
 import moment from "moment/moment";
 import { Page } from "@playwright/test";
-import { appellant, sponsor, legalRepresentative, runningEnv, outOfCountryAddress } from '../detainedConfig';
+import { appellant, sponsor, legalRepresentative, runningEnv, outOfCountryAddress } from '../iacConfig';
 import { detentionFacility } from '../fixtures/detentionFacilities';
 import { ButtonHelper } from '../helpers/ButtonHelper';
 
@@ -131,7 +131,7 @@ export class CreateAppeal {
                 await this.page.waitForTimeout(2000);
                 currentUrl = page.url();
                 if (currentUrl.includes('startAppealoocHomeOfficeReferenceNumber')) {
-                    await this.setEntryClearanceDecision();
+                    await this.setEntryClearanceDecisionDate();
                 }
                 await this.page.waitForTimeout(1000);
                 currentUrl = page.url();
@@ -238,27 +238,13 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
-   async setEntryClearanceDecision() {
+   async setEntryClearanceDecisionDate() {
        await this.page.locator('#gwfReferenceNumber').fill('123456789');
        // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
        // if we just try and click continue it stays on the clearance decision page and the test fails - only happens in ICC
        await this.page.keyboard.press('Tab');
        await this.buttonHelper.continueButton.click();
    }
-
-   async setEntryClearanceDecisionDate(inTime: boolean = true) {
-        const inOutOfTimeDate = inTime
-           ? moment().subtract(5, 'days')
-           : moment().subtract(2, 'months');
-    await this.page.locator('#dateEntryClearanceDecision-day').fill(inOutOfTimeDate.date().toString());
-    await this.page.locator('#dateEntryClearanceDecision-month').fill((inOutOfTimeDate.month() + 1).toString());
-    await this.page.locator('#dateEntryClearanceDecision-year').fill(inOutOfTimeDate.year().toString());
-       // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
-       // if we just try and click continue it stays on the clearance decision page and the test fails - only happens in ICC
-       await this.page.keyboard.press('Tab');
-       await this.buttonHelper.continueButton.click();
-   }
-
 
    async inDetention(yesNo: string = 'Yes') {
       if (yesNo === 'No') {
@@ -319,20 +305,52 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
+    async setHomeOfficeReferenceNumber(outOfCountry: boolean = false) {
+        if (outOfCountry) {
+            await this.page.fill('#gwfReferenceNumber','12345');
+        } else {
+            await this.page.fill('#homeOfficeReferenceNumber', '12345');
+        }
+
+
+        // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
+        // if we just try and click continue it stays on the tribunal page and the test fails - only happens in ICC
+        await this.page.keyboard.press('Tab');
+        await this.page.waitForSelector('.error-message', { state: 'hidden' });
+        await this.buttonHelper.continueButton.click();
+    }
+    
+    async setHomeOfficeDecisionDate(inTime: boolean = true, fieldPrefix: string = 'homeOfficeDecisionDate') {
+        const homeOfficeLetterDate = inTime ? moment().subtract(5, 'days') : moment().subtract(20, 'days');
+        await this.page.fill(`#${fieldPrefix}-day`, homeOfficeLetterDate.date().toString());
+        await this.page.fill(`#${fieldPrefix}-month`, (homeOfficeLetterDate.month() + 1).toString());
+        await this.page.fill(`#${fieldPrefix}-year`, homeOfficeLetterDate.year().toString());
+        // due to the auto-validation firing - the error message does not disappear until we physically move off of the last field
+        // if we just try and click continue it stays on the tribunal page and the test fails - only happens in ICC
+        await this.page.keyboard.press('Tab');
+        await this.page.waitForSelector('.error-message', { state: 'hidden' });
+        await this.buttonHelper.continueButton.click();
+    }
    async setHomeOfficeDetails(
      inTime: boolean, referenceNumber: string = '1234-5678-9012-3456'  ) {
      await this.page.fill('#homeOfficeReferenceNumber', referenceNumber);
      await this.buttonHelper.continueButton.click();
   }
 
-   async uploadNoticeOfDecision() {
-       await this.page.locator('button:text("Add new")').click();
-       await this.page.waitForTimeout(2000);
-       await this.page.locator('#uploadTheNoticeOfDecisionDocs_0_document').setInputFiles('./tests/documents/TEST_DOCUMENT_1.pdf');
-       await this.page.fill('#uploadTheNoticeOfDecisionDocs_0_description', 'Test Notice of Decision document.');
-       await this.page.waitForSelector('.error-message', { state: 'hidden' });
-       await this.buttonHelper.continueButton.click();
-   }
+   async uploadNoticeOfDecision(documentType: string = 'TheNoticeOfDecisionDocs') {
+        if (documentType === 'TheNoticeOfDecisionDocs') {
+            await this.page.locator('#uploadTheNoticeOfDecisionDocs').getByText('Add new').click();
+        } else {
+            await this.page.locator('//*[@id="uploadRehydratedNod"]/div/button').click();
+        }
+
+       // getting rate cap error message - waiting for 2 secs to stop this happening
+        await this.page.waitForTimeout(2000); // waits for 2 seconds
+        await this.page.locator(`#upload${documentType}_0_document`).setInputFiles('./tests/documents/TEST_DOCUMENT_1.pdf');
+        await this.page.fill(`#upload${documentType}_0_description`, 'Test Notice of Decision document.');
+        await this.page.waitForSelector('.error-message', { state: 'hidden' });
+        await this.buttonHelper.continueButton.click();
+    }
 
    async setTypeOfAppeal(appealType: string = 'refusalOfEu') {
        await this.page.check(`#appealType-${appealType}`);
@@ -386,7 +404,7 @@ export class CreateAppeal {
 
 
    // appellantDetails() - Legal Admin journey only
-   async appellantDetails() {
+   async setAppellantContactDetails() {
        await this.page.fill('#internalAppellantMobileNumber', appellant.mobile);
        await this.page.fill('#internalAppellantEmail', appellant.email);
        await this.buttonHelper.continueButton.click();
@@ -472,7 +490,7 @@ export class CreateAppeal {
        await this.buttonHelper.continueButton.click();
    }
 
-   async hasSponsor(isSponsored: string = 'No', sponsorComms: string = 'email', sponsorAuthorised: string = 'Yes'){
+    async hasSponsor(isSponsored: string = 'No', sponsorComms: string = 'email', sponsorAuthorised: string = 'Yes'){
        await this.page.click(`#hasSponsor_${isSponsored}`);
        await this.buttonHelper.continueButton.click();
        
@@ -527,8 +545,8 @@ export class CreateAppeal {
    // uploadAppealDocs() - For Legal Admin journey
    async uploadAppealDocs() {
        await this.page.locator('button:text("Add new")').click();
-       // getting rate cap error message - waiting for 2 secs to stop this happening
-       await this.page.waitForTimeout(2000); // waits for 2 seconds
+       // getting rate cap error message - waiting for 4 secs to stop this happening
+       await this.page.waitForTimeout(4000); // waits for 4 seconds
        await this.page.locator('#uploadTheAppealFormDocs_0_document').setInputFiles('./tests/documents/TEST_DOCUMENT_2.pdf');
        await this.page.fill('#uploadTheAppealFormDocs_0_description', 'Test Notice of Decision document.');
        await this.page.waitForSelector('.error-message', { state: 'hidden' });
@@ -575,11 +593,20 @@ export class CreateAppeal {
    }
 
    async hasFeeRemission(feeRemission: string = 'No') {
-     // TODO: Needs other options added
        switch (feeRemission) {
            case 'No':
                await this.page.check('#remissionType-noRemission');
                break;
+           case 'Yes':
+               await this.page.check('#remissionType-hoWaiverRemission');
+               await this.buttonHelper.continueButton.click();
+               await this.page.check('#remissionClaim-section20');
+               await this.buttonHelper.continueButton.click();
+
+               // getting rate cap error message - waiting for 2 secs to stop this happening
+               await this.page.waitForTimeout(2000); // waits for 2 seconds
+               await this.page.locator('#section20Document').setInputFiles('./tests/documents/TEST_DOCUMENT_1.pdf');
+               await this.page.waitForSelector('.error-message', { state: 'hidden' });
        }
        
        await this.buttonHelper.continueButton.click();
@@ -592,9 +619,28 @@ export class CreateAppeal {
    }
 
    async checkMyAnswers(skipCloseAndReturnCheck:boolean = false) {
-       await this.buttonHelper.continueButton.click();
-       if (!skipCloseAndReturnCheck || (skipCloseAndReturnCheck && !['preview'].includes(runningEnv))) {
+        await this.buttonHelper.continueButton.click();
+       if (!skipCloseAndReturnCheck || (skipCloseAndReturnCheck && !['preview', 'aat'].includes(runningEnv))) {
            await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
        }
    }
+
+   // Rehydrate flow for Legal Admin
+   async setSourceOfAppeal(source: string = 'paperForm') {
+        await this.page.check(`#sourceOfAppeal-${source}`);
+        await this.buttonHelper.continueButton.click();
+   }
+
+    // Rehydrate flow for Legal Admin
+    async enterAriaReferenceNumber() {
+        await this.page.fill('#appealReferenceNumber', 'AA/12345/1234');
+        await this.buttonHelper.continueButton.click();
+    }
+
+    // Rehydrate flow for Legal Admin
+    async isAppealOutOfTime(outOfTime: string = 'No') {
+        await this.page.check(`#submissionOutOfTime_${outOfTime}`);
+        await this.buttonHelper.continueButton.click();
+    }
+
 }

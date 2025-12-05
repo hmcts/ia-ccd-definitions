@@ -5,17 +5,19 @@ import {
   judgeCredentials,
   legalOfficerAdminCredentials,
   legalOfficerCredentials,
-  listingOfficerCredentials,
-  runningEnv
+  listingOfficerCredentials
 } from "../../iacConfig";
 import { IdamPage } from "../../page-objects/pages/idam.po";
 import { LinkHelper } from "../../helpers/LinkHelper";
 import { PageHelper } from "../../helpers/PageHelper";
+import { ButtonHelper } from "../../helpers/ButtonHelper";
+import { ValidationHelper } from "../../helpers/ValidationHelper";
 import { CreateAppeal } from "../../flows/createAppeal";
 import { CreateCasePage } from "../../page-objects/pages/createCase_page";
 import { SubmitYourAppeal } from "../../flows/events/submitYourAppeal";
 import { RecordRemissionDecision } from "../../flows/events/recordRemissionDecision";
 import { MarkAppealAsPaid } from "../../flows/events/markAppealAsPaid";
+import { imageLocators } from "../../fixtures/imageLocators";
 import { RecordOutOfTimeDecision } from "../../flows/events/recordOutOfTimeDecision";
 import { S94b } from "../../flows/events/setS94bStatus";
 import { RequestHomeOfficeData } from "../../flows/events/requestHomeOfficeData";
@@ -29,25 +31,21 @@ import { UploadAppealResponse } from "../../flows/events/uploadAppealResponse";
 import { ForceCaseHearingReqs } from "../../flows/events/forceCaseHearingReqs";
 import { SubmitHearingRequirements } from "../../flows/events/submitHearingRequirements";
 import { ReviewHearingRequirements } from "../../flows/events/reviewHearingRequirements";
+import { ListTheCase } from "../../flows/events/listTheCase";
 import { CreateCaseSummary } from "../../flows/events/createCaseSummary";
 import { GenerateHearingBundle } from "../../flows/events/generateHearingBundle";
 import { StartDecisionAndReasons } from "../../flows/events/startDecisionAndReasons";
 import { PrepareDecisionAndReasons } from "../../flows/events/prepareDecisionAndReasons";
 import { CompleteDecisionAndReasons } from "../../flows/events/completeDecisionAndReasons";
-import { ApplyForPermissionToAppeal } from "../../flows/events/applyForPermissionToAppeal";
-import { DecideFtpaApplication } from "../../flows/events/decideFtpaApplication";
+import { TurnOnNotifications } from "../../flows/events/turnOnNotifications";
 
 const inTime: boolean = !["false"].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ["true"].includes(process.env.CMR_HEARING);
 const feeRemission: string = ["Yes"].includes(process.env.FEE_REMISSION)
   ? "Yes"
   : "No";
-const isRehydrated: boolean = ["true"].includes(process.env.IS_REHYDRATED);
-const judgeDecision: string = ["allowed"].includes(process.env.JUDGE_DECISION)
-  ? "allowed"
-  : "dismissed"; // allowed or dismissed
-let caseId: string = "";
 const daysToComply: number = 14;
+let caseId: string = "";
 
 //refusalOfEu - Refusal under EEA regulations (EA) (payment required)
 //refusalOfHumanRights - Refusal human rights (HU) (payment required)
@@ -66,16 +64,6 @@ const typeOfAppeal: string = [
   ? process.env.APPEAL_TYPE
   : "deprivation";
 
-import { ButtonHelper } from "../../helpers/ButtonHelper";
-import { ListTheCase } from "../../flows/events/listTheCase";
-import { imageLocators } from "../../fixtures/imageLocators";
-import { ValidationHelper } from "../../helpers/ValidationHelper";
-import {
-  Add24WeeksStatutoryTimeframe,
-  Add24WeeksStatutoryTimeframeIsDisabled,
-  Remove24WeeksStatutoryTimeframe
-} from "../../flows/events/addStatutoryTimeframe";
-
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
@@ -83,14 +71,15 @@ let buttonHelper: ButtonHelper;
 let validationHelper: ValidationHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
+let s94b: S94b;
 
 test.describe.configure({ mode: "serial" });
 test.describe(
-  "Legal Admin creates Non-Detained Appellant in Person " +
+  "Legal Admin creates Non-Detained Represented " +
     typeOfAppeal +
     " Rehydrated Case " +
     (inTime ? "In Time" : "Out of Time"),
-  { tag: "@LegalAdminCreatesNonDetainedAppellantInPersonICC" },
+  { tag: "@LegalAdminCreatesNonDetainedRepresentedRehydratedCase" },
   () => {
     test.beforeEach(async ({ page }) => {
       // Go to the starting url before each test.
@@ -101,33 +90,19 @@ test.describe(
       validationHelper = new ValidationHelper(page);
       createAppeal = new CreateAppeal(page);
       createCasePage = new CreateCasePage(page);
-
+      s94b = new S94b(page);
       await page.goto(envUrl);
     });
 
     test("Create Rehydrated case", async ({ page }) => {
       await idamPage.login(legalOfficerAdminCredentials);
       await createCasePage.createCase();
-
-      if (["preview"].includes(runningEnv)) {
-        isRehydrated
-          ? await createAppeal.setSourceOfAppeal("rehydratedAppeal")
-          : await createAppeal.setSourceOfAppeal("paperForm");
-        await buttonHelper.continueButton.click(); // Before you start screen
-
-        if (isRehydrated) {
-          await createAppeal.enterAriaReferenceNumber();
-          await createAppeal.isAppealOutOfTime(inTime ? "No" : "Yes");
-        }
-      } else {
-        await buttonHelper.continueButton.click(); // Before you start screen
-      }
-      //   await createAppeal.setSourceOfAppeal('rehydratedAppeal');
-      // await buttonHelper.continueButton.click(); // Before you start screen
-      //  await createAppeal.enterAriaReferenceNumber();
-      // await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
+      await createAppeal.setSourceOfAppeal("rehydratedAppeal");
+      await buttonHelper.continueButton.click(); // Before you start screen
+      await createAppeal.enterAriaReferenceNumber();
+      await createAppeal.isAppealOutOfTime(inTime ? "No" : "Yes");
       await createAppeal.setTribunalAppealReceived();
-      await createAppeal.appellantInPerson("Yes");
+      await createAppeal.appellantInPerson("No", "Yes");
       await createAppeal.locationInUK("Yes");
       await createAppeal.inDetention("No");
       await createAppeal.setHomeOfficeReferenceNumber();
@@ -137,12 +112,10 @@ test.describe(
       await createAppeal.setAppellantContactDetails();
       await createAppeal.setTypeOfAppeal(typeOfAppeal);
       await createAppeal.setHomeOfficeDecisionDate(inTime);
-      isRehydrated
-        ? await createAppeal.uploadNoticeOfDecision("RehydratedNod")
-        : await createAppeal.uploadNoticeOfDecision();
+      await createAppeal.uploadNoticeOfDecision("RehydratedNod");
       await createAppeal.hasSponsor("No");
       await createAppeal.hasDeportationOrder("No");
-      //  await createAppeal.hasRemovalDirections('No');
+      // await createAppeal.hasRemovalDirections('No');
       await createAppeal.hasOtherAppeals("No");
       await createAppeal.isHearingRequired(true);
 
@@ -163,21 +136,10 @@ test.describe(
       caseId = await pageHelper.grabCaseNumber();
       console.log("caseId>>>>>>>>>>>>>>>" + caseId + "<<<<<<<<<<<<<<<<<<<");
 
-      if (isRehydrated) {
-        await validationHelper.validateLabelDisplayed(
-          imageLocators.rehydrated.notifications.locator,
-          imageLocators.rehydrated.notifications.name
-        );
-        await validationHelper.validateLabelDisplayed(
-          imageLocators.rehydrated.nonDetained.appellantInPersonManual.locator,
-          imageLocators.rehydrated.nonDetained.appellantInPersonManual.name
-        );
-      } else {
-        await validationHelper.validateLabelDisplayed(
-          imageLocators.nonDetained.appellantInPersonManual.locator,
-          imageLocators.nonDetained.appellantInPersonManual.name
-        );
-      }
+      await validationHelper.validateLabelDisplayed(
+        imageLocators.rehydrated.notifications.locator,
+        imageLocators.rehydrated.notifications.name
+      );
 
       await new SubmitYourAppeal(page).submit(false, inTime);
 
@@ -192,13 +154,18 @@ test.describe(
         }
       }
 
+      await validationHelper.validateLabelDisplayed(
+        imageLocators.rehydrated.nonDetained.representedManual.locator,
+        imageLocators.rehydrated.nonDetained.representedManual.name
+      );
+
       await linkHelper.signOut.click();
     });
 
     test(
       "Legal Officer" +
         (!inTime ? " records Out of Time decision, " : " ") +
-        "creates Respondent Direction and adds then removes s94b",
+        "creates Respondent Direction",
       async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
@@ -207,54 +174,42 @@ test.describe(
           await new RecordOutOfTimeDecision(page).submit("approved");
         }
 
-        isRehydrated
-          ? await validationHelper.validateLabelDisplayed(
-              imageLocators.rehydrated.nonDetained.appellantInPersonManual
-                .locator,
-              imageLocators.rehydrated.nonDetained.appellantInPersonManual.name
-            )
-          : await validationHelper.validateLabelDisplayed(
-              imageLocators.nonDetained.appellantInPersonManual.locator,
-              imageLocators.nonDetained.appellantInPersonManual.name
-            );
+        await validationHelper.validateLabelDisplayed(
+          imageLocators.rehydrated.nonDetained.representedManual.locator,
+          imageLocators.rehydrated.nonDetained.representedManual.name
+        );
 
-        await new S94b(page).setStatus("Yes");
-        isRehydrated
-          ? await validationHelper.validateLabelDisplayed(
-              imageLocators.rehydrated.nonDetained.appellantInPersonManualS94b
-                .locator,
-              imageLocators.rehydrated.nonDetained.appellantInPersonManualS94b
-                .name
-            )
-          : await validationHelper.validateLabelDisplayed(
-              imageLocators.nonDetained.appellantInPersonManualS94b.locator,
-              imageLocators.nonDetained.appellantInPersonManualS94b.name
-            );
+        await s94b.setStatus("Yes");
+        await validationHelper.validateLabelDisplayed(
+          imageLocators.rehydrated.nonDetained.representedManualS94b.locator,
+          imageLocators.rehydrated.nonDetained.representedManualS94b.name
+        );
 
-        await new S94b(page).setStatus("No");
-        isRehydrated
-          ? await validationHelper.validateLabelDisplayed(
-              imageLocators.rehydrated.nonDetained.appellantInPersonManual
-                .locator,
-              imageLocators.rehydrated.nonDetained.appellantInPersonManual.name
-            )
-          : await validationHelper.validateLabelDisplayed(
-              imageLocators.nonDetained.appellantInPersonManual.locator,
-              imageLocators.nonDetained.appellantInPersonManual.name
-            );
+        await s94b.setStatus("No");
+        await validationHelper.validateLabelDisplayed(
+          imageLocators.rehydrated.nonDetained.representedManual.locator,
+          imageLocators.rehydrated.nonDetained.representedManual.name
+        );
 
-        if (!isRehydrated) {
-          if (
-            typeOfAppeal === "revocationOfProtection" ||
-            typeOfAppeal === "protection"
-          ) {
-            await new RequestHomeOfficeData(page).matchAppellantDetails();
-          }
+        if (
+          typeOfAppeal === "revocationOfProtection" ||
+          typeOfAppeal === "protection"
+        ) {
+          await new RequestHomeOfficeData(page).matchAppellantDetails();
         }
 
         if (cmrHearing) {
           await new GenerateListCMR(page).createTask();
         }
+
+        // Turn on Notifications/WA tasks
+        await new TurnOnNotifications(page).submit();
+        await validationHelper.validateNextStepNotAvailable(
+          "Turn on notifications/WA tasks"
+        );
+        await validationHelper.validateLabelNotDisplayed(
+          imageLocators.rehydrated.notifications.locator
+        );
 
         await new RespondentEvidenceDirection(page).submit(daysToComply);
 
@@ -363,61 +318,6 @@ test.describe(
       await pageHelper.getCase(caseId);
       await new PrepareDecisionAndReasons(page).generate("Yes");
       await new CompleteDecisionAndReasons(page).upload("allowed");
-      await linkHelper.signOut.click();
-    });
-
-    test(
-      `Appeal the judge's decision as ` +
-        (judgeDecision == "allowed"
-          ? "Home Office"
-          : "Legal Admin as Appellant"),
-      async ({ page }) => {
-        await idamPage.login(
-          judgeDecision === "allowed"
-            ? homeOfficeOfficerCredentials
-            : legalOfficerAdminCredentials
-        );
-        judgeDecision === "allowed"
-          ? await page.goto(envUrl + "/cases/case-details/" + caseId)
-          : await pageHelper.getCase(caseId);
-        await new ApplyForPermissionToAppeal(page).apply(
-          judgeDecision === "allowed" ? "Respondent" : "Appellant"
-        );
-        await linkHelper.signOut.click();
-      }
-    );
-
-    test("Judge decides FTPA application", async ({ page }) => {
-      await idamPage.login(judgeCredentials);
-      await pageHelper.getCase(caseId);
-      await new DecideFtpaApplication(page).submit(
-        judgeDecision == "allowed" ? "Respondent" : "Appellant"
-      );
-      await linkHelper.signOut.click();
-    });
-    test("Caseworker adds Statutory Timeframe and verifies it is removed from dropdown", async ({
-      page
-    }) => {
-      await idamPage.login(legalOfficerCredentials);
-      await pageHelper.getCase(caseId);
-
-      await Add24WeeksStatutoryTimeframe(
-        page,
-        "TCW will be adding statutory timeframe"
-      );
-      await Add24WeeksStatutoryTimeframeIsDisabled(page);
-      await linkHelper.signOut.click();
-    });
-
-    test("Judge verifies Statutory Timeframe is available in dropdown", async ({
-      page
-    }) => {
-      await idamPage.login(judgeCredentials);
-      await pageHelper.getCase(caseId);
-      await Remove24WeeksStatutoryTimeframe(
-        page,
-        "Judge Will be removing statutory timeframe"
-      );
       await linkHelper.signOut.click();
     });
   }

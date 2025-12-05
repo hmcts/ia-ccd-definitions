@@ -6,7 +6,7 @@ import {
     homeOfficeOfficerCredentials,
     legalOfficerAdminCredentials,
     listingOfficerCredentials, judgeCredentials
-} from '../../detainedConfig';
+} from '../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../../flows/createAppeal';
@@ -38,22 +38,26 @@ import { imageLocators } from '../../fixtures/imageLocators';
 import {CreateHearingRequest} from "../../flows/createHearingRequest";
 import {TabsHelper} from "../../helpers/TabsHelper";
 import {GenerateListCMR} from "../../flows/events/generateListCMRTask";
+import {RecordOutOfTimeDecision} from "../../flows/events/recordOutOfTimeDecision";
+import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
-const inTime: boolean = true;
-const cmrListing: boolean = true;
-//let detentionLocation: string = 'immigrationRemovalCentre';
-let detentionLocation: string = 'prison';
-//let detentionLocation: string = 'other';
-let caseId: string;
+const inTime: boolean = !['false'].includes(process.env.IN_TIME);
+const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
+const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
+let detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
+let caseId: string = '';
 
-//const typeOfAppeal: string = 'refusalOfEu'; // Refusal under EEA regulations (EA) (payment required)
-//const typeOfAppeal: string = 'refusalOfHumanRights'; // Refusal human rights (HU) (payment required)
-const typeOfAppeal: string  = 'deprivation'; // Deprivation of citizenship (DC) (no payment required)
-//const typeOfAppeal: string  = 'euSettlementScheme'; // Refusal of application under the EU Settlement Scheme (EU) (payment required)
-//const typeOfAppeal: string = 'revocationOfProtection'; // Revocation of a protection status (RP) (no payment required)
-//const typeOfAppeal:string = 'protection'; // Refusal of protection claim (PA) (payment required)
+
+//refusalOfEu - Refusal under EEA regulations (EA) (payment required)
+//refusalOfHumanRights - Refusal human rights (HU) (payment required)
+//deprivation -  Deprivation of citizenship (DC) (no payment required)
+//euSettlementScheme - Refusal of application under the EU Settlement Scheme (EU) (payment required)
+//revocationOfProtection - Revocation of a protection status (RP) (no payment required)
+//protection - Refusal of protection claim (PA) (payment required)
+const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
+
 
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
@@ -63,7 +67,7 @@ let updateDetentionLocation: UpdateDetentionLocation;
 let createHearingRequest: CreateHearingRequest;
 
 test.describe.configure({ mode: 'serial' });
-test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedAppeal' }, () => {
+test.describe('Create Detained ' + typeOfAppeal + ' Appeal as Legal Representative with detention location: ' + detentionLocation + ', ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrHearing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedAppeal' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -76,7 +80,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await page.goto(envUrl);
     });
 
-    test('Create Detained Appeal', async ({ page }) => {
+    test('Create LR Detained Appeal', async ({ page }) => {
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalRepresentativeCredentials);
         await new CreateCasePage(page).createCase();
@@ -92,24 +96,22 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
             await createAppeal.setBailApplication('Yes');
         }
 
-        await createAppeal.setHomeOfficeDetails(inTime);
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
-
-        if (typeOfAppeal !== 'euSettlementScheme') {
-            await createAppeal.setGroundsOfAppeal(typeOfAppeal);
-        }
-
+        await createAppeal.setHomeOfficeReferenceNumber();
         await createAppeal.setAppellantBasicDetails(false);
-
-
-
         await createAppeal.setNationality(true);
 
         if (detentionLocation === 'other') {
             await createAppeal.setAppellantAddress('detained', 'Yes');
         }
 
+        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+
+        if (typeOfAppeal !== 'euSettlementScheme') {
+            await createAppeal.setGroundsOfAppeal(typeOfAppeal);
+        }
+
+        await createAppeal.setHomeOfficeDecisionDate(inTime);
+        await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('Yes');
         await createAppeal.hasDeportationOrder('Yes');
         await createAppeal.hasRemovalDirections('Yes');
@@ -119,10 +121,10 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await createAppeal.isHearingRequired(true);
 
         if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
-            await createAppeal.hasFeeRemission('No');
+            await createAppeal.hasFeeRemission(feeRemission);
         }
 
-        if (typeOfAppeal === 'protection') {
+        if (typeOfAppeal === 'protection' && feeRemission === 'No') {
             await createAppeal.setPayNowLater('Now');
         }
 
@@ -132,7 +134,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
         await new SubmitYourAppeal(page).submit(true, inTime);
 
-        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+        if ((typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') && feeRemission === 'No') {
             // create service request
             await new CreateServiceRequest(page).submit();
 
@@ -143,15 +145,31 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await linkHelper.signOut.click();
     });
 
-    test('Legal Officer adds s94b appeal status, updates detention location and creates Respondent Direction', async ({ page }) => {
+    // This is an additional step/test ONLY run if fee remission has been undertaken, as we need to make a decision on the fee remission
+    if (feeRemission === 'Yes') {
+        test('Legal Officer Admin decides Fee Remission', async ({ page }) => {
+            await idamPage.login(legalOfficerAdminCredentials);
+            await pageHelper.getCase(caseId);
+            if (feeRemission === 'Yes') {
+                await new RecordRemissionDecision(page).submit('approved');
+            }
+        });
+    }
+
+    test('Legal Officer' + (!inTime ? ' records Out of Time decision, ': ' ') + 'adds s94b appeal status, updates detention location and creates Respondent Direction', async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
+
+        if (!inTime) {
+            await new RecordOutOfTimeDecision(page).submit('approved');
+        }
 
         await validationHelper.validateLabelDisplayed(imageLocators.detained.represented.locator, imageLocators.detained.represented.name);
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
 
         await new S94b(page).setStatus('Yes');
         await validationHelper.validateLabelDisplayed(imageLocators.detained.representedS94b.locator, imageLocators.detained.representedS94b.name);
+
         detentionLocation = detentionLocation === 'prison' ? 'other' : (detentionLocation === 'other' ? 'immigrationRemovalCentre' : 'prison');
         await updateDetentionLocation.changeLocation(detentionLocation, detentionLocation === 'prison' ? false:  (detentionLocation === 'other' ? true : false));
         await updateDetentionLocation.validateDataUpdated(detentionLocation);
@@ -160,7 +178,10 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
              await new RequestHomeOfficeData(page).matchAppellantDetails();
          }
 
-         await new GenerateListCMR(page).createTask();
+         if (cmrHearing) {
+             await new GenerateListCMR(page).createTask();
+         }
+
          await new RespondentEvidenceDirection(page).submit();
          await linkHelper.signOut.click();
     });
@@ -231,7 +252,13 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
 
         await createHearingRequest.checkHearingRequirements();
         await createHearingRequest.setAdditionalFacilities();
-        await createHearingRequest.setHearingStage('SUB');
+
+        if (cmrHearing) {
+            await createHearingRequest.setHearingStage('CMR');
+        } else {
+            await createHearingRequest.setHearingStage('SUB');
+        }
+
         await createHearingRequest.setParticipantAttendance();
         await createHearingRequest.setVenueLocation('Glasgow');
         await createHearingRequest.setSpecificJudge('No');

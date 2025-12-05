@@ -37,6 +37,52 @@ export const imageLocators = {
         appellantInPersonManual: {
             locator: '//*[@id="journey_type_aip_manual"]/dt/ccd-markdown/div/markdown/p/img',
             name: 'appellant_in_person_manual',
-        }
+        },
+        appellantInPersonManualS94b: {
+            locator: '//*[@id="journey_type_aip_manual_s94b"]/dt/ccd-markdown/div/markdown/p/img',
+            name: 'appellant_in_person_manual_s94b',
+        },
+    },
+    rehydrated: {
+        detained: {
+            representedManual: {
+                locator: '//*[@id="journey_type_rehydrated_lr_manual_detained"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'Tag-Rehydrated-LR-manual-Detained',
+            },
+            representedManualS94b: {
+                locator: '//*[@id="journey_type_rehydrated_lr_manual_detained_s9"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'Tag-Rehydrated-LR-manual-Detained-S9',
+            },
+            appellantInPersonManual: {
+                locator: '//*[@id="journey_type_rehydrated_aip_manual_detained"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'Tag-Rehydrated-AIP-manual-Detained',
+            },
+            appellantInPersonManualS94b: {
+                locator: '//*[@id="journey_type_rehydrated_aip_manual_detained_s9"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'Tag-Rehydrated-AIP-manual-Detained-S9',
+            },
+        },
+        nonDetained: {
+            representedManual: {
+                locator: '//*[@id="journey_type_rehydrated_lr_manual"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'Tag-Rehydrated-LR-manual',
+            },
+            representedManualS94b: {
+                locator: '//*[@id="journey_type_rehydrated_lr_manual_s9"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'Tag-Rehydrated-LR-manual-S9',
+            },
+            appellantInPersonManual: {
+                locator: '//*[@id="journey_type_rehydrated_aip_manual"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'Tag-Rehydrated-AIP-manual',
+            },
+            appellantInPersonManualS94b: {
+                locator: '//*[@id="journey_type_rehydrated_aip_manual_s9"]/dt/ccd-markdown/div/markdown/p/img',
+                name: 'Tag-Rehydrated-AIP-manual-S9',
+            }
+        },
+        notifications: {
+            locator: '//*[@id="notifications_turned_off_banner"]/dt/ccd-markdown/div/markdown/p/img',
+            name: 'redydrate_turnoff',
+        },
     },
 };

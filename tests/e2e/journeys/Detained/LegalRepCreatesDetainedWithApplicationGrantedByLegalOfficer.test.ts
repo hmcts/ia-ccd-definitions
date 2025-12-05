@@ -3,7 +3,7 @@ import {
     envUrl,
     legalRepresentativeCredentials,
     listingOfficerCredentials
-} from '../../detainedConfig';
+} from '../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../../flows/createAppeal';
@@ -19,19 +19,20 @@ import {DecideAnApplication} from "../../flows/events/decideAnApplication";
 
 //await this.page.waitForTimeout(10000); // waits for 2 seconds
 
-const inTime: boolean = true;
-const cmrListing: boolean = true;
-//const detentionLocation: string = 'immigrationRemovalCentre';
-const detentionLocation: string = 'prison';
-//const detentionLocation: string = 'other';
+const inTime: boolean = !['false'].includes(process.env.IN_TIME);
+const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
+const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
+const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 let caseId: string = '';
 
-//const typeOfAppeal: string = 'refusalOfEu'; // Refusal under EEA regulations (payment required)
-//const typeOfAppeal: string = 'refusalOfHumanRights'; // Refusal human rights (payment required)
-const typeOfAppeal: string  = 'deprivation'; // Deprivation of citizenship (no payment required)
-//const typeOfAppeal: string  = 'euSettlementScheme'; // Refusal of application under the EU Settlement Scheme (payment required)
-//const typeOfAppeal: string = 'revocationOfProtection'; // Revocation of a protection status (no payment required)
-//const typeOfAppeal:string = 'protection'; // Refusal of protection claim (payment required)
+//refusalOfEu - Refusal under EEA regulations (EA) (payment required)
+//refusalOfHumanRights - Refusal human rights (HU) (payment required)
+//deprivation -  Deprivation of citizenship (DC) (no payment required)
+//euSettlementScheme - Refusal of application under the EU Settlement Scheme (EU) (payment required)
+//revocationOfProtection - Revocation of a protection status (RP) (no payment required)
+//protection - Refusal of protection claim (PA) (payment required)
+const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
+
 
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
@@ -39,7 +40,7 @@ let pageHelper: PageHelper;
 let validationHelper: ValidationHelper;
 
 test.describe.configure({ mode: 'serial' });
-test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrListing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepCreatesDetainedWithApplicationGrantedByLegalOfficer' }, () => {
+test.describe('Create Detained ' + + typeOfAppeal + ' Appeal as Legal Representative ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrHearing ? 'with' : 'without') + ' CMR Hearing' + ' with application granted by Legal Officer', { tag: '@LegalRepCreatesDetainedWithApplicationGrantedByLegalOfficer' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -66,24 +67,22 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
             await createAppeal.setBailApplication('Yes');
         }
 
-        await createAppeal.setHomeOfficeDetails(inTime);
-        await createAppeal.uploadNoticeOfDecision();
-        await createAppeal.setTypeOfAppeal(typeOfAppeal);
-
-        if (typeOfAppeal !== 'euSettlementScheme') {
-            await createAppeal.setGroundsOfAppeal(typeOfAppeal);
-        }
-
+        await createAppeal.setHomeOfficeReferenceNumber();
         await createAppeal.setAppellantBasicDetails(false);
-
-
-
         await createAppeal.setNationality(true);
 
         if (detentionLocation === 'other') {
             await createAppeal.setAppellantAddress('detained', 'Yes');
         }
 
+        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+
+        if (typeOfAppeal !== 'euSettlementScheme') {
+            await createAppeal.setGroundsOfAppeal(typeOfAppeal);
+        }
+
+        await createAppeal.setHomeOfficeDecisionDate(inTime);
+        await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('Yes');
         await createAppeal.hasDeportationOrder('Yes');
         await createAppeal.hasRemovalDirections('Yes');
@@ -93,10 +92,10 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         await createAppeal.isHearingRequired(true);
 
         if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
-            await createAppeal.hasFeeRemission('No');
+            await createAppeal.hasFeeRemission(feeRemission);
         }
 
-        if (typeOfAppeal === 'protection') {
+        if (typeOfAppeal === 'protection' && feeRemission === 'No') {
             await createAppeal.setPayNowLater('Now');
         }
 
@@ -106,7 +105,7 @@ test.describe('Create Detained Appeal as Legal Representative ' + (inTime ? 'In 
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
         await new SubmitYourAppeal(page).submit(true, inTime);
 
-        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+        if ((typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') && feeRemission === 'No') {
             // create service request
             await new CreateServiceRequest(page).submit();
 
