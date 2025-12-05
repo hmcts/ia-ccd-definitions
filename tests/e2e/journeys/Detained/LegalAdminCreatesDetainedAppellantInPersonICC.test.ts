@@ -63,7 +63,7 @@ let createCasePage: CreateCasePage;
 
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal + (isRehydrated ? ' Rehydrated ' : ' Paper ') + 'ICC Case ' + (inTime ? 'In Time' : 'Out of Time'), { tag: '@LegalAdminCreatesDetainedAppellantInPersonICC' }, () => {
+test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal + (isRehydrated ? 'Rehydrated ' : 'Paper ') + (inTime ? 'In Time ' : 'Out of Time ')  + 'ICC Case.', { tag: '@LegalAdminCreatesDetainedAppellantInPersonICC' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.

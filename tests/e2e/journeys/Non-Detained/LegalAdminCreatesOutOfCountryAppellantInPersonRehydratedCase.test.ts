@@ -57,7 +57,7 @@ let s94b: S94b;
 let caseId: string = '';
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin Officer Creates Out of Country, Appellant in  Person rehydrated appeal', { tag: '@LegalAdminCreatesOutOfCountryAppellantInPersonRehydratedCase' }, () => {
+test.describe('Legal Admin Officer Creates Out of Country, Appellant in Person ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + (inTime ? 'In Time ' : 'Out of Time ')  + 'ICC Case.', { tag: '@LegalAdminCreatesOutOfCountryAppellantInPersonRehydratedCase' }, () => {
 
     test.beforeEach(async ({ page }) => {
         idamPage = new IdamPage(page);
@@ -69,7 +69,7 @@ test.describe('Legal Admin Officer Creates Out of Country, Appellant in  Person 
         await page.goto(envUrl);
     });
 
-    test('Create Out of Country Appellant in Person rehydrated Appeal', async ({ page }) => {
+    test('Create Out of Country Appellant in Person ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC case', async ({ page }) => {
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalOfficerAdminCredentials);
         await new CreateCasePage(page).createCase();
