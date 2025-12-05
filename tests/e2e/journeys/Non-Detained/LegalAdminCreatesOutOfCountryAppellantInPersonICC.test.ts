@@ -133,11 +133,11 @@ test.describe('Legal Admin Officer Creates Out of Country, Appellant in Person, 
         isRehydrated ? await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManual.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManual.name) :
             await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.appellantInPersonManual.locator, imageLocators.nonDetained.appellantInPersonManual.name);
 
-        await new S94b(page).setStatus('Yes');
+        await s94b.setStatus('Yes');
         isRehydrated ? await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManualS94b.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManualS94b.name) :
             await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.appellantInPersonManualS94b.locator, imageLocators.nonDetained.appellantInPersonManualS94b.name);
 
-        await new S94b(page).setStatus('No');
+        await s94b.setStatus('No');
         isRehydrated ? await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManual.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManual.name) :
             await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.appellantInPersonManual.locator, imageLocators.nonDetained.appellantInPersonManual.name);
 

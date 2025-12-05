@@ -60,6 +60,7 @@ let buttonHelper: ButtonHelper;
 let validationHelper: ValidationHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
+let s94b: S94b;
 
 
 test.describe.configure({ mode: 'serial'});
@@ -74,6 +75,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         validationHelper = new ValidationHelper(page);
         createAppeal = new CreateAppeal(page);
         createCasePage = new CreateCasePage(page);
+        s94b = new S94b(page);
 
         await page.goto(envUrl);
     });
@@ -174,11 +176,11 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
 
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
 
-        await new S94b(page).setStatus('Yes');
+        await s94b.setStatus('Yes');
         isRehydrated ? await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.appellantInPersonManualS94b.locator, imageLocators.rehydrated.detained.appellantInPersonManualS94b.name) :
             await validationHelper.validateLabelDisplayed(imageLocators.detained.appellantInPersonManualS94b.locator, imageLocators.detained.appellantInPersonManualS94b.name);
 
-        await new S94b(page).setStatus('No');
+        await s94b.setStatus('No');
         isRehydrated ? await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.appellantInPersonManual.locator, imageLocators.rehydrated.detained.appellantInPersonManual.name) :
             await validationHelper.validateLabelDisplayed(imageLocators.detained.appellantInPersonManual.locator, imageLocators.detained.appellantInPersonManual.name);
 
