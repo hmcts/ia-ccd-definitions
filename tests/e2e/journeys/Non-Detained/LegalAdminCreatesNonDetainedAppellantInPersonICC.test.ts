@@ -62,7 +62,7 @@ let createCasePage: CreateCasePage;
 
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Non-Detained Appellant in Person ' + typeOfAppeal + (isRehydrated ? 'Rehydrated ' : 'Paper ') + (inTime ? 'In Time ' : 'Out of Time ') + 'ICC Appeal.' , { tag: '@LegalAdminCreatesNonDetainedAppellantInPersonICC' }, () => {
+test.describe('Legal Admin creates Non-Detained Appellant in Person ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ') + 'ICC Appeal.' , { tag: '@LegalAdminCreatesNonDetainedAppellantInPersonICC' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -77,7 +77,7 @@ test.describe('Legal Admin creates Non-Detained Appellant in Person ' + typeOfAp
         await page.goto(envUrl);
     });
 
-    test('Create ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC Appeal',   async ({ page }) => {
+    test('Create Non-detained, In Country, ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC Appeal',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();
 
