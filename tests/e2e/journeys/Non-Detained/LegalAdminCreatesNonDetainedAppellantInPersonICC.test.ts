@@ -37,16 +37,12 @@ import { CompleteDecisionAndReasons } from "../../flows/events/completeDecisionA
 import { ApplyForPermissionToAppeal } from "../../flows/events/applyForPermissionToAppeal";
 import { DecideFtpaApplication } from "../../flows/events/decideFtpaApplication";
 
-const inTime: boolean = !["false"].includes(process.env.IN_TIME);
-const cmrHearing: boolean = ["true"].includes(process.env.CMR_HEARING);
-const feeRemission: string = ["Yes"].includes(process.env.FEE_REMISSION)
-  ? "Yes"
-  : "No";
-const isRehydrated: boolean = ["true"].includes(process.env.IS_REHYDRATED);
-const judgeDecision: string = ["allowed"].includes(process.env.JUDGE_DECISION)
-  ? "allowed"
-  : "dismissed"; // allowed or dismissed
-let caseId: string = "";
+const inTime: boolean = !['false'].includes(process.env.IN_TIME);
+const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
+const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
+const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
+const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
+let caseId: string = '';
 const daysToComply: number = 14;
 
 //refusalOfEu - Refusal under EEA regulations (EA) (payment required)
@@ -83,15 +79,12 @@ let buttonHelper: ButtonHelper;
 let validationHelper: ValidationHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
+let s94b: S94b;
 
-test.describe.configure({ mode: "serial" });
-test.describe(
-  "Legal Admin creates Non-Detained Appellant in Person " +
-    typeOfAppeal +
-    " Rehydrated Case " +
-    (inTime ? "In Time" : "Out of Time"),
-  { tag: "@LegalAdminCreatesNonDetainedAppellantInPersonICC" },
-  () => {
+
+test.describe.configure({ mode: 'serial'});
+test.describe('Legal Admin creates Non-Detained Appellant in Person ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ') + 'ICC Appeal.' , { tag: '@LegalAdminCreatesNonDetainedAppellantInPersonICC' }, () => {
+
     test.beforeEach(async ({ page }) => {
       // Go to the starting url before each test.
       idamPage = new IdamPage(page);
@@ -101,13 +94,14 @@ test.describe(
       validationHelper = new ValidationHelper(page);
       createAppeal = new CreateAppeal(page);
       createCasePage = new CreateCasePage(page);
+        s94b = new S94b(page);
 
       await page.goto(envUrl);
     });
 
-    test("Create Rehydrated case", async ({ page }) => {
-      await idamPage.login(legalOfficerAdminCredentials);
-      await createCasePage.createCase();
+    test('Create Non-detained, In Country, ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC Appeal',   async ({ page }) => {
+        await idamPage.login(legalOfficerAdminCredentials);
+        await createCasePage.createCase();
 
       if (["preview"].includes(runningEnv)) {
         isRehydrated
@@ -115,33 +109,28 @@ test.describe(
           : await createAppeal.setSourceOfAppeal("paperForm");
         await buttonHelper.continueButton.click(); // Before you start screen
 
-        if (isRehydrated) {
-          await createAppeal.enterAriaReferenceNumber();
-          await createAppeal.isAppealOutOfTime(inTime ? "No" : "Yes");
+            if (isRehydrated) {
+                await createAppeal.enterAriaReferenceNumber();
+                await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
+            }
+        } else {
+            await buttonHelper.continueButton.click(); // Before you start screen
         }
-      } else {
-        await buttonHelper.continueButton.click(); // Before you start screen
-      }
-      //   await createAppeal.setSourceOfAppeal('rehydratedAppeal');
-      // await buttonHelper.continueButton.click(); // Before you start screen
-      //  await createAppeal.enterAriaReferenceNumber();
-      // await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
-      await createAppeal.setTribunalAppealReceived();
-      await createAppeal.appellantInPerson("Yes");
-      await createAppeal.locationInUK("Yes");
-      await createAppeal.inDetention("No");
-      await createAppeal.setHomeOfficeReferenceNumber();
-      await createAppeal.setAppellantBasicDetails(true);
-      await createAppeal.setNationality(true);
-      await createAppeal.setAppellantAddress("rehydrated", "Yes");
-      await createAppeal.setAppellantContactDetails();
-      await createAppeal.setTypeOfAppeal(typeOfAppeal);
-      await createAppeal.setHomeOfficeDecisionDate(inTime);
-      isRehydrated
-        ? await createAppeal.uploadNoticeOfDecision("RehydratedNod")
-        : await createAppeal.uploadNoticeOfDecision();
-      await createAppeal.hasSponsor("No");
-      await createAppeal.hasDeportationOrder("No");
+
+        await createAppeal.setTribunalAppealReceived();
+        await createAppeal.appellantInPerson('Yes');
+        await createAppeal.locationInUK('Yes');
+        await createAppeal.inDetention('No');
+        await createAppeal.setHomeOfficeReferenceNumber();
+        await createAppeal.setAppellantBasicDetails(true);
+        await createAppeal.setNationality(true);
+        await createAppeal.setAppellantAddress('rehydrated', 'Yes');
+        await createAppeal.setAppellantContactDetails();
+        await createAppeal.setTypeOfAppeal(typeOfAppeal);
+        await createAppeal.setHomeOfficeDecisionDate(inTime);
+        isRehydrated ? await createAppeal.uploadNoticeOfDecision('RehydratedNod') : await createAppeal.uploadNoticeOfDecision();
+        await createAppeal.hasSponsor('No');
+        await createAppeal.hasDeportationOrder('No');
       //  await createAppeal.hasRemovalDirections('No');
       await createAppeal.hasOtherAppeals("No");
       await createAppeal.isHearingRequired(true);
@@ -163,21 +152,12 @@ test.describe(
       caseId = await pageHelper.grabCaseNumber();
       console.log("caseId>>>>>>>>>>>>>>>" + caseId + "<<<<<<<<<<<<<<<<<<<");
 
-      if (isRehydrated) {
-        await validationHelper.validateLabelDisplayed(
-          imageLocators.rehydrated.notifications.locator,
-          imageLocators.rehydrated.notifications.name
-        );
-        await validationHelper.validateLabelDisplayed(
-          imageLocators.rehydrated.nonDetained.appellantInPersonManual.locator,
-          imageLocators.rehydrated.nonDetained.appellantInPersonManual.name
-        );
-      } else {
-        await validationHelper.validateLabelDisplayed(
-          imageLocators.nonDetained.appellantInPersonManual.locator,
-          imageLocators.nonDetained.appellantInPersonManual.name
-        );
-      }
+        if (isRehydrated) {
+            await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.notifications.locator, imageLocators.rehydrated.notifications.name);
+            await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.appellantInPersonManual.locator, imageLocators.rehydrated.nonDetained.appellantInPersonManual.name);
+        } else {
+            await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.appellantInPersonManual.locator, imageLocators.nonDetained.appellantInPersonManual.name);
+        }
 
       await new SubmitYourAppeal(page).submit(false, inTime);
 
@@ -218,7 +198,7 @@ test.describe(
               imageLocators.nonDetained.appellantInPersonManual.name
             );
 
-        await new S94b(page).setStatus("Yes");
+        await s94b.setStatus("Yes");
         isRehydrated
           ? await validationHelper.validateLabelDisplayed(
               imageLocators.rehydrated.nonDetained.appellantInPersonManualS94b
@@ -231,7 +211,7 @@ test.describe(
               imageLocators.nonDetained.appellantInPersonManualS94b.name
             );
 
-        await new S94b(page).setStatus("No");
+        await s94b.setStatus("No");
         isRehydrated
           ? await validationHelper.validateLabelDisplayed(
               imageLocators.rehydrated.nonDetained.appellantInPersonManual
@@ -243,13 +223,8 @@ test.describe(
               imageLocators.nonDetained.appellantInPersonManual.name
             );
 
-        if (!isRehydrated) {
-          if (
-            typeOfAppeal === "revocationOfProtection" ||
-            typeOfAppeal === "protection"
-          ) {
+        if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
             await new RequestHomeOfficeData(page).matchAppellantDetails();
-          }
         }
 
         if (cmrHearing) {

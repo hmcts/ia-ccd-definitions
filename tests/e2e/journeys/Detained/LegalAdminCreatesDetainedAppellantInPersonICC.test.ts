@@ -40,6 +40,7 @@ import { PrepareDecisionAndReasons } from "../../flows/events/prepareDecisionAnd
 import { CompleteDecisionAndReasons } from "../../flows/events/completeDecisionAndReasons";
 import { ApplyForPermissionToAppeal } from "../../flows/events/applyForPermissionToAppeal";
 import { DecideFtpaApplication } from "../../flows/events/decideFtpaApplication";
+import {TurnOnNotifications} from "../../flows/events/turnOnNotifications";
 
 const inTime: boolean = !["false"].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ["true"].includes(process.env.CMR_HEARING);
@@ -83,6 +84,7 @@ let buttonHelper: ButtonHelper;
 let validationHelper: ValidationHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
+let s94b: S94b;
 
 test.describe.configure({ mode: "serial" });
 test.describe(
@@ -102,12 +104,13 @@ test.describe(
       validationHelper = new ValidationHelper(page);
       createAppeal = new CreateAppeal(page);
       createCasePage = new CreateCasePage(page);
+        s94b = new S94b(page);
 
       await page.goto(envUrl);
     });
 
     test(
-      "Create " + (isRehydrated ? "Rehydrated " : "Paper ") + "ICC case",
+      "Create detained" + (isRehydrated ? "Rehydrated " : "Paper ") + "ICC Appeal",
       async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();
@@ -240,7 +243,7 @@ test.describe(
           "Active"
         );
 
-        await new S94b(page).setStatus("Yes");
+        await s94b.setStatus("Yes");
         isRehydrated
           ? await validationHelper.validateLabelDisplayed(
               imageLocators.rehydrated.detained.appellantInPersonManualS94b
@@ -252,7 +255,7 @@ test.describe(
               imageLocators.detained.appellantInPersonManualS94b.name
             );
 
-        await new S94b(page).setStatus("No");
+        await s94b.setStatus("No");
         isRehydrated
           ? await validationHelper.validateLabelDisplayed(
               imageLocators.rehydrated.detained.appellantInPersonManual.locator,
