@@ -20,6 +20,8 @@ const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
+const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
+
 let caseId: string = '';
 
 //refusalOfEu - Refusal under EEA regulations (EA) (payment required)
@@ -145,7 +147,13 @@ test.describe('Legal Admin creates Detained Rehydrated and Force Decided ICC Cas
         await page.goto(envUrl + '/cases/case-details/' + caseId);
 
         const forceDecidedState = new ForceDecidedStateEvent(page);
-        await forceDecidedState.forceDecidedState('Dismissed'); //Allowed or Dismissed
+        await forceDecidedState.forceDecidedState(judgeDecision);
+
+        if (judgeDecision === 'allowed') {
+            await validationHelper.validateLabelDisplayed(imageLocators.appealCompleted.appealAllowed.locator, imageLocators.appealCompleted.appealAllowed.name);
+        } else {
+            await validationHelper.validateLabelDisplayed(imageLocators.appealCompleted.appealDismissed.locator, imageLocators.appealCompleted.appealDismissed.name);
+        }
     });
 
 });

@@ -117,7 +117,7 @@
     "test:LegalAdminCreatesDetainedRepresentedPrisonDeprivationRehydratedCase": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=deprivation IN_TIME=true npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedRehydratedCase",
     "test:LegalAdminCreatesDetainedRepresentedPrisonProtectionRehydratedCase": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection IN_TIME=true npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedRehydratedCase",
     "test:LegalAdminCreatesDetainedRepresentedPrisonEuSettlementSchemeFeeRemissionRehydratedCase": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=euSettlementScheme IN_TIME=true FEE_REMISSION=Yes npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedRehydratedCase",
-    "test:LegalAdminCreatesDetainedRehydratedAndForceDecidedICC": "yarn playwright install && DETENTION_LOCATION=immigrationRemovalCentre APPEAL_TYPE=deprivation IN_TIME=true IS_REHYDRATED=true FORCE_DECIDED=true npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRehydratedAndForceDecidedICC",
+    "test:LegalAdminCreatesDetainedRehydratedAndForceDecidedICC": "yarn playwright install && DETENTION_LOCATION=immigrationRemovalCentre APPEAL_TYPE=deprivation IN_TIME=true IS_REHYDRATED=true FORCE_DECIDED=true JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRehydratedAndForceDecidedICC",
 
 
 
