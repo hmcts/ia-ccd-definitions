@@ -1,4 +1,14 @@
 export const imageLocators = {
+  appealCompleted: {
+      appealAllowed: {
+          locator: '//*[@id="progress_pre_hearing_details_recorded_admin_decided_allowed"]/dt/ccd-markdown/div/markdown/p[1]/img',
+          name: 'appeal_allowed',
+      },
+      appealDismissed: {
+          locator: '//*[@id="progress_pre_hearing_details_recorded_admin_decided_dismissed"]/dt/ccd-markdown/div/markdown/p[1]/img',
+          name: 'appeal_dismissed',
+      },
+  },
     detained: {
         representedS94b: {
             locator: '//*[@id="journey_type_legal_rep_detained_s9"]/dt/ccd-markdown/div/markdown/p/img',
