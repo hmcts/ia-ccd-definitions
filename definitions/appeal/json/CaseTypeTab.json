@@ -893,7 +893,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "exceptionalCircumstances", "TabFieldDisplayOrder": 506, "FieldShowCondition": "exceptionalCircumstances!=\"\" AND (remissionType=\"exceptionalCircumstancesRemission\" OR lateRemissionType=\"exceptionalCircumstancesRemission\")"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "remissionEcEvidenceDocuments", "TabFieldDisplayOrder": 507, "FieldShowCondition": "remissionEcEvidenceDocuments!=\"\" AND (remissionType=\"exceptionalCircumstancesRemission\" OR lateRemissionType=\"exceptionalCircumstancesRemission\")"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "asylumSupportRefNumber", "TabFieldDisplayOrder": 483, "FieldShowCondition": "asylumSupportRefNumber!=\"\" AND (remissionRequestedBy!=\"*\" OR remissionRequestedBy=\"Appellant\")"},
+    {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "asylumSupportRefNumber", "TabFieldDisplayOrder": 483, "FieldShowCondition": "asylumSupportRefNumber!=\"\" AND (remissionRequestedBy!=\"*\" OR remissionRequestedBy=\"Appellant\")"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "localAuthorityLetters", "TabFieldDisplayOrder": 484, "FieldShowCondition": "localAuthorityLetters!=\"\" AND (remissionRequestedBy!=\"*\" OR remissionRequestedBy=\"Appellant\")"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "helpWithFeesRefNumber", "TabFieldDisplayOrder": 485, "FieldShowCondition": "helpWithFeesRefNumber!=\"\" AND (remissionRequestedBy!=\"*\" OR remissionRequestedBy=\"Appellant\")"},
 
