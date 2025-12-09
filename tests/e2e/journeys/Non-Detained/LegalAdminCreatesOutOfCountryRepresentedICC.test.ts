@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import {
     envUrl,
     homeOfficeOfficerCredentials, judgeCredentials, legalOfficerAdminCredentials,
-    legalOfficerCredentials, listingOfficerCredentials
+    legalOfficerCredentials, listingOfficerCredentials, runningEnv
 } from '../../iacConfig';
 import { IdamPage } from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
@@ -28,9 +28,17 @@ import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAnd
 import {ListTheCase} from "../../flows/events/listTheCase";
 import {ValidationHelper} from "../../helpers/ValidationHelper";
 import {imageLocators} from "../../fixtures/imageLocators";
+import {S94b} from "../../flows/events/setS94bStatus";
+import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
+import {MarkAppealAsPaid} from "../../flows/events/markAppealAsPaid";
+import {RecordOutOfTimeDecision} from "../../flows/events/recordOutOfTimeDecision";
+import {RequestHomeOfficeData} from "../../flows/events/requestHomeOfficeData";
 
-const inTime = true;
-const typeOfAppeal: string = 'deprivation'; // Deprivation of citizenship (no payment required)
+const inTime: boolean = !['false'].includes(process.env.IN_TIME);
+const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
+const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
+const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
+const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
 const daysToComply: number = 14;
 const outOfCountryCircumstance: string = 'entryClearanceDecision';
 
@@ -38,7 +46,19 @@ let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let buttonHelper: ButtonHelper;
+let validationHelper: ValidationHelper;
+let createAppeal: CreateAppeal;
+let createCasePage: CreateCasePage;
+let s94b: S94b;
 let caseId: string = '';
+
+//refusalOfEu - Refusal under EEA regulations (EA) (payment required)
+//refusalOfHumanRights - Refusal human rights (HU) (payment required)
+//deprivation -  Deprivation of citizenship (DC) (no payment required)
+//euSettlementScheme - Refusal of application under the EU Settlement Scheme (EU) (payment required)
+//revocationOfProtection - Revocation of a protection status (RP) (no payment required)
+//protection - Refusal of protection claim (PA) (payment required)
+const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
 
 test.describe.configure({ mode: 'serial'});
 test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Representative', { tag: '@LegalAdminCreatesOutOfCountryRepresentedICC' }, () => {
@@ -48,15 +68,29 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
         linkHelper = new LinkHelper(page);
         pageHelper = new PageHelper(page);
         buttonHelper = new ButtonHelper(page);
-
+        validationHelper = new ValidationHelper(page);
+        createAppeal = new CreateAppeal(page);
+        createCasePage = new CreateCasePage(page);
+        s94b = new S94b(page);
         await page.goto(envUrl);
     });
 
-    test('Create Out of Country Represented Appeal', async ({ page }) => {
-        const createAppeal = new CreateAppeal(page);
+    test.only('Create Out of Country Represented Appeal', async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
-        await new CreateCasePage(page).createCase();
-        await buttonHelper.continueButton.click(); // Before you start page
+        await createCasePage.createCase();
+
+        if (['preview'].includes(runningEnv)) {
+            isRehydrated ? await createAppeal.setSourceOfAppeal('rehydratedAppeal') : await createAppeal.setSourceOfAppeal('paperForm');
+            await buttonHelper.continueButton.click(); // Before you start screen
+
+            if (isRehydrated) {
+                await createAppeal.enterAriaReferenceNumber();
+                await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
+            }
+        } else {
+            await buttonHelper.continueButton.click(); // Before you start screen
+        }
+
         await createAppeal.setTribunalAppealReceived();
         await createAppeal.appellantInPerson('No');
         await createAppeal.locationInUK('No');
@@ -75,18 +109,41 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
             await createAppeal.setHomeOfficeDecisionDate(inTime);
         }
 
-        await createAppeal.uploadNoticeOfDecision();
+        isRehydrated ? await createAppeal.uploadNoticeOfDecision('RehydratedNod') : await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasOtherAppeals('No');
         await createAppeal.isHearingRequired(true);
+
+        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+            await createAppeal.hasFeeRemission(feeRemission);
+        }
+
+        if (typeOfAppeal === 'protection' && feeRemission === 'No') {
+            await createAppeal.setPayNowLater('Now');
+        }
+
         await createAppeal.uploadAppealDocs();
         await createAppeal.checkMyAnswers();
 
-        const submitYourAppeal = new SubmitYourAppeal(page);
-        await submitYourAppeal.submit(false, inTime);
-
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
+
+        if (isRehydrated) {
+            await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.notifications.locator, imageLocators.rehydrated.notifications.name);
+            await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name);
+        } else {
+            await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.representedManual.locator, imageLocators.nonDetained.representedManual.name);
+        }
+
+        await new SubmitYourAppeal(page).submit(false, inTime);
+
+        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+            if (feeRemission === 'Yes') {
+                await new RecordRemissionDecision(page).submit('approved');
+            } else {
+                await new MarkAppealAsPaid(page).recordPayment();
+            }
+        }
 
         await linkHelper.signOut.click();
     });
@@ -95,7 +152,24 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
 
-        await new ValidationHelper(page).validateLabelDisplayed(imageLocators.nonDetained.representedManual.locator, imageLocators.nonDetained.representedManual.name);
+        if (!inTime) {
+            await new RecordOutOfTimeDecision(page).submit('approved');
+        }
+
+        isRehydrated ? await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name) :
+            await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.representedManual.locator, imageLocators.nonDetained.representedManual.name);
+
+        await s94b.setStatus('Yes');
+        isRehydrated ? await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManualS94b.locator, imageLocators.rehydrated.nonDetained.representedManualS94b.name) :
+            await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.representedManualS94b.locator, imageLocators.nonDetained.representedManualS94b.name);
+
+        await s94b.setStatus('No');
+        isRehydrated ? await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name) :
+            await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.representedManual.locator, imageLocators.nonDetained.representedManual.name);
+
+        if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
+            await new RequestHomeOfficeData(page).matchAppellantDetails();
+        }
 
         await new RespondentEvidenceDirection(page).submit(daysToComply);
 

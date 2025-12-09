@@ -1,4 +1,4 @@
-import {expect, test} from '@playwright/test';
+import {test, expect} from "@playwright/test";
 import {
     envUrl, homeOfficeOfficerCredentials, judgeCredentials,
     legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials, runningEnv,
@@ -8,6 +8,7 @@ import {LinkHelper} from '../../helpers/LinkHelper';
 import {PageHelper} from '../../helpers/PageHelper';
 import {ButtonHelper} from '../../helpers/ButtonHelper';
 import {ValidationHelper} from '../../helpers/ValidationHelper'
+import {CaseIdHelper} from "../../helpers/CaseIdHelper";
 import {CreateAppeal} from '../../flows/createAppeal';
 import {CreateCasePage} from '../../page-objects/pages/createCase_page';
 import {SubmitYourAppeal} from "../../flows/events/submitYourAppeal";
@@ -35,7 +36,7 @@ import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndRe
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
 import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
-import {TurnOnNotifications} from "../../flows/events/turnOnNotifications";
+
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
@@ -58,6 +59,7 @@ let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let buttonHelper: ButtonHelper;
 let validationHelper: ValidationHelper;
+let caseIdHelper: CaseIdHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
 let s94b: S94b;
@@ -73,6 +75,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         pageHelper = new PageHelper(page);
         buttonHelper = new ButtonHelper(page);
         validationHelper = new ValidationHelper(page);
+        caseIdHelper = new CaseIdHelper();
         createAppeal = new CreateAppeal(page);
         createCasePage = new CreateCasePage(page);
         s94b = new S94b(page);
@@ -80,7 +83,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await page.goto(envUrl);
     });
 
-    test('Create detained' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC Appeal',   async ({ page }) => {
+    test('Create detained ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC Appeal',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();
 
@@ -139,6 +142,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await createAppeal.checkMyAnswers();
 
         caseId = await pageHelper.grabCaseNumber();
+
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
 
         if (isRehydrated) {
@@ -213,7 +217,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await linkHelper.signOut.click();
     });
 
-    test('Appellant/Legal Rep build case',   async ({ page }) => {
+     test('Appellant/Legal Rep build case',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await pageHelper.getCase(caseId);
         await new BuildYourCase(page).build();

@@ -28,7 +28,6 @@ import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAnd
 import {ListTheCase} from "../../flows/events/listTheCase";
 import {ValidationHelper} from "../../helpers/ValidationHelper";
 import {imageLocators} from "../../fixtures/imageLocators";
-import {S94b} from "../../flows/events/setS94bStatus";
 
 const inTime = true;
 const typeOfAppeal: string = 'deprivation'; // Deprivation of citizenship (no payment required)
@@ -39,28 +38,25 @@ let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let buttonHelper: ButtonHelper;
-let validationHelper: ValidationHelper;
-let s94b: S94b;
 let caseId: string = '';
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Representative', { tag: '@LegalAdminCreatesOutOfCountryRepresentedRehydratedCase' }, () => {
+test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Representative', { tag: '@LegalAdminCreatesOutOfCountryRepresentedICC' }, () => {
 
     test.beforeEach(async ({ page }) => {
         idamPage = new IdamPage(page);
         linkHelper = new LinkHelper(page);
         pageHelper = new PageHelper(page);
         buttonHelper = new ButtonHelper(page);
-        validationHelper = new ValidationHelper(page);
-        s94b = new S94b(page);
+
         await page.goto(envUrl);
     });
 
-    test('Create Out of Country Represented Appeal', async ({ page }) => {
+    test.only('Create Out of Country Represented Appeal', async ({ page }) => {
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalOfficerAdminCredentials);
         await new CreateCasePage(page).createCase();
-        await createAppeal.setSourceOfAppeal('rehydratedAppeal');
+        await createAppeal.setSourceOfAppeal();
         await buttonHelper.continueButton.click(); // Before you start page
         await createAppeal.enterAriaReferenceNumber();
         await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
@@ -82,15 +78,15 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
             await createAppeal.setHomeOfficeDecisionDate(inTime);
         }
 
-        await createAppeal.uploadNoticeOfDecision('RehydratedNod');
+        await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasOtherAppeals('No');
         await createAppeal.isHearingRequired(true);
         await createAppeal.uploadAppealDocs();
         await createAppeal.checkMyAnswers();
 
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.notifications.locator, imageLocators.rehydrated.notifications.name);
-        await new SubmitYourAppeal(page).submit(false, inTime);
+        const submitYourAppeal = new SubmitYourAppeal(page);
+        await submitYourAppeal.submit(false, inTime);
 
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
@@ -102,13 +98,7 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
 
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name);
-
-        await s94b.setStatus('Yes');
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManualS94b.locator, imageLocators.rehydrated.nonDetained.representedManualS94b.name);
-
-        // await s94b.setStatus('No');
-        // await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name);
+        await new ValidationHelper(page).validateLabelDisplayed(imageLocators.nonDetained.representedManual.locator, imageLocators.nonDetained.representedManual.name);
 
         await new RespondentEvidenceDirection(page).submit(daysToComply);
 

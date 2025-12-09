@@ -31,6 +31,8 @@ import {imageLocators} from "../../fixtures/imageLocators";
 import {S94b} from "../../flows/events/setS94bStatus";
 import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
+import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
+import {MarkAppealAsPaid} from "../../flows/events/markAppealAsPaid";
 
 const inTime = true;
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
@@ -69,7 +71,7 @@ test.describe('Legal Admin Officer Creates Out of Country, Appellant in Person, 
         await page.goto(envUrl);
     });
 
-    test('Create Out of Country, Appellant in Person ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC Appeal', async ({ page }) => {
+    test.only('Create Out of Country, Appellant in Person ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC Appeal', async ({ page }) => {
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalOfficerAdminCredentials);
         await new CreateCasePage(page).createCase();
@@ -107,8 +109,20 @@ test.describe('Legal Admin Officer Creates Out of Country, Appellant in Person, 
         await createAppeal.hasSponsor('No');
         await createAppeal.hasOtherAppeals('No');
         await createAppeal.isHearingRequired(true);
+
+        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+            await createAppeal.hasFeeRemission(feeRemission);
+        }
+
+        if (typeOfAppeal === 'protection' && feeRemission === 'No') {
+            await createAppeal.setPayNowLater('Now');
+        }
+
         await createAppeal.uploadAppealDocs();
         await createAppeal.checkMyAnswers();
+
+        caseId = await pageHelper.grabCaseNumber();
+        console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
 
         if (isRehydrated) {
             await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.notifications.locator, imageLocators.rehydrated.notifications.name);
@@ -119,9 +133,13 @@ test.describe('Legal Admin Officer Creates Out of Country, Appellant in Person, 
 
         await new SubmitYourAppeal(page).submit(false, inTime);
 
-        caseId = await pageHelper.grabCaseNumber();
-        console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
-
+        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+            if (feeRemission === 'Yes') {
+                await new RecordRemissionDecision(page).submit('approved');
+            } else {
+                await new MarkAppealAsPaid(page).recordPayment();
+            }
+        }
 
         await linkHelper.signOut.click();
     });

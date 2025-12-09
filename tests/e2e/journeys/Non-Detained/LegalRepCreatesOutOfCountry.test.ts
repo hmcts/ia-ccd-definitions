@@ -28,10 +28,22 @@ import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAnd
 import {ListTheCase} from "../../flows/events/listTheCase";
 import {ValidationHelper} from "../../helpers/ValidationHelper";
 import {imageLocators} from "../../fixtures/imageLocators";
+import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 
-const inTime = true;
-const typeOfAppeal: string = 'deprivation'; // Deprivation of citizenship (no payment required)
+const inTime: boolean = !['false'].includes(process.env.IN_TIME);
+const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
+const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
+const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
+const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
 const daysToComply: number = 14;
+
+//refusalOfEu - Refusal under EEA regulations (EA) (payment required)
+//refusalOfHumanRights - Refusal human rights (HU) (payment required)
+//deprivation -  Deprivation of citizenship (DC) (no payment required)
+//euSettlementScheme - Refusal of application under the EU Settlement Scheme (EU) (payment required)
+//revocationOfProtection - Revocation of a protection status (RP) (no payment required)
+//protection - Refusal of protection claim (PA) (payment required)
+const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
 
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
@@ -40,7 +52,7 @@ let caseId: string = '';
 const outOfCountryDecision: string = 'refusePermit';
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@LegalRepCreatesOutOfCountryAppeal' }, () => {
+test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@LegalRepCreatesOutOfCountry' }, () => {
 
     test.beforeEach(async ({ page }) => {
         idamPage = new IdamPage(page);
@@ -77,16 +89,33 @@ test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@L
         await createAppeal.hasOtherAppeals('No');
         await createAppeal.setLegalRepresentativeDetails();
         await createAppeal.isHearingRequired(true);
-        await createAppeal.checkMyAnswers(true); //skip for preview as close and continue screen displaying
 
-        const submitYourAppeal = new SubmitYourAppeal(page);
-        await submitYourAppeal.submit(inTime);
+        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+            await createAppeal.hasFeeRemission(feeRemission);
+        }
+
+        if (typeOfAppeal === 'protection' && feeRemission === 'No') {
+            await createAppeal.setPayNowLater('Now');
+        }
+
+        await createAppeal.checkMyAnswers(true); //skip for preview as close and continue screen displaying
 
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
 
+        await new SubmitYourAppeal(page).submit(inTime);
+
         await linkHelper.signOut.click();
     });
+
+    if (feeRemission === 'Yes'){
+        test('Legal Admin records Remission decision', async ({ page }) => {
+            await idamPage.login(legalOfficerAdminCredentials);
+            await pageHelper.getCase(caseId);
+            await new RecordRemissionDecision(page).submit('approved');
+            await linkHelper.signOut.click();
+        });
+    }
 
     test('Legal Officer creates Respondent Evidence Direction', async ({ page }) => {
         await idamPage.login(listingOfficerCredentials);

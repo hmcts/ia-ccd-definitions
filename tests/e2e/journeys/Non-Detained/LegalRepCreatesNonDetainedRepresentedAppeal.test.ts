@@ -30,18 +30,33 @@ import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAnd
 import {ListTheCase} from "../../flows/events/listTheCase";
 import {imageLocators} from "../../fixtures/imageLocators";
 import {ValidationHelper} from "../../helpers/ValidationHelper";
+import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
+import {MarkAppealAsPaid} from "../../flows/events/markAppealAsPaid";
 
-const inTime: boolean = true;
+
+const inTime: boolean = !['false'].includes(process.env.IN_TIME);
+const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
+const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
+const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
+const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
+const daysToComply: number = 14;
+let caseId: string = '';
+
+
+//refusalOfEu - Refusal under EEA regulations (EA) (payment required)
+//refusalOfHumanRights - Refusal human rights (HU) (payment required)
+//deprivation -  Deprivation of citizenship (DC) (no payment required)
+//euSettlementScheme - Refusal of application under the EU Settlement Scheme (EU) (payment required)
+//revocationOfProtection - Revocation of a protection status (RP) (no payment required)
+//protection - Refusal of protection claim (PA) (payment required)
+const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
+
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
-let caseId: string = '';
-
-const daysToComply: number = 14;
-const typeOfAppeal: string = 'deprivation'; // Deprivation of citizenship (no payment required)
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@LegalRepCreatesNonDetainedRepresentedAppeal' }, () => {
+test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@LegalRepCreatesNonDetainedRepresented' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -73,6 +88,15 @@ test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@Legal
         await createAppeal.hasOtherAppeals('No');
         await createAppeal.setLegalRepresentativeDetails();
         await createAppeal.isHearingRequired(true);
+
+        if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+            await createAppeal.hasFeeRemission(feeRemission);
+        }
+
+        if (typeOfAppeal === 'protection' && feeRemission === 'No') {
+            await createAppeal.setPayNowLater('Now');
+        }
+
         await createAppeal.checkMyAnswers(true); //skip for preview as close and continue screen displaying
 
 
@@ -80,8 +104,18 @@ test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@Legal
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
 
         await new SubmitYourAppeal(page).submit(true, inTime);
+
         await linkHelper.signOut.click();
     });
+
+    if (feeRemission === 'Yes'){
+        test('Legal Admin records Remission decision', async ({ page }) => {
+            await idamPage.login(legalOfficerAdminCredentials);
+            await pageHelper.getCase(caseId);
+            await new RecordRemissionDecision(page).submit('approved');
+            await linkHelper.signOut.click();
+        });
+    }
 
     test('Legal Officer creates Respondent Evidence Direction', async ({ page }) => {
         await idamPage.login(listingOfficerCredentials);

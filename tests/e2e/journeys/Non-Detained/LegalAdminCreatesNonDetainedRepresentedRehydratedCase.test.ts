@@ -1,7 +1,7 @@
 import {expect, test} from '@playwright/test';
 import {
     envUrl, homeOfficeOfficerCredentials, judgeCredentials,
-    legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials,
+    legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials, runningEnv,
 } from '../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import {LinkHelper} from '../../helpers/LinkHelper';
@@ -34,11 +34,15 @@ import {StartDecisionAndReasons} from "../../flows/events/startDecisionAndReason
 import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndReasons";
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
 import {TurnOnNotifications} from "../../flows/events/turnOnNotifications";
+import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
+import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
+const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
+const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
 const daysToComply: number = 14;
 let caseId: string = '';
 
@@ -61,7 +65,7 @@ let createCasePage: CreateCasePage;
 let s94b: S94b;
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Non-Detained Represented ' + typeOfAppeal + ' Rehydrated Case ' + (inTime ? 'In Time' : 'Out of Time'), { tag: '@LegalAdminCreatesNonDetainedRepresentedRehydratedCase' }, () => {
+test.describe('Legal Admin creates Non-Detained, In country, Represented, ' + typeOfAppeal + (isRehydrated ? ', Rehydrated, ' : ', Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC Appeal.', { tag: '@LegalAdminCreatesNonDetainedRepresentedRehydratedCase' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -76,13 +80,22 @@ test.describe('Legal Admin creates Non-Detained Represented ' + typeOfAppeal + '
         await page.goto(envUrl);
     });
 
-    test('Create Rehydrated case',   async ({ page }) => {
+    test('Create non-detained' + (isRehydrated ? ', Rehydrated ' : ', Paper ') + 'ICC Appeal',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();
-        await createAppeal.setSourceOfAppeal('rehydratedAppeal');
-        await buttonHelper.continueButton.click(); // Before you start screen
-        await createAppeal.enterAriaReferenceNumber();
-        await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
+
+        if (['preview'].includes(runningEnv)) {
+            isRehydrated ? await createAppeal.setSourceOfAppeal('rehydratedAppeal') : await createAppeal.setSourceOfAppeal('paperForm');
+            await buttonHelper.continueButton.click(); // Before you start screen
+
+            if (isRehydrated) {
+                await createAppeal.enterAriaReferenceNumber();
+                await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
+            }
+        } else {
+            await buttonHelper.continueButton.click(); // Before you start screen
+        }
+
         await createAppeal.setTribunalAppealReceived();
         await createAppeal.appellantInPerson('No', 'Yes');
         await createAppeal.locationInUK('Yes');
@@ -90,11 +103,11 @@ test.describe('Legal Admin creates Non-Detained Represented ' + typeOfAppeal + '
         await createAppeal.setHomeOfficeReferenceNumber();
         await createAppeal.setAppellantBasicDetails(true);
         await createAppeal.setNationality(true);
-        await createAppeal.setAppellantAddress('rehydrated', 'Yes');
+        isRehydrated ? await createAppeal.setAppellantAddress('rehydrated', 'Yes') : await createAppeal.setAppellantAddress('nonDetained', 'Yes');
         await createAppeal.setAppellantContactDetails();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);
         await createAppeal.setHomeOfficeDecisionDate(inTime);
-        await createAppeal.uploadNoticeOfDecision('RehydratedNod');
+        isRehydrated ? await createAppeal.uploadNoticeOfDecision('RehydratedNod') : await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');
        // await createAppeal.hasRemovalDirections('No');
@@ -112,10 +125,15 @@ test.describe('Legal Admin creates Non-Detained Represented ' + typeOfAppeal + '
         await createAppeal.uploadAppealDocs();
         await createAppeal.checkMyAnswers();
 
+        if (isRehydrated) {
+            await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.notifications.locator, imageLocators.rehydrated.notifications.name);
+            await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name);
+        } else {
+            await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.representedManual.locator, imageLocators.nonDetained.representedManual.name);
+        }
+
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
-
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.notifications.locator, imageLocators.rehydrated.notifications.name);
 
         await new SubmitYourAppeal(page).submit(false, inTime);
 
@@ -126,8 +144,6 @@ test.describe('Legal Admin creates Non-Detained Represented ' + typeOfAppeal + '
                 await new MarkAppealAsPaid(page).recordPayment();
             }
         }
-
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name);
 
         await linkHelper.signOut.click();
     });
@@ -140,13 +156,16 @@ test.describe('Legal Admin creates Non-Detained Represented ' + typeOfAppeal + '
             await new RecordOutOfTimeDecision(page).submit('approved');
         }
 
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name);
+        isRehydrated ? await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name) :
+            await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.representedManual.locator, imageLocators.nonDetained.representedManual.name);
 
         await s94b.setStatus('Yes');
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManualS94b.locator, imageLocators.rehydrated.nonDetained.representedManualS94b.name);
+        isRehydrated ? await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManualS94b.locator, imageLocators.rehydrated.nonDetained.representedManualS94b.name) :
+            await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.representedManualS94b.locator, imageLocators.nonDetained.representedManualS94b.name);
 
         await s94b.setStatus('No');
-        await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name);
+        isRehydrated ? await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name) :
+            await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.representedManual.locator, imageLocators.nonDetained.representedManual.name);
 
         if (typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'protection') {
             await new RequestHomeOfficeData(page).matchAppellantDetails();
@@ -155,12 +174,6 @@ test.describe('Legal Admin creates Non-Detained Represented ' + typeOfAppeal + '
         if (cmrHearing) {
             await new GenerateListCMR(page).createTask();
         }
-
-
-        // Turn on Notifications/WA tasks
-        await new TurnOnNotifications(page).submit();
-        await validationHelper.validateNextStepNotAvailable('Turn on notifications/WA tasks');
-        await validationHelper.validateLabelNotDisplayed(imageLocators.rehydrated.notifications.locator);
 
         await new RespondentEvidenceDirection(page).submit(daysToComply);
 
@@ -182,9 +195,13 @@ test.describe('Legal Admin creates Non-Detained Represented ' + typeOfAppeal + '
         await linkHelper.signOut.click();
     });
 
-    test('Appellant/Legal Rep build case',   async ({ page }) => {
+    test('Turn on notifications and then Appellant/Legal Rep build case',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await pageHelper.getCase(caseId);
+        // Turn on Notifications/WA tasks
+        await new TurnOnNotifications(page).submit();
+        await validationHelper.validateNextStepNotAvailable('Turn on notifications/WA tasks');
+        await validationHelper.validateLabelNotDisplayed(imageLocators.rehydrated.notifications.locator);
         await new BuildYourCase(page).build();
         await linkHelper.signOut.click();
     });
@@ -254,5 +271,17 @@ test.describe('Legal Admin creates Non-Detained Represented ' + typeOfAppeal + '
         await linkHelper.signOut.click();
     });
 
+    test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({ page }) => {
+        await idamPage.login(judgeDecision === 'allowed' ? homeOfficeOfficerCredentials : legalOfficerAdminCredentials);
+        judgeDecision === 'allowed' ? await page.goto(envUrl + '/cases/case-details/' + caseId) : await pageHelper.getCase(caseId);
+        await new ApplyForPermissionToAppeal(page).apply(judgeDecision === 'allowed' ? 'Respondent' :  'Appellant');
+        await linkHelper.signOut.click();
+    });
 
+    test('Judge decides FTPA application', async ({ page }) => {
+        await idamPage.login(judgeCredentials);
+        await pageHelper.getCase(caseId);
+        await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
+        await linkHelper.signOut.click();
+    });
 });
