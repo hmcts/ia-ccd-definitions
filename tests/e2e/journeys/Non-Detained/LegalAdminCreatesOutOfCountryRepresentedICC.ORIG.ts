@@ -58,7 +58,7 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
         await new CreateCasePage(page).createCase();
         await createAppeal.setSourceOfAppeal();
         await buttonHelper.continueButton.click(); // Before you start page
-        await createAppeal.enterAriaReferenceNumber();
+        await createAppeal.setAriaReferenceNumber();
         await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
         await createAppeal.setTribunalAppealReceived();
         await createAppeal.appellantInPerson('No');

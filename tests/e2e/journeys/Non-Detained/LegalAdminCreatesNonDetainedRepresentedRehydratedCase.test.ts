@@ -89,7 +89,7 @@ test.describe('Legal Admin creates Non-Detained, In country, Represented, ' + ty
             await buttonHelper.continueButton.click(); // Before you start screen
 
             if (isRehydrated) {
-                await createAppeal.enterAriaReferenceNumber();
+                await createAppeal.setAriaReferenceNumber();
                 await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
             }
         } else {

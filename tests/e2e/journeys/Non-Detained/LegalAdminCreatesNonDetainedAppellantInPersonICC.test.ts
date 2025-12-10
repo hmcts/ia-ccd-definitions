@@ -88,7 +88,7 @@ test.describe('Legal Admin creates Non-Detained Appellant in Person ' + typeOfAp
             await buttonHelper.continueButton.click(); // Before you start screen
 
             if (isRehydrated) {
-                await createAppeal.enterAriaReferenceNumber();
+                await createAppeal.setAriaReferenceNumber();
                 await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
             }
         } else {

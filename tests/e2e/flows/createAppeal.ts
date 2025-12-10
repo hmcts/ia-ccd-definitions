@@ -2,6 +2,7 @@ import moment from "moment/moment";
 import { Page } from "@playwright/test";
 import { appellant, sponsor, legalRepresentative, runningEnv, outOfCountryAddress } from '../iacConfig';
 import { detentionFacility } from '../fixtures/detentionFacilities';
+import {ariaReferenceNumbers} from "../fixtures/ariaReferenceNumbers";
 import { ButtonHelper } from '../helpers/ButtonHelper';
 
 //const outOfTimedImageLocator: string = '//*[@id="confirmation-body"]/ccd-markdown/div/markdown/p[1]/img';
@@ -509,8 +510,14 @@ export class CreateAppeal {
    }
 
     // Rehydrate flow for Legal Admin
-    async enterAriaReferenceNumber() {
-        await this.page.fill('#appealReferenceNumber', 'AA/12345/1234');
+    async setAriaReferenceNumber(testInvalidFirst: boolean = false) {
+        if (!testInvalidFirst) {
+            await this.page.fill('#appealReferenceNumber', ariaReferenceNumbers.valid);
+            await this.page.waitForTimeout(10000); // waits for 2 seconds
+
+        } else {
+            // TODO need to add validating the error message displayed on the webpage
+        }
         await this.buttonHelper.continueButton.click();
     }
 

@@ -81,7 +81,7 @@ test.describe('Legal Admin Officer Creates Out of Country, Appellant in Person, 
             await buttonHelper.continueButton.click(); // Before you start screen
 
             if (isRehydrated) {
-                await createAppeal.enterAriaReferenceNumber();
+                await createAppeal.setAriaReferenceNumber();
                 await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
             }
         } else {
