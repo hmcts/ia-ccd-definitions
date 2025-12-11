@@ -68,11 +68,14 @@
     "test:LegalRepCreatesNonDetainedRepresentedEuSettlementSchemeFeeRemission": "yarn playwright install && APPEAL_TYPE=euSettlementScheme IN_TIME=true FEE_REMISSION=Yes JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalRepCreatesNonDetainedRepresented",
 
     "test:LegalRepCreatesOutOfCountryDeprivation": "yarn playwright install && APPEAL_TYPE=deprivation IN_TIME=true JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalRepCreatesOutOfCountry",
-    "test:LegalRepCreatesOutOfCountrEuSettlementSchemeFeeRemission": "yarn playwright install && APPEAL_TYPE=euSettlementScheme IN_TIME=true FEE_REMISSION=Yes JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalRepCreatesOutOfCountry",
+    "test:LegalRepCreatesOutOfCountryEuSettlementSchemeFeeRemission": "yarn playwright install && APPEAL_TYPE=euSettlementScheme IN_TIME=true FEE_REMISSION=Yes JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalRepCreatesOutOfCountry",
 
     "test:LegalAdminCreatesDetainedRehydratedAndForceDecidedICC": "yarn playwright install && DETENTION_LOCATION=immigrationRemovalCentre APPEAL_TYPE=deprivation IN_TIME=true IS_REHYDRATED=true FORCE_DECIDED=true JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRehydratedAndForceDecidedICC",
 
     "test:LegalAdminCreatesDetainedRepresentedPrisonProtectionToNonDetained": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedRepresentedToNonDetainedICC",
+
+    "test:LegalRepEditsDetainedAppealBeforeSubmission": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection npx playwright test --headed --project chromium --grep @LegalRepEditsDetainedAppealBeforeSubmission",
+
 
     "clean": "rm -rf target/",
     "decrypt": "node bin/decrypt.js",

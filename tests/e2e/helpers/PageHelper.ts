@@ -2,6 +2,8 @@ import { Page } from "@playwright/test";
 
 export class PageHelper {
 
+    readonly callbackErrorLocator: string = '//*[@id="content"]/div/exui-ccd-connector/ccd-case-edit/ccd-case-edit-page/ccd-callback-errors';
+    readonly errorsList: string = '//*[@id="errors"]/li'
     constructor(public page: Page) {}
 
     async grabCaseNumber() {
@@ -36,5 +38,19 @@ export class PageHelper {
                 break;
             }
         }
+    }
+
+    async checkForAnyErrorsOnPage() {
+        await this.page.locator(this.callbackErrorLocator).waitFor({timeout:5000});
+        console.log(await this.page.locator(this.callbackErrorLocator).isVisible());
+        return (await this.page.locator(this.callbackErrorLocator).isVisible());
+    }
+
+    async checkForSingleErrorOnPage(errorMessage: string) {
+        await this.page.locator(this.callbackErrorLocator).waitFor({timeout:5000});
+        console.log(await this.page.locator(this.callbackErrorLocator).isVisible());
+        console.log(errorMessage + '>>>> ', await this.page.locator(this.errorsList).innerText());
+        return (await this.page.locator(this.errorsList).innerText() === errorMessage);
+
     }
 }

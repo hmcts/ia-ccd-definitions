@@ -1,8 +1,8 @@
 import moment from "moment/moment";
-import { Page } from "@playwright/test";
+import { Page, expect } from "@playwright/test";
 import { appellant, sponsor, legalRepresentative, runningEnv, outOfCountryAddress } from '../iacConfig';
 import { detentionFacility } from '../fixtures/detentionFacilities';
-import {ariaReferenceNumbers} from "../fixtures/ariaReferenceNumbers";
+import {ariaReferenceNumber} from "../fixtures/ariaReferenceNumber";
 import { ButtonHelper } from '../helpers/ButtonHelper';
 
 //const outOfTimedImageLocator: string = '//*[@id="confirmation-body"]/ccd-markdown/div/markdown/p[1]/img';
@@ -510,16 +510,36 @@ export class CreateAppeal {
    }
 
     // Rehydrate flow for Legal Admin
-    async setAriaReferenceNumber(testInvalidFirst: boolean = false) {
-        if (!testInvalidFirst) {
-            await this.page.fill('#appealReferenceNumber', ariaReferenceNumbers.valid);
-            await this.page.waitForTimeout(10000); // waits for 2 seconds
-
-        } else {
-            // TODO need to add validating the error message displayed on the webpage
-        }
+    async setAriaReferenceNumber() {
+        await this.page.fill('#appealReferenceNumber', ariaReferenceNumber.valid);
         await this.buttonHelper.continueButton.click();
-    }
+
+
+        // console.log(currentUrl)
+        // console.log(this.page.url());
+        // while (currentUrl === this.page.url()) {
+        //     console.log('here');
+        //     console.log(currentUrl + ' >>>>>> ' + this.page.url());
+        //     if (await this.page.locator('#edit-case-event_error-summary-heading').count() > 0) {
+        //         console.log(await this.page.locator('#edit-case-event_error-summary-heading').innerText());
+        //         console.log(await this.page.locator('#errors').first().innerText());
+        //         if (await this.page.locator('#errors').first().innerText() === errorMessage) {
+        //             await this.page.fill('#appealReferenceNumber', ariaReferenceNumber.valid);
+        //             await this.buttonHelper.continueButton.click();
+        //             console.log('count>>> ',await this.page.locator('#edit-case-event_error-summary-heading').count());
+        //         }
+        //       break;
+        //     }
+        // }
+
+
+        const maxRetries: number = 10;
+        let retry: number = 0;
+        //await this.page.waitForTimeout(5000); // waits for 2 seconds
+        const errorText:string = 'The reference number is in an incorrect format.';
+
+
+     }
 
     // Rehydrate flow for Legal Admin
     async isAppealOutOfTime(outOfTime: string = 'No') {
