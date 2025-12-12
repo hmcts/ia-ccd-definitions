@@ -83,6 +83,8 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await page.goto(envUrl);
     });
 
+
+
     test('Create detained ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC Appeal',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();

@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { envUrl, legalOfficerAdminCredentials } from '../../iacConfig';
+import {envUrl, legalOfficerAdminCredentials, runningEnv} from '../../iacConfig';
 import { IdamPage } from '../../page-objects/pages/idam.po';
 import { LinkHelper } from '../../helpers/LinkHelper';
 import { PageHelper } from '../../helpers/PageHelper';
@@ -13,6 +13,9 @@ import { imageLocators } from '../../fixtures/imageLocators';
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
+const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
+const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
+
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
@@ -21,7 +24,6 @@ let validationHelper: ValidationHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
 let submitYourAppeal: SubmitYourAppeal;
-const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 let caseId: string;
 
 //refusalOfEu - Refusal under EEA regulations (EA) (payment required)
@@ -53,7 +55,19 @@ test.describe('Legal Admin creates Represented Detained ' + typeOfAppeal + ' App
     test('Create LR-manual Detained Appeal, then convert to Non-Detained',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();
-        await buttonHelper.continueButton.click(); // Before you start page
+
+        if (['preview'].includes(runningEnv)) {
+            isRehydrated ? await createAppeal.setSourceOfAppeal('rehydratedAppeal') : await createAppeal.setSourceOfAppeal('paperForm');
+            await buttonHelper.continueButton.click(); // Before you start screen
+
+            if (isRehydrated) {
+                await createAppeal.setAriaReferenceNumber();
+                await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
+            }
+        } else {
+            await buttonHelper.continueButton.click(); // Before you start screen
+        }
+
         await createAppeal.setTribunalAppealReceived();
         await createAppeal.appellantInPerson('No', 'Yes');
         await createAppeal.locationInUK('Yes');
@@ -71,7 +85,7 @@ test.describe('Legal Admin creates Represented Detained ' + typeOfAppeal + ' App
         await createAppeal.setAppellantContactDetails();
         await createAppeal.setTypeOfAppeal(typeOfAppeal);
         await createAppeal.setHomeOfficeDecisionDate(inTime);
-        await createAppeal.uploadNoticeOfDecision();
+        isRehydrated ? await createAppeal.uploadNoticeOfDecision('RehydratedNod') : await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');
         await createAppeal.hasRemovalDirections('No');
@@ -94,13 +108,26 @@ test.describe('Legal Admin creates Represented Detained ' + typeOfAppeal + ' App
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
         await submitYourAppeal.submit(false, inTime);
 
-        await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManual.locator, imageLocators.detained.representedManual.name);
+        if (isRehydrated) {
+            await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.notifications.locator, imageLocators.rehydrated.notifications.name);
+            await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.detained.representedManual.locator, imageLocators.rehydrated.detained.representedManual.name);
+        } else {
+            await validationHelper.validateLabelDisplayed(imageLocators.detained.representedManual.locator, imageLocators.detained.representedManual.name);
+        }
+
         await validationHelper.validateCaseFlagExists('Detained individual', 'Active');
 
         await new RemoveDetainedStatus(page).removeStatus();
 
-        await validationHelper.validateLabelNotDisplayed(imageLocators.detained.representedManual.locator);
-        await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.representedManual.locator, imageLocators.nonDetained.representedManual.name);
+        if (isRehydrated) {
+            await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.notifications.locator, imageLocators.rehydrated.notifications.name);
+            await validationHelper.validateLabelDisplayed(imageLocators.rehydrated.nonDetained.representedManual.locator, imageLocators.rehydrated.nonDetained.representedManual.name);
+            await validationHelper.validateLabelNotDisplayed(imageLocators.rehydrated.detained.representedManual.locator);
+        } else {
+            await validationHelper.validateLabelDisplayed(imageLocators.nonDetained.representedManual.locator, imageLocators.nonDetained.representedManual.name);
+            await validationHelper.validateLabelNotDisplayed(imageLocators.detained.representedManual.locator);
+        }
+
         await validationHelper.validateDataOnAppealTabDetainedStatusRemoved();
         await validationHelper.validateDataOnAppellantTabDetainedStatusRemoved(detentionLocation);
 

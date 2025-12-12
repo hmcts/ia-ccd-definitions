@@ -11,7 +11,7 @@ export class ForceDecidedStateEvent {
     }
 
 
-    async forceDecidedState(decision: 'allowed' | 'dismissed' = 'allowed') {
+    async forceDecidedState(decision: string = 'allowed') {
         await this.whenAppealDecided();
         await this.whatDecision(decision);
         await this.checkMyAnswers();
@@ -30,11 +30,8 @@ export class ForceDecidedStateEvent {
 
     }
 
-    async whatDecision(decision: 'allowed' | 'dismissed') {
-        const decisionId = decision === 'allowed'
-            ? 'isDecisionAllowed-allowed'
-            : 'isDecisionAllowed-dismissed';
-        await this.page.check(`#${decisionId}`);
+    async whatDecision(decision: string) {
+        await this.page.check(`#isDecisionAllowed-${decision}`);
         await this.buttonHelper.continueButton.click();
     }
 
@@ -43,5 +40,4 @@ export class ForceDecidedStateEvent {
         await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
     }
 
-    async
 }

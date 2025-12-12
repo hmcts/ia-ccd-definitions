@@ -19,6 +19,7 @@ import { test } from '../../fixtures/myFixture';
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
+const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
 
 let idamPage: IdamPage;
 let linkHelper: LinkHelper;

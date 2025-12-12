@@ -512,6 +512,7 @@ export class CreateAppeal {
     // Rehydrate flow for Legal Admin
     async setAriaReferenceNumber() {
         await this.page.fill('#appealReferenceNumber', ariaReferenceNumber.valid);
+        console.log('ARIA reference number: ', await this.page.locator('#appealReferenceNumber').inputValue());
         await this.buttonHelper.continueButton.click();
 
 

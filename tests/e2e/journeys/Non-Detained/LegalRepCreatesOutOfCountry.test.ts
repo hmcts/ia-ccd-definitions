@@ -49,7 +49,7 @@ let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let caseId: string = '';
-const outOfCountryDecision: string = 'refusePermit';
+const outOfCountryDecision: string = 'entryClearanceDecision';
 
 test.describe.configure({ mode: 'serial'});
 test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@LegalRepCreatesOutOfCountry' }, () => {

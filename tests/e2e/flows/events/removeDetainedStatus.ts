@@ -20,7 +20,7 @@ export class RemoveDetainedStatus {
         await new PageHelper(this.page).selectNextStep('Remove Detained Status');
         await this.detentionRemovalDetails();
         await this.appellantAddressManual();
-        await this.createAppeal.appellantDetails();
+        await this.createAppeal.setAppellantContactDetails();
         await this.removeDetainedStatusButton.click();
         await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
     }

@@ -28,8 +28,8 @@ export class ServiceAuthUtils {
     try {
       const response = await apiContext.post(this.serviceAuthUrl, {
         headers: {
-          "content-type": "application/json",
-          Accept: "*/*",
+          "content-type": "application/x-www-form-urlencoded",
+          Accept: "application/json",
         },
         data: {
           microservice: payload.microservice,

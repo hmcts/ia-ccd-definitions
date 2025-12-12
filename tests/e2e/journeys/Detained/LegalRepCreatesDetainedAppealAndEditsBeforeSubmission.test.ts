@@ -35,6 +35,72 @@ let idamPage: IdamPage;
 let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let buttonHelper: ButtonHelper;
+let createAppeal: CreateAppeal;
+
+async function buildAppeal(stage: string = 'create') {
+    await createAppeal.locationInUK('Yes');
+    await createAppeal.inDetention('Yes');
+    await createAppeal.setDetentionLocation(detentionLocation);
+
+    if (detentionLocation === 'prison' || detentionLocation === 'other') {
+        await createAppeal.setCustodialSentence('Yes');
+    }
+
+    if (detentionLocation === 'immigrationRemovalCentre') {
+        await createAppeal.setBailApplication('Yes');
+    }
+
+    await createAppeal.setHomeOfficeReferenceNumber();
+    await createAppeal.setAppellantBasicDetails(false);
+
+    if (stage === 'create') {
+        await createAppeal.setNationality(true);
+    } else {
+        await buttonHelper.continueButton.click(); // Nationality - no need to load another one
+    }
+
+    if (detentionLocation === 'other') {
+        await createAppeal.setAppellantAddress('detained', 'Yes');
+    }
+
+    await createAppeal.setTypeOfAppeal(typeOfAppeal);
+
+    if (typeOfAppeal !== 'euSettlementScheme') {
+        await createAppeal.setGroundsOfAppeal(typeOfAppeal);
+    }
+
+    await createAppeal.setHomeOfficeDecisionDate(inTime);
+
+    if (stage === 'create') {
+        await createAppeal.uploadNoticeOfDecision();
+    } else {
+         await buttonHelper.continueButton.click(); // Upload Notice of Decision - no need to load another document
+    }
+
+ if (stage === 'create') {
+     await createAppeal.hasSponsor('No');
+     await createAppeal.hasDeportationOrder('No');
+     await createAppeal.hasRemovalDirections('No');
+     await createAppeal.hasNewMatters('No');
+    } else {
+     await createAppeal.hasSponsor('Yes');
+     await createAppeal.hasDeportationOrder('Yes');
+     await createAppeal.hasRemovalDirections('Yes');
+     await createAppeal.hasNewMatters('Yes');
+    }
+
+    await createAppeal.hasOtherAppeals('No');
+    await createAppeal.setLegalRepresentativeDetails();
+    await createAppeal.isHearingRequired(true);
+
+    if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+        await createAppeal.hasFeeRemission(feeRemission);
+    }
+
+    if (typeOfAppeal === 'protection' && feeRemission === 'No') {
+        await createAppeal.setPayNowLater('Now');
+    }
+}
 
 test.describe.configure({ mode: 'serial' });
 test.describe('Create Detained Appeal as Legal Representative with detention location: ' + detentionLocation + ', ' + (inTime ? 'In Time' : 'Out of Time') + ' and ' + (cmrHearing ? 'with' : 'without') + ' CMR listing', { tag: '@LegalRepEditsDetainedAppealBeforeSubmission' }, () => {
@@ -45,12 +111,11 @@ test.describe('Create Detained Appeal as Legal Representative with detention loc
         linkHelper = new LinkHelper(page);
         pageHelper = new PageHelper(page);
         buttonHelper = new ButtonHelper(page);
-
+        createAppeal = new CreateAppeal(page);
         await page.goto(envUrl);
     });
 
     test('Create Detained Appeal', async ({ page }) => {
-        const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalRepresentativeCredentials);
         await new CreateCasePage(page).createCase();
 
@@ -75,74 +140,7 @@ test.describe('Create Detained Appeal as Legal Representative with detention loc
             await new PaymentPage(page).makePayment('CC', caseId);
         }
 
-
         await linkHelper.signOut.click();
-
-        /*************************/
-        async function buildAppeal(stage: string = 'create') {
-            await createAppeal.locationInUK('Yes');
-            await createAppeal.inDetention('Yes');
-            await createAppeal.setDetentionLocation(detentionLocation);
-
-            if (detentionLocation === 'prison' || detentionLocation === 'other') {
-                await createAppeal.setCustodialSentence('Yes');
-            }
-
-            if (detentionLocation === 'immigrationRemovalCentre') {
-                await createAppeal.setBailApplication('Yes');
-            }
-
-            await createAppeal.setHomeOfficeReferenceNumber();
-            await createAppeal.setAppellantBasicDetails(false);
-
-            if (stage === 'create') {
-                await createAppeal.setNationality(true);
-            } else {
-                await buttonHelper.continueButton.click(); // Nationality - no need to load another one
-            }
-
-            if (detentionLocation === 'other') {
-                await createAppeal.setAppellantAddress('detained', 'Yes');
-            }
-
-            await createAppeal.setTypeOfAppeal(typeOfAppeal);
-
-            if (typeOfAppeal !== 'euSettlementScheme') {
-                await createAppeal.setGroundsOfAppeal(typeOfAppeal);
-            }
-
-            await createAppeal.setHomeOfficeDecisionDate(inTime);
-
-            if (stage === 'create') {
-                await createAppeal.uploadNoticeOfDecision();
-            } else {
-                 await buttonHelper.continueButton.click(); // Upload Notice of Decision - no need to load another document
-            }
-
-         if (stage === 'create') {
-             await createAppeal.hasSponsor('No');
-             await createAppeal.hasDeportationOrder('No');
-             await createAppeal.hasRemovalDirections('No');
-             await createAppeal.hasNewMatters('No');
-            } else {
-             await createAppeal.hasSponsor('Yes');
-             await createAppeal.hasDeportationOrder('Yes');
-             await createAppeal.hasRemovalDirections('Yes');
-             await createAppeal.hasNewMatters('Yes');
-            }
-
-            await createAppeal.hasOtherAppeals('No');
-            await createAppeal.setLegalRepresentativeDetails();
-            await createAppeal.isHearingRequired(true);
-
-            if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
-                await createAppeal.hasFeeRemission(feeRemission);
-            }
-
-            if (typeOfAppeal === 'protection' && feeRemission === 'No') {
-                await createAppeal.setPayNowLater('Now');
-            }
-        }
 
     });
 });
