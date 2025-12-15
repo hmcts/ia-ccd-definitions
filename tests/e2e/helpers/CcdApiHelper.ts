@@ -4,7 +4,7 @@ export class CcdApiHelper {
 
     constructor() {}
 
-    async validatePageData(pageId:string, uid, accessToken, s2sToken, eventToken ) {
+    async validatePageData(pageId:string, uid, accessToken, s2sToken, eventToken, data ) {
         const url: string = `https://ccd-data-store-api-ia-case-api-pr-2887.preview.platform.hmcts.net/caseworkers/${uid}/jurisdictions/iac/case-types/Asylum/validate?pageId=${pageId}`;
         const apiRequestContext: APIRequestContext = await request.newContext();
 
@@ -16,22 +16,22 @@ export class CcdApiHelper {
                         Authorization: `Bearer ${accessToken}`,
                         ServiceAuthorization: s2sToken
                     },
-                    data: {
-                        data: {
-                            appealReferenceNumber: 'LP/12212/2025',
-                        },
-                        event: {
-                            id: 'startAppeal',
-                            summary: '',
-                            description: '',
-                        },
+                    data: { data
+                        // data: {
+                        //     appealReferenceNumber: 'LP/12212/2025',
+                        // },
+                        // event: {
+                        //     id: 'startAppeal',
+                        //     summary: '',
+                        //     description: '',
+                        // },
                         // event_data: {
                         //     isAdmin: 'Yes',
                         //     sourceOfAppeal: 'rehydratedAppeal',
                         //     appealReferenceNumber: 'LH/20384/2025'
                         // },
-                        event_token: eventToken,
-                        ignore_warning: 'false'
+                        // event_token: eventToken,
+                        // ignore_warning: 'false'
                     }
             });
 
@@ -46,7 +46,7 @@ export class CcdApiHelper {
                     );
                 }
             }
-            return new Array(1).fill('Success');
+            return new Array(1).fill('SUCCESS');
         } catch (error) {
             throw new Error(
                 `An error occurred while trying to validate the page data: ${
