@@ -88,13 +88,16 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
 
             if (isRehydrated) {
                 await createAppeal.setAriaReferenceNumber();
+                await createAppeal.setTribunalAppealReceived();
                 await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
+            } else {
+                await createAppeal.setTribunalAppealReceived();
             }
         } else {
             await buttonHelper.continueButton.click(); // Before you start screen
+            await createAppeal.setTribunalAppealReceived();
         }
 
-        await createAppeal.setTribunalAppealReceived();
         await createAppeal.appellantInPerson('No', 'Yes');
         await createAppeal.locationInUK('Yes');
         await createAppeal.inDetention('Yes');

@@ -67,13 +67,16 @@ test.describe('Legal Admin creates Detained Rehydrated and Force Decided ICC Cas
 
             if (isRehydrated) {
                 await createAppeal.setAriaReferenceNumber();
+                await createAppeal.setTribunalAppealReceived();
                 await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
+            } else {
+                await createAppeal.setTribunalAppealReceived();
             }
         } else {
             await buttonHelper.continueButton.click(); // Before you start screen
+            await createAppeal.setTribunalAppealReceived();
         }
 
-        await createAppeal.setTribunalAppealReceived();
         await createAppeal.appellantInPerson('Yes');
         await createAppeal.locationInUK('Yes');
         await createAppeal.inDetention('Yes');

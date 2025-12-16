@@ -67,9 +67,6 @@ test.describe('Legal Admin creates Represented Non-Detained Appeal (ICC)', { tag
         await createCasePage.createCase();
         await buttonHelper.continueButton.click(); // Before you start page
 
-
-
-
         await createAppeal.setTribunalAppealReceived();
         await createAppeal.appellantInPerson('No', 'Yes');
         await createAppeal.locationInUK('Yes');

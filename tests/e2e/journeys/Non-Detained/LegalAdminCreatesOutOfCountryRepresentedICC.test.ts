@@ -85,6 +85,7 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
 
             if (isRehydrated) {
                 await createAppeal.setAriaReferenceNumber();
+                await createAppeal.setTribunalAppealReceived();
                 await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
             }
         } else {
