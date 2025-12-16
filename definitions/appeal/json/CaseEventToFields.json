@@ -2147,7 +2147,5 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "appellantInPersonManual", "CaseFieldID": "appellantInDetention", "PageFieldDisplayOrder": 6, "DisplayContext": "READONLY", "PageID": "appellantInPersonManual_appellantAddress", "FieldShowCondition": "appellantInPersonManualTitle=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "ShowSummaryChangeOption": "N", "Publish": "Y", "RetainHiddenValue": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "addStatutoryTimeframe24Weeks", "CaseFieldID": "statutoryTimeframe24WeeksReason", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "addStatutoryTimeframe24Weeks","PageDisplayOrder": 1,"ShowSummaryChangeOption": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "removeStatutoryTimeframe24Weeks", "CaseFieldID": "statutoryTimeframe24WeeksReason", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "removeStatutoryTimeframe24Weeks","PageDisplayOrder": 1,"ShowSummaryChangeOption": "Y"},
-
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadRespondentEvidence", "CaseFieldID": "saveNotificationsToDataDate", "PageID": 1, "PageDisplayOrder": 1,"DisplayContext": "COMPLEX", "PageFieldDisplayOrder": 1}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "removeStatutoryTimeframe24Weeks", "CaseFieldID": "statutoryTimeframe24WeeksReason", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "removeStatutoryTimeframe24Weeks","PageDisplayOrder": 1,"ShowSummaryChangeOption": "Y"}
 ]
