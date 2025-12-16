@@ -1,5 +1,11 @@
 import { APIRequestContext, request }  from "@playwright/test";
-import { legalOfficerAdminCredentials} from '../iacConfig';
+import {
+    idamApiBaseUrl,
+    authProviderApiBaseUrl,
+    microService,
+    secret,
+    ccdDataStoreApiBaseUrl, createCase
+} from '../iacConfig';
 import {TOTP} from 'totp-generator';
 
 export class TokensHelper {
@@ -7,15 +13,11 @@ export class TokensHelper {
     constructor() {
     }
 
-    async getAccessToken() {
-        const username: string = legalOfficerAdminCredentials.username;
-        const password: string = legalOfficerAdminCredentials.password;
-        //const password: string = 'fred';
-        const url: string = 'https://idam-api.aat.platform.hmcts.net/loginUser';
+    async getAccessToken(username: string, password: string) {
         const apiRequestContext: APIRequestContext = await request.newContext();
 
         try {
-            const response = await apiRequestContext.post(`${url}?username=${encodeURIComponent(username)}&password=${password}`, {
+            const response = await apiRequestContext.post(`${idamApiBaseUrl}/loginUser?username=${encodeURIComponent(username)}&password=${password}`, {
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded",
                         Accept: "application/json",
@@ -40,9 +42,8 @@ export class TokensHelper {
     }
 
     async getUserId(accessToken) {
-                const url: string = 'https://idam-api.aat.platform.hmcts.net/o/userinfo';
+        const url: string = `${idamApiBaseUrl}/o/userinfo`;
         const apiRequestContext: APIRequestContext = await request.newContext();
-        console.log('in getUserId>>>> ',accessToken);
         try {
             const response = await apiRequestContext.post(url, {
                     headers: {
@@ -72,12 +73,8 @@ export class TokensHelper {
 
 
     async getS2SToken() {
-        const username: string = legalOfficerAdminCredentials.username;
-        const password: string = legalOfficerAdminCredentials.password;
-        //const password: string = 'fred';
-        const url: string = 'http://rpe-service-auth-provider-aat.service.core-compute-aat.internal/testing-support/lease';
+        const url: string = `${authProviderApiBaseUrl}/testing-support/lease`;
         const apiRequestContext: APIRequestContext = await request.newContext();
-
         try {
             const response = await apiRequestContext.post(url, {
                     headers: {
@@ -85,8 +82,8 @@ export class TokensHelper {
                         Accept: "*/*",
                     },
                 data:{
-                        microservice: 'iac',
-                        oneTimePassword: TOTP.generate('AAAAAAAAAAAAAAAC')
+                        microservice: microService,
+                        oneTimePassword: TOTP.generate(secret)
                     }
                 }
             );
@@ -109,7 +106,8 @@ export class TokensHelper {
 
 
     async getEventToken(event:string, uid: string, accessToken, s2sToken) {
-        const url: string = `https://ccd-data-store-api-ia-case-api-pr-2887.preview.platform.hmcts.net/caseworkers/${uid}/jurisdictions/iac/case-types/Asylum/event-triggers/${event}/token`;
+
+        const url: string = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/event-triggers/${event}/token`;
         const apiRequestContext: APIRequestContext = await request.newContext();
 
         try {
@@ -118,7 +116,7 @@ export class TokensHelper {
                         "Content-Type": "application/json",
                         Accept: "*/*",
                         Authorization: `Bearer ${accessToken}`,
-                        ServiceAuthorization: s2sToken
+                        ServiceAuthorization: `${s2sToken}`
                     },
                 }
             );

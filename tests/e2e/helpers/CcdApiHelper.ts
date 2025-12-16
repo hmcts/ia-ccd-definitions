@@ -1,11 +1,13 @@
-import {APIRequestContext, Page, request} from "@playwright/test";
+import {APIRequestContext, request} from "@playwright/test";
+import {ccdDataStoreApiBaseUrl, createCase} from "../iacConfig";
 
 export class CcdApiHelper {
+    constructor() {
 
-    constructor() {}
+    }
 
-    async validatePageData(pageId:string, uid, accessToken, s2sToken, eventToken, data ) {
-        const url: string = `https://ccd-data-store-api-ia-case-api-pr-2887.preview.platform.hmcts.net/caseworkers/${uid}/jurisdictions/iac/case-types/Asylum/validate?pageId=${pageId}`;
+    async validatePageData(pageId:string, event:string, caseData:unknown, uid, accessToken, s2sToken ) {
+        const url: string = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/validate?pageId=${pageId}`;
         const apiRequestContext: APIRequestContext = await request.newContext();
 
         try {
@@ -16,23 +18,7 @@ export class CcdApiHelper {
                         Authorization: `Bearer ${accessToken}`,
                         ServiceAuthorization: s2sToken
                     },
-                    data: { data
-                        // data: {
-                        //     appealReferenceNumber: 'LP/12212/2025',
-                        // },
-                        // event: {
-                        //     id: 'startAppeal',
-                        //     summary: '',
-                        //     description: '',
-                        // },
-                        // event_data: {
-                        //     isAdmin: 'Yes',
-                        //     sourceOfAppeal: 'rehydratedAppeal',
-                        //     appealReferenceNumber: 'LH/20384/2025'
-                        // },
-                        // event_token: eventToken,
-                        // ignore_warning: 'false'
-                    }
+                data: caseData
             });
 
             if (!response.ok()) {

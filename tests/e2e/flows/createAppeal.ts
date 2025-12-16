@@ -1,18 +1,31 @@
 import moment from "moment/moment";
 import { Page, expect } from "@playwright/test";
-import { appellant, sponsor, legalRepresentative, runningEnv, outOfCountryAddress } from '../iacConfig';
+import {
+    appellant,
+    sponsor,
+    legalRepresentative,
+    runningEnv,
+    outOfCountryAddress,
+    legalOfficerAdminCredentials, legalOfficerCredentials
+} from '../iacConfig';
 import { detentionFacility } from '../fixtures/detentionFacilities';
 import {ariaReferenceNumber} from "../fixtures/ariaReferenceNumber";
 import { ButtonHelper } from '../helpers/ButtonHelper';
+import {TokensHelper} from "../helpers/TokensHelper";
+import {CcdApiHelper} from "../helpers/CcdApiHelper";
 
 //const outOfTimedImageLocator: string = '//*[@id="confirmation-body"]/ccd-markdown/div/markdown/p[1]/img';
 
 
 export class CreateAppeal {
     private buttonHelper: ButtonHelper;
+    private tokensHelper: TokensHelper;
+    private ccdApiHelper: CcdApiHelper;
     
     constructor(public page: Page) {
         this.buttonHelper = new ButtonHelper(this.page);
+        this.tokensHelper = new TokensHelper();
+        this.ccdApiHelper = new CcdApiHelper();
     }
   
   // setTribunalAppealReceived() - Legal Admin Journey
@@ -246,7 +259,7 @@ export class CreateAppeal {
             await this.page.locator('//*[@id="uploadRehydratedNod"]/div/button').click();
         }
 
-       // getting rate cap error message - waiting for 2 secs to stop this happening
+       // getting rate cap error message - waiting for 2 secs to stop this happening - will rewrite with hardcoded wait
         await this.page.waitForTimeout(2000); // waits for 2 seconds
         await this.page.locator(`#upload${documentType}_0_document`).setInputFiles('./tests/documents/TEST_DOCUMENT_1.pdf');
         await this.page.fill(`#upload${documentType}_0_description`, 'Test Notice of Decision document.');
@@ -481,7 +494,7 @@ export class CreateAppeal {
                await this.page.check('#remissionClaim-section20');
                await this.buttonHelper.continueButton.click();
 
-               // getting rate cap error message - waiting for 2 secs to stop this happening
+               // getting rate cap error message - waiting for 2 secs to stop this happening - will rewrite to not use hardcoded timeout
                await this.page.waitForTimeout(2000); // waits for 2 seconds
                await this.page.locator('#section20Document').setInputFiles('./tests/documents/TEST_DOCUMENT_1.pdf');
                await this.page.waitForSelector('.error-message', { state: 'hidden' });
@@ -511,36 +524,55 @@ export class CreateAppeal {
 
     // Rehydrate flow for Legal Admin
     async setAriaReferenceNumber() {
-        await this.page.fill('#appealReferenceNumber', ariaReferenceNumber.valid);
-        console.log('ARIA reference number: ', await this.page.locator('#appealReferenceNumber').inputValue());
-        await this.buttonHelper.continueButton.click();
-
-
-        // console.log(currentUrl)
-        // console.log(this.page.url());
-        // while (currentUrl === this.page.url()) {
-        //     console.log('here');
-        //     console.log(currentUrl + ' >>>>>> ' + this.page.url());
-        //     if (await this.page.locator('#edit-case-event_error-summary-heading').count() > 0) {
-        //         console.log(await this.page.locator('#edit-case-event_error-summary-heading').innerText());
-        //         console.log(await this.page.locator('#errors').first().innerText());
-        //         if (await this.page.locator('#errors').first().innerText() === errorMessage) {
-        //             await this.page.fill('#appealReferenceNumber', ariaReferenceNumber.valid);
-        //             await this.buttonHelper.continueButton.click();
-        //             console.log('count>>> ',await this.page.locator('#edit-case-event_error-summary-heading').count());
-        //         }
-        //       break;
-        //     }
-        // }
-
-
+        // Before we enter the ARIA ref number into the field on the page we need to check the ARIA ref number
+        // has not already been used as it is not possible to regenerate and check the validity of the ref number from the UI as
+        // would need to hardcode waits.  The best way is to send the ref number to CCD (API) and see if we get a message back with an
+        // error pertaining that the ref number is already in use.  In this case we generate a new and validate again until we get
+        // a ref number that has not been used already.
+        // If the return message is SUCCESS then we can use this ref number in the page and continue the journey
+        const accessToken: string = await this.tokensHelper.getAccessToken(legalOfficerAdminCredentials.username, legalOfficerCredentials.password);
+        const uid: string = await this.tokensHelper.getUserId(accessToken);
+        const s2sToken: string = await this.tokensHelper.getS2SToken();
+        const eventToken = await this.tokensHelper.getEventToken('startAppeal', uid,accessToken,s2sToken);
+        console.log('event token>>>> ',eventToken);
+        const event:string = 'startAppeal';
         const maxRetries: number = 10;
-        let retry: number = 0;
-        //await this.page.waitForTimeout(5000); // waits for 2 seconds
-        const errorText:string = 'The reference number is in an incorrect format.';
+        const ariaRefNumberExistsMessage: string = 'The reference number already exists. Please enter a different reference number.';
+        let ariaRefNumber: string = ariaReferenceNumber.valid;
+        //let retry: number = 0;
+        const caseData = {
+            data: {
+                appealReferenceNumber: ariaRefNumber,
+            },
+            event: {
+                id: `${event}`,
+                summary: '',
+                description: '',
+            },
+            event_token: `${eventToken}`,
+            ignore_warning: 'false'
+        };
 
 
-     }
+        for (let retry=0; retry < maxRetries; retry++)
+        {
+            const response: string =  (await this.ccdApiHelper.validatePageData(`${event}appealReferenceNumber`, event, caseData, uid, accessToken, s2sToken))[0];
+
+            if ( response === 'SUCCESS') {
+                console.log(`Aria reference number: ${ariaRefNumber} is valid`);
+                await this.page.fill('#appealReferenceNumber', ariaRefNumber);
+                break;
+            }
+
+            if (response === ariaRefNumberExistsMessage) {
+                continue;
+            } else {
+                throw new Error(`An unknown error was returned when validating the Aria Reference number using the CCD API: ${response}`);
+            }
+        }
+
+        await this.buttonHelper.continueButton.click();
+    }
 
     // Rehydrate flow for Legal Admin
     async isAppealOutOfTime(outOfTime: string = 'No') {
