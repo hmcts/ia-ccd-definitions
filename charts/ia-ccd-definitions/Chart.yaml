@@ -1,7 +1,7 @@
 apiVersion: v2
 name: ia-ccd-definition
 home: https://github.com/hmcts/ia-ccd-definitions
-version: 0.0.1
+version: 0.0.2
 description: Immigration & Asylum CCD Definitions
 maintainers:
   - name: HMCTS Immigration & Asylum Team
@@ -20,6 +20,6 @@ dependencies:
     repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: am-org-role-mapping-service.enabled
   - name: postgresql
-    version: 1.0.2
+    version: 1.1.0
     repository: 'oci://hmctspublic.azurecr.io/helm'
     condition: postgresql.enabled
