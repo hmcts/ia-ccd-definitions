@@ -32,6 +32,7 @@ export default defineConfig([
         },
         rules: {
             "@typescript-eslint/no-floating-promises": "error",
+            "@typescript-eslint/no-unused-expressions": ["error", {"allowTernary": true }],
         },
     },
   { files: ["**/*.{js,mjs,cjs,ts,mts,cts}"], plugins: { js }, extends: ["js/recommended"] },

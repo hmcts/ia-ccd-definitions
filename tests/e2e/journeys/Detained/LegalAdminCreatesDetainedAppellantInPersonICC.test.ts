@@ -87,7 +87,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await createCasePage.createCase();
 
         if (['preview'].includes(runningEnv)) {
-            isRehydrated === true ? await createAppeal.setSourceOfAppeal('rehydratedAppeal') : await createAppeal.setSourceOfAppeal('paperForm');
+            isRehydrated ? await createAppeal.setSourceOfAppeal('rehydratedAppeal') : await createAppeal.setSourceOfAppeal('paperForm');
             await buttonHelper.continueButton.click(); // Before you start screen
 
             if (isRehydrated) {
