@@ -16,7 +16,7 @@ export class ListTheCase {
 
     async list(isRemoteHearing: string = 'No') {
         await new PageHelper(this.page).selectNextStep('List the case');
-        await this.page.fill('#ariaListingReference', 'LP/12345/2019');
+        await this.page.fill('#ariaListingReference',  (await this.page.innerText('.markdown > h1')).replace('Case record for','').trimStart());
         await this.page.selectOption('#listingLocation', 'Atlantic Quay - Glasgow');
         await this.page.check(`#isRemoteHearing_${isRemoteHearing}`);
         await this.page.fill('#listingLength_hours', '1');

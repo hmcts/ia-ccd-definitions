@@ -5,6 +5,7 @@ import moment from "moment/moment";
 
 export class ForceDecidedStateEvent {
     private buttonHelper: ButtonHelper;
+    readonly forceToDecidedButton = this.page.getByRole('button', { name: ' Force to decided '});
 
     constructor(public page: Page) {
         this.buttonHelper = new ButtonHelper(this.page);
@@ -36,7 +37,7 @@ export class ForceDecidedStateEvent {
     }
 
     async checkMyAnswers() {
-        await this.buttonHelper.forceToDecidedButton.click();
+        await this.forceToDecidedButton.click();
         await this.buttonHelper.closeAndReturnToCaseDetailsButton.click();
     }
 

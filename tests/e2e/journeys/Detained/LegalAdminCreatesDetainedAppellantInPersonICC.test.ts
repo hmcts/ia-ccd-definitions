@@ -44,7 +44,7 @@ const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes'
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
 const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
-let caseId: string = '';
+let caseId: string = '1766065687204904';
 
 //refusalOfEu - Refusal under EEA regulations (EA) (payment required)
 //refusalOfHumanRights - Refusal human rights (HU) (payment required)
@@ -286,7 +286,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await linkHelper.signOut.click();
     });
 
-    test('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
+    test.only('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
         await idamPage.login(judgeCredentials);
         await pageHelper.getCase(caseId);
         await new PrepareDecisionAndReasons(page).generate('Yes');
@@ -294,14 +294,14 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await linkHelper.signOut.click();
     });
 
-    test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({ page }) => {
+    test.only(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({ page }) => {
         await idamPage.login(judgeDecision === 'allowed' ? homeOfficeOfficerCredentials : legalOfficerAdminCredentials);
         judgeDecision === 'allowed' ? await page.goto(envUrl + '/cases/case-details/' + caseId) : await pageHelper.getCase(caseId);
         await new ApplyForPermissionToAppeal(page).apply(judgeDecision === 'allowed' ? 'Respondent' :  'Appellant');
         await linkHelper.signOut.click();
     });
 
-    test('Judge decides FTPA application', async ({ page }) => {
+    test.only('Judge decides FTPA application', async ({ page }) => {
         await idamPage.login(judgeCredentials);
         await pageHelper.getCase(caseId);
         await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');

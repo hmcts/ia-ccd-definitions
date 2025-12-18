@@ -1,7 +1,6 @@
 import {expect, test} from '@playwright/test';
 import {
-    envUrl, homeOfficeOfficerCredentials, judgeCredentials,
-    legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials, runningEnv,
+    envUrl, legalOfficerAdminCredentials, runningEnv,
 } from '../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import {LinkHelper} from '../../helpers/LinkHelper';
@@ -15,6 +14,7 @@ import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecisio
 import {MarkAppealAsPaid} from "../../flows/events/markAppealAsPaid";
 import {imageLocators} from "../../fixtures/imageLocators";
 import {ForceDecidedStateEvent} from '../../flows/events/forceDecidedState';
+import {ForceFtpaDecidedState} from "../../flows/events/forceFtpaDecidedState";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
@@ -157,6 +157,15 @@ test.describe('Legal Admin creates Detained Rehydrated and Force Decided ICC Cas
         } else {
             await validationHelper.validateLabelDisplayed(imageLocators.appealCompleted.appealDismissed.locator, imageLocators.appealCompleted.appealDismissed.name);
         }
+    });
+
+    test('Force case to FTPA decided state', { }, async ({ page }) => {
+        test.skip(!isRehydrated, 'Skipping force FTPA decided state test - not a rehydrated case');
+
+        await idamPage.login(legalOfficerAdminCredentials);
+        await page.goto(envUrl + '/cases/case-details/' + caseId);
+        await new ForceFtpaDecidedState(page).submit(judgeDecision);
+
     });
 
 });

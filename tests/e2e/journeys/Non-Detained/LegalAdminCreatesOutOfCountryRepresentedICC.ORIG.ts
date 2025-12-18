@@ -41,7 +41,7 @@ let buttonHelper: ButtonHelper;
 let caseId: string = '';
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Representative', { tag: '@LegalAdminCreatesOutOfCountryRepresentedICC' }, () => {
+test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Representative', { tag: '@4444LegalAdminCreatesOutOfCountryRepresentedICC' }, () => {
 
     test.beforeEach(async ({ page }) => {
         idamPage = new IdamPage(page);
@@ -52,7 +52,7 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
         await page.goto(envUrl);
     });
 
-    test.only('Create Out of Country Represented Appeal', async ({ page }) => {
+    test('Create Out of Country Represented Appeal', async ({ page }) => {
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalOfficerAdminCredentials);
         await new CreateCasePage(page).createCase();

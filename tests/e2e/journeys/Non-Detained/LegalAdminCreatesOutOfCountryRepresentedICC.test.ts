@@ -75,7 +75,7 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
         await page.goto(envUrl);
     });
 
-    test.only('Create Out of Country Represented Appeal', async ({ page }) => {
+    test('Create Out of Country Represented Appeal', async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();
 
@@ -87,12 +87,14 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
                 await createAppeal.setAriaReferenceNumber();
                 await createAppeal.setTribunalAppealReceived();
                 await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
+            } else {
+                await createAppeal.setTribunalAppealReceived();
             }
         } else {
             await buttonHelper.continueButton.click(); // Before you start screen
+            await createAppeal.setTribunalAppealReceived();
         }
 
-        await createAppeal.setTribunalAppealReceived();
         await createAppeal.appellantInPerson('No');
         await createAppeal.locationInUK('No');
         await createAppeal.setOutOfCountryCircumstance(outOfCountryCircumstance);
