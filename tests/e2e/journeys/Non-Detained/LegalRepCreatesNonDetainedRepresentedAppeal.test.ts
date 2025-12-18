@@ -31,13 +31,10 @@ import {ListTheCase} from "../../flows/events/listTheCase";
 import {imageLocators} from "../../fixtures/imageLocators";
 import {ValidationHelper} from "../../helpers/ValidationHelper";
 import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
-import {MarkAppealAsPaid} from "../../flows/events/markAppealAsPaid";
-
+import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
-const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
-const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
 const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
 const daysToComply: number = 14;
 let caseId: string = '';
@@ -218,4 +215,10 @@ test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@Legal
         await linkHelper.signOut.click();
     });
 
+    test('Judge decides FTPA application', async ({ page }) => {
+        await idamPage.login(judgeCredentials);
+        await pageHelper.getCase(caseId);
+        await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
+        await linkHelper.signOut.click();
+    });
 });

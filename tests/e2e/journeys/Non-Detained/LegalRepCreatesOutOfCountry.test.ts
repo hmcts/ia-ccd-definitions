@@ -29,11 +29,10 @@ import {ListTheCase} from "../../flows/events/listTheCase";
 import {ValidationHelper} from "../../helpers/ValidationHelper";
 import {imageLocators} from "../../fixtures/imageLocators";
 import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
+import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
-const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
-const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
 const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
 const daysToComply: number = 14;
 
@@ -214,5 +213,10 @@ test.describe('Create Out of Country Appeal as Legal Representative', { tag: '@L
         await linkHelper.signOut.click();
     });
 
-
+    test('Judge decides FTPA application', async ({ page }) => {
+        await idamPage.login(judgeCredentials);
+        await pageHelper.getCase(caseId);
+        await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
+        await linkHelper.signOut.click();
+    });
 });

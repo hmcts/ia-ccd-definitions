@@ -1,4 +1,4 @@
-import {expect, test} from '@playwright/test';
+import {test} from '@playwright/test';
 import {
     envUrl, legalOfficerAdminCredentials, runningEnv,
 } from '../../iacConfig';

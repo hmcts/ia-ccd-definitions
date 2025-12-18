@@ -1,4 +1,4 @@
-import {Page, expect} from "@playwright/test";
+import {Page} from "@playwright/test";
 import { PageHelper } from '../../helpers/PageHelper';
 import {DecideFtpaApplication} from "./decideFtpaApplication";
 

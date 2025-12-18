@@ -40,6 +40,10 @@ export const imageLocators = {
             locator: '//*[@id="journey_type_aip_legally_represented_manual"]/dt/ccd-markdown/div/markdown/p/img',
             name: 'progress_legally_represented_overview_label',
         },
+        representedManualS94b: {
+            locator: '//*[@id="journey_type_lr_manual_s9"]/dt/ccd-markdown/div/markdown/p/img',
+            name: 'Tag-LR-manual-S9'
+        },
         represented: {
             locator: '//*[@id="journey_type_legal_rep"]/dt/ccd-markdown/div/markdown/p/img',
             name: 'journey_type_legally_represented',

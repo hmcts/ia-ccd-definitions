@@ -1,5 +1,5 @@
 import moment from "moment/moment";
-import { Page, expect } from "@playwright/test";
+import { Page } from "@playwright/test";
 import {
     appellant,
     sponsor,
@@ -534,12 +534,11 @@ export class CreateAppeal {
         const uid: string = await this.tokensHelper.getUserId(accessToken);
         const s2sToken: string = await this.tokensHelper.getS2SToken();
         const eventToken = await this.tokensHelper.getEventToken('startAppeal', uid,accessToken,s2sToken);
-        console.log('event token>>>> ',eventToken);
         const event:string = 'startAppeal';
         const maxRetries: number = 10;
         const ariaRefNumberExistsMessage: string = 'The reference number already exists. Please enter a different reference number.';
-        let ariaRefNumber: string = ariaReferenceNumber.valid;
-        //let retry: number = 0;
+        const ariaRefNumber: string = ariaReferenceNumber.valid;
+
         const caseData = {
             data: {
                 appealReferenceNumber: ariaRefNumber,

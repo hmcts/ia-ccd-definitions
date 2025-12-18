@@ -71,7 +71,7 @@ test.describe('Legal Admin Officer Creates Out of Country, Appellant in Person, 
         await page.goto(envUrl);
     });
 
-    test.only('Create Out of Country, Appellant in Person ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC Appeal', async ({ page }) => {
+    test('Create Out of Country, Appellant in Person ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC Appeal', async ({ page }) => {
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalOfficerAdminCredentials);
         await new CreateCasePage(page).createCase();

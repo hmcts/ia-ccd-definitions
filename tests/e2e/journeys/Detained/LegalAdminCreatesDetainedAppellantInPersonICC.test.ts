@@ -8,7 +8,6 @@ import {LinkHelper} from '../../helpers/LinkHelper';
 import {PageHelper} from '../../helpers/PageHelper';
 import {ButtonHelper} from '../../helpers/ButtonHelper';
 import {ValidationHelper} from '../../helpers/ValidationHelper'
-import {CaseIdHelper} from "../../helpers/CaseIdHelper";
 import {CreateAppeal} from '../../flows/createAppeal';
 import {CreateCasePage} from '../../page-objects/pages/createCase_page';
 import {SubmitYourAppeal} from "../../flows/events/submitYourAppeal";
@@ -44,7 +43,7 @@ const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes'
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
 const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
-let caseId: string = '1766065687204904';
+let caseId: string = '';
 
 //refusalOfEu - Refusal under EEA regulations (EA) (payment required)
 //refusalOfHumanRights - Refusal human rights (HU) (payment required)
@@ -59,7 +58,6 @@ let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let buttonHelper: ButtonHelper;
 let validationHelper: ValidationHelper;
-let caseIdHelper: CaseIdHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
 let s94b: S94b;
@@ -75,7 +73,6 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         pageHelper = new PageHelper(page);
         buttonHelper = new ButtonHelper(page);
         validationHelper = new ValidationHelper(page);
-        caseIdHelper = new CaseIdHelper();
         createAppeal = new CreateAppeal(page);
         createCasePage = new CreateCasePage(page);
         s94b = new S94b(page);
@@ -90,7 +87,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await createCasePage.createCase();
 
         if (['preview'].includes(runningEnv)) {
-            isRehydrated ? await createAppeal.setSourceOfAppeal('rehydratedAppeal') : await createAppeal.setSourceOfAppeal('paperForm');
+            isRehydrated === true ? await createAppeal.setSourceOfAppeal('rehydratedAppeal') : await createAppeal.setSourceOfAppeal('paperForm');
             await buttonHelper.continueButton.click(); // Before you start screen
 
             if (isRehydrated) {

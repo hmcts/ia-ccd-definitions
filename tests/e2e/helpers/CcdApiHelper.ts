@@ -26,7 +26,7 @@ export class CcdApiHelper {
                     const errorTextJson: string[] = (await response.json()).callbackErrors;
                     return errorTextJson;
                 } else {
-                    let errorText = await response.text();
+                    const errorText = await response.text();
                     throw new Error(
                         `Failed to Validate the page data: ${response.status()} - ${errorText}. Ensure your VPN is connected or check your URL/SECRET.`
                     );
