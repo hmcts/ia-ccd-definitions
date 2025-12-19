@@ -13,10 +13,8 @@ export class DecideFtpaApplication {
 
     async submit(party: string = 'Appellant', forced:boolean = false) {
         if (!forced) {
-            console.log('here1>>>>');
             await new PageHelper(this.page).selectNextStep('Decide FTPA application');
         } else {
-            console.log('here2');
             const yesterday = moment().subtract(1, 'days');
             await this.page.fill('#ftpaAppellantDecisionDate-day', yesterday.date().toString());
             await this.page.fill('#ftpaAppellantDecisionDate-month', (yesterday.month()+1).toString());
