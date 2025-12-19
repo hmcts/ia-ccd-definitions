@@ -35,6 +35,7 @@ import {RecordOutOfTimeDecision} from "../../flows/events/recordOutOfTimeDecisio
 import {RequestHomeOfficeData} from "../../flows/events/requestHomeOfficeData";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 import {SendToPreHearing} from "../../flows/events/sendToPreHearing";
+import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
@@ -270,6 +271,13 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
         await pageHelper.getCase(caseId);
         await new PrepareDecisionAndReasons(page).generate('Yes');
         await new CompleteDecisionAndReasons(page).upload('allowed');
+        await linkHelper.signOut.click();
+    });
+
+    test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({ page }) => {
+        await idamPage.login(judgeDecision === 'allowed' ? homeOfficeOfficerCredentials : legalOfficerAdminCredentials);
+        judgeDecision === 'allowed' ? await page.goto(envUrl + '/cases/case-details/' + caseId) : await pageHelper.getCase(caseId);
+        await new ApplyForPermissionToAppeal(page).apply(judgeDecision === 'allowed' ? 'Respondent' :  'Appellant');
         await linkHelper.signOut.click();
     });
 
