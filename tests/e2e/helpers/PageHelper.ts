@@ -1,4 +1,6 @@
 import { Page } from "@playwright/test";
+import {imageLocators} from "../fixtures/imageLocators";
+import {TabsHelper} from "./TabsHelper";
 
 export class PageHelper {
 
@@ -38,6 +40,11 @@ export class PageHelper {
                 break;
             }
         }
+    }
+
+    async areNotificationsTurnedOff() {
+        await new TabsHelper(this.page).selectTab('Overview');
+        return (!await this.page.locator(imageLocators.rehydrated.notifications.locator).isHidden());
     }
 
     async checkForAnyErrorsOnPage() {

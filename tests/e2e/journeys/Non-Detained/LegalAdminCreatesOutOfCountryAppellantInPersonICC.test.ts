@@ -33,6 +33,7 @@ import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionT
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 import {MarkAppealAsPaid} from "../../flows/events/markAppealAsPaid";
+import {SendToPreHearing} from "../../flows/events/sendToPreHearing";
 
 const inTime = true;
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
@@ -239,9 +240,16 @@ test.describe('Legal Admin Officer Creates Out of Country, Appellant in Person, 
         await new CreateCaseSummary(page).create();
         await new GenerateHearingBundle(page).submit();
 
-        // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decisions and reasons
-        await pageHelper.waitForHearingBundleToBeGenerated();
-        await expect(page.locator(' #progress_caseOfficer_preHearing')).toBeVisible();
+        // If notifications/WA tasks are turned off, then no documents will be generated on completing the Generate Hearing Bundle event.
+        // So to progress the case to pre-hearing state, thus we need to undertake the event: "Send to pre hearing"
+        // Once this is done we can continue the journey
+        if (await new PageHelper(page).areNotificationsTurnedOff())  {
+            await new SendToPreHearing(page).submit();
+        } else {
+            // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decisions and reasons
+            await pageHelper.waitForHearingBundleToBeGenerated();
+            await expect(page.locator(' #progress_caseOfficer_preHearing')).toBeVisible();
+        }
         await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
         await linkHelper.signOut.click();
     });
