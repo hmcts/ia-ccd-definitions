@@ -32,6 +32,7 @@ import {imageLocators} from "../../fixtures/imageLocators";
 import {ValidationHelper} from "../../helpers/ValidationHelper";
 import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
+import { Add24WeeksStatutoryTimeframe, Add24WeeksStatutoryTimeframeIsDisabled, Remove24WeeksStatutoryTimeframe } from '../../flows/events/addStatutoryTimeframe';
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
@@ -221,4 +222,31 @@ test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@Legal
         await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
         await linkHelper.signOut.click();
     });
+
+    test("Caseworker adds Statutory Timeframe and verifies it is removed from dropdown", async ({
+      page
+    }) => {
+      await idamPage.login(legalOfficerCredentials);
+      await pageHelper.getCase(caseId);
+
+      await Add24WeeksStatutoryTimeframe(
+        page,
+        "TCW will be adding statutory timeframe"
+      );
+      await Add24WeeksStatutoryTimeframeIsDisabled(page);
+      await linkHelper.signOut.click();
+    });
+
+    test("Judge verifies Statutory Timeframe is available in dropdown", async ({
+      page
+    }) => {
+      await idamPage.login(judgeCredentials);
+      await pageHelper.getCase(caseId);
+      await Remove24WeeksStatutoryTimeframe(
+        page,
+        "Judge Will be removing statutory timeframe"
+      );
+      await linkHelper.signOut.click();
+    });
+
 });
