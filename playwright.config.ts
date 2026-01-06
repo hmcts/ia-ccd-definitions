@@ -46,6 +46,7 @@ module.exports = defineConfig({
     {
       name: 'chromium',
       use: {
+        storageState: './.auth/authentication.json',
         ...devices['Desktop Chrome'],
         channel: 'chrome',
         viewport: { width: 1929, height: 959 },

@@ -76,13 +76,13 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         createAppeal = new CreateAppeal(page);
         createCasePage = new CreateCasePage(page);
         s94b = new S94b(page);
-      //  await page.goto(envUrl);
+        await page.goto(envUrl);
     });
 
     test('Create detained' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC Appeal',   async ({ page }) => {
         console.log("DO NOTHING");
         // await idamPage.login(legalOfficerAdminCredentials);
-        // await createCasePage.createCase();
+        await createCasePage.createCase();
         //
         // if (['preview'].includes(runningEnv)) {
         //     isRehydrated ? await createAppeal.setSourceOfAppeal('rehydratedAppeal') : await createAppeal.setSourceOfAppeal('paperForm');

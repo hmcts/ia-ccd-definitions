@@ -1,6 +1,6 @@
 import { test as setup, expect } from "@playwright/test";
 import {UserCredentials} from "../tests/e2e/page-objects/pages/idam.po";
-const authFile = "./authentication.json";
+const authFile = "./.auth/authentication.json";
 setup("Authentication", async ({ page }) => {
 
     let userName: string = 'CRD_func_test_aat_adm66@justice.gov.uk';
