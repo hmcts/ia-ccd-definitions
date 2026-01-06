@@ -25,6 +25,15 @@ module.exports = defineConfig({
     screenshot: { mode: 'only-on-failure', fullPage: true },
   },
   projects: [
+    // Setup project
+    {
+      name: "authentication",
+      testDir: "./setup",
+      use: {
+        baseURL: 'https://xui-ia-case-api-pr-2887.preview.platform.hmcts.net',
+      },
+      testMatch: /.*\.setup\.ts/,
+    },
     {
       name: 'smokeChromium',
       use: {
@@ -42,8 +51,9 @@ module.exports = defineConfig({
         viewport: { width: 1929, height: 959 },
         launchOptions: {
           //slowMo: 1000,
-        }
+        },
       },
+      dependencies: ["authentication"],
     },
     {
       name: 'firefox',

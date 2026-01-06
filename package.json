@@ -36,7 +36,7 @@
   },
   "scripts": {
     "test:smoke": "yarn playwright install && npx playwright test --headed --project smokeChromium --grep @smoke",
-    "test:api": "yarn playwright install && npx playwright test --project chromium --grep @api",
+    "test:api": "yarn playwright install && npx playwright test --headed --project chromium --grep @Api",
     "test:LegalAdminCreatesDetainedAppellantInPersonPrisonProtectionRehydrated": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection IN_TIME=true IS_REHYDRATED=true JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
     "test:LegalAdminCreatesDetainedAppellantInPersonPrisonEuSettlementSchemeFeeRemissionRehydrated": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=euSettlementScheme FEE_REMISSION=Yes IN_TIME=true IS_REHYDRATED=true JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
     "test:LegalAdminCreatesDetainedAppellantInPersonPrisonProtectionPaper": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=protection IN_TIME=true IS_REHYDRATED=false JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalAdminCreatesDetainedAppellantInPersonICC",
