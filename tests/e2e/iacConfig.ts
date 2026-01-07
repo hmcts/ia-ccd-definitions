@@ -27,6 +27,7 @@ export const createCase = {
 export const legalRepresentativeCredentials = {
     username: ['preview', 'aat'].includes(process.env.ENVIRONMENT) ? 'ialegalreporgcreator12@mailnesia.com' : 'ialegalreporgcreator12@mailinator.com',
     password: ['preview', 'aat'].includes(process.env.ENVIRONMENT) ? 'Aldg@teT0wer' : 'AldgateT0wer',
+    sessionFile: './.auth/LegalRepresentative.json',
 }
 
 export const legalOfficerCredentials = {
@@ -36,7 +37,8 @@ export const legalOfficerCredentials = {
 
 export const legalOfficerAdminCredentials = {
     username: process.env.ENVIRONMENT === 'preview' ? "CRD_func_test_aat_adm66@justice.gov.uk" : (process.env.ENVIRONMENT === 'demo' ? 'CRD_func_test_demo_admuser045@justice.gov.uk' : 'CRD_func_test_aat_ctscAdm1@justice.gov.uk'),
-    password: 'AldgateT0wer'
+    password: 'AldgateT0wer',
+    sessionFile: './.auth/LegalAdminOfficer.json',
 }
 
 export const listingOfficerCredentials = {

@@ -31,6 +31,7 @@ module.exports = defineConfig({
       testDir: "./setup",
       use: {
         baseURL: 'https://xui-ia-case-api-pr-2887.preview.platform.hmcts.net',
+        ...devices['Desktop Chrome'],
       },
       testMatch: /.*\.setup\.ts/,
     },
@@ -46,12 +47,11 @@ module.exports = defineConfig({
     {
       name: 'chromium',
       use: {
-        storageState: './.auth/authentication.json',
         ...devices['Desktop Chrome'],
         channel: 'chrome',
         viewport: { width: 1929, height: 959 },
         launchOptions: {
-          //slowMo: 1000,
+        //slowMo: 1000,
         },
       },
       dependencies: ["authentication"],
