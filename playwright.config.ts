@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import {envUrl} from "./tests/e2e/iacConfig";
 
 module.exports = defineConfig({
   //globalSetup: './global-setup',
@@ -27,10 +28,20 @@ module.exports = defineConfig({
   projects: [
     // Setup project
     {
+      name: "ICC_authentication",
+      testDir: "./tests/setup",
+      use: {
+        baseURL: envUrl,
+        ...devices['Desktop Chrome'],
+      },
+      testMatch: /.*\ICC_auth.setup\.ts/,
+    },
+    // Setup project
+    {
       name: "authentication",
       testDir: "./setup",
       use: {
-        baseURL: 'https://xui-ia-case-api-pr-2887.preview.platform.hmcts.net',
+        baseURL: envUrl,
         ...devices['Desktop Chrome'],
       },
       testMatch: /.*\.setup\.ts/,
@@ -45,7 +56,7 @@ module.exports = defineConfig({
       testDir: './tests/e2e',
     },
     {
-      name: 'chromium',
+      name: 'ChromiumICC',
       use: {
         ...devices['Desktop Chrome'],
         channel: 'chrome',
@@ -54,7 +65,7 @@ module.exports = defineConfig({
         //slowMo: 1000,
         },
       },
-      dependencies: ["authentication"],
+      dependencies: ["ICC_authentication"],
     },
     {
       name: 'firefox',
