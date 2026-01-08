@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import {envUrl} from "./tests/e2e/iacConfig";
 
 module.exports = defineConfig({
   //globalSetup: './global-setup',
@@ -25,6 +26,26 @@ module.exports = defineConfig({
     screenshot: { mode: 'only-on-failure', fullPage: true },
   },
   projects: [
+    // Setup project
+    {
+      name: "ICC_authentication",
+      testDir: "./tests/setup",
+      use: {
+        baseURL: envUrl,
+        ...devices['Desktop Chrome'],
+      },
+      testMatch: /.*\ICC_auth.setup\.ts/,
+    },
+    // Setup project
+    {
+      name: "authentication",
+      testDir: "./setup",
+      use: {
+        baseURL: envUrl,
+        ...devices['Desktop Chrome'],
+      },
+      testMatch: /.*\.setup\.ts/,
+    },
     {
       name: 'smokeChromium',
       use: {
@@ -35,15 +56,16 @@ module.exports = defineConfig({
       testDir: './tests/e2e',
     },
     {
-      name: 'chromium',
+      name: 'ChromiumICC',
       use: {
         ...devices['Desktop Chrome'],
         channel: 'chrome',
         viewport: { width: 1929, height: 959 },
         launchOptions: {
-          //slowMo: 1000,
-        }
+        //slowMo: 1000,
+        },
       },
+      dependencies: ["ICC_authentication"],
     },
     {
       name: 'firefox',

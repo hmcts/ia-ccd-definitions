@@ -36,7 +36,7 @@ export const legalOfficerCredentials = {
 
 export const legalOfficerAdminCredentials = {
     username: process.env.ENVIRONMENT === 'preview' ? "CRD_func_test_aat_adm66@justice.gov.uk" : (process.env.ENVIRONMENT === 'demo' ? 'CRD_func_test_demo_admuser045@justice.gov.uk' : 'CRD_func_test_aat_ctscAdm1@justice.gov.uk'),
-    password: 'AldgateT0wer'
+    password: 'AldgateT0wer',
 }
 
 export const listingOfficerCredentials = {
