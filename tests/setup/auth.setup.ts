@@ -3,7 +3,7 @@ import {
     envUrl, homeOfficeOfficerCredentials, judgeCredentials,
     legalOfficerAdminCredentials,
     legalOfficerCredentials,
-    legalRepresentativeCredentials, listingOfficerCredentials
+    listingOfficerCredentials
 } from '../e2e/iacConfig';
 import {IdamPage} from '../e2e/page-objects/pages/idam.po';
 

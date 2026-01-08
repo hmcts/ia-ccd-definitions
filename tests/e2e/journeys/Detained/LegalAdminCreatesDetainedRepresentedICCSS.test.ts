@@ -1,10 +1,7 @@
 import {expect, test} from '@playwright/test';
 import {
-    envUrl, homeOfficeOfficerCredentials, judgeCredentials,
-    legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials, runningEnv,
+    envUrl, runningEnv,
 } from '../../iacConfig';
-import {IdamPage} from '../../page-objects/pages/idam.po';
-import {LinkHelper} from '../../helpers/LinkHelper';
 import {PageHelper} from '../../helpers/PageHelper';
 import {ButtonHelper} from '../../helpers/ButtonHelper';
 import {ValidationHelper} from '../../helpers/ValidationHelper'
@@ -54,8 +51,6 @@ let caseId: string = '';
 //protection - Refusal of protection claim (PA) (payment required)
 const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
 
-let idamPage: IdamPage;
-let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 let buttonHelper: ButtonHelper;
 let validationHelper: ValidationHelper;
@@ -65,8 +60,6 @@ let s94b: S94b;
 
 test.beforeEach(async ({page}) => {
     // Go to the starting url before each test.
-    idamPage = new IdamPage(page);
-    linkHelper = new LinkHelper(page);
     pageHelper = new PageHelper(page);
     buttonHelper = new ButtonHelper(page);
     validationHelper = new ValidationHelper(page);
