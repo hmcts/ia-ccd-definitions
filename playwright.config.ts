@@ -68,6 +68,17 @@ module.exports = defineConfig({
       dependencies: ["ICC_authentication"],
     },
     {
+      name: 'chromium',
+      use: {
+        ...devices['Desktop Chrome'],
+        channel: 'chrome',
+        viewport: { width: 1929, height: 959 },
+        launchOptions: {
+          //slowMo: 1000,
+        },
+      },
+    },
+    {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
