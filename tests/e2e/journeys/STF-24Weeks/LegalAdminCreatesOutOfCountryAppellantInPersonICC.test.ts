@@ -60,7 +60,7 @@ let s94b: S94b;
 let caseId: string = '';
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin Officer Creates Out of Country, Appellant in Person, ' + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC Appeal.', { tag: '@LegalAdminCreatesOutOfCountryAppellantInPersonICC' }, () => {
+test.describe('Legal Admin Officer Creates Out of Country, Appellant in Person, ' + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC Appeal.', { tag: '@STF_LegalAdminCreatesOutOfCountryAppellantInPersonICC' }, () => {
 
     test.beforeEach(async ({ page }) => {
         idamPage = new IdamPage(page);

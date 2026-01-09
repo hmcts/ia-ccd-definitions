@@ -7,23 +7,23 @@ import {
     ccdDataStoreApiBaseUrl, createCase
 } from '../iacConfig';
 import {TOTP} from 'totp-generator';
+import fs from "node:fs";
+import { jwtDecode } from "jwt-decode";
 
 export class TokensHelper {
 
     constructor() {
     }
 
-    async getAccessToken(username: string, password: string) {
+    private async getTokenFromIdam(username: string, password: string) {
         const apiRequestContext: APIRequestContext = await request.newContext();
-
         try {
             const response = await apiRequestContext.post(`${idamApiBaseUrl}/loginUser?username=${encodeURIComponent(username)}&password=${password}`, {
-                    headers: {
-                        "Content-Type": "application/x-www-form-urlencoded",
-                        Accept: "application/json",
-                    },
-                }
-            );
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    Accept: "application/json",
+                },
+            });
 
             if (!response.ok()) {
                 const errorText = await response.text();
@@ -35,9 +35,29 @@ export class TokensHelper {
         } catch (error) {
             throw new Error(
                 `An error occurred while fetching the access token: ${
-                    error instanceof Error ? error.message : error
-                }`
+                    error instanceof Error ? error.message : error }`
             );
+        };
+    }
+
+    async getAccessToken(authFile: fs.PathOrFileDescriptor, username: string, password: string) {
+
+        // Use the storage state accessToken if one exists and it has not expired
+        try {
+            const sessionStorage = JSON.parse(fs.readFileSync(authFile, 'utf-8'));
+            const authCookie = sessionStorage.cookies.find(cookie => cookie.name == '__auth__');
+            let accessToken = authCookie.value;
+            // Check token has not expired
+            if ((jwtDecode(accessToken).exp * 1000) - Date.now() >= 0) {
+                console.log('Getting Token from Cache....');
+            } else {
+                console.log('Getting Token from Idam....');
+                accessToken =  await this.getTokenFromIdam(username, password);
+            }
+            return accessToken;
+        } catch (error) {
+            console.log('Getting Token from Idam....');
+            return await this.getTokenFromIdam(username, password);
         };
     }
 

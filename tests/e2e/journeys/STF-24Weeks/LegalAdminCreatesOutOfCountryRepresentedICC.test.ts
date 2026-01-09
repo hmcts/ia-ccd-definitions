@@ -63,7 +63,7 @@ let caseId: string = '';
 const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Representative', { tag: '@LegalAdminCreatesOutOfCountryRepresentedICC' }, () => {
+test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Representative', { tag: '@STF_LegalAdminCreatesOutOfCountryRepresentedICC' }, () => {
 
     test.beforeEach(async ({ page }) => {
         idamPage = new IdamPage(page);

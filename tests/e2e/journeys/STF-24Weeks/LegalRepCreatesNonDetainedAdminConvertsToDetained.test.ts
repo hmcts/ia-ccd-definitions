@@ -23,7 +23,7 @@ let validationHelper: ValidationHelper;
 let caseId: string;
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Representative creates Non-Detained Appeal and Legal Officer converts appeal to a Detained', { tag: '@LegalRepCreatesNonDetainedAdminConvertsToDetained' }, () => {
+test.describe('Legal Representative creates Non-Detained Appeal and Legal Officer converts appeal to a Detained', { tag: '@STF_LegalRepCreatesNonDetainedAdminConvertsToDetained' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.

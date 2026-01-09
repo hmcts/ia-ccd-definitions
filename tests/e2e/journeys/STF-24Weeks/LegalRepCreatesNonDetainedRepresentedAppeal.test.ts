@@ -54,7 +54,7 @@ let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@LegalRepCreatesNonDetainedRepresented' }, () => {
+test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@STF_LegalRepCreatesNonDetainedRepresented' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.

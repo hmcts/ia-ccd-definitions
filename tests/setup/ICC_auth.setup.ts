@@ -6,6 +6,7 @@ import {
     listingOfficerCredentials
 } from '../e2e/iacConfig';
 import {IdamPage} from '../e2e/page-objects/pages/idam.po';
+import * as fs from "node:fs";
 
 let idamPage: IdamPage;
 test.beforeEach(async ({ page }) => {
@@ -26,6 +27,7 @@ setup("Authenticate Legal Officer Admin", async ({ page }) => {
 
     // Save authentication state
     await page.context().storageState({ path: authFile });
+
 });
 
 setup("Authenticate Legal Officer", async ({ page }) => {

@@ -523,14 +523,14 @@ export class CreateAppeal {
    }
 
     // Rehydrate flow for Legal Admin
-    async setAriaReferenceNumber() {
+    async setAriaReferenceNumber(storageStateFile?: string ) {
         // Before we enter the ARIA ref number into the field on the page we need to check the ARIA ref number
         // has not already been used as it is not possible to regenerate and check the validity of the ref number from the UI as
         // would need to hardcode waits.  The best way is to send the ref number to CCD (API) and see if we get a message back with an
         // error pertaining that the ref number is already in use.  In this case we generate a new and validate again until we get
         // a ref number that has not been used already.
         // If the return message is SUCCESS then we can use this ref number in the page and continue the journey
-        const accessToken: string = await this.tokensHelper.getAccessToken(legalOfficerAdminCredentials.username, legalOfficerCredentials.password);
+        const accessToken: string = await this.tokensHelper.getAccessToken(storageStateFile, legalOfficerAdminCredentials.username, legalOfficerCredentials.password);
         const uid: string = await this.tokensHelper.getUserId(accessToken);
         const s2sToken: string = await this.tokensHelper.getS2SToken();
         const eventToken = await this.tokensHelper.getEventToken('startAppeal', uid,accessToken,s2sToken);

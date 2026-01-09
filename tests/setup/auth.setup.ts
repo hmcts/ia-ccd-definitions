@@ -15,7 +15,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 
-setup("Authenticate Legal Officer Admin", async ({ page }) => {
+setup("Authenticate Legal Officer Admin", async ({ page }, use) => {
     const authFile = "./.auth/LegalOfficerAdmin.json";
 
     //Login
