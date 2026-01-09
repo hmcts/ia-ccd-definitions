@@ -49,14 +49,14 @@ export class TokensHelper {
             let accessToken = authCookie.value;
             // Check token has not expired
             if ((jwtDecode(accessToken).exp * 1000) - Date.now() >= 0) {
-                console.log('Getting Token from Cache....');
+                console.log('Getting Access Token from Cache....');
             } else {
-                console.log('Getting Token from Idam....');
+                console.log('Getting Access Token from Idam....');
                 accessToken =  await this.getTokenFromIdam(username, password);
             }
             return accessToken;
         } catch (error) {
-            console.log('Getting Token from Idam....');
+            console.log('Getting Access Token from Idam....');
             return await this.getTokenFromIdam(username, password);
         };
     }
