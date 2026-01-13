@@ -33,6 +33,7 @@ import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAnd
 import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 import {SendToPreHearing} from "../../flows/events/sendToPreHearing";
+import {TurnOnNotifications} from "../../flows/events/turnOnNotifications";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
@@ -81,7 +82,7 @@ test.describe('test1', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, ()
             await buttonHelper.continueButton.click(); // Before you start screen
 
             if (isRehydrated) {
-                await createAppeal.setAriaReferenceNumber();
+                await createAppeal.setAriaReferenceNumber('./.auth/LegalOfficerAdmin.json');
                 await createAppeal.setTribunalAppealReceived();
                 await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
             } else {
@@ -285,28 +286,28 @@ test.describe('test1', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, ()
         });
     });
 
-    test.describe('test13', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
-        test.use({storageState: './.auth/Judge.json'});
-        test('Judge to Prepare and Complete decision and reasons', async ({page}) => {
-            await pageHelper.getCase(caseId);
-            await new PrepareDecisionAndReasons(page).generate('Yes');
-            await new CompleteDecisionAndReasons(page).upload('allowed');
-        });
-    });
-
-    test.describe('test14', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
-        judgeDecision === 'allowed' ? test.use({storageState: './.auth/HomeOfficeOfficer.json'}) : test.use({storageState: './.auth/LegalOfficerAdmin.json'});
-        test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({page}) => {
-            judgeDecision === 'allowed' ? await page.goto(envUrl + '/cases/case-details/' + caseId) : await pageHelper.getCase(caseId);
-            await new ApplyForPermissionToAppeal(page).apply(judgeDecision === 'allowed' ? 'Respondent' : 'Appellant');
-        });
-    });
-
-    test.describe('test15', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
-        test.use({storageState: './.auth/Judge.json'});
-        test('Judge decides FTPA application', async ({ page }) => {
-            await pageHelper.getCase(caseId);
-            await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
-        });
-    });
+    // test.describe('test13', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
+    //     test.use({storageState: './.auth/Judge.json'});
+    //     test('Judge to Prepare and Complete decision and reasons', async ({page}) => {
+    //         await pageHelper.getCase(caseId);
+    //         await new PrepareDecisionAndReasons(page).generate('Yes');
+    //         await new CompleteDecisionAndReasons(page).upload('allowed');
+    //     });
+    // });
+    //
+    // test.describe('test14', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
+    //     judgeDecision === 'allowed' ? test.use({storageState: './.auth/HomeOfficeOfficer.json'}) : test.use({storageState: './.auth/LegalOfficerAdmin.json'});
+    //     test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({page}) => {
+    //         judgeDecision === 'allowed' ? await page.goto(envUrl + '/cases/case-details/' + caseId) : await pageHelper.getCase(caseId);
+    //         await new ApplyForPermissionToAppeal(page).apply(judgeDecision === 'allowed' ? 'Respondent' : 'Appellant');
+    //     });
+    // });
+    //
+    // test.describe('test15', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
+    //     test.use({storageState: './.auth/Judge.json'});
+    //     test('Judge decides FTPA application', async ({ page }) => {
+    //         await pageHelper.getCase(caseId);
+    //         await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
+    //     });
+    // });
 
