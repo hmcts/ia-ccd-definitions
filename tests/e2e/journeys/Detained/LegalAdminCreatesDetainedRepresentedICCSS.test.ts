@@ -33,7 +33,6 @@ import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAnd
 import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 import {SendToPreHearing} from "../../flows/events/sendToPreHearing";
-import {TurnOnNotifications} from "../../flows/events/turnOnNotifications";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
@@ -72,7 +71,7 @@ test.beforeEach(async ({page}) => {
 
 
 test.describe.configure({ mode: 'serial'});
-test.describe('test1', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
+test.describe('test1', { tag: '@SS' }, () => {
     test.use({storageState: './.auth/LegalOfficerAdmin.json'});
     test('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC Appeal.', async ({page,}) => {
         await createCasePage.createCase();
@@ -158,7 +157,7 @@ test.describe('test1', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, ()
 });
 
 
-    test.describe('test2', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
+    test.describe('test2', { tag: '@SS' }, () => {
         test.use({storageState: './.auth/LegalOfficer.json'});
         test('Legal Officer' + (!inTime ? ' records Out of Time decision, ' : ' ') + 'creates Respondent Direction', async ({page}) => {
             await pageHelper.getCase(caseId);
@@ -191,7 +190,7 @@ test.describe('test1', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, ()
         });
     });
 
-    test.describe('test3', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
+    test.describe('test3', { tag: '@SS' }, () => {
         test.use({storageState: './.auth/HomeOfficeOfficer.json'});
         test('Home Office Officer (respondent) review appeal and upload Home Office bundle', async ({page}) => {
             await page.goto(envUrl + '/cases/case-details/' + caseId);
@@ -199,7 +198,7 @@ test.describe('test1', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, ()
         });
     });
 
-    test.describe('test4', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
+    test.describe('test4', { tag: '@SS' }, () => {
         test.use({storageState: './.auth/LegalOfficer.json'});
         test('Legal Officer directs appellant/Legal Rep to build case', async ({page}) => {
             await pageHelper.getCase(caseId);
@@ -207,7 +206,7 @@ test.describe('test1', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, ()
         });
     });
 
-    test.describe('test5', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
+    test.describe('test5', { tag: '@SS' }, () => {
         test.use({storageState: './.auth/LegalOfficerAdmin.json'});
         test('Appellant/Legal Rep build case', async ({page}) => {
             await pageHelper.getCase(caseId);
@@ -215,7 +214,7 @@ test.describe('test1', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, ()
         });
     });
 
-    test.describe('test6', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
+    test.describe('test6', { tag: '@SS' }, () => {
         test.use({storageState: './.auth/LegalOfficer.json'});
         test('Legal Officer creates Respondent Review Direction', async ({page}) => {
             await pageHelper.getCase(caseId);
@@ -223,7 +222,7 @@ test.describe('test1', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, ()
         });
     });
 
-    test.describe('test7', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
+    test.describe('test7', { tag: '@SS' }, () => {
         test.use({storageState: './.auth/HomeOfficeOfficer.json'});
         test('Home Office Officer (respondent) responds to appeal response from Appellant/Legal Rep', async ({page}) => {
             await page.goto(envUrl + '/cases/case-details/' + caseId);
@@ -231,7 +230,7 @@ test.describe('test1', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, ()
         });
     });
 
-    test.describe('test8', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
+    test.describe('test8', { tag: '@SS' }, () => {
         test.use({storageState: './.auth/LegalOfficer.json'});
         test('Legal Officer Force case - hearing reqs, thus bypassing Appellant/Legal Rep needing to review the HO decision',   async ({ page }) => {
             await pageHelper.getCase(caseId);
@@ -239,7 +238,7 @@ test.describe('test1', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, ()
         });
     });
 
-    test.describe('test9', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
+    test.describe('test9', { tag: '@SS' }, () => {
         test.use({storageState: './.auth/LegalOfficerAdmin.json'});
         test('Appellant/legal rep submit hearing requirements',   async ({ page }) => {
             await page.goto(envUrl + '/cases/case-details/' + await caseId);
@@ -247,7 +246,7 @@ test.describe('test1', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, ()
         });
     });
 
-    test.describe('test10', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
+    test.describe('test10', { tag: '@SS' }, () => {
         test.use({storageState: './.auth/LegalOfficer.json'});
         test('Legal Officer to review hearing requirements',   async ({ page }) => {
             await pageHelper.getCase(caseId);
@@ -257,7 +256,7 @@ test.describe('test1', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, ()
 
     // // This is not the route the caseworker would use, however, we use it in the tests to get to the state of: Prepare for hearing
     // // This state is only available when the hearing is listed - this event mimics the List Assist integration for us and thus allows us to complete the journey
-    test.describe('test11', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
+    test.describe('test11', { tag: '@SS' }, () => {
         test.use({storageState: './.auth/LegalOfficerAdmin.json'});
         test('Admin Legal Officer to list the case', async ({page}) => {
             await pageHelper.getCase(caseId);
@@ -265,7 +264,7 @@ test.describe('test1', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, ()
         });
     });
 
-    test.describe('test12', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
+    test.describe('test12', { tag: '@SS' }, () => {
         test.use({storageState: './.auth/ListingOfficer.json'});
         test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons', async ({page}) => {
             await pageHelper.getCase(caseId);
@@ -286,28 +285,28 @@ test.describe('test1', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, ()
         });
     });
 
-    // test.describe('test13', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
-    //     test.use({storageState: './.auth/Judge.json'});
-    //     test('Judge to Prepare and Complete decision and reasons', async ({page}) => {
-    //         await pageHelper.getCase(caseId);
-    //         await new PrepareDecisionAndReasons(page).generate('Yes');
-    //         await new CompleteDecisionAndReasons(page).upload('allowed');
-    //     });
-    // });
-    //
-    // test.describe('test14', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
-    //     judgeDecision === 'allowed' ? test.use({storageState: './.auth/HomeOfficeOfficer.json'}) : test.use({storageState: './.auth/LegalOfficerAdmin.json'});
-    //     test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({page}) => {
-    //         judgeDecision === 'allowed' ? await page.goto(envUrl + '/cases/case-details/' + caseId) : await pageHelper.getCase(caseId);
-    //         await new ApplyForPermissionToAppeal(page).apply(judgeDecision === 'allowed' ? 'Respondent' : 'Appellant');
-    //     });
-    // });
-    //
-    // test.describe('test15', { tag: '@LegalAdminCreatesDetainedRepresentedICCSS' }, () => {
-    //     test.use({storageState: './.auth/Judge.json'});
-    //     test('Judge decides FTPA application', async ({ page }) => {
-    //         await pageHelper.getCase(caseId);
-    //         await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
-    //     });
-    // });
+    test.describe('test13', { tag: '@SS' }, () => {
+        test.use({storageState: './.auth/Judge.json'});
+        test('Judge to Prepare and Complete decision and reasons', async ({page}) => {
+            await pageHelper.getCase(caseId);
+            await new PrepareDecisionAndReasons(page).generate('Yes');
+            await new CompleteDecisionAndReasons(page).upload('allowed');
+        });
+    });
+
+    test.describe('test14', { tag: '@SS' }, () => {
+        judgeDecision === 'allowed' ? test.use({storageState: './.auth/HomeOfficeOfficer.json'}) : test.use({storageState: './.auth/LegalOfficerAdmin.json'});
+        test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({page}) => {
+            judgeDecision === 'allowed' ? await page.goto(envUrl + '/cases/case-details/' + caseId) : await pageHelper.getCase(caseId);
+            await new ApplyForPermissionToAppeal(page).apply(judgeDecision === 'allowed' ? 'Respondent' : 'Appellant');
+        });
+    });
+
+    test.describe('test15', { tag: '@SS' }, () => {
+        test.use({storageState: './.auth/Judge.json'});
+        test('Judge decides FTPA application', async ({ page }) => {
+            await pageHelper.getCase(caseId);
+            await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
+        });
+    });
 
