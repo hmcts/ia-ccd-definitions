@@ -36,6 +36,7 @@ import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAnd
 import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 import {SendToPreHearing} from "../../flows/events/sendToPreHearing";
+import { Add24WeeksStatutoryTimeframe, Add24WeeksStatutoryTimeframeIsDisabled, Remove24WeeksStatutoryTimeframe, Verify24WeeksTimelineStages } from '../../flows/events/addStatutoryTimeframe';
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
@@ -64,7 +65,7 @@ let s94b: S94b;
 
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Non-Detained Appellant in Person ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ') + 'ICC Appeal.' , { tag: '@STF_LegalAdminCreatesNonDetainedAppellantInPersonICC' }, () => {
+test.describe('Legal Admin creates Non-Detained Appellant in Person ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ') + 'ICC Appeal.' , { tag: '@nish' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -84,21 +85,17 @@ test.describe('Legal Admin creates Non-Detained Appellant in Person ' + typeOfAp
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();
 
-        if (['preview'].includes(runningEnv)) {
-            isRehydrated ? await createAppeal.setSourceOfAppeal('rehydratedAppeal') : await createAppeal.setSourceOfAppeal('paperForm');
-            await buttonHelper.continueButton.click(); // Before you start screen
-
-            if (isRehydrated) {
-                await createAppeal.setAriaReferenceNumber();
-                await createAppeal.setTribunalAppealReceived();
-                await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
-            } else {
-                await createAppeal.setTribunalAppealReceived();
-            }
-        } else {
-            await buttonHelper.continueButton.click(); // Before you start screen
-            await createAppeal.setTribunalAppealReceived();
-        }
+        await buttonHelper.continueButton.click(); // Before you start screen
+        await createAppeal.setTribunalAppealReceived();
+        
+        // if (['preview'].includes(runningEnv)) {
+        //     isRehydrated ? await createAppeal.setSourceOfAppeal('rehydratedAppeal') : await createAppeal.setSourceOfAppeal('paperForm');
+            
+        //     if (isRehydrated) {
+        //         await createAppeal.setAriaReferenceNumber();
+        //         await createAppeal.isAppealOutOfTime(inTime ? 'No' : 'Yes');
+        //     }
+        // }
 
         await createAppeal.appellantInPerson('Yes');
         await createAppeal.locationInUK('Yes');
@@ -151,6 +148,28 @@ test.describe('Legal Admin creates Non-Detained Appellant in Person ' + typeOfAp
         await linkHelper.signOut.click();
     });
 
+    test('Legal Admin adds 24 weeks statutory timeframe, verifies progress, then removes it', async ({ page }) => {
+        await idamPage.login(legalOfficerAdminCredentials);
+        await pageHelper.getCase(caseId);
+
+        expect(page.locator('img[alt="Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal submitted stage"]')).toBeVisible({ timeout: 10000 })
+        await Add24WeeksStatutoryTimeframe(page, "Legal Admin adding statutory timeframe");
+        await Add24WeeksStatutoryTimeframeIsDisabled(page);
+
+        await Verify24WeeksTimelineStages(page, 1);
+    
+        console.log('✓ Verified all 24-week timeline stages are present after adding statutory timeframe');
+        
+        await linkHelper.signOut.click();
+
+        await idamPage.login(judgeCredentials);
+        await pageHelper.getCase(caseId)
+        await Remove24WeeksStatutoryTimeframe(page, "Judge removing statutory timeframe");
+           
+        await Verify24WeeksTimelineStages(page, 2);
+        await linkHelper.signOut.click();
+    });
+    
     test('Legal Officer' + (!inTime ? ' records Out of Time decision, ': ' ') + 'creates Respondent Direction and adds then removes s94b', async ({ page }) => {
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);

@@ -518,7 +518,17 @@ export class CreateAppeal {
 
    // Rehydrate flow for Legal Admin
    async setSourceOfAppeal(source: string = 'paperForm') {
-        await this.page.check(`#sourceOfAppeal-${source}`);
+        const sourceOfAppealSelector = `#sourceOfAppeal-${source}`;
+        
+        const isVisible = await this.page.locator(sourceOfAppealSelector).isVisible({ timeout: 5000 }).catch(() => false);
+        
+        if (!isVisible) {
+            await this.buttonHelper.continueButton.click();
+            //await this.page.waitForSelector(sourceOfAppealSelector, { timeout: 30000 });
+        }
+        
+        await this.page.check(sourceOfAppealSelector);
+        await this.page.waitForTimeout(500);
         await this.buttonHelper.continueButton.click();
    }
 
