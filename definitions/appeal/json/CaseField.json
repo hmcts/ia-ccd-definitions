@@ -1108,8 +1108,17 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_lr_listing_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Listing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_listing.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_listing",
-    "Label": "## Current progress of the case\r\n\r\n![Listing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_listing.svg)\r\n\r\n## Do this next\r\nThe case officer is reviewing the hearing requirements. Once the requirements have been agreed with the Tribunal, the case will be listed and you will receive a notification with the hearing notice.</br></br>",
+    "Label": "## Do this next\r\nThe case officer is reviewing the hearing requirements. Once the requirements have been agreed with the Tribunal, the case will be listed and you will receive a notification with the hearing notice.</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -1118,7 +1127,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_listing_without_hearing_req",
-    "Label": "## Current progress of the case\r\n\r\n![Listing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_listing.svg)\r\n\r\n## Do this next\r\nYou have not submitted any hearing requirements on behalf of the appellant.\r\n\r\nThe case is now being listed without hearing requirements and the Notice of Hearing will be sent to both parties.\n\n",
+    "Label": "## Do this next\r\nYou have not submitted any hearing requirements on behalf of the appellant.\r\n\r\nThe case is now being listed without hearing requirements and the Notice of Hearing will be sent to both parties.\n\n",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -1127,7 +1136,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_listing_without_hearing_req_ra",
-    "Label": "## Current progress of the case\r\n\r\n![Listing](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_listing.svg)\r\n\r\n## What happens next\r\nYou have not submitted any hearing requirements on behalf of the appellant.\r\n\r\nThe case is now being listed without any new hearing requirements and the Notice of Hearing will be sent to both parties.\n\n",
+    "Label": "## What happens next\r\nYou have not submitted any hearing requirements on behalf of the appellant.\r\n\r\nThe case is now being listed without any new hearing requirements and the Notice of Hearing will be sent to both parties.\n\n",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
