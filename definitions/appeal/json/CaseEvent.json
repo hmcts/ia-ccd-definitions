@@ -1695,6 +1695,7 @@
     "ShowSummary": "Y",
     "ShowEventNotes": "N",
     "EndButtonLabel": "Save and continue",
+    "EventEnablingCondition": "[STATE]!=\"appealStarted\" AND [STATE]!=\"appealStartedByAdmin\"",
     "Publish": "Y"
   },
   {
