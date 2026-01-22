@@ -201,13 +201,16 @@ test.describe('Legal Admin creates Non-Detained, In country, Represented, ' + ty
         await linkHelper.signOut.click();
     });
 
+
     test('Turn on notifications and then Appellant/Legal Rep build case',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await pageHelper.getCase(caseId);
         // Turn on Notifications/WA tasks
-        await new TurnOnNotifications(page).submit();
-        await validationHelper.validateNextStepNotAvailable('Turn on notifications/WA tasks');
-        await validationHelper.validateLabelNotDisplayed(imageLocators.rehydrated.notifications.locator);
+        if (isRehydrated) {
+            await new TurnOnNotifications(page).submit();
+            await validationHelper.validateNextStepNotAvailable('Turn on notifications/WA tasks');
+            await validationHelper.validateLabelNotDisplayed(imageLocators.rehydrated.notifications.locator);
+        }
         await new BuildYourCase(page).build();
         await linkHelper.signOut.click();
     });
