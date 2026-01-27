@@ -36,6 +36,9 @@ import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAnd
 import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 import {SendToPreHearing} from "../../flows/events/sendToPreHearing";
+import {TurnOnNotifications} from "../../flows/events/turnOnNotifications";
+import {TabsHelper} from "../../helpers/TabsHelper";
+import {CreateHearingRequest} from "../../flows/createHearingRequest";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
@@ -62,6 +65,7 @@ let validationHelper: ValidationHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
 let s94b: S94b;
+let createHearingRequest: CreateHearingRequest;
 
 test.describe.configure({ mode: 'serial'});
 test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC Appeal.', { tag: '@LegalAdminCreatesDetainedRepresentedICC' }, () => {
@@ -256,11 +260,45 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         await linkHelper.signOut.click();
     });
 
+    test('Listing officer creates Hearing Request',   async ({ page }) => {
+        await idamPage.login(listingOfficerCredentials);
+        await pageHelper.getCase(caseId);
+        await new TabsHelper(page).selectTab('Hearings');
+        // We need to wait for the text of the page to load otherwise clicking Request a hearing button too early causes error on page
+        await page.waitForSelector('text=Current and upcoming', {state: 'visible'});
+        await page.getByRole('button', { name: 'Request a hearing' }).click();
+
+        createHearingRequest = new CreateHearingRequest(page);
+        await createHearingRequest.checkHearingRequirements();
+        await createHearingRequest.setAdditionalFacilities();
+
+        if (cmrHearing) {
+            await createHearingRequest.setHearingStage('CMR');
+        } else {
+            await createHearingRequest.setHearingStage('SUB');
+        }
+
+        await createHearingRequest.setParticipantAttendance();
+        await createHearingRequest.setVenueLocation('Glasgow');
+        await createHearingRequest.setSpecificJudge('No');
+        await createHearingRequest.setPanelRequired('No');
+        await createHearingRequest.setLengthDatePriority();
+        await createHearingRequest.setLinkedCase('No');
+        await createHearingRequest.setAdditionalInstructions();
+        await page.getByRole('button', { name: 'Submit request' }).click();
+        await page.locator('text=view the status of this hearing in the hearings tab').click();
+        await linkHelper.signOut.click();
+    });
+
     // This is not the route the caseworker would use, however, we use it in the tests to get to the state of: Prepare for hearing
     // This state is only available when the hearing is listed - this event mimics the List Assist integration for us and thus allows us to complete the journey
-    test('Admin Legal Officer to list the case',   async ({ page }) => {
+    test('Admin Legal Officer ' + isRehydrated ? 'turns on notifications and ' : '' + 'lists the case',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await pageHelper.getCase(caseId);
+        if (isRehydrated) {
+            // Turn on Notifications/WA tasks
+            await new TurnOnNotifications(page).submit();
+        }
         await new ListTheCase(page).list('No');
         await linkHelper.signOut.click();
     });
@@ -306,4 +344,4 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
         await linkHelper.signOut.click();
     });
-});
+ });

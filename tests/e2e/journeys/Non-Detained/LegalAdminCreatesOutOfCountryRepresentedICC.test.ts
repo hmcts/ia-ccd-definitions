@@ -36,8 +36,11 @@ import {RequestHomeOfficeData} from "../../flows/events/requestHomeOfficeData";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 import {SendToPreHearing} from "../../flows/events/sendToPreHearing";
 import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
+import {TabsHelper} from "../../helpers/TabsHelper";
+import {CreateHearingRequest} from "../../flows/createHearingRequest";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
+const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
 const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
@@ -52,6 +55,7 @@ let validationHelper: ValidationHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
 let s94b: S94b;
+let createHearingRequest: CreateHearingRequest;
 let caseId: string = '';
 
 //refusalOfEu - Refusal under EEA regulations (EA) (payment required)
@@ -236,6 +240,37 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
         await new ReviewHearingRequirements(page).submit();
         await linkHelper.signOut.click();
     });
+
+    test('Listing officer creates Hearing Request',   async ({ page }) => {
+        await idamPage.login(listingOfficerCredentials);
+        await pageHelper.getCase(caseId);
+        await new TabsHelper(page).selectTab('Hearings');
+        // We need to wait for the text of the page to load otherwise clicking Request a hearing button too early causes error on page
+        await page.waitForSelector('text=Current and upcoming', {state: 'visible'});
+        await page.getByRole('button', { name: 'Request a hearing' }).click();
+
+        createHearingRequest = new CreateHearingRequest(page);
+        await createHearingRequest.checkHearingRequirements();
+        await createHearingRequest.setAdditionalFacilities();
+
+        if (cmrHearing) {
+            await createHearingRequest.setHearingStage('CMR');
+        } else {
+            await createHearingRequest.setHearingStage('SUB');
+        }
+
+        await createHearingRequest.setParticipantAttendance();
+        await createHearingRequest.setVenueLocation('Glasgow');
+        await createHearingRequest.setSpecificJudge('No');
+        await createHearingRequest.setPanelRequired('No');
+        await createHearingRequest.setLengthDatePriority();
+        await createHearingRequest.setLinkedCase('No');
+        await createHearingRequest.setAdditionalInstructions();
+        await page.getByRole('button', { name: 'Submit request' }).click();
+        await page.locator('text=view the status of this hearing in the hearings tab').click();
+        await linkHelper.signOut.click();
+    });
+
 
     // This is not the route the caseworker would use, however, we use it in the tests to get to the state of: Prepare for hearing
     // This state is only available when the hearing is listed - this event mimics the List Assist integration for us and thus allows us to complete the journey

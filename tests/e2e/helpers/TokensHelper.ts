@@ -55,7 +55,7 @@ export class TokensHelper {
                 accessToken =  await this.getTokenFromIdam(username, password);
             }
             return accessToken;
-        } catch (error) {
+        } catch {
             console.log('Getting Access Token from Idam....');
             return await this.getTokenFromIdam(username, password);
         };

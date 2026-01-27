@@ -33,6 +33,9 @@ import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAnd
 import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 import {SendToPreHearing} from "../../flows/events/sendToPreHearing";
+import {TurnOnNotifications} from "../../flows/events/turnOnNotifications";
+import {TabsHelper} from "../../helpers/TabsHelper";
+import {CreateHearingRequest} from "../../flows/createHearingRequest";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
@@ -57,6 +60,7 @@ let validationHelper: ValidationHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
 let s94b: S94b;
+let createHearingRequest: CreateHearingRequest;
 
 test.beforeEach(async ({page}) => {
     // Go to the starting url before each test.
@@ -141,7 +145,10 @@ test.describe('test1', { tag: '@SS' }, () => {
 
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
-
+        if (isRehydrated) {
+            // Turn on Notifications/WA tasks
+            await new TurnOnNotifications(page).submit();
+        }
         await new SubmitYourAppeal(page).submit(false, inTime);
 
         if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
@@ -254,17 +261,53 @@ test.describe('test1', { tag: '@SS' }, () => {
         });
     });
 
-    // // This is not the route the caseworker would use, however, we use it in the tests to get to the state of: Prepare for hearing
-    // // This state is only available when the hearing is listed - this event mimics the List Assist integration for us and thus allows us to complete the journey
     test.describe('test11', { tag: '@SS' }, () => {
+        test.use({storageState: './.auth/ListingOfficer.json'});
+        test('Listing officer creates Hearing Request', async ({page}) => {
+            await pageHelper.getCase(caseId);
+            await new TabsHelper(page).selectTab('Hearings');
+            // We need to wait for the text of the page to load otherwise clicking Request a hearing button too early causes error on page
+            await page.waitForSelector('text=Current and upcoming', {state: 'visible'});
+            await page.getByRole('button', {name: 'Request a hearing'}).click();
+
+            createHearingRequest = new CreateHearingRequest(page);
+            await createHearingRequest.checkHearingRequirements();
+            await createHearingRequest.setAdditionalFacilities();
+
+            if (cmrHearing) {
+                await createHearingRequest.setHearingStage('CMR');
+            } else {
+                await createHearingRequest.setHearingStage('SUB');
+            }
+
+            await createHearingRequest.setParticipantAttendance();
+            await createHearingRequest.setVenueLocation('Glasgow');
+            await createHearingRequest.setSpecificJudge('No');
+            await createHearingRequest.setPanelRequired('No');
+            await createHearingRequest.setLengthDatePriority();
+            await createHearingRequest.setLinkedCase('No');
+            await createHearingRequest.setAdditionalInstructions();
+            await page.getByRole('button', {name: 'Submit request'}).click();
+            await page.locator('text=view the status of this hearing in the hearings tab').click();
+        });
+    });
+
+
+    // This is not the route the caseworker would use, however, we use it in the tests to get to the state of: Prepare for hearing
+    // This state is only available when the hearing is listed - this event mimics the List Assist integration for us and thus allows us to complete the journey
+    test.describe('test12', { tag: '@SS' }, () => {
         test.use({storageState: './.auth/LegalOfficerAdmin.json'});
         test('Admin Legal Officer to list the case', async ({page}) => {
             await pageHelper.getCase(caseId);
+            // if (isRehydrated) {
+            //     // Turn on Notifications/WA tasks
+            //     await new TurnOnNotifications(page).submit();
+            // }
             await new ListTheCase(page).list('No');
         });
     });
 
-    test.describe('test12', { tag: '@SS' }, () => {
+    test.describe('test13', { tag: '@SS' }, () => {
         test.use({storageState: './.auth/ListingOfficer.json'});
         test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons', async ({page}) => {
             await pageHelper.getCase(caseId);
@@ -285,7 +328,7 @@ test.describe('test1', { tag: '@SS' }, () => {
         });
     });
 
-    test.describe('test13', { tag: '@SS' }, () => {
+    test.describe('test14', { tag: '@SS' }, () => {
         test.use({storageState: './.auth/Judge.json'});
         test('Judge to Prepare and Complete decision and reasons', async ({page}) => {
             await pageHelper.getCase(caseId);
@@ -294,7 +337,7 @@ test.describe('test1', { tag: '@SS' }, () => {
         });
     });
 
-    test.describe('test14', { tag: '@SS' }, () => {
+    test.describe('test15', { tag: '@SS' }, () => {
         judgeDecision === 'allowed' ? test.use({storageState: './.auth/HomeOfficeOfficer.json'}) : test.use({storageState: './.auth/LegalOfficerAdmin.json'});
         test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({page}) => {
             judgeDecision === 'allowed' ? await page.goto(envUrl + '/cases/case-details/' + caseId) : await pageHelper.getCase(caseId);
@@ -302,7 +345,7 @@ test.describe('test1', { tag: '@SS' }, () => {
         });
     });
 
-    test.describe('test15', { tag: '@SS' }, () => {
+    test.describe('test16', { tag: '@SS' }, () => {
         test.use({storageState: './.auth/Judge.json'});
         test('Judge decides FTPA application', async ({ page }) => {
             await pageHelper.getCase(caseId);

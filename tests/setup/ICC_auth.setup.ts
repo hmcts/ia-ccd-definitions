@@ -6,7 +6,6 @@ import {
     listingOfficerCredentials
 } from '../e2e/iacConfig';
 import {IdamPage} from '../e2e/page-objects/pages/idam.po';
-import * as fs from "node:fs";
 
 let idamPage: IdamPage;
 test.beforeEach(async ({ page }) => {

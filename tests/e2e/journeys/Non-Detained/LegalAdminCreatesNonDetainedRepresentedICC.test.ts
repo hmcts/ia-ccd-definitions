@@ -66,6 +66,7 @@ let validationHelper: ValidationHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
 let s94b: S94b;
+let createHearingRequest: CreateHearingRequest;
 
 test.describe.configure({ mode: 'serial'});
 test.describe('Legal Admin creates Non-Detained, In country, Represented, ' + typeOfAppeal + (isRehydrated ? ', Rehydrated, ' : ', Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC Appeal.', { tag: '@LegalAdminCreatesNonDetainedRepresentedICC' }, () => {
@@ -116,7 +117,6 @@ test.describe('Legal Admin creates Non-Detained, In country, Represented, ' + ty
         isRehydrated ? await createAppeal.uploadNoticeOfDecision('RehydratedNod') : await createAppeal.uploadNoticeOfDecision();
         await createAppeal.hasSponsor('No');
         await createAppeal.hasDeportationOrder('No');
-       // await createAppeal.hasRemovalDirections('No');
         await createAppeal.hasOtherAppeals('No');
         await createAppeal.isHearingRequired(true);
 
@@ -152,6 +152,12 @@ test.describe('Legal Admin creates Non-Detained, In country, Represented, ' + ty
         }
 
         await linkHelper.signOut.click();
+    });
+
+    test('Admin Legal Officer Turn on Notifications',   async ({ page }) => {
+        await idamPage.login(legalOfficerAdminCredentials);
+        await page.goto(envUrl + '/cases/case-details/' + await caseId);
+        await new TurnOnNotifications(page).submit();
     });
 
     test('Legal Officer' + (!inTime ? ' records Out of Time decision, ': ' ') + 'creates Respondent Direction', async ({ page }) => {
@@ -205,12 +211,6 @@ test.describe('Legal Admin creates Non-Detained, In country, Represented, ' + ty
     test('Turn on notifications and then Appellant/Legal Rep build case',   async ({ page }) => {
         await idamPage.login(legalOfficerAdminCredentials);
         await pageHelper.getCase(caseId);
-        // Turn on Notifications/WA tasks
-        if (isRehydrated) {
-            await new TurnOnNotifications(page).submit();
-            await validationHelper.validateNextStepNotAvailable('Turn on notifications/WA tasks');
-            await validationHelper.validateLabelNotDisplayed(imageLocators.rehydrated.notifications.locator);
-        }
         await new BuildYourCase(page).build();
         await linkHelper.signOut.click();
     });
@@ -250,15 +250,6 @@ test.describe('Legal Admin creates Non-Detained, In country, Represented, ' + ty
         await linkHelper.signOut.click();
     });
 
-    // This is not the route the caseworker would use, however, we use it in the tests to get to the state of: Prepare for hearing
-    // This state is only available when the hearing is listed - this event mimics the List Assist integration for us and thus allows us to complete the journey
-    // test('Admin Legal Officer to list the case',   async ({ page }) => {
-    //     await idamPage.login(legalOfficerAdminCredentials);
-    //     await pageHelper.getCase(caseId);
-    //     await new ListTheCase(page).list('No');
-    //     await linkHelper.signOut.click();
-    // });
-
     test('Listing officer creates Hearing Request',   async ({ page }) => {
         await idamPage.login(listingOfficerCredentials);
         await pageHelper.getCase(caseId);
@@ -267,7 +258,7 @@ test.describe('Legal Admin creates Non-Detained, In country, Represented, ' + ty
         await page.waitForSelector('text=Current and upcoming', {state: 'visible'});
         await page.getByRole('button', { name: 'Request a hearing' }).click();
 
-        let createHearingRequest = new CreateHearingRequest(page);
+        createHearingRequest = new CreateHearingRequest(page);
         await createHearingRequest.checkHearingRequirements();
         await createHearingRequest.setAdditionalFacilities();
 
@@ -289,6 +280,14 @@ test.describe('Legal Admin creates Non-Detained, In country, Represented, ' + ty
         await linkHelper.signOut.click();
     });
 
+    // This is not the route the caseworker would use, however, we use it in the tests to get to the state of: Prepare for hearing
+    // This state is only available when the hearing is listed - this event mimics the List Assist integration for us and thus allows us to complete the journey
+    test('Admin Legal Officer to list the case',   async ({ page }) => {
+        await idamPage.login(legalOfficerAdminCredentials);
+        await pageHelper.getCase(caseId);
+        await new ListTheCase(page).list('No');
+        await linkHelper.signOut.click();
+    });
 
     test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
         await idamPage.login(listingOfficerCredentials);

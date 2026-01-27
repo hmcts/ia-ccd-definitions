@@ -36,6 +36,8 @@ import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAnd
 import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionToAppeal";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 import {SendToPreHearing} from "../../flows/events/sendToPreHearing";
+import {TabsHelper} from "../../helpers/TabsHelper";
+import {CreateHearingRequest} from "../../flows/createHearingRequest";
 
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
@@ -62,6 +64,7 @@ let validationHelper: ValidationHelper;
 let createAppeal: CreateAppeal;
 let createCasePage: CreateCasePage;
 let s94b: S94b;
+let createHearingRequest: CreateHearingRequest;
 
 
 test.describe.configure({ mode: 'serial'});
@@ -259,6 +262,36 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await idamPage.login(legalOfficerCredentials);
         await pageHelper.getCase(caseId);
         await new ReviewHearingRequirements(page).submit();
+        await linkHelper.signOut.click();
+    });
+
+    test('Listing officer creates Hearing Request',   async ({ page }) => {
+        await idamPage.login(listingOfficerCredentials);
+        await pageHelper.getCase(caseId);
+        await new TabsHelper(page).selectTab('Hearings');
+        // We need to wait for the text of the page to load otherwise clicking Request a hearing button too early causes error on page
+        await page.waitForSelector('text=Current and upcoming', {state: 'visible'});
+        await page.getByRole('button', { name: 'Request a hearing' }).click();
+
+        createHearingRequest = new CreateHearingRequest(page);
+        await createHearingRequest.checkHearingRequirements();
+        await createHearingRequest.setAdditionalFacilities();
+
+        if (cmrHearing) {
+            await createHearingRequest.setHearingStage('CMR');
+        } else {
+            await createHearingRequest.setHearingStage('SUB');
+        }
+
+        await createHearingRequest.setParticipantAttendance();
+        await createHearingRequest.setVenueLocation('Glasgow');
+        await createHearingRequest.setSpecificJudge('No');
+        await createHearingRequest.setPanelRequired('No');
+        await createHearingRequest.setLengthDatePriority();
+        await createHearingRequest.setLinkedCase('No');
+        await createHearingRequest.setAdditionalInstructions();
+        await page.getByRole('button', { name: 'Submit request' }).click();
+        await page.locator('text=view the status of this hearing in the hearings tab').click();
         await linkHelper.signOut.click();
     });
 
