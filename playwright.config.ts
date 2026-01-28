@@ -3,7 +3,7 @@ import {envUrl} from "./tests/e2e/iacConfig";
 
 module.exports = defineConfig({
   //globalSetup: './global-setup',
-//  testDir: './tests/e2e/journeys',
+  testDir: './tests/e2e/journeys',
   /* Run tests in files in parallel */
  // fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
