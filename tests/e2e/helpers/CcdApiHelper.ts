@@ -6,7 +6,7 @@ export class CcdApiHelper {
 
     }
 
-    async validatePageData(pageId:string, event:string, caseData:unknown, uid, accessToken, s2sToken ) {
+    async validatePageData(pageId:string, caseData:unknown, uid, accessToken, s2sToken ) {
         const url: string = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/validate?pageId=${pageId}`;
         const apiRequestContext: APIRequestContext = await request.newContext();
 
@@ -40,7 +40,44 @@ export class CcdApiHelper {
                 }`
             );
         };
+    };
 
 
-    }
+    async createDraftAppeal(event:string, caseData:unknown, uid, accessToken, s2sToken ) {
+        const url: string = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases`;
+        const apiRequestContext: APIRequestContext = await request.newContext();
+
+        try {
+            const response = await apiRequestContext.post(url, {
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "*/*",
+                    Authorization: `Bearer ${accessToken}`,
+                    ServiceAuthorization: s2sToken
+                },
+                data: caseData
+            });
+
+            if (!response.ok()) {
+                if (response.status() === 422) {
+                    const errorTextJson: string[] = (await response.json()).callbackErrors;
+                    return errorTextJson;
+                } else {
+                    const errorText = await response.text();
+                    throw new Error(
+                        `Failed to create appeal: ${response.status()} - ${errorText}. Ensure your VPN is connected or check your URL/SECRET.`
+                    );
+                }
+            }
+            //console.log(await response.json());
+            return await response.json();
+        } catch (error) {
+            throw new Error(
+                `An error occurred while trying to validate the page data: ${
+                    error instanceof Error ? error.message : error
+                }`
+            );
+        };
+    };
+
 }

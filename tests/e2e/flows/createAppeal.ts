@@ -555,7 +555,7 @@ export class CreateAppeal {
 
         for (let retry=0; retry < maxRetries; retry++)
         {
-            const response: string =  (await this.ccdApiHelper.validatePageData(`${event}appealReferenceNumber`, event, caseData, uid, accessToken, s2sToken))[0];
+            const response: string =  (await this.ccdApiHelper.validatePageData(`${event}appealReferenceNumber`, caseData, uid, accessToken, s2sToken))[0];
 
             if ( response === 'SUCCESS') {
                 console.log(`Aria reference number: ${ariaRefNumber} is valid and not assigned to an existing appeal.`);

@@ -145,10 +145,10 @@ test.describe('test1', { tag: '@SS' }, () => {
 
         caseId = await pageHelper.grabCaseNumber();
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
-        if (isRehydrated) {
-            // Turn on Notifications/WA tasks
-            await new TurnOnNotifications(page).submit();
-        }
+        // if (isRehydrated) {
+        //     // Turn on Notifications/WA tasks
+        //     await new TurnOnNotifications(page).submit();
+        // }
         await new SubmitYourAppeal(page).submit(false, inTime);
 
         if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
