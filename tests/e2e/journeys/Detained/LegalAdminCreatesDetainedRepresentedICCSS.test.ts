@@ -80,7 +80,7 @@ test.describe('test1', { tag: '@SS' }, () => {
     test('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC Appeal.', async ({page,}) => {
         await createCasePage.createCase();
 
-        if (['preview'].includes(runningEnv)) {
+        if (['preview', 'demo'].includes(runningEnv)) {
             isRehydrated ? await createAppeal.setSourceOfAppeal('rehydratedAppeal') : await createAppeal.setSourceOfAppeal('paperForm');
             await buttonHelper.continueButton.click(); // Before you start screen
 

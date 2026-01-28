@@ -87,7 +87,7 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();
 
-        if (['preview'].includes(runningEnv)) {
+        if (['preview', 'demo'].includes(runningEnv)) {
             isRehydrated ? await createAppeal.setSourceOfAppeal('rehydratedAppeal') : await createAppeal.setSourceOfAppeal('paperForm');
             await buttonHelper.continueButton.click(); // Before you start screen
 

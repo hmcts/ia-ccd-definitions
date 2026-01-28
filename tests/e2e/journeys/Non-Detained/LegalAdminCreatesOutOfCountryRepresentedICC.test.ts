@@ -85,7 +85,7 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
         await idamPage.login(legalOfficerAdminCredentials);
         await createCasePage.createCase();
 
-        if (['preview'].includes(runningEnv)) {
+        if (['preview', 'demo'].includes(runningEnv)) {
             isRehydrated ? await createAppeal.setSourceOfAppeal('rehydratedAppeal') : await createAppeal.setSourceOfAppeal('paperForm');
             await buttonHelper.continueButton.click(); // Before you start screen
 
