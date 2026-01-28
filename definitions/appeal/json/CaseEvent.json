@@ -622,7 +622,7 @@
     "Name": "Add case note",
     "Description": "Add case note",
     "DisplayOrder": 27,
-    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;ended;appealTakenOffline;ftpaSubmitted;ftpaDecided;adjourned;awaitingReasonsForAppeal;reasonsForAppealSubmitted;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingCmaRequirements;cmaRequirementsSubmitted;cmaAdjustmentsAgreed;cmaListed;remitted",
+    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;caseUnderReview;respondentReview;submitHearingRequirements;listing;prepareForHearing;finalBundling;preHearing;decision;decided;ended;appealTakenOffline;ftpaSubmitted;ftpaDecided;adjourned;awaitingReasonsForAppeal;reasonsForAppealSubmitted;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingCmaRequirements;cmaRequirementsSubmitted;cmaAdjustmentsAgreed;cmaListed;remitted;migrated",
     "PostConditionState": "*",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
     "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
