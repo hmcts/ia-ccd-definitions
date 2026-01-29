@@ -3,7 +3,7 @@ import {appellant, legalRepresentative} from "../../../../e2e/iacConfig";
 const yesterday = moment().subtract(1, 'days');
 const homeOfficeDecisionDate = moment().subtract(5, 'days');
 
-export class DetainedPrisonInTimeRehydrated {
+export class DetainedRepresentedPrisonInTimeRehydrated {
 
 
   async generateTestData() {

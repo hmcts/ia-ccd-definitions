@@ -7,7 +7,7 @@ import {TokensHelper} from "../../../e2e/helpers/TokensHelper";
 import {ariaReferenceNumber} from "../../../e2e/fixtures/ariaReferenceNumber";
 import {CcdApiHelper} from "../../../e2e/helpers/CcdApiHelper";
 import {APIResponse} from "playwright";
-import {DetainedRepresentedPrisonInTimeRehydrated} from "./CaseData/DetainedRepresentedPrisonInTimeRehydrated";
+import {RepresentedOutOfCountryInTimeRehydrated} from "./CaseData/RepresentedOutOfCountryInTimeRehydrated";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
@@ -36,7 +36,7 @@ let tokensHelper: TokensHelper;
 let uploadedDocUrl: string;
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC Appeal.', { tag: '@LrManualDetainedApi' }, () => {
+test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC Appeal.', { tag: '@LrManualOutOfCountryApi' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -88,10 +88,10 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
 
     });
 
-    test('Create detained' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC Appeal',   async ({ page }) => {
+    test('Create Out of Country' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC Appeal',   async ({ page }) => {
 
-    let caseData = await new DetainedRepresentedPrisonInTimeRehydrated().generateTestData();
-
+    let caseData = await new RepresentedOutOfCountryInTimeRehydrated().generateTestData();
+//console.log(caseData);
     // we now inject info about document created in test startup into the caseData
         caseData.appealReferenceNumber = ariaRefNumber;
         caseData.uploadTheAppealFormDocs[0].value.document.document_url = uploadedDocUrl;

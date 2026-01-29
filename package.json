@@ -74,7 +74,9 @@
     "test:LegalRepCreatesNonDetainedRepresentedEuSettlementSchemeFeeRemission": "yarn playwright install && APPEAL_TYPE=euSettlementScheme IN_TIME=true FEE_REMISSION=Yes JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalRepCreatesNonDetainedRepresented",
     "test:LegalRepCreatesOutOfCountryDeprivation": "yarn playwright install && APPEAL_TYPE=deprivation IN_TIME=true JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalRepCreatesOutOfCountry",
     "test:LegalRepCreatesOutOfCountryEuSettlementSchemeFeeRemission": "yarn playwright install && APPEAL_TYPE=euSettlementScheme IN_TIME=true FEE_REMISSION=Yes JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalRepCreatesOutOfCountry",
-    "test:LrManualDetainedApi": "yarn playwright install && APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true npx playwright test --project api --grep @LrManualDetainedApi",
+    "test:LrManualDetainedPrisonApi": "yarn playwright install && APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true npx playwright test --project api --grep @LrManualDetainedApi",
+    "test:LrManualOutOfCountryApi": "yarn playwright install && APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true npx playwright test --project api --grep @LrManualOutOfCountryApi",
+
     "test:STF_LegalRepCreatesOutOfCountryEuSettlementSchemeFeeRemission": "yarn playwright install && APPEAL_TYPE=euSettlementScheme IN_TIME=true FEE_REMISSION=Yes JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @STF_LegalRepCreatesOutOfCountry",
     "clean": "rm -rf target/",
     "decrypt": "node bin/decrypt.js",
