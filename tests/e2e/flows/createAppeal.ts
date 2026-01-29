@@ -13,6 +13,7 @@ import {ariaReferenceNumber} from "../fixtures/ariaReferenceNumber";
 import { ButtonHelper } from '../helpers/ButtonHelper';
 import {TokensHelper} from "../helpers/TokensHelper";
 import {CcdApiHelper} from "../helpers/CcdApiHelper";
+import {APIResponse} from "playwright";
 
 //const outOfTimedImageLocator: string = '//*[@id="confirmation-body"]/ccd-markdown/div/markdown/p[1]/img';
 
@@ -555,15 +556,15 @@ export class CreateAppeal {
 
         for (let retry=0; retry < maxRetries; retry++)
         {
-            const response: string =  (await this.ccdApiHelper.validatePageData(`${event}appealReferenceNumber`, caseData, uid, accessToken, s2sToken))[0];
-
-            if ( response === 'SUCCESS') {
+            const response: APIResponse =  (await this.ccdApiHelper.validatePageData(`${event}appealReferenceNumber`, caseData, uid, accessToken, s2sToken));
+            if (await response.status() === 200) {
                 console.log(`Aria reference number: ${ariaRefNumber} is valid and not assigned to an existing appeal.`);
                 await this.page.fill('#appealReferenceNumber', ariaRefNumber);
                 break;
             }
 
-            if (response === ariaRefNumberExistsMessage) {
+            if (await response.status() === 422) {
+                console.log(`Aria reference number: ${ariaRefNumber} cannot be used: ${(await response.json()).callbackErrors[0]} Generating a new Aria reference number for retry.`);
                 continue;
             } else {
                 throw new Error(`An unknown error was returned when validating the Aria Reference number using the CCD API: ${response}`);

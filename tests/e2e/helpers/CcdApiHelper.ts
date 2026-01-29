@@ -1,5 +1,7 @@
 import {APIRequestContext, request} from "@playwright/test";
-import {ccdDataStoreApiBaseUrl, createCase} from "../iacConfig";
+import {ccdDataStoreApiBaseUrl, createCase, documentManagementStoreApiBaseUrl} from "../iacConfig";
+import fs from "fs";
+import path from "path";
 
 export class CcdApiHelper {
     constructor() {
@@ -21,18 +23,12 @@ export class CcdApiHelper {
                 data: caseData
             });
 
-            if (!response.ok()) {
-                if (response.status() === 422) {
-                    const errorTextJson: string[] = (await response.json()).callbackErrors;
-                    return errorTextJson;
-                } else {
-                    const errorText = await response.text();
-                    throw new Error(
-                        `Failed to Validate the page data: ${response.status()} - ${errorText}. Ensure your VPN is connected or check your URL/SECRET.`
+            if (!response.ok() && !(response.status() === 422)) {
+                throw new Error(
+                    `Failed to Validate the page data: ${response.status()} - ${await response.text()}. Ensure your VPN is connected or check your URL/SECRET.`
                     );
-                }
             }
-            return new Array(1).fill('SUCCESS');
+            return response;
         } catch (error) {
             throw new Error(
                 `An error occurred while trying to validate the page data: ${
@@ -42,6 +38,33 @@ export class CcdApiHelper {
         };
     };
 
+
+    async uploadDocument(accessToken, s2sToken) {
+        const apiRequestContext: APIRequestContext = await request.newContext();
+        const file = path.resolve("./tests/documents", "TEST_DOCUMENT_1.pdf");
+        const document = fs.readFileSync(file);
+
+        const response = await apiRequestContext.post(documentManagementStoreApiBaseUrl + "/documents", {
+            headers: {
+                Accept: "*/*",
+                ContentType: "multipart/form-data",
+                Authorization: `Bearer ${accessToken}`,
+                ServiceAuthorization: s2sToken
+            },
+            multipart: {
+                files: {
+                    name: file,
+                    mimeType: "application/pdf",
+                    buffer: document,
+                },
+                key: "file",
+                type: "file",
+                classification: "PUBLIC"
+            },
+        });
+        const body = await response.json();
+        return body._embedded.documents[0]._links.self.href;
+    }
 
     async createDraftAppeal(event:string, caseData:unknown, uid, accessToken, s2sToken ) {
         const url: string = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases`;
@@ -69,7 +92,6 @@ export class CcdApiHelper {
                     );
                 }
             }
-            //console.log(await response.json());
             return await response.json();
         } catch (error) {
             throw new Error(

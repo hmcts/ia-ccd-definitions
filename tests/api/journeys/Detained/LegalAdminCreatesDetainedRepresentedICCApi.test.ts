@@ -6,6 +6,8 @@ import {
 import {TokensHelper} from "../../../e2e/helpers/TokensHelper";
 import {ariaReferenceNumber} from "../../../e2e/fixtures/ariaReferenceNumber";
 import {CcdApiHelper} from "../../../e2e/helpers/CcdApiHelper";
+import {APIResponse} from "playwright";
+import {DetainedPrisonInTimeRehydrated} from "./CaseData/DetainedPrisonInTimeRehydrated";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
@@ -31,6 +33,7 @@ let eventToken: string;
 let event: string;
 let ccdApiHelper: CcdApiHelper;
 let tokensHelper: TokensHelper;
+let uploadedDocUrl: string;
 
 test.describe.configure({ mode: 'serial'});
 test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC Appeal.', { tag: '@LrManualDetainedApi' }, () => {
@@ -46,7 +49,6 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         eventToken = await tokensHelper.getEventToken(event, uid,accessToken,s2sToken);
 
         const maxRetries: number = 10;
-        const ariaRefNumberExistsMessage: string = 'The reference number already exists. Please enter a different reference number.';
         ariaRefNumber = ariaReferenceNumber.valid;
 
         const caseData = {
@@ -65,48 +67,47 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
 
         for (let retry=0; retry < maxRetries; retry++)
         {
-            const response: string =  (await ccdApiHelper.validatePageData(`${event}appealReferenceNumber`, caseData, uid, accessToken, s2sToken))[0];
-
-            if ( response === 'SUCCESS') {
+            const response: APIResponse =  (await ccdApiHelper.validatePageData(`${event}appealReferenceNumber`, caseData, uid, accessToken, s2sToken));
+            if (await response.status() === 200) {
                 console.log(`Aria reference number: ${ariaRefNumber} is valid and not assigned to an existing appeal.`);
-                //return ariaRefNumber;
                 break;
             }
 
-            if (response === ariaRefNumberExistsMessage) {
+            if (await response.status() === 422) {
+                console.log(`Aria reference number: ${ariaRefNumber} cannot be used: ${(await response.json()).callbackErrors[0]} Generating a new Aria reference number for retry.`);
                 continue;
             } else {
                 throw new Error(`An unknown error was returned when validating the Aria Reference number using the CCD API: ${response}`);
             }
         }
 
+
+        // Now to save a document to dm_store
+        uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
+
+
     });
 
     test('Create detained' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC Appeal',   async ({ page }) => {
-        // Create a Rehydrated, LR-manual, detained DRAFT case
-        const caseData = {
-        data:{"isAdmin":"Yes","sourceOfAppeal":"rehydratedAppeal","appealReferenceNumber":ariaRefNumber,"tribunalReceivedDate":"2026-01-30","submissionOutOfTime":"No","appellantsRepresentation":"No","appealWasNotSubmittedReason":"test","appealNotSubmittedReasonDocuments":[],"legalRepCompanyPaperJ":"fsdsfd","legalRepGivenName":"sfdfds","legalRepFamilyNamePaperJ":"fdsfd","legalRepEmail":"def1lit@hnl.com","legalRepRefNumberPaperJ":null,"letterSentOrReceived":"Sent","legalRepHasAddress":"Yes","legalRepAddressUK":{"AddressLine1":"66 Pall Mall","AddressLine2":"","AddressLine3":"","PostTown":"London","County":"","PostCode":"SW1A 1AB","Country":"United Kingdom"},"appellantInUk":"Yes","appellantInDetention":"Yes","detentionFacility":"prison","detentionBuilding":"HMP Addiewell","detentionAddressLines":"9 Station Road, Addiewell, West Lothian","prisonNOMSNumber":{"prison":"12345"},"detentionPostcode":"EH55 8QA","prisonName":"Addiewell","releaseDateProvided":"No","hasPendingBailApplications":"No","homeOfficeReferenceNumber":"233","appellantGivenNames":"ffg","appellantFamilyName":"gffggf","appellantDateOfBirth":"2000-01-01","appellantStateless":"hasNationality","appellantNationalities":[{"value":{"code":"AL"},"id":"d67fb56c-7be1-4002-a130-189389e573b1"}],"internalAppellantMobileNumber":null,"internalAppellantEmail":null,"appealType":"euSettlementScheme","homeOfficeDecisionDate":"2026-01-27","uploadRehydratedNod":[],"hasSponsor":"No","deportationOrderOptions":"No","removalOrderOptions":"No","hasOtherAppeals":"No","hearingTypeResult":"No","decisionHearingFeeOption":"decisionWithHearing","remissionType":"noRemission","feeWithHearing":null,"feeWithoutHearing":null},
-            event:{"id":event,"summary":"","description":""},
-            event_token:eventToken,
-            ignore_warning:false,
-            draft_id:null
-        };
 
-        const response = await  ccdApiHelper.createDraftAppeal(event,caseData,uid,accessToken,s2sToken);
-        console.log('caseId>>>>>>>>>>>>>>' + response.id + '<<<<<<<<<<<<<<');
+    let caseData = await new DetainedPrisonInTimeRehydrated().generateTestData();
 
-        // const caseData = {
-        //     data: {
-        //         appealReferenceNumber: ariaRefNumber,
-        //     },
-        //     event: {
-        //         id: `${event}`,
-        //         summary: '',
-        //         description: '',
-        //     },
-        //     event_token: `${eventToken}`,
-        //     ignore_warning: 'false'
-        // };
+    // we now inject info about document created in test startup into the caseData
+        caseData.appealReferenceNumber = ariaRefNumber;
+        caseData.uploadTheAppealFormDocs[0].value.document.document_url = uploadedDocUrl;
+        caseData.uploadTheAppealFormDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
+
+    const appealData = {
+        data:caseData,
+        event:{"id": event,"summary":"","description":""},
+        event_token:eventToken,
+        ignore_warning:false,
+        draft_id:null
+    }
+
+    const response = await  ccdApiHelper.createDraftAppeal(event,appealData,uid,accessToken,s2sToken);
+    console.log('caseId>>>>>>>>>>>>>>' + response.id + '<<<<<<<<<<<<<<');
+
     });
 
 
