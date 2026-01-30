@@ -534,44 +534,12 @@ export class CreateAppeal {
         const accessToken: string = await this.tokensHelper.getAccessToken(storageStateFile, legalOfficerAdminCredentials.username, legalOfficerCredentials.password);
         const uid: string = await this.tokensHelper.getUserId(accessToken);
         const s2sToken: string = await this.tokensHelper.getS2SToken();
-        const eventToken = await this.tokensHelper.getEventToken('startAppeal', null, uid,accessToken,s2sToken);
-        const event:string = 'startAppeal';
-        const maxRetries: number = 10;
-        const ariaRefNumberExistsMessage: string = 'The reference number already exists. Please enter a different reference number.';
-        let ariaRefNumber: string = ariaReferenceNumber.valid;
+        const event: string = 'startAppeal';
+        const eventToken = await this.tokensHelper.getEventToken(event, null, uid, accessToken, s2sToken);
 
-        const caseData = {
-            data: {
-                appealReferenceNumber: ariaRefNumber,
-            },
-            event: {
-                id: `${event}`,
-                summary: '',
-                description: '',
-            },
-            event_token: `${eventToken}`,
-            ignore_warning: 'false'
-        };
+        let ariaRefNumber = await this.ccdApiHelper.getAriaReferenceNumber(event, uid, accessToken, eventToken, s2sToken);
 
-
-        for (let retry=0; retry < maxRetries; retry++)
-        {
-            const response: APIResponse =  (await this.ccdApiHelper.validatePageData(`${event}appealReferenceNumber`, caseData, uid, accessToken, s2sToken));
-            if (await response.status() === 200) {
-                console.log(`Aria reference number: ${ariaRefNumber} is valid and not assigned to an existing appeal.`);
-                await this.page.fill('#appealReferenceNumber', ariaRefNumber);
-                break;
-            }
-
-            if (await response.status() === 422) {
-                console.log(`Aria reference number: ${ariaRefNumber} cannot be used: ${(await response.json()).callbackErrors[0]} Generating a new Aria reference number for retry.`);
-                ariaRefNumber = ariaReferenceNumber.valid;
-                continue;
-            } else {
-                throw new Error(`An unknown error was returned when validating the Aria Reference number using the CCD API: ${response}`);
-            }
-        }
-
+        await this.page.fill('#appealReferenceNumber', ariaRefNumber);
         await this.buttonHelper.continueButton.click();
     }
 

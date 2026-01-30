@@ -2,6 +2,8 @@ import {APIRequestContext, request} from "@playwright/test";
 import {ccdDataStoreApiBaseUrl, createCase, documentManagementStoreApiBaseUrl} from "../iacConfig";
 import fs from "fs";
 import path from "path";
+import {ariaReferenceNumber} from "../fixtures/ariaReferenceNumber";
+import {APIResponse} from "playwright";
 
 export class CcdApiHelper {
     constructor() {
@@ -66,38 +68,44 @@ export class CcdApiHelper {
         return body._embedded.documents[0]._links.self.href;
     }
 
-//     async startEvent(eventName, caseId, accessToken, s2sToken) {
-//         let url = ccdDataStoreApiBaseUrl;
-//         if (caseId) {
-//             url += `/cases/${caseId}`;
-//         }
-//         url += `/event-triggers/${eventName}/token`;
-// console.log('>>>> ', url);
-//         const apiRequestContext: APIRequestContext = await request.newContext();
-//         let response;
-//         try {
-//             response = await apiRequestContext.get(url, {
-//                 headers: {
-//                     "Content-Type": "application/json",
-//                     Accept: "*/*",
-//                     Authorization: `Bearer ${accessToken}`,
-//                     ServiceAuthorization: s2sToken
-//                 },
-//                 data: null
-//             });
-//         } catch (error) {
-//                 throw new Error(
-//                     `An error occurred while trying to validate the page data: ${
-//                         error instanceof Error ? error.message : error
-//                     }`
-//                 );
-//             };
-//
-//             console.log(response);
-//
-//     }
+    async getAriaReferenceNumber(event: string, uid, accessToken, eventToken, s2sToken) {
+        const maxRetries: number = 10;
+        let ariaRefNumber = ariaReferenceNumber.valid;
+
+        let caseData = {
+            data: {
+                appealReferenceNumber: ariaRefNumber,
+            },
+            event: {
+                id: `${event}`,
+                summary: '',
+                description: '',
+            },
+            event_token: `${eventToken}`,
+            ignore_warning: 'false'
+        };
 
 
+        for (let retry=0; retry < maxRetries; retry++)
+        {
+            const response: APIResponse =  (await this.validatePageData(`${event}appealReferenceNumber`, caseData, uid, accessToken, s2sToken));
+            if (await response.status() === 200) {
+                console.log(`Aria reference number: ${ariaRefNumber} is valid and not assigned to an existing appeal.`);
+                break;
+            }
+
+            if (await response.status() === 422) {
+                console.log(`Aria reference number: ${ariaRefNumber} cannot be used: ${(await response.json()).callbackErrors[0]} Generating a new Aria reference number for retry.`);
+                ariaRefNumber = ariaReferenceNumber.valid;
+                continue;
+            } else {
+                throw new Error(`An unknown error was returned when validating the Aria Reference number using the CCD API: ${response}`);
+            }
+        }
+
+        return ariaRefNumber;
+
+    }
 
     async saveDataToDataStore(event:string, caseId, caseData:unknown, uid, accessToken, s2sToken ) {
         let url: string;

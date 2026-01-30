@@ -152,7 +152,7 @@ export class TokensHelper {
                     `Failed to fetch Event token: ${response.status()} - ${errorText}. Ensure your VPN is connected or check your URL/SECRET.`
                 );
             }
-            console.log('Getting token for event: ' + event + '>>>> ' + (await response.json()).token);
+            console.log('Getting token for event: ' + event);
             return (await response.json()).token;
         } catch (error) {
             throw new Error(

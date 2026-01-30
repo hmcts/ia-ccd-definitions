@@ -55,45 +55,12 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         event = 'startAppeal';
         eventToken = await tokensHelper.getEventToken(event, null, uid, accessToken, s2sToken);
 
-        const maxRetries: number = 10;
-        ariaRefNumber = ariaReferenceNumber.valid;
-
-        caseData = {
-            data: {
-                appealReferenceNumber: ariaRefNumber,
-            },
-            event: {
-                id: `${event}`,
-                summary: '',
-                description: '',
-            },
-            event_token: `${eventToken}`,
-            ignore_warning: 'false'
-        };
-
-
-        for (let retry=0; retry < maxRetries; retry++)
-        {
-            const response: APIResponse =  (await ccdApiHelper.validatePageData(`${event}appealReferenceNumber`, caseData, uid, accessToken, s2sToken));
-            if (await response.status() === 200) {
-                console.log(`Aria reference number: ${ariaRefNumber} is valid and not assigned to an existing appeal.`);
-                break;
-            }
-
-            if (await response.status() === 422) {
-                console.log(`Aria reference number: ${ariaRefNumber} cannot be used: ${(await response.json()).callbackErrors[0]} Generating a new Aria reference number for retry.`);
-                ariaRefNumber = ariaReferenceNumber.valid;
-                continue;
-            } else {
-                throw new Error(`An unknown error was returned when validating the Aria Reference number using the CCD API: ${response}`);
-            }
-        }
-
+        let ariaRefNumber = await ccdApiHelper.getAriaReferenceNumber(event, uid, accessToken, eventToken, s2sToken);
 
         uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
         eventData = await new RepresentedOutOfCountryInTimeRehydrated().generateDraftData();
-//console.log(caseData);
-    // we now inject info about document created in test startup into the caseData
+
+        // we now inject info about document created in test startup into the caseData
         eventData.appealReferenceNumber = ariaRefNumber;
         eventData.uploadTheAppealFormDocs[0].value.document.document_url = uploadedDocUrl;
         eventData.uploadTheAppealFormDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
