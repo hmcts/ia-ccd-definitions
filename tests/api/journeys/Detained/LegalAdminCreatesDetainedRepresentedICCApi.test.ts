@@ -39,7 +39,7 @@ let caseData;
 let eventData;
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC Appeal.', { tag: '@LrManualDetainedApi' }, () => {
+test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC DRAFT Appeal.', { tag: '@LrManualDetainedApi' }, () => {
 
     test.beforeAll(async ({  }) => {
         // Go to the starting url before each test.
@@ -50,7 +50,7 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         s2sToken = await tokensHelper.getS2SToken();
      });
 
-    test('Create detained' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + ' ICC DRAFT Appeal',   async ({ page }) => {
+    test('Create detained ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + ' ICC DRAFT Appeal',   async ({ page }) => {
         event = 'startAppeal';
         eventToken = await tokensHelper.getEventToken(event, null, uid, accessToken,s2sToken);
 
@@ -78,7 +78,7 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         caseData = await response.case_data;
     });
 
-    test('Submit detained' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + ' ICC DRAFT Appeal',   async ({  }) => {
+    test('Submit detained ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + ' ICC DRAFT Appeal',   async ({  }) => {
         event = 'submitAppeal';
 
         eventToken = await tokensHelper.getEventToken(event, caseId, uid, accessToken, s2sToken);
