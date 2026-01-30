@@ -3245,7 +3245,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",    "FieldType": "Label",
+    "Label": "## Do this next\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. If the appeal looks valid, you must tell the respondent to supply their evidence.",    "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
   },
@@ -3261,7 +3261,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_pa_rp_detained",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. Create a listing task if a CMR is required for this detained appeal. </br></br>If a CMR is not required for this detained appeal and the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.</br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br>",    "FieldType": "Label",
+    "Label": "## Do this next\r\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. Create a listing task if a CMR is required for this detained appeal. </br></br>If a CMR is not required for this detained appeal and the appeal looks valid, you must tell the respondent to supply their evidence.",    "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
   },
@@ -3269,7 +3269,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
+    "Label": "## Do this next\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3287,7 +3287,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained_c1",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. Create a listing task if a [CMR is required for this detained appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateListCmrTask).</br></br> If a CMR is not required for this detained appeal and the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.</br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br>",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. Create a listing task if a [CMR is required for this detained appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateListCmrTask).</br></br> If a CMR is not required for this detained appeal and the appeal looks valid, you must tell the respondent to supply their evidence </br>[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3296,7 +3296,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained_c2",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. Create a listing task if a [CMR is required for this detained appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateListCmrTask).</br></br> If a CMR is not required for this detained appeal and the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.</br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br>",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. Create a listing task if a [CMR is required for this detained appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateListCmrTask).</br></br> If a CMR is not required for this detained appeal and the appeal looks valid, you must tell the respondent to supply their evidence </br>[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3305,7 +3305,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained_cmr_c1",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br>",
+    "Label": "## Do this next\r\nYou must tell the respondent to supply their evidence. </br></br>[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3314,7 +3314,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained_cmr_c2",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br>",
+    "Label": "## Do this next\r\nYou must tell the respondent to supply their evidence. </br></br>[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3323,7 +3323,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_ooc_appealSubmitted",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
+    "Label": "## Do this next\nYou must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3350,7 +3350,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_validation",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br>",
+    "Label": "## Do this next\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. If the appeal looks valid, you must tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3368,7 +3368,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_validation_dc_ea_hu",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
+    "Label": "## Do this next\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3386,7 +3386,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_old_cases",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br>",
+    "Label": "## Do this next\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. If the appeal looks valid, you must tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3404,7 +3404,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_ooc_appealSubmitted_oc",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
+    "Label": "## Do this next\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3503,7 +3503,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_old",
-    "Label": "## Do this next\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br>",
+    "Label": "## Do this next\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3521,7 +3521,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted",
-    "Label": "## Do this next\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).<br/><br/><br/>",
+    "Label": "## Do this next\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3539,7 +3539,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_oc",
-    "Label": "## Do this next\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
+    "Label": "## Do this next\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3566,7 +3566,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_home_office_old",
-    "Label": "## Do this next\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br>",
+    "Label": "## Do this next\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. If the appeal looks valid, you must tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3584,7 +3584,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_inTime",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
+    "Label": "## Do this next\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3602,7 +3602,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_home_office",
-    "Label": "## Do this next\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br>",
+    "Label": "## Do this next\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. If the appeal looks valid, you must tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3620,7 +3620,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_home_office_oc",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and request respondent evidence.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
+    "Label": "## Do this next\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
