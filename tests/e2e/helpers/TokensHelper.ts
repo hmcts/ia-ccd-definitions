@@ -125,9 +125,14 @@ export class TokensHelper {
     }
 
 
-    async getEventToken(event:string, uid: string, accessToken, s2sToken) {
+    async getEventToken(event:string, caseId: string, uid: string, accessToken: string, s2sToken: string) {
+        let url: string;
+        if (caseId) {
+            url = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases/${caseId}/event-triggers/${event}/token`;
+        } else {
+            url = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/event-triggers/${event}/token`;
+        }
 
-        const url: string = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/event-triggers/${event}/token`;
         const apiRequestContext: APIRequestContext = await request.newContext();
 
         try {
@@ -147,6 +152,7 @@ export class TokensHelper {
                     `Failed to fetch Event token: ${response.status()} - ${errorText}. Ensure your VPN is connected or check your URL/SECRET.`
                 );
             }
+            console.log('Getting token for event: ' + event + '>>>> ' + (await response.json()).token);
             return (await response.json()).token;
         } catch (error) {
             throw new Error(

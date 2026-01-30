@@ -534,11 +534,11 @@ export class CreateAppeal {
         const accessToken: string = await this.tokensHelper.getAccessToken(storageStateFile, legalOfficerAdminCredentials.username, legalOfficerCredentials.password);
         const uid: string = await this.tokensHelper.getUserId(accessToken);
         const s2sToken: string = await this.tokensHelper.getS2SToken();
-        const eventToken = await this.tokensHelper.getEventToken('startAppeal', uid,accessToken,s2sToken);
+        const eventToken = await this.tokensHelper.getEventToken('startAppeal', null, uid,accessToken,s2sToken);
         const event:string = 'startAppeal';
         const maxRetries: number = 10;
         const ariaRefNumberExistsMessage: string = 'The reference number already exists. Please enter a different reference number.';
-        const ariaRefNumber: string = ariaReferenceNumber.valid;
+        let ariaRefNumber: string = ariaReferenceNumber.valid;
 
         const caseData = {
             data: {
@@ -565,6 +565,7 @@ export class CreateAppeal {
 
             if (await response.status() === 422) {
                 console.log(`Aria reference number: ${ariaRefNumber} cannot be used: ${(await response.json()).callbackErrors[0]} Generating a new Aria reference number for retry.`);
+                ariaRefNumber = ariaReferenceNumber.valid;
                 continue;
             } else {
                 throw new Error(`An unknown error was returned when validating the Aria Reference number using the CCD API: ${response}`);

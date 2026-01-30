@@ -66,12 +66,52 @@ export class CcdApiHelper {
         return body._embedded.documents[0]._links.self.href;
     }
 
-    async createDraftAppeal(event:string, caseData:unknown, uid, accessToken, s2sToken ) {
-        const url: string = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases`;
-        const apiRequestContext: APIRequestContext = await request.newContext();
+//     async startEvent(eventName, caseId, accessToken, s2sToken) {
+//         let url = ccdDataStoreApiBaseUrl;
+//         if (caseId) {
+//             url += `/cases/${caseId}`;
+//         }
+//         url += `/event-triggers/${eventName}/token`;
+// console.log('>>>> ', url);
+//         const apiRequestContext: APIRequestContext = await request.newContext();
+//         let response;
+//         try {
+//             response = await apiRequestContext.get(url, {
+//                 headers: {
+//                     "Content-Type": "application/json",
+//                     Accept: "*/*",
+//                     Authorization: `Bearer ${accessToken}`,
+//                     ServiceAuthorization: s2sToken
+//                 },
+//                 data: null
+//             });
+//         } catch (error) {
+//                 throw new Error(
+//                     `An error occurred while trying to validate the page data: ${
+//                         error instanceof Error ? error.message : error
+//                     }`
+//                 );
+//             };
+//
+//             console.log(response);
+//
+//     }
+
+
+
+    async saveDataToDataStore(event:string, caseId, caseData:unknown, uid, accessToken, s2sToken ) {
+        let url: string;
+        if (event === 'startAppeal') {
+            url = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases`;
+        } else {
+            url = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases/${caseId}/events`;
+        }
+
+
+            const apiRequestContext: APIRequestContext = await request.newContext();
 
         try {
-            const response = await apiRequestContext.post(url, {
+              const response = await apiRequestContext.post(url, {
                 headers: {
                     "Content-Type": "application/json",
                     Accept: "*/*",

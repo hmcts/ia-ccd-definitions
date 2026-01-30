@@ -8,6 +8,7 @@ import {ariaReferenceNumber} from "../../../e2e/fixtures/ariaReferenceNumber";
 import {CcdApiHelper} from "../../../e2e/helpers/CcdApiHelper";
 import {APIResponse} from "playwright";
 import {DetainedRepresentedPrisonInTimeRehydrated} from "./CaseData/DetainedRepresentedPrisonInTimeRehydrated";
+import {RepresentedOutOfCountryInTimeRehydrated} from "./CaseData/RepresentedOutOfCountryInTimeRehydrated";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
@@ -34,24 +35,29 @@ let event: string;
 let ccdApiHelper: CcdApiHelper;
 let tokensHelper: TokensHelper;
 let uploadedDocUrl: string;
+let caseData;
+let eventData;
 
 test.describe.configure({ mode: 'serial'});
 test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC Appeal.', { tag: '@LrManualDetainedApi' }, () => {
 
-    test.beforeEach(async ({ page }) => {
+    test.beforeAll(async ({  }) => {
         // Go to the starting url before each test.
         tokensHelper = new TokensHelper();
         ccdApiHelper = new CcdApiHelper();
         accessToken = await tokensHelper.getAccessToken('', legalOfficerAdminCredentials.username, legalOfficerCredentials.password);
         uid = await tokensHelper.getUserId(accessToken);
         s2sToken = await tokensHelper.getS2SToken();
+     });
+
+    test('Create detained' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + ' ICC DRAFT Appeal',   async ({ page }) => {
         event = 'startAppeal';
-        eventToken = await tokensHelper.getEventToken(event, uid,accessToken,s2sToken);
+        eventToken = await tokensHelper.getEventToken(event, null, uid,accessToken,s2sToken);
 
         const maxRetries: number = 10;
         ariaRefNumber = ariaReferenceNumber.valid;
 
-        const caseData = {
+        caseData = {
             data: {
                 appealReferenceNumber: ariaRefNumber,
             },
@@ -75,40 +81,53 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
 
             if (await response.status() === 422) {
                 console.log(`Aria reference number: ${ariaRefNumber} cannot be used: ${(await response.json()).callbackErrors[0]} Generating a new Aria reference number for retry.`);
+                ariaRefNumber = ariaReferenceNumber.valid;
                 continue;
             } else {
                 throw new Error(`An unknown error was returned when validating the Aria Reference number using the CCD API: ${response}`);
             }
         }
 
-
-        // Now to save a document to dm_store
         uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
 
-
-    });
-
-    test('Create detained' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC Appeal',   async ({ page }) => {
-
-    let caseData = await new DetainedRepresentedPrisonInTimeRehydrated().generateTestData();
+        eventData = await new DetainedRepresentedPrisonInTimeRehydrated().generateDraftData();
 
     // we now inject info about document created in test startup into the caseData
-        caseData.appealReferenceNumber = ariaRefNumber;
-        caseData.uploadTheAppealFormDocs[0].value.document.document_url = uploadedDocUrl;
-        caseData.uploadTheAppealFormDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
+        eventData.appealReferenceNumber = ariaRefNumber;
+        eventData.uploadTheAppealFormDocs[0].value.document.document_url = uploadedDocUrl;
+        eventData.uploadTheAppealFormDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
 
-    const appealData = {
-        data:caseData,
-        event:{"id": event,"summary":"","description":""},
-        event_token:eventToken,
-        ignore_warning:false,
-        draft_id:null
-    }
+        const appealData = {
+            data:eventData,
+            event:{"id": event,"summary":"","description":""},
+            event_token:eventToken,
+            ignore_warning:false,
+            draft_id:null
+        }
 
-    const response = await  ccdApiHelper.createDraftAppeal(event,appealData,uid,accessToken,s2sToken);
-    console.log('caseId>>>>>>>>>>>>>>' + response.id + '<<<<<<<<<<<<<<');
-
+        const response = await  ccdApiHelper.saveDataToDataStore(event, null, appealData, uid, accessToken, s2sToken);
+        caseId = response.id;
+        console.log('caseId>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<');
+        caseData = await response.case_data;
     });
 
+    test('Submit detained' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + ' ICC DRAFT Appeal',   async ({  }) => {
+        event = 'submitAppeal';
 
+        eventToken = await tokensHelper.getEventToken(event, caseId, uid, accessToken, s2sToken);
+        eventData = await new DetainedRepresentedPrisonInTimeRehydrated().generateSubmitData();
+
+        //merge case data into event data
+        caseData = { ...eventData, ...caseData };
+
+        const appealData = {
+            data:caseData,
+            event:{"id": event,"summary":"","description":""},
+            event_token:eventToken,
+            ignore_warning:false
+        }
+
+        const response = await  ccdApiHelper.saveDataToDataStore(event, caseId, appealData, uid, accessToken, s2sToken);
+       // console.log('submit>>> ', response);
+    });
  });

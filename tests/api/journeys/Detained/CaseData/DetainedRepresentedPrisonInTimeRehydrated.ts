@@ -6,7 +6,7 @@ const homeOfficeDecisionDate = moment().subtract(5, 'days');
 export class DetainedRepresentedPrisonInTimeRehydrated {
 
 
-  async generateTestData() {
+  async generateDraftData() {
     const data = {
           isAdmin: "Yes",
           sourceOfAppeal: "rehydratedAppeal",
@@ -87,4 +87,21 @@ export class DetainedRepresentedPrisonInTimeRehydrated {
 
     return data;
   }
+
+    async generateSubmitData() {
+        const data = {
+            adminDeclaration1: ["hasDeclared"],
+            isAdmin: "Yes",
+            remissionClaim: null,
+            remissionType: "noRemission",
+            remissionOption: null,
+            paAppealTypePaymentOption: null,
+            helpWithFeesOption: null,
+            appealType: "euSettlementScheme",
+            feeAmountGbp: "14000",
+            appellantInDetention: "Yes",
+            isNotificationTurnedOff: "Yes"
+        }
+        return data;
+    }
 }
