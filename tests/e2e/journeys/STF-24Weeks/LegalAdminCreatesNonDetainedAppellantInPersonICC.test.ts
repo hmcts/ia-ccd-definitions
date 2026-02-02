@@ -13,7 +13,7 @@ import {CreateCasePage} from '../../page-objects/pages/createCase_page';
 import {SubmitYourAppeal} from "../../flows/events/submitYourAppeal";
 import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 import {MarkAppealAsPaid} from "../../flows/events/markAppealAsPaid";
-import {imageLocators} from "../../fixtures/imageLocators";
+import {imageLocators} from "../../../fixtures/imageLocators";
 import {RecordOutOfTimeDecision} from "../../flows/events/recordOutOfTimeDecision";
 import {S94b} from "../../flows/events/setS94bStatus";
 import {RequestHomeOfficeData} from "../../flows/events/requestHomeOfficeData";

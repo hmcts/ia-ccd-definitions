@@ -12,7 +12,7 @@ import {CreateCasePage} from '../../page-objects/pages/createCase_page';
 import {SubmitYourAppeal} from "../../flows/events/submitYourAppeal";
 import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 import {MarkAppealAsPaid} from "../../flows/events/markAppealAsPaid";
-import {imageLocators} from "../../fixtures/imageLocators";
+import {imageLocators} from "../../../fixtures/imageLocators";
 import {ForceDecidedStateEvent} from '../../flows/events/forceDecidedState';
 import {ForceFtpaDecidedState} from "../../flows/events/forceFtpaDecidedState";
 

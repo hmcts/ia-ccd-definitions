@@ -11,7 +11,7 @@ export class RepresentedOutOfCountryInTimeRehydrated {
         isAdmin: "Yes",
         sourceOfAppeal: "rehydratedAppeal",
         appealReferenceNumber: "INJECTED_VALUE",
-        tribunalReceivedDate: yesterday.year().toString() + '-' + (yesterday.month() + 1).toString().padStart(2,'0') + '-' + yesterday.date().toString(),
+        tribunalReceivedDate: yesterday.year().toString() + '-' + (yesterday.month() + 1).toString().padStart(2,'0') + '-' + (yesterday.date().toString()).padStart(2,'0'),
         submissionOutOfTime: "No",
         appellantsRepresentation: "No",
         appealWasNotSubmittedReason: "test appeal not submitted reason text",

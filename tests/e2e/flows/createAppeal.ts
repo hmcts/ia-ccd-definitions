@@ -8,8 +8,8 @@ import {
     outOfCountryAddress,
     legalOfficerAdminCredentials, legalOfficerCredentials
 } from '../iacConfig';
-import { detentionFacility } from '../fixtures/detentionFacilities';
-import {ariaReferenceNumber} from "../fixtures/ariaReferenceNumber";
+import { detentionFacility } from '../../fixtures/detentionFacilities';
+import {ariaReferenceNumber} from "../../fixtures/ariaReferenceNumber";
 import { ButtonHelper } from '../helpers/ButtonHelper';
 import {TokensHelper} from "../helpers/TokensHelper";
 import {CcdApiHelper} from "../helpers/CcdApiHelper";

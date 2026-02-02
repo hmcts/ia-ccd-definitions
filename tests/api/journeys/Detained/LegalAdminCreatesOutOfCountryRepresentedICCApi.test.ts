@@ -4,7 +4,7 @@ import {
     legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials, runningEnv,
 } from '../../../e2e/iacConfig';
 import {TokensHelper} from "../../../e2e/helpers/TokensHelper";
-import {ariaReferenceNumber} from "../../../e2e/fixtures/ariaReferenceNumber";
+import {ariaReferenceNumber} from "../../../fixtures/ariaReferenceNumber";
 import {CcdApiHelper} from "../../../e2e/helpers/CcdApiHelper";
 import {APIResponse} from "playwright";
 import {RepresentedOutOfCountryInTimeRehydrated} from "./CaseData/RepresentedOutOfCountryInTimeRehydrated";

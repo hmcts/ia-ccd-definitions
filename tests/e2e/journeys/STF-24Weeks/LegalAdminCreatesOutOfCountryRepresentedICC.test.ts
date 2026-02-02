@@ -27,7 +27,7 @@ import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndRe
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
 import {ListTheCase} from "../../flows/events/listTheCase";
 import {ValidationHelper} from "../../helpers/ValidationHelper";
-import {imageLocators} from "../../fixtures/imageLocators";
+import {imageLocators} from "../../../fixtures/imageLocators";
 import {S94b} from "../../flows/events/setS94bStatus";
 import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 import {MarkAppealAsPaid} from "../../flows/events/markAppealAsPaid";

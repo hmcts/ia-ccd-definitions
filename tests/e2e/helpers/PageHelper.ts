@@ -1,5 +1,5 @@
 import { Page } from "@playwright/test";
-import {imageLocators} from "../fixtures/imageLocators";
+import {imageLocators} from "../../fixtures/imageLocators";
 import {TabsHelper} from "./TabsHelper";
 
 export class PageHelper {

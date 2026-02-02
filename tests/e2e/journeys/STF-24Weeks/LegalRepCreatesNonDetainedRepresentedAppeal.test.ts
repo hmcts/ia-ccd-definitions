@@ -28,7 +28,7 @@ import {StartDecisionAndReasons} from "../../flows/events/startDecisionAndReason
 import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndReasons";
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
 import {ListTheCase} from "../../flows/events/listTheCase";
-import {imageLocators} from "../../fixtures/imageLocators";
+import {imageLocators} from "../../../fixtures/imageLocators";
 import {ValidationHelper} from "../../helpers/ValidationHelper";
 import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";

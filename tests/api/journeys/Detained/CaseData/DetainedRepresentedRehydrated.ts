@@ -1,18 +1,28 @@
 import moment from "moment";
 import {appellant, legalRepresentative} from "../../../../e2e/iacConfig";
+import {detentionFacility} from "../../../../fixtures/detentionFacilities";
 const yesterday = moment().subtract(1, 'days');
 const homeOfficeDecisionDate = moment().subtract(5, 'days');
+const outOfTime: string = !['false'].includes(process.env.IN_TIME) ? 'No' : 'Yes';
+const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'prison';
+const detentionBuilding : string = detentionLocation === 'prison' ? detentionFacility.prison.building : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.building : detentionFacility.other.building);
+const detentionAddressLines: string = detentionLocation === 'prison' ? detentionFacility.prison.address : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.address : detentionFacility.other.address);
+const detentionPostcode : string = detentionLocation === 'prison' ? detentionFacility.prison.postcode : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.postcode : detentionFacility.other.postcode);
+const detentionNamekey: string = (detentionLocation === 'prison' ? 'prison' : (detentionLocation === 'immigrationRemovalCentre' ? 'irc' : 'otherDetentionFacility')) + 'Name';
+const detentionName : string = detentionLocation === 'prison' ? detentionFacility.prison.shortName : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.shortName : detentionFacility.other.name);
+let data;
+let detentionNameData;
 
-export class DetainedRepresentedPrisonInTimeRehydrated {
+export class DetainedRepresentedRehydrated {
 
 
   async generateDraftData() {
-    const data = {
+    data = {
           isAdmin: "Yes",
           sourceOfAppeal: "rehydratedAppeal",
           appealReferenceNumber: "INJECTED_VALUE",
-          tribunalReceivedDate: yesterday.year().toString() + '-' + (yesterday.month() + 1).toString().padStart(2,'0') + '-' + yesterday.date().toString(),
-          submissionOutOfTime: "No",
+          tribunalReceivedDate: yesterday.year().toString() + '-' + (yesterday.month() + 1).toString().padStart(2,'0') + '-' + (yesterday.date().toString().padStart(2,'0')),
+          submissionOutOfTime: outOfTime,
           appellantsRepresentation: "No",
           appealWasNotSubmittedReason: "test appeal not submitted reason text",
           appealNotSubmittedReasonDocuments: [],
@@ -34,14 +44,11 @@ export class DetainedRepresentedPrisonInTimeRehydrated {
             Country: legalRepresentative.address.country
           },
           appellantInDetention: "Yes",
-          detentionBuilding: "HMP Belmarsh",
-          detentionFacility: "prison",
-          detentionAddressLines: "Western Way, Thamesmead, London",
-          prisonNOMSNumber: {
-            prison: "12345"
-          },
-          detentionPostcode: "SE28 0EB",
-          prisonName: "Belmarsh",
+          detentionBuilding: detentionBuilding,
+          detentionFacility: detentionLocation,
+          detentionAddressLines: detentionAddressLines,
+          detentionPostcode: detentionPostcode,
+         // [detentionNamekey]: detentionName,
           releaseDateProvided: "No",
           hasPendingBailApplications: "No",
           homeOfficeReferenceNumber: "000012345",
@@ -83,25 +90,53 @@ export class DetainedRepresentedPrisonInTimeRehydrated {
               id: null
             }
           ]
+        };
+
+    if (detentionLocation === 'prison') {
+        const nomsData = {
+            prisonNOMSNumber:
+                {
+                    prison: appellant.NOMSNumber
+                }
         }
+
+        //merge additional data into case data
+        data = { ...data, ...nomsData };
+    }
+
+    if (detentionLocation === 'other'){
+        detentionNameData = {
+            [detentionNamekey]: {
+                other: detentionName
+            }
+        }
+    } else {
+        detentionNameData = {
+            [detentionNamekey]: detentionName
+        }
+        //merge additional data into case data
+        data = { ...data, ...detentionNameData };
+    }
+
 
     return data;
   }
 
-    async generateSubmitData() {
-        const data = {
-            adminDeclaration1: ["hasDeclared"],
-            isAdmin: "Yes",
-            remissionClaim: null,
-            remissionType: "noRemission",
-            remissionOption: null,
-            paAppealTypePaymentOption: null,
-            helpWithFeesOption: null,
-            appealType: "euSettlementScheme",
-            feeAmountGbp: "14000",
-            appellantInDetention: "Yes",
-            isNotificationTurnedOff: "Yes"
-        }
-        return data;
-    }
+  async generateSubmitData() {
+      const data = {
+          adminDeclaration1: ["hasDeclared"],
+          isAdmin: "Yes",
+          remissionClaim: null,
+          remissionType: "noRemission",
+          remissionOption: null,
+          paAppealTypePaymentOption: null,
+          helpWithFeesOption: null,
+          appealType: "euSettlementScheme",
+          feeAmountGbp: "14000",
+          appellantInDetention: "Yes",
+          isNotificationTurnedOff: "Yes"
+      };
+      return data;
+  }
+
 }

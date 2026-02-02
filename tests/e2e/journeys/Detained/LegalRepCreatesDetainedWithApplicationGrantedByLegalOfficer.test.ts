@@ -13,7 +13,7 @@ import { ValidationHelper } from '../../helpers/ValidationHelper';
 import { SubmitYourAppeal } from '../../flows/events/submitYourAppeal';
 import { CreateServiceRequest } from '../../flows/events/createServiceRequest';
 import { PaymentPage } from '../../page-objects/pages/payment_page';
-import { imageLocators } from '../../fixtures/imageLocators';
+import { imageLocators } from '../../../fixtures/imageLocators';
 import {MakeAnApplication} from "../../flows/events/makeAnApplication";
 import {DecideAnApplication} from "../../flows/events/decideAnApplication";
 

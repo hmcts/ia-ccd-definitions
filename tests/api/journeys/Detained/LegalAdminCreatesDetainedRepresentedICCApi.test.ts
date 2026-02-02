@@ -4,10 +4,10 @@ import {
     legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials, runningEnv,
 } from '../../../e2e/iacConfig';
 import {TokensHelper} from "../../../e2e/helpers/TokensHelper";
-import {ariaReferenceNumber} from "../../../e2e/fixtures/ariaReferenceNumber";
+import {ariaReferenceNumber} from "../../../fixtures/ariaReferenceNumber";
 import {CcdApiHelper} from "../../../e2e/helpers/CcdApiHelper";
 import {APIResponse} from "playwright";
-import {DetainedRepresentedPrisonInTimeRehydrated} from "./CaseData/DetainedRepresentedPrisonInTimeRehydrated";
+import {DetainedRepresentedRehydrated} from "./CaseData/DetainedRepresentedRehydrated";
 import {RepresentedOutOfCountryInTimeRehydrated} from "./CaseData/RepresentedOutOfCountryInTimeRehydrated";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
@@ -57,13 +57,13 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         let ariaRefNumber = await ccdApiHelper.getAriaReferenceNumber(event, uid, accessToken, eventToken, s2sToken);
 
         uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
-        eventData = await new DetainedRepresentedPrisonInTimeRehydrated().generateDraftData();
-
+        eventData = await new DetainedRepresentedRehydrated().generateDraftData();
+        console.log('pre inject>>>',eventData);
     // we now inject info about document created in test startup into the caseData
         eventData.appealReferenceNumber = ariaRefNumber;
         eventData.uploadTheAppealFormDocs[0].value.document.document_url = uploadedDocUrl;
         eventData.uploadTheAppealFormDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
-
+console.log('caseData>>>>', eventData);
         const appealData = {
             data:eventData,
             event:{"id": event,"summary":"","description":""},
@@ -82,7 +82,7 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         event = 'submitAppeal';
 
         eventToken = await tokensHelper.getEventToken(event, caseId, uid, accessToken, s2sToken);
-        eventData = await new DetainedRepresentedPrisonInTimeRehydrated().generateSubmitData();
+        eventData = await new DetainedRepresentedRehydrated().generateSubmitData();
 
         //merge case data into event data
         caseData = { ...eventData, ...caseData };

@@ -12,7 +12,7 @@ import { CreateAppeal } from '../../flows/createAppeal';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { SubmitYourAppeal } from '../../flows/events/submitYourAppeal';
 import { MarkAppealAsDetained } from '../../flows/events/markAppealAsDetained';
-import { imageLocators } from '../../fixtures/imageLocators';
+import { imageLocators } from '../../../fixtures/imageLocators';
 
 const inTime: boolean = true;
 const detentionLocation: string = 'immigrationRemovalCentre';

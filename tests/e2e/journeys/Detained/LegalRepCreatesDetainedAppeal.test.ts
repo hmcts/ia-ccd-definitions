@@ -34,7 +34,7 @@ import { GenerateHearingBundle } from '../../flows/events/generateHearingBundle'
 import { StartDecisionAndReasons } from "../../flows/events/startDecisionAndReasons";
 import { PrepareDecisionAndReasons } from "../../flows/events/prepareDecisionAndReasons";
 import { CompleteDecisionAndReasons } from "../../flows/events/completeDecisionAndReasons";
-import { imageLocators } from '../../fixtures/imageLocators';
+import { imageLocators } from '../../../fixtures/imageLocators';
 import {CreateHearingRequest} from "../../flows/createHearingRequest";
 import {TabsHelper} from "../../helpers/TabsHelper";
 import {GenerateListCMR} from "../../flows/events/generateListCMRTask";

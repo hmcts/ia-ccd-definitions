@@ -12,9 +12,9 @@ import { ValidationHelper } from '../../helpers/ValidationHelper';
 import { SubmitYourAppeal } from '../../flows/events/submitYourAppeal';
 import { CreateServiceRequest } from '../../flows/events/createServiceRequest';
 import { PaymentPage } from '../../page-objects/pages/payment_page';
-import { imageLocators } from '../../fixtures/imageLocators';
+import { imageLocators } from '../../../fixtures/imageLocators';
 import { EndTheAppeal } from "../../flows/events/endTheAppeal";
-import { test } from '../../fixtures/myFixture';
+import { test } from '../../../fixtures/myFixture';
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';

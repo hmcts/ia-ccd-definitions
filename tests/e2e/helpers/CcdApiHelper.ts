@@ -2,8 +2,9 @@ import {APIRequestContext, request} from "@playwright/test";
 import {ccdDataStoreApiBaseUrl, createCase, documentManagementStoreApiBaseUrl} from "../iacConfig";
 import fs from "fs";
 import path from "path";
-import {ariaReferenceNumber} from "../fixtures/ariaReferenceNumber";
+import {ariaReferenceNumber} from "../../fixtures/ariaReferenceNumber";
 import {APIResponse} from "playwright";
+import {stringify} from "node:querystring";
 
 export class CcdApiHelper {
     constructor() {
@@ -130,6 +131,7 @@ export class CcdApiHelper {
             });
 
             if (!response.ok()) {
+                console.log(stringify(await response.json()));
                 if (response.status() === 422) {
                     const errorTextJson: string[] = (await response.json()).callbackErrors;
                     return errorTextJson;

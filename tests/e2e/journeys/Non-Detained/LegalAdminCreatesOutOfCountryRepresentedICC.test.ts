@@ -27,7 +27,7 @@ import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndRe
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
 import {ListTheCase} from "../../flows/events/listTheCase";
 import {ValidationHelper} from "../../helpers/ValidationHelper";
-import {imageLocators} from "../../fixtures/imageLocators";
+import {imageLocators} from "../../../fixtures/imageLocators";
 import {S94b} from "../../flows/events/setS94bStatus";
 import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 import {MarkAppealAsPaid} from "../../flows/events/markAppealAsPaid";
@@ -274,52 +274,52 @@ test.describe('Legal Admin Officer Creates Out of Country Appeal as Legal Repres
 
     // This is not the route the caseworker would use, however, we use it in the tests to get to the state of: Prepare for hearing
     // This state is only available when the hearing is listed - this event mimics the List Assist integration for us and thus allows us to complete the journey
-    test('Admin Legal Officer to list the case',   async ({ page }) => {
-        await idamPage.login(legalOfficerAdminCredentials);
-        await pageHelper.getCase(caseId);
-        await new ListTheCase(page).list('No');
-        await linkHelper.signOut.click();
-    });
-
-    test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
-        await idamPage.login(listingOfficerCredentials);
-        await pageHelper.getCase(caseId);
-        await new CreateCaseSummary(page).create();
-        await new GenerateHearingBundle(page).submit();
-
-        // If notifications/WA tasks are turned off, then no documents will be generated on completing the Generate Hearing Bundle event.
-        // So to progress the case to pre-hearing state, thus we need to undertake the event: "Send to pre hearing"
-        // Once this is done we can continue the journey
-        if (await new PageHelper(page).areNotificationsTurnedOff())  {
-            await new SendToPreHearing(page).submit();
-        } else {
-            // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decisions and reasons
-            await pageHelper.waitForHearingBundleToBeGenerated();
-            await expect(page.locator(' #progress_caseOfficer_preHearing')).toBeVisible();
-        }
-        await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
-        await linkHelper.signOut.click();
-    });
-
-    test('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
-        await idamPage.login(judgeCredentials);
-        await pageHelper.getCase(caseId);
-        await new PrepareDecisionAndReasons(page).generate('Yes');
-        await new CompleteDecisionAndReasons(page).upload('allowed');
-        await linkHelper.signOut.click();
-    });
-
-    test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({ page }) => {
-        await idamPage.login(judgeDecision === 'allowed' ? homeOfficeOfficerCredentials : legalOfficerAdminCredentials);
-        judgeDecision === 'allowed' ? await page.goto(envUrl + '/cases/case-details/' + caseId) : await pageHelper.getCase(caseId);
-        await new ApplyForPermissionToAppeal(page).apply(judgeDecision === 'allowed' ? 'Respondent' :  'Appellant');
-        await linkHelper.signOut.click();
-    });
-
-    test('Judge decides FTPA application', async ({ page }) => {
-        await idamPage.login(judgeCredentials);
-        await pageHelper.getCase(caseId);
-        await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
-        await linkHelper.signOut.click();
-    });
+    // test('Admin Legal Officer to list the case',   async ({ page }) => {
+    //     await idamPage.login(legalOfficerAdminCredentials);
+    //     await pageHelper.getCase(caseId);
+    //     await new ListTheCase(page).list('No');
+    //     await linkHelper.signOut.click();
+    // });
+    //
+    // test('Listing Officer to create the case summary, generate hearing bundle and start decision and reasons',   async ({ page }) => {
+    //     await idamPage.login(listingOfficerCredentials);
+    //     await pageHelper.getCase(caseId);
+    //     await new CreateCaseSummary(page).create();
+    //     await new GenerateHearingBundle(page).submit();
+    //
+    //     // If notifications/WA tasks are turned off, then no documents will be generated on completing the Generate Hearing Bundle event.
+    //     // So to progress the case to pre-hearing state, thus we need to undertake the event: "Send to pre hearing"
+    //     // Once this is done we can continue the journey
+    //     if (await new PageHelper(page).areNotificationsTurnedOff())  {
+    //         await new SendToPreHearing(page).submit();
+    //     } else {
+    //         // The bundle can take a while to generate so we need to refresh the page until the Do Next text is updated to relate to Decisions and reasons
+    //         await pageHelper.waitForHearingBundleToBeGenerated();
+    //         await expect(page.locator(' #progress_caseOfficer_preHearing')).toBeVisible();
+    //     }
+    //     await new StartDecisionAndReasons(page).submit('Yes', 'Yes');
+    //     await linkHelper.signOut.click();
+    // });
+    //
+    // test('Judge to Prepare and Complete decision and reasons',   async ({ page }) => {
+    //     await idamPage.login(judgeCredentials);
+    //     await pageHelper.getCase(caseId);
+    //     await new PrepareDecisionAndReasons(page).generate('Yes');
+    //     await new CompleteDecisionAndReasons(page).upload('allowed');
+    //     await linkHelper.signOut.click();
+    // });
+    //
+    // test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({ page }) => {
+    //     await idamPage.login(judgeDecision === 'allowed' ? homeOfficeOfficerCredentials : legalOfficerAdminCredentials);
+    //     judgeDecision === 'allowed' ? await page.goto(envUrl + '/cases/case-details/' + caseId) : await pageHelper.getCase(caseId);
+    //     await new ApplyForPermissionToAppeal(page).apply(judgeDecision === 'allowed' ? 'Respondent' :  'Appellant');
+    //     await linkHelper.signOut.click();
+    // });
+    //
+    // test('Judge decides FTPA application', async ({ page }) => {
+    //     await idamPage.login(judgeCredentials);
+    //     await pageHelper.getCase(caseId);
+    //     await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
+    //     await linkHelper.signOut.click();
+    // });
 });

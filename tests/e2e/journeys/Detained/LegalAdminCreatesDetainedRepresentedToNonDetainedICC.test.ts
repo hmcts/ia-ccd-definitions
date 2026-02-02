@@ -9,7 +9,7 @@ import { CreateAppeal } from '../../flows/createAppeal';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { SubmitYourAppeal } from '../../flows/events/submitYourAppeal';
 import { RemoveDetainedStatus } from '../../flows/events/removeDetainedStatus';
-import { imageLocators } from '../../fixtures/imageLocators';
+import { imageLocators } from '../../../fixtures/imageLocators';
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
