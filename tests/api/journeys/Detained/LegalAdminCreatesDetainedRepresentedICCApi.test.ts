@@ -51,8 +51,6 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         event = 'startAppeal';
         eventToken = await tokensHelper.getEventToken(event, null, uid, accessToken,s2sToken);
 
-        let ariaRefNumber = await ccdApiHelper.getAriaReferenceNumber(event, uid, accessToken, eventToken, s2sToken);
-
         uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
         eventData = await new DetainedRepresented().generateDraftData(isRehydrated ? 'rehydratedAppeal' : 'paperForm');
         console.log('pre inject>>>',eventData);
@@ -63,7 +61,7 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
 
         // If rehydrate then inject the Aria ref number / If paper appeal inject the Notice of decision document
         if (isRehydrated){
-            eventData.appealReferenceNumber = ariaRefNumber;
+            eventData.appealReferenceNumber = await ccdApiHelper.getAriaReferenceNumber(event, uid, accessToken, eventToken, s2sToken);
         } else {
             uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
             eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_url = uploadedDocUrl;
