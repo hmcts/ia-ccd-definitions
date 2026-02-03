@@ -4,11 +4,8 @@ import {
     legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials, runningEnv,
 } from '../../../e2e/iacConfig';
 import {TokensHelper} from "../../../e2e/helpers/TokensHelper";
-import {ariaReferenceNumber} from "../../../fixtures/ariaReferenceNumber";
 import {CcdApiHelper} from "../../../e2e/helpers/CcdApiHelper";
-import {APIResponse} from "playwright";
 import {DetainedRepresented} from "./CaseData/DetainedRepresented";
-import {RepresentedOutOfCountryInTimeRehydrated} from "./CaseData/RepresentedOutOfCountryInTimeRehydrated";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
