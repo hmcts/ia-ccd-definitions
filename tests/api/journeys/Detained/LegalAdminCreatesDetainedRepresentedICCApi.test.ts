@@ -7,7 +7,7 @@ import {TokensHelper} from "../../../e2e/helpers/TokensHelper";
 import {ariaReferenceNumber} from "../../../fixtures/ariaReferenceNumber";
 import {CcdApiHelper} from "../../../e2e/helpers/CcdApiHelper";
 import {APIResponse} from "playwright";
-import {DetainedRepresentedRehydrated} from "./CaseData/DetainedRepresentedRehydrated";
+import {DetainedRepresented} from "./CaseData/DetainedRepresented";
 import {RepresentedOutOfCountryInTimeRehydrated} from "./CaseData/RepresentedOutOfCountryInTimeRehydrated";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
@@ -57,12 +57,21 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         let ariaRefNumber = await ccdApiHelper.getAriaReferenceNumber(event, uid, accessToken, eventToken, s2sToken);
 
         uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
-        eventData = await new DetainedRepresentedRehydrated().generateDraftData();
+        eventData = await new DetainedRepresented().generateDraftData(isRehydrated ? 'rehydratedAppeal' : 'paperForm');
         console.log('pre inject>>>',eventData);
         // we now inject info about document uploaded to document store into the caseData
-        eventData.appealReferenceNumber = ariaRefNumber;
+
         eventData.uploadTheAppealFormDocs[0].value.document.document_url = uploadedDocUrl;
         eventData.uploadTheAppealFormDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
+
+        // If rehydrate then inject the Aria ref number / If paper appeal inject the Notice of decision document
+        if (isRehydrated){
+            eventData.appealReferenceNumber = ariaRefNumber;
+        } else {
+            uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
+            eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_url = uploadedDocUrl;
+            eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
+        }
 
         const appealData = {
             data:eventData,
@@ -82,7 +91,7 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         event = 'submitAppeal';
 
         eventToken = await tokensHelper.getEventToken(event, caseId, uid, accessToken, s2sToken);
-        eventData = await new DetainedRepresentedRehydrated().generateSubmitData();
+        eventData = await new DetainedRepresented().generateSubmitData();
 
         //merge case data into event data
         caseData = { ...eventData, ...caseData };

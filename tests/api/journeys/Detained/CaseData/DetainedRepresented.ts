@@ -1,6 +1,8 @@
 import moment from "moment";
 import {appellant, legalRepresentative} from "../../../../e2e/iacConfig";
 import {detentionFacility} from "../../../../fixtures/detentionFacilities";
+import {UIStrings} from "lighthouse/core/lib/i18n/i18n";
+
 const yesterday = moment().subtract(1, 'days');
 const homeOfficeDecisionDate = moment().subtract(5, 'days');
 const outOfTime: string = !['false'].includes(process.env.IN_TIME) ? 'No' : 'Yes';
@@ -15,13 +17,13 @@ const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivatio
 let data;
 let detentionNameData;
 
-export class DetainedRepresentedRehydrated {
+export class DetainedRepresented {
 
 
-  async generateDraftData() {
+  async generateDraftData(sourceOfAppeal: string) {
     data = {
           isAdmin: "Yes",
-          sourceOfAppeal: "rehydratedAppeal",
+          sourceOfAppeal: sourceOfAppeal,
           appealReferenceNumber: "INJECTED_VALUE",
           tribunalReceivedDate: yesterday.year().toString() + '-' + (yesterday.month() + 1).toString().padStart(2,'0') + '-' + (yesterday.date().toString().padStart(2,'0')),
           submissionOutOfTime: outOfTime,
@@ -78,20 +80,43 @@ export class DetainedRepresentedRehydrated {
           remissionType: "noRemission",
           feeWithHearing: null,
           feeWithoutHearing: null,
+          uploadTheNoticeOfDecisionDocs: [
+            {
+                value: {
+                    description: "Notice of decision document upload description",
+                    document: {
+                        document_url: "INJECTED_VALUE",
+                        document_binary_url: "INJECTED_VALUE",
+                        document_filename: "TEST DOCUMENT 2.pdf"
+                    }
+                },
+                id: null
+            }
+          ],
           uploadTheAppealFormDocs: [
             {
-              value: {
-                description: "appeal form upload description",
-                document: {
-                  document_url: "INJECTED_VALUE",
-                  document_binary_url: "INJECTED_VALUE",
-                  document_filename: "TEST DOCUMENT 1.pdf"
-                }
-              },
-              id: null
+                value: {
+                    description: "Appeal form document upload description",
+                    document: {
+                        document_url: "INJECTED_VALUE",
+                        document_binary_url: "INJECTED_VALUE",
+                        document_filename: "TEST DOCUMENT 1.pdf"
+                    }
+                },
+                id: null
             }
           ]
         };
+
+    // we need to remove certain key/value pairs if this is a paper-based/rehydrated appeal
+    if (sourceOfAppeal === 'paperForm') {
+        delete data.appealReferenceNumber;
+        delete data.submissionOutOfTime;
+        delete data.uploadRehydratedNod;
+    } else {
+        delete data.uploadTheNoticeOfDecisionDocs;
+    }
+
 
     if (detentionLocation === 'prison') {
         const nomsData = {
