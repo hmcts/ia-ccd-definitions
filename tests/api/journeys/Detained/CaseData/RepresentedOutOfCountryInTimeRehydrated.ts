@@ -1,7 +1,8 @@
 import moment from "moment";
 import {appellant, legalRepresentative} from "../../../../e2e/iacConfig";
 const yesterday = moment().subtract(1, 'days');
-const homeOfficeDecisionDate = moment().subtract(5, 'days');
+const outOfTime: string = !['false'].includes(process.env.IN_TIME) ? 'No' : 'Yes';
+const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
 
 export class RepresentedOutOfCountryInTimeRehydrated {
 
@@ -12,8 +13,8 @@ export class RepresentedOutOfCountryInTimeRehydrated {
         sourceOfAppeal: "rehydratedAppeal",
         appealReferenceNumber: "INJECTED_VALUE",
         tribunalReceivedDate: yesterday.year().toString() + '-' + (yesterday.month() + 1).toString().padStart(2,'0') + '-' + (yesterday.date().toString()).padStart(2,'0'),
-        submissionOutOfTime: "No",
-        appellantsRepresentation: "No",
+        submissionOutOfTime: outOfTime,
+        appellantsRepresentation: "No",  //No = LR, Yes = AIP
         appealWasNotSubmittedReason: "test appeal not submitted reason text",
         appealNotSubmittedReasonDocuments: [],
         legalRepCompanyPaperJ: legalRepresentative.company,
@@ -54,8 +55,8 @@ export class RepresentedOutOfCountryInTimeRehydrated {
         countryGovUkOocAdminJ: appellant.outsideUKAddress.country.slice(0, -1),
         internalAppellantMobileNumber: appellant.mobile,
         internalAppellantEmail: appellant.email,
-        appealType: "euSettlementScheme",
-        dateEntryClearanceDecision: yesterday.year().toString() + '-' + (yesterday.month() + 1).toString().padStart(2,'0') + '-' + yesterday.date().toString(),
+        appealType: typeOfAppeal,
+        dateEntryClearanceDecision: yesterday.year().toString() + '-' + (yesterday.month() + 1).toString().padStart(2,'0') + '-' + (yesterday.date().toString()).padStart(2,'0'),
         uploadRehydratedNod: [],
         hasSponsor: "No",
         hasOtherAppeals: "No",
@@ -91,7 +92,7 @@ export class RepresentedOutOfCountryInTimeRehydrated {
           remissionOption: null,
           paAppealTypePaymentOption: null,
           helpWithFeesOption: null,
-          appealType: "euSettlementScheme",
+          appealType: typeOfAppeal,
           feeAmountGbp: "14000",
           appellantInDetention: "No",
           isNotificationTurnedOff: "Yes"

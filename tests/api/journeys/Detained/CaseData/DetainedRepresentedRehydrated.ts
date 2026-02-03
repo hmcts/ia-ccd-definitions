@@ -10,6 +10,8 @@ const detentionAddressLines: string = detentionLocation === 'prison' ? detention
 const detentionPostcode : string = detentionLocation === 'prison' ? detentionFacility.prison.postcode : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.postcode : detentionFacility.other.postcode);
 const detentionNamekey: string = (detentionLocation === 'prison' ? 'prison' : (detentionLocation === 'immigrationRemovalCentre' ? 'irc' : 'otherDetentionFacility')) + 'Name';
 const detentionName : string = detentionLocation === 'prison' ? detentionFacility.prison.shortName : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.shortName : detentionFacility.other.name);
+const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
+
 let data;
 let detentionNameData;
 
@@ -23,7 +25,7 @@ export class DetainedRepresentedRehydrated {
           appealReferenceNumber: "INJECTED_VALUE",
           tribunalReceivedDate: yesterday.year().toString() + '-' + (yesterday.month() + 1).toString().padStart(2,'0') + '-' + (yesterday.date().toString().padStart(2,'0')),
           submissionOutOfTime: outOfTime,
-          appellantsRepresentation: "No",
+          appellantsRepresentation: "No",   //No = LR, Yes = AIP
           appealWasNotSubmittedReason: "test appeal not submitted reason text",
           appealNotSubmittedReasonDocuments: [],
           legalRepCompanyPaperJ: legalRepresentative.company,
@@ -48,7 +50,6 @@ export class DetainedRepresentedRehydrated {
           detentionFacility: detentionLocation,
           detentionAddressLines: detentionAddressLines,
           detentionPostcode: detentionPostcode,
-         // [detentionNamekey]: detentionName,
           releaseDateProvided: "No",
           hasPendingBailApplications: "No",
           homeOfficeReferenceNumber: "000012345",
@@ -65,7 +66,7 @@ export class DetainedRepresentedRehydrated {
           ],
           internalAppellantMobileNumber: appellant.mobile,
           internalAppellantEmail: appellant.email,
-          appealType: "euSettlementScheme",
+          appealType: typeOfAppeal,
           homeOfficeDecisionDate: homeOfficeDecisionDate.year().toString() + '-' + (homeOfficeDecisionDate.month() + 1).toString().padStart(2, '0') + '-' + homeOfficeDecisionDate.date().toString().padStart(2, '0'),
           uploadRehydratedNod: [],
           hasSponsor: "No",
@@ -117,8 +118,6 @@ export class DetainedRepresentedRehydrated {
         //merge additional data into case data
         data = { ...data, ...detentionNameData };
     }
-
-
     return data;
   }
 
@@ -131,7 +130,7 @@ export class DetainedRepresentedRehydrated {
           remissionOption: null,
           paAppealTypePaymentOption: null,
           helpWithFeesOption: null,
-          appealType: "euSettlementScheme",
+          appealType: typeOfAppeal,
           feeAmountGbp: "14000",
           appellantInDetention: "Yes",
           isNotificationTurnedOff: "Yes"

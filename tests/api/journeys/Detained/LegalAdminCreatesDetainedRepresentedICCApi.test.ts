@@ -59,11 +59,11 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
         eventData = await new DetainedRepresentedRehydrated().generateDraftData();
         console.log('pre inject>>>',eventData);
-    // we now inject info about document created in test startup into the caseData
+        // we now inject info about document uploaded to document store into the caseData
         eventData.appealReferenceNumber = ariaRefNumber;
         eventData.uploadTheAppealFormDocs[0].value.document.document_url = uploadedDocUrl;
         eventData.uploadTheAppealFormDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
-console.log('caseData>>>>', eventData);
+
         const appealData = {
             data:eventData,
             event:{"id": event,"summary":"","description":""},
@@ -95,6 +95,6 @@ console.log('caseData>>>>', eventData);
         }
 
         const response = await  ccdApiHelper.saveDataToDataStore(event, caseId, appealData, uid, accessToken, s2sToken);
-       // console.log('submit>>> ', response);
+
     });
  });
