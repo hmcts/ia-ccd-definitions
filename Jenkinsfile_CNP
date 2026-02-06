@@ -180,6 +180,7 @@ pipeline {
         always {
           dir("${WORKSPACE}/target") {
             archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview-pr${CHANGE_ID}.xlsx", allowEmptyArchive: true
+            echo "Pipeline completed for PR ${CHANGE_ID}"
           }
         }
       }
@@ -203,11 +204,5 @@ pipeline {
     //     }
     //   }
     // }
-  }
-  
-  post {
-    always {
-      echo "Pipeline completed for PR ${CHANGE_ID}"
-    }
   }
 } 
