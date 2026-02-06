@@ -42,9 +42,9 @@ export class CcdApiHelper {
     };
 
 
-    async uploadDocument(accessToken, s2sToken) {
+    async uploadDocument(accessToken, s2sToken, documentName: string = 'TEST_DOCUMENT_1.pdf') {
         const apiRequestContext: APIRequestContext = await request.newContext();
-        const file = path.resolve("./tests/documents", "TEST_DOCUMENT_1.pdf");
+        const file = path.resolve("./tests/documents", documentName);
         const document = fs.readFileSync(file);
 
         const response = await apiRequestContext.post(documentManagementStoreApiBaseUrl + "/documents", {

@@ -7,14 +7,16 @@ import {TokensHelper} from "../../../e2e/helpers/TokensHelper";
 import {ariaReferenceNumber} from "../../../fixtures/ariaReferenceNumber";
 import {CcdApiHelper} from "../../../e2e/helpers/CcdApiHelper";
 import {APIResponse} from "playwright";
-import {RepresentedOutOfCountryInTimeRehydrated} from "./CaseData/RepresentedOutOfCountryInTimeRehydrated";
+import {Represented} from "./CaseData/Represented";
 import {stringify} from "node:querystring";
+import {DetainedRepresented} from "../Detained/CaseData/DetainedRepresented";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
+const appellantInUK: string = ['Yes', 'No'].includes(process.env.IN_UK) ? process.env.IN_UK : 'Yes';
 const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
 
 
@@ -34,7 +36,8 @@ let eventToken: string;
 let event: string;
 let ccdApiHelper: CcdApiHelper;
 let tokensHelper: TokensHelper;
-let uploadedDocUrl: string;
+let uploadedAppealFormDocUrl: string;
+let uploadedNoticeOfDecisionDocUrl: string;
 let caseId: string = '';
 let caseData;
 let eventData;
@@ -55,15 +58,22 @@ test.describe('Legal Admin creates Out of Country ' + typeOfAppeal + (isRehydrat
         event = 'startAppeal';
         eventToken = await tokensHelper.getEventToken(event, null, uid, accessToken, s2sToken);
 
-        let ariaRefNumber = await ccdApiHelper.getAriaReferenceNumber(event, uid, accessToken, eventToken, s2sToken);
-
-        uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
-        eventData = await new RepresentedOutOfCountryInTimeRehydrated().generateDraftData();
-
+        eventData = await new Represented().generateDraftData();
         // we now inject info about document created in test startup into the caseData
-        eventData.appealReferenceNumber = ariaRefNumber;
-        eventData.uploadTheAppealFormDocs[0].value.document.document_url = uploadedDocUrl;
-        eventData.uploadTheAppealFormDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
+        if (appellantInUK === 'Yes') {
+            uploadedNoticeOfDecisionDocUrl = await ccdApiHelper.uploadDocument(accessToken, s2sToken, 'TEST_DOCUMENT_1.pdf');
+            eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_url = uploadedNoticeOfDecisionDocUrl;
+            eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_binary_url = uploadedNoticeOfDecisionDocUrl + '/binary';
+        }
+
+        if (isRehydrated) {
+            eventData.appealReferenceNumber = await ccdApiHelper.getAriaReferenceNumber(event, uid, accessToken, eventToken, s2sToken);
+        }
+
+        uploadedAppealFormDocUrl = await ccdApiHelper.uploadDocument(accessToken, s2sToken, 'TEST_DOCUMENT_2.pdf');
+        eventData.uploadTheAppealFormDocs[0].value.document.document_url = uploadedAppealFormDocUrl;
+        eventData.uploadTheAppealFormDocs[0].value.document.document_binary_url = uploadedAppealFormDocUrl + '/binary';
+        //console.log(eventData);
 
         const appealData = {
             data:eventData,
@@ -83,7 +93,7 @@ test.describe('Legal Admin creates Out of Country ' + typeOfAppeal + (isRehydrat
         event = 'submitAppeal';
 
         eventToken = await tokensHelper.getEventToken(event, caseId, uid, accessToken, s2sToken);
-        eventData = await new RepresentedOutOfCountryInTimeRehydrated().generateSubmitData();
+        eventData = await new Represented().generateSubmitData();
 
         //merge case data into event data
         caseData = { ...eventData, ...caseData };

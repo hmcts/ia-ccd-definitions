@@ -1,11 +1,11 @@
 import moment from "moment";
 import {appellant, legalRepresentative} from "../../../../e2e/iacConfig";
 import {detentionFacility} from "../../../../fixtures/detentionFacilities";
-import {UIStrings} from "lighthouse/core/lib/i18n/i18n";
 
 const yesterday = moment().subtract(1, 'days');
 const homeOfficeDecisionDate = moment().subtract(5, 'days');
 const outOfTime: string = !['false'].includes(process.env.IN_TIME) ? 'No' : 'Yes';
+const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'prison';
 const detentionBuilding : string = detentionLocation === 'prison' ? detentionFacility.prison.building : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.building : detentionFacility.other.building);
 const detentionAddressLines: string = detentionLocation === 'prison' ? detentionFacility.prison.address : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.address : detentionFacility.other.address);
@@ -20,13 +20,13 @@ let detentionNameData;
 export class DetainedRepresented {
 
 
-  async generateDraftData(sourceOfAppeal: string) {
+  async generateDraftData() {
     data = {
           isAdmin: "Yes",
-          sourceOfAppeal: sourceOfAppeal,
-          appealReferenceNumber: "INJECTED_VALUE",
+          sourceOfAppeal: isRehydrated ? 'rehydratedAppeal' : 'paperForm',
+          ...isRehydrated ? {appealReferenceNumber: "INJECTED_VALUE"} : {},
           tribunalReceivedDate: yesterday.year().toString() + '-' + (yesterday.month() + 1).toString().padStart(2,'0') + '-' + (yesterday.date().toString().padStart(2,'0')),
-          submissionOutOfTime: outOfTime,
+          ...isRehydrated ? {submissionOutOfTime: outOfTime} : {},
           appellantsRepresentation: "No",   //No = LR, Yes = AIP
           appealWasNotSubmittedReason: "test appeal not submitted reason text",
           appealNotSubmittedReasonDocuments: [],
@@ -50,8 +50,10 @@ export class DetainedRepresented {
           appellantInDetention: "Yes",
           detentionBuilding: detentionBuilding,
           detentionFacility: detentionLocation,
+          ...detentionLocation === 'prison' ? {prisonNOMSNumber: {prison: appellant.NOMSNumber}} : {},
           detentionAddressLines: detentionAddressLines,
           detentionPostcode: detentionPostcode,
+          ...detentionLocation === 'prison' ? {prisonName: detentionName} : detentionLocation === 'immigrationRemovalCentre' ? { [detentionNamekey]: detentionName} : {  [detentionNamekey]: {other: detentionName}},
           releaseDateProvided: "No",
           hasPendingBailApplications: "No",
           homeOfficeReferenceNumber: "000012345",
@@ -70,7 +72,7 @@ export class DetainedRepresented {
           internalAppellantEmail: appellant.email,
           appealType: typeOfAppeal,
           homeOfficeDecisionDate: homeOfficeDecisionDate.year().toString() + '-' + (homeOfficeDecisionDate.month() + 1).toString().padStart(2, '0') + '-' + homeOfficeDecisionDate.date().toString().padStart(2, '0'),
-          uploadRehydratedNod: [],
+          ...isRehydrated ? {uploadRehydratedNod: []} : {},
           hasSponsor: "No",
           deportationOrderOptions: "No",
           removalOrderOptions: "No",
@@ -80,19 +82,20 @@ export class DetainedRepresented {
           remissionType: "noRemission",
           feeWithHearing: null,
           feeWithoutHearing: null,
-          uploadTheNoticeOfDecisionDocs: [
-            {
-                value: {
-                    description: "Notice of decision document upload description",
-                    document: {
-                        document_url: "INJECTED_VALUE",
-                        document_binary_url: "INJECTED_VALUE",
-                        document_filename: "TEST DOCUMENT 2.pdf"
-                    }
-                },
-                id: null
-            }
-          ],
+          ...!isRehydrated ? {uploadTheNoticeOfDecisionDocs: [
+                {
+                    value: {
+                        description: "Notice of decision document upload description",
+                        document: {
+                            document_url: "INJECTED_VALUE",
+                            document_binary_url: "INJECTED_VALUE",
+                            document_filename: "TEST DOCUMENT 2.pdf"
+                        }
+                    },
+                    id: null
+                }
+            ]}
+          : {},
           uploadTheAppealFormDocs: [
             {
                 value: {
@@ -105,44 +108,9 @@ export class DetainedRepresented {
                 },
                 id: null
             }
-          ]
-        };
+          ],
+    };
 
-    // we need to remove certain key/value pairs if this is a paper-based/rehydrated appeal
-    if (sourceOfAppeal === 'paperForm') {
-        delete data.appealReferenceNumber;
-        delete data.submissionOutOfTime;
-        delete data.uploadRehydratedNod;
-    } else {
-        delete data.uploadTheNoticeOfDecisionDocs;
-    }
-
-
-    if (detentionLocation === 'prison') {
-        const nomsData = {
-            prisonNOMSNumber:
-                {
-                    prison: appellant.NOMSNumber
-                }
-        }
-
-        //merge additional data into case data
-        data = { ...data, ...nomsData };
-    }
-
-    if (detentionLocation === 'other'){
-        detentionNameData = {
-            [detentionNamekey]: {
-                other: detentionName
-            }
-        }
-    } else {
-        detentionNameData = {
-            [detentionNamekey]: detentionName
-        }
-        //merge additional data into case data
-        data = { ...data, ...detentionNameData };
-    }
     return data;
   }
 
