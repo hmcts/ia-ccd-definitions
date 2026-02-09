@@ -6,7 +6,8 @@ const outOfTime: string = !['false'].includes(process.env.IN_TIME) ? 'No' : 'Yes
 const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
 const appellantInUK: string = ['Yes', 'No'].includes(process.env.IN_UK) ? process.env.IN_UK : 'Yes';
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
-export class Represented {
+const aip: string = ['Yes'].includes(process.env.AIP) ? 'Yes' : 'No';
+export class NonDetained {
 
 
   async generateDraftData() {
@@ -17,25 +18,29 @@ export class Represented {
         ...isRehydrated ? {appealReferenceNumber: "INJECTED_VALUE"} : {},
         tribunalReceivedDate: yesterday.year().toString() + '-' + (yesterday.month() + 1).toString().padStart(2,'0') + '-' + (yesterday.date().toString()).padStart(2,'0'),
         ...isRehydrated ? {submissionOutOfTime: outOfTime} : {},
-        appellantsRepresentation: "No",  //No = LR, Yes = AIP
-        appealWasNotSubmittedReason: "test appeal not submitted reason text",
-        appealNotSubmittedReasonDocuments: [],
-        legalRepCompanyPaperJ: legalRepresentative.company,
-        legalRepGivenName: legalRepresentative.name,
-        legalRepFamilyNamePaperJ: legalRepresentative.familyName,
-        legalRepEmail: legalRepresentative.email,
-        legalRepRefNumberPaperJ: legalRepresentative.reference,
+        appellantsRepresentation: aip,  //No = LR, Yes = AIP
+        ...aip === "No" ? {
+                appealWasNotSubmittedReason: "test appeal not submitted reason text",
+                appealNotSubmittedReasonDocuments: [],
+                legalRepCompanyPaperJ: legalRepresentative.company,
+                legalRepGivenName: legalRepresentative.name,
+                legalRepFamilyNamePaperJ: legalRepresentative.familyName,
+                legalRepEmail: legalRepresentative.email,
+                legalRepRefNumberPaperJ: legalRepresentative.reference
+            } : {},
         letterSentOrReceived: appellantInUK === 'Yes' ? "Sent" : "Received",
-        legalRepHasAddress: "Yes",
-        legalRepAddressUK: {
-          AddressLine1: legalRepresentative.address.addressLine1,
-          AddressLine2: null,
-          AddressLine3: null,
-          PostTown: legalRepresentative.address.postTown,
-          County: null,
-          PostCode: legalRepresentative.address.postcode,
-          Country: legalRepresentative.address.country
-        },
+        ...aip === "No" ? {
+                legalRepHasAddress: "Yes",
+                legalRepAddressUK: {
+                    AddressLine1: legalRepresentative.address.addressLine1,
+                    AddressLine2: null,
+                    AddressLine3: null,
+                    PostTown: legalRepresentative.address.postTown,
+                    County: null,
+                    PostCode: legalRepresentative.address.postcode,
+                    Country: legalRepresentative.address.country
+                }
+            } : {},
         appellantInUk: appellantInUK,
         ...appellantInUK !== 'Yes' ? {oocAppealAdminJ: "entryClearanceDecision"} : {},
         ...appellantInUK !== 'Yes' ? {gwfReferenceNumber: "123456"} : {}, // remove for In Country

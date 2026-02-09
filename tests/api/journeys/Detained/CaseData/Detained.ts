@@ -7,6 +7,7 @@ const homeOfficeDecisionDate = moment().subtract(5, 'days');
 const outOfTime: string = !['false'].includes(process.env.IN_TIME) ? 'No' : 'Yes';
 const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
+const aip: string = ['Yes'].includes(process.env.AIP) ? 'Yes' : 'No';
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'prison';
 const detentionBuilding : string = detentionLocation === 'prison' ? detentionFacility.prison.building : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.building : detentionFacility.other.building);
 const detentionAddressLines: string = detentionLocation === 'prison' ? detentionFacility.prison.address : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.address : detentionFacility.other.address);
@@ -17,7 +18,7 @@ const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivatio
 
 let data;
 
-export class DetainedRepresented {
+export class Detained {
 
 
   async generateDraftData() {
@@ -27,26 +28,31 @@ export class DetainedRepresented {
           ...isRehydrated ? {appealReferenceNumber: "INJECTED_VALUE"} : {},
           tribunalReceivedDate: yesterday.year().toString() + '-' + (yesterday.month() + 1).toString().padStart(2,'0') + '-' + (yesterday.date().toString().padStart(2,'0')),
           ...isRehydrated ? {submissionOutOfTime: outOfTime} : {},
-          appellantsRepresentation: "No",   //No = LR, Yes = AIP
-          appealWasNotSubmittedReason: "test appeal not submitted reason text",
-          appealNotSubmittedReasonDocuments: [],
-          legalRepCompanyPaperJ: legalRepresentative.company,
-          legalRepGivenName: legalRepresentative.name,
-          legalRepFamilyNamePaperJ: legalRepresentative.familyName,
-          legalRepEmail: legalRepresentative.email,
-          legalRepRefNumberPaperJ: legalRepresentative.reference,
-          letterSentOrReceived: "Sent",
-          legalRepHasAddress: "Yes",
+          appellantsRepresentation: aip,   //No = LR, Yes = AIP
+          ...aip === "No" ? {
+              appealWasNotSubmittedReason: "test appeal not submitted reason text",
+              appealNotSubmittedReasonDocuments: [],
+              legalRepCompanyPaperJ: legalRepresentative.company,
+              legalRepGivenName: legalRepresentative.name,
+              legalRepFamilyNamePaperJ: legalRepresentative.familyName,
+              legalRepEmail: legalRepresentative.email,
+              legalRepRefNumberPaperJ: legalRepresentative.reference,
+              letterSentOrReceived: "Sent",
+              legalRepHasAddress: "Yes"
+              }
+              : {},
           appellantInUk: "Yes",
-          legalRepAddressUK: {
-            AddressLine1: legalRepresentative.address.addressLine1,
-            AddressLine2: null,
-            AddressLine3: null,
-            PostTown: legalRepresentative.address.postTown,
-            County: null,
-            PostCode: legalRepresentative.address.postcode,
-            Country: legalRepresentative.address.country
-          },
+          ...aip === "No" ? {
+              legalRepAddressUK: {
+              AddressLine1: legalRepresentative.address.addressLine1,
+              AddressLine2: null,
+              AddressLine3: null,
+              PostTown: legalRepresentative.address.postTown,
+              County: null,
+              PostCode: legalRepresentative.address.postcode,
+              Country: legalRepresentative.address.country
+              }
+          } : {},
           appellantInDetention: "Yes",
           detentionBuilding: detentionBuilding,
           detentionFacility: detentionLocation,

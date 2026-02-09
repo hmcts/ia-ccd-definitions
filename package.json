@@ -100,6 +100,25 @@
     "test:LrManualOutOfCountryEuSettlementSchemePaperApi": "yarn playwright install && IN_UK=No APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false npx playwright test --project api --grep @LrManualOutOfCountryApi",
     "test:LrManualOutOfCountryEuSettlementSchemePaperFeeRemissionApi": "yarn playwright install && IN_UK=No APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false FEE_REMISSION=Yes npx playwright test --project api --grep @LrManualOutOfCountryApi",
 
+    "test:AipManualDetainedPrisonEuSettlementSchemeRehydratedApi": "yarn playwright install && AIP=Yes DETENTION_LOCATION=prison APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true npx playwright test --project api --grep @LrManualDetainedApi",
+    "test:AipManualDetainedPrisonEuSettlementSchemeRehydratedFeeRemissionApi": "yarn playwright install && AIP=Yes DETENTION_LOCATION=prison APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true FEE_REMISSION=Yes npx playwright test --project api --grep @LrManualDetainedApi",
+
+    "test:AipManualDetainedPrisonEuSettlementSchemePaperApi": "yarn playwright install && AIP=Yes DETENTION_LOCATION=prison APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false npx playwright test --project api --grep @LrManualDetainedApi",
+    "test:AipManualDetainedPrisonEuSettlementSchemePaperFeeRemissionApi": "yarn playwright install && AIP=Yes DETENTION_LOCATION=prison APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false FEE_REMISSION=Yes npx playwright test --project api --grep @LrManualDetainedApi",
+
+    "test:AipManualNonDetainedEuSettlementSchemeRehydratedApi": "yarn playwright install && AIP=Yes IN_UK=Yes APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true npx playwright test --project api --grep @LrManualOutOfCountryApi",
+    "test:AipManualNonDetainedEuSettlementSchemeRehydratedFeeRemissionApi": "yarn playwright install && AIP=Yes IN_UK=Yes APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true FEE_REMISSION=Yes npx playwright test --project api --grep @LrManualOutOfCountryApi",
+
+    "test:AipManualNonDetainedEuSettlementSchemePaperApi": "yarn playwright install && AIP=Yes IN_UK=Yes APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false npx playwright test --project api --grep @LrManualOutOfCountryApi",
+    "test:AipManualNonDetainedEuSettlementSchemePaperFeeRemissionApi": "yarn playwright install && AIP=Yes IN_UK=Yes APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false FEE_REMISSION=Yes npx playwright test --project api --grep @LrManualOutOfCountryApi",
+
+    "test:AipManualOutOfCountryEuSettlementSchemeRehydratedApi": "yarn playwright install && AIP=Yes IN_UK=No APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true npx playwright test --project api --grep @LrManualOutOfCountryApi",
+    "test:AipManualOutOfCountryEuSettlementSchemeRehydratedFeeRemissionApi": "yarn playwright install && AIP=Yes IN_UK=No APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true FEE_REMISSION=Yes npx playwright test --project api --grep @LrManualOutOfCountryApi",
+
+    "test:AipManualOutOfCountryEuSettlementSchemePaperApi": "yarn playwright install && AIP=Yes IN_UK=No APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false npx playwright test --project api --grep @LrManualOutOfCountryApi",
+    "test:AipManualOutOfCountryEuSettlementSchemePaperFeeRemissionApi": "yarn playwright install && AIP=Yes IN_UK=No APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false FEE_REMISSION=Yes npx playwright test --project api --grep @LrManualOutOfCountryApi",
+
+
     "test:STF_LegalRepCreatesOutOfCountryEuSettlementSchemeFeeRemission": "yarn playwright install && APPEAL_TYPE=euSettlementScheme IN_TIME=true FEE_REMISSION=Yes JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @STF_LegalRepCreatesOutOfCountry",
     "clean": "rm -rf target/",
     "decrypt": "node bin/decrypt.js",
