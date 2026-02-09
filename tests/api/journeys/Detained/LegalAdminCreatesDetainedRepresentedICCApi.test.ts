@@ -69,6 +69,13 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
             eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
         }
 
+        // If fee remission, inject section 17 document
+        if (feeRemission === 'Yes') {
+            uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
+            eventData.section17Document.document_url = uploadedDocUrl;
+            eventData.section17Document.document_binary_url = uploadedDocUrl + '/binary';
+        }
+
         const appealData = {
             data:eventData,
             event:{"id": event,"summary":"","description":""},

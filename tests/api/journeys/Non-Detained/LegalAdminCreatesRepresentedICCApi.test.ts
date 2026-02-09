@@ -36,14 +36,13 @@ let eventToken: string;
 let event: string;
 let ccdApiHelper: CcdApiHelper;
 let tokensHelper: TokensHelper;
-let uploadedAppealFormDocUrl: string;
-let uploadedNoticeOfDecisionDocUrl: string;
+let uploadedDocUrl: string;
 let caseId: string = '';
 let caseData;
 let eventData;
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Out of Country ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC DRAFT Appeal.', { tag: '@LrManualOutOfCountryApi' }, () => {
+test.describe('Legal Admin creates ' + (appellantInUK === 'Yes' ? 'Non-Detained, ' : 'Out of Country, ') + typeOfAppeal +', ' + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC DRAFT Appeal.', { tag: '@LrManualOutOfCountryApi' }, () => {
 
     test.beforeAll(async ({ }) => {
         // Go to the starting url before each test.
@@ -54,26 +53,34 @@ test.describe('Legal Admin creates Out of Country ' + typeOfAppeal + (isRehydrat
         s2sToken = await tokensHelper.getS2SToken();
       });
 
-    test('Create Out of Country ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC DRAFT Appeal',   async ({ page }) => {
+    test('Create ' + (appellantInUK === 'Yes' ? 'Non-Detained, ' : 'Out of Country, ') + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + 'ICC DRAFT Appeal',   async ({ page }) => {
         event = 'startAppeal';
         eventToken = await tokensHelper.getEventToken(event, null, uid, accessToken, s2sToken);
 
         eventData = await new Represented().generateDraftData();
         // we now inject info about document created in test startup into the caseData
         if (appellantInUK === 'Yes') {
-            uploadedNoticeOfDecisionDocUrl = await ccdApiHelper.uploadDocument(accessToken, s2sToken, 'TEST_DOCUMENT_1.pdf');
-            eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_url = uploadedNoticeOfDecisionDocUrl;
-            eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_binary_url = uploadedNoticeOfDecisionDocUrl + '/binary';
+            uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken, s2sToken, 'TEST_DOCUMENT_1.pdf');
+            eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_url = uploadedDocUrl;
+            eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
         }
 
         if (isRehydrated) {
             eventData.appealReferenceNumber = await ccdApiHelper.getAriaReferenceNumber(event, uid, accessToken, eventToken, s2sToken);
         }
 
-        uploadedAppealFormDocUrl = await ccdApiHelper.uploadDocument(accessToken, s2sToken, 'TEST_DOCUMENT_2.pdf');
-        eventData.uploadTheAppealFormDocs[0].value.document.document_url = uploadedAppealFormDocUrl;
-        eventData.uploadTheAppealFormDocs[0].value.document.document_binary_url = uploadedAppealFormDocUrl + '/binary';
+        uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken, s2sToken, 'TEST_DOCUMENT_2.pdf');
+        eventData.uploadTheAppealFormDocs[0].value.document.document_url = uploadedDocUrl;
+        eventData.uploadTheAppealFormDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
+
+        // If fee remission, inject section 17 document
+        if (feeRemission === 'Yes') {
+            uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
+            eventData.section17Document.document_url = uploadedDocUrl;
+            eventData.section17Document.document_binary_url = uploadedDocUrl + '/binary';
+        }
         //console.log(eventData);
+
 
         const appealData = {
             data:eventData,
@@ -89,7 +96,7 @@ test.describe('Legal Admin creates Out of Country ' + typeOfAppeal + (isRehydrat
         caseData = await response.case_data;
     });
 
-    test('Submit Out of Country ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + 'ICC DRAFT Appeal',   async ({  }) => {
+    test('Submit ' + (appellantInUK === 'Yes' ? 'Non-Detained, ' : 'Out of Country, ') + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + 'ICC DRAFT Appeal',   async ({  }) => {
         event = 'submitAppeal';
 
         eventToken = await tokensHelper.getEventToken(event, caseId, uid, accessToken, s2sToken);

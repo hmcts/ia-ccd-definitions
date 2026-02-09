@@ -6,6 +6,7 @@ const yesterday = moment().subtract(1, 'days');
 const homeOfficeDecisionDate = moment().subtract(5, 'days');
 const outOfTime: string = !['false'].includes(process.env.IN_TIME) ? 'No' : 'Yes';
 const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
+const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'prison';
 const detentionBuilding : string = detentionLocation === 'prison' ? detentionFacility.prison.building : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.building : detentionFacility.other.building);
 const detentionAddressLines: string = detentionLocation === 'prison' ? detentionFacility.prison.address : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.address : detentionFacility.other.address);
@@ -15,7 +16,6 @@ const detentionName : string = detentionLocation === 'prison' ? detentionFacilit
 const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
 
 let data;
-let detentionNameData;
 
 export class DetainedRepresented {
 
@@ -79,9 +79,16 @@ export class DetainedRepresented {
           hasOtherAppeals: "No",
           hearingTypeResult: "No",
           decisionHearingFeeOption: "decisionWithHearing",
-          remissionType: "noRemission",
+          ...feeRemission === 'Yes' ? {remissionType: "hoWaiverRemission"} : {remissionType: "noRemission"},
           feeWithHearing: null,
           feeWithoutHearing: null,
+          ...feeRemission === 'Yes' ? {remissionClaim: "section17"} : {},
+          ...feeRemission === 'Yes' ? {section17Document: {
+                  document_url: "INJECTED VALUE",
+                  document_binary_url: "INJECTED_VALUE",
+                  document_filename: "TEST DOCUMENT 3.pdf"
+              }}
+              : {},
           ...!isRehydrated ? {uploadTheNoticeOfDecisionDocs: [
                 {
                     value: {
@@ -118,8 +125,8 @@ export class DetainedRepresented {
       const data = {
           adminDeclaration1: ["hasDeclared"],
           isAdmin: "Yes",
-          remissionClaim: null,
-          remissionType: "noRemission",
+          // remissionClaim: null,
+          // remissionType: "noRemission",
           remissionOption: null,
           paAppealTypePaymentOption: null,
           helpWithFeesOption: null,

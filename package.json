@@ -77,7 +77,10 @@
     "test:LegalRepCreatesOutOfCountryEuSettlementSchemeFeeRemission": "yarn playwright install && APPEAL_TYPE=euSettlementScheme IN_TIME=true FEE_REMISSION=Yes JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @LegalRepCreatesOutOfCountry",
 
     "test:LrManualDetainedPrisonEuSettlementSchemeRehydratedApi": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true npx playwright test --project api --grep @LrManualDetainedApi",
+    "test:LrManualDetainedPrisonEuSettlementSchemeRehydratedFeeRemissionApi": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true FEE_REMISSION=Yes npx playwright test --project api --grep @LrManualDetainedApi",
+
     "test:LrManualDetainedPrisonEuSettlementSchemePaperApi": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false npx playwright test --project api --grep @LrManualDetainedApi",
+    "test:LrManualDetainedPrisonEuSettlementSchemePaperFeeRemissionApi": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false FEE_REMISSION=Yes npx playwright test --project api --grep @LrManualDetainedApi",
 
     "test:LrManualDetainedImmigrationRemovalCentreEuSettlementSchemeRehydratedApi": "yarn playwright install && DETENTION_LOCATION=immigrationRemovalCentre APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true npx playwright test --project api --grep @LrManualDetainedApi",
     "test:LrManualDetainedImmigrationRemovalCentreEuSettlementSchemePaperApi": "yarn playwright install && DETENTION_LOCATION=immigrationRemovalCentre APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false npx playwright test --project api --grep @LrManualDetainedApi",
@@ -86,10 +89,16 @@
     "test:LrManualDetainedOtherEuSettlementSchemePaperApi": "yarn playwright install && DETENTION_LOCATION=other APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false npx playwright test --project api --grep @LrManualDetainedApi",
 
     "test:LrManualNonDetainedEuSettlementSchemeRehydratedApi": "yarn playwright install && IN_UK=Yes APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true npx playwright test --project api --grep @LrManualOutOfCountryApi",
+    "test:LrManualNonDetainedEuSettlementSchemeRehydratedFeeRemissionApi": "yarn playwright install && IN_UK=Yes APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true FEE_REMISSION=Yes npx playwright test --project api --grep @LrManualOutOfCountryApi",
+
     "test:LrManualNonDetainedEuSettlementSchemePaperApi": "yarn playwright install && IN_UK=Yes APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false npx playwright test --project api --grep @LrManualOutOfCountryApi",
+    "test:LrManualNonDetainedEuSettlementSchemePaperFeeRemissionApi": "yarn playwright install && IN_UK=Yes APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false FEE_REMISSION=Yes npx playwright test --project api --grep @LrManualOutOfCountryApi",
 
     "test:LrManualOutOfCountryEuSettlementSchemeRehydratedApi": "yarn playwright install && IN_UK=No APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true npx playwright test --project api --grep @LrManualOutOfCountryApi",
+    "test:LrManualOutOfCountryEuSettlementSchemeRehydratedFeeRemissionApi": "yarn playwright install && IN_UK=No APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=true FEE_REMISSION=Yes npx playwright test --project api --grep @LrManualOutOfCountryApi",
+
     "test:LrManualOutOfCountryEuSettlementSchemePaperApi": "yarn playwright install && IN_UK=No APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false npx playwright test --project api --grep @LrManualOutOfCountryApi",
+    "test:LrManualOutOfCountryEuSettlementSchemePaperFeeRemissionApi": "yarn playwright install && IN_UK=No APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false FEE_REMISSION=Yes npx playwright test --project api --grep @LrManualOutOfCountryApi",
 
     "test:STF_LegalRepCreatesOutOfCountryEuSettlementSchemeFeeRemission": "yarn playwright install && APPEAL_TYPE=euSettlementScheme IN_TIME=true FEE_REMISSION=Yes JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @STF_LegalRepCreatesOutOfCountry",
     "clean": "rm -rf target/",

@@ -5,6 +5,7 @@ const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
 const outOfTime: string = !['false'].includes(process.env.IN_TIME) ? 'No' : 'Yes';
 const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
 const appellantInUK: string = ['Yes', 'No'].includes(process.env.IN_UK) ? process.env.IN_UK : 'Yes';
+const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 export class Represented {
 
 
@@ -73,15 +74,22 @@ export class Represented {
         appealType: typeOfAppeal,
         ...appellantInUK === 'Yes' ? {homeOfficeDecisionDate: yesterday.year().toString() + '-' + (yesterday.month() + 1).toString().padStart(2,'0') + '-' + (yesterday.date().toString()).padStart(2,'0')} : {},
         ...appellantInUK !== 'Yes' ? {dateEntryClearanceDecision: yesterday.year().toString() + '-' + (yesterday.month() + 1).toString().padStart(2,'0') + '-' + (yesterday.date().toString()).padStart(2,'0')} : {},
-        ...appellantInUK !== 'Yes' ? {uploadRehydratedNod: []} : {},
+        uploadRehydratedNod: [],
         hasSponsor: "No",
         ...appellantInUK === 'Yes' ? {deportationOrderOptions: "No"} : {},
         hasOtherAppeals: "No",
         hearingTypeResult: "No",
         decisionHearingFeeOption: "decisionWithHearing",
-        remissionType: "noRemission",
+        ...feeRemission === 'Yes' ? {remissionType: "hoWaiverRemission"} : {remissionType: "noRemission"},
         feeWithHearing: null,
         feeWithoutHearing: null,
+        ...feeRemission === 'Yes' ? {remissionClaim: "section17"} : {},
+        ...feeRemission === 'Yes' ? {section17Document: {
+                    document_url: "INJECTED VALUE",
+                    document_binary_url: "INJECTED_VALUE",
+                    document_filename: "TEST DOCUMENT 3.pdf"
+                }}
+            : {},
         ...appellantInUK === 'Yes' ? {uploadTheNoticeOfDecisionDocs: [
                                         {
                                             value: {
@@ -119,7 +127,6 @@ export class Represented {
           adminDeclaration1: ["hasDeclared"],
           isAdmin: "Yes",
           remissionClaim: null,
-          remissionType: "noRemission",
           remissionOption: null,
           paAppealTypePaymentOption: null,
           helpWithFeesOption: null,
