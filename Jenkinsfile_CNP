@@ -187,23 +187,63 @@ pipeline {
       }
     }
 
-     stage('Upload CCD Definition to PR Environment') {
-       when {
-         anyOf {
-           branch 'PR-*'
-           changeRequest()
-         }
-       }
-       steps {
-         script {
-           env.PR_NUMBER = "${CHANGE_ID}"
-           sh """
-             set -e
-             echo "Uploading CCD definition to PR ${CHANGE_ID} environment"
-             bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
-           """
-         }
-       }
-     }
+//     stage('Upload CCD Definition to PR Environment') {
+//       when {
+//         anyOf {
+//           branch 'PR-*'
+//           changeRequest()
+//         }
+//       }
+//       steps {
+//         script {
+//           env.PR_NUMBER = "${CHANGE_ID}"
+//           sh """
+//             set -e
+//             echo "Uploading CCD definition to PR ${CHANGE_ID} environment"
+//             bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
+//           """
+//         }
+//       }
+//     }
+  }
+}
+
+withPipeline(type, product, component) {
+  echo "CHANGE_ID: ${CHANGE_ID}"
+  enableHighLevelDataSetup()
+  loadVaultSecrets(secrets)
+
+  onPR {
+    env.ENVIRONMENT = "preview"
+    env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+    //env.CIVIL_SERVICE_URL = "https://civil-ccd-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+    if (isHmcEnabled(env.BRANCH_NAME)) {
+      env.DEFINITION_STORE_URL_BASE = "http://ccd-definition-store-api-aat.service.core-compute-aat.internal"
+      env.CCD_DATA_STORE_URL = "http://ccd-data-store-api-aat.service.core-compute-aat.internal"
+      env.CCD_DEF_VERSION = "-${CHANGE_ID}"
+    } else {
+      //env.DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-civil-ccd-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+      env.DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-ia-case-api-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+      //env.CCD_DATA_STORE_URL = "https://ccd-data-store-api-civil-ccd-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+      env.CCD_DATA_STORE_URL = "https://ccd-data-store-api-ia-case-api-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+    }
+  }
+  onMaster {
+    env.ENVIRONMENT = "aat"
+  }
+  onDemo {
+    env.ENVIRONMENT = "demo"
+  }
+  onPerftest {
+    env.ENVIRONMENT = "perftest"
+  }
+
+  onIthc {
+    env.ENVIRONMENT = "ithc"
+  }
+
+  before('highleveldatasetup') {
+    yarnBuilder.yarn('setup')
+    archiveCoreCaseDataDefinitions()
   }
 }
