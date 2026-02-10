@@ -7,9 +7,9 @@ import {TokensHelper} from "../../../e2e/helpers/TokensHelper";
 import {ariaReferenceNumber} from "../../../fixtures/ariaReferenceNumber";
 import {CcdApiHelper} from "../../../e2e/helpers/CcdApiHelper";
 import {APIResponse} from "playwright";
-import {NonDetained} from "./CaseData/NonDetained";
+import {LegalAdminNonDetained} from "./CaseData/LegalAdminNonDetained";
 import {stringify} from "node:querystring";
-import {Detained} from "../Detained/CaseData/Detained";
+import {LegalAdminDetained} from "../Detained/CaseData/LegalAdminDetained";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
@@ -42,7 +42,7 @@ let caseData;
 let eventData;
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates ' + (appellantInUK === 'Yes' ? 'Non-Detained, ' : 'Out of Country, ') + typeOfAppeal +', ' + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC DRAFT Appeal.', { tag: '@LrManualOutOfCountryApi' }, () => {
+test.describe('Legal Admin creates ' + (appellantInUK === 'Yes' ? 'Non-Detained, ' : 'Out of Country, ') + typeOfAppeal +', ' + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC DRAFT Appeal.', { tag: '@LrManualNonDetainedApi' }, () => {
 
     test.beforeAll(async ({ }) => {
         // Go to the starting url before each test.
@@ -57,7 +57,7 @@ test.describe('Legal Admin creates ' + (appellantInUK === 'Yes' ? 'Non-Detained,
         event = 'startAppeal';
         eventToken = await tokensHelper.getEventToken(event, null, uid, accessToken, s2sToken);
 
-        eventData = await new NonDetained().generateDraftData();
+        eventData = await new LegalAdminNonDetained().generateDraftData();
         // we now inject info about document created in test startup into the caseData
         if (appellantInUK === 'Yes') {
             uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken, s2sToken, 'TEST_DOCUMENT_1.pdf');
@@ -79,8 +79,6 @@ test.describe('Legal Admin creates ' + (appellantInUK === 'Yes' ? 'Non-Detained,
             eventData.section17Document.document_url = uploadedDocUrl;
             eventData.section17Document.document_binary_url = uploadedDocUrl + '/binary';
         }
-        //console.log(eventData);
-
 
         const appealData = {
             data:eventData,
@@ -89,21 +87,18 @@ test.describe('Legal Admin creates ' + (appellantInUK === 'Yes' ? 'Non-Detained,
             ignore_warning:false,
             draft_id:null
         }
-
+        //console.log(eventData);
         const response = await  ccdApiHelper.saveDataToDataStore(event, null, appealData, uid, accessToken, s2sToken);
         caseId = response.id;
         console.log('caseId>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<');
-        caseData = await response.case_data;
+      //  caseData = await response.case_data;
     });
 
     test('Submit ' + (appellantInUK === 'Yes' ? 'Non-Detained, ' : 'Out of Country, ') + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + 'ICC DRAFT Appeal',   async ({  }) => {
         event = 'submitAppeal';
 
         eventToken = await tokensHelper.getEventToken(event, caseId, uid, accessToken, s2sToken);
-        eventData = await new NonDetained().generateSubmitData();
-
-        //merge case data into event data
-        caseData = { ...eventData, ...caseData };
+        eventData = await new LegalAdminNonDetained().generateSubmitData();
 
         const appealData = {
             data:caseData,
@@ -113,6 +108,5 @@ test.describe('Legal Admin creates ' + (appellantInUK === 'Yes' ? 'Non-Detained,
         }
 
          const response = await  ccdApiHelper.saveDataToDataStore(event, caseId, appealData, uid, accessToken, s2sToken);
-        // console.log('submit>>> ', response);
     });
  });

@@ -7,7 +7,6 @@ const homeOfficeDecisionDate = moment().subtract(5, 'days');
 const outOfTime: string = !['false'].includes(process.env.IN_TIME) ? 'No' : 'Yes';
 const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
-const isAdmin: boolean = ['false'].includes(process.env.IS_ADMIN) ? false : true;
 const aip: string = ['Yes'].includes(process.env.AIP) ? 'Yes' : 'No';
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'prison';
 const detentionBuilding : string = detentionLocation === 'prison' ? detentionFacility.prison.building : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.building : detentionFacility.other.building);
@@ -19,12 +18,12 @@ const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivatio
 
 let data;
 
-export class Detained {
+export class LegalAdminDetained {
 
 
   async generateDraftData() {
     data = {
-          ...isAdmin ? {isAdmin: "Yes"} : {},
+          isAdmin: "Yes",
           sourceOfAppeal: isRehydrated ? 'rehydratedAppeal' : 'paperForm',
           ...isRehydrated ? {appealReferenceNumber: "INJECTED_VALUE"} : {},
           tribunalReceivedDate: yesterday.year().toString() + '-' + (yesterday.month() + 1).toString().padStart(2,'0') + '-' + (yesterday.date().toString().padStart(2,'0')),

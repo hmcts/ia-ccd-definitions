@@ -7,11 +7,10 @@ const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivatio
 const appellantInUK: string = ['Yes', 'No'].includes(process.env.IN_UK) ? process.env.IN_UK : 'Yes';
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 const aip: string = ['Yes'].includes(process.env.AIP) ? 'Yes' : 'No';
-export class NonDetained {
+export class LegalAdminNonDetained {
 
 
   async generateDraftData() {
-      console.log('appellantInUK>>> ', appellantInUK);
     const data = {
         isAdmin: "Yes",
         sourceOfAppeal: isRehydrated ? 'rehydratedAppeal' : 'paperForm',
@@ -43,7 +42,7 @@ export class NonDetained {
             } : {},
         appellantInUk: appellantInUK,
         ...appellantInUK !== 'Yes' ? {oocAppealAdminJ: "entryClearanceDecision"} : {},
-        ...appellantInUK !== 'Yes' ? {gwfReferenceNumber: "123456"} : {}, // remove for In Country
+        ...appellantInUK !== 'Yes' ? {gwfReferenceNumber: "123456"} : {},
         ...appellantInUK === 'Yes' ? {appellantInDetention: "No"} : {},
         ...appellantInUK === 'Yes' ? {homeOfficeReferenceNumber: "000012345"} : {},
         appellantGivenNames: appellant.givenNames,

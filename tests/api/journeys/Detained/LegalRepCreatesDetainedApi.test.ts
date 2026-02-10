@@ -1,11 +1,13 @@
 import {expect, test} from '@playwright/test';
 import {
     envUrl, legalRepresentativeCredentials, homeOfficeOfficerCredentials, judgeCredentials,
-    legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials, runningEnv,
+    legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials, runningEnv, legalRepresentative,
 } from '../../../e2e/iacConfig';
 import {TokensHelper} from "../../../e2e/helpers/TokensHelper";
 import {CcdApiHelper} from "../../../e2e/helpers/CcdApiHelper";
-import {LegalAdminDetained} from "./CaseData/LegalAdminDetained";
+import {LegalRepDetained} from "./CaseData/LegalRepDetained";
+import {stringify} from "node:querystring";
+
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
@@ -36,38 +38,28 @@ let caseData;
 let eventData;
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC DRAFT Appeal.', { tag: '@LrManualDetainedApi' }, () => {
+test.describe('Legal Representative creates Detained Represented ' + typeOfAppeal + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'DRAFT Appeal.', { tag: '@LrDetainedApi' }, () => {
 
     test.beforeAll(async ({  }) => {
         // Go to the starting url before each test.
         tokensHelper = new TokensHelper();
         ccdApiHelper = new CcdApiHelper();
-        accessToken = await tokensHelper.getAccessToken('', legalOfficerAdminCredentials.username, legalOfficerCredentials.password);
+        accessToken = await tokensHelper.getAccessToken('', legalRepresentativeCredentials.username, legalRepresentativeCredentials.password);
         uid = await tokensHelper.getUserId(accessToken);
         s2sToken = await tokensHelper.getS2SToken();
      });
 
-    test('Create detained ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + ' ICC DRAFT Appeal',   async ({ page }) => {
+    test('Create detained'  + ' DRAFT Appeal',   async ({ page }) => {
         event = 'startAppeal';
         eventToken = await tokensHelper.getEventToken(event, null, uid, accessToken,s2sToken);
 
         uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
-        eventData = await new LegalAdminDetained().generateDraftData();
+        eventData = await new LegalRepDetained().generateDraftData();
         //console.log('pre inject>>>',eventData);
         // we now inject info about document uploaded to document store into the caseData
-
-        eventData.uploadTheAppealFormDocs[0].value.document.document_url = uploadedDocUrl;
-        eventData.uploadTheAppealFormDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
-
-
-        // If rehydrate then inject the Aria ref number / If paper appeal inject the Notice of decision document
-        if (isRehydrated){
-            eventData.appealReferenceNumber = await ccdApiHelper.getAriaReferenceNumber(event, uid, accessToken, eventToken, s2sToken);
-        } else {
-            uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
-            eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_url = uploadedDocUrl;
-            eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
-        }
+        uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
+        eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_url = uploadedDocUrl;
+        eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
 
         // If fee remission, inject section 17 document
         if (feeRemission === 'Yes') {
@@ -76,6 +68,7 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
             eventData.section17Document.document_binary_url = uploadedDocUrl + '/binary';
         }
 
+        //console.log(JSON.stringify(eventData))
         const appealData = {
             data:eventData,
             event:{"id": event,"summary":"","description":""},
@@ -83,26 +76,27 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
             ignore_warning:false,
             draft_id:null
         }
-        //console.log(eventData);
+       // console.log(appealData);
         const response = await  ccdApiHelper.saveDataToDataStore(event, null, appealData, uid, accessToken, s2sToken);
         caseId = response.id;
         console.log('caseId>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<');
-        //caseData = await response.case_data;
+        //caseData = eventData;
     });
 
-    test('Submit detained ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + ' ICC DRAFT Appeal',   async ({  }) => {
+    test('Submit detained ' + ' DRAFT Appeal',   async ({  }) => {
         event = 'submitAppeal';
 
         eventToken = await tokensHelper.getEventToken(event, caseId, uid, accessToken, s2sToken);
-        eventData = await new LegalAdminDetained().generateSubmitData();
+        eventData = await new LegalRepDetained().generateSubmitData();
 
         const appealData = {
-            data:caseData,
+            data:eventData,
             event:{"id": event,"summary":"","description":""},
             event_token:eventToken,
             ignore_warning:false
         }
-
+        //console.log(appealData);
         const response = await  ccdApiHelper.saveDataToDataStore(event, caseId, appealData, uid, accessToken, s2sToken);
+
     });
  });
