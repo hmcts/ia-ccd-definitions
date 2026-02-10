@@ -27,7 +27,7 @@ export const createCase = {
 
 export const legalRepresentativeCredentials = {
     username: ['preview', 'aat'].includes(process.env.ENVIRONMENT) ? 'ialegalreporgcreator12@mailnesia.com' : 'ialegalreporgcreator12@mailinator.com',
-    password: ['preview', 'aat'].includes(process.env.ENVIRONMENT) ? 'Aldg@teT0wer' : 'Aldg@teT0wer',
+    password: ['preview', 'aat'].includes(process.env.ENVIRONMENT) ? 'Aldg@teT0wer' : 'AldgateT0wer',
 }
 
 export const legalOfficerCredentials = {
