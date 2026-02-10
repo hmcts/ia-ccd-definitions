@@ -1,6 +1,6 @@
 import {expect, test} from '@playwright/test';
 import {
-    envUrl, homeOfficeOfficerCredentials, judgeCredentials,
+    envUrl, legalRepresentativeCredentials, homeOfficeOfficerCredentials, judgeCredentials,
     legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials, runningEnv,
 } from '../../../e2e/iacConfig';
 import {TokensHelper} from "../../../e2e/helpers/TokensHelper";
@@ -12,6 +12,7 @@ const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
+const isAdmin: boolean = ['false'].includes(process.env.IS_ADMIN) ? false : true;
 const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
 let caseId: string = '';
 
@@ -42,8 +43,15 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         // Go to the starting url before each test.
         tokensHelper = new TokensHelper();
         ccdApiHelper = new CcdApiHelper();
-        accessToken = await tokensHelper.getAccessToken('', legalOfficerAdminCredentials.username, legalOfficerCredentials.password);
-        uid = await tokensHelper.getUserId(accessToken);
+        if (isAdmin) {
+            accessToken = await tokensHelper.getAccessToken('', legalOfficerAdminCredentials.username, legalOfficerCredentials.password);
+            uid = await tokensHelper.getUserId(accessToken);
+        } else {
+            console.log('legal rep');
+            accessToken = await tokensHelper.getAccessToken('', legalRepresentativeCredentials.username, legalRepresentativeCredentials.password);
+            uid = await tokensHelper.getUserId(accessToken);
+        }
+
         s2sToken = await tokensHelper.getS2SToken();
      });
 
