@@ -81,6 +81,7 @@ def archiveCoreCaseDataDefinitions() {
     }
 
   } else if (env.ENVIRONMENT == 'preview') {
+    echo "current environment is ${env.ENVIRONMENT}"
     dir("${WORKSPACE}") {
       sh """
           set -e
