@@ -311,5 +311,10 @@
   {"LiveFrom": "01/01/2021", "ID": "TTL", "CaseEventID": "ManageTTL", "CaseFieldID": "TTL", "ListElementCode": "Suspended", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "N"},
   {"LiveFrom": "01/01/2021", "ID": "TTL", "CaseEventID": "migrateCase", "CaseFieldID": "TTL", "ListElementCode": "SystemTTL", "FieldDisplayOrder":  "1", "DisplayContext": "READONLY", "Publish": "N"},
   {"LiveFrom": "01/01/2021", "ID": "TTL", "CaseEventID": "migrateCase", "CaseFieldID": "TTL", "ListElementCode": "OverrideTTL", "FieldDisplayOrder":  "2", "DisplayContext": "OPTIONAL", "Publish": "N"},
-  {"LiveFrom": "01/01/2021", "ID": "TTL", "CaseEventID": "migrateCase", "CaseFieldID": "TTL", "ListElementCode": "Suspended", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "N"}
+  {"LiveFrom": "01/01/2021", "ID": "TTL", "CaseEventID": "migrateCase", "CaseFieldID": "TTL", "ListElementCode": "Suspended", "FieldDisplayOrder":  "3", "DisplayContext": "OPTIONAL", "Publish": "N"},
+
+  {"LiveFrom": "01/01/2021", "ID": "prisonNOMSComplexType", "CaseEventID": "startAppeal", "CaseFieldID": "prisonNOMSNumber", "ListElementCode": "prison", "FieldDisplayOrder": "1", "DisplayContext": "OPTIONAL", "Publish": "N"},
+  {"LiveFrom": "01/01/2021", "ID": "prisonNOMSComplexType", "CaseEventID": "editAppeal", "CaseFieldID": "prisonNOMSNumber", "ListElementCode": "prison", "FieldDisplayOrder": "1", "DisplayContext": "OPTIONAL", "Publish": "N"},
+  {"LiveFrom": "01/01/2021", "ID": "prisonNOMSComplexType", "CaseEventID": "updateDetentionLocation", "CaseFieldID": "prisonNOMSNumber", "ListElementCode": "prison", "FieldDisplayOrder": "1", "DisplayContext": "OPTIONAL", "Publish": "N"},
+  {"LiveFrom": "01/01/2021", "ID": "prisonNOMSComplexType", "CaseEventID": "markAppealAsDetained", "CaseFieldID": "prisonNOMSNumber", "ListElementCode": "prison", "FieldDisplayOrder": "1", "DisplayContext": "OPTIONAL", "Publish": "N"}
 ]

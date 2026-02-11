@@ -127,16 +127,23 @@ fi
 #   yarn decrypt
 # fi
 
+# Determine the output file name
+if [[ "${ENV}" == "preview" && -n "${PR_NUMBER}" ]]; then
+  OUTPUT_FILE="target/appeal/xlsx/ccd-appeal-config-${CCD_ENV}-pr${PR_NUMBER}.xlsx"
+else
+  OUTPUT_FILE="target/appeal/xlsx/ccd-appeal-config-${CCD_ENV}.xlsx"
+fi
+
 # Generate the definition
 yarn copy-json && \
 CCD_ENV="${CCD_ENV}" \
 CCD_DEF_VERSION="${CCD_DEF_VERSION}" \
 CCD_DEF_IA_URL="${CCD_DEF_IA_URL}" \
 CCD_DEF_AAC_URL="${CCD_DEF_AAC_URL}" \
-yarn generate-excel
+yarn generate-excel "${OUTPUT_FILE}"
 
 if [ $? -eq 0 ]; then
-  echo "CCD definition generated successfully: target/appeal/xlsx/ccd-appeal-config-${CCD_ENV}.xlsx"
+  echo "CCD definition generated successfully: ${OUTPUT_FILE}"
 else
   echo "Error generating CCD definition"
   exit 1
