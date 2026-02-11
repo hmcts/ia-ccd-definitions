@@ -3,7 +3,7 @@
 set -eu
 
 environment=${1:-prod}
-activateShutter${2:-false}
+activateShutter=${2:-false}
 
 if [ ${environment} == preview ]; then
    excludedFilenamePatterns="-e *-prod.json"
