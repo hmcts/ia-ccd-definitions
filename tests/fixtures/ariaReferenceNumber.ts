@@ -3,6 +3,8 @@ const year = moment().year().toString()
 const invalidYear = moment().subtract(100, 'years').year().toString();
 const validAriaCodes: string[] = ['HU','DA','DC','EA','PA','RP','LE','LD','LP','LH','LR','IA'];
 
+
+
 function getRandomAriaCode() {
     const element: number = Math.floor(Math.random() * validAriaCodes.length);
     return validAriaCodes[element];

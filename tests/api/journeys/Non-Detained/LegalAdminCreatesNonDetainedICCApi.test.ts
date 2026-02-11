@@ -1,15 +1,11 @@
 import {expect, test} from '@playwright/test';
 import {
-    envUrl, homeOfficeOfficerCredentials, judgeCredentials,
-    legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials, runningEnv,
+    legalOfficerAdminCredentials, legalOfficerCredentials,
 } from '../../../e2e/iacConfig';
 import {TokensHelper} from "../../../e2e/helpers/TokensHelper";
-import {ariaReferenceNumber} from "../../../fixtures/ariaReferenceNumber";
 import {CcdApiHelper} from "../../../e2e/helpers/CcdApiHelper";
-import {APIResponse} from "playwright";
 import {LegalAdminNonDetained} from "./CaseData/LegalAdminNonDetained";
-import {stringify} from "node:querystring";
-import {LegalAdminDetained} from "../Detained/CaseData/LegalAdminDetained";
+
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);

@@ -34,6 +34,16 @@ let tokensHelper: TokensHelper;
 let uploadedDocUrl: string;
 let caseData;
 let eventData;
+let legalOfficerAdminAccessToken: string;
+let legalOfficerAdminUid: string;
+let legalOfficerAdminS2sToken: string;
+let legalOfficerAccessToken: string;
+let legalOfficerUid: string;
+let legalOfficerS2sToken: string;
+let homeOfficeOfficerAccessToken: string;
+let homeOfficeOfficerUid: string;
+let homeOfficeOfficerS2sToken: string;
+
 
 test.describe.configure({ mode: 'serial'});
 test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC DRAFT Appeal.', { tag: '@LrManualDetainedApi' }, () => {
@@ -42,19 +52,23 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         // Go to the starting url before each test.
         tokensHelper = new TokensHelper();
         ccdApiHelper = new CcdApiHelper();
-        accessToken = await tokensHelper.getAccessToken('', legalOfficerAdminCredentials.username, legalOfficerCredentials.password);
-        uid = await tokensHelper.getUserId(accessToken);
-        s2sToken = await tokensHelper.getS2SToken();
+       // accessToken = await tokensHelper.getAccessToken('', legalOfficerAdminCredentials.username, legalOfficerCredentials.password);
+       // uid = await tokensHelper.getUserId(accessToken);
+       // s2sToken = await tokensHelper.getS2SToken();
      });
 
     test('Create detained ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + ' ICC DRAFT Appeal',   async ({ page }) => {
         event = 'startAppeal';
-        eventToken = await tokensHelper.getEventToken(event, null, uid, accessToken,s2sToken);
+        legalOfficerAdminAccessToken = await tokensHelper.getAccessToken('', legalOfficerAdminCredentials.username, legalOfficerAdminCredentials.password);
+        legalOfficerAdminUid = await tokensHelper.getUserId(legalOfficerAdminAccessToken);
+        legalOfficerAdminS2sToken = await tokensHelper.getS2SToken();
 
-        uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
+        eventToken = await tokensHelper.getEventToken(event, null, legalOfficerAdminUid, legalOfficerAdminAccessToken, legalOfficerAdminS2sToken);
+
+        uploadedDocUrl = await ccdApiHelper.uploadDocument(legalOfficerAdminAccessToken, legalOfficerAdminS2sToken);
         eventData = await new LegalAdminDetained().generateDraftData();
         //console.log('pre inject>>>',eventData);
-        // we now inject info about document uploaded to document store into the caseData
+        // we now inject info about document uploaded to document store into the eventData
 
         eventData.uploadTheAppealFormDocs[0].value.document.document_url = uploadedDocUrl;
         eventData.uploadTheAppealFormDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
@@ -62,16 +76,16 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
 
         // If rehydrate then inject the Aria ref number / If paper appeal inject the Notice of decision document
         if (isRehydrated){
-            eventData.appealReferenceNumber = await ccdApiHelper.getAriaReferenceNumber(event, uid, accessToken, eventToken, s2sToken);
+            eventData.appealReferenceNumber = await ccdApiHelper.getAriaReferenceNumber(event, legalOfficerAdminUid, legalOfficerAdminAccessToken, eventToken, legalOfficerAdminS2sToken);
         } else {
-            uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
+            uploadedDocUrl = await ccdApiHelper.uploadDocument(legalOfficerAdminAccessToken, legalOfficerAdminS2sToken);
             eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_url = uploadedDocUrl;
             eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
         }
 
         // If fee remission, inject section 17 document
         if (feeRemission === 'Yes') {
-            uploadedDocUrl = await ccdApiHelper.uploadDocument(accessToken,s2sToken);
+            uploadedDocUrl = await ccdApiHelper.uploadDocument(legalOfficerAdminAccessToken, legalOfficerAdminS2sToken);
             eventData.section17Document.document_url = uploadedDocUrl;
             eventData.section17Document.document_binary_url = uploadedDocUrl + '/binary';
         }
@@ -84,7 +98,7 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
             draft_id:null
         }
         //console.log(eventData);
-        const response = await  ccdApiHelper.saveDataToDataStore(event, null, appealData, uid, accessToken, s2sToken);
+        const response = await  ccdApiHelper.saveDataToDataStore(event, null, appealData, legalOfficerAdminUid, legalOfficerAdminAccessToken, legalOfficerAdminS2sToken);
         caseId = response.id;
         console.log('caseId>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<');
         //caseData = await response.case_data;
@@ -93,7 +107,7 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
     test('Submit detained ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + ' ICC DRAFT Appeal',   async ({  }) => {
         event = 'submitAppeal';
 
-        eventToken = await tokensHelper.getEventToken(event, caseId, uid, accessToken, s2sToken);
+        eventToken = await tokensHelper.getEventToken(event, caseId, legalOfficerAdminUid, legalOfficerAdminAccessToken, legalOfficerAdminS2sToken);
         eventData = await new LegalAdminDetained().generateSubmitData();
 
         const appealData = {
@@ -103,6 +117,78 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
             ignore_warning:false
         }
 
-        const response = await  ccdApiHelper.saveDataToDataStore(event, caseId, appealData, uid, accessToken, s2sToken);
+        const response = await ccdApiHelper.saveDataToDataStore(event, caseId, appealData, legalOfficerAdminUid, legalOfficerAdminAccessToken, legalOfficerAdminS2sToken);
     });
+
+    test('Submit: Mark as Paid event',   async ({  }) => {
+        event = 'markAppealPaid';
+
+        eventToken = await tokensHelper.getEventToken(event, caseId, legalOfficerAdminUid, legalOfficerAdminAccessToken, legalOfficerAdminS2sToken);
+        eventData = await new LegalAdminDetained().generateMarkAsPaidData();
+
+        // validate the data before submitting
+        let response = await ccdApiHelper.validatePageData(event+event, event, eventData, legalOfficerAdminUid, eventToken, legalOfficerAdminAccessToken, legalOfficerAdminS2sToken);
+        expect(await response.status(), `Validation failed for event: ${event}`).toEqual(200);
+            const dataToSubmit = {
+                data:eventData,
+                event:{"id": event,"summary":"","description":""},
+                event_token:eventToken,
+                ignore_warning:false
+            }
+
+            response = await  ccdApiHelper.saveDataToDataStore(event, caseId, dataToSubmit, legalOfficerAdminUid, legalOfficerAdminAccessToken, legalOfficerAdminS2sToken);
+    });
+
+
+    test('Submit: Request Respondent Evidence event',   async ({  }) => {
+        event = 'requestRespondentEvidence';
+        legalOfficerAccessToken = await tokensHelper.getAccessToken('', legalOfficerCredentials.username, legalOfficerCredentials.password);
+        legalOfficerUid = await tokensHelper.getUserId(legalOfficerAccessToken);
+        legalOfficerS2sToken = await tokensHelper.getS2SToken();
+
+        eventToken = await tokensHelper.getEventToken(event, caseId, legalOfficerUid, legalOfficerAccessToken, legalOfficerS2sToken);
+        eventData = await new LegalAdminDetained().generateRequestRespondentEvidenceData();
+
+        // validate the data before submitting
+        let response = await ccdApiHelper.validatePageData(event+event, event, eventData, legalOfficerUid, eventToken, legalOfficerAccessToken, legalOfficerS2sToken);
+        expect(await response.status(), `Validation failed for event: ${event}`).toEqual(200);
+        const dataToSubmit = {
+            data:eventData,
+            event:{"id": event,"summary":"","description":""},
+            event_token:eventToken,
+            ignore_warning:false
+        }
+
+        response = await  ccdApiHelper.saveDataToDataStore(event, caseId, dataToSubmit, legalOfficerUid, legalOfficerAccessToken, legalOfficerS2sToken);
+    });
+
+    test('Submit: Upload Home Office Bundle event',   async ({  }) => {
+        event = 'uploadHomeOfficeBundle';
+        homeOfficeOfficerAccessToken = await tokensHelper.getAccessToken('', homeOfficeOfficerCredentials.username, homeOfficeOfficerCredentials.password);
+        homeOfficeOfficerUid = await tokensHelper.getUserId(homeOfficeOfficerAccessToken);
+        homeOfficeOfficerS2sToken = await tokensHelper.getS2SToken();
+
+        eventToken = await tokensHelper.getEventToken(event, caseId, homeOfficeOfficerUid, homeOfficeOfficerAccessToken, homeOfficeOfficerS2sToken);
+
+        uploadedDocUrl = await ccdApiHelper.uploadDocument(homeOfficeOfficerAccessToken, homeOfficeOfficerS2sToken);
+        eventData = await new LegalAdminDetained().generateUploadedHomeOfficeBundleDocsData();
+
+        // we now inject info about document uploaded to document store into the eventData
+        eventData.homeOfficeBundle[0].value.document.document_url = uploadedDocUrl;
+        eventData.homeOfficeBundle[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
+
+        // validate the data before submitting
+        let response = await ccdApiHelper.validatePageData(event+event, event, eventData, homeOfficeOfficerUid, eventToken, homeOfficeOfficerAccessToken, homeOfficeOfficerS2sToken);
+        expect(await response.status(), `Validation failed for event: ${event}`).toEqual(200);
+        const dataToSubmit = {
+            data:eventData,
+            event:{"id": event,"summary":"","description":""},
+            event_token:eventToken,
+            ignore_warning:false
+        }
+
+        response = await  ccdApiHelper.saveDataToDataStore(event, caseId, dataToSubmit, homeOfficeOfficerUid, homeOfficeOfficerAccessToken, homeOfficeOfficerS2sToken);
+
+    });
+
  });
