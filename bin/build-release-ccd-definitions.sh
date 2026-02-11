@@ -26,7 +26,7 @@ else
   echo "ERROR! You are passing an environment that is not known by the script!"
   echo "       Either add the new environment to the script or specify a supported environment!"
   exit 1
-fi}
+fi
 
 # deciding which environment should be excluded for unshuttered/shuttered
 if [ "$activateShutter" = true ] ; then
