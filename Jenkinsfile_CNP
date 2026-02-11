@@ -111,9 +111,9 @@ def archiveCoreCaseDataDefinitions() {
       steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview.xlsx"
     }
 
-    dir("${WORKSPACE}/target") {
-      steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-${env.ENVIRONMENT}.xlsx"
-    }
+//    dir("${WORKSPACE}/target") {
+//      steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-${env.ENVIRONMENT}.xlsx"
+//    }
   }
 }
 
