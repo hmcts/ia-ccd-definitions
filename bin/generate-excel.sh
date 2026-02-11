@@ -1,2 +1,8 @@
 #!/usr/bin/env bash
-pushd ccd-definition-processor && yarn json2xlsx -D ../target/appeal/json -o ../target/appeal/xlsx/ccd-appeal-config-${CCD_ENV:-dev}.xlsx && popd
+set -eu
+
+env="${CCD_ENV:-dev}"
+json_dir="./target/appeal/json"
+xlsx_out="./target/appeal/xlsx/ccd-appeal-config-${env}.xlsx"
+
+./bin/process-definition.sh "${json_dir}" "${xlsx_out}" "${excludedFilenamePatterns}"
