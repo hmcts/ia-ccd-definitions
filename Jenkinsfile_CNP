@@ -93,11 +93,22 @@ def archiveCoreCaseDataDefinitions() {
       steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview.xlsx"
     }
   } else {
+    echo "current environment is ${env.ENVIRONMENT}"
+    // preview behaviour made default for testing
+//    dir("${WORKSPACE}") {
+//      sh """
+//          set -e
+//          yarn generate-${env.ENVIRONMENT}
+//        """
     dir("${WORKSPACE}") {
       sh """
           set -e
-          yarn generate-${env.ENVIRONMENT}
-        """
+          yarn generate-preview
+      """
+    }
+
+    dir("${WORKSPACE}/target") {
+      steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview.xlsx"
     }
 
     dir("${WORKSPACE}/target") {
