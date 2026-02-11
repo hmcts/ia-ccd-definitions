@@ -1,0 +1,208 @@
+#!groovy
+properties([
+  copyArtifactPermission('/HMCTS_a_to_c/ia-ccd-definitions/*'),
+]);
+
+@Library("Infrastructure")
+import uk.gov.hmcts.contino.GithubAPI
+
+def type = "nodejs"
+def product = "ia"
+def component = "ccd-definitions"
+
+def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
+
+static Map<String, Object> secret(String secretName, String envVariable) {
+  [$class     : 'AzureKeyVaultSecret',
+   secretType : 'Secret',
+   name       : secretName,
+   envVariable: envVariable
+  ]
+}
+
+def secrets = [
+  'rpx-${env}': [
+    secret('mc-idam-client-secret', 'IDAM_CLIENT_SECRET'),
+  ],
+  's2s-${env}'  : [
+    secret('microservicekey-ccd-gw', 'CCD_API_GATEWAY_S2S_SECRET'),
+    secret('microservicekey-ccd-data', 'CCD_DATA_STORE_S2S_SECRET'),
+    secret('microservicekey-ccd-admin', 'ADMIN_S2S_KEY'),
+    secret('microservicekey-ccd-definition', 'CCD_DEFINITION_STORE_S2S_SECRET'),
+    secret('microservicekey-xui-webapp', 'XUI_S2S_SECRET'),
+  ],
+  'ccd-${env}'  : [
+    secret('ccd-api-gateway-oauth2-client-secret', 'CCD_API_GATEWAY_IDAM_CLIENT_SECRET'),
+    secret('ccd-api-gateway-oauth2-client-secret', 'CCD_API_GATEWAY_OAUTH2_CLIENT_SECRET'),
+    secret('postcode-info-address-lookup-token', 'ADDRESS_LOOKUP_TOKEN'),
+    secret('ccd-admin-web-oauth2-client-secret', 'ADMIN_WEB_IDAM_SECRET'),
+    secret('idam-data-store-client-secret', 'IDAM_OAUTH2_DATA_STORE_CLIENT_SECRET'),
+    secret('idam-data-store-system-user-username', 'IDAM_DATA_STORE_SYSTEM_USER_USERNAME'),
+    secret('idam-data-store-system-user-password', 'IDAM_DATA_STORE_SYSTEM_USER_PASSWORD'),
+    secret('microservicekey-ccd-gw', 'CCD_API_GATEWAY_S2S_KEY'),
+    secret('ccd-admin-web-oauth2-client-secret', 'ADMIN_WEB_IDAM_SECRET'),
+    secret('idam-data-store-system-user-username', 'ROLE_ASSIGNMENT_USER_EMAIL')
+  ],
+  'ia-${env}': [
+    secret('ccd-importer-username', 'CCD_CONFIGURER_IMPORTER_USERNAME'),
+    secret('ccd-importer-password', 'CCD_CONFIGURER_IMPORTER_PASSWORD'),
+    secret('ccd-importer-username', 'DEFINITION_IMPORTER_USERNAME'),
+    secret('ccd-importer-password', 'DEFINITION_IMPORTER_PASSWORD'),
+    secret('postgres-user', 'POSTGRES_USER'),
+    secret('postgres-password', 'POSTGRES_PASSWORD'),
+    secret('default-password', 'DEFAULT_PASSWORD'),
+    secret('system-update-user-password', 'SYSTEM_USER_PASSWORD'),
+    secret('ia-system-access-username', 'IA_SYSTEM_USERNAME'),
+    secret('ia-system-access-password', 'IA_SYSTEM_PASSWORD'),
+    secret('test-caseofficer-username', 'TEST_CASEOFFICER_USERNAME'),
+    secret('test-caseofficer-password', 'TEST_CASEOFFICER_PASSWORD'),
+    secret('test-law-firm-a-username', 'TEST_LAW_FIRM_A_USERNAME'),
+    secret('test-law-firm-a-password', 'TEST_LAW_FIRM_A_PASSWORD'),
+    secret('test-adminofficer-username', 'TEST_ADMINOFFICER_USERNAME'),
+    secret('test-adminofficer-password', 'TEST_ADMINOFFICER_PASSWORD')
+  ]
+]
+
+def archiveCoreCaseDataDefinitions() {
+  if (env.ENVIRONMENT == 'aat') {
+    echo "current environment is ${env.ENVIRONMENT}"
+    for (PROD_ENV in ["aat", "prod"]) {
+      echo "environment is ${PROD_ENV}"
+      dir("${WORKSPACE}") {
+        sh """
+          set -e
+          yarn generate-${PROD_ENV}
+        """
+      }
+
+      dir("${WORKSPACE}/target") {
+        steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-${PROD_ENV}.xlsx"
+      }
+    }
+
+  } else if (env.ENVIRONMENT == 'preview') {
+    dir("${WORKSPACE}") {
+      sh """
+          set -e
+          yarn generate-preview
+      """
+    }
+
+    dir("${WORKSPACE}/target") {
+      steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview.xlsx"
+    }
+  } else {
+    dir("${WORKSPACE}") {
+      sh """
+          set -e
+          yarn generate-${env.ENVIRONMENT}
+        """
+    }
+
+    dir("${WORKSPACE}/target") {
+      steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-${env.ENVIRONMENT}.xlsx"
+    }
+  }
+}
+
+def uploadCoreCaseDataDefinitions(env) {
+  dir("${WORKSPACE}") {
+    ccdDefinitionFilePath = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${env}.xlsx"
+    sh """
+      set -e
+      bin/utils/upload-ccd.sh -e ${env}
+    """
+  }
+}
+
+pipeline {
+  agent any
+  
+  environment {
+    ENVIRONMENT = "preview"
+    NODE_TLS_REJECT_UNAUTHORIZED = "0"
+    PR_NUMBER = "${CHANGE_ID}"
+    DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+    CCD_DATA_STORE_URL = "https://ccd-data-store-api-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+  }
+  
+  stages {
+    stage('Setup') {
+      steps {
+        script {
+          // Use corepack prepare to get the correct Yarn version without system-wide installation
+          sh 'corepack prepare yarn@3.4.1 --activate'
+          // Use corepack to run yarn commands
+          sh 'corepack yarn --version'
+          // Install dependencies first
+          sh 'corepack yarn install'
+          sh 'corepack yarn setup'
+        }
+      }
+    }
+    
+    stage('Validate JSON') {
+      when {
+        anyOf {
+          branch 'PR-*'
+          changeRequest()
+        }
+      }
+      steps {
+        script {
+          sh """
+            set -e
+            echo "Validating JSON definitions for PR ${CHANGE_ID}"
+            corepack yarn test
+          """
+        }
+      }
+    }
+
+    stage('Generate CCD Definition for PR') {
+      when {
+        anyOf {
+          branch 'PR-*'
+          changeRequest()
+        }
+      }
+      steps {
+        script {
+          env.PR_NUMBER = "${CHANGE_ID}"
+          sh """
+            set -e
+            echo "Generating CCD definition for PR ${CHANGE_ID}"
+            corepack yarn generate-preview
+          """
+        }
+      }
+      post {
+        always {
+          dir("${WORKSPACE}/target") {
+            archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview-pr${CHANGE_ID}.xlsx", allowEmptyArchive: true
+            echo "Pipeline completed for PR ${CHANGE_ID}"
+          }
+        }
+      }
+    }
+
+    // stage('Upload CCD Definition to PR Environment') {
+    //   when {
+    //     anyOf {
+    //       branch 'PR-*'
+    //       changeRequest()
+    //     }
+    //   }
+    //   steps {
+    //     script {
+    //       env.PR_NUMBER = "${CHANGE_ID}"
+    //       sh """
+    //         set -e
+    //         echo "Uploading CCD definition to PR ${CHANGE_ID} environment"
+    //         bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
+    //       """
+    //     }
+    //   }
+    // }
+  }
+} 
