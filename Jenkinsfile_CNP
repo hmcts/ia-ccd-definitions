@@ -225,6 +225,8 @@ withPipeline(type, product, component) {
   loadVaultSecrets(secrets)
 
   onPR {
+    echo "INSIDE onPR"
+
     env.ENVIRONMENT = "preview"
     env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
     //env.CIVIL_SERVICE_URL = "https://civil-ccd-pr-${CHANGE_ID}.preview.platform.hmcts.net"
