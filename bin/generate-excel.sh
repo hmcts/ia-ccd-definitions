@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 set -eu
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
+
 env="${CCD_ENV:-dev}"
-json_dir="./target/appeal/json"
-xlsx_out="./target/appeal/xlsx/ccd-appeal-config-${env}.xlsx"
+json_dir="${ROOT_DIR}/target/appeal/json"
+xlsx_out="${ROOT_DIR}/target/appeal/xlsx/ccd-appeal-config-${env}.xlsx"
+
 mkdir -p "$(dirname "${xlsx_out}")"
 
 if [ -n "${CCD_EXCLUDED_FILENAME_PATTERNS:-}" ]; then
@@ -16,4 +20,4 @@ else
   esac
 fi
 
-./bin/process-definition.sh "${json_dir}" "${xlsx_out}" "${excludedFilenamePatterns}"
+"${SCRIPT_DIR}/utils/process-definition.sh" "${json_dir}" "${xlsx_out}" "${excludedFilenamePatterns}"
