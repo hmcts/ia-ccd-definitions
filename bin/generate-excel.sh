@@ -9,13 +9,12 @@ ROOT_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 env="${CCD_ENV:-dev}"
 features_csv="${CCD_FEATURES:-${CCD_FEATURE:-}}"
 
-# ---- directories ----
+# directories
 base_dir="${ROOT_DIR}/definitions/appeal/json"
 feature_root="${ROOT_DIR}/definitions/appeal/features"
 staged_dir="${ROOT_DIR}/target/appeal/staged-json"
 xlsx_out="${ROOT_DIR}/target/appeal/xlsx/ccd-appeal-config-${env}.xlsx"
 
-# ---- prepare staged input ----
 rm -rf "${staged_dir}"
 mkdir -p "${staged_dir}" "$(dirname "${xlsx_out}")"
 
@@ -35,7 +34,7 @@ if [ -n "${features_csv}" ]; then
   done
 fi
 
-# ---- exclusion rules ----
+# exclusion rules
 if [ -n "${CCD_EXCLUDED_FILENAME_PATTERNS:-}" ]; then
   excludedFilenamePatterns="-e ${CCD_EXCLUDED_FILENAME_PATTERNS}"
 else
@@ -50,7 +49,7 @@ echo "Environment: ${env}"
 echo "Features: ${features_csv:-<none>}"
 echo "Exclusions: ${excludedFilenamePatterns}"
 
-# ---- generate xlsx ----
+# generate xlsx
 "${SCRIPT_DIR}/utils/process-definition.sh" \
   "${staged_dir}" \
   "${xlsx_out}" \
