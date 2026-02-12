@@ -206,6 +206,14 @@ pipeline {
 //             bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
 //           """
            sh """
+             // Use corepack prepare to get the correct Yarn version without system-wide installation
+             sh 'corepack prepare yarn@3.4.1 --activate'
+             // Use corepack to run yarn commands
+             sh 'corepack yarn --version'
+             // Install dependencies first
+             sh 'corepack yarn install'
+             sh 'corepack yarn setup'
+             //
              set -e
              echo "Uploading CCD definition to PR ${CHANGE_ID} environment (2620)"
              bin/utils/upload-ccd.sh -e preview -p 2620
