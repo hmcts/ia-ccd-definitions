@@ -313,3 +313,30 @@ Generate with explicit override:
 ```bash 
 CCD_ENV=prod CCD_EXCLUDED_FILENAME_PATTERNS='*-nonprod.json' bash -x bin/generate-excel.sh
 ```
+
+## Taking advantage of this mechanism:
+
+When adding new definitions for example because a ticket requires it, use these rules:
+
+- Will this be available in all environments?
+- Will it only be used in prod?
+- Will it only be used in dev?
+
+If environment specific → use suffix naming convention, otherwise normal filename/existing file
+
+For base JSON def files which need to always be present do not add a suffix, add new features in suffixed files.  
+
+### Practical example
+CaseEvent.json → all current mandatory events
+
+CaseEvent-Detained-nonprod.json → only detained feature events for non-prod
+
+Result:
+
+Non-prod gets both files (base + feature)
+
+Prod gets base only
+
+Currently we are only detecting files in the same directory as the base files which we may want to modify.
+An example idea may be modifying the command style to get feature JSON files from a new directory
+so to include all feature specific JSONs in one place that our script can use.
