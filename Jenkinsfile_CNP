@@ -171,10 +171,11 @@ pipeline {
       }
       steps {
         script {
-          env.PR_NUMBER = "${CHANGE_ID}"
+          //env.PR_NUMBER = "${CHANGE_ID}"
+          env.PR_NUMBER = "2620"
           sh """
             set -e
-            echo "Generating CCD definition for PR ${CHANGE_ID}"
+            echo "Generating CCD definition for PR ${env.PR_NUMBER}"
             corepack yarn generate-preview
           """
         }
@@ -213,8 +214,8 @@ pipeline {
 withPipeline(type, product, component) {
   echo "CHANGE_ID: ${CHANGE_ID}"
 
-  yarnBuilder.yarn('setup')
-  archiveCoreCaseDataDefinitions()
+  //yarnBuilder.yarn('setup')
+  //archiveCoreCaseDataDefinitions()
 
   enableHighLevelDataSetup()
   loadVaultSecrets(secrets)
