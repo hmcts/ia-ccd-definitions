@@ -132,9 +132,6 @@ export class LegalAdminDetained {
   async generateSubmitData() {
       data = {
           adminDeclaration1: ["hasDeclared"],
-       //   isAdmin: "Yes",
-          // remissionClaim: null,
-          // remissionType: "noRemission",
           remissionOption: null,
           paAppealTypePaymentOption: null,
           helpWithFeesOption: null,

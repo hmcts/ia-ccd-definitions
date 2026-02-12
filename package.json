@@ -110,6 +110,12 @@
     "test:LrOutOfCountryEuSettlementSchemeApi": "yarn playwright install && IN_UK=No APPEAL_TYPE=euSettlementScheme IN_TIME=true npx playwright test --project api --grep @LrNonDetainedApi",
     "test:LrOutOfCountryEuSettlementSchemeFeeRemissionApi": "yarn playwright install && IN_UK=No APPEAL_TYPE=euSettlementScheme IN_TIME=true FEE_REMISSION=true npx playwright test --project api --grep @LrNonDetainedApi",
     "test:STF_LegalRepCreatesOutOfCountryEuSettlementSchemeFeeRemission": "yarn playwright install && APPEAL_TYPE=euSettlementScheme IN_TIME=true FEE_REMISSION=Yes JUDGE_DECISION=allowed npx playwright test --headed --project chromium --grep @STF_LegalRepCreatesOutOfCountry",
+
+
+    "test:AriaApi": "yarn playwright install && DETENTION_LOCATION=prison APPEAL_TYPE=euSettlementScheme IN_TIME=true IS_REHYDRATED=false npx playwright test --project api --grep @AriaApi",
+
+
+
     "clean": "rm -rf target/",
     "decrypt": "node bin/decrypt.js",
     "copy-json": "bin/copy-json.sh",

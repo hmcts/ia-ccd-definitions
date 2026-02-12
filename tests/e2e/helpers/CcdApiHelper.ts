@@ -123,7 +123,7 @@ export class CcdApiHelper {
 
     async saveDataToDataStore(eventName:string, caseId, eventData:unknown,  ) {
         let url: string;
-        if (eventName === 'startAppeal') {
+        if (eventName === 'startAppeal' || eventName === 'ariaCreateCase') {
             url = `${ccdDataStoreApiBaseUrl}/caseworkers/${this.uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases`;
         } else {
             url = `${ccdDataStoreApiBaseUrl}/caseworkers/${this.uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases/${caseId}/events`;
