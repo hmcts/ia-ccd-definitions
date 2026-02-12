@@ -10,15 +10,15 @@ if [[ ($# -ne 3) && ($# -ne 5) ]]; then
   exit 1
 fi
 
-definition_input_dir=${1}
-definition_output_file=${2}
+definition_input_dir="${1}"
+definition_output_file="${2}"
 additionalParameters="${@:3}"
 
 echo "Definition directory: ${definition_input_dir}"
 echo "Definition spreadsheet ${definition_output_file}"
 echo "Additional parameters: ${additionalParameters}"
 
-mkdir -p $(dirname ${definition_output_file})
+mkdir -p "$(dirname "${definition_output_file}")"
 
-${dir}/process-definition.sh ${definition_input_dir} ${definition_output_file} "${additionalParameters}"
+${dir}/utils/process-definition.sh ${definition_input_dir} ${definition_output_file} "${additionalParameters}"
 ${dir}/ccd-import-definition.sh ${definition_output_file}
