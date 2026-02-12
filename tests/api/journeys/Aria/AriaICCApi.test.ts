@@ -64,7 +64,7 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
             eventData.section17Document.document_binary_url = uploadedDocUrl + '/binary';
         }
 
-        console.log(eventData);
+        //console.log(eventData);
         const response = await  ccdApiHelper.saveDataToDataStore(eventName, null, eventData);
         caseId = response.id;
         console.log('caseId>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<');
