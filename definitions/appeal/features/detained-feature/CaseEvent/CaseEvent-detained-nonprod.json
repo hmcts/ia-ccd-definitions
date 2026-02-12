@@ -2,9 +2,9 @@
   {
   "LiveFrom": "01/01/2018",
   "CaseTypeID": "Asylum",
-  "ID": "rollbackMigration",
-  "Name": "Rollback Migration",
-  "Description": "Rollback Data Migration",
+  "ID": "exampleEvent",
+  "Name": "Testing New Generation Mechanism",
+  "Description": "event created to verify new generation mechanism picks up json files from features subdirectories",
   "DisplayOrder": 99,
   "PreConditionState(s)": "*",
   "PostConditionState": "*",
