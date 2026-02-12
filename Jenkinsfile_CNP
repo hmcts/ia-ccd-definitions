@@ -212,6 +212,10 @@ pipeline {
 
 withPipeline(type, product, component) {
   echo "CHANGE_ID: ${CHANGE_ID}"
+
+  yarnBuilder.yarn('setup')
+  archiveCoreCaseDataDefinitions()
+
   enableHighLevelDataSetup()
   loadVaultSecrets(secrets)
 
