@@ -1,18 +1,20 @@
 #!/usr/bin/env bash
-
 set -eu
 
 definition_processor_version=latest
 
-definition_dir=${1}
-definition_output_file=${2}
-additionalParameters=${3-}
+definition_dir="${1}"
+definition_output_file="${2}"
+additionalParameters="${3-}"
 
-definition_input_dir=${definition_dir}
+definition_input_dir="${definition_dir}"
 
-if [[ ! -e ${definition_output_file} ]]; then
-   touch ${definition_output_file}
+mkdir -p "$(dirname "${definition_output_file}")"
+if [[ ! -e "${definition_output_file}" ]]; then
+  touch "${definition_output_file}"
 fi
+
+docker rm -f json2xlsx >/dev/null 2>&1 || true
 
 docker run --rm --name json2xlsx \
   -v "${definition_input_dir}:/tmp/ccd-definition" \

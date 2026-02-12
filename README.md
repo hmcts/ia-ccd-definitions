@@ -340,3 +340,9 @@ Prod gets base only
 Currently we are only detecting files in the same directory as the base files which we may want to modify.
 An example idea may be modifying the command style to get feature JSON files from a new directory
 so to include all feature specific JSONs in one place that our script can use.
+
+Implemented the above, in order to introduce new JSON files do so under the features directory following this pattern:
+
+- New directory under feature with *'featureName'-feature* format
+- New directory named after your Json file
+- Json file 
