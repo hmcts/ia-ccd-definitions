@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -eu
 
-# ---- paths ----
+# paths
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
-# ---- inputs ----
+# inputs
 env="${CCD_ENV:-dev}"
 features_csv="${CCD_FEATURES:-${CCD_FEATURE:-}}"
 
