@@ -5,15 +5,29 @@ import path from "path";
 import {APIResponse} from "playwright";
 import {stringify} from "node:querystring";
 import {AriaReferenceNumberHelper} from "./AriaReferenceNumberHelper";
+import {TokensHelper} from "./TokensHelper";
 
 export class CcdApiHelper {
-    constructor() {
 
+    private tokensHelper: TokensHelper;
+    private accessToken: string;
+    private s2sToken: string;
+    private uid: string;
+    private eventToken: string;
+
+    constructor() {
+        this.tokensHelper = new TokensHelper();
+    }
+
+    async getNonEventTokens(user){
+        this.accessToken = await this.tokensHelper.getAccessToken(user);
+        this.s2sToken = await this.tokensHelper.getS2SToken()
+        this.uid = await this.tokensHelper.getUserId(this.accessToken);
     }
 
 
-    async validatePageData(pageId:string, event: string, eventData:unknown, uid, eventToken, accessToken, s2sToken ) {
-        const url: string = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/validate?pageId=${pageId}`;
+    async validatePageData(pageId:string, eventName: string, eventData:unknown) {
+        const url: string = `${ccdDataStoreApiBaseUrl}/caseworkers/${this.uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/validate?pageId=${pageId}`;
         const apiRequestContext: APIRequestContext = await request.newContext();
 
         try {
@@ -21,17 +35,17 @@ export class CcdApiHelper {
                 headers: {
                     "Content-Type": "application/json",
                     Accept: "*/*",
-                    Authorization: `Bearer ${accessToken}`,
-                    ServiceAuthorization: s2sToken
+                    Authorization: `Bearer ${this.accessToken}`,
+                    ServiceAuthorization: this.s2sToken
                 },
                 data: {
                     data: eventData,
                     event: {
-                        id: event,
+                        id: eventName,
                         summary: "",
                         description: ""
                     },
-                    event_token: eventToken,
+                    event_token: this.eventToken,
                     ignore_warning: false
                 }
             });
@@ -51,49 +65,7 @@ export class CcdApiHelper {
         };
     };
 
-
-    async validatePageData2(pageId:string, caseData:unknown, uid, accessToken, s2sToken ) {
-        const url: string = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/validate?pageId=${pageId}`;
-        const apiRequestContext: APIRequestContext = await request.newContext();
-let test = {
-    headers: {
-        "Content-Type": "application/json",
-        Accept: "*/*",
-        Authorization: `Bearer ${accessToken}`,
-        ServiceAuthorization: s2sToken
-    },
-    data: caseData
-};
-
-console.log(test);
-        try {
-            const response = await apiRequestContext.post(url, {
-                    headers: {
-                        "Content-Type": "application/json",
-                        Accept: "*/*",
-                        Authorization: `Bearer ${accessToken}`,
-                        ServiceAuthorization: s2sToken
-                    },
-                data: caseData
-            });
-
-            if (!response.ok() && !(response.status() === 422)) {
-                throw new Error(
-                    `Failed to Validate the page data: ${response.status()} - ${await response.text()}. Ensure your VPN is connected or check your URL/SECRET.`
-                    );
-            }
-            return response;
-        } catch (error) {
-            throw new Error(
-                `An error occurred while trying to validate the page data: ${
-                    error instanceof Error ? error.message : error
-                }`
-            );
-        };
-    };
-
-
-    async uploadDocument(accessToken, s2sToken, documentName: string = 'TEST_DOCUMENT_1.pdf') {
+    async uploadDocument(documentName: string = 'TEST_DOCUMENT_1.pdf') {
         const apiRequestContext: APIRequestContext = await request.newContext();
         const file = path.resolve("./tests/documents", documentName);
         const document = fs.readFileSync(file);
@@ -102,8 +74,8 @@ console.log(test);
             headers: {
                 Accept: "*/*",
                 ContentType: "multipart/form-data",
-                Authorization: `Bearer ${accessToken}`,
-                ServiceAuthorization: s2sToken
+                Authorization: `Bearer ${this.accessToken}`,
+                ServiceAuthorization: this.s2sToken
             },
             multipart: {
                 files: {
@@ -120,7 +92,7 @@ console.log(test);
         return body._embedded.documents[0]._links.self.href;
     }
 
-    async getAriaReferenceNumber(event: string, uid, accessToken, eventToken, s2sToken) {
+    async getAriaReferenceNumber(eventName: string) {
         const maxRetries: number = 10;
         const ariaReferenceNumberHelper = new AriaReferenceNumberHelper();
         let ariaRefNumber = ariaReferenceNumberHelper.getValidAriaReferenceNumber();
@@ -129,7 +101,7 @@ console.log(test);
         {
             let eventData = { appealReferenceNumber: ariaRefNumber };
 
-            const response: APIResponse =  (await this.validatePageData(`${event}appealReferenceNumber`, event, eventData, uid, eventToken, accessToken, s2sToken));
+            const response: APIResponse =  (await this.validatePageData(`${eventName}appealReferenceNumber`, eventName, eventData));
 
             if (await response.status() === 200) {
                 console.log(`Aria reference number: ${ariaRefNumber} is valid and not assigned to an existing appeal.`);
@@ -149,12 +121,12 @@ console.log(test);
 
     }
 
-    async saveDataToDataStore(event:string, caseId, caseData:unknown, uid, accessToken, s2sToken ) {
+    async saveDataToDataStore(eventName:string, caseId, eventData:unknown,  ) {
         let url: string;
-        if (event === 'startAppeal') {
-            url = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases`;
+        if (eventName === 'startAppeal') {
+            url = `${ccdDataStoreApiBaseUrl}/caseworkers/${this.uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases`;
         } else {
-            url = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases/${caseId}/events`;
+            url = `${ccdDataStoreApiBaseUrl}/caseworkers/${this.uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases/${caseId}/events`;
         }
 
 
@@ -165,10 +137,16 @@ console.log(test);
                 headers: {
                     "Content-Type": "application/json",
                     Accept: "*/*",
-                    Authorization: `Bearer ${accessToken}`,
-                    ServiceAuthorization: s2sToken
+                    Authorization: `Bearer ${this.accessToken}`,
+                    ServiceAuthorization: this.s2sToken
                 },
-                data: caseData
+                data: {
+                    data:eventData,
+                    event:{"id": eventName,"summary":"","description":""},
+                    event_token:this.eventToken,
+                    ignore_warning:false,
+                    draft_id:null
+                }
             });
 
             if (!response.ok()) {
@@ -191,6 +169,10 @@ console.log(test);
                 }`
             );
         };
+    };
+
+    async startEvent(eventName: string, caseId: string){
+        this.eventToken = await this.tokensHelper.getEventToken(eventName, caseId, this.uid, this.accessToken, this.s2sToken);
     };
 
 }

@@ -127,6 +127,7 @@ export class TokensHelper {
 
 
     async getEventToken(event:string, caseId: string, uid: string, accessToken: string, s2sToken: string) {
+
         let url: string;
         if (caseId) {
             url = `${ccdDataStoreApiBaseUrl}/caseworkers/${uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases/${caseId}/event-triggers/${event}/token`;
