@@ -240,3 +240,76 @@ These legacy scripts are still available but will be deprecated in future releas
 - `bin/generate-perftest.sh`
 - `bin/generate-aat.sh`
 - `bin/generate-prod.sh`
+
+# Environment-based CCD Definition Filtering
+
+## Purpose
+
+This repository uses an environment-based filtering mechanism to include/exclude CCD JSON definition files at generation time.
+
+The goal is to control which features are available in each environment (e.g. preview/demo vs aat/prod), using filename conventions and optional overrides.
+
+---
+
+## How the mechanism works
+
+1. A generation script determines the current environment (for example from `CCD_ENV`).
+2. It maps environment → exclusion patterns (for example `*-prod.json` or `*-nonprod.json`).
+3. The exclusion patterns are passed to the definition processor as `-e` parameters.
+4. The processor generates the final `.xlsx` from JSON, skipping files that match exclusions.
+
+In short:
+
+- `generate-*` script chooses exclusions
+- `process-definition.sh` forwards exclusions
+- `json2xlsx` applies them during generation
+
+---
+
+## Naming convention
+
+To use this mechanism consistently, JSON files should follow these conventions:
+
+- `*-nonprod.json` → only for non-prod-like environments
+- `*-prod.json` → only for prod-like environments
+- environment-specific files can also be handled by folder layout (e.g. `env/<environment>/...`) depending on repository setup
+
+> Important: repo already selects env-specific files by folder copy (e.g. env-specific `UserProfile.json`), we may not need to exclude `UserProfile.json` globally.
+
+---
+
+## Default environment rules
+
+Example default mapping:
+
+- `prod`, `aat`, `staging`  
+  Exclude: `*-nonprod.json`
+
+- `preview`, `demo`, `perftest`, `ithc`, `dev`, `local`  
+  Exclude: `*-prod.json`
+
+If your repository requires additional exclusions (e.g. shuttered/unshuttered or feature-specific files), append those patterns in the same mapping logic.
+
+---
+
+## Override mechanism (for testing)
+
+To test custom combinations without changing script code, use an override env variable:
+
+```bash
+CCD_EXCLUDED_FILENAME_PATTERNS='*-prod.json,SomeFeature.json' CCD_ENV=prod bash -x bin/generate-excel.sh
+```
+## Usage
+
+Generate for preview: 
+```bash 
+CCD_ENV=preview bash -x bin/generate-excel.sh
+```
+Generate for prod:
+```bash 
+CCD_ENV=prod bash -x bin/generate-excel.sh
+```
+Generate with explicit override:
+```bash 
+CCD_ENV=prod CCD_EXCLUDED_FILENAME_PATTERNS='*-nonprod.json' bash -x bin/generate-excel.sh
+```
