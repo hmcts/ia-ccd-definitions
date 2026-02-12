@@ -162,7 +162,7 @@ pipeline {
       }
     }
 
-    stage('Generate CCD Definition for PR') {
+    stage('Generate CCD Definition for PR stage') {
       when {
         anyOf {
           branch 'PR-*'
@@ -172,7 +172,7 @@ pipeline {
       steps {
         script {
           //env.PR_NUMBER = "${CHANGE_ID}"
-          env.PR_NUMBER = "2620"
+          env.PR_NUMBER = 2620
           sh """
             set -e
             echo "Generating CCD definition for PR ${env.PR_NUMBER}"
@@ -190,24 +190,29 @@ pipeline {
       }
     }
 
-    // stage('Upload CCD Definition to PR Environment') {
-    //   when {
-    //     anyOf {
-    //       branch 'PR-*'
-    //       changeRequest()
-    //     }
-    //   }
-    //   steps {
-    //     script {
-    //       env.PR_NUMBER = "${CHANGE_ID}"
-    //       sh """
-    //         set -e
-    //         echo "Uploading CCD definition to PR ${CHANGE_ID} environment"
-    //         bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
-    //       """
-    //     }
-    //   }
-    // }
+     stage('Upload CCD Definition to PR Environment') {
+       when {
+         anyOf {
+           branch 'PR-*'
+           changeRequest()
+         }
+       }
+       steps {
+         script {
+           env.PR_NUMBER = "${CHANGE_ID}"
+//           sh """
+//             set -e
+//             echo "Uploading CCD definition to PR ${CHANGE_ID} environment"
+//             bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
+//           """
+           sh """
+             set -e
+             echo "Uploading CCD definition to PR ${CHANGE_ID} environment (2620)"
+             bin/utils/upload-ccd.sh -e preview -p 2620
+           """
+         }
+       }
+     }
   }
 }
 
