@@ -59,7 +59,7 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
 
     test('Create detained ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + ' ICC DRAFT Appeal',   async ({ page }) => {
         event = 'startAppeal';
-        legalOfficerAdminAccessToken = await tokensHelper.getAccessToken('', legalOfficerAdminCredentials.username, legalOfficerAdminCredentials.password);
+        legalOfficerAdminAccessToken = await tokensHelper.getAccessToken(legalOfficerAdminCredentials);
         legalOfficerAdminUid = await tokensHelper.getUserId(legalOfficerAdminAccessToken);
         legalOfficerAdminS2sToken = await tokensHelper.getS2SToken();
 
@@ -142,7 +142,7 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
 
     test('Submit: Request Respondent Evidence event',   async ({  }) => {
         event = 'requestRespondentEvidence';
-        legalOfficerAccessToken = await tokensHelper.getAccessToken('', legalOfficerCredentials.username, legalOfficerCredentials.password);
+        legalOfficerAccessToken = await tokensHelper.getAccessToken(legalOfficerCredentials);
         legalOfficerUid = await tokensHelper.getUserId(legalOfficerAccessToken);
         legalOfficerS2sToken = await tokensHelper.getS2SToken();
 
@@ -164,7 +164,7 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
 
     test('Submit: Upload Home Office Bundle event',   async ({  }) => {
         event = 'uploadHomeOfficeBundle';
-        homeOfficeOfficerAccessToken = await tokensHelper.getAccessToken('', homeOfficeOfficerCredentials.username, homeOfficeOfficerCredentials.password);
+        homeOfficeOfficerAccessToken = await tokensHelper.getAccessToken(homeOfficeOfficerCredentials);
         homeOfficeOfficerUid = await tokensHelper.getUserId(homeOfficeOfficerAccessToken);
         homeOfficeOfficerS2sToken = await tokensHelper.getS2SToken();
 
@@ -188,6 +188,25 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         }
 
         response = await  ccdApiHelper.saveDataToDataStore(event, caseId, dataToSubmit, homeOfficeOfficerUid, homeOfficeOfficerAccessToken, homeOfficeOfficerS2sToken);
+
+    });
+
+    test('Submit: Request Case Building event',   async ({  }) => {
+        event = 'requestCaseBuilding';
+        eventToken = await tokensHelper.getEventToken(event, caseId, legalOfficerUid, legalOfficerAccessToken, legalOfficerS2sToken);
+        eventData = await new LegalAdminDetained().generateRequestCaseBuildingData();
+
+        // validate the data before submitting
+        let response = await ccdApiHelper.validatePageData(event+event, event, eventData, legalOfficerUid, eventToken, legalOfficerAccessToken, legalOfficerS2sToken);
+        expect(await response.status(), `Validation failed for event: ${event}`).toEqual(200);
+        const dataToSubmit = {
+            data:eventData,
+            event:{"id": event,"summary":"","description":""},
+            event_token:eventToken,
+            ignore_warning:false
+        }
+
+        response = await  ccdApiHelper.saveDataToDataStore(event, caseId, dataToSubmit, legalOfficerUid, legalOfficerAccessToken, legalOfficerS2sToken);
 
     });
 

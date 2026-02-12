@@ -10,15 +10,20 @@ import {TOTP} from 'totp-generator';
 import fs from "node:fs";
 import { jwtDecode } from "jwt-decode";
 
+import NodeCache from 'node-cache';
+//Idam access token expires for every 8 hrs
+const accessTokenCache = new NodeCache({ stdTTL: 25200, checkperiod: 1800 });
+
+
 export class TokensHelper {
 
     constructor() {
     }
 
-    private async getTokenFromIdam(username: string, password: string) {
+    private async getTokenFromIdam(user) {
         const apiRequestContext: APIRequestContext = await request.newContext();
         try {
-            const response = await apiRequestContext.post(`${idamApiBaseUrl}/loginUser?username=${encodeURIComponent(username)}&password=${password}`, {
+            const response = await apiRequestContext.post(`${idamApiBaseUrl}/loginUser?username=${encodeURIComponent(user.username)}&password=${user.password}`, {
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
                     Accept: "application/json",
@@ -40,25 +45,21 @@ export class TokensHelper {
         };
     }
 
-    async getAccessToken(authFile: fs.PathOrFileDescriptor, username: string, password: string) {
-
-        // Use the storage state accessToken if one exists and it has not expired
-        try {
-            const sessionStorage = JSON.parse(fs.readFileSync(authFile, 'utf-8'));
-            const authCookie = sessionStorage.cookies.find(cookie => cookie.name == '__auth__');
-            let accessToken = authCookie.value;
-            // Check token has not expired
-            if ((jwtDecode(accessToken).exp * 1000) - Date.now() >= 0) {
-                console.log('Getting Access Token from Cache....');
+    async getAccessToken(user) {
+        console.log('User logged in', user.username);
+        if (accessTokenCache.get(user.username) != null) {
+            console.log('User access token coming from cache', user.username);
+        return accessTokenCache.get(user.username);
+        } else {
+            if (user.username && user.password) {
+                const accessToken = await this.getTokenFromIdam(user);
+                accessTokenCache.set(user.username, accessToken);
+                console.log('user access token coming from idam', user.username);
+                return accessToken;
             } else {
-                console.log('Getting Access Token from Idam....');
-                accessToken =  await this.getTokenFromIdam(username, password);
+                console.log('*******Missing user details. Cannot get access token******');
             }
-            return accessToken;
-        } catch {
-            console.log('Getting Access Token from Idam....');
-            return await this.getTokenFromIdam(username, password);
-        };
+        }
     }
 
     async getUserId(accessToken) {

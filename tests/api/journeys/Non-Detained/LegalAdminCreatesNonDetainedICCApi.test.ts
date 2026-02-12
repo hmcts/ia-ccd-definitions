@@ -44,7 +44,7 @@ test.describe('Legal Admin creates ' + (appellantInUK === 'Yes' ? 'Non-Detained,
         // Go to the starting url before each test.
         tokensHelper = new TokensHelper();
         ccdApiHelper = new CcdApiHelper();
-        accessToken = await tokensHelper.getAccessToken('', legalOfficerAdminCredentials.username, legalOfficerCredentials.password);
+        accessToken = await tokensHelper.getAccessToken('', legalOfficerAdminCredentials);
         uid = await tokensHelper.getUserId(accessToken);
         s2sToken = await tokensHelper.getS2SToken();
       });
