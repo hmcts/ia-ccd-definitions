@@ -124,7 +124,6 @@ pipeline {
   environment {
     ENVIRONMENT = "preview"
     NODE_TLS_REJECT_UNAUTHORIZED = "0"
-    CHANGE_ID = 2620
     PR_NUMBER = "${CHANGE_ID}"
     DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     CCD_DATA_STORE_URL = "https://ccd-data-store-api-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
@@ -216,7 +215,7 @@ pipeline {
              //
              set -e
              echo "Uploading CCD definition to PR ${CHANGE_ID} environment (2620)"
-             bin/utils/upload-ccd.sh -e preview -p 2620
+             bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
            """
          }
        }
