@@ -175,6 +175,7 @@ pipeline {
           sh """
             set -e
             echo "Generating CCD definition for PR ${env.PR_NUMBER}"
+            corepack yarn --version
             corepack yarn generate-preview
           """
         }
@@ -206,12 +207,12 @@ pipeline {
 //           """
            sh """
              // Use corepack prepare to get the correct Yarn version without system-wide installation
-             corepack prepare yarn@3.4.1 --activate
+             //corepack prepare yarn@3.4.1 --activate
              // Use corepack to run yarn commands
-             corepack yarn --version
+             //corepack yarn --version
              // Install dependencies first
-             corepack yarn install
-             corepack yarn setup
+             //corepack yarn install
+             //corepack yarn setup
              //
              set -e
              echo "Uploading CCD definition to PR ${CHANGE_ID} environment (2620)"
