@@ -124,6 +124,7 @@ pipeline {
   environment {
     ENVIRONMENT = "preview"
     NODE_TLS_REJECT_UNAUTHORIZED = "0"
+    CHANGE_ID = 2620
     PR_NUMBER = "${CHANGE_ID}"
     DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     CCD_DATA_STORE_URL = "https://ccd-data-store-api-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
@@ -171,8 +172,7 @@ pipeline {
       }
       steps {
         script {
-          //env.PR_NUMBER = "${CHANGE_ID}"
-          env.PR_NUMBER = 2620
+          env.PR_NUMBER = "${CHANGE_ID}"
           sh """
             set -e
             echo "Generating CCD definition for PR ${env.PR_NUMBER}"
