@@ -143,6 +143,24 @@ export class LegalAdminDetained {
       return data;
   }
 
+  // AIP only!
+  generateRecordRemissionDecisionData() {
+      data = {
+          amountRemitted: "10000",
+          amountLeftToPay: "4000",
+          remissionDecisionReason: "Partial Remission reason text",
+          remissionRejectedDatePlus14days: null,
+          remissionDecision: "partiallyApproved",
+          decisionHearingFeeOption: "decisionWithHearing",
+          feeWithHearing: "140",
+          feeWithoutHearing: null,
+          paymentStatus: "Payment pending",
+          appealType: typeOfAppeal
+      }
+
+      return data;
+  }
+
   generateMarkAsPaidData(){
       data = {
           paidAmount:"14000",
@@ -194,4 +212,18 @@ export class LegalAdminDetained {
       return data;
   }
 
+  generateBuildYourCaseData() {
+      data = {
+          uploadedLegalRepBuildCaseDocs: "- None",
+          caseArgumentDocument: {
+              document_url: "INJECTED_VALUE",
+              document_binary_url: "INJECTED_VALUE",
+              document_filename: "TEST DOCUMENT 4.pdf"
+          },
+          caseArgumentDescription: "Skeletal argument description text",
+          caseArgumentEvidence: []
+      }
+
+      return data;
+  }
 }
