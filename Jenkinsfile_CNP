@@ -206,12 +206,12 @@ pipeline {
 //           """
            sh """
              // Use corepack prepare to get the correct Yarn version without system-wide installation
-             sh 'corepack prepare yarn@3.4.1 --activate'
+             corepack prepare yarn@3.4.1 --activate
              // Use corepack to run yarn commands
-             sh 'corepack yarn --version'
+             corepack yarn --version
              // Install dependencies first
-             sh 'corepack yarn install'
-             sh 'corepack yarn setup'
+             corepack yarn install
+             corepack yarn setup
              //
              set -e
              echo "Uploading CCD definition to PR ${CHANGE_ID} environment (2620)"
