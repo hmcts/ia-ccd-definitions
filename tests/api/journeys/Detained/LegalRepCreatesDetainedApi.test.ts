@@ -61,7 +61,7 @@ test.describe('Legal Representative creates Detained Represented ' + typeOfAppea
         console.log('caseId>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<');
     });
 
-    test('Submit detained ' + ' DRAFT Appeal',   async ({  }) => {
+    test('Submit detained DRAFT Appeal',   async ({  }) => {
         eventName = 'submitAppeal';
 
         await ccdApiHelper.startEvent(eventName, caseId);
