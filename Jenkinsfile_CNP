@@ -218,11 +218,6 @@ pipeline {
       }
       steps {
         script {
-          sh """
-            set -e
-            echo "Generating CCD definitions for dummymst release"
-            ./bin/generate-preview.sh
-          """
 
           def releaseTag = "v${env.BUILD_NUMBER}"
           def releaseName = "CCD Definitions Release ${releaseTag}"
