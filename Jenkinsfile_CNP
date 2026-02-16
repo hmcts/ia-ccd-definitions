@@ -235,7 +235,7 @@ pipeline {
             sh """
               set -e
               git tag ${releaseTag}
-              git push https://\${GITHUB_API_TOKEN}@github.com/hmcts/ia-ccd-definitions.git ${releaseTag}
+              git push https://x-access-token:\${GITHUB_API_TOKEN}@github.com/hmcts/ia-ccd-definitions.git ${releaseTag}
 
               GITHUB_TOKEN=\${GITHUB_API_TOKEN} gh release create ${releaseTag} \
                 --repo hmcts/ia-ccd-definitions \
