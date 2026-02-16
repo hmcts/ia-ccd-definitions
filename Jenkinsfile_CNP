@@ -205,6 +205,8 @@ pipeline {
     //   }
     // }
 
+    sh "echo Current branch: ${env.BRANCH_NAME}"
+
     stage('Create GitHub Release') {
       when {
         expression { env.BRANCH_NAME == 'dummymst' }
