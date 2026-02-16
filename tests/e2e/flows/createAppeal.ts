@@ -531,14 +531,13 @@ export class CreateAppeal {
         // error pertaining that the ref number is already in use.  In this case we generate a new and validate again until we get
         // a ref number that has not been used already.
         // If the return message is SUCCESS then we can use this ref number in the page and continue the journey
-        const accessToken: string = await this.tokensHelper.getAccessToken(storageStateFile, legalOfficerAdminCredentials.username, legalOfficerCredentials.password);
-        const uid: string = await this.tokensHelper.getUserId(accessToken);
-        const s2sToken: string = await this.tokensHelper.getS2SToken();
-        const event: string = 'startAppeal';
-        const eventToken = await this.tokensHelper.getEventToken(event, null, uid, accessToken, s2sToken);
 
-        let ariaRefNumber = await this.ccdApiHelper.getAriaReferenceNumber(event, uid, accessToken, eventToken, s2sToken);
+        const eventName: string = 'startAppeal';
 
+        await this.ccdApiHelper.getNonEventTokens(legalOfficerAdminCredentials);
+        await this.ccdApiHelper.startEvent(eventName, null);
+
+        let ariaRefNumber: string = await this.ccdApiHelper.getAriaReferenceNumber(eventName);
         await this.page.fill('#appealReferenceNumber', ariaRefNumber);
         await this.buttonHelper.continueButton.click();
     }
