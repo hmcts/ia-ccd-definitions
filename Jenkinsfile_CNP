@@ -131,6 +131,7 @@ pipeline {
     stage('Setup') {
       steps {
         script {
+          sh 'echo "Token length: ${#GITHUB_API_TOKEN}"'
           // Use corepack prepare to get the correct Yarn version without system-wide installation
           sh 'corepack prepare yarn@3.4.1 --activate'
           // Use corepack to run yarn commands
