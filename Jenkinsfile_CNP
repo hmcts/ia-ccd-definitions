@@ -207,7 +207,7 @@ pipeline {
 
     stage('Create GitHub Release') {
       when {
-        branch 'dummymst'
+        expression { env.BRANCH_NAME == 'dummymst' }
       }
       steps {
         script {
