@@ -220,24 +220,30 @@ pipeline {
       }
       steps {
         script {
-
           def releaseTag = "v${env.BUILD_NUMBER}"
           def releaseName = "CCD Definitions Release ${releaseTag}"
           def xlsxFile = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-preview.xlsx"
 
           echo "Creating GitHub Release: ${releaseName}"
 
-          sh """
-            set -e
-            git tag ${releaseTag}
-            git push https://\${GITHUB_API_TOKEN}@github.com/hmcts/ia-ccd-definitions.git ${releaseTag}
+          azureKeyVault(
+            keyVaultURL: "https://ia-aat.vault.azure.net",
+            secrets: [
+              secret('github-api-token', 'GITHUB_API_TOKEN')
+            ]
+          ) {
+            sh """
+              set -e
+              git tag ${releaseTag}
+              git push https://\${GITHUB_API_TOKEN}@github.com/hmcts/ia-ccd-definitions.git ${releaseTag}
 
-            GITHUB_TOKEN=\${GITHUB_API_TOKEN} gh release create ${releaseTag} \
-              --repo hmcts/ia-ccd-definitions \
-              --title "${releaseName}" \
-              --notes "CCD definitions generated from dummymst branch (build #${env.BUILD_NUMBER})" \
-              ${xlsxFile}
-          """
+              GITHUB_TOKEN=\${GITHUB_API_TOKEN} gh release create ${releaseTag} \
+                --repo hmcts/ia-ccd-definitions \
+                --title "${releaseName}" \
+                --notes "CCD definitions generated from dummymst branch (build #${env.BUILD_NUMBER})" \
+                ${xlsxFile}
+            """
+          }
         }
       }
     }
