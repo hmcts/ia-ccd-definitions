@@ -225,14 +225,17 @@ pipeline {
 
           echo "Creating GitHub Release: ${releaseName}"
 
-          withCredentials([usernamePassword(credentialsId: 'jenkins-github-hmcts-api-token', usernameVariable: 'GH_USER', passwordVariable: 'GH_TOKEN')]) {
+          def credentialsId = env.GIT_CREDENTIALS_ID
+
+          withCredentials([
+            gitUsernamePassword(credentialsId: credentialsId, gitToolName: 'Default')
+          ]) {
             sh """
               set -e
               git tag ${releaseTag}
-              git push https://${GH_USER}:${GH_TOKEN}@github.com/hmcts/ia-ccd-definitions.git ${releaseTag}
+              git push origin ${releaseTag}
 
-              GITHUB_TOKEN=${GH_TOKEN} gh release create ${releaseTag} \
-                --repo hmcts/ia-ccd-definitions \
+              gh release create ${releaseTag} \
                 --title "${releaseName}" \
                 --notes "CCD definitions generated from dummymst branch (build #${env.BUILD_NUMBER})" \
                 ${xlsxFile}
