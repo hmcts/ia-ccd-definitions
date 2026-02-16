@@ -204,5 +204,39 @@ pipeline {
     //     }
     //   }
     // }
+
+    stage('Create GitHub Release') {
+      when {
+        branch 'dummymst'
+      }
+      steps {
+        script {
+          sh """
+            set -e
+            echo "Generating CCD definitions for dummymst release"
+            ./bin/generate-preview.sh
+          """
+
+          def releaseTag = "v${env.BUILD_NUMBER}"
+          def releaseName = "CCD Definitions Release ${releaseTag}"
+          def xlsxFile = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-preview.xlsx"
+
+          echo "Creating GitHub Release: ${releaseName}"
+
+          withCredentials([string(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
+            sh """
+              set -e
+              git tag ${releaseTag}
+              git push origin ${releaseTag}
+
+              gh release create ${releaseTag} \
+                --title "${releaseName}" \
+                --notes "CCD definitions generated from dummymst branch (build #${env.BUILD_NUMBER})" \
+                ${xlsxFile}
+            """
+          }
+        }
+      }
+    }
   }
 } 
