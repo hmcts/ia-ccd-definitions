@@ -59,7 +59,8 @@ def secrets = [
     secret('test-law-firm-a-username', 'TEST_LAW_FIRM_A_USERNAME'),
     secret('test-law-firm-a-password', 'TEST_LAW_FIRM_A_PASSWORD'),
     secret('test-adminofficer-username', 'TEST_ADMINOFFICER_USERNAME'),
-    secret('test-adminofficer-password', 'TEST_ADMINOFFICER_PASSWORD')
+    secret('test-adminofficer-password', 'TEST_ADMINOFFICER_PASSWORD'),
+    secret('github-api-token', 'GITHUB_API_TOKEN')
   ]
 ]
 
@@ -225,23 +226,17 @@ pipeline {
 
           echo "Creating GitHub Release: ${releaseName}"
 
-          def gitCredentialsId = env.GIT_CREDENTIALS_ID
+          sh """
+            set -e
+            git tag ${releaseTag}
+            git push https://\${GITHUB_API_TOKEN}@github.com/hmcts/ia-ccd-definitions.git ${releaseTag}
 
-          withCredentials([
-            usernamePassword(credentialsId: gitCredentialsId, usernameVariable: 'GIT_USER', passwordVariable: 'GIT_TOKEN')
-          ]) {
-            sh """
-              set -e
-              git tag ${releaseTag}
-              git push https://${GIT_USER}:${GIT_TOKEN}@github.com/hmcts/ia-ccd-definitions.git ${releaseTag}
-
-              GITHUB_TOKEN=${GIT_TOKEN} gh release create ${releaseTag} \
-                --repo hmcts/ia-ccd-definitions \
-                --title "${releaseName}" \
-                --notes "CCD definitions generated from dummymst branch (build #${env.BUILD_NUMBER})" \
-                ${xlsxFile}
-            """
-          }
+            GITHUB_TOKEN=\${GITHUB_API_TOKEN} gh release create ${releaseTag} \
+              --repo hmcts/ia-ccd-definitions \
+              --title "${releaseName}" \
+              --notes "CCD definitions generated from dummymst branch (build #${env.BUILD_NUMBER})" \
+              ${xlsxFile}
+          """
         }
       }
     }
