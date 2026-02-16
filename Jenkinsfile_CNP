@@ -205,7 +205,11 @@ pipeline {
     //   }
     // }
 
-    sh "echo Current branch: ${env.BRANCH_NAME}"
+    stage('Debug Branch Name') {
+      steps {
+        sh "echo Current branch: ${env.BRANCH_NAME}"
+      }
+    }
 
     stage('Create GitHub Release') {
       when {
