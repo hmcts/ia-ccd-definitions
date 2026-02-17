@@ -92,7 +92,7 @@ echo "Authorization serviceToken obtained"
 
 echo "Uploading ${FILENAME} to ${CCD_DEFINITION_STORE_API_BASE_URL}"
 
-uploadResponse=$(curl --insecure --silent -w "\n%{http_code}" --show-error -X POST \
+uploadResponse=$(curl --insecure --verbose --silent -w "\n%{http_code}" --show-error -X POST \
   ${CCD_DEFINITION_STORE_API_BASE_URL}/import \
   -H "Authorization: Bearer ${userToken}" \
   -H "ServiceAuthorization: Bearer ${serviceToken}" \
