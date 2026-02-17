@@ -84,6 +84,9 @@ else
   serviceToken=$(${dir}/idam-service-token-aat.sh)
 fi
 
+echo "userToken: ${userToken}"
+echo "serviceToken: ${serviceToken}"
+
 echo "Authorization userToken obtained"
 echo "Authorization serviceToken obtained"
 
