@@ -18,8 +18,6 @@ CLIENT_ID="ccd_admin"
 CLIENT_SECRET=${ADMIN_WEB_IDAM_SECRET}
 SCOPE="openid%20profile%20roles"
 
-az login --identity
-
 curl --silent --show-error \
     -H "Content-Type: application/x-www-form-urlencoded" \
     -XPOST "${IDAM_API_BASE_URL}/o/token?grant_type=password&redirect_uri=${REDIRECT_URI}&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&username=${USERNAME}&password=${PASSWORD}&scope=${SCOPE}" -d "" | jq -r .access_token
