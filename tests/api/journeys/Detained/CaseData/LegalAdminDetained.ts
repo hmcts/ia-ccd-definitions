@@ -226,4 +226,74 @@ export class LegalAdminDetained {
 
       return data;
   }
+
+  generateRespondentReviewData() {
+      data = {
+          sendDirectionExplanation: "By the date below you must review the appellant’s explanation of case (AEC) and bundle.\n\nThe review must comply with (i) Rule 24A (3) of the Tribunal Procedure Rules 2014 and (ii) the Practice Direction Part 2, section 2.1 (e), Part 3.\n\nSpecifically, the review must:\n\n- be meaningful and pragmatically address any evidence uploaded by the appellant subsequently to the decision under appeal.\n- explain whether you agree that the schedule of disputed issues is correct. If not, the review must set out the correct list of disputed issues, including whether there are any further issues that the respondent wishes to raise.\n- state whether you oppose or accept the appellant’s position on each issue and why.\n- cross-reference your submissions to paragraphs in the decision under appeal, pages in the respondent’s bundle, any country information evidence schedule, and/or any additional evidence relied upon.\n- specify which, if any, witnesses you intend to cross-examine and if you do not intend to cross-examine a witness, outline any objections to that witness’s statement being read by a judge.\n- address whether the appeal should be allowed on any ground if the appellant and/or their key witnesses are found to be credible according to the applicable standard of proof.\n- identify whether you are prepared to withdraw the decision (or part of it).\n- state whether the appeal can be resolved without a hearing.\n- not exceed 6 pages unless reasons are submitted in an accompanying application.\n- not contain standard or pro-forma paragraphs.\n- provide the name of the author of the review and the date.\n\nParties must ensure they conduct proceedings with procedural rigour.\n\nThe Tribunal will not overlook breaches of the requirements of the Procedure Rules, Practice Statement or Practice Direction, nor failures to comply with directions issued by the Tribunal. Parties are reminded of the possible sanctions for non-compliance set out in paragraph 5.3 of the Practice Direction.",
+          sendDirectionParties: "respondent",
+          sendDirectionDateDue: todayPlusSevenDays.year().toString() + '-' + (todayPlusSevenDays.month() + 1).toString().padStart(2,'0') + '-' + (todayPlusSevenDays.date().toString().padStart(2,'0'))
+      }
+
+      return data;
+  }
+
+  generateUploadTheAppealResponseData(){
+      data = {
+          uploadedHomeOfficeAppealResponseDocs: "- None",
+          homeOfficeAppealResponseDocument: {
+              document_url: "INJECTED_VALUE",
+              document_binary_url: "INJECT_VALUE",
+              document_filename: "TEST DOCUMENT 4.pdf",
+          },
+          homeOfficeAppealResponseDescription: "Appeal Response document test description",
+          homeOfficeAppealResponseEvidence: []
+      }
+
+      return data;
+  }
+
+  generateForceCaseHearingsReqsData() {
+      data = {
+          reasonToForceCaseToSubmitHearingRequirements: "Force Case hearings req test description"
+      }
+
+      return data;
+
+  }
+
+  generateDraftHearingRequirementsData() {
+      data = {
+          appealOutOfCountry:"No",
+          isAppellantAttendingTheHearing: "Yes",
+          isAppellantGivingOralEvidence: "Yes",
+          isWitnessesAttending: "No",
+          isEvidenceFromOutsideUkInCountry: "No",
+          isInterpreterServicesNeeded: "Yes",
+          appellantInterpreterLanguageCategory: ["spokenLanguageInterpreter"],
+          appellantInterpreterSpokenLanguage: {
+              languageRefData: {
+                  value: {
+                      code: "spa",
+                      label: "Spanish"
+                  }
+              },
+              languageManualEntry: []
+          },
+          isHearingRoomNeeded: "No",
+          isHearingLoopNeeded: "No",
+          isOutOfCountryEnabled: "Yes",
+          remoteVideoCall: "No",
+          physicalOrMentalHealthIssues: "No",
+          pastExperiences: "No",
+          multimediaEvidence: "No",
+          singleSexCourt: "No",
+          inCameraCourt: "No",
+          additionalRequests: "No",
+          datesToAvoidYesNo: "No",
+          hearingDateRangeDescription: "Only include dates between 2 Mar 2026 and 11 May 2026."
+      }
+
+      return data;
+  }
+
 }
