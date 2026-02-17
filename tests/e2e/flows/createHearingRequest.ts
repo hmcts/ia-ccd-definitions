@@ -1,5 +1,5 @@
 import { Page } from "@playwright/test";
-import { ButtonHelper } from '../helpers/ButtonHelper';
+import { ButtonHelper } from '../../helpers/ButtonHelper';
 
 
 export class CreateHearingRequest {

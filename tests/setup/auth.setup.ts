@@ -4,7 +4,7 @@ import {
     legalOfficerAdminCredentials,
     legalOfficerCredentials,
     listingOfficerCredentials
-} from '../e2e/iacConfig';
+} from '../iacConfig';
 import {IdamPage} from '../e2e/page-objects/pages/idam.po';
 
 let idamPage: IdamPage;

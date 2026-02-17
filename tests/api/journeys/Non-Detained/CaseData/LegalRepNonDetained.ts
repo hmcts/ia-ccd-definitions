@@ -1,5 +1,5 @@
 import moment from "moment";
-import {appellant, legalRepresentative} from "../../../../e2e/iacConfig";
+import {appellant, legalRepresentative} from "../../../../iacConfig";
 const yesterday = moment().subtract(1, 'days');
 const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
 const outOfTime: string = !['false'].includes(process.env.IN_TIME) ? 'No' : 'Yes';

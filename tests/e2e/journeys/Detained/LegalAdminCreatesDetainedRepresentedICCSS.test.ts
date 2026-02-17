@@ -1,10 +1,10 @@
 import {expect, test} from '@playwright/test';
 import {
     envUrl, runningEnv,
-} from '../../iacConfig';
-import {PageHelper} from '../../helpers/PageHelper';
-import {ButtonHelper} from '../../helpers/ButtonHelper';
-import {ValidationHelper} from '../../helpers/ValidationHelper'
+} from '../../../iacConfig';
+import {PageHelper} from '../../../helpers/PageHelper';
+import {ButtonHelper} from '../../../helpers/ButtonHelper';
+import {ValidationHelper} from '../../../helpers/ValidationHelper'
 import {CreateAppeal} from '../../flows/createAppeal';
 import {CreateCasePage} from '../../page-objects/pages/createCase_page';
 import {SubmitYourAppeal} from "../../flows/events/submitYourAppeal";
@@ -34,7 +34,7 @@ import {ApplyForPermissionToAppeal} from "../../flows/events/applyForPermissionT
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 import {SendToPreHearing} from "../../flows/events/sendToPreHearing";
 import {TurnOnNotifications} from "../../flows/events/turnOnNotifications";
-import {TabsHelper} from "../../helpers/TabsHelper";
+import {TabsHelper} from "../../../helpers/TabsHelper";
 import {CreateHearingRequest} from "../../flows/createHearingRequest";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);

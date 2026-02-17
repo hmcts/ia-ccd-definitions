@@ -1,5 +1,5 @@
 import moment from "moment";
-import {appellant, legalRepresentative} from "../../../../e2e/iacConfig";
+import {appellant, legalRepresentative} from "../../../../iacConfig";
 import {detentionFacility} from "../../../../fixtures/detentionFacilities";
 
 const yesterday = moment().subtract(1, 'days');
@@ -17,6 +17,7 @@ const detentionPostcode : string = detentionLocation === 'prison' ? detentionFac
 const detentionNamekey: string = (detentionLocation === 'prison' ? 'prison' : (detentionLocation === 'immigrationRemovalCentre' ? 'irc' : 'otherDetentionFacility')) + 'Name';
 const detentionName : string = detentionLocation === 'prison' ? detentionFacility.prison.shortName : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.shortName : detentionFacility.other.name);
 const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
+const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
 
 let data;
 
@@ -137,8 +138,7 @@ export class LegalAdminDetained {
           helpWithFeesOption: null,
           appealType: typeOfAppeal,
           feeAmountGbp: "14000",
-          appellantInDetention: "Yes",
-          isNotificationTurnedOff: "Yes"
+          appellantInDetention: "Yes"
       };
       return data;
   }
@@ -295,5 +295,126 @@ export class LegalAdminDetained {
 
       return data;
   }
+
+  generateReviewHearingRequirementsData() {
+      data = {
+          remoteVideoCall: "No",
+          remoteVideoCallDescription: null,
+          isRemoteHearingAllowed: "Refused",
+          remoteVideoCallTribunalResponse: "Refusal of remote hearing test text",
+          physicalOrMentalHealthIssues: "No",
+          physicalOrMentalHealthIssuesDescription: null,
+          multimediaEvidence: "No",
+          multimediaEvidenceDescription: null,
+          singleSexCourt: "No",
+          singleSexCourtType: null,
+          singleSexCourtTypeDescription: null,
+          inCameraCourt: "No",
+          inCameraCourtDescription: null,
+          additionalRequests: "No",
+          additionalRequestsDescription: null,
+          hearingChannel: {
+              value: {
+                  code: "INTER",
+                  label: "In Person"
+              }
+          },
+          isAppealSuitableToFloat: "No",
+          isAdditionalInstructionAllowed: "No"
+      }
+
+      return data;
+  }
+
+  generateListTheCaseData() {
+      data = {
+          isIntegrated: "Yes",
+          ariaListingReference: "INJECTED_VALUE",
+          isCaseUsingLocationRefData: "Yes",
+          listCaseHearingCentreAddress: null,
+          listingLocation: {
+              value: {
+                  code: "366559",
+                  label: "Atlantic Quay - Glasgow"
+              }
+          },
+          isRemoteHearing: "No",
+          listingLength: {
+              hours: "1",
+              minutes: "0"
+          },
+          listCaseHearingDate: todayPlusSevenDays.year().toString() + '-' + (todayPlusSevenDays.month() + 1).toString().padStart(2,'0') + '-' + (todayPlusSevenDays.date().toString().padStart(2,'0')) + "T10:00:00.000"
+      }
+
+      return data;
+  }
+
+  generateCreateCaseSummaryData() {
+      data = {
+          caseSummaryDocument: {
+              document_url: "INJECTED_VALUE",
+              document_binary_url: "INJECTED_VALUE",
+              document_filename: "TEST DOCUMENT 3.pdf"
+          },
+          caseSummaryDescription: "Create Case Summary description test text"
+      }
+
+      return data;
+  }
+
+  generateHearingBundleData() {
+      data = {}
+
+      return data;
+  }
+
+  generateStartDecisionAndReasonsData() {
+      data = {
+          isIntegrated: "Yes",
+          listCaseHearingCentre: "glasgowTribunalsCentre",
+          autoHearingRequestEnabled: "No",
+          caseIntroductionDescription: "Brief introduction to case description text",
+          appellantCaseSummaryDescription: "Appellant Case Summary description text",
+          immigrationHistoryAgreement: "Yes",
+          agreedImmigrationHistoryDescription: null,
+          scheduleOfIssuesAgreement: "Yes",
+          appellantsAgreedScheduleOfIssuesDescription: null
+      }
+
+      return data;
+  }
+
+  generatePrepareDecisionAndReasonsData() {
+      data = {
+          anonymityOrder: "No",
+          appellantRepresentative: null,
+          respondentRepresentative: null
+      }
+
+      return data;
+  }
+
+    generateCompleteDecisionAndReasonsData() {
+        data = {
+            isDecisionAllowed: judgeDecision,
+            finalDecisionAndReasonsDocument: {
+                document_url: "INJECTED_VALUE",
+                document_binary_url: "INJECTED_VALUE",
+                document_filename: "TEST DOCUMENT 2.pdf"
+            },
+            isDocumentSignedToday: {
+                values: [
+                    "isDocumentSignedToday"
+                ]
+            },
+            isFeeConsistentWithDecision: {
+                values: [
+                    "isFeeConsistentWithDecision"
+                ]
+            }
+        }
+
+        return data;
+    }
 
 }

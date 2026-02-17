@@ -1,5 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-import {envUrl} from "./tests/e2e/iacConfig";
+import {envUrl} from "./tests/iacConfig";
 
 module.exports = defineConfig({
   //globalSetup: './global-setup',

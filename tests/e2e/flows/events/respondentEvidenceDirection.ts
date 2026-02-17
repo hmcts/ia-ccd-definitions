@@ -1,7 +1,7 @@
 import { Page } from "@playwright/test";
-import { PageHelper } from '../../helpers/PageHelper';
-import { ValidationHelper} from "../../helpers/ValidationHelper";
-import { ButtonHelper} from "../../helpers/ButtonHelper";
+import { PageHelper } from '../../../helpers/PageHelper';
+import { ValidationHelper} from "../../../helpers/ValidationHelper";
+import { ButtonHelper} from "../../../helpers/ButtonHelper";
 
 export class RespondentEvidenceDirection {
     private buttonHelper: ButtonHelper;

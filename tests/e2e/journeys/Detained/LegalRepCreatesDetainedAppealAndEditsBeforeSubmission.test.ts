@@ -2,14 +2,14 @@ import { test } from '@playwright/test';
 import {
     envUrl,
     legalRepresentativeCredentials,
-} from '../../iacConfig';
+} from '../../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../../flows/createAppeal';
-import { LinkHelper } from '../../helpers/LinkHelper';
-import { PageHelper } from '../../helpers/PageHelper';
+import { LinkHelper } from '../../../helpers/LinkHelper';
+import { PageHelper } from '../../../helpers/PageHelper';
 import { EditAppeal } from '../../flows/events/editAppeal';
-import {ButtonHelper} from "../../helpers/ButtonHelper";
+import {ButtonHelper} from "../../../helpers/ButtonHelper";
 import {CreateServiceRequest} from "../../flows/events/createServiceRequest";
 import {PaymentPage} from "../../page-objects/pages/payment_page";
 import {SubmitYourAppeal} from "../../flows/events/submitYourAppeal";

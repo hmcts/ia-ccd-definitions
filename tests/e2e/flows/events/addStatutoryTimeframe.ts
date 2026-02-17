@@ -1,6 +1,6 @@
 import { expect, Page } from "playwright/test";
-import { PageHelper } from "../../helpers/PageHelper";
-import { ButtonHelper } from "../../helpers/ButtonHelper";
+import { PageHelper } from "../../../helpers/PageHelper";
+import { ButtonHelper } from "../../../helpers/ButtonHelper";
 
 export const Add24WeeksStatutoryTimeframe = async (page: Page, reason: string) => {
          const buttonHelper = new ButtonHelper(page);

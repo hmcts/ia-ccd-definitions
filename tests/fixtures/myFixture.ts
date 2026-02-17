@@ -1,9 +1,9 @@
 import { test as base } from '@playwright/test';
 import {IdamPage} from "../e2e/page-objects/pages/idam.po";
-import {envUrl, homeOfficeOfficerCredentials} from "../e2e/iacConfig";
-import {CaseIdHelper} from "../e2e/helpers/CaseIdHelper";
+import {envUrl, homeOfficeOfficerCredentials} from "../iacConfig";
+import {CaseIdHelper} from "../helpers/CaseIdHelper";
 import {HomeOfficeBundle} from "../e2e/flows/events/homeOfficeBundle";
-import {LinkHelper} from "../e2e/helpers/LinkHelper";
+import {LinkHelper} from "../helpers/LinkHelper";
 
 type myFixtures = {
     testUser

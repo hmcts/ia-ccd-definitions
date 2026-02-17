@@ -5,10 +5,10 @@ import {
     homeOfficeOfficerCredentials,
     listingOfficerCredentials,
     judgeCredentials, legalOfficerAdminCredentials, legalOfficerCredentials,
-} from '../../iacConfig';
+} from '../../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
-import { LinkHelper } from '../../helpers/LinkHelper';
-import { PageHelper } from '../../helpers/PageHelper';
+import { LinkHelper } from '../../../helpers/LinkHelper';
+import { PageHelper } from '../../../helpers/PageHelper';
 import { CreateAppeal } from '../../flows/createAppeal';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { SubmitYourAppeal } from '../../flows/events/submitYourAppeal';
@@ -29,7 +29,7 @@ import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndRe
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
 import {ListTheCase} from "../../flows/events/listTheCase";
 import {imageLocators} from "../../../fixtures/imageLocators";
-import {ValidationHelper} from "../../helpers/ValidationHelper";
+import {ValidationHelper} from "../../../helpers/ValidationHelper";
 import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 import { Add24WeeksStatutoryTimeframe, Add24WeeksStatutoryTimeframeIsDisabled, Remove24WeeksStatutoryTimeframe } from '../../flows/events/addStatutoryTimeframe';

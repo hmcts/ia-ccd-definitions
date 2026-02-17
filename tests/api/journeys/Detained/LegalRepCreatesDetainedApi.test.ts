@@ -2,8 +2,8 @@ import {expect, test} from '@playwright/test';
 import {
     envUrl, legalRepresentativeCredentials, homeOfficeOfficerCredentials, judgeCredentials,
     legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials, runningEnv, legalRepresentative,
-} from '../../../e2e/iacConfig';
-import {CcdApiHelper} from "../../../e2e/helpers/CcdApiHelper";
+} from '../../../iacConfig';
+import {CcdApiHelper} from "../../../helpers/CcdApiHelper";
 import {LegalRepDetained} from "./CaseData/LegalRepDetained";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);

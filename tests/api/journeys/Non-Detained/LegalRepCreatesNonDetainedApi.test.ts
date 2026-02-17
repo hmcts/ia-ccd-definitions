@@ -8,9 +8,9 @@ import {
     legalRepresentativeCredentials,
     listingOfficerCredentials,
     runningEnv,
-} from '../../../e2e/iacConfig';
-import {TokensHelper} from "../../../e2e/helpers/TokensHelper";
-import {CcdApiHelper} from "../../../e2e/helpers/CcdApiHelper";
+} from '../../../iacConfig';
+import {TokensHelper} from "../../../helpers/TokensHelper";
+import {CcdApiHelper} from "../../../helpers/CcdApiHelper";
 import {LegalRepNonDetained} from "./CaseData/LegalRepNonDetained";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);

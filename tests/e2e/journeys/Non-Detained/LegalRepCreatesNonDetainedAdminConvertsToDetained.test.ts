@@ -2,11 +2,11 @@ import { test } from '@playwright/test';
 import {
     envUrl,
     legalRepresentativeCredentials, listingOfficerCredentials,
-} from '../../iacConfig';
+} from '../../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
-import { LinkHelper } from '../../helpers/LinkHelper';
-import { PageHelper } from '../../helpers/PageHelper';
-import { ValidationHelper } from '../../helpers/ValidationHelper';
+import { LinkHelper } from '../../../helpers/LinkHelper';
+import { PageHelper } from '../../../helpers/PageHelper';
+import { ValidationHelper } from '../../../helpers/ValidationHelper';
 import { UpdateDetentionLocation } from '../../flows/events/updateDetentionLocation';
 import { CreateAppeal } from '../../flows/createAppeal';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';

@@ -2,12 +2,12 @@ import {expect, test} from '@playwright/test';
 import {
     envUrl, homeOfficeOfficerCredentials, judgeCredentials,
     legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials, runningEnv,
-} from '../../iacConfig';
+} from '../../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
-import {LinkHelper} from '../../helpers/LinkHelper';
-import {PageHelper} from '../../helpers/PageHelper';
-import {ButtonHelper} from '../../helpers/ButtonHelper';
-import {ValidationHelper} from '../../helpers/ValidationHelper'
+import {LinkHelper} from '../../../helpers/LinkHelper';
+import {PageHelper} from '../../../helpers/PageHelper';
+import {ButtonHelper} from '../../../helpers/ButtonHelper';
+import {ValidationHelper} from '../../../helpers/ValidationHelper'
 import {CreateAppeal} from '../../flows/createAppeal';
 import {CreateCasePage} from '../../page-objects/pages/createCase_page';
 import {SubmitYourAppeal} from "../../flows/events/submitYourAppeal";

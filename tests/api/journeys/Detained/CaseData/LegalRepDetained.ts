@@ -1,5 +1,5 @@
 import moment from "moment";
-import {appellant, legalRepresentative} from "../../../../e2e/iacConfig";
+import {appellant, legalRepresentative} from "../../../../iacConfig";
 import {detentionFacility} from "../../../../fixtures/detentionFacilities";
 
 const yesterday = moment().subtract(1, 'days');

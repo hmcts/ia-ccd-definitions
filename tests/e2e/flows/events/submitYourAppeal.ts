@@ -1,7 +1,7 @@
 import {Page, expect} from "@playwright/test";
-import { PageHelper } from '../../helpers/PageHelper';
-import { ButtonHelper } from '../../helpers/ButtonHelper';
-import { ValidationHelper } from '../../helpers/ValidationHelper';
+import { PageHelper } from '../../../helpers/PageHelper';
+import { ButtonHelper } from '../../../helpers/ButtonHelper';
+import { ValidationHelper } from '../../../helpers/ValidationHelper';
 
 const outOfTimeImageLocator: string = '//*[@id="confirmation-body"]/ccd-markdown/div/markdown/p[1]/img';
 

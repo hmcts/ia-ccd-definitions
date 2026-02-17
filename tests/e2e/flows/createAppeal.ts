@@ -7,16 +7,11 @@ import {
     runningEnv,
     outOfCountryAddress,
     legalOfficerAdminCredentials, legalOfficerCredentials
-} from '../iacConfig';
+} from '../../iacConfig';
 import { detentionFacility } from '../../fixtures/detentionFacilities';
-import {ariaReferenceNumber} from "../../fixtures/ariaReferenceNumber";
-import { ButtonHelper } from '../helpers/ButtonHelper';
-import {TokensHelper} from "../helpers/TokensHelper";
-import {CcdApiHelper} from "../helpers/CcdApiHelper";
-import {APIResponse} from "playwright";
-
-//const outOfTimedImageLocator: string = '//*[@id="confirmation-body"]/ccd-markdown/div/markdown/p[1]/img';
-
+import { ButtonHelper } from '../../helpers/ButtonHelper';
+import {TokensHelper} from "../../helpers/TokensHelper";
+import {CcdApiHelper} from "../../helpers/CcdApiHelper";
 
 export class CreateAppeal {
     private buttonHelper: ButtonHelper;

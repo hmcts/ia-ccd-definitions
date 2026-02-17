@@ -3,13 +3,13 @@ import {
     envUrl,
     legalRepresentativeCredentials,
     listingOfficerCredentials
-} from '../../iacConfig';
+} from '../../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../../flows/createAppeal';
-import { LinkHelper } from '../../helpers/LinkHelper';
-import { PageHelper } from '../../helpers/PageHelper';
-import { ValidationHelper } from '../../helpers/ValidationHelper';
+import { LinkHelper } from '../../../helpers/LinkHelper';
+import { PageHelper } from '../../../helpers/PageHelper';
+import { ValidationHelper } from '../../../helpers/ValidationHelper';
 import { SubmitYourAppeal } from '../../flows/events/submitYourAppeal';
 import { CreateServiceRequest } from '../../flows/events/createServiceRequest';
 import { PaymentPage } from '../../page-objects/pages/payment_page';

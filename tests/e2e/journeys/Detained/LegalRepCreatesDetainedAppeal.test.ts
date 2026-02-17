@@ -6,13 +6,13 @@ import {
     homeOfficeOfficerCredentials,
     legalOfficerAdminCredentials,
     listingOfficerCredentials, judgeCredentials
-} from '../../iacConfig';
+} from '../../../iacConfig';
 import {IdamPage} from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../../flows/createAppeal';
-import { LinkHelper } from '../../helpers/LinkHelper';
-import { PageHelper } from '../../helpers/PageHelper';
-import { ValidationHelper } from '../../helpers/ValidationHelper';
+import { LinkHelper } from '../../../helpers/LinkHelper';
+import { PageHelper } from '../../../helpers/PageHelper';
+import { ValidationHelper } from '../../../helpers/ValidationHelper';
 import { SubmitYourAppeal } from '../../flows/events/submitYourAppeal';
 import { CreateServiceRequest } from '../../flows/events/createServiceRequest';
 import { PaymentPage } from '../../page-objects/pages/payment_page';
@@ -36,7 +36,7 @@ import { PrepareDecisionAndReasons } from "../../flows/events/prepareDecisionAnd
 import { CompleteDecisionAndReasons } from "../../flows/events/completeDecisionAndReasons";
 import { imageLocators } from '../../../fixtures/imageLocators';
 import {CreateHearingRequest} from "../../flows/createHearingRequest";
-import {TabsHelper} from "../../helpers/TabsHelper";
+import {TabsHelper} from "../../../helpers/TabsHelper";
 import {GenerateListCMR} from "../../flows/events/generateListCMRTask";
 import {RecordOutOfTimeDecision} from "../../flows/events/recordOutOfTimeDecision";
 import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";

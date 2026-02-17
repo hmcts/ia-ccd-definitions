@@ -2,17 +2,21 @@ import {expect, test} from '@playwright/test';
 import {
     envUrl, legalRepresentativeCredentials, homeOfficeOfficerCredentials, judgeCredentials,
     legalOfficerAdminCredentials, legalOfficerCredentials, listingOfficerCredentials, runningEnv,
-} from '../../../e2e/iacConfig';
-import {CcdApiHelper} from "../../../e2e/helpers/CcdApiHelper";
+} from '../../../iacConfig';
+import {CcdApiHelper} from "../../../helpers/CcdApiHelper";
 import {LegalAdminDetained} from "./CaseData/LegalAdminDetained";
 import {RecordRemissionDecision} from "../../../e2e/flows/events/recordRemissionDecision";
+import {WaitUtils} from "../../../e2e/utils/wait.utils";
+import moment from "moment/moment";
 
+const today = moment();
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const cmrHearing: boolean = ['true'].includes(process.env.CMR_HEARING);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'Prison';
 const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
 const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ? 'allowed' : 'dismissed'; // allowed or dismissed
+let ariaReferenceNumber: string = '';
 let caseId: string = '';
 
 
@@ -31,7 +35,7 @@ let eventData;
 
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC DRAFT Appeal.', { tag: '@LrManualDetainedApi' }, () => {
+test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC DRAFT Appeal.', { tag: '@LrManualDetainedApi' }, () => {
 
     test.beforeAll(async ({}) => {
         ccdApiHelper = new CcdApiHelper();
@@ -53,7 +57,8 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
 
         // If rehydrate then inject the Aria ref number / If paper appeal inject the Notice of decision document
         if (isRehydrated) {
-            eventData.appealReferenceNumber = await ccdApiHelper.getAriaReferenceNumber(eventName);
+            ariaReferenceNumber = await ccdApiHelper.getAriaReferenceNumber(eventName);
+            eventData.appealReferenceNumber = ariaReferenceNumber;
         } else {
             uploadedDocUrl = await ccdApiHelper.uploadDocument();
             eventData.uploadTheNoticeOfDecisionDocs[0].value.document.document_url = uploadedDocUrl;
@@ -80,6 +85,10 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         eventData = await new LegalAdminDetained().generateSubmitData();
 
         const response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, eventData);
+
+        if (!isRehydrated) {
+            ariaReferenceNumber = await response.appealReferenceNumber;
+        }
     });
 
     // This is an additional step/test ONLY run if fee remission has been undertaken, as we need to make a decision on the fee remission
@@ -213,7 +222,23 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
         response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, eventData);
     });
 
-    test('Submit: For Case - Hearing Reqs event', async ({}) => {
+    test('Submit: Force Case - Hearing Reqs event', async ({}) => {
+        eventName = 'forceCaseToSubmitHearingRequirements';
+
+        await ccdApiHelper.getNonEventTokens(legalOfficerCredentials);
+        await ccdApiHelper.startEvent(eventName, caseId);
+
+        eventData = await new LegalAdminDetained().generateForceCaseHearingsReqsData();
+
+        // validate the data before submitting
+        let response = await ccdApiHelper.validatePageData(eventName + 'forceCase', eventName, eventData);
+        expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
+
+        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, eventData);
+
+    });
+
+    test('Submit: Hearing Requirements event', async ({}) => {
         eventName = 'draftHearingRequirements';
 
         await ccdApiHelper.getNonEventTokens(legalOfficerAdminCredentials);
@@ -227,5 +252,158 @@ test.describe('Legal Admin creates Detained Represented ' + typeOfAppeal + (isRe
 
         response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, eventData);
     });
+
+    test('Submit: Review Hearing Requirements event', async ({}) => {
+        eventName = 'reviewHearingRequirements';
+
+        await ccdApiHelper.getNonEventTokens(legalOfficerCredentials);
+        await ccdApiHelper.startEvent(eventName, caseId);
+
+        eventData = await new LegalAdminDetained().generateReviewHearingRequirementsData();
+
+        // validate the data before submitting
+        let response = await ccdApiHelper.validatePageData(eventName, eventName, eventData);
+        expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
+
+        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, eventData);
+    });
+
+
+    // This is not the route the caseworker would use, however, we use it in the tests to get to the state of: Prepare for hearing
+    // This state is only available when the hearing is listed - this event mimics the List Assist integration for us and thus allows us to complete the journey
+    test('Submit: List The Case event', async ({}) => {
+        eventName = 'listCase';
+
+        await ccdApiHelper.getNonEventTokens(legalOfficerAdminCredentials);
+        await ccdApiHelper.startEvent(eventName, caseId);
+
+        eventData = await new LegalAdminDetained().generateListTheCaseData();
+
+        // Inject Aria ref number
+        eventData.ariaListingReference = ariaReferenceNumber;
+
+        // validate the data before submitting
+        let response = await ccdApiHelper.validatePageData(eventName, eventName, eventData);
+        expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
+
+        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, eventData);
+    });
+
+    test('Submit: Create Case Summary event', async ({}) => {
+       eventName = 'createCaseSummary';
+
+       await ccdApiHelper.getNonEventTokens(listingOfficerCredentials);
+       await ccdApiHelper.startEvent(eventName, caseId);
+
+       uploadedDocUrl = await ccdApiHelper.uploadDocument();
+       eventData = await new LegalAdminDetained().generateCreateCaseSummaryData();
+
+       // we now inject info about document uploaded to document store into the eventData
+       eventData.caseSummaryDocument.document_url = uploadedDocUrl;
+       eventData.caseSummaryDocument.document_binary_url = uploadedDocUrl + '/binary';
+
+       // validate the data before submitting
+       let response = await ccdApiHelper.validatePageData(eventName+eventName, eventName, eventData);
+       expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
+
+       response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, eventData);
+    });
+
+    test('Submit: Generate Hearing Bundle event', async ({}) => {
+        eventName = 'generateHearingBundle';
+
+        await ccdApiHelper.getNonEventTokens(listingOfficerCredentials);
+        await ccdApiHelper.startEvent(eventName, caseId);
+
+        eventData = await new LegalAdminDetained().generateHearingBundleData();
+
+        // validate the data before submitting
+        let response = await ccdApiHelper.validatePageData(eventName+eventName, eventName, eventData);
+        expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
+
+        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, eventData);
+    });
+
+
+    test('Submit: Start Decision And Reasons event', async ({}) => {
+        eventName = 'decisionAndReasonsStarted';
+
+        // The hearing bundle can take some time to generate, so we need to check that the event "asyncStitchingComplete"
+        // is available to the case and when it is we can progress
+        let asyncStitchingComplete: boolean = false;
+        const waitUtils: WaitUtils = new WaitUtils();
+        const maxRetries: number = 10;
+
+        for (let i=0; i < maxRetries; i++) {
+            let availableEvents = await ccdApiHelper.getAvailableEvents(caseId);
+
+            // Loop through the returned array and check if the event asyncStitchingComplete exists
+            // if not then wait 5 secs before trying again
+            for (const element in availableEvents) {
+                if (availableEvents[element].id === 'asyncStitchingComplete') {
+                    console.log('Hearing Bundle generation completed.');
+                    asyncStitchingComplete = true;
+                } else {
+                    console.log(`Hearing Bundle generation NOT completed. Waiting to retry: ${i+1}`);
+                    asyncStitchingComplete = false;
+                    await waitUtils.wait(5000);
+                }
+                break;
+            }
+
+            if (asyncStitchingComplete) {
+                break;
+            }
+
+
+        }
+        await ccdApiHelper.getNonEventTokens(listingOfficerCredentials);
+        await ccdApiHelper.startEvent(eventName, caseId);
+
+        eventData = await new LegalAdminDetained().generateStartDecisionAndReasonsData();
+        // validate the data before submitting
+        let response = await ccdApiHelper.validatePageData(eventName+'scheduleOfIssues', eventName, eventData);
+        expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
+
+        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, eventData);
+    });
+
+    test('Submit: Prepare Decision And Reasons event', async ({}) => {
+        eventName = 'generateDecisionAndReasons';
+
+        await ccdApiHelper.getNonEventTokens(judgeCredentials);
+        await ccdApiHelper.startEvent(eventName, caseId);
+
+        eventData = await new LegalAdminDetained().generatePrepareDecisionAndReasonsData();
+
+        // validate the data before submitting
+        let response = await ccdApiHelper.validatePageData(eventName, eventName, eventData);
+        expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
+
+        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, eventData);
+    });
+
+    test('Submit: Complete Decision And Reasons event', async ({}) => {
+        eventName = 'sendDecisionAndReasons';
+        await ccdApiHelper.getNonEventTokens(judgeCredentials);
+        await ccdApiHelper.startEvent(eventName, caseId);
+
+        uploadedDocUrl = await ccdApiHelper.uploadDocument();
+        eventData = await new LegalAdminDetained().generateCompleteDecisionAndReasonsData();
+
+        // we now inject info about document uploaded to document store into the eventData
+        eventData.finalDecisionAndReasonsDocument.document_url = uploadedDocUrl;
+        eventData.finalDecisionAndReasonsDocument.document_binary_url = uploadedDocUrl + '/binary';
+
+        // validate the data before submitting
+        let response = await ccdApiHelper.validatePageData(eventName + eventName, eventName, eventData);
+        expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
+      //  let sendDecisionsAndReasonsDate = {sendDecisionsAndReasonsDate: today.year().toString() + '-' + (today.month() + 1).toString().padStart(2,'0') + '-' + (today.date().toString().padStart(2,'0'))};
+        //merge the sendDecisionsAndReasonsDate into eventData
+      //  eventData = {...eventData, ...sendDecisionsAndReasonsDate};
+        console.log('eventData>>> ',eventData);
+            response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, eventData);
+    });
+
 
 });

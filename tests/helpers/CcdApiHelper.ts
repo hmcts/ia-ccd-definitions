@@ -175,4 +175,34 @@ export class CcdApiHelper {
         this.eventToken = await this.tokensHelper.getEventToken(eventName, caseId, this.uid, this.accessToken, this.s2sToken);
     };
 
+    async getAvailableEvents(caseId: string) {
+        const url: string = `${ccdDataStoreApiBaseUrl}/caseworkers/${this.uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases/${caseId}/events`;
+        const apiRequestContext: APIRequestContext = await request.newContext();
+
+        try {
+            const response = await apiRequestContext.get(url, {
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "*/*",
+                    Authorization: `Bearer ${this.accessToken}`,
+                    ServiceAuthorization: this.s2sToken
+                },
+                data: {}
+            });
+
+            if (!response.ok()) {
+                console.log(stringify(await response.json()));
+            }
+            return await response.json();
+        } catch (error) {
+            throw new Error(
+                `An error occurred while trying to validate the page data: ${
+                    error instanceof Error ? error.message : error
+                }`
+            );
+        };
+
+    };
+
+
 }

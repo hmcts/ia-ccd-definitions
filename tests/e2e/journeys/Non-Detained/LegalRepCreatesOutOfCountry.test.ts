@@ -4,12 +4,12 @@ import {
     homeOfficeOfficerCredentials, judgeCredentials, legalOfficerAdminCredentials, legalOfficerCredentials,
     legalRepresentativeCredentials,
     listingOfficerCredentials
-} from '../../iacConfig';
+} from '../../../iacConfig';
 import { IdamPage } from '../../page-objects/pages/idam.po';
 import { CreateCasePage } from '../../page-objects/pages/createCase_page';
 import { CreateAppeal } from '../../flows/createAppeal';
-import { LinkHelper } from '../../helpers/LinkHelper';
-import { PageHelper } from '../../helpers/PageHelper';
+import { LinkHelper } from '../../../helpers/LinkHelper';
+import { PageHelper } from '../../../helpers/PageHelper';
 import { SubmitYourAppeal } from '../../flows/events/submitYourAppeal';
 import {RespondentEvidenceDirection} from "../../flows/events/respondentEvidenceDirection";
 import {HomeOfficeBundle} from "../../flows/events/homeOfficeBundle";
@@ -26,7 +26,7 @@ import {StartDecisionAndReasons} from "../../flows/events/startDecisionAndReason
 import {PrepareDecisionAndReasons} from "../../flows/events/prepareDecisionAndReasons";
 import {CompleteDecisionAndReasons} from "../../flows/events/completeDecisionAndReasons";
 import {ListTheCase} from "../../flows/events/listTheCase";
-import {ValidationHelper} from "../../helpers/ValidationHelper";
+import {ValidationHelper} from "../../../helpers/ValidationHelper";
 import {imageLocators} from "../../../fixtures/imageLocators";
 import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";

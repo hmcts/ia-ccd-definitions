@@ -10,7 +10,7 @@ export class WaitUtils {
   private DEFAULT_DELAY = 1_000;
   private DEFAULT_TIMEOUT = 120_000;
 
-  private async wait(ms: number): Promise<void> {
+  public async wait(ms: number): Promise<void> {
     return new Promise((resolve) => {
       setTimeout(resolve, ms);
     });

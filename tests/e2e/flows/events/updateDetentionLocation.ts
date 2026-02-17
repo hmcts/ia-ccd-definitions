@@ -1,7 +1,7 @@
 import { Page } from "@playwright/test";
-import { PageHelper } from '../../helpers/PageHelper';
-import { ButtonHelper } from '../../helpers/ButtonHelper';
-import { ValidationHelper } from '../../helpers/ValidationHelper';
+import { PageHelper } from '../../../helpers/PageHelper';
+import { ButtonHelper } from '../../../helpers/ButtonHelper';
+import { ValidationHelper } from '../../../helpers/ValidationHelper';
 import { CreateAppeal } from '../createAppeal';
 
 export class UpdateDetentionLocation {
