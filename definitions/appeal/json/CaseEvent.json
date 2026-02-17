@@ -2887,6 +2887,25 @@
     "Publish": "Y"
   },
   {
+    "LiveFrom": "01/01/2021",
+    "CaseTypeID": "Asylum",
+    "ID": "revokeCaseAccessV2",
+    "Name": "Revoke case access V2",
+    "Description": "Revoke user case access",
+    "DisplayOrder": 78,
+    "PreConditionState(s)": "*",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "CallBackURLSubmittedEvent": "${CCD_DEF_IA_URL}/asylum/ccdSubmitted",
+    "RetriesTimeoutURLSubmittedEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Revoke access",
+    "Publish": "Y"
+  },
+  {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "saveNotificationsToData",
