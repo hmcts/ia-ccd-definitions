@@ -6,6 +6,7 @@
 ##    - password: ID assigned to user in generated token. Default to `London01`.
 ##
 ## Returns a valid IDAM user token for the given username and password.
+echo "inside idam-user-token-aat.sh"
 
 vault_name="ia-aat"
 
@@ -16,6 +17,8 @@ REDIRECT_URI="https://ia-case-api-aat.service.core-compute-aat.internal/oauth2/c
 CLIENT_ID="ccd_admin"
 CLIENT_SECRET=${ADMIN_WEB_IDAM_SECRET}
 SCOPE="openid%20profile%20roles"
+
+az login --identity
 
 curl --silent --show-error \
     -H "Content-Type: application/x-www-form-urlencoded" \
