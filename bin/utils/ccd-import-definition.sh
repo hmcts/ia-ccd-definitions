@@ -120,5 +120,5 @@ else
   fi
 fi
 
-echo "${FILENAME} (${uploadFilename}) upload failed (${upload_response_content})"
+echo "${FILENAME} (${uploadFilename}) upload failed (${upload_response_content}) uploadResponse: ${uploadResponse}"
 exit 1
