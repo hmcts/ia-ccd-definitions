@@ -86,6 +86,8 @@ fi
 
 echo "userToken: ${userToken}"
 echo "serviceToken: ${serviceToken}"
+echo "filepath: ${filepath}"
+echo "uploadFilename: ${uploadFilename}"
 
 echo "Authorization userToken obtained"
 echo "Authorization serviceToken obtained"
