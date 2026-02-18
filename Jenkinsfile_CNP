@@ -204,6 +204,14 @@ pipeline {
            """
          }
        }
+       post {
+         always {
+           dir("${WORKSPACE}/target") {
+             archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-aat.xlsx", allowEmptyArchive: true
+             echo "Pipeline completed for Uploading CCD definition to PR ${CHANGE_ID}"
+           }
+         }
+       }
      }
   }
 } 
