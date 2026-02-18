@@ -27,10 +27,6 @@ while [[ $# -gt 0 ]]; do
       DRY_RUN=true
       shift
       ;;
-    --from-local)
-      export FROM_LOCAL=true
-      shift
-      ;;
     -h|--help)
       echo "Usage: $0 [options]"
       echo "Options:"
@@ -69,24 +65,9 @@ case $ENV in
     TOKEN_ENV="aat"
     ;;
   preview)
-    #echo "inside ENV preview"
     FILENAME="ccd-appeal-config-preview-pr${PR_NUMBER}.xlsx"
-#    CCD_URL="https://ccd-definition-store-ia-case-api-pr-${PR_NUMBER}.preview.platform.hmcts.net"
-#    GENERATE_CMD="yarn generate -e preview -p ${PR_NUMBER}"
-    if [[ "${FROM_LOCAL}" == "true" ]]; then
-      echo "from-local == true"
-      CCD_URL="https://ccd-definition-store-ia-case-api-pr-${PR_NUMBER}.preview.platform.hmcts.net"
-      GENERATE_CMD="yarn generate -e preview -p ${PR_NUMBER}"
-    fi
-
-    if [[ "${FROM_LOCAL}" != "true" ]]; then
-      echo "from-local != true"
-      CCD_URL="https://ccd-definition-store-ia-case-api-pr-2620.preview.platform.hmcts.net"
-#      GENERATE_CMD="corepack yarn generate -e preview -p 2620"
-      GENERATE_CMD="corepack yarn generate -e aat"
-#      GENERATE_CMD="corepack yarn generate-aat"
-      az login --identity
-    fi
+    CCD_URL="https://ccd-definition-store-ia-case-api-pr-${PR_NUMBER}.preview.platform.hmcts.net"
+    GENERATE_CMD="yarn generate -e preview -p ${PR_NUMBER}"
     TOKEN_ENV="aat"
     ;;
   aat)
