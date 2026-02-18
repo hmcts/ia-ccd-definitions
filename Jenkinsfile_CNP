@@ -120,9 +120,9 @@ def uploadCoreCaseDataDefinitions1() {
     dir("${WORKSPACE}") {
       sh """
          set -e
-         echo "Uploading CCD definition to PR ${CHANGE_ID} environment"
+         echo "Uploading aat CCD definition to PR ${CHANGE_ID} environment"
          corepack yarn --version
-         bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
+         bin/utils/upload-ccd.sh -e aat
       """
     }
 

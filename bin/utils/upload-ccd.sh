@@ -89,6 +89,12 @@ case $ENV in
     fi
     TOKEN_ENV="aat"
     ;;
+  aat)
+    echo "upload-ccd aat"
+    CCD_URL="https://ccd-definition-store-ia-case-api-pr-2620.preview.platform.hmcts.net"
+    GENERATE_CMD="corepack yarn generate -e aat"
+    az login --identity
+    ;;
   *)
     echo "Error: Unsupported environment: ${ENV}"
     echo "Supported environments: dev, mirrord, preview"
