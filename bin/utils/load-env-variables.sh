@@ -2,9 +2,9 @@
 
 #az login --identity
 
-if [[ "${FROM_LOCAL}" != "true" ]]; then
-  az login --identity
-fi
+#if [[ "${FROM_LOCAL}" != "true" ]]; then
+#  az login --identity
+#fi
 
 export IA_CCD_ADMIN_USERNAME=$(az keyvault secret show --vault-name ia-aat --name ccd-importer-username --query value -o tsv)
 export IA_CCD_ADMIN_PASSWORD=$(az keyvault secret show --vault-name ia-aat --name ccd-importer-password --query value -o tsv)

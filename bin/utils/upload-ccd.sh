@@ -83,7 +83,7 @@ case $ENV in
       echo "from-local != true"
       CCD_URL="https://ccd-definition-store-ia-case-api-pr-2620.preview.platform.hmcts.net"
       GENERATE_CMD="corepack yarn generate -e preview -p 2620"
-      #az login --identity
+      az login --identity
     fi
     TOKEN_ENV="aat"
     ;;
