@@ -91,6 +91,7 @@ case $ENV in
     ;;
   aat)
     echo "upload-ccd aat"
+    FILENAME="ccd-appeal-config-aat.xlsx"
     CCD_URL="https://ccd-definition-store-ia-case-api-pr-2620.preview.platform.hmcts.net"
     GENERATE_CMD="corepack yarn generate -e aat"
     az login --identity
