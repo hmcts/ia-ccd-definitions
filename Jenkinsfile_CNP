@@ -115,6 +115,23 @@ def uploadCoreCaseDataDefinitions(env) {
   }
 }
 
+def uploadCoreCaseDataDefinitions1() {
+//  if (env.ENVIRONMENT == 'preview') {
+    dir("${WORKSPACE}") {
+      sh """
+         set -e
+         echo "Uploading CCD definition to PR ${CHANGE_ID} environment"
+         corepack yarn --version
+         bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
+      """
+    }
+
+//    dir("${WORKSPACE}/target") {
+//      steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview.xlsx"
+//    }
+//  }
+}
+
 pipeline {
   agent any
   
@@ -196,12 +213,13 @@ pipeline {
        steps {
          script {
            env.PR_NUMBER = "${CHANGE_ID}"
-           sh """
-             set -e
-             echo "Uploading CCD definition to PR ${CHANGE_ID} environment"
-             corepack yarn --version
-             bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
-           """
+//           sh """
+//             set -e
+//             echo "Uploading CCD definition to PR ${CHANGE_ID} environment"
+//             corepack yarn --version
+//             bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
+//           """
+           uploadCoreCaseDataDefinitions1()
          }
        }
        post {
