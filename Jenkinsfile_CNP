@@ -116,7 +116,7 @@ def uploadCoreCaseDataDefinitions(env) {
 }
 
 def uploadCoreCaseDataDefinitions1() {
-//  if (env.ENVIRONMENT == 'preview') {
+  if (env.ENVIRONMENT == 'preview') {
     dir("${WORKSPACE}") {
       sh """
          set -e
@@ -129,7 +129,7 @@ def uploadCoreCaseDataDefinitions1() {
 //    dir("${WORKSPACE}/target") {
 //      steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview.xlsx"
 //    }
-//  }
+  }
 }
 
 pipeline {
