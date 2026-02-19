@@ -211,5 +211,29 @@ pipeline {
          }
        }
      }
+
+    stage('Generate and Upload CCD Definition to Prod') {
+      when {
+        anyOf {
+          branch 'PR-*'
+          branch 'master'
+          changeRequest()
+        }
+      }
+      steps {
+        script {
+          env.PR_NUMBER = "${CHANGE_ID}"
+          uploadCoreCaseDataDefinitions('prod')
+        }
+      }
+      post {
+        always {
+          dir("${WORKSPACE}/target") {
+            archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-prod.xlsx", allowEmptyArchive: true
+            echo "Pipeline completed for Generate and Upload CCD definition to Prod"
+          }
+        }
+      }
+    }
   }
 } 
