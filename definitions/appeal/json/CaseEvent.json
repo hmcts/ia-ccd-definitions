@@ -3071,5 +3071,20 @@
     "ShowEventNotes": "N",
     "EndButtonLabel": "Submit",
     "Publish": "N"
+  },
+  {
+    "LiveFrom": "19/02/2026",
+    "CaseTypeID": "Asylum",
+    "ID": "completeCaseReview",
+    "Name": "Complete case review",
+    "Description": "Complete case review",
+    "DisplayOrder": 125,
+    "PreConditionState(s)": "appealSubmitted",
+    "PostConditionState": "*",
+    "SecurityClassification": "Public",
+    "ShowSummary": "N",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit",
+    "Publish": "Y"
   }
 ]
