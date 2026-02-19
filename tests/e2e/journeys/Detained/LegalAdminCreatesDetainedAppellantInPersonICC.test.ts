@@ -332,19 +332,19 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await linkHelper.signOut.click();
     });
 
-    // test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({ page }) => {
-    //     await idamPage.login(judgeDecision === 'allowed' ? homeOfficeOfficerCredentials : legalOfficerAdminCredentials);
-    //     judgeDecision === 'allowed' ? await page.goto(envUrl + '/cases/case-details/' + caseId) : await pageHelper.getCase(caseId);
-    //     await new ApplyForPermissionToAppeal(page).apply(judgeDecision === 'allowed' ? 'Respondent' :  'Appellant');
-    //     await linkHelper.signOut.click();
-    // });
-    //
-    // test('Judge decides FTPA application', async ({ page }) => {
-    //     await idamPage.login(judgeCredentials);
-    //     await pageHelper.getCase(caseId);
-    //     await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
-    //     await linkHelper.signOut.click();
-    // });
+    test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({ page }) => {
+        await idamPage.login(judgeDecision === 'allowed' ? homeOfficeOfficerCredentials : legalOfficerAdminCredentials);
+        judgeDecision === 'allowed' ? await page.goto(envUrl + '/cases/case-details/' + caseId) : await pageHelper.getCase(caseId);
+        await new ApplyForPermissionToAppeal(page).apply(judgeDecision === 'allowed' ? 'Respondent' :  'Appellant');
+        await linkHelper.signOut.click();
+    });
+
+    test('Judge decides FTPA application', async ({ page }) => {
+        await idamPage.login(judgeCredentials);
+        await pageHelper.getCase(caseId);
+        await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
+        await linkHelper.signOut.click();
+    });
 
 
 });
