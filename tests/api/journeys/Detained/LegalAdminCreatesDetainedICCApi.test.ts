@@ -83,8 +83,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
     test('Submit detained ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + ' ICC DRAFT Appeal', async ({}) => {
         eventName = 'submitAppeal';
 
-        caseData = await ccdApiHelper.getCaseData(caseId);
-
         await ccdApiHelper.startEvent(eventName, caseId);
         eventData = await new LegalAdminDetained().generateSubmitData();
 
@@ -100,8 +98,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
     if (feeRemission === 'Yes') {
         test('Submit: Record Remission Decision event', async ({page}) => {
             eventName = 'recordRemissionDecision';
-
-            caseData = await ccdApiHelper.getCaseData(caseId);
 
             await ccdApiHelper.startEvent(eventName, caseId);
             eventData = await new LegalAdminDetained().generateRecordRemissionDecisionData();
@@ -119,8 +115,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
     test('Submit: Mark as Paid event', async ({}) => {
         eventName = 'markAppealPaid';
 
-        caseData = await ccdApiHelper.getCaseData(caseId);
-
         await ccdApiHelper.startEvent(eventName, caseId);
         eventData = await new LegalAdminDetained().generateMarkAsPaidData();
 
@@ -136,8 +130,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
     test('Submit: Request Respondent Evidence event', async ({}) => {
         eventName = 'requestRespondentEvidence';
 
-        caseData = await ccdApiHelper.getCaseData(caseId);
-
         await ccdApiHelper.getNonEventTokens(legalOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
 
@@ -147,11 +139,11 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         let response = await ccdApiHelper.validatePageData(eventName + eventName, eventName, eventData);
         expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
 
-        // delete caseData['uploadTheAppealFormDocs'];
-        // delete caseData['paymentStatus'];
-        // delete caseData['paAppealTypePaymentOption'];
-        // delete caseData['feeWithoutHearing'];
-        // delete caseData['remissionRejectedDatePlus14days'];
+        delete caseData['uploadTheAppealFormDocs'];
+        delete caseData['paymentStatus'];
+        delete caseData['paAppealTypePaymentOption'];
+        delete caseData['feeWithoutHearing'];
+        delete caseData['remissionRejectedDatePlus14days'];
 
         caseData = {...caseData, ...eventData};
 
@@ -160,8 +152,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
     test('Submit: Upload Home Office Bundle event', async ({}) => {
         eventName = 'uploadHomeOfficeBundle';
-
-        caseData = await ccdApiHelper.getCaseData(caseId);
 
         await ccdApiHelper.getNonEventTokens(homeOfficeOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
@@ -177,6 +167,14 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         let response = await ccdApiHelper.validatePageData(eventName + eventName, eventName, eventData);
         expect(await response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
 
+        delete caseData['sendDirectionExplanation'];
+        delete caseData['sendDirectionParties'];
+        delete caseData['sendDirectionDateDue'];
+
+        if (!isRehydrated) {
+            delete caseData['uploadTheNoticeOfDecisionDocs'];
+        }
+
         caseData = {...caseData, ...eventData};
 
         response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
@@ -184,8 +182,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
     test('Submit: Request Case Building event', async ({}) => {
         eventName = 'requestCaseBuilding';
-
-        caseData = await ccdApiHelper.getCaseData(caseId);
 
         await ccdApiHelper.getNonEventTokens(legalOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
@@ -196,7 +192,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         let response = await ccdApiHelper.validatePageData(eventName + eventName, eventName, eventData);
         expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
 
-        //delete caseData['homeOfficeBundle'];
+        delete caseData['homeOfficeBundle'];
 
         caseData = {...caseData, ...eventData};
 
@@ -205,8 +201,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
     test('Submit: Build Your Case event', async ({}) => {
         eventName = 'buildCase';
-
-        caseData = await ccdApiHelper.getCaseData(caseId);
 
         await ccdApiHelper.getNonEventTokens(legalOfficerAdminCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
@@ -222,9 +216,9 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         let response = await ccdApiHelper.validatePageData(eventName + eventName, eventName, eventData);
         expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
 
-        // delete caseData['sendDirectionExplanation'];
-        // delete caseData['sendDirectionParties'];
-        // delete caseData['sendDirectionDateDue'];
+        delete caseData['sendDirectionExplanation'];
+        delete caseData['sendDirectionParties'];
+        delete caseData['sendDirectionDateDue'];
 
         caseData = {...caseData, ...eventData};
 
@@ -233,8 +227,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
     test('Submit: Request Respondent Review event', async ({}) => {
         eventName = 'requestRespondentReview';
-
-        caseData = await ccdApiHelper.getCaseData(caseId);
 
         await ccdApiHelper.getNonEventTokens(legalOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
@@ -251,8 +243,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
     test('Submit: Upload The Appeal Response event', async ({}) => {
         eventName = 'uploadHomeOfficeAppealResponse';
 
-        caseData = await ccdApiHelper.getCaseData(caseId);
-
         await ccdApiHelper.getNonEventTokens(homeOfficeOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
 
@@ -267,9 +257,13 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         let response = await ccdApiHelper.validatePageData('uploadHomeOfficeAppealResponse' + eventName, eventName, eventData);
         expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
 
-        // delete caseData['sendDirectionExplanation'];
-        // delete caseData['sendDirectionParties'];
-        // delete caseData['sendDirectionDateDue'];
+        delete caseData['sendDirectionExplanation'];
+        delete caseData['sendDirectionParties'];
+        delete caseData['sendDirectionDateDue'];
+        delete caseData['lastModifiedDirection'];
+        delete caseData['SearchCriteria'];
+        delete caseData['directions'];
+        delete caseData['currentCaseStateVisibleToAdminOfficer'];
 
         caseData = {...caseData, ...eventData};
 
@@ -278,8 +272,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
     test('Submit: Force Case - Hearing Reqs event', async ({}) => {
         eventName = 'forceCaseToSubmitHearingRequirements';
-
-        caseData = await ccdApiHelper.getCaseData(caseId);
 
         await ccdApiHelper.getNonEventTokens(legalOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
@@ -290,10 +282,10 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         let response = await ccdApiHelper.validatePageData(eventName + 'forceCase', eventName, eventData);
         expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
 
-        // delete caseData['homeOfficeAppealResponseDocument'];
-        // delete caseData['uploadedHomeOfficeAppealResponseDocs'];
-        // delete caseData['homeOfficeAppealResponseDescription'];
-        // delete caseData['homeOfficeAppealResponseEvidence'];
+        delete caseData['homeOfficeAppealResponseDocument'];
+        delete caseData['uploadedHomeOfficeAppealResponseDocs'];
+        delete caseData['homeOfficeAppealResponseDescription'];
+        delete caseData['homeOfficeAppealResponseEvidence'];
 
         caseData = {...caseData, ...eventData};
 
@@ -304,8 +296,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
     test('Submit: Hearing Requirements event', async ({}) => {
         eventName = 'draftHearingRequirements';
 
-        caseData = await ccdApiHelper.getCaseData(caseId);
-
         await ccdApiHelper.getNonEventTokens(legalOfficerAdminCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
 
@@ -315,7 +305,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         let response = await ccdApiHelper.validatePageData(eventName, eventName, eventData);
         expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
 
-      //  delete caseData['reasonToForceCaseToSubmitHearingRequirements'];
+        delete caseData['reasonToForceCaseToSubmitHearingRequirements'];
 
         caseData = {...caseData, ...eventData};
 
@@ -324,8 +314,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
     test('Submit: Review Hearing Requirements event', async ({}) => {
         eventName = 'reviewHearingRequirements';
-
-        caseData = await ccdApiHelper.getCaseData(caseId);
 
         await ccdApiHelper.getNonEventTokens(legalOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
@@ -346,8 +334,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
     test('Submit: List The Case event', async ({}) => {
         eventName = 'listCase';
 
-        caseData = await ccdApiHelper.getCaseData(caseId);
-
         await ccdApiHelper.getNonEventTokens(legalOfficerAdminCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
 
@@ -361,15 +347,43 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         let response = await ccdApiHelper.validatePageData(eventName, eventName, eventData);
         expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
 
+        delete caseData['appellantLevelFlags'];
+        delete caseData['witnessDetailsReadonly'];
+        delete caseData['interpreterLanguageReadonly'];
+
         caseData = {...caseData, ...eventData};
 
         response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
     });
 
+    // If rehydrated then turn notifications/WA tasks on so that we generate the hearing bundle
+    // This can be changed later to not turn them on and go down the "Send to pre-hearing route"
+    if (isRehydrated) {
+        test('Submit: Turn on Notifications/WA Tasks event', async ({}) => {
+            eventName = 'turnOnNotificationsWATasks';
+
+            await ccdApiHelper.getNonEventTokens(legalOfficerAdminCredentials);
+            await ccdApiHelper.startEvent(eventName, caseId);
+
+            eventData = await new LegalAdminDetained().generateTurnOnNotificationsWaTasksData();
+
+            // validate the data before submitting
+            let response = await ccdApiHelper.validatePageData(eventName+eventName, eventName, eventData);
+            expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
+
+            delete caseData['hearingCentre'];
+            delete caseData['caseManagementLocationRefData'];
+            delete caseData['hearingCentreDynamicList'];
+
+
+            caseData = {...caseData, ...eventData};
+
+            response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        });
+    }
+
     test('Submit: Create Case Summary event', async ({}) => {
         eventName = 'createCaseSummary';
-
-        caseData = await ccdApiHelper.getCaseData(caseId);
 
         await ccdApiHelper.getNonEventTokens(listingOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
@@ -385,15 +399,16 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         let response = await ccdApiHelper.validatePageData(eventName+eventName, eventName, eventData);
         expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
 
+        delete caseData['haveHearingAttendeesAndDurationBeenRecorded'];
+
         caseData = {...caseData, ...eventData};
 
         response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
     });
 
+
    test('Submit: Generate Hearing Bundle event', async ({}) => {
         eventName = 'generateHearingBundle';
-
-        caseData = await ccdApiHelper.getCaseData(caseId);
 
         await ccdApiHelper.getNonEventTokens(listingOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
@@ -403,6 +418,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         // validate the data before submitting
         let response = await ccdApiHelper.validatePageData(eventName+eventName, eventName, eventData);
         expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
+
+        delete caseData['uploadAdditionalEvidenceActionAvailable'];
 
         caseData = {...caseData, ...eventData};
 
@@ -442,8 +459,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         }
 
-        caseData = await ccdApiHelper.getCaseData(caseId);
-
         await ccdApiHelper.getNonEventTokens(listingOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
 
@@ -452,6 +467,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         let response = await ccdApiHelper.validatePageData(eventName+'scheduleOfIssues', eventName, eventData);
         expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
 
+        delete caseData['uploadAddendumEvidenceAdminOfficerActionAvailable'];
+
         caseData = {...caseData, ...eventData};
 
         response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
@@ -459,8 +476,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
     test('Submit: Prepare Decision And Reasons event', async ({}) => {
         eventName = 'generateDecisionAndReasons';
-
-        caseData = await ccdApiHelper.getCaseData(caseId);
 
         await ccdApiHelper.getNonEventTokens(judgeCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
@@ -471,9 +486,12 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         let response = await ccdApiHelper.validatePageData(eventName, eventName, eventData);
         expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
 
-        // delete caseData['listCaseHearingCentreAddress'];
-        // delete caseData['agreedImmigrationHistoryDescription'];
-        // delete caseData['appellantsAgreedScheduleOfIssuesDescription'];
+        delete caseData['listCaseHearingCentreAddress'];
+        delete caseData['agreedImmigrationHistoryDescription'];
+        delete caseData['appellantsAgreedScheduleOfIssuesDescription'];
+        delete caseData['changeDirectionDueDateActionAvailable'];
+        delete caseData['isDecisionWithoutHearing'];
+
 
         caseData = {...caseData, ...eventData};
 
@@ -495,8 +513,6 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
     // // Gives a callback error - but no info in logs to say what the issue is - thus using the e2e step to complete this last task
     // test.skip('Submit: Complete Decision And Reasons event', async ({}) => {
     //     eventName = 'sendDecisionAndReasons';
-    //  
-    //     caseData = await ccdApiHelper.getCaseData(caseId);
     //
     //     await ccdApiHelper.getNonEventTokens(judgeCredentials);
     //     await ccdApiHelper.startEvent(eventName, caseId);
@@ -520,22 +536,83 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
     // });
 
     test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant') , async ({}) => {
-        eventName = 'generateDecisionAndReasons';
-
-        caseData = await ccdApiHelper.getCaseData(caseId);
+        eventName = (judgeDecision == 'allowed' ? 'applyForFTPARespondent' : 'applyForFTPAAppellant');
+        let response;
 
         await ccdApiHelper.getNonEventTokens(judgeDecision == 'allowed' ? homeOfficeOfficerCredentials : legalOfficerAdminCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
 
-        eventData = await new LegalAdminDetained().generatePrepareDecisionAndReasonsData();
+        uploadedDocUrl = await ccdApiHelper.uploadDocument();
+        eventData = await new LegalAdminDetained().generatePermissionToAppealData();
+
+        // we now inject info about document uploaded to document store into the eventData
+        if (judgeDecision === 'allowed') {
+            eventData.ftpaRespondentGroundsDocuments[0].value.document.document_url = uploadedDocUrl;
+            eventData.ftpaRespondentGroundsDocuments[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
+        } else {
+            eventData.ftpaAppellantGroundsDocuments[0].value.document.document_url = uploadedDocUrl;
+            eventData.ftpaAppellantGroundsDocuments[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
+        }
 
         // validate the data before submitting
-        let response = await ccdApiHelper.validatePageData(eventName, eventName, eventData);
+        if (judgeDecision === 'allowed') {
+            response = await ccdApiHelper.validatePageData(eventName + 'ftpaRespondentSubmissionPage', eventName, eventData);
+        } else {
+            response = await ccdApiHelper.validatePageData(eventName + 'ftpaAppellantSubmissionPage', eventName, eventData);
+        }
         expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
 
-        // delete caseData['listCaseHearingCentreAddress'];
-        // delete caseData['agreedImmigrationHistoryDescription'];
-        // delete caseData['appellantsAgreedScheduleOfIssuesDescription'];
+        delete caseData['sendDirectionActionAvailable'];
+        delete caseData['isAnyWitnessInterpreterRequired'];
+        delete caseData['remoteVideoCallDescription'];
+        delete caseData['physicalOrMentalHealthIssuesDescription'];
+        delete caseData['multimediaEvidenceDescription'];
+        delete caseData['singleSexCourtType'];
+        delete caseData['singleSexCourtTypeDescription'];
+        delete caseData['inCameraCourtDescription'];
+        delete caseData['additionalRequestsDescription'];
+        delete caseData['appellantRepresentative'];
+        delete caseData['respondentRepresentative'];
+
+        for (let i=1; i<=10; i++) {
+            delete caseData[`witness${i}InterpreterLanguageCategory`];
+        }
+
+        caseData = {...caseData, ...eventData};
+
+        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+    });
+
+
+    test('Judge decides FTPA application for ' + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant') , async ({}) => {
+        eventName = 'decideFtpaApplication';
+        let response;
+
+        await ccdApiHelper.getNonEventTokens(judgeCredentials);
+        await ccdApiHelper.startEvent(eventName, caseId);
+
+        uploadedDocUrl = await ccdApiHelper.uploadDocument();
+        eventData = await new LegalAdminDetained().generateDecideFtpaApplicationData();
+
+        // we now inject info about document uploaded to document store into the eventData
+        if (judgeDecision === 'allowed') {
+            eventData.ftpaApplicationRespondentDocument.document_url = uploadedDocUrl;
+            eventData.ftpaApplicationRespondentDocument.document_binary_url = uploadedDocUrl + '/binary';
+        } else {
+            eventData.ftpaApplicationAppellantDocument.document_url = uploadedDocUrl;
+            eventData.ftpaApplicationAppellantDocument.document_binary_url = uploadedDocUrl + '/binary';
+        }
+
+        // validate the data before submitting
+        if (judgeDecision === 'allowed') {
+            response = await ccdApiHelper.validatePageData(eventName + 'ftpaRespondentDecisionReasonsNotes', eventName, eventData);
+        } else {
+            response = await ccdApiHelper.validatePageData(eventName + 'ftpaAppellantDecisionReasonsNotes', eventName, eventData);
+        }
+        expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
+
+        delete caseData['ftpaRespondentGroundsDocuments'];
+        delete caseData['ftpaAppellantGroundsDocuments'];
 
         caseData = {...caseData, ...eventData};
 
