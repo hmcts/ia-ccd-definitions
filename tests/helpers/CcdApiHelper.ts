@@ -196,12 +196,39 @@ export class CcdApiHelper {
             return await response.json();
         } catch (error) {
             throw new Error(
-                `An error occurred while trying to validate the page data: ${
+                `An error occurred while trying to retrieve the available events for the case: ${
                     error instanceof Error ? error.message : error
                 }`
             );
         };
+    };
 
+    async getCaseData(caseId: string) {
+        const url: string = `${ccdDataStoreApiBaseUrl}/caseworkers/${this.uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases/${caseId}`;
+        const apiRequestContext: APIRequestContext = await request.newContext();
+
+        try {
+            const response = await apiRequestContext.get(url, {
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "*/*",
+                    Authorization: `Bearer ${this.accessToken}`,
+                    ServiceAuthorization: this.s2sToken
+                },
+                data: {}
+            });
+
+            if (!response.ok()) {
+                console.log(stringify(await response.json()));
+            }
+            return (await response.json()).case_data;
+        } catch (error) {
+            throw new Error(
+                `An error occurred while trying to return the case data: ${
+                    error instanceof Error ? error.message : error
+                }`
+            );
+        };
     };
 
 

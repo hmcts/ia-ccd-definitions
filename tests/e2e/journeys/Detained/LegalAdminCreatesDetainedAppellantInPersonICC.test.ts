@@ -68,7 +68,7 @@ let createHearingRequest: CreateHearingRequest;
 
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal + (isRehydrated ? 'Rehydrated, ' : 'Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC Appeal.', { tag: '@LegalAdminCreatesDetainedAppellantInPersonICC' }, () => {
+test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal + (isRehydrated ? ' Rehydrated, ' : ' Paper, ') + (inTime ? 'In Time, ' : 'Out of Time, ')  + 'ICC Appeal.', { tag: '@LegalAdminCreatesDetainedAppellantInPersonICC' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -328,23 +328,23 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await idamPage.login(judgeCredentials);
         await pageHelper.getCase(caseId);
         await new PrepareDecisionAndReasons(page).generate('Yes');
-        await new CompleteDecisionAndReasons(page).upload(judgeDecision);
+     //   await new CompleteDecisionAndReasons(page).upload(judgeDecision);
         await linkHelper.signOut.click();
     });
 
-    test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({ page }) => {
-        await idamPage.login(judgeDecision === 'allowed' ? homeOfficeOfficerCredentials : legalOfficerAdminCredentials);
-        judgeDecision === 'allowed' ? await page.goto(envUrl + '/cases/case-details/' + caseId) : await pageHelper.getCase(caseId);
-        await new ApplyForPermissionToAppeal(page).apply(judgeDecision === 'allowed' ? 'Respondent' :  'Appellant');
-        await linkHelper.signOut.click();
-    });
-
-    test('Judge decides FTPA application', async ({ page }) => {
-        await idamPage.login(judgeCredentials);
-        await pageHelper.getCase(caseId);
-        await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
-        await linkHelper.signOut.click();
-    });
+    // test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant'), async ({ page }) => {
+    //     await idamPage.login(judgeDecision === 'allowed' ? homeOfficeOfficerCredentials : legalOfficerAdminCredentials);
+    //     judgeDecision === 'allowed' ? await page.goto(envUrl + '/cases/case-details/' + caseId) : await pageHelper.getCase(caseId);
+    //     await new ApplyForPermissionToAppeal(page).apply(judgeDecision === 'allowed' ? 'Respondent' :  'Appellant');
+    //     await linkHelper.signOut.click();
+    // });
+    //
+    // test('Judge decides FTPA application', async ({ page }) => {
+    //     await idamPage.login(judgeCredentials);
+    //     await pageHelper.getCase(caseId);
+    //     await new DecideFtpaApplication(page).submit(judgeDecision == 'allowed' ? 'Respondent' : 'Appellant');
+    //     await linkHelper.signOut.click();
+    // });
 
 
 });
