@@ -7,7 +7,6 @@ ENV="dev"
 PR_NUMBER=""
 USERNAME=$(whoami)
 DRY_RUN=false
-export FROM_LOCAL=false
 
 # Parse command line arguments
 while [[ $# -gt 0 ]]; do

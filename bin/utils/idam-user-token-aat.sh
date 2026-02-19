@@ -6,7 +6,6 @@
 ##    - password: ID assigned to user in generated token. Default to `London01`.
 ##
 ## Returns a valid IDAM user token for the given username and password.
-#echo "inside idam-user-token-aat.sh"
 
 vault_name="ia-aat"
 
