@@ -328,7 +328,7 @@ test.describe('Legal Admin creates Detained Appellant in Person ' + typeOfAppeal
         await idamPage.login(judgeCredentials);
         await pageHelper.getCase(caseId);
         await new PrepareDecisionAndReasons(page).generate('Yes');
-     //   await new CompleteDecisionAndReasons(page).upload(judgeDecision);
+        await new CompleteDecisionAndReasons(page).upload(judgeDecision);
         await linkHelper.signOut.click();
     });
 
