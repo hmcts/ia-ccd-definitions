@@ -213,12 +213,6 @@ pipeline {
        steps {
          script {
            env.PR_NUMBER = "${CHANGE_ID}"
-//           sh """
-//             set -e
-//             echo "Uploading CCD definition to PR ${CHANGE_ID} environment"
-//             corepack yarn --version
-//             bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
-//           """
            uploadCoreCaseDataDefinitions('aat')
          }
        }
@@ -226,7 +220,7 @@ pipeline {
          always {
            dir("${WORKSPACE}/target") {
              archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-aat.xlsx", allowEmptyArchive: true
-             echo "Pipeline completed for Uploading CCD definition to PR ${CHANGE_ID}"
+             echo "Pipeline completed for Generate and Upload CCD definition to AAT"
            }
          }
        }
