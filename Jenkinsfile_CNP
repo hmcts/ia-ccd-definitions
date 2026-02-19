@@ -203,7 +203,7 @@ pipeline {
       }
     }
 
-     stage('Upload CCD Definition to PR Environment') {
+     stage('Generate and Upload CCD Definition to AAT') {
        when {
          anyOf {
            branch 'PR-*'
@@ -219,7 +219,7 @@ pipeline {
 //             corepack yarn --version
 //             bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
 //           """
-           uploadCoreCaseDataDefinitions1()
+           uploadCoreCaseDataDefinitions('aat')
          }
        }
        post {
