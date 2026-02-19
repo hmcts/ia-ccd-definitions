@@ -115,23 +115,6 @@ def uploadCoreCaseDataDefinitions(env) {
   }
 }
 
-def uploadCoreCaseDataDefinitions1() {
-  if (env.ENVIRONMENT == 'preview') {
-    dir("${WORKSPACE}") {
-      sh """
-         set -e
-         echo "Uploading aat CCD definition to PR ${CHANGE_ID} environment"
-         corepack yarn --version
-         bin/utils/upload-ccd.sh -e aat
-      """
-    }
-
-//    dir("${WORKSPACE}/target") {
-//      steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview.xlsx"
-//    }
-  }
-}
-
 pipeline {
   agent any
   
@@ -162,6 +145,7 @@ pipeline {
       when {
         anyOf {
           branch 'PR-*'
+          branch 'master'
           changeRequest()
         }
       }
@@ -180,6 +164,7 @@ pipeline {
       when {
         anyOf {
           branch 'PR-*'
+          branch 'master'
           changeRequest()
         }
       }
@@ -207,6 +192,7 @@ pipeline {
        when {
          anyOf {
            branch 'PR-*'
+           branch 'master'
            changeRequest()
          }
        }
