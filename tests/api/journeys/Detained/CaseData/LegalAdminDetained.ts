@@ -77,6 +77,17 @@ export class LegalAdminDetained {
               id: "210b53f9-6c8a-4b48-a184-195b78d06ad4"
             }
           ],
+          ...detentionLocation === 'other' ? {
+                  appellantAddress: {
+                      AddressLine1: appellant.address.addressLine1,
+                      AddressLine2: "",
+                      AddressLine3: "",
+                      PostTown: appellant.address.postTown,
+                      County: "",
+                      PostCode: appellant.address.postcode,
+                      Country: appellant.address.country
+                  },
+              } : {},
           internalAppellantMobileNumber: appellant.mobile,
           internalAppellantEmail: appellant.email,
           appealType: typeOfAppeal,

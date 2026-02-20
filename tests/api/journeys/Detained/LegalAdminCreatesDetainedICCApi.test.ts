@@ -442,7 +442,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
             // if not then wait 5 secs before trying again
             for (const element in availableEvents) {
                 if (availableEvents[element].id === 'asyncStitchingComplete') {
-                    console.log('Hearing Bundle generation completed.');
+                    console.log('Hearing Bundle generation COMPLETED.');
                     asyncStitchingComplete = true;
                 } else {
                     console.log(`Hearing Bundle generation NOT completed. Waiting to retry: ${i+1} of ${maxRetries}`);
