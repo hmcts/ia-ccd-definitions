@@ -1749,9 +1749,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "revokeCaseAccessV2", "CaseFieldID": "revokeAccessDl", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "revokeCaseAccessDl", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "sendInviteToNonLegalRep", "CaseFieldID": "nlrEmail", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "sendInviteToNonLegalRep", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "sendPipToNonLegalRep", "CaseFieldID": "nlrEmail", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "sendPipToNonLegalRep", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "joinAppealPip", "CaseFieldID": "nlrDetails", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "joinAppealPip", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "joinAppealPip", "CaseFieldID": "nlrDetailsV2", "PageFieldDisplayOrder": 2, "DisplayContext": "MANDATORY", "PageID": "joinAppealPip", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "joinAppealConfirmation", "CaseFieldID": "nlrDetails", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "joinAppealConfirmation", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestFeeRemission", "CaseFieldID": "requestFeeRemissionFlagForServiceRequest", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "remissionType", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N", "FieldShowCondition": "feeRemissionsHeader=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestFeeRemission", "CaseFieldID": "feeRemissionsHeader", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "remissionType", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
