@@ -1751,7 +1751,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "sendInviteToNonLegalRep", "CaseFieldID": "nlrEmail", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "sendInviteToNonLegalRep", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "sendPipToNonLegalRep", "CaseFieldID": "nlrEmail", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "sendPipToNonLegalRep", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y", "CallBackURLMidEvent": "${CCD_DEF_IA_URL}/asylum/ccdMidEvent?pageId=sendPipToNonLegalRep"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "sendPipToNonLegalRep", "CaseFieldID": "sentFromFrontend", "PageFieldDisplayOrder": 2, "DisplayContext": "OPTIONAL", "PageID": "sendPipToNonLegalRep", "PageDisplayOrder": 1, "FieldShowCondition": "nlrEmail=\"DUMMY_FIELD_TO_HIDE\"", "ShowSummaryChangeOption": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "joinAppealConfirmation", "CaseFieldID": "nlrDetails", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "joinAppealConfirmation", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
 

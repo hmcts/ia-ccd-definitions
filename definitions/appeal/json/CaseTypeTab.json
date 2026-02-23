@@ -880,6 +880,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalOfficer_remitted", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToCaseOfficer=\"remitted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_judge_remitted", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToJudge=\"remitted\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRep_remitted_hearing_requirements", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"submitHearingRequirements\" AND rehearingReason=\"*\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "nlrDetailsTitle", "TabFieldDisplayOrder": 350, "FieldShowCondition": "nlrDetails=\"*\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "nlrDetails", "TabFieldDisplayOrder": 351, "FieldShowCondition": "nlrDetails=\"*\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "TabLabel": "Appeal", "TabDisplayOrder": 2, "CaseFieldID": "appealTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "isOutOfCountryEnabled", "TabFieldDisplayOrder": 2, "FieldShowCondition": "isOutOfCountryEnabled=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
