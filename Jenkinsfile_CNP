@@ -110,6 +110,7 @@ def uploadCoreCaseDataDefinitions(environmet_string) {
     dir("${WORKSPACE}") {
       ccdDefinitionFilePath = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${environmet_string}.xlsx"
       sh """
+      ls -al bin/utils
       set -e
       bin/utils/upload-ccd.sh -e ${environmet_string}
     """
