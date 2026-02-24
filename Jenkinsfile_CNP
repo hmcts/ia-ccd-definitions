@@ -127,6 +127,9 @@ pipeline {
     DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     CCD_DATA_STORE_URL = "https://ccd-data-store-api-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
   }
+
+  enableHighLevelDataSetup()
+  loadVaultSecrets(secrets)
   
   stages {
     stage('Setup') {
@@ -200,8 +203,8 @@ pipeline {
         script {
           env.PR_NUMBER = "${CHANGE_ID}"
           uploadCoreCaseDataDefinitions('aat')
-          enableHighLevelDataSetup()
-          loadVaultSecrets(secrets)
+//          enableHighLevelDataSetup()
+//          loadVaultSecrets(secrets)
         }
       }
       post {
