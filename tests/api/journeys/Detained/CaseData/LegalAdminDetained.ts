@@ -98,16 +98,23 @@ export class LegalAdminDetained {
           removalOrderOptions: "No",
           hasOtherAppeals: "No",
           hearingTypeResult: "No",
-          decisionHearingFeeOption: "decisionWithHearing",
-          ...feeRemission === 'Yes' ? {remissionType: "hoWaiverRemission"} : {remissionType: "noRemission"},
-          feeWithHearing: "140",
-          ...feeRemission === 'Yes' ? {remissionClaim: "section17"} : {},
-          ...feeRemission === 'Yes' ? {section17Document: {
-                  document_url: "INJECTED VALUE",
-                  document_binary_url: "INJECTED_VALUE",
-                  document_filename: "TEST DOCUMENT 3.pdf"
-              }}
-              : {},
+          ...(typeOfAppeal === 'revocationOfProtection' || typeOfAppeal === 'deprivation') ?
+              { rpDcAppealHearingOption: "decisionWithHearing"}
+              :
+              {
+                  decisionHearingFeeOption: "decisionWithHearing",
+                  ...feeRemission === 'Yes' ? {remissionType: "hoWaiverRemission"} : {remissionType: "noRemission"},
+                  feeWithHearing: "140",
+                  ...feeRemission === 'Yes' ? {remissionClaim: "section17"} : {},
+                  ...feeRemission === 'Yes' ? {
+                          section17Document: {
+                              document_url: "INJECTED VALUE",
+                              document_binary_url: "INJECTED_VALUE",
+                              document_filename: "TEST DOCUMENT 3.pdf"
+                          }
+                      }
+                      : {},
+              },
           ...!isRehydrated ? {uploadTheNoticeOfDecisionDocs: [
                 {
                     value: {

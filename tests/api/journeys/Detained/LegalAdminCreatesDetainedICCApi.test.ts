@@ -112,20 +112,23 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         });
     }
 
-    test('Submit: Mark as Paid event', async ({}) => {
-        eventName = 'markAppealPaid';
+    // Only mark as paid if payment is required
+    if (typeOfAppeal !== 'revocationOfProtection' && typeOfAppeal !== 'deprivation') {
+        test('Submit: Mark as Paid event', async ({}) => {
+            eventName = 'markAppealPaid';
 
-        await ccdApiHelper.startEvent(eventName, caseId);
-        eventData = await new LegalAdminDetained().generateMarkAsPaidData();
+            await ccdApiHelper.startEvent(eventName, caseId);
+            eventData = await new LegalAdminDetained().generateMarkAsPaidData();
 
-        // validate the data before submitting
-        let response = await ccdApiHelper.validatePageData(eventName + 'remissionDecisionDetails', eventName, eventData);
-        expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
+            // validate the data before submitting
+            let response = await ccdApiHelper.validatePageData(eventName + 'remissionDecisionDetails', eventName, eventData);
+            expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
 
-        caseData = {...caseData, ...eventData};
+            caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
-    });
+            response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        });
+    }
 
     test('Submit: Request Respondent Evidence event', async ({}) => {
         eventName = 'requestRespondentEvidence';
