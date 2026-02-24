@@ -241,6 +241,8 @@ withPipeline(type, product, component) {
   enableHighLevelDataSetup()
   loadVaultSecrets(secrets)
 
+  uploadCoreCaseDataDefinitions('preview')
+
   onPR {
     echo "inside onPR"
 //      env.ENVIRONMENT = "preview"
@@ -272,6 +274,6 @@ withPipeline(type, product, component) {
     echo "inside before highleveldatasetup"
     yarnBuilder.yarn('setup')
 //      archiveCoreCaseDataDefinitions()
-    uploadCoreCaseDataDefinitions('preview')
+//    uploadCoreCaseDataDefinitions('preview')
   }
 }

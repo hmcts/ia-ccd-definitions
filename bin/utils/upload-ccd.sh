@@ -117,5 +117,5 @@ if [ ! -f "${OUTPUT_PATH}" ]; then
 fi
 
 # Upload to CCD using the appropriate token environment
-#echo "Uploading definition file to ${CCD_URL}..."
-#bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}"
+echo "Uploading definition file to ${CCD_URL}..."
+bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}"
