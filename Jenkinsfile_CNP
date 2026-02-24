@@ -270,6 +270,6 @@ withPipeline(type, product, component) {
     echo "inside before highleveldatasetup"
     yarnBuilder.yarn('setup')
 //      archiveCoreCaseDataDefinitions()
-    uploadCoreCaseDataDefinitions('preview')
+//    uploadCoreCaseDataDefinitions('preview')
   }
 }
