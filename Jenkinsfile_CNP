@@ -107,13 +107,15 @@ def secrets = [
 
 def uploadCoreCaseDataDefinitions(environmet_string) {
   node {
+    checkout scm
+    sh 'ls -al'
     dir("${WORKSPACE}") {
+      sh 'ls -al bin/utils'
       ccdDefinitionFilePath = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${environmet_string}.xlsx"
       sh """
-      ls -al bin/utils
       set -e
       bin/utils/upload-ccd.sh -e ${environmet_string}
-    """
+      """
     }
   }
 }
