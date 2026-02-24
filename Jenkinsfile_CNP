@@ -112,6 +112,8 @@ def uploadCoreCaseDataDefinitions(env) {
       set -e
       bin/utils/upload-ccd.sh -e ${env}
     """
+//    enableHighLevelDataSetup()
+//    loadVaultSecrets(secrets)
   }
 }
 
@@ -181,6 +183,32 @@ pipeline {
           dir("${WORKSPACE}/target") {
             archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview-pr${CHANGE_ID}.xlsx", allowEmptyArchive: true
             echo "Pipeline completed for PR ${CHANGE_ID}"
+          }
+        }
+      }
+    }
+
+    stage('Generate and Upload CCD Definition to AAT') {
+      when {
+        anyOf {
+          branch 'PR-*'
+          branch 'master'
+          changeRequest()
+        }
+      }
+      steps {
+        script {
+          env.PR_NUMBER = "${CHANGE_ID}"
+          uploadCoreCaseDataDefinitions('aat')
+          enableHighLevelDataSetup()
+          loadVaultSecrets(secrets)
+        }
+      }
+      post {
+        always {
+          dir("${WORKSPACE}/target") {
+            archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-aat.xlsx", allowEmptyArchive: true
+            echo "Pipeline completed for Generate and Upload CCD definition to AAT"
           }
         }
       }

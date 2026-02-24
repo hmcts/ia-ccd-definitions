@@ -63,6 +63,14 @@ case $ENV in
     GENERATE_CMD="yarn generate -e mirrord"
     TOKEN_ENV="aat"
     ;;
+  aat)
+    FILENAME="ccd-appeal-config-aat.xlsx"
+    #CCD_URL="https://ccd-definition-store-ia-case-api-pr-2620.preview.platform.hmcts.net"
+    CCD_URL="http://ccd-definition-store-api-aat.service.core-compute-aat.internal"
+    GENERATE_CMD="corepack yarn generate -e aat"
+    TOKEN_ENV="aat"
+    az login --identity
+    ;;
   preview)
     FILENAME="ccd-appeal-config-preview-pr${PR_NUMBER}.xlsx"
     CCD_URL="https://ccd-definition-store-ia-case-api-pr-${PR_NUMBER}.preview.platform.hmcts.net"
@@ -105,5 +113,5 @@ if [ ! -f "${OUTPUT_PATH}" ]; then
 fi
 
 # Upload to CCD using the appropriate token environment
-echo "Uploading definition file to ${CCD_URL}..."
-bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}" 
+#echo "Uploading definition file to ${CCD_URL}..."
+#bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}"
