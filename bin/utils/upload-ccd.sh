@@ -80,6 +80,7 @@ case $ENV in
 #    GENERATE_CMD="corepack yarn generate -e preview -p ${PR_NUMBER}"
     GENERATE_CMD="corepack yarn generate -e preview -p 2620"
     TOKEN_ENV="aat"
+    az login --identity
     ;;
   *)
     echo "Error: Unsupported environment: ${ENV}"
