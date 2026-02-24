@@ -105,12 +105,12 @@ def secrets = [
 //  }
 //}
 
-def uploadCoreCaseDataDefinitions(env) {
+def uploadCoreCaseDataDefinitions(environmet_string) {
   dir("${env.WORKSPACE}") {
-    ccdDefinitionFilePath = "${env.WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${env}.xlsx"
+    ccdDefinitionFilePath = "${env.WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${environmet_string}.xlsx"
     sh """
       set -e
-      bin/utils/upload-ccd.sh -e ${env}
+      bin/utils/upload-ccd.sh -e ${environmet_string}
     """
   }
 }
