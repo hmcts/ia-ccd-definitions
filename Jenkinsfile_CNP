@@ -106,9 +106,7 @@ def secrets = [
 //}
 
 def uploadCoreCaseDataDefinitions(env) {
-  echo "inside uploadCoreCaseDataDefinitions with environment ${env}"
   dir("${WORKSPACE}") {
-    echo "inside uploadCoreCaseDataDefinitions with environment ${env} and workspace ${WORKSPACE}"
     ccdDefinitionFilePath = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${env}.xlsx"
     sh """
       set -e
@@ -240,14 +238,6 @@ def uploadCoreCaseDataDefinitions(env) {
 withPipeline(type, product, component) {
   enableHighLevelDataSetup()
   loadVaultSecrets(secrets)
-
-//  uploadCoreCaseDataDefinitions('preview')
-
-//  sh """
-//      set -e
-//      bin/utils/upload-ccd.sh -e preview
-//    """
-
 
   onPR {
     echo "inside onPR"
