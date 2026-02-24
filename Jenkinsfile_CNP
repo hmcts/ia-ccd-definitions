@@ -105,15 +105,15 @@ def secrets = [
 //  }
 //}
 
-//def uploadCoreCaseDataDefinitions(env) {
-//  dir("${WORKSPACE}") {
-//    ccdDefinitionFilePath = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${env}.xlsx"
-//    sh """
-//      set -e
-//      bin/utils/upload-ccd.sh -e ${env}
-//    """
-//  }
-//}
+def uploadCoreCaseDataDefinitions(env) {
+  dir("${WORKSPACE}") {
+    ccdDefinitionFilePath = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${env}.xlsx"
+    sh """
+      set -e
+      bin/utils/upload-ccd.sh -e ${env}
+    """
+  }
+}
 
 //pipeline {
 //  agent any
