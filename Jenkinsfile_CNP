@@ -241,7 +241,13 @@ withPipeline(type, product, component) {
   enableHighLevelDataSetup()
   loadVaultSecrets(secrets)
 
-  uploadCoreCaseDataDefinitions('preview')
+//  uploadCoreCaseDataDefinitions('preview')
+
+  sh """
+      set -e
+      bin/utils/upload-ccd.sh -e preview
+    """
+
 
   onPR {
     echo "inside onPR"
