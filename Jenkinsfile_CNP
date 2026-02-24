@@ -106,7 +106,9 @@ def secrets = [
 //}
 
 def uploadCoreCaseDataDefinitions(env) {
+  echo "inside uploadCoreCaseDataDefinitions with environment ${env}"
   dir("${WORKSPACE}") {
+    echo "inside uploadCoreCaseDataDefinitions with environment ${env} and workspace ${WORKSPACE}"
     ccdDefinitionFilePath = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${env}.xlsx"
     sh """
       set -e

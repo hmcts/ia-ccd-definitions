@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "inside upload-ccd"
+
 set -eu
 
 # Default values
