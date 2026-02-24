@@ -110,6 +110,8 @@ def uploadCoreCaseDataDefinitions(environmet_string) {
     checkout scm
     sh 'ls -al'
     dir("${WORKSPACE}") {
+      sh 'corepack yarn install'
+      sh 'corepack yarn setup'
       sh 'ls -al bin/utils'
       ccdDefinitionFilePath = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${environmet_string}.xlsx"
       sh """
