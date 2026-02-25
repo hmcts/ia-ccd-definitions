@@ -246,7 +246,7 @@ def uploadCoreCaseDataDefinitions(environmet_string) {
 withPipeline(type, product, component) {
   enableHighLevelDataSetup()
   loadVaultSecrets(secrets)
-  enableBuild()
+  //enableBuild()
 
   onPR {
     echo "inside onPR"
@@ -271,7 +271,7 @@ withPipeline(type, product, component) {
 
   }
 
-  after('build') {
+  afterSuccess('checkout') {
     uploadCoreCaseDataDefinitions('aat')
 
     uploadCoreCaseDataDefinitions('prod')
