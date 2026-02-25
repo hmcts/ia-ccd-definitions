@@ -118,7 +118,7 @@ def uploadCoreCaseDataDefinitions(environmet_string) {
       set -e
       bin/utils/upload-ccd.sh -e ${environmet_string}
       """
-      steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-${environmet_string}.xlsx"
+      steps.archiveArtifacts artifacts: "target/appeal/xlsx/ccd-appeal-config-${environmet_string}.xlsx"
     }
   }
 }
