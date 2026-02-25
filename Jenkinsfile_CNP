@@ -246,6 +246,7 @@ def uploadCoreCaseDataDefinitions(environmet_string) {
 withPipeline(type, product, component) {
   enableHighLevelDataSetup()
   loadVaultSecrets(secrets)
+  enableBuild()
 
   onPR {
     echo "inside onPR"
