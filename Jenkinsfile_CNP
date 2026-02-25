@@ -275,6 +275,8 @@ withPipeline(type, product, component) {
     uploadCoreCaseDataDefinitions('aat')
 
     uploadCoreCaseDataDefinitions('prod')
+
+    echo "DEFINITION_IMPORTER_USERNAME: ${DEFINITION_IMPORTER_USERNAME}"
   }
 
 //  before('highleveldatasetup') {
