@@ -63,56 +63,12 @@ def secrets = [
   ]
 ]
 
-//def archiveCoreCaseDataDefinitions() {
-//  if (env.ENVIRONMENT == 'aat') {
-//    echo "current environment is ${env.ENVIRONMENT}"
-//    for (PROD_ENV in ["aat", "prod"]) {
-//      echo "environment is ${PROD_ENV}"
-//      dir("${WORKSPACE}") {
-//        sh """
-//          set -e
-//          yarn generate-${PROD_ENV}
-//        """
-//      }
-//
-//      dir("${WORKSPACE}/target") {
-//        steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-${PROD_ENV}.xlsx"
-//      }
-//    }
-//
-//  } else if (env.ENVIRONMENT == 'preview') {
-//    dir("${WORKSPACE}") {
-//      sh """
-//          set -e
-//          yarn generate-preview
-//      """
-//    }
-//
-//    dir("${WORKSPACE}/target") {
-//      steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview.xlsx"
-//    }
-//  } else {
-//    dir("${WORKSPACE}") {
-//      sh """
-//          set -e
-//          yarn generate-${env.ENVIRONMENT}
-//        """
-//    }
-//
-//    dir("${WORKSPACE}/target") {
-//      steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-${env.ENVIRONMENT}.xlsx"
-//    }
-//  }
-//}
-
 def uploadCoreCaseDataDefinitions(environmentString) {
   node {
     checkout scm
-//    sh 'ls -al'
     dir("${WORKSPACE}") {
       sh 'corepack yarn install'
       sh 'corepack yarn setup'
-//      sh 'ls -al bin/utils'
       ccdDefinitionFilePath = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${environmentString}.xlsx"
       sh """
       set -e
@@ -123,146 +79,11 @@ def uploadCoreCaseDataDefinitions(environmentString) {
   }
 }
 
-//pipeline {
-//  agent any
-//
-//  environment {
-//    ENVIRONMENT = "preview"
-//    NODE_TLS_REJECT_UNAUTHORIZED = "0"
-//    PR_NUMBER = "${CHANGE_ID}"
-//    DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-//    CCD_DATA_STORE_URL = "https://ccd-data-store-api-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-//  }
-//
-//  stages {
-//    stage('Setup') {
-//      steps {
-//        script {
-//          // Use corepack prepare to get the correct Yarn version without system-wide installation
-//          sh 'corepack prepare yarn@3.4.1 --activate'
-//          // Use corepack to run yarn commands
-//          sh 'corepack yarn --version'
-//          // Install dependencies first
-//          sh 'corepack yarn install'
-//          sh 'corepack yarn setup'
-//        }
-//      }
-//    }
-//
-//    stage('Validate JSON') {
-//      when {
-//        anyOf {
-//          branch 'PR-*'
-//          changeRequest()
-//        }
-//      }
-//      steps {
-//        script {
-//          sh """
-//            set -e
-//            echo "Validating JSON definitions for PR ${CHANGE_ID}"
-//            corepack yarn test
-//          """
-//        }
-//      }
-//    }
-//
-//    stage('Generate CCD Definition for PR') {
-//      when {
-//        anyOf {
-//          branch 'PR-*'
-//          changeRequest()
-//        }
-//      }
-//      steps {
-//        script {
-//          env.PR_NUMBER = "${CHANGE_ID}"
-//          sh """
-//            set -e
-//            echo "Generating CCD definition for PR ${CHANGE_ID}"
-//            corepack yarn generate-preview
-//          """
-//        }
-//      }
-//      post {
-//        always {
-//          dir("${WORKSPACE}/target") {
-//            archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview-pr${CHANGE_ID}.xlsx", allowEmptyArchive: true
-//            echo "Pipeline completed for PR ${CHANGE_ID}"
-//          }
-//        }
-//      }
-//    }
-//
-//    stage('Generate and Upload CCD Definition to AAT') {
-//      when {
-//        anyOf {
-//          branch 'PR-*'
-//          branch 'master'
-//          changeRequest()
-//        }
-//      }
-//      steps {
-//        script {
-//          env.PR_NUMBER = "${CHANGE_ID}"
-//          uploadCoreCaseDataDefinitions('aat')
-//        }
-//        enableHighLevelDataSetup()
-//        loadVaultSecrets(secrets)
-//      }
-//      post {
-//        always {
-//          dir("${WORKSPACE}/target") {
-//            archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-aat.xlsx", allowEmptyArchive: true
-//            echo "Pipeline completed for Generate and Upload CCD definition to AAT"
-//          }
-//        }
-//      }
-//    }
-//
-//    // stage('Upload CCD Definition to PR Environment') {
-//    //   when {
-//    //     anyOf {
-//    //       branch 'PR-*'
-//    //       changeRequest()
-//    //     }
-//    //   }
-//    //   steps {
-//    //     script {
-//    //       env.PR_NUMBER = "${CHANGE_ID}"
-//    //       sh """
-//    //         set -e
-//    //         echo "Uploading CCD definition to PR ${CHANGE_ID} environment"
-//    //         bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
-//    //       """
-//    //     }
-//    //   }
-//    // }
-//  }
-//
-//
-//}
-
 withPipeline(type, product, component) {
 //  enableHighLevelDataSetup()
   loadVaultSecrets(secrets)
-  //enableBuild()
 
   onPR {
-    echo "inside onPR"
-//      env.ENVIRONMENT = "preview"
-//      env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-//      env.CIVIL_SERVICE_URL = "https://civil-ccd-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-//      if (isHmcEnabled(env.BRANCH_NAME)) {
-//        env.DEFINITION_STORE_URL_BASE = "http://ccd-definition-store-api-aat.service.core-compute-aat.internal"
-//        env.CCD_DATA_STORE_URL = "http://ccd-data-store-api-aat.service.core-compute-aat.internal"
-//        env.CCD_DEF_VERSION = "-${CHANGE_ID}"
-//      } else {
-//        env.DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-civil-ccd-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-//        env.CCD_DATA_STORE_URL = "https://ccd-data-store-api-civil-ccd-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-//      }
-
-
     env.ENVIRONMENT = "preview"
     env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
     env.PR_NUMBER = "${CHANGE_ID}"
@@ -273,10 +94,7 @@ withPipeline(type, product, component) {
 
   afterSuccess('checkout') {
     uploadCoreCaseDataDefinitions('aat')
-
     uploadCoreCaseDataDefinitions('prod')
-
-    echo "DEFINITION_IMPORTER_USERNAME: ${env.DEFINITION_IMPORTER_USERNAME}"
   }
 
 //  before('highleveldatasetup') {

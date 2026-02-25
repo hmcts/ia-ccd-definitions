@@ -67,7 +67,6 @@ case $ENV in
     ;;
   aat)
     FILENAME="ccd-appeal-config-aat.xlsx"
-    #CCD_URL="https://ccd-definition-store-ia-case-api-pr-2620.preview.platform.hmcts.net"
     CCD_URL="http://ccd-definition-store-api-aat.service.core-compute-aat.internal"
     GENERATE_CMD="corepack yarn generate -e aat"
     TOKEN_ENV="aat"
@@ -75,16 +74,14 @@ case $ENV in
     ;;
   preview)
     FILENAME="ccd-appeal-config-preview-pr${PR_NUMBER}.xlsx"
-#    CCD_URL="https://ccd-definition-store-ia-case-api-pr-${PR_NUMBER}.preview.platform.hmcts.net"
-    CCD_URL="https://ccd-definition-store-ia-case-api-pr-2620.preview.platform.hmcts.net"
-#    GENERATE_CMD="corepack yarn generate -e preview -p ${PR_NUMBER}"
-    GENERATE_CMD="corepack yarn generate -e preview -p 2620"
+    CCD_URL="https://ccd-definition-store-ia-case-api-pr-${PR_NUMBER}.preview.platform.hmcts.net"
+#    CCD_URL="https://ccd-definition-store-ia-case-api-pr-2620.preview.platform.hmcts.net"
+    GENERATE_CMD="corepack yarn generate -e preview -p ${PR_NUMBER}"
     TOKEN_ENV="aat"
     az login --identity
     ;;
   prod)
     FILENAME="ccd-appeal-config-prod.xlsx"
-#    CCD_URL="https://ccd-definition-store-ia-case-api-pr-2620.preview.platform.hmcts.net"
     CCD_URL="http://ia-case-api-prod.service.core-compute-prod.internal"
     GENERATE_CMD="corepack yarn generate -e prod"
     TOKEN_ENV="aat"
@@ -128,7 +125,6 @@ fi
 # Upload to CCD using the appropriate token environment
 #echo "Uploading definition file to ${CCD_URL}..."
 #bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}"
-
 if [[ "${ENV}" != "prod" ]]; then
   echo "Uploading definition file to ${CCD_URL}..."
   bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}"
