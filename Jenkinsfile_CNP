@@ -276,7 +276,7 @@ withPipeline(type, product, component) {
 
     uploadCoreCaseDataDefinitions('prod')
 
-    echo "DEFINITION_IMPORTER_USERNAME: ${DEFINITION_IMPORTER_USERNAME}"
+    echo "DEFINITION_IMPORTER_USERNAME: ${env.DEFINITION_IMPORTER_USERNAME}"
   }
 
 //  before('highleveldatasetup') {
