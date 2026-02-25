@@ -82,6 +82,13 @@ case $ENV in
     TOKEN_ENV="aat"
     az login --identity
     ;;
+  prod)
+    FILENAME="ccd-appeal-config-prod.xlsx"
+#    CCD_URL="https://ccd-definition-store-ia-case-api-pr-2620.preview.platform.hmcts.net"
+    #CCD_URL="http://ccd-definition-store-api-aat.service.core-compute-aat.internal"
+    GENERATE_CMD="corepack yarn generate -e prod"
+    TOKEN_ENV="aat"
+    az login --identity
   *)
     echo "Error: Unsupported environment: ${ENV}"
     echo "Supported environments: dev, mirrord, preview"
