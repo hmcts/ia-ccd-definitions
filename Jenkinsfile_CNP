@@ -105,7 +105,7 @@ def secrets = [
 //  }
 //}
 
-def uploadCoreCaseDataDefinitions(environmet_string) {
+def uploadCoreCaseDataDefinitions(environmentString) {
   node {
     checkout scm
 //    sh 'ls -al'
@@ -113,12 +113,12 @@ def uploadCoreCaseDataDefinitions(environmet_string) {
       sh 'corepack yarn install'
       sh 'corepack yarn setup'
 //      sh 'ls -al bin/utils'
-      ccdDefinitionFilePath = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${environmet_string}.xlsx"
+      ccdDefinitionFilePath = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${environmentString}.xlsx"
       sh """
       set -e
-      bin/utils/upload-ccd.sh -e ${environmet_string}
+      bin/utils/upload-ccd.sh -e ${environmentString}
       """
-      steps.archiveArtifacts artifacts: "target/appeal/xlsx/ccd-appeal-config-${environmet_string}.xlsx"
+      steps.archiveArtifacts artifacts: "target/appeal/xlsx/ccd-appeal-config-${environmentString}.xlsx"
     }
   }
 }
@@ -244,7 +244,7 @@ def uploadCoreCaseDataDefinitions(environmet_string) {
 //}
 
 withPipeline(type, product, component) {
-  enableHighLevelDataSetup()
+//  enableHighLevelDataSetup()
   loadVaultSecrets(secrets)
   //enableBuild()
 
@@ -277,10 +277,10 @@ withPipeline(type, product, component) {
     uploadCoreCaseDataDefinitions('prod')
   }
 
-  before('highleveldatasetup') {
-    echo "inside before highleveldatasetup"
-    yarnBuilder.yarn('setup')
+//  before('highleveldatasetup') {
+//    echo "inside before highleveldatasetup"
+//    yarnBuilder.yarn('setup')
 //      archiveCoreCaseDataDefinitions()
 //    uploadCoreCaseDataDefinitions('preview')
-  }
+//  }
 }
