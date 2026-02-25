@@ -268,12 +268,12 @@ withPipeline(type, product, component) {
     env.DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
     env.CCD_DATA_STORE_URL = "https://ccd-data-store-api-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
 
+  }
 
+  before('test') {
     uploadCoreCaseDataDefinitions('aat')
 
     uploadCoreCaseDataDefinitions('prod')
-
-
   }
 
   before('highleveldatasetup') {
