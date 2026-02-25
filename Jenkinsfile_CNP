@@ -108,16 +108,17 @@ def secrets = [
 def uploadCoreCaseDataDefinitions(environmet_string) {
   node {
     checkout scm
-    sh 'ls -al'
+//    sh 'ls -al'
     dir("${WORKSPACE}") {
       sh 'corepack yarn install'
       sh 'corepack yarn setup'
-      sh 'ls -al bin/utils'
+//      sh 'ls -al bin/utils'
       ccdDefinitionFilePath = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${environmet_string}.xlsx"
       sh """
       set -e
-      bin/utils/upload-ccd.sh -e ${environmet_string} -p 2620
+      bin/utils/upload-ccd.sh -e ${environmet_string}
       """
+      steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-${environmet_string}.xlsx"
     }
   }
 }
@@ -268,7 +269,7 @@ withPipeline(type, product, component) {
     env.CCD_DATA_STORE_URL = "https://ccd-data-store-api-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
 
 
-    uploadCoreCaseDataDefinitions('preview')
+    uploadCoreCaseDataDefinitions('aat')
 
 
   }
