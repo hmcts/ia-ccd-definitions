@@ -1,6 +1,8 @@
 import { Page } from "@playwright/test";
 import {imageLocators} from "../fixtures/imageLocators";
 import {TabsHelper} from "./TabsHelper";
+import {WaitUtils} from "../e2e/utils/wait.utils";
+import {envUrl} from "../iacConfig";
 
 export class PageHelper {
 
@@ -21,9 +23,15 @@ export class PageHelper {
         await this.page.getByRole('button', { name: 'Go' }).click();
     }
 
-    async getCase(caseId: string) {
-        await this.page.fill('#exuiCaseReferenceSearch', caseId);
-        await this.page.getByRole( 'button', { name: 'Find' }).click();
+    // When running as API test the search reference box is not being populated.  Tried multiple options to no avail
+    // So added 2nd parameter and use the url instead of search reference box for API tests
+    async getCase(caseId: string, isE2e: boolean = true) {
+        if (isE2e) {
+            await this.page.fill('#exuiCaseReferenceSearch', caseId);
+            await this.page.getByRole( 'button', { name: 'Find' }).click();
+        } else {
+            await this.page.goto(envUrl + '/cases/case-details/IA/Asylum/' + caseId);
+        }
     }
 
     async waitForHearingBundleToBeGenerated() {

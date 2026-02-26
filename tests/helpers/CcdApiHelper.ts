@@ -123,6 +123,8 @@ export class CcdApiHelper {
 
     async saveDataToDataStore(eventName:string, caseId, eventData:unknown,  ) {
         let url: string;
+        let caseData;
+
         if (eventName === 'startAppeal' || eventName === 'ariaCreateCase') {
             url = `${ccdDataStoreApiBaseUrl}/caseworkers/${this.uid}/jurisdictions/${createCase.jurisdictionCode}/case-types/${createCase.caseTypeCode}/cases`;
         } else {
@@ -161,7 +163,9 @@ export class CcdApiHelper {
                     );
                 }
             }
-            return await response.json();
+            //caseData = await response.json();
+            caseData = {...await response.json(), ...{httpResponse: response.status()}};
+            return caseData;
         } catch (error) {
             throw new Error(
                 `An error occurred while trying to validate the page data: ${

@@ -10,6 +10,7 @@ import {IdamPage} from "../../../e2e/page-objects/pages/idam.po";
 import {LinkHelper} from "../../../helpers/LinkHelper";
 import {PageHelper} from "../../../helpers/PageHelper";
 import {CompleteDecisionAndReasons} from "../../../e2e/flows/events/completeDecisionAndReasons";
+import {CommonDetained} from "./CaseData/CommonDetained";
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 
@@ -29,10 +30,13 @@ let caseId: string = '';
 const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivation', 'euSettlementScheme', 'revocationOfProtection', 'protection'].includes(process.env.APPEAL_TYPE) ? process.env.APPEAL_TYPE : 'deprivation';
 let eventName: string;
 let ccdApiHelper: CcdApiHelper;
+let legalAdminDetained: LegalAdminDetained;
+let commonDetained: CommonDetained;
+
 let uploadedDocUrl: string;
 let eventData;
 let caseData;
-
+let savedDataResponse;
 
 
 test.describe.configure({ mode: 'serial'});
@@ -40,6 +44,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
     test.beforeAll(async ({}) => {
         ccdApiHelper = new CcdApiHelper();
+        legalAdminDetained = new LegalAdminDetained();
+        commonDetained = new CommonDetained();
     });
 
     test('Create detained ' + (isRehydrated ? 'Rehydrated ' : 'Paper ') + ' ICC DRAFT Appeal', async ({page}) => {
@@ -47,10 +53,11 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         await ccdApiHelper.getNonEventTokens(legalOfficerAdminCredentials);
         await ccdApiHelper.startEvent(eventName, null);
-        uploadedDocUrl = await ccdApiHelper.uploadDocument();
-        eventData = await new LegalAdminDetained().generateDraftData();
+
+        eventData = await legalAdminDetained.generateDraftData();
 
         // we now inject info about document uploaded to document store into the eventData
+        uploadedDocUrl = await ccdApiHelper.uploadDocument();
         eventData.uploadTheAppealFormDocs[0].value.document.document_url = uploadedDocUrl;
         eventData.uploadTheAppealFormDocs[0].value.document.document_binary_url = uploadedDocUrl + '/binary';
 
@@ -72,10 +79,11 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
             eventData.section17Document.document_binary_url = uploadedDocUrl + '/binary';
         }
 
-        //console.log(eventData);
         caseData = {...caseData, ...eventData};
 
         const response = await ccdApiHelper.saveDataToDataStore(eventName, null, caseData);
+        // validate the data saved successfully
+        expect(response.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
         caseId = (response.id).toString();
         console.log('caseId>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<');
     });
@@ -84,10 +92,18 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         eventName = 'submitAppeal';
 
         await ccdApiHelper.startEvent(eventName, caseId);
-        eventData = await new LegalAdminDetained().generateSubmitData();
+        eventData = await commonDetained.generateSubmitData();
+
+        // If Out of Time appeal, inject the Out of Time document
+        if (!inTime) {
+            uploadedDocUrl = await ccdApiHelper.uploadDocument();
+            eventData.applicationOutOfTimeDocument.document_url = uploadedDocUrl;
+            eventData.applicationOutOfTimeDocument.document_binary_url = uploadedDocUrl + '/binary';
+        }
 
         caseData = {...caseData, ...eventData};
         const response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(response.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
 
         if (!isRehydrated) {
             ariaReferenceNumber = await response.case_data.appealReferenceNumber;
@@ -100,7 +116,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
             eventName = 'recordRemissionDecision';
 
             await ccdApiHelper.startEvent(eventName, caseId);
-            eventData = await new LegalAdminDetained().generateRecordRemissionDecisionData();
+            eventData = await commonDetained.generateRecordRemissionDecisionData();
 
             // validate the data before submitting
             let response = await ccdApiHelper.validatePageData(eventName + eventName, eventName, eventData);
@@ -108,7 +124,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
             caseData = {...caseData, ...eventData};
 
-            response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+            savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+            expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
         });
     }
 
@@ -118,7 +135,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
             eventName = 'markAppealPaid';
 
             await ccdApiHelper.startEvent(eventName, caseId);
-            eventData = await new LegalAdminDetained().generateMarkAsPaidData();
+            eventData = await commonDetained.generateMarkAsPaidData();
 
             // validate the data before submitting
             let response = await ccdApiHelper.validatePageData(eventName + 'remissionDecisionDetails', eventName, eventData);
@@ -126,7 +143,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
             caseData = {...caseData, ...eventData};
 
-            response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+            savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+            expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
         });
     }
 
@@ -136,7 +154,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         await ccdApiHelper.getNonEventTokens(legalOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
 
-        eventData = await new LegalAdminDetained().generateRequestRespondentEvidenceData();
+        eventData = await commonDetained.generateRequestRespondentEvidenceData();
 
         // validate the data before submitting
         let response = await ccdApiHelper.validatePageData(eventName + eventName, eventName, eventData);
@@ -147,10 +165,12 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         delete caseData['paAppealTypePaymentOption'];
         delete caseData['feeWithoutHearing'];
         delete caseData['remissionRejectedDatePlus14days'];
+        delete caseData['remissionClaim'];
 
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 
     test('Submit: Upload Home Office Bundle event', async ({}) => {
@@ -160,7 +180,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         await ccdApiHelper.startEvent(eventName, caseId);
 
         uploadedDocUrl = await ccdApiHelper.uploadDocument();
-        eventData = await new LegalAdminDetained().generateUploadedHomeOfficeBundleDocsData();
+        eventData = await commonDetained.generateUploadedHomeOfficeBundleDocsData();
 
         // we now inject info about document uploaded to document store into the eventData
         eventData.homeOfficeBundle[0].value.document.document_url = uploadedDocUrl;
@@ -180,7 +200,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 
     test('Submit: Request Case Building event', async ({}) => {
@@ -189,7 +210,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         await ccdApiHelper.getNonEventTokens(legalOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
 
-        eventData = await new LegalAdminDetained().generateRequestCaseBuildingData();
+        eventData = await commonDetained.generateRequestCaseBuildingData();
 
         // validate the data before submitting
         let response = await ccdApiHelper.validatePageData(eventName + eventName, eventName, eventData);
@@ -199,7 +220,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 
     test('Submit: Build Your Case event', async ({}) => {
@@ -209,7 +231,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         await ccdApiHelper.startEvent(eventName, caseId);
 
         uploadedDocUrl = await ccdApiHelper.uploadDocument();
-        eventData = await new LegalAdminDetained().generateBuildYourCaseData();
+        eventData = await commonDetained.generateBuildYourCaseData();
 
         // we now inject info about document uploaded to document store into the eventData
         eventData.caseArgumentDocument.document_url = uploadedDocUrl;
@@ -225,7 +247,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 
     test('Submit: Request Respondent Review event', async ({}) => {
@@ -233,14 +256,15 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         await ccdApiHelper.getNonEventTokens(legalOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
-        eventData = await new LegalAdminDetained().generateRespondentReviewData();
+        eventData = await commonDetained.generateRespondentReviewData();
 
         let response = await ccdApiHelper.validatePageData(eventName + eventName, eventName, eventData);
         expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
 
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 
     test('Submit: Upload The Appeal Response event', async ({}) => {
@@ -250,7 +274,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         await ccdApiHelper.startEvent(eventName, caseId);
 
         uploadedDocUrl = await ccdApiHelper.uploadDocument();
-        eventData = await new LegalAdminDetained().generateUploadTheAppealResponseData();
+        eventData = await commonDetained.generateUploadTheAppealResponseData();
 
         // we now inject info about document uploaded to document store into the eventData
         eventData.homeOfficeAppealResponseDocument.document_url = uploadedDocUrl;
@@ -270,7 +294,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 
     test('Submit: Force Case - Hearing Reqs event', async ({}) => {
@@ -279,7 +304,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         await ccdApiHelper.getNonEventTokens(legalOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
 
-        eventData = await new LegalAdminDetained().generateForceCaseHearingsReqsData();
+        eventData = await commonDetained.generateForceCaseHearingsReqsData();
 
         // validate the data before submitting
         let response = await ccdApiHelper.validatePageData(eventName + 'forceCase', eventName, eventData);
@@ -292,8 +317,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
-
+        savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 
     test('Submit: Hearing Requirements event', async ({}) => {
@@ -302,7 +327,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         await ccdApiHelper.getNonEventTokens(legalOfficerAdminCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
 
-        eventData = await new LegalAdminDetained().generateDraftHearingRequirementsData();
+        eventData = await commonDetained.generateDraftHearingRequirementsData();
 
         // validate the data before submitting
         let response = await ccdApiHelper.validatePageData(eventName, eventName, eventData);
@@ -312,7 +337,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 
     test('Submit: Review Hearing Requirements event', async ({}) => {
@@ -321,7 +347,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         await ccdApiHelper.getNonEventTokens(legalOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
 
-        eventData = await new LegalAdminDetained().generateReviewHearingRequirementsData();
+        eventData = await commonDetained.generateReviewHearingRequirementsData();
 
         // validate the data before submitting
         let response = await ccdApiHelper.validatePageData(eventName, eventName, eventData);
@@ -329,7 +355,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 
     // This is not the route the caseworker would use, however, we use it in the tests to get to the state of: Prepare for hearing
@@ -340,12 +367,11 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         await ccdApiHelper.getNonEventTokens(legalOfficerAdminCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
 
-        eventData = await new LegalAdminDetained().generateListTheCaseData();
+        eventData = await commonDetained.generateListTheCaseData();
 
         // Inject Aria ref number
         eventData.ariaListingReference = ariaReferenceNumber;
 
-       // console.log('eventData>>> ', eventData);
         // validate the data before submitting
         let response = await ccdApiHelper.validatePageData(eventName, eventName, eventData);
         expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
@@ -356,7 +382,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 
     // If rehydrated then turn notifications/WA tasks on so that we generate the hearing bundle
@@ -368,7 +395,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
             await ccdApiHelper.getNonEventTokens(legalOfficerAdminCredentials);
             await ccdApiHelper.startEvent(eventName, caseId);
 
-            eventData = await new LegalAdminDetained().generateTurnOnNotificationsWaTasksData();
+            eventData = await legalAdminDetained.generateTurnOnNotificationsWaTasksData();
 
             // validate the data before submitting
             let response = await ccdApiHelper.validatePageData(eventName+eventName, eventName, eventData);
@@ -381,7 +408,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
             caseData = {...caseData, ...eventData};
 
-            response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+            savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+            expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
         });
     }
 
@@ -392,7 +420,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         await ccdApiHelper.startEvent(eventName, caseId);
 
         uploadedDocUrl = await ccdApiHelper.uploadDocument();
-        eventData = await new LegalAdminDetained().generateCreateCaseSummaryData();
+        eventData = await commonDetained.generateCreateCaseSummaryData();
 
         // we now inject info about document uploaded to document store into the eventData
         eventData.caseSummaryDocument.document_url = uploadedDocUrl;
@@ -406,7 +434,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 
 
@@ -416,7 +445,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         await ccdApiHelper.getNonEventTokens(listingOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
 
-        eventData = await new LegalAdminDetained().generateHearingBundleData();
+        eventData = await commonDetained.generateHearingBundleData();
 
         // validate the data before submitting
         let response = await ccdApiHelper.validatePageData(eventName+eventName, eventName, eventData);
@@ -426,7 +455,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+       savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+       expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 
     test('Submit: Start Decision And Reasons event', async ({}) => {
@@ -458,14 +488,12 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
             if (asyncStitchingComplete) {
                 break;
             }
-
-
         }
 
         await ccdApiHelper.getNonEventTokens(listingOfficerCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
 
-        eventData = await new LegalAdminDetained().generateStartDecisionAndReasonsData();
+        eventData = await commonDetained.generateStartDecisionAndReasonsData();
         // validate the data before submitting
         let response = await ccdApiHelper.validatePageData(eventName+'scheduleOfIssues', eventName, eventData);
         expect(response.status(), `Validation failed for event: ${eventName}`).toEqual(200);
@@ -474,7 +502,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 
     test('Submit: Prepare Decision And Reasons event', async ({}) => {
@@ -483,7 +512,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         await ccdApiHelper.getNonEventTokens(judgeCredentials);
         await ccdApiHelper.startEvent(eventName, caseId);
 
-        eventData = await new LegalAdminDetained().generatePrepareDecisionAndReasonsData();
+        eventData = await commonDetained.generatePrepareDecisionAndReasonsData();
 
         // validate the data before submitting
         let response = await ccdApiHelper.validatePageData(eventName, eventName, eventData);
@@ -495,10 +524,10 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         delete caseData['changeDirectionDueDateActionAvailable'];
         delete caseData['isDecisionWithoutHearing'];
 
-
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 
 
@@ -508,7 +537,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         const pageHelper: PageHelper = new PageHelper(page);
         await page.goto(envUrl);
         await idamPage.login(judgeCredentials);
-        await pageHelper.getCase(caseId);
+        await pageHelper.getCase(caseId, false);
         await new CompleteDecisionAndReasons(page).upload(judgeDecision);
         await linkHelper.signOut.click();
     });
@@ -521,7 +550,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
     //     await ccdApiHelper.startEvent(eventName, caseId);
     //
     //     uploadedDocUrl = await ccdApiHelper.uploadDocument();
-    //     eventData = await new LegalAdminDetained().generateCompleteDecisionAndReasonsData();
+    //     eventData = await commonDetained.generateCompleteDecisionAndReasonsData();
     //
     //     // we now inject info about document uploaded to document store into the eventData
     //     eventData.finalDecisionAndReasonsDocument.document_url = uploadedDocUrl;
@@ -535,7 +564,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
     //
     //     // console.log('caseData>>>> ',caseData);
     //
-    //     response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+    //     savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+    //     expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     // });
 
     test(`Appeal the judge's decision as ` + (judgeDecision == 'allowed' ? 'Home Office' : 'Legal Admin as Appellant') , async ({}) => {
@@ -546,7 +576,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         await ccdApiHelper.startEvent(eventName, caseId);
 
         uploadedDocUrl = await ccdApiHelper.uploadDocument();
-        eventData = await new LegalAdminDetained().generatePermissionToAppealData();
+        eventData = await commonDetained.generatePermissionToAppealData();
 
         // we now inject info about document uploaded to document store into the eventData
         if (judgeDecision === 'allowed') {
@@ -583,7 +613,8 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 
 
@@ -595,7 +626,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
         await ccdApiHelper.startEvent(eventName, caseId);
 
         uploadedDocUrl = await ccdApiHelper.uploadDocument();
-        eventData = await new LegalAdminDetained().generateDecideFtpaApplicationData();
+        eventData = await commonDetained.generateDecideFtpaApplicationData();
 
         // we now inject info about document uploaded to document store into the eventData
         if (judgeDecision === 'allowed') {
@@ -619,6 +650,7 @@ test.describe('Legal Admin creates Detained ' + typeOfAppeal + ' ' + (isRehydrat
 
         caseData = {...caseData, ...eventData};
 
-        response = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        savedDataResponse = await ccdApiHelper.saveDataToDataStore(eventName, caseId, caseData);
+        expect(savedDataResponse.httpResponse, `Saving of case data to CCD failed for event: ${eventName}`).toEqual(201);
     });
 });

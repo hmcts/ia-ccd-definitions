@@ -3,11 +3,10 @@ import {appellant, legalRepresentative} from "../../../../iacConfig";
 import {detentionFacility} from "../../../../fixtures/detentionFacilities";
 
 const yesterday = moment().subtract(1, 'days');
-const homeOfficeDecisionDate = moment().subtract(5, 'days');
+const homeOfficeDecisionDate = !['false'].includes(process.env.IN_TIME) ? moment().subtract(5, 'days') : moment().subtract(1, 'years');
 const outOfTime: string = !['false'].includes(process.env.IN_TIME) ? 'No' : 'Yes';
 const isRehydrated: boolean = ['true'].includes(process.env.IS_REHYDRATED);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
-const aip: string = ['Yes'].includes(process.env.AIP) ? 'Yes' : 'No';
 const detentionLocation: string = ['immigrationRemovalCentre', 'prison', 'other'].includes(process.env.DETENTION_LOCATION) ? process.env.DETENTION_LOCATION : 'prison';
 const detentionBuilding : string = detentionLocation === 'prison' ? detentionFacility.prison.building : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.building : detentionFacility.other.building);
 const detentionAddressLines: string = detentionLocation === 'prison' ? detentionFacility.prison.address : (detentionLocation === 'immigrationRemovalCentre' ? detentionFacility.immigrationRemovalCentre.address : detentionFacility.other.address);
@@ -23,6 +22,7 @@ export class LegalRepDetained {
 
   async generateDraftData() {
     data = {
+        isAdmin: "No",
         appellantInUk: "Yes",
         appellantInDetention: "Yes",
         detentionFacility: detentionLocation,
@@ -89,21 +89,4 @@ export class LegalRepDetained {
 
     return data;
   }
-
-  async generateSubmitData() {
-      const data = {
-          isAdmin: "No",
-          legalRepDeclaration: ["hasDeclared"],
-          remissionClaim: null,
-          remissionOption: null,
-          paAppealTypePaymentOption: null,
-          helpWithFeesOption: null,
-          appealType: typeOfAppeal,
-          feeAmountGbp: "14000",
-          appellantInDetention: "Yes",
-          isNotificationTurnedOff: "Yes"
-      };
-      return data;
-  }
-
 }
