@@ -80,7 +80,6 @@ def uploadCoreCaseDataDefinitions(environmentString) {
 }
 
 withPipeline(type, product, component) {
-//  enableHighLevelDataSetup()
   loadVaultSecrets(secrets)
 
   onPR {
@@ -97,10 +96,4 @@ withPipeline(type, product, component) {
     uploadCoreCaseDataDefinitions('prod')
   }
 
-//  before('highleveldatasetup') {
-//    echo "inside before highleveldatasetup"
-//    yarnBuilder.yarn('setup')
-//      archiveCoreCaseDataDefinitions()
-//    uploadCoreCaseDataDefinitions('preview')
-//  }
 }
