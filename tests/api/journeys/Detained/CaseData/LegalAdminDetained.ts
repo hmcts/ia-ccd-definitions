@@ -148,7 +148,7 @@ export class LegalAdminDetained {
   }
 
   generateTurnOnNotificationsWaTasksData() {
-      data = {}
+      data = {};
 
       return data;
   }

@@ -1,6 +1,5 @@
 import moment from "moment";
-import {appellant, legalRepresentative} from "../../../../iacConfig";
-import {detentionFacility} from "../../../../fixtures/detentionFacilities";
+import {detentionFacility} from "../../fixtures/detentionFacilities";
 
 const yesterday = moment().subtract(1, 'days');
 const todayPlusSevenDays = moment().add(7, 'days');
@@ -21,7 +20,7 @@ const judgeDecision: string = ['allowed'].includes(process.env.JUDGE_DECISION) ?
 
 let data;
 
-export class CommonDetained {
+export class CommonData {
 
   async generateSubmitData() {
       data = {

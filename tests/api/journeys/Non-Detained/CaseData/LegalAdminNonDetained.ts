@@ -7,8 +7,9 @@ const typeOfAppeal: string = ['refusalOfEu', 'refusalOfHumanRights', 'deprivatio
 const appellantInUK: string = ['Yes', 'No'].includes(process.env.IN_UK) ? process.env.IN_UK : 'Yes';
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 const aip: string = ['Yes'].includes(process.env.AIP) ? 'Yes' : 'No';
-export class LegalAdminNonDetained {
 
+
+export class LegalAdminNonDetained {
 
   async generateDraftData() {
     const data = {
@@ -129,7 +130,6 @@ export class LegalAdminNonDetained {
   async generateSubmitData() {
       const data = {
           adminDeclaration1: ["hasDeclared"],
-          isAdmin: "Yes",
           remissionClaim: null,
           remissionOption: null,
           paAppealTypePaymentOption: null,
@@ -141,4 +141,10 @@ export class LegalAdminNonDetained {
       }
       return data;
   }
+
+    generateTurnOnNotificationsWaTasksData() {
+     const data = {}
+
+        return data;
+    }
 }

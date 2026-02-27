@@ -8,11 +8,11 @@ const appellantInUK: string = ['Yes', 'No'].includes(process.env.IN_UK) ? proces
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
 const aip: string = ['Yes'].includes(process.env.AIP) ? 'Yes' : 'No';
 
-
 export class LegalRepNonDetained {
 
   async generateDraftData() {
     const data = {
+        isAdmin: "No",
         appellantInUk: appellantInUK,
         ...appellantInUK !== 'Yes' ? {outOfCountryDecisionType: "refusalOfHumanRights"} : {},
         ...appellantInUK !== 'Yes' ? {gwfReferenceNumber: "123456"} : {},
@@ -91,7 +91,6 @@ export class LegalRepNonDetained {
 
   async generateSubmitData() {
       const data = {
-          isAdmin: "No",
           legalRepDeclaration: [
               "hasDeclared"
           ],
@@ -105,3 +104,5 @@ export class LegalRepNonDetained {
       return data;
   }
 }
+
+
