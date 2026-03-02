@@ -896,6 +896,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRep_remitted_hearing_requirements", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"submitHearingRequirements\" AND rehearingReason=\"*\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "queries", "TabLabel": "Queries", "TabDisplayOrder": 2, "CaseFieldID": "queriesTabTitle", "TabFieldDisplayOrder": 1},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "queries", "CaseFieldID": "qmLatestQuery", "TabFieldDisplayOrder": 2},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "TabLabel": "Appeal", "TabDisplayOrder": 3, "CaseFieldID": "appealTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "isOutOfCountryEnabled", "TabFieldDisplayOrder": 2, "FieldShowCondition": "isOutOfCountryEnabled=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
