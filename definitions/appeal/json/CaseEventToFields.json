@@ -1820,6 +1820,8 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "sendPipToNonLegalRep", "CaseFieldID": "nlrEmail", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "sendPipToNonLegalRep", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "Y", "CallBackURLMidEvent": "${CCD_DEF_IA_URL}/asylum/ccdMidEvent?pageId=sendPipToNonLegalRep"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "nlrPhoneNumberSubmitted", "CaseFieldID": "nlrDetails", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "nlrPhoneNumberSubmitted", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "joinAppealConfirmation", "CaseFieldID": "nlrDetails", "PageFieldDisplayOrder": 1, "DisplayContext": "MANDATORY", "PageID": "joinAppealConfirmation", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestFeeRemission", "CaseFieldID": "requestFeeRemissionFlagForServiceRequest", "PageFieldDisplayOrder": 1, "DisplayContext": "READONLY", "PageID": "remissionType", "PageDisplayOrder": 1, "ShowSummaryChangeOption": "N", "FieldShowCondition": "feeRemissionsHeader=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
