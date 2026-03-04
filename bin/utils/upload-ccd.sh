@@ -123,5 +123,6 @@ fi
 #bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}"
 if [[ "${ENV}" != "prod" ]]; then
 #  echo "Uploading definition file to ${CCD_URL}..."
+# NOSONAR: the below variables do not contain sensitive data so should be ignored by SonarQube
   bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}"
 fi
