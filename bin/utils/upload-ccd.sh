@@ -93,7 +93,7 @@ esac
 
 echo "Environment: ${ENV}"
 echo "File to upload: ${FILENAME}"
-echo "CCD Definition Store URL: ${CCD_URL}"
+#echo "CCD Definition Store URL: ${CCD_URL}"
 echo "Token Environment: ${TOKEN_ENV}"
 
 # If dry run, exit here
@@ -122,6 +122,6 @@ fi
 #echo "Uploading definition file to ${CCD_URL}..."
 #bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}"
 if [[ "${ENV}" != "prod" ]]; then
-  echo "Uploading definition file to ${CCD_URL}..."
+#  echo "Uploading definition file to ${CCD_URL}..."
   bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}"
 fi
