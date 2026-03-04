@@ -1,7 +1,6 @@
 .idea/
 *.iml
 target/
-tests/
 output/
 coverage/
 node_modules/*
@@ -17,3 +16,8 @@ output.json
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+**/output
+package-lock.json
+**/tests/reports
+test-results/*
+.auth
