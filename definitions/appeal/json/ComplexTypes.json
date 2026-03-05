@@ -364,7 +364,7 @@
   {"LiveFrom": "01/01/2018", "ID": "statutoryTimeframe24WeeksHistory", "ListElementCode": "dateTimeAdded", "FieldType": "DateTime", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "statutoryTimeframe24Weeks", "ListElementCode": "history", "FieldType": "Collection", "FieldTypeParameter": "statutoryTimeframe24WeeksHistory", "ElementLabel": "History", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
-  {"LiveFrom": "01/01/2018", "ID": "LatestQuery", "ListElementCode": "queryId", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "ID": "LatestQuery", "ListElementCode": "isHearingRelated", "FieldType": "YesOrNo", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"}
+  {"LiveFrom": "01/01/2018", "ID": "LatestQuery", "ListElementCode": "queryId", "FieldType": "Text", "ElementLabel": "Query id", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "LatestQuery", "ListElementCode": "isHearingRelated", "FieldType": "YesOrNo", "ElementLabel": "Is hearing related", "SecurityClassification": "PUBLIC", "Searchable": "N"}
   
 ]
