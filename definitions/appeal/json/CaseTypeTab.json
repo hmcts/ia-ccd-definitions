@@ -896,7 +896,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "progress_legalRep_remitted_hearing_requirements", "TabFieldDisplayOrder": 22, "FieldShowCondition": "currentCaseStateVisibleToLegalRepresentative=\"submitHearingRequirements\" AND rehearingReason=\"*\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "queries", "TabLabel": "Queries", "TabDisplayOrder": 2, "CaseFieldID": "queriesTabTitle", "DisplayContextParameter" : "#ARGUMENT(QueryManagement)", "FieldShowCondition": "queriesComponentLauncher!=\"\"", "TabFieldDisplayOrder": 1},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "queries", "CaseFieldID": "queriesComponentLauncher", "DisplayContextParameter" : "#ARGUMENT(QueryManagement)", "TabFieldDisplayOrder": 2},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "queries", "CaseFieldID": "queriesComponentLauncher", "DisplayContextParameter" : "#ARGUMENT(QueryManagement)", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "queries", "CaseFieldID": "qmLegalRepresentativeQueries", "DisplayContextParameter" : "#ARGUMENT(QueryManagement)", "FieldShowCondition": "queriesComponentLauncher!=\"\"", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "queries", "CaseFieldID": "qmAIPQueries", "DisplayContextParameter" : "#ARGUMENT(QueryManagement)", "FieldShowCondition": "queriesComponentLauncher!=\"\"", "TabFieldDisplayOrder": 2},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "queries", "CaseFieldID": "qmAdminQueries", "DisplayContextParameter" : "#ARGUMENT(QueryManagement)", "FieldShowCondition": "queriesComponentLauncher!=\"\"", "TabFieldDisplayOrder": 2},
