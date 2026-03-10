@@ -74,14 +74,34 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "appellantContactPreferenceTitle",
-    "Label": " \r\nSelect the communication method which best suits the appellant. \r\n\r\n The Tribunal needs this to: \r\n- provide standard guidance on the appeal process\r\n- update the appellant at key points in the appeal\r\n- send the Hearing Notice and guidance on what to expect at hearing\r\n- contact the appellant if, for any reason, your representation ends",
+    "Label": " \r\nSelect the communication method which best suits the appellant.\r\n- It must be the appellant's email address\r\n- It must be the appellant's mobile phone number. \r\n\r\n The Tribunal needs this to: \r\n- provide standard guidance on the appeal process\r\n- update the appellant at key points in the appeal\r\n- send the Hearing Notice and guidance on what to expect at hearing\r\n- contact the appellant if, for any reason, your representation ends",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
   },
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "contactPreference", "Label": "Communication Preference", "FieldType": "FixedRadioList", "FieldTypeParameter": "contactPreference","SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "email", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "mobileNumber", "Label": "Mobile phone number", "FieldType": "Text", "RegularExpression": "^(?=(?:\\D*\\d){7,15}\\D*$)\\+?(\\d[\\d-. ]+)?(\\([\\d-. ]+\\))?[\\d-. ]*\\d$","SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "emailInfoText",
+    "Label": "This must be the appellant's email address. Please do not give your own",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "email", "Label": "Appellant's email address", "FieldType": "Email", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "emailRetype", "Label": "Retype appellant's email address", "FieldType": "Email", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "mobilePhoneNumberInfoText",
+    "Label": "This must be the appellant's mobile phone number. Please do not give your own",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "mobileNumber", "Label": "Appellant's mobile phone number", "FieldType": "Text", "RegularExpression": "^(?=(?:\\D*\\d){7,15}\\D*$)\\+?(\\d[\\d-. ]+)?(\\([\\d-. ]+\\))?[\\d-. ]*\\d$","SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "mobileNumberRetype", "Label": "Retype appellant's mobile phone number", "FieldType": "Text", "RegularExpression": "^(?=(?:\\D*\\d){7,15}\\D*$)\\+?(\\d[\\d-. ]+)?(\\([\\d-. ]+\\))?[\\d-. ]*\\d$","SecurityClassification": "PUBLIC", "Searchable": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealTypeTitle", "Label": " \r\nSelect the appeal type that best fits your case. If you want to raise something relating to another appeal type, you can do this later.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {
@@ -6996,6 +7016,12 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeSearchNoMatch", "Label": "Internal flag managed by API for no match result", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeSearchResponse", "Label": "Internal flag managed by API for Home Office search response", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeReferenceNumberBeforeEdit", "Label": "Internal flag managed by API for Home Office reference number before edit", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellantApiResponseStatus", "Label": "Home Office appellant API HTTP status", "FieldType": "Number", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellantClaimDate", "Label": "Home Office appellant claim date", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellantDecisionDate", "Label": "Home Office appellant decision date", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellantDecisionLetterDate", "Label": "Home Office appellant decision letter date", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellants", "Label": "Home Office appellants", "FieldType": "Collection", "FieldTypeParameter": "homeOfficeAppellant", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "upperTribunalDocuments", "Label": "Upper Tribunal documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stitchingStatusUpperTribunal", "Label": "Internal flag managed by API to identify if upper tribunal bundling stitching is complete", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
