@@ -453,6 +453,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "removeDetainedStatus", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "removeDetainedStatus", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "deleteDraftAppeal", "UserRole": "citizen", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "deleteDraftAppeal", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "appellantInPersonManual", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "appellantInPersonManual", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"}
 ]
