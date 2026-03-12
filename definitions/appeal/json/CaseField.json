@@ -284,6 +284,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeDirectionDueDateTitle", "Label": "Select the direction that needs updating.\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "changeDirectionDueDateTitle2", "Label": "#### Enter the new due date.\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "requestRespondentEvidenceTitle", "Label": "You are directing the Home Office to supply their documents and evidence.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "19/02/2026", "CaseTypeID": "Asylum", "ID": "completeCaseReviewStf24Title", "Label": "You are completing the validation of the case", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "19/02/2026", "CaseTypeID": "Asylum", "ID": "completeCaseReviewDate", "Label": "Case review completed date", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
@@ -3343,7 +3345,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_stf24w",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)</br></br></br></br>",    "FieldType": "Label",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview)</br></br></br></br>",    "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
   },
@@ -3368,7 +3370,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_stf24w",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)</br></br></br></br>",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview)</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3422,7 +3424,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_ooc_appealSubmitted_stf24w",
-    "Label": "## Do this next\r\nIf the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)</br></br></br></br>",
+    "Label": "## Do this next\r\nIf the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview)</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3449,7 +3451,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_validation_stf24w",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)</br></br>",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview)</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3467,7 +3469,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_validation_dc_ea_hu_stf24w",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)</br></br></br></br>",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview)</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3485,7 +3487,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_old_cases_stf24w",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)</br></br>",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview)</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3503,7 +3505,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_ooc_appealSubmitted_oc_stf24w",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)</br></br></br></br>",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview)</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3602,7 +3604,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_old_stf24w",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)</br></br>",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview)</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3620,7 +3622,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_stf24w",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)<br/><br/><br/>",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview)<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3638,7 +3640,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_oc_stf24w",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)</br></br></br></br>",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview)</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3665,7 +3667,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_home_office_old_stf24w",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)</br></br>",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview)</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3683,7 +3685,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_inTime_stf24w",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)</br></br></br></br>",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview)</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3701,7 +3703,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_home_office_stf24w",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)</br></br>",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.</br></br>[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview)</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3719,7 +3721,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_home_office_oc_stf24w",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence)</br></br></br></br>",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must run the 'Complete case review' event which will validate the case and move to listing.\n\n[Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview)</br></br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
