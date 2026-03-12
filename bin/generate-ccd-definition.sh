@@ -79,6 +79,8 @@ CCD_ENV="${ENV}"
 # Get current branch for version (except for prod)
 if [[ "${ENV}" == "prod" ]]; then
   CCD_DEF_VERSION=""
+elif [[ "${ENV}" == "aat" ]]; then
+  CCD_DEF_VERSION="* master"
 else
   CCD_DEF_VERSION=`git branch | grep '* ' | cut -c -16`
 fi

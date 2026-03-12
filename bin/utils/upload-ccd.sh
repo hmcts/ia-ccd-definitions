@@ -66,8 +66,23 @@ case $ENV in
   preview)
     FILENAME="ccd-appeal-config-preview-pr${PR_NUMBER}.xlsx"
     CCD_URL="https://ccd-definition-store-ia-case-api-pr-${PR_NUMBER}.preview.platform.hmcts.net"
-    GENERATE_CMD="yarn generate -e preview -p ${PR_NUMBER}"
+    GENERATE_CMD="corepack yarn generate -e preview -p ${PR_NUMBER}"
     TOKEN_ENV="aat"
+    az login --identity
+    ;;
+  aat)
+    FILENAME="ccd-appeal-config-aat.xlsx"
+    CCD_URL="http://ccd-definition-store-api-aat.service.core-compute-aat.internal"
+    GENERATE_CMD="corepack yarn generate -e aat"
+    TOKEN_ENV="aat"
+    az login --identity
+    ;;
+  prod)
+    FILENAME="ccd-appeal-config-prod.xlsx"
+    CCD_URL="http://ia-case-api-prod.service.core-compute-prod.internal"
+    GENERATE_CMD="corepack yarn generate -e prod"
+    TOKEN_ENV="aat"
+    az login --identity
     ;;
   *)
     echo "Error: Unsupported environment: ${ENV}"
@@ -78,7 +93,7 @@ esac
 
 echo "Environment: ${ENV}"
 echo "File to upload: ${FILENAME}"
-echo "CCD Definition Store URL: ${CCD_URL}"
+#echo "CCD Definition Store URL: ${CCD_URL}"
 echo "Token Environment: ${TOKEN_ENV}"
 
 # If dry run, exit here
@@ -104,6 +119,9 @@ if [ ! -f "${OUTPUT_PATH}" ]; then
   exit 1
 fi
 
-# Upload to CCD using the appropriate token environment
-echo "Uploading definition file to ${CCD_URL}..."
-bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}" 
+#echo "Uploading definition file to ${CCD_URL}..."
+#bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}"
+if [[ "${ENV}" != "prod" ]]; then
+#  echo "Uploading definition file to ${CCD_URL}..."
+  bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}"  # NOSONAR: variables do not contain sensitive data so should be ignored by SonarQube
+fi
