@@ -11588,6 +11588,14 @@
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "revokeAccessForUserOrgId", "UserRole": "caseworker-ia-internal", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "revokeAccessForUserOrgId", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
 
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "revokeAccessDl", "UserRole": "caseworker-ia-internal", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "revokeAccessDl", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "revokeAccessDl", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseFieldID": "revokeAccessDl", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "revokeAccessDl", "UserRole": "ia_specific_access_admin_profile", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "revokeAccessDl", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "revokeAccessDl", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "CRUD"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "lateRemissionType", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "lateRemissionType", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "previousRemissionDetails", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRU"},
