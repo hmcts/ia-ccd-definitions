@@ -1008,8 +1008,8 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "nlrDetailsTitle", "TabFieldDisplayOrder": 655, "FieldShowCondition": "hasNonLegalRep=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hasNonLegalRep", "TabFieldDisplayOrder": 656, "FieldShowCondition": "hasNonLegalRep=\"Yes\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hasNonLegalRepJoined", "TabFieldDisplayOrder": 656, "FieldShowCondition": "hasNonLegalRepJoined=\"*\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "nlrDetails", "TabFieldDisplayOrder": 657, "FieldShowCondition": "nlrDetails=\"*\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hasNonLegalRepJoined", "TabFieldDisplayOrder": 656, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND hasNonLegalRepJoined=\"*\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "nlrDetails", "TabFieldDisplayOrder": 657, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND nlrDetails=\"*\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "TabLabel": "Appellant", "TabDisplayOrder": 3, "CaseFieldID": "appellantTabTitle", "TabFieldDisplayOrder": 1},
 
