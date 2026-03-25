@@ -902,7 +902,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "queries", "TabLabel": "Queries", "TabDisplayOrder": 2, "CaseFieldID": "queriesTabTitle", "DisplayContextParameter" : "#ARGUMENT(QueryManagement)", "FieldShowCondition": "queriesComponentLauncher!=\"\"", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "queries", "CaseFieldID": "queriesComponentLauncher", "DisplayContextParameter" : "#ARGUMENT(QueryManagement)", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "queries", "CaseFieldID": "qmLegalRepresentativeQueries", "DisplayContextParameter" : "#ARGUMENT(QueryManagement)", "FieldShowCondition": "queriesComponentLauncher!=\"\"", "TabFieldDisplayOrder": 2},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "queries", "CaseFieldID": "qmHomeOfficeQueries", "DisplayContextParameter" : "#ARGUMENT(QueryManagement)", "FieldShowCondition": "queriesComponentLauncher!=\"\"", "TabFieldDisplayOrder": 2},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "TabLabel": "Appeal", "TabDisplayOrder": 3, "CaseFieldID": "appealTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "isOutOfCountryEnabled", "TabFieldDisplayOrder": 2, "FieldShowCondition": "isOutOfCountryEnabled=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
