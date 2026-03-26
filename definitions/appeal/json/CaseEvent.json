@@ -3149,5 +3149,22 @@
     "EndButtonLabel": "Force to FTPA decided",
     "EventEnablingCondition": "[STATE]!=\"appealStarted\" AND [STATE]!=\"appealStartedByAdmin\" AND isRehydratedAppeal=\"Yes\" AND isAdmin=\"Yes\" AND hasBeenFtpaDecided!=\"Yes\"",
     "Publish": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "homeOfficeReferenceData",
+    "Name": "Home Office Reference Data",
+    "Description": "Home Office Reference Data",
+    "DisplayOrder": 126,
+    "PreConditionState(s)": "appealStarted",
+    "PostConditionState": "*",
+    "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
+    "RetriesTimeoutURLAboutToSubmitEvent": "5,5,5,5",
+    "SecurityClassification": "Public",
+    "ShowSummary": "Y",
+    "ShowEventNotes": "N",
+    "EndButtonLabel": "Submit",
+    "Publish": "N"
   }
 ]
