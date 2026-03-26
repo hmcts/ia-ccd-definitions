@@ -18,7 +18,7 @@ function getRandomIntInclusive(min, max) {
 
 
 
-export let ariaReferenceNumber = {
+export const ariaReferenceNumber = {
         valid: getRandomAriaCode() +'/'+ getRandomIntInclusive(0, 2).toString() + getRandomIntInclusive(0, 9999).toString().padStart(4,"0") + '/' + year,
          duplicate: 'LP/12212/2025',
         invalid: {

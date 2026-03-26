@@ -99,7 +99,7 @@ export class CcdApiHelper {
 
         for (let retry=0; retry < maxRetries; retry++)
         {
-            let eventData = { appealReferenceNumber: ariaRefNumber };
+            const eventData = { appealReferenceNumber: ariaRefNumber };
 
             const response: APIResponse =  (await this.validatePageData(`${eventName}appealReferenceNumber`, eventName, eventData));
 

@@ -538,7 +538,7 @@ export class CreateAppeal {
         await this.ccdApiHelper.getNonEventTokens(legalOfficerAdminCredentials);
         await this.ccdApiHelper.startEvent(eventName, null);
 
-        let ariaRefNumber: string = await this.ccdApiHelper.getAriaReferenceNumber(eventName);
+        const ariaRefNumber: string = await this.ccdApiHelper.getAriaReferenceNumber(eventName);
         await this.page.fill('#appealReferenceNumber', ariaRefNumber);
         await this.buttonHelper.continueButton.click();
     }
