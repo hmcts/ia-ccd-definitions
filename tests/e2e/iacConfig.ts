@@ -6,7 +6,7 @@ const monthAgo = moment().subtract(1, 'month');
 
 export const runningEnv =  process.env.ENVIRONMENT;
 
-export const envUrl: string = process.env.ENVIRONMENT === 'preview' ? 'https://xui-ia-case-api-pr-3023.preview.platform.hmcts.net' : (process.env.ENVIRONMENT === 'demo' ? 'https://manage-case.demo.platform.hmcts.net' : 'https://manage-case.aat.platform.hmcts.net');
+export const envUrl: string = process.env.ENVIRONMENT === 'preview' ? 'https://xui-ia-case-api-pr-3075.preview.platform.hmcts.net' : (process.env.ENVIRONMENT === 'demo' ? 'https://manage-case.demo.platform.hmcts.net' : 'https://manage-case.aat.platform.hmcts.net');
 
 
 export const idamApiBaseUrl: string = process.env.ENVIRONMENT === 'preview' ? 'https://idam-api.aat.platform.hmcts.net' : 'https://idam-api.demo.platform.hmcts.net';
@@ -58,8 +58,6 @@ export const judgeCredentials = {
     username: ['preview', 'aat'].includes(process.env.ENVIRONMENT) ? 'ia.iacjudge.ccd@gmail.com' : 'Gupta.Singh1@ejudiciary.net',
     password: ['preview', 'aat'].includes(process.env.ENVIRONMENT) ? 'AldgateT0wer' : 'Testing123'
 }
-
-
 
 export const outOfCountryAddress = '123 Example Street, Example City, Example Country, AB12 3CD';
 

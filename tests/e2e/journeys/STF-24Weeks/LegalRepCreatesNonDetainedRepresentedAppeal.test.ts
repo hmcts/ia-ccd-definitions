@@ -33,6 +33,7 @@ import {ValidationHelper} from "../../helpers/ValidationHelper";
 import {RecordRemissionDecision} from "../../flows/events/recordRemissionDecision";
 import {DecideFtpaApplication} from "../../flows/events/decideFtpaApplication";
 import { Add24WeeksStatutoryTimeframe, Add24WeeksStatutoryTimeframeIsDisabled, Remove24WeeksStatutoryTimeframe } from '../../flows/events/addStatutoryTimeframe';
+import { callHomeOfficeStatutoryTimeframeApi } from '../../helpers/homeOfficeStatutoryTimeframeApi';
 
 const inTime: boolean = !['false'].includes(process.env.IN_TIME);
 const feeRemission: string = ['Yes'].includes(process.env.FEE_REMISSION) ? 'Yes' : 'No';
@@ -54,7 +55,7 @@ let linkHelper: LinkHelper;
 let pageHelper: PageHelper;
 
 test.describe.configure({ mode: 'serial'});
-test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@STF_LegalRepCreatesNonDetainedRepresented' }, () => {
+test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@anil' }, () => {
 
     test.beforeEach(async ({ page }) => {
         // Go to the starting url before each test.
@@ -65,7 +66,7 @@ test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@STF_L
         await page.goto(envUrl);
     });
 
-    test('Create Non-Detained, Represented Appeal', async ({ page }) => {
+    test('Create Non-Detained, Represented Appeal', async ({ page, request }) => {
         const createAppeal = new CreateAppeal(page);
         await idamPage.login(legalRepresentativeCredentials);
         await new CreateCasePage(page).createCase();
@@ -102,6 +103,10 @@ test.describe('Legal Representative creates Non-Detained Appeal', { tag: '@STF_L
         console.log('caseId>>>>>>>>>>>>>>>' + caseId + '<<<<<<<<<<<<<<<<<<<');
 
         await new SubmitYourAppeal(page).submit(true, inTime);
+
+        await callHomeOfficeStatutoryTimeframeApi(request, caseId);
+
+        await page.waitForTimeout(5000);
 
         await linkHelper.signOut.click();
     });

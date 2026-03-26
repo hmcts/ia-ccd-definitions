@@ -307,6 +307,7 @@ export class CreateAppeal {
        await this.page.check(`#contactPreference-wants${preference}`);
        if (preference === 'Email') {
            await this.page.fill('#email', appellant.email);
+           await this.page.fill('#emailRetype', appellant.email);
        } else {
            await this.page.fill('#mobileNumber', appellant.mobile);
        }
