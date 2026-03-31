@@ -1279,7 +1279,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "isHearingLoopNeeded", "TabFieldDisplayOrder": 56},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "hasNonLegalRep", "TabFieldDisplayOrder": 57, "FieldShowCondition": "hasNonLegalRep=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nlrHearingRequirementsTitle", "TabFieldDisplayOrder": 58, "FieldShowCondition": "hasNonLegalRep=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nlrHearingRequirementsTabTitle", "TabFieldDisplayOrder": 58, "FieldShowCondition": "hasNonLegalRep=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nlrDetails", "TabFieldDisplayOrder": 59, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND nlrDetails=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nlrAttending", "TabFieldDisplayOrder": 60, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND nlrAttending=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nlrOutsideUK", "TabFieldDisplayOrder": 61, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND nlrOutsideUK=\"*\""},
