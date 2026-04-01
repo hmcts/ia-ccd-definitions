@@ -53,18 +53,21 @@ fi
 case $ENV in
   dev)
     FILENAME="ccd-appeal-config-dev.xlsx"
+    FILENAME_BAIL="ccd-bail-config-dev.xlsx"
     CCD_URL="http://localhost:4451"
     GENERATE_CMD="yarn generate-dev"
     TOKEN_ENV="local"
     ;;
   mirrord)
     FILENAME="ccd-appeal-config-mirrord.xlsx"
+    FILENAME_BAIL="ccd-bail-config-mirrord.xlsx"
     CCD_URL="https://ccd-definition-store-ia-case-api-${USERNAME}-pr-1.preview.platform.hmcts.net"
     GENERATE_CMD="yarn generate -e mirrord"
     TOKEN_ENV="aat"
     ;;
   preview)
     FILENAME="ccd-appeal-config-preview-pr${PR_NUMBER}.xlsx"
+    FILENAME_BAIL="ccd-bail-config-preview-pr${PR_NUMBER}.xlsx"
     CCD_URL="https://ccd-definition-store-ia-case-api-pr-${PR_NUMBER}.preview.platform.hmcts.net"
     GENERATE_CMD="yarn generate -e preview -p ${PR_NUMBER}"
     TOKEN_ENV="aat"
@@ -77,7 +80,8 @@ case $ENV in
 esac
 
 echo "Environment: ${ENV}"
-echo "File to upload: ${FILENAME}"
+echo "Appeal file to upload: ${FILENAME}"
+echo "Bail file to upload: ${FILENAME_BAIL}"
 echo "CCD Definition Store URL: ${CCD_URL}"
 echo "Token Environment: ${TOKEN_ENV}"
 
@@ -103,7 +107,12 @@ if [ ! -f "${OUTPUT_PATH}" ]; then
   echo "Error: Generated file not found at ${OUTPUT_PATH}"
   exit 1
 fi
-
+OUTPUT_PATH_BAIL="target/bail/xlsx/${FILENAME_BAIL}"
+if [ ! -f "${OUTPUT_PATH_BAIL}" ]; then
+  echo "Error: Generated file not found at ${OUTPUT_PATH_BAIL}"
+  exit 1
+fi
 # Upload to CCD using the appropriate token environment
-echo "Uploading definition file to ${CCD_URL}..."
+echo "Uploading definition files to ${CCD_URL}..."
 bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}" 
+bin/utils/ccd-import-definition.sh -f "${FILENAME_BAIL}" -u "${CCD_URL}" -e "${TOKEN_ENV}"

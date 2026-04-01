@@ -1,0 +1,102 @@
+[
+  {"LiveFrom": "10/02/2022", "ID": "nationalityList", "ListElementCode": "code", "FieldType": "FixedList", "FieldTypeParameter": "govUkNationalities", "ElementLabel": "Nationality", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "ID": "documentWithDescription", "ListElementCode": "document", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "ID": "documentWithDescription", "ListElementCode": "description", "FieldType": "TextArea", "ElementLabel": "Describe the document", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom":"10/02/2022","ID":"documentWithMetadata","ListElementCode":"suppliedBy","FieldType":"Text","ElementLabel":"Supplied by","SecurityClassification":"PUBLIC"},
+  {"LiveFrom":"10/02/2022","ID":"documentWithMetadata","ListElementCode":"document","FieldType":"Document","ElementLabel":"Document","SecurityClassification":"PUBLIC"},
+  {"LiveFrom":"10/02/2022","ID":"documentWithMetadata","ListElementCode":"description","FieldType":"TextArea","ElementLabel":"Description","SecurityClassification":"PUBLIC"},
+  {"LiveFrom":"10/02/2022","ID":"documentWithMetadata","ListElementCode":"dateUploaded","FieldType":"Date","ElementLabel":"Date uploaded","SecurityClassification":"PUBLIC"},
+  {"LiveFrom":"10/02/2022","ID":"documentWithMetadata","ListElementCode":"tag","FieldType":"Text","ElementLabel":"Tag","FieldShowCondition":"tag=\"DUMMY_VALUE_TO_HIDE_FIELD\"","SecurityClassification":"PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "ID": "languageList", "ListElementCode": "language", "FieldType": "FixedList", "FieldTypeParameter": "interpreterLanguages", "ElementLabel": "Language", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "ID": "languageList", "ListElementCode": "languageDialect", "HintText":"Enter N/A if no dialect required", "Value":"Test","FieldType": "Text", "ElementLabel": "Dialect", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "ID": "caseNote", "ListElementCode": "caseNoteSubject", "FieldType": "Text", "ElementLabel": "Subject", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "ID": "caseNote", "ListElementCode": "caseNoteDescription", "FieldType": "TextArea", "ElementLabel": "Case note", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "ID": "caseNote", "ListElementCode": "caseNoteDocument", "FieldType": "Document", "ElementLabel": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "ID": "caseNote", "ListElementCode": "user", "FieldType": "Text", "ElementLabel": "User", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "ID": "caseNote", "ListElementCode": "dateAdded", "FieldType": "Date", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "previousDates", "ListElementCode": "dateDue", "FieldType": "Date", "ElementLabel": "Date due", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousDates", "ListElementCode": "dateSent", "FieldType": "Date", "ElementLabel": "Date sent", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "ID": "direction", "ListElementCode": "sendDirectionDescription", "FieldType": "TextArea", "ElementLabel": "Explanation", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "ID": "direction", "ListElementCode": "sendDirectionList", "FieldType": "FixedList", "ElementLabel": "Party", "FieldTypeParameter": "directionToList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "ID": "direction", "ListElementCode": "dateOfCompliance", "FieldType": "Date", "ElementLabel": "Date due", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "ID": "direction", "ListElementCode": "dateSent", "FieldType": "Date", "ElementLabel": "Date sent", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "ID": "direction", "ListElementCode": "dateTimeDirectionCreated", "FieldType": "DateTime", "ElementLabel": "DateTime created", "SecurityClassification": "PUBLIC", "FieldShowCondition":"dateSent=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "10/02/2022", "ID": "direction", "ListElementCode": "dateTimeDirectionModified", "FieldType": "DateTime", "ElementLabel": "DateTime modified", "SecurityClassification": "PUBLIC", "FieldShowCondition":"dateSent=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+  {"LiveFrom": "10/02/2022", "ID": "direction", "ListElementCode": "previousDates", "FieldType": "Collection", "FieldTypeParameter": "previousDates", "ElementLabel": "Previous dates", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "ID": "newDirection", "ListElementCode": "changeBailDirectionList", "FieldType": "FixedList", "ElementLabel": "Direction", "FieldTypeParameter": "directionToList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "ID": "newDirection", "ListElementCode": "changeBailDirectionDueDateExplanation", "FieldType": "Text", "ElementLabel": "Explanation", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "ID": "newDirection", "ListElementCode": "changeBailDirectionDueDateParties", "FieldType": "Text", "ElementLabel": "Parties", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "ID": "newDirection", "ListElementCode": "changeBailDirectionDueDateDateSent", "FieldType": "Date", "ElementLabel": "Date sent", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "ID": "newDirection", "ListElementCode": "newBailDirectionDueDate", "FieldType": "Date", "ElementLabel": "Date due", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "ID": "priorApplication", "ListElementCode": "applicationId", "FieldType": "Text", "ElementLabel": "Application Id", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "ID": "priorApplication", "ListElementCode": "caseDataJson", "FieldType": "Text", "ElementLabel": "Case data", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "interpreterSpokenLanguage", "ListElementCode": "languageManualEntry", "FieldType": "FixedRadioList", "ElementLabel": " ", "FieldTypeParameter": "isSpokenLanguageEnteredManually", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterSpokenLanguage", "ListElementCode": "languageRefData", "FieldType": "DynamicList", "ElementLabel": "Spoken language", "FieldShowCondition": "languageManualEntry=\"No\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterSpokenLanguage", "ListElementCode": "languageManualEntryDescription", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "languageManualEntry=\"Yes\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterSignLanguage", "ListElementCode": "languageManualEntry", "FieldType": "FixedRadioList", "FieldTypeParameter": "isSignLanguageEnteredManually", "ElementLabel": " ", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterSignLanguage", "ListElementCode": "languageRefData", "FieldType": "DynamicList", "ElementLabel": "Sign language", "FieldShowCondition": "languageManualEntry=\"No\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterSignLanguage", "ListElementCode": "languageManualEntryDescription", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "languageManualEntry=\"Yes\"", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterBookingRef", "FieldType": "Text", "ElementLabel": "Booking reference", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterGivenNames", "FieldType": "Text", "ElementLabel": "Given names", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterFamilyName", "FieldType": "Text", "ElementLabel": "Family name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterPhoneNumber", "FieldType": "PhoneUK", "ElementLabel": "Phone number", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterEmail", "FieldType": "Email", "ElementLabel": "Email", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterNote", "FieldType": "Text", "ElementLabel": "Note", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "interpreterDetails", "ListElementCode": "interpreterId", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "interpreterBookingRef=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom":"10/02/2022","ID":"refDataListingLocationDetail","ListElementCode":"site_name","FieldType":"Text","ElementLabel":" ","SecurityClassification":"PUBLIC"},
+  {"LiveFrom":"10/02/2022","ID":"refDataListingLocationDetail","ListElementCode":"court_name","FieldType":"Text","ElementLabel":" ","SecurityClassification":"PUBLIC"},
+  {"LiveFrom":"10/02/2022","ID":"refDataListingLocationDetail","ListElementCode":"epimms_id","FieldType":"Text","ElementLabel":" ","SecurityClassification":"PUBLIC"},
+  {"LiveFrom":"10/02/2022","ID":"refDataListingLocationDetail","ListElementCode":"court_status","FieldType":"Text","ElementLabel":" ","SecurityClassification":"PUBLIC"},
+  {"LiveFrom":"10/02/2022","ID":"refDataListingLocationDetail","ListElementCode":"is_hearing_location","FieldType":"Text","ElementLabel":" ","SecurityClassification":"PUBLIC"},
+  {"LiveFrom":"10/02/2022","ID":"refDataListingLocationDetail","ListElementCode":"is_case_management_location","FieldType":"Text","ElementLabel":" ","SecurityClassification":"PUBLIC"},
+  {"LiveFrom":"10/02/2022","ID":"refDataListingLocationDetail","ListElementCode":"court_address","FieldType":"Text","ElementLabel":" ","SecurityClassification":"PUBLIC"},
+  {"LiveFrom":"10/02/2022","ID":"refDataListingLocationDetail","ListElementCode":"postcode","FieldType":"Text","ElementLabel":" ","SecurityClassification":"PUBLIC"},
+
+  {"LiveFrom":"10/02/2022","ID":"hearingRecordingDocument","ListElementCode":"document","FieldType":"Document","ElementLabel":"Audio File", "SecurityClassification":"PUBLIC"},
+  {"LiveFrom":"10/02/2022","ID":"hearingRecordingDocument","ListElementCode":"description","FieldType":"TextArea","ElementLabel":"Hearing recording description", "SecurityClassification":"PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "previousHearingDetails", "ListElementCode": "listingEvent", "FieldType": "FixedList", "FieldTypeParameter": "listingEventList", "ElementLabel": "Listing event", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousHearingDetails", "ListElementCode": "listingLocation", "FieldType": "FixedList", "FieldTypeParameter": "hearingLocationList", "ElementLabel": "Location", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousHearingDetails", "ListElementCode": "listingHearingDate", "FieldType": "DateTime", "ElementLabel": "Length in minutes", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousHearingDetails", "ListElementCode": "listingHearingDuration", "FieldType": "Number", "ElementLabel": "Date and time", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "previousDecisionDetails", "ListElementCode": "decisionDetailsDate", "FieldType": "Date", "ElementLabel": "Decision date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousDecisionDetails", "ListElementCode": "recordDecisionType", "FieldType": "FixedList", "FieldTypeParameter": "recordDecisionTypeList", "ElementLabel": "Decision", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "previousDecisionDetails", "ListElementCode": "uploadSignedDecisionNoticeDocument", "FieldType": "Document", "ElementLabel": "Decision document", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationId", "FieldType": "Text", "ElementLabel": "ID", "FieldShowCondition": "notificationId=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationDateSent", "FieldType": "DateTime", "ElementLabel": "Sent on", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationSentTo", "FieldType": "Text", "ElementLabel": "To", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationSubject", "FieldType": "Text", "ElementLabel": "Subject", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationBody", "FieldType": "Text", "ElementLabel": "Body", "FieldShowCondition": "notificationId=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationDocument", "FieldType": "Document", "ElementLabel": "Notification", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationMethod", "FieldType": "Text", "ElementLabel": "Method", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationStatus", "FieldType": "Text", "ElementLabel": "Status", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationReference", "FieldType": "Text", "ElementLabel": "Reference", "FieldShowCondition": "notificationId=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationErrorMessage", "FieldType": "Text", "ElementLabel": "Error", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  
+  {"LiveFrom": "01/01/2018", "ID": "caseManagementLocation", "ListElementCode": "region", "FieldType": "FixedList", "FieldTypeParameter": "region", "ElementLabel": "region", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "ID": "caseManagementLocation", "ListElementCode": "baseLocation", "FieldType": "FixedList", "FieldTypeParameter": "baseLocation", "ElementLabel": "baseLocation", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+
+  {"LiveFrom": "01/01/2018", "ID": "caseManagementLocationRefData", "ListElementCode": "region", "FieldType": "FixedList", "FieldTypeParameter": "region", "ElementLabel": "region", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "ID": "caseManagementLocationRefData", "ListElementCode": "baseLocation", "FieldType": "DynamicList", "ElementLabel": "baseLocation", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+
+  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "applicantGivenNames", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "applicantFamilyName", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "applicantAddress", "FieldType": "AddressUK", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "parties", "ListElementCode": "applicantDateOfBirth", "FieldType": "Date", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "ID": "hearingDecision", "ListElementCode": "hearingId", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingDecision", "ListElementCode": "decision", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"}
+]

@@ -8,12 +8,26 @@ const path = require('path');
 
 const caseEventToFieldsFile = path.join(__dirname, '../definitions/appeal/json/CaseEventToFields.json');
 const caseEventFile = path.join(__dirname, '../definitions/appeal/json/CaseEvent.json');
+const caseEventToFieldsFileBail = path.join(__dirname, '../definitions/bail/json/CaseEventToFields.json');
+const caseEventFileBail = path.join(__dirname, '../definitions/bail/json/CaseEvent.json');
 
 try {
   // Read both files
   const caseEventToFields = JSON.parse(fs.readFileSync(caseEventToFieldsFile, 'utf8'));
   const caseEvents = JSON.parse(fs.readFileSync(caseEventFile, 'utf8'));
+  console.log('Checking for mismatches in Appeal definitions...\n');
+  handleMismatches(caseEventToFields, caseEvents);
+  const caseEventToFieldsBail = JSON.parse(fs.readFileSync(caseEventToFieldsFileBail, 'utf8'));
+  const caseEventsBail = JSON.parse(fs.readFileSync(caseEventFileBail, 'utf8'));
+  console.log('Checking for mismatches in Bail definitions...\n');
+  handleMismatches(caseEventToFieldsBail, caseEventsBail);
 
+} catch (error) {
+  console.error('Error:', error.message);
+  process.exit(1);
+}
+
+function handleMismatches(caseEventToFields, caseEvents) {
   // Create a map of CaseEventID to Publish value from CaseEvent.json
   const eventPublishMap = new Map();
   caseEvents.forEach(event => {
@@ -25,7 +39,7 @@ try {
   });
 
   // Find fields in CaseEventToFields.json with Publish: "Y"
-  const publishYFields = caseEventToFields.filter(field => 
+  const publishYFields = caseEventToFields.filter(field =>
     field.Publish === "Y" && field.CaseEventID
   );
 
@@ -50,7 +64,7 @@ try {
     console.log("✅ No mismatches found! All fields with Publish: 'Y' have corresponding events with Publish: 'Y'.");
   } else {
     console.log(`❌ Found ${mismatches.length} mismatches:\n`);
-    
+
     // Group by CaseFieldID for better readability
     const mismatchesByField = {};
     mismatches.forEach(mismatch => {
@@ -67,11 +81,11 @@ try {
       });
       console.log('');
     });
-    
+
     console.log("These fields should either:");
     console.log("- Have Publish: 'N' to match their events, or");
     console.log("- The corresponding events should have Publish: 'Y'");
-    
+
     // Check specifically for appellantInDetention
     const appellantInDetentionMismatches = mismatches.filter(m => m.caseFieldId === 'appellantInDetention');
     if (appellantInDetentionMismatches.length > 0) {
@@ -80,11 +94,7 @@ try {
         console.log(`  - Event ${mismatch.eventId} has Publish: "${mismatch.eventPublish}" but field has Publish: "${mismatch.fieldPublish}"`);
       });
     }
-    
+
     process.exit(1);
   }
-
-} catch (error) {
-  console.error('Error:', error.message);
-  process.exit(1);
 }

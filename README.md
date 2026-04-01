@@ -54,11 +54,11 @@ yarn setup
 
 #### JSON to Excel
 
-Make your desired changes in the `definitions/appeal/json/*.json` files.  Then run:
+Make your desired changes in the `definitions/appeal/json/*.json` or `definitions/bail/json/*.json` files.  Then run:
 ```
 yarn generate-dev
 ```
-The resulting Excel file is written to the `target/appeal/xlsx` folder.
+The resulting appeal and bail Excel files are written to the `target/appeal/xlsx` and `target/bail/xlsx` folders respectively.
 
 You can run the `upload` task to generate an Excel file based on JSON and upload it directly to the Dev environment. This requires the environment variable `CCD_DOCKER_PATH` to be set.
 ```
@@ -73,17 +73,17 @@ Tasks `yarn generate-prod` and `yarn generate-all` need an additional environmen
 
 #### Excel to JSON
 
-Call your Excel file `definitions/appeal/xlsx/ccd-appeal-config-base.xlsx` and run the command:
+Calls your Excel files `definitions/appeal/xlsx/ccd-appeal-config-base.xlsx` and `definitions/bail/xlsx/ccd-bail-config-base.xlsx` and run the command:
 ```
 yarn generate-json
 ```
 
-Your resulting JSON files will appear in the `definitions/appeal/json` folder.
+Your resulting JSON files will appear in the `definitions/appeal/json` and `definitions/bail/json` folders respectively.
 
 #### Callback URLs
 
-In Dev the callback URL will default to http://ia-case-api:8090. If you want to set your own value, set an environment 
-variable called `IA_CASE_URL` pointing to the value you want. On some operating systems this can be set to 
+In Dev the callback URL will default to http://ia-case-api:8090. If you want to set your own value, set environment 
+variables called `IA_CASE_URL` and `IA_BAIL_CASE_URL` pointing to the values you want if necessary. On some operating systems this can be set to 
 http://host.docker.internal:8090 rather than setting up `ia-case-api` to point to the host machine.
 
 #### Create state diagram
@@ -228,15 +228,3 @@ yarn generate-all
 ### Configuration
 
 The configuration for different environments is stored in `package.json` under the `config` section. For dynamic environments like `preview` and `mirrord`, only the AAC URL is stored in the configuration, while the service URL is constructed dynamically by the script.
-
-### Legacy Scripts
-
-These legacy scripts are still available but will be deprecated in future releases:
-
-- `bin/generate-dev.sh`
-- `bin/generate-preview.sh`
-- `bin/generate-demo.sh`
-- `bin/generate-ithc.sh`
-- `bin/generate-perftest.sh`
-- `bin/generate-aat.sh`
-- `bin/generate-prod.sh`

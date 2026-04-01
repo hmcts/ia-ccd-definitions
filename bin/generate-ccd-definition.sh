@@ -6,7 +6,6 @@
 #   -e, --env ENV           Environment (dev, preview, demo, ithc, perftest, aat, prod, mirrord)
 #   -p, --pr PR_NUMBER      PR number for preview environment (required when `-e preview` is specified)
 #   -u, --user USERNAME     Username for mirrord environment (defaults to current user)
-#   -s, --service SERVICE   Service name (default: ia-case-api)
 #   -d, --dry-run           Show what would be done without actually generating files
 #   -h, --help              Show this help message
 
@@ -14,7 +13,6 @@
 ENV="dev"
 PR_NUMBER=""
 USERNAME=""
-SERVICE="ia-case-api"
 DRY_RUN=false
 
 # Parse command line arguments
@@ -36,11 +34,6 @@ while [[ $# -gt 0 ]]; do
       shift
       shift
       ;;
-    -s|--service)
-      SERVICE="$2"
-      shift
-      shift
-      ;;
     -d|--dry-run)
       DRY_RUN=true
       shift
@@ -51,7 +44,6 @@ while [[ $# -gt 0 ]]; do
       echo "  -e, --env ENV           Environment (dev, preview, demo, ithc, perftest, aat, prod, mirrord)"
       echo "  -p, --pr PR_NUMBER      PR number for preview environment (required when `-e preview` is specified)"
       echo "  -u, --user USERNAME     Username for mirrord environment (defaults to current user)"
-      echo "  -s, --service SERVICE   Service name (default: ia-case-api)"
       echo "  -d, --dry-run           Show what would be done without actually generating files"
       echo "  -h, --help              Show this help message"
       exit 0
@@ -88,32 +80,38 @@ if [[ "${ENV}" == "mirrord" && -z "${USERNAME}" ]]; then
   USERNAME=$(whoami)
   echo "No username provided, using current user: ${USERNAME}"
 fi
-
+SERVICE="ia-case-api"
 # Set URLs based on environment, PR number, and username
 if [[ "${ENV}" == "preview" && -n "${PR_NUMBER}" ]]; then
   # Custom URL for PR in preview environment
   CCD_DEF_IA_URL="http://${SERVICE}-pr-${PR_NUMBER}-java"
+  CCD_DEF_IA_BAIL_URL="http://${SERVICE}-pr-${PR_NUMBER}-bail-case-api"
   CCD_DEF_AAC_URL="${npm_package_config_preview_aacUrl}"
 elif [[ "${ENV}" == "mirrord" ]]; then
   # Custom URL for mirrord environment with username
   CCD_DEF_IA_URL="http://${SERVICE}-${USERNAME}-java"
+  CCD_DEF_IA_BAIL_URL="http://${SERVICE}-${USERNAME}-bail-case-api"
   CCD_DEF_AAC_URL="${npm_package_config_preview_aacUrl}"
 else
   # Default URLs from environment variables - using proper variable indirection
   IA_URL_VAR="npm_package_config_${ENV}_iaCaseUrl"
+  IA_BAIL_URL_VAR="npm_package_config_${ENV}_iaBailCaseUrl"
   AAC_URL_VAR="npm_package_config_${ENV}_aacUrl"
   CCD_DEF_IA_URL="${!IA_URL_VAR}"
+  CCD_DEF_IA_BAIL_URL="${!IA_BAIL_URL_VAR}"
   CCD_DEF_AAC_URL="${!AAC_URL_VAR}"
 fi
 
 # For dev environment, allow override from environment variables
 if [[ "${ENV}" == "dev" ]]; then
   CCD_DEF_IA_URL="${IA_CASE_URL:-$CCD_DEF_IA_URL}"
+  CCD_DEF_IA_BAIL_URL="${IA_BAIL_CASE_URL:-CCD_DEF_IA_BAIL_URL}"
   CCD_DEF_AAC_URL="${AAC_URL:-$CCD_DEF_AAC_URL}"
 fi
 
 echo "Generating CCD definition for environment: ${ENV}"
-echo "Service URL: ${CCD_DEF_IA_URL}"
+echo "Service URL for ia-case-api: ${CCD_DEF_IA_URL}"
+echo "Service URL for ia-bail-case-api: ${CCD_DEF_IA_BAIL_URL}"
 echo "AAC URL: ${CCD_DEF_AAC_URL}"
 
 # If dry run, exit here
@@ -130,8 +128,10 @@ fi
 # Determine the output file name
 if [[ "${ENV}" == "preview" && -n "${PR_NUMBER}" ]]; then
   OUTPUT_FILE="target/appeal/xlsx/ccd-appeal-config-${CCD_ENV}-pr${PR_NUMBER}.xlsx"
+  BAIL_OUTPUT_FILE="target/bail/xlsx/ccd-bail-config-${CCD_ENV}-pr${PR_NUMBER}.xlsx"
 else
   OUTPUT_FILE="target/appeal/xlsx/ccd-appeal-config-${CCD_ENV}.xlsx"
+  BAIL_OUTPUT_FILE="target/bail/xlsx/ccd-bail-config-${CCD_ENV}.xlsx"
 fi
 
 # Generate the definition
@@ -140,11 +140,13 @@ CCD_ENV="${CCD_ENV}" \
 CCD_DEF_VERSION="${CCD_DEF_VERSION}" \
 CCD_DEF_IA_URL="${CCD_DEF_IA_URL}" \
 CCD_DEF_AAC_URL="${CCD_DEF_AAC_URL}" \
-yarn generate-excel "${OUTPUT_FILE}"
+yarn generate-excel "${OUTPUT_FILE}" "${BAIL_OUTPUT_FILE}"
 
 if [ $? -eq 0 ]; then
-  echo "CCD definition generated successfully: ${OUTPUT_FILE}"
+  echo "CCD definitions generated successfully:"
+  echo "Appeal: ${OUTPUT_FILE}"
+  echo "Bail: ${BAIL_OUTPUT_FILE}"
 else
-  echo "Error generating CCD definition"
+  echo "Error generating CCD definitions"
   exit 1
 fi 

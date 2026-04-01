@@ -1,0 +1,18 @@
+[
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationStarted", "Name": "Application started", "Description": "Application started", "DisplayOrder": 1, "TitleDisplay": "# Case record for ${bailReferenceNumber}"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationStartedByLR", "Name": "Application started", "Description": "Application started by LR", "DisplayOrder": 2, "TitleDisplay": "# Case record for ${bailReferenceNumber}"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationStartedByHO", "Name": "Application started", "Description": "Application started by HO", "DisplayOrder": 3, "TitleDisplay": "# Case record for ${bailReferenceNumber}"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationSubmitted", "Name": "Application submitted", "Description": "Application submitted", "DisplayOrder": 4, "TitleDisplay": "# Case record for ${bailReferenceNumber}"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "bailSummaryUploaded", "Name": "Bail summary", "Description": "Bail summary", "DisplayOrder": 5, "TitleDisplay": "# Case record for ${bailReferenceNumber}"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "unsignedDecision", "Name": "Unsigned decision", "Description": "Unsigned decision", "DisplayOrder": 6, "TitleDisplay": "# Case record for ${bailReferenceNumber}"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "decisionDecided", "Name": "Decided", "Description": "Decided", "DisplayOrder": 7, "TitleDisplay": "# Case record for ${bailReferenceNumber}"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "decisionConditionalBail", "Name": "Conditional Bail", "Description": "Conditional Bail", "DisplayOrder": 8, "TitleDisplay": "# Case record for ${bailReferenceNumber}"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationEnded", "Name": "Application ended", "Description": "Application ended", "DisplayOrder": 9, "TitleDisplay": "# Case record for ${bailReferenceNumber}"}
+
+]

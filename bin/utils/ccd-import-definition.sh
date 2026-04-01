@@ -50,7 +50,11 @@ TOKEN_ENV="${TOKEN_ENV:-$DEFAULT_TOKEN_ENV}"
 # Get the project root directory (assuming script is in bin/utils)
 dir=$(dirname ${0})
 project_root=$(cd "${dir}/../.." && pwd)
-filepath="${project_root}/target/appeal/xlsx/${FILENAME}"
+if [[ "$FILENAME" == *"bail"* ]]; then
+  filepath="${project_root}/target/bail/xlsx/${FILENAME}"
+else
+  filepath="${project_root}/target/appeal/xlsx/${FILENAME}"
+fi
 
 # Check if file exists
 if [ ! -f "${filepath}" ]; then
