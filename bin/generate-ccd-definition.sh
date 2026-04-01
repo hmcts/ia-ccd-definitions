@@ -135,6 +135,7 @@ else
 fi
 
 # Generate the definition
+CCD_ENV="${CCD_ENV}" \
 yarn copy-json && \
 CCD_ENV="${CCD_ENV}" \
 CCD_DEF_VERSION="${CCD_DEF_VERSION}" \
