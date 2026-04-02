@@ -363,15 +363,15 @@
   {"LiveFrom": "01/01/2018", "ID": "statutoryTimeframe24WeeksHistory", "ListElementCode": "user", "FieldType": "Text", "ElementLabel": "User", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "statutoryTimeframe24WeeksHistory", "ListElementCode": "dateTimeAdded", "FieldType": "DateTime", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
-  {"LiveFrom": "01/01/2018", "ID": "stf24weekCohort", "ListElementCode": "name", "FieldType": "Text", "ElementLabel": "Name", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "ID": "stf24weekCohort", "ListElementCode": "included", "FieldType": "Text", "ElementLabel": "Included", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "stf24WeekCohort", "ListElementCode": "name", "FieldType": "Text", "ElementLabel": "Name", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "stf24WeekCohort", "ListElementCode": "included", "FieldType": "Text", "ElementLabel": "Included", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeStatutoryTimeframeDto", "ListElementCode": "hmctsReferenceNumber", "FieldType": "Text", "ElementLabel": "HMCTS reference number", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeStatutoryTimeframeDto", "ListElementCode": "uan", "FieldType": "Text", "ElementLabel": "UAN", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeStatutoryTimeframeDto", "ListElementCode": "familyName", "FieldType": "Text", "ElementLabel": "Family name", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeStatutoryTimeframeDto", "ListElementCode": "givenNames", "FieldType": "Text", "ElementLabel": "Given names", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeStatutoryTimeframeDto", "ListElementCode": "dateOfBirth", "FieldType": "Date", "ElementLabel": "Date of birth", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "ID": "homeOfficeStatutoryTimeframeDto", "ListElementCode": "stf24weekCohorts", "FieldType": "Collection", "FieldTypeParameter": "stf24weekCohort", "ElementLabel": "24-week cohorts", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "homeOfficeStatutoryTimeframeDto", "ListElementCode": "stf24WeekCohorts", "FieldType": "Collection", "FieldTypeParameter": "stf24WeekCohort", "ElementLabel": "24-week cohorts", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeStatutoryTimeframeDto", "ListElementCode": "timeStamp", "FieldType": "DateTime", "ElementLabel": "Time-stamp", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "ID": "statutoryTimeframe24Weeks", "ListElementCode": "history", "FieldType": "Collection", "FieldTypeParameter": "statutoryTimeframe24WeeksHistory", "ElementLabel": "History", "SecurityClassification": "PUBLIC", "Searchable": "N"},
