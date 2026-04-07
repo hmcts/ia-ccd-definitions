@@ -240,4 +240,3 @@ These legacy scripts are still available but will be deprecated in future releas
 - `bin/generate-perftest.sh`
 - `bin/generate-aat.sh`
 - `bin/generate-prod.sh`
-
