@@ -3020,7 +3020,7 @@
     "Name": "Add Statutory Timeframe",
     "Description": "Add Statutory Timeframe 24 Weeks",
     "DisplayOrder": 124,
-    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;caseBuilding;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingReasonsForAppeal;reasonsForAppealSubmitted;caseUnderReview;respondentReview;listing;prepareForHearing;finalBundling;preHearing;decision;adjourned;remitted",
+    "PreConditionState(s)": "pendingPayment;appealSubmitted;awaitingRespondentEvidence;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;awaitingReasonsForAppeal;reasonsForAppealSubmitted;listing",
     "PostConditionState": "listing([STATE]=\"awaitingRespondentEvidence\" OR [STATE]=\"caseUnderReview\" OR [STATE]=\"reasonsForAppealSubmitted\"):1;*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "5,5,5,5",
