@@ -156,7 +156,7 @@ CCD_ENV="${CCD_ENV}" \
 yarn copy-json && \
 CCD_ENV="${CCD_ENV}" \
 CCD_DEF_VERSION="${CCD_DEF_VERSION}" \
-CCD_DEF_IA_BAIL_URL="${CCD_DEF_IA_BAIL_URL}" \
+CCD_DEF_IA_URL="${CCD_DEF_IA_BAIL_URL}" \
 CCD_DEF_AAC_URL="${CCD_DEF_AAC_URL}" \
 yarn generate-excel "${BAIL_OUTPUT_FILE}" true
 
