@@ -141,13 +141,29 @@ CCD_ENV="${CCD_ENV}" \
 CCD_DEF_VERSION="${CCD_DEF_VERSION}" \
 CCD_DEF_IA_URL="${CCD_DEF_IA_URL}" \
 CCD_DEF_AAC_URL="${CCD_DEF_AAC_URL}" \
-yarn generate-excel "${OUTPUT_FILE}" "${BAIL_OUTPUT_FILE}"
+yarn generate-excel "${OUTPUT_FILE}"
 
 if [ $? -eq 0 ]; then
   echo "CCD definitions generated successfully:"
   echo "Appeal: ${OUTPUT_FILE}"
+else
+  echo "Error generating CCD definitions"
+  exit 1
+fi
+
+# Generate bail definition
+CCD_ENV="${CCD_ENV}" \
+yarn copy-json && \
+CCD_ENV="${CCD_ENV}" \
+CCD_DEF_VERSION="${CCD_DEF_VERSION}" \
+CCD_DEF_IA_BAIL_URL="${CCD_DEF_IA_BAIL_URL}" \
+CCD_DEF_AAC_URL="${CCD_DEF_AAC_URL}" \
+yarn generate-excel "${BAIL_OUTPUT_FILE}" true
+
+if [ $? -eq 0 ]; then
+  echo "CCD definitions generated successfully:"
   echo "Bail: ${BAIL_OUTPUT_FILE}"
 else
   echo "Error generating CCD definitions"
   exit 1
-fi 
+fi
