@@ -9,16 +9,16 @@ const bailAuthorisationCaseFieldPath = path.join(__dirname, '../definitions/bail
 try {
     const appealCaseField = fs.readFileSync(appealCaseFieldPath, 'utf8');
     const appealAuthCaseField = fs.readFileSync(appealAuthorisationCaseFieldPath, 'utf8');
-    handleContent(appealCaseField, appealAuthCaseField);
+    handleContent(appealCaseField, appealAuthCaseField, false);
     const bailCaseField = fs.readFileSync(bailCaseFieldPath, 'utf8');
     const bailAuthCaseField = fs.readFileSync(bailAuthorisationCaseFieldPath, 'utf8');
-    handleContent(bailCaseField, bailAuthCaseField);
+    handleContent(bailCaseField, bailAuthCaseField, true);
 } catch (error) {
     console.error('Error reading files:', error);
     process.exit(1);
 }
 
-function handleContent(content, contentAuth) {
+function handleContent(content, contentAuth, isBail) {
     const caseFields = JSON.parse(content)
     const Authorisations = JSON.parse(contentAuth)
 
@@ -38,7 +38,7 @@ function handleContent(content, contentAuth) {
         console.log('The following relevant IDs are missing in the second file with the specified UserRole and CRUD:', missingIDs);
         console.log('Add the following authorisations to AuthorisationCaseField file');
         missingIDs.forEach(element => {
-            console.log("{\"LiveFrom\": \"01/01/2018\", \"CaseTypeID\": \"Asylum\", \"CaseFieldID\": \"" + element + "\", \"UserRole\": \"caseworker-ia-system\", \"CRUD\": \"CRUD\"},");
+            console.log("{\"LiveFrom\": \"01/01/2018\", \"CaseTypeID\": \"" + (isBail ? "Bail" : "Asylum") + "\", \"CaseFieldID\": \"" + element + "\", \"UserRole\": \"caseworker-ia-system\", \"CRUD\": \"CRUD\"},");
         });
         process.exit(1);
     }
