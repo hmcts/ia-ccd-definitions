@@ -5619,6 +5619,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealDetailsTitle", "Label": "![]()\r\n## Appeal details", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submissionDetailsTitle", "Label": "![]()\r\n## Submission details", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantDetailsTitle", "Label": "![]()\r\n## Appellant's details", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorDetailsTitle", "Label": "![]()\r\n## Sponsor's details", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealDecisionAvailable", "Label": "Internal flag managed by API to identify if appeal decision is available.", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadAddendumEvidenceActionAvailable", "Label": "Internal flag managed by API to enable/disable uploadAddendumEvidenceAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addendumEvidenceDocuments", "Label": "Evidence supplied after the hearing bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -6327,6 +6328,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlags", "Label": " ", "FieldType": "Flags", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantLevelFlags", "Label": " ", "FieldType": "Flags", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "witnessLevelFlags", "Label": " ", "FieldType": "Collection","FieldTypeParameter": "Flags", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrLevelFlags", "Label": " ", "FieldType": "Collection","FieldTypeParameter": "Flags", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "interpreterLevelFlags", "Label": " ", "FieldType": "Collection","FieldTypeParameter": "Flags", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "flagLauncher", "Label": " ", "FieldType": "FlagLauncher", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
@@ -6843,7 +6845,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantOutOfCountryAddress", "Label": "Address", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantSponsorTitle", "Label": " ", "FieldType": "Label",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasSponsor", "Label": "Does your client have a sponsor?", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasSponsor", "Label": "Does the appellant have a sponsor?", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "entryClearanceDecisionTitle", "Label": " ", "FieldType": "Label",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "entryClearanceDecisionLetterTitle", "Label": " ", "FieldType": "Label",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
@@ -7258,6 +7260,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepIndividualPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepOrganisationPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "epimsId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
 
@@ -8653,6 +8656,30 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "revokeAccessForUserOrgId", "Label": "Enter Legal representative's Organisation ID ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "revokeAccessDl", "Label": "Select user to revoke case access from", "FieldType": "DynamicRadioList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "joinAppealPin", "Label": " ", "FieldType": "pinInPost", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrDetailsTitle", "Label": "![]()\r\n## Non-Legal Representative Details", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrDetails", "Label": "Non-Legal Representative Details", "FieldType": "nlrDetails", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasNonLegalRep", "Label": "Has a non-legal representative been requested?", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isSponsorSameAsNlr", "Label": "Are the sponsor and the non-legal representative the same person?", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasNonLegalRepJoined", "Label": "Has the non-legal representative joined the appeal?", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "shouldInviteNlrToIdam", "Label": " ", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrHearingRequirementsTabTitle", "Label": "![]()\r\n## Non-legal representative hearing requirements", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrAttending", "Label": "Will the non-legal representative be attending the hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrOutsideUK", "Label": "Will the non-legal representative be giving oral evidence from outside the United Kingdom?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrNeedsStepFreeAccess", "Label": "Does the non-legal representative need step-free access?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrNeedsHearingLoop", "Label": "Does the non-legal representative need a hearing loop?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isNlrInterpreterRequired", "Label": "Will the non-legal representative require a spoken or sign language interpreter at the hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrInterpreterLanguageCategory", "Label": "What kind of interpreter does ${nlrDetails.givenNames} ${nlrDetails.familyName} need?", "FieldType": "MultiSelectList", "FieldTypeParameter": "interpreterLanguageCategory", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrInterpreterSpokenLanguage", "Label": "Which spoken language interpreter is needed for ${nlrDetails.givenNames} ${nlrDetails.familyName`}?", "FieldType": "interpreterSpokenLanguage", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrInterpreterSignLanguage", "Label": "Which sign language is needed for ${nlrDetails.givenNames} ${nlrDetails.familyName}?", "FieldType": "interpreterSignLanguage", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrInterpreterSpokenLanguageBooking", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrInterpreterSpokenLanguageBookingStatus", "Label": "${nlrInterpreterSpokenLanguageBooking}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrInterpreterSignLanguageBooking", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrInterpreterSignLanguageBookingStatus", "Label": "${nlrInterpreterSignLanguageBooking}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAppealAdminJ", "Label": "What are the circumstances of the appellant's out of country appeal?", "FieldType": "FixedRadioList", "FieldTypeParameter": "oocAppealAdminJ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionRule31Changed", "Label": "Internal flag managed by API to check if decision is changed via Tribunal decision under rule 31", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
