@@ -1,0 +1,124 @@
+[
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "startApplication", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "startApplication", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "startApplication", "UserRole": "caseworker-ia-homeofficebail", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "startApplication", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "submitApplication", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "submitApplication", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "submitApplication", "UserRole": "caseworker-ia-homeofficebail", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "submitApplication", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "submitApplication", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "uploadBailSummary", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "uploadBailSummary", "UserRole": "caseworker-ia-homeofficebail", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "uploadBailSummary", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "uploadBailSummary", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "recordTheDecision", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRU"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "recordTheDecision", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "addCaseNote", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "addCaseNote", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "addCaseNote", "UserRole": "caseworker-ia-rparobot", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "sendBailDirection", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "sendBailDirection", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "changeBailDirectionDueDate", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "changeBailDirectionDueDate", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "uploadSignedDecisionNotice", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "uploadSignedDecisionNotice", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "uploadSignedDecisionNoticeConditionalGrant", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "uploadSignedDecisionNoticeConditionalGrant", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "moveApplicationToDecided", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRU"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "moveApplicationToDecided", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "endApplication", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "endApplication", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "CaseEventID": "saveNotificationsToDataBail", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "CaseEventID": "saveNotificationsToDataBail", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "uploadDocuments", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "uploadDocuments", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "uploadDocuments", "UserRole": "caseworker-ia-homeofficebail", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "uploadDocuments", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "uploadDocuments", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "editBailDocuments", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "editBailDocuments", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "editBailApplication", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "editBailApplication", "UserRole": "caseworker-ia-homeofficebail", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "editBailApplication", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "editBailApplication", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "makeNewApplication", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "makeNewApplication", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "makeNewApplication", "UserRole": "caseworker-ia-homeofficebail", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "makeNewApplication", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "editBailApplicationAfterSubmit", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "viewPreviousApplications", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "viewPreviousApplications", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "viewPreviousApplications", "UserRole": "caseworker-ia-homeofficebail", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "viewPreviousApplications", "UserRole": "caseworker-ia-homeofficepou", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "viewPreviousApplications", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRU"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "nocRequest", "UserRole": "caseworker-caa", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "applyNocDecision", "UserRole": "caseworker-approver", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "removeBailLegalRepresentative", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "stopLegalRepresenting", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "stopLegalRepresenting", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "stopLegalRepresenting", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "updateBailLegalRepDetails", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "clearLegalRepresentativeDetails", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "CaseEventID": "createBailCaseLink", "UserRole": "ia_bail_caselinks_profile", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "CaseEventID": "maintainBailCaseLinks", "UserRole": "ia_bail_caselinks_profile", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "createFlag", "UserRole": "ia_bail_caseflags_profile", "CRUD": "CRU"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "manageFlags", "UserRole": "ia_bail_caseflags_profile", "CRUD": "CRU"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "updateInterpreterWaTask", "UserRole": "caseworker-ia-system", "CRUD": "CRU"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "confirmDetentionLocation", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "updateInterpreterDetails", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "updateInterpreterBookingStatus", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "caseListing", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "caseListing", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "migrateCase", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "CaseEventID": "rollbackMigration", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "forceCaseToHearing", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "forceCaseToHearing", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "forceCaseToHearing", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "changeTribunalCentre", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "uploadHearingRecording", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "CaseEventID": "uploadHearingRecording", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "CaseEventID": "migrateWaBailApplication", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "CaseEventID": "migrateWaBailApplication", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "CaseEventID": "hearingCompletedOrCancelled", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "CaseEventID": "hearingCompletedOrCancelled", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "CaseEventID": "regenerateBailSubmissionDocument", "UserRole": "caseworker-ia-internal", "CRUD": "CRUD"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "CaseEventID": "ManageTTL", "UserRole": "cft-ttl-manager", "CRUD": "CRU"}
+]
