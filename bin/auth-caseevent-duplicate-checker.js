@@ -9,10 +9,20 @@ const fs = require('fs');
 const path = require('path');
 
 const targetFile = path.join(__dirname, '../definitions/appeal/json/AuthorisationCaseEvent.json');
+const targetFileBail = path.join(__dirname, '../definitions/bail/json/AuthorisationCaseEvent.json');
 
 try {
-  const raw = fs.readFileSync(targetFile, 'utf8');
-  const entries = JSON.parse(raw);
+  const content = fs.readFileSync(targetFile, 'utf8');
+  const contentBail = fs.readFileSync(targetFileBail, 'utf8');
+  handleContent(content);
+  handleContent(contentBail);
+} catch (err) {
+  console.error(err);
+  process.exit(1);
+}
+
+function handleContent(content) {
+  const entries = JSON.parse(content);
 
   if (!Array.isArray(entries)) {
     console.error(`Unexpected JSON structure in ${targetFile}. Expected an array.`);
@@ -51,9 +61,5 @@ try {
   } else {
     console.log('No duplicates found in AuthorisationCaseEvent.');
   }
-} catch (err) {
-  console.error(err);
-  process.exit(1);
 }
-
 
