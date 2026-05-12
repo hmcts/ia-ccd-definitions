@@ -1,0 +1,5 @@
+[
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "NoCChallenge", "DisplayOrder": "1", "QuestionText": "Client first name", "AnswerFieldType": "Text", "Answer": "${applicantGivenNames}:[LEGALREPRESENTATIVE]", "QuestionId": "NoCChallengeQ1"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "NoCChallenge", "DisplayOrder": "2", "QuestionText": "Client surname", "AnswerFieldType": "Text", "Answer": "${applicantFamilyName}:[LEGALREPRESENTATIVE]", "QuestionId": "NoCChallengeQ2"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "NoCChallenge", "DisplayOrder": "3", "QuestionText": "Client date of birth", "AnswerFieldType": "Date", "Answer": "${applicantDateOfBirth}:[LEGALREPRESENTATIVE]", "QuestionId": "NoCChallengeQ3"}
+]
