@@ -167,3 +167,11 @@ else
   echo "Error generating CCD definitions"
   exit 1
 fi
+
+TARGET_DIR="target/${ENV}-definitions"
+rm -rf "${TARGET_DIR}"
+mkdir -p "${TARGET_DIR}"
+cp "${OUTPUT_FILE}" "${TARGET_DIR}/"
+cp "${BAIL_OUTPUT_FILE}" "${TARGET_DIR}/"
+
+yarn verify:definitions
