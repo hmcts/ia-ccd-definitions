@@ -1,0 +1,182 @@
+[
+  {
+    "RoleName": "hearing-centre-admin",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-ia-admofficer,ia_bail_caselinks_profile,ia_bail_caseflags_profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName": "idam:caseworker-ia-bails",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-ia-bails,ia_bail_caselinks_profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "idam:caseworker-ia-internal",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-ia-internal,caseworker-ia-admofficer",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName": "idam:caseworker-ia-admofficer",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-ia-admofficer,ia_bail_caselinks_profile,ia_bail_caseflags_profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName": "idam:caseworker-ia-legalrep-solicitor",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-ia-legalrep-solicitor",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName": "idam:caseworker-ia-homeofficebail",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-ia-homeofficebail",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName": "idam:caseworker-ia-iacjudge",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-ia-iacjudge,ia_bail_caselinks_profile,ia_bail_caseflags_profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName": "idam:caseworker-caa",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-caa",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName": "idam:caseworker-approver",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-approver",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName": "[LEGALREPRESENTATIVE]",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "[LEGALREPRESENTATIVE]",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName": "idam:caseworker-ia-system",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-ia-system,ia_bail_caselinks_profile,ia_bail_caseflags_profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName": "idam:caseworker-ia-rparobot",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-ia-rparobot",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName": "idam:caseworker-ia-homeofficepou",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-ia-homeofficepou",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "hmcts-staff",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "GS_profile,ia_bail_caselinks_profile",
+    "ReadOnly": "Y",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "hmcts-admin",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "GS_profile,ia_bail_caselinks_profile",
+    "ReadOnly": "Y",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "hmcts-legal-operations",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "GS_profile,ia_bail_caselinks_profile",
+    "ReadOnly": "Y",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "hmcts-ctsc",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "GS_profile",
+    "ReadOnly": "Y",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "hmcts-judiciary",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "GS_profile,ia_bail_caselinks_profile",
+    "ReadOnly": "Y",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "case-allocator",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "GS_profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "task-supervisor",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "GS_profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  }
+]

@@ -362,7 +362,20 @@
   {"LiveFrom": "01/01/2018", "ID": "statutoryTimeframe24WeeksHistory", "ListElementCode": "reason", "FieldType": "Text", "ElementLabel": "Reason", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "statutoryTimeframe24WeeksHistory", "ListElementCode": "user", "FieldType": "Text", "ElementLabel": "User", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "statutoryTimeframe24WeeksHistory", "ListElementCode": "dateTimeAdded", "FieldType": "DateTime", "ElementLabel": "Date added", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "ID": "stf24WeekCohort", "ListElementCode": "name", "FieldType": "Text", "ElementLabel": "Name", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "stf24WeekCohort", "ListElementCode": "included", "FieldType": "Text", "ElementLabel": "Included", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "ID": "homeOfficeStatutoryTimeframeDto", "ListElementCode": "hmctsReferenceNumber", "FieldType": "Text", "ElementLabel": "HMCTS reference number", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "homeOfficeStatutoryTimeframeDto", "ListElementCode": "uan", "FieldType": "Text", "ElementLabel": "UAN", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "homeOfficeStatutoryTimeframeDto", "ListElementCode": "familyName", "FieldType": "Text", "ElementLabel": "Family name", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "homeOfficeStatutoryTimeframeDto", "ListElementCode": "givenNames", "FieldType": "Text", "ElementLabel": "Given names", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "homeOfficeStatutoryTimeframeDto", "ListElementCode": "dateOfBirth", "FieldType": "Date", "ElementLabel": "Date of birth", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "homeOfficeStatutoryTimeframeDto", "ListElementCode": "stf24weekCohorts", "FieldType": "Collection", "FieldTypeParameter": "stf24WeekCohort", "ElementLabel": "24-week cohorts", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "homeOfficeStatutoryTimeframeDto", "ListElementCode": "timeStamp", "FieldType": "DateTime", "ElementLabel": "Time-stamp", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {"LiveFrom": "01/01/2018", "ID": "statutoryTimeframe24Weeks", "ListElementCode": "history", "FieldType": "Collection", "FieldTypeParameter": "statutoryTimeframe24WeeksHistory", "ElementLabel": "History", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "statutoryTimeframe24Weeks", "ListElementCode": "homeOfficeResponse", "FieldType": "homeOfficeStatutoryTimeframeDto", "ElementLabel": "Home Office response", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "familyName", "ElementLabel": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "givenNames", "ElementLabel": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -370,8 +383,9 @@
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "nationality", "ElementLabel": "Nationality", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "roa", "ElementLabel": "Right of appeal", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "asylumSupport", "ElementLabel": "Asylum support", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "feeWaiver", "ElementLabel": "Home Office fee waiver", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "hoFeeWaiver", "ElementLabel": "Home Office fee waiver", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "language", "ElementLabel": "Language", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "interpreterNeeded", "ElementLabel": "Interpreter needed", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"}
+  {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "interpreterNeeded", "ElementLabel": "Interpreter needed", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "pp", "ElementLabel": "Person number", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"}
 
 ]

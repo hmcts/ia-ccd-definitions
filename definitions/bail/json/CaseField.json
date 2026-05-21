@@ -1,0 +1,652 @@
+[
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "currentCaseStateVisibleToLegalRepresentative", "Label": "Internal flag managed by API to show correct case state for legal representatives", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "currentCaseStateVisibleToJudge", "Label": "Internal flag managed by API to show correct case state for Judges", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "currentCaseStateVisibleToAdminOfficer", "Label": "Internal flag managed by API to show correct case state for admin", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "currentCaseStateVisibleToHomeOffice", "Label": "Internal flag managed by API to show correct case state for home office generic", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "currentCaseStateVisibleToAllUsers", "Label": "Internal flag managed by API to show correct case state for all users", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "uploadBailSummaryActionAvailable", "Label": "Internal flag managed by API to enable/disable uploadBailSummaryAction", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "bailSummaryDueDate", "Label": " ", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hasPreviousBailApplication", "Label": "Has the applicant made a previous application before?", "FieldType": "FixedRadioList", "FieldTypeParameter": "previousApplicationExistsList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "previousBailApplicationNumber", "Label": "What is the bail number for the previous application?", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hasProbationOffenderManagerTitle", "Label": "![]()\r\n## Probation offender manager", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hasProbationOffenderManager", "Label": "Probation offender manager", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "probationOffenderManagerGivenName", "Label": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "probationOffenderManagerFamilyName", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "probationOffenderManagerContactDetailsLabel", "Label": "Select email and at least one phone option.\n \n Contact details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "probationOffenderManagerContactDetails", "Label": " ", "FieldType": "MultiSelectList", "FieldTypeParameter": "probationOffenderManagerContactDetails", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "probationOffenderManagerTelephoneNumber", "Label": "Telephone number", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "probationOffenderManagerMobileNumber", "Label": "Mobile number", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "probationOffenderManagerEmailAddress", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "previousApplicationDoneViaAria", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "previousApplicationDoneViaCcd", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantBeenRefusedBail", "Label": "Has the applicant been refused immigration bail at a hearing within the last 28 days?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "bailHearingDate", "Label": "What was the date of the hearing?", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "noAccessToPreviousApplications", "Label": "You don't have access to any previous applications for the applicant. Click Continue to create a new application.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "redirectToPreviousApplicationOrNoc", "Label": "This applicant has made at least one previous bail application.\n\n You will need to choose one of the following options to continue:\n\n* If you did not make a previous application on the applicant’s behalf you will need to acquire the case record to continue. You can do so by using Notice of Change [here](/noc).\n\n* If you did, you need to find the applicant in the [case list](/case/case-list) and make a new application.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "beforeYouStartLabel1", "Label": "You will be asked to provide the following information about this application.\n\n* Applicant’s personal details\n* Application details\n* Financial condition details (if any)\n* Grounds for the application\n*Hearing requirements (if any)\n* Representative details (if any)\n\nOnce you start, you will not be able to save your answers until you have completed the application.\n\nPlease ensure you have all the information you need to hand and allow enough time to complete the application in one sitting.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "sentByChecklist", "Label": "Application sent by", "FieldType": "FixedRadioList", "FieldTypeParameter": "applicationSentByList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "isAdmin", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "isLegalRep", "Label": "Legal Representative", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "isHomeOffice", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantGivenNames", "Label": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantFamilyName", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantDateOfBirth", "Label": "Date of birth", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantGender", "Label": "Gender", "FieldType": "FixedRadioList", "FieldTypeParameter": "applicationGenderList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantGenderEnterDetails", "Label": "Enter details", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantNationality", "Label": "Nationality", "FieldType": "FixedRadioList", "FieldTypeParameter": "applicationNationalityDetailsList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantNationalities", "Label": "Nationalities", "FieldType": "Collection", "FieldTypeParameter": "nationalityList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "homeOfficeReferenceNumber", "Label": "Home Office reference\n", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantDetainedLoc", "Label": " \n\nDetention facility", "FieldType": "FixedRadioList", "FieldTypeParameter": "applicantDetainedLocList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantPrisonDetails", "Label": "Prison NOMS number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "ircDetailsTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "ircName", "Label": "Immigration removal centre", "FieldType": "FixedList", "FieldTypeParameter": "ircNameList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prisonDetailsTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prisonName", "Label": "Prison", "FieldType": "FixedList", "FieldTypeParameter": "prisonNameList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantArrivalInUKDateTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantArrivalInUKDate", "Label": "Date of arrival in the UK", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantHasMobileLabel", "Label": "If the applicant has access to a mobile phone in their place of detention, the Tribunal will send them notifications about the application.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantHasMobile", "Label": "Mobile phone", "FieldType": "YesOrNo", "FieldTypeParameter": "hasMobileNumberList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantMobileNumber1", "Label": "Mobile phone number\n", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hasAppealHearingPendingTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hasAppealHearingPending", "Label": "Pending appeal hearing", "FieldType": "FixedRadioList", "FieldTypeParameter": "hasPendingAppealHearingList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "appealReferenceNumber", "Label": "Appeal reference number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hasAppealHearingPendingTitleUT", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "utAppealReferenceNumber", "Label": "Appeal reference number in UT", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantHasAddress", "Label": "Address if bail granted", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantAddress", "Label": "Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "agreesToBoundByFinancialCond", "Label": "Financial condition", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "financialCondAmount1", "Label": "Enter the financial condition amount (£)", "FieldType": "Number", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hasFinancialCondSupporter", "Label": "Financial condition supporter", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporterGivenNames", "Label": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporterFamilyNames", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporterAddressDetails", "Label": "Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporterContactDetailsLabel", "Label": "Select email and at least one phone option.\n \n Contact details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporterContactDetails", "Label": " ", "FieldType": "MultiSelectList", "FieldTypeParameter": "supporterContactDetails", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporterTelephoneNumber1", "Label": "Telephone number", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporterMobileNumber1", "Label": "Mobile number", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporterEmailAddress1", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporterDOB", "Label": "Date of birth", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporterRelation", "Label": "Relationship to the applicant", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporterOccupation", "Label": "Occupation", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporterImmigration", "Label": "Immigration status", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporterNationality", "Label": "Nationality ", "FieldType": "Collection", "FieldTypeParameter": "nationalityList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporterHasPassport", "Label": "Passport", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporterPassport", "Label": "Passport number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "financialAmountSupporterUndertakes1", "Label": "Financial condition amount (£)", "FieldType": "Number", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hasFinancialCondSupporter2", "Label": "Financial condition supporter 2", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2GivenNames", "Label": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2FamilyNames", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2AddressDetails", "Label": "Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2ContactDetailsLabel", "Label": "Select email and at least one phone option.\n \n Contact details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2ContactDetails", "Label": " ", "FieldType": "MultiSelectList", "FieldTypeParameter": "supporterContactDetails", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2TelephoneNumber1", "Label": "Telephone number", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2MobileNumber1", "Label": "Mobile number", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2EmailAddress1", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2DOB", "Label": "Date of birth", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2Relation", "Label": "Relationship to the applicant", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2Occupation", "Label": "Occupation", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2Immigration", "Label": "Immigration status", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2Nationality", "Label": "Nationality ", "FieldType": "Collection", "FieldTypeParameter": "nationalityList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2HasPassport", "Label": "Passport", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2Passport", "Label": "Passport number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "financialAmountSupporter2Undertakes1", "Label": "Financial condition amount (£)", "FieldType": "Number", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hasFinancialCondSupporter3", "Label": "Financial condition supporter 3", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3GivenNames", "Label": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3FamilyNames", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3AddressDetails", "Label": "Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3ContactDetailsLabel", "Label": "Select email and at least one phone option.\n \n Contact details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3ContactDetails", "Label": " ", "FieldType": "MultiSelectList", "FieldTypeParameter": "supporterContactDetails", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3TelephoneNumber1", "Label": "Telephone number", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3MobileNumber1", "Label": "Mobile number", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3EmailAddress1", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3DOB", "Label": "Date of birth", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3Relation", "Label": "Relationship to the applicant", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3Occupation", "Label": "Occupation", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3Immigration", "Label": "Immigration status", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3Nationality", "Label": "Nationality ", "FieldType": "Collection", "FieldTypeParameter": "nationalityList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3HasPassport", "Label": "Passport", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3Passport", "Label": "Passport number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "financialAmountSupporter3Undertakes1", "Label": "Financial condition amount (£)", "FieldType": "Number", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hasFinancialCondSupporter4", "Label": "Financial condition supporter 4", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4GivenNames", "Label": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4FamilyNames", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4AddressDetails", "Label": "Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4ContactDetailsLabel", "Label": "Select email and at least one phone option.\n \n Contact details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4ContactDetails", "Label": " ", "FieldType": "MultiSelectList", "FieldTypeParameter": "supporterContactDetails", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4TelephoneNumber1", "Label": "Telephone number", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4MobileNumber1", "Label": "Mobile number", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4EmailAddress1", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4DOB", "Label": "Date of birth", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4Relation", "Label": "Relationship to the applicant", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4Occupation", "Label": "Occupation", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4Immigration", "Label": "Immigration status", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4Nationality", "Label": "Nationality ", "FieldType": "Collection", "FieldTypeParameter": "nationalityList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4HasPassport", "Label": "Passport", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4Passport", "Label": "Passport number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "financialAmountSupporter4Undertakes1", "Label": "Financial condition amount (£)", "FieldType": "Number", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "groundsForBailLabel1", "Label": "On the next screen you will be asked to set out all the reasons why the applicant should be released. Give as much detail as possible and please note the information below.\n\n# Previous applications\n\nIf the applicant has had a previous application for bail refused, include full details of any additional grounds or change in circumstances since then on the next screen.\n\nIf that refusal was within the last 28 days, this application will be dismissed without an oral hearing unless the applicant has demonstrated with evidence and information submitted with the application that there has been a material change of circumstances since the last bail decision.\n\n# Electronic monitoring\n\nIf the applicant is currently detained and is subject to deportation proceedings, the Home Office may be required to electronically monitor the applicant as part of the bail conditions.\n\nThe Home Office will use a GPS tag fitted to the applicant’s ankle to do this. Decisions about whether it is appropriate to do this will be made by the Home Office not the First-tier Tribunal.\n\nIf there are reasons why the applicant feels he or she should not be required to wear a tag, state these reasons on the next screen to allow the Home Office to consider the matter before the bail hearing.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "groundsForBailProvideEvidenceOption", "Label": "Supporting evidence", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "uploadTheBailEvidenceLabel", "Label": "#### Files should be:\n\n* a maximum of 100MB in size (larger files must be split)\n* labelled clearly, e.g. BailEvidence.pdf\n* in Word or PDF format", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "uploadTheBailEvidenceDocs", "Label": "Upload a file", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "documentTabTitle", "Label": "## Documents", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "groundsForBailReasons", "Label": "Enter the bail grounds", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "transferBailManagementYesOrNo", "Label": "Transfer bail management", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "noTransferBailManagementReasons", "Label": "Explain why the applicant does not consent to bail being transferred", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "transferBailManagementObjectionYesOrNo", "Label": "Management of bail", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "objectedTransferBailManagementReasons", "Label": "Explain why applicant objects to the Management of bail being transferred", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "interpreterYesNo", "Label": "Will the applicant need a spoken or sign language interpreter at the hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "interpreterLanguages", "Label": "Language Details", "FieldType": "Collection", "FieldTypeParameter": "languageList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "disabilityTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantDisability1", "Label": "Disability", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantDisabilityDetails", "Label": "Explain any special arrangements needed for the hearing", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "videoHearingTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "videoHearingLabel1", "Label": "The hearing of this bail application may be by a video link. If it is, the applicant will remain at the detention centre. Where there are exceptional circumstances and it is considered that the applicant is unable to use the video link, please give reasons and a judge will decide whether the application will be heard in person or by video link. All parties will be informed of this decision when the case is listed.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "videoHearing1", "Label": "Able to join video hearing", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "videoHearingDetails", "Label": "Explain why the applicant would not be able to join the hearing by video link", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hasLegalRep", "Label": "Legal Representative", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "legalRepCompany", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "legalRepName", "Label": "Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "legalRepFamilyName", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "legalRepEmail", "Label": "Email address", "FieldType": "Email", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "legalRepPhone", "Label": "Phone number", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "legalRepReference", "Label": "Reference", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "legalRepCompanyAddress", "Label": "Company Address", "FieldType": "AddressUK", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "uploadB1FormLabel", "Label": "Upload a copy of the B1 form the applicant or legal representative sent to the Tribunal.\n\n #### Files should be:\n\n* a maximum of 100MB in size (larger files must be split)\n*   labelled clearly, e.g. applicant-name-B1-form.pdf", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "uploadB1FormDocs", "Label": "Upload B1 form", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "caseNotesTabTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "caseHistoryTabTitle", "Label": " ", "FieldType": "CaseHistoryViewer", "SecurityClassification": "Public"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicant_has_legal_rep_flag", "Label": "![The applicant in this case is legally represented](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/journey_type_legally_represented.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "refusal_within_28days_flag", "Label": "![The applicant has had bail refused within last 28 days](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/refusal_within_28days.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "legal_rep_and_refusal_flag", "Label": "![The applicant is legally represented and has had bail refused within last 28 days](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/legal_rep_and_refusal_flag.png)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationStarted", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 1 of 6 stages - the Application started stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/e9d5f3ef7ade4b2745e8ce9f8d9202877e1ef2ae/app/assets/images/progress_application_started.svg)\n\n## Do this next\n\nYou still need to [submit the application](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/submitApplication).\n\nYou can also review and [edit the application](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/editBailApplication).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationSubmittedAdmin", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 2 of 6 stages - the Application submitted stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/df626d9fac8bedfc81b9adfc846237664439fc74/app/assets/images/progress_application_submitted.svg)\n\n## Do this next\n\nYou must now add any [case flags for interpreter or hearing requirement](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/createFlag/createFlagcreateFlag).\n\nWhen all required case flags have been added, the case will be ready to be listed.\n\nYou should [List the case here](cases/case-details/${[CASE_REFERENCE]}/hearings).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationSubmittedAdminDetentionConfirmedNull", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 2 of 6 stages - the Application submitted stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/df626d9fac8bedfc81b9adfc846237664439fc74/app/assets/images/progress_application_submitted.svg)\n\n## Do this next\n\nPlease [Confirm location](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/confirmDetentionLocation) where Applicant is detained is correct, and they are held on immigration matters, before listing the case for hearing in List Assist.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationSubmittedAdminDetentionConfirmedNo", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 2 of 6 stages - the Application submitted stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/df626d9fac8bedfc81b9adfc846237664439fc74/app/assets/images/progress_application_submitted.svg)\n\n## Do this next\n\nThe detention location must be verified as correct before you list the case for hearing. Please [Edit the application](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/editBailApplicationAfterSubmit) to correct the detention location (as required).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationSubmittedLegalRepOrHomeOffice", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 2 of 6 stages - the Application submitted stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/df626d9fac8bedfc81b9adfc846237664439fc74/app/assets/images/progress_application_submitted.svg)\n\n## What happens next\n\nThe Tribunal will list the case. You will be notified when this happens and the Notice of Hearing will be available in the documents tab.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationSubmittedJudge", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 2 of 6 stages - the Application submitted stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/df626d9fac8bedfc81b9adfc846237664439fc74/app/assets/images/progress_application_submitted.svg)\n\n## What happens next\n\nThe Tribunal will list the case. You will be notified when this happens and the Notice of Hearing will be available in the documents tab.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_bailSummaryPreUploadAdminOrLegalRepOrJudge", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 3 of 6 stages - the Bail Summary uploaded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/acaa6e46af3cad0996ab93feea2ceba696108aa2/app/assets/images/progress_bail_summary_pre_upload.svg\n)\n\n## What happens next\n\nThe case has been listed. The Notice of Hearing is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).\n\nThe Home Office will upload the Bail Summary.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_bailSummaryPreUploadHomeOffice", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 3 of 6 stages - the Bail Summary uploaded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/acaa6e46af3cad0996ab93feea2ceba696108aa2/app/assets/images/progress_bail_summary_pre_upload.svg\n)\n\n## What happens next\n\nThe case has been listed. The Notice of Hearing is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).\n\nYou must [upload the Bail Summary](/cases/case-details/${[CASE_REFERENCE]}/trigger/uploadBailSummary/uploadBailSummarybailSummaryDocumentUpload).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_bailSummaryUploadedLegalRepOrHomeOfficeOrJudge", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 4 of 6 stages - the Bail Summary uploaded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/7263e584b67ebff6285be6a223bd69ec7208c6f8/app/assets/images/BailSummary%20Progress%20bar%20post%20event.svg\n)\n\n## What happens next\n\nThe Bail Summary has been uploaded and is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).\n\nThe application will be decided at the hearing.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_bailSummaryUploadedAdmin", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 4 of 6 stages - the Bail Summary uploaded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/7263e584b67ebff6285be6a223bd69ec7208c6f8/app/assets/images/BailSummary%20Progress%20bar%20post%20event.svg\n)\n\n## What happens next\n\nThe Bail Summary has been uploaded and is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).\n\nThe application will be decided at the hearing. You must [record the decision](/cases/case-details/${[CASE_REFERENCE]}/trigger/recordTheDecision/recordTheDecisionrecordDecisionJudgeDetails) after the hearing.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_caseForcedToHearingLegalRepOrHomeOfficeOrJudge", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 4 of 6 stages - the Bail Summary uploaded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/7263e584b67ebff6285be6a223bd69ec7208c6f8/app/assets/images/BailSummary%20Progress%20bar%20post%20event.svg\n)\n\n## What happens next\n\nThe case has been progressed to the Hearing state as the Bail Summary was not uploaded within the given timescales.  If one is uploaded it will be available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).\n\nThe application will be decided at the hearing.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_caseForcedToHearingAdmin", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 4 of 6 stages - the Bail Summary uploaded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/7263e584b67ebff6285be6a223bd69ec7208c6f8/app/assets/images/BailSummary%20Progress%20bar%20post%20event.svg\n)\n\n## What happens next\n\nThe case has been progressed to the Hearing state as the Bail Summary was not uploaded within the given timescales.  If one is uploaded it will be available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).\n\nThe application will be decided at the hearing. You must [record the decision](/cases/case-details/${[CASE_REFERENCE]}/trigger/recordTheDecision/recordTheDecisionrecordDecisionJudgeDetails) after the hearing.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteAdminGranted", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. Download the decision notice from the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents) and distribute to anyone who needs to sign it. [Upload the signed decision notice](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/uploadSignedDecisionNotice) when it is ready.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteAdminConditionalGrant", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. Download the decision notice from the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents) and distribute to anyone who needs to sign it. [Upload the signed decision notice](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/uploadSignedDecisionNoticeConditionalGrant) when it is ready.\n\nDepending on the circumstance of the application, you can:\n\n* [Relist the case](/cases/case-details/${[CASE_REFERENCE]}/hearings)\n\n* [Send a direction](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/sendBailDirection)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteAdminRefused", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. Download the decision notice from the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents) and distribute to anyone who needs to sign it. [Upload the signed decision notice](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/uploadSignedDecisionNotice) when it is ready.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteHOGranted", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. The decision notice will be uploaded.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteLRGranted", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. The decision notice will be uploaded.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteJudgeGranted", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteHOConditionalGrant", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. The decision notice will be uploaded.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteLRConditionalGrant", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. The decision notice will be uploaded.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteJudgeConditionalGrant", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).\n\nDepending on the circumstance of the application, you can [send a direction](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/sendBailDirection).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteHORefused", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. The decision notice will be uploaded.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteJudgeRefused", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteLRRefused", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. The decision notice will be uploaded.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationDecidedHomeOfficeGranted", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 6 of 6 stages - the Application decided stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/f60191de78454570645006ac1a083cbe264e796c/app/assets/images/progress_application_decided.svg)\n\n## What happens next\n\nThis application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationDecidedHomeOfficeConditionalGrant", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 6 of 6 stages - the Application decided stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/f60191de78454570645006ac1a083cbe264e796c/app/assets/images/progress_application_decided.svg)\n\n## What happens next\n\nThis application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationDecidedHomeOfficeRefused", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 6 of 6 stages - the Application decided stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/f60191de78454570645006ac1a083cbe264e796c/app/assets/images/progress_application_decided.svg)\n\n## What happens next\n\nThis application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationDecidedJudgeGranted", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 6 of 6 stages - the Application decided stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/f60191de78454570645006ac1a083cbe264e796c/app/assets/images/progress_application_decided.svg)\n\n## What happens next\n\nThis application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteAdminRefusedIma", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. Download the decision notice from the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents) and distribute to anyone who needs to sign it. [Upload the signed decision notice](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/uploadSignedDecisionNotice) when it is ready.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteHORefusedIma", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. The decision notice will be uploaded.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteJudgeRefusedIma", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_hearingCompleteLRRefusedIma", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the decision recorded stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe application has been decided. The decision notice will be uploaded.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationDecidedJudgeConditionalGrant", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 6 of 6 stages - the Application decided stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/f60191de78454570645006ac1a083cbe264e796c/app/assets/images/progress_application_decided.svg)\n\n## What happens next\n\nThis application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).\n\nDepending on the circumstances of the application, you can:\n\n* [Send a direction](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/sendBailDirection)\n\n* [Record a new decision](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/recordTheDecision)\n\n* [Move the application to decided](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/moveApplicationToDecided)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationDecidedJudgeConditionalGrantRelisted", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the Application hearing stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/f60191de78454570645006ac1a083cbe264e796c/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThe case has been listed for a conditional bail review hearing.\n\nA notification has been sent to all parties.\n\nDepending on the circumstances of the application, you can:\n\n* [Send a direction](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/sendBailDirection)\n\n* [Record a new decision](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/recordTheDecision)\n\n* [Move the application to decided](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/moveApplicationToDecided)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationDecidedJudgeRefused", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 6 of 6 stages - the Application decided stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/f60191de78454570645006ac1a083cbe264e796c/app/assets/images/progress_application_decided.svg)\n\n## What happens next\n\nThis application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationDecidedLegalRepGranted", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 6 of 6 stages - the Application decided stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/f60191de78454570645006ac1a083cbe264e796c/app/assets/images/progress_application_decided.svg)\n\n## What happens next\n\nThis application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationDecidedLegalRepConditionalGrant", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 6 of 6 stages - the Application decided stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/f60191de78454570645006ac1a083cbe264e796c/app/assets/images/progress_application_decided.svg)\n\n## What happens next\n\nThis application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationDecidedLegalRepRefused", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 6 of 6 stages - the Application decided stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/f60191de78454570645006ac1a083cbe264e796c/app/assets/images/progress_application_decided.svg)\n\n## What happens next\n\nThis application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).\n\nIf you want to make another bail application, you must return to this page to [make the new application](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/makeNewApplication).\n\nIf you make a new application within 28 days of this decision, you won't get another hearing unless the applicant's situation has changed materially.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationDecidedAdminGranted", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 6 of 6 stages - the Application decided stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/f60191de78454570645006ac1a083cbe264e796c/app/assets/images/progress_application_decided.svg)\n\n## What happens next\n\nThis application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationDecidedAdminRefused", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 6 of 6 stages - the Application decided stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/f60191de78454570645006ac1a083cbe264e796c/app/assets/images/progress_application_decided.svg)\n\n## What happens next\n\nThis application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationDecidedAdminConditionalGrant", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the Application hearing stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/f60191de78454570645006ac1a083cbe264e796c/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nThis application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).\n\nDepending on the circumstances of the application, you can:\n\n* [Relist the case](/cases/case-details/${[CASE_REFERENCE]}/hearings)\n\n* [Send a direction](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/sendBailDirection)\n\n* [Record a new decision](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/recordTheDecision)\n\n* [Move the application to decided](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/moveApplicationToDecided)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationDecidedAdminConditionalGrantRelisted", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 5 of 6 stages - the Application hearing stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/f60191de78454570645006ac1a083cbe264e796c/app/assets/images/progress_hearing_complete.svg)\n\n## Do this next\n\nYou have listed this case for a conditional bail review hearing.\n\nA notification has been sent to all parties.\n\nDepending on the circumstances of the application, you can:\n\n* [Send a direction](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/sendBailDirection)\n\n* [Record a new decision](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/recordTheDecision)\n\n* [Move the application to decided](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/moveApplicationToDecided)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationMovedToDecided", "Label": "## Current progress of the case\n\n![Progress map showing that the application is now at stage 6 of 6 stages - the Application decided stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/f60191de78454570645006ac1a083cbe264e796c/app/assets/images/progress_application_decided.svg)\n\n## What happens next\n\nThis application has been decided. The decision notice is available in the [documents tab](/case/IA/Bail/${[CASE_REFERENCE]}#Documents).", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationEndedLr", "Label": "![Progress map showing that the application is now at stage 6 of 6 stages - the Application ended stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/application_ended.png)\n\n## What happens next\n\nNo further action is required on this application.\n\nIf you wish to make a new application you can do so [here.](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/makeNewApplication)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "progress_applicationEndedAdminOrHomeOfficeOrJudge", "Label": "![Progress map showing that the application is now at stage 6 of 6 stages - the Application ended stage](https://raw.githubusercontent.com/hmcts/ia-bail-frontend/master/app/assets/images/application_ended.png)\n\n## What happens next\n\nNo further action is required on this application.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "caseDetailsTitle", "Label": "![]()\n## Case details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hearingDetailsTitle", "Label": "![]()\r\n## Hearing details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "legalRepresentativeTitle", "Label": "![]()\n## Legal representative", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "bailReferenceNumber", "Label": "Online case reference number", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hearingCentre", "Label": "Hearing centre", "FieldType": "FixedList", "FieldTypeParameter": "hearingCentreList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "designatedTribunalCentre", "Label": "Designated Tribunal Centre", "FieldType": "FixedList", "FieldTypeParameter": "hearingCentreList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantFullName", "Label": "Applicant name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "isLegallyRepresentedForFlag", "Label": "Backend flag combining isLegalRep and hasLegalRep into 1 field for the overview tab flag conditions", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationSubmissionTitle", "Label": "## Submission", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationSubmittedBy", "Label": "Application submitted by", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationPersonalTitle", "Label": "![]()\r\n## Personal information", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationApplicantInfoTitle", "Label": "![]()\r\n## Applicant information", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationPrevApplicationTitle", "Label": "![]()\r\n## Previous application", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationFinancialCondTitle", "Label": "![]()\r\n## Financial condition commitment", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationFinancialCondSupporter1Title", "Label": "![]()\r\n## Financial condition supporter 1", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationFinancialCondSupporter2Title", "Label": "![]()\r\n## Financial condition supporter 2", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationFinancialCondSupporter3Title", "Label": "![]()\r\n## Financial condition supporter 3", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationFinancialCondSupporter4Title", "Label": "![]()\r\n## Financial condition supporter 4", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationBailGroundsTitle", "Label": "![]()\r\n## Grounds for bail", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "HearingTabTitle", "Label": "## Hearing", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicationHearingRequirementsTitle", "Label": "![]()\r\n## Hearing requirements", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "previousHearingDetailsTitle", "Label": "![]()\r\n## Previous Hearing Details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "previousListingDetails", "Label": "Previous Hearing Details", "FieldType": "Collection", "FieldTypeParameter": "previousHearingDetails", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hasBeenRelisted", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "previousDecisionDetailsTitle", "Label": "![]()\r\n## Previous Decision Details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "previousDecisionDetails", "Label": "Previous Decision Details", "FieldType": "Collection", "FieldTypeParameter": "previousDecisionDetails", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "declarationOnSubmit", "Label": " ", "FieldType": "MultiSelectList", "FieldTypeParameter": "declarationOnSubmit", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hearingDate", "Label": "Date and time", "FieldType": "DateTime", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hearingLocation", "Label": "Location", "FieldType": "FixedList", "FieldTypeParameter": "hearingLocationList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "detentionFacility", "Label": "Detention facility", "FieldType": "FixedList", "FieldTypeParameter": "detentionFacilityList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "submitNotificationStatus", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "notificationsSent", "Label": "Internal collection managed by API to track notifications sent using GovNotify for this case", "FieldType": "Collection", "FieldTypeParameter": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "uploadBailSummaryLabel", "Label": "#### Files should be:\n\n* a maximum of 100MB in size (larger files must be split)\n* labelled clearly, e.g. BailSummary.pdf\n* in Word or PDF format", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "uploadBailSummaryDocs", "Label": "Upload Bail Summary", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "homeOfficeDocumentsWithMetadata", "Label": "Home Office documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "judgeDetailsLabel", "Label": "Enter the name of the judge who heard the application.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "judgeDetailsName", "Label": "Judge name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "secretaryOfStateConsentYesOrNo", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "decisionGrantedOrRefused", "Label": " ", "FieldType": "FixedRadioList", "FieldTypeParameter": "decisionGrantedOrRefusedList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "reasonForRefusalDetails", "Label": "Enter the reasons for refusal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "releaseStatusYesOrNo", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "conditionsLabel", "Label": "Select the conditions the applicant will be subject to", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "conditionsForBail", "Label": " ", "FieldType": "MultiSelectList", "FieldTypeParameter": "conditionsForBailList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "conditionsForBailAppearance", "Label": "Appearance (where bail is going to be transferred to the Home Office)", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "conditionsForBailActivities", "Label": "Activities", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "conditionsForBailResidence", "Label": "Residence", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "conditionsForBailReporting", "Label": "Reporting (where bail is NOT going to be transferred to the Home Office)", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "conditionsForBailElectronicMonitoring", "Label": "Electronic Monitoring", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "conditionsForBailOther", "Label": "Other", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "recordFinancialConditionLabel", "Label": "Will the applicant be subject to a financial condition?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "recordFinancialConditionYesOrNo", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "recordFinancialConditionDetails", "Label": "|Applicant details|| \n| ------------- | ------------- |\n|Given names|${applicantGivenNames}| \n|Family name|${applicantFamilyName}| \n|Financial condition amount (£)|${financialCondAmount1}|", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "recordFinancialConditionCorrectLabel", "Label": "Is the financial condition amount correct?", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "recordFinancialConditionCorrectYesOrEdit", "Label": " ", "FieldType": "FixedRadioList", "FieldTypeParameter": "financialConditionCorrectEdit", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "confirmFinancialConditionAmountLabel", "Label": "Confirm the financial condition amount is correct. \n\n## Financial condition amount", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "financialCondSupporterConfirmationTitle", "Label": "Confirm the financial condition supporter details are correct.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "financialCondSupporterConfirmationAmountTitle", "Label": "### Amount undertaken to be paid", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter1ConfirmationTitle", "Label": "Confirm the financial condition supporter details are correct.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter1ConfirmationName", "Label": "|Financial condition supporter details|| \n| ------------- | ------------- |\n|Given names|${supporterGivenNames}| \n|Family name|${supporterFamilyNames}|", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter1ConfirmationAmountTitle", "Label": "### Amount undertaken to be paid", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter1ConfirmationTitleJudgeAgree", "Label": "Review the details of this financial condition supporter for the applicant.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter1ConfirmationDetailsJudgeAgree", "Label": "|Financial condition supporter details|| \n| ------------- | ------------- | \n|Given names|${supporterGivenNames}| \n|Family name|${supporterFamilyNames}| \n|Amount undertaken to be paid (£)|${financialAmountSupporterUndertakes1}|", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "judgeHasAgreedToSupporter1", "Label": "Did the judge agree to accept financial condition supporter 1?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2ConfirmationTitle", "Label": "Confirm the financial condition supporter details are correct.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2ConfirmationName", "Label": "|Financial condition supporter details|| \n| ------------- |:------------- |\n|Given names|${supporter2GivenNames}| \n|Family name|${supporter2FamilyNames}|", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2ConfirmationAmountTitle", "Label": "### Amount undertaken to be paid", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2ConfirmationTitleJudgeAgree", "Label": "Review the details of this financial condition supporter for the applicant.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2ConfirmationDetailsJudgeAgree", "Label": "|Financial condition supporter details|| \n| ------------- | ------------- | \n|Given names|${supporter2GivenNames}| \n|Family name|${supporter2FamilyNames}| \n|Amount undertaken to be paid (£)|${financialAmountSupporter2Undertakes1}|", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "judgeHasAgreedToSupporter2", "Label": "Did the judge agree to accept financial condition supporter 2?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3ConfirmationTitle", "Label": "Confirm the financial condition supporter details are correct.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3ConfirmationName", "Label": "|Financial condition supporter details|| \n| ------------- |:------------- |\n|Given names|${supporter3GivenNames}| \n|Family name|${supporter3FamilyNames}|", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3ConfirmationAmountTitle", "Label": "### Amount undertaken to be paid", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3ConfirmationTitleJudgeAgree", "Label": "Review the details of this financial condition supporter for the applicant.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3ConfirmationDetailsJudgeAgree", "Label": "|Financial condition supporter details|| \n| ------------- | ------------- | \n|Given names|${supporter3GivenNames}| \n|Family name|${supporter3FamilyNames}| \n|Amount undertaken to be paid (£)|${financialAmountSupporter3Undertakes1}|", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "judgeHasAgreedToSupporter3", "Label": "Did the judge agree to accept financial condition supporter 3?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4ConfirmationTitle", "Label": "Confirm the financial condition supporter details are correct.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4ConfirmationName", "Label": "|Financial condition supporter details|| \n| ------------- |:------------- |\n|Given names|${supporter4GivenNames}| \n|Family name|${supporter4FamilyNames}|", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4ConfirmationAmountTitle", "Label": "### Amount undertaken to be paid", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4ConfirmationTitleJudgeAgree", "Label": "Review the details of this financial condition supporter for the applicant.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4ConfirmationDetailsJudgeAgree", "Label": "|Financial condition supporter details|| \n| ------------- | ------------- | \n|Given names|${supporter4GivenNames}| \n|Family name|${supporter4FamilyNames}| \n|Amount undertaken to be paid (£)|${financialAmountSupporter4Undertakes1}|", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "judgeHasAgreedToSupporter4", "Label": "Did the judge agree to accept financial condition supporter 4?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "bailTransferYesOrNo", "Label": "Will the future management of bail for this applicant transfer to the Secretary of State?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "bailTransferDirections", "Label": "Enter the directions for future management of bail", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "bailTransferOtherDetails", "Label": "Enter any relevant details", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "recordTheDecisionList", "Label": " ", "FieldType": "FixedRadioList", "FieldTypeParameter": "tribunalDecisionList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "tribunalRefusalReason", "Label": "Enter the reasons for refusal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "reasonsJudgeIsMindedLabel", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "reasonsJudgeIsMindedDetails", "Label": "Enter the reasons the judge is minded to grant bail", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "ssConsentDecisionLabel", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "ssConsentDecision", "Label": "Does the Secretary of State give consent to grant bail?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "secretaryOfStateRefusalReasonsLabel", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "secretaryOfStateRefusalReasons", "Label": "Enter the reasons for refusal", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "uploadSignedDecisionNoticeLabel", "Label": "Upload a decision notice for this application that has been signed by the appropriate parties. \n\n #### Files should be:\n\n* a maximum of 100MB in size (larger files must be split)\n* labelled clearly, e.g. applicant-name-decision-notice.pdf", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "uploadSignedDecisionNoticeDocument", "Label": "Decision document", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "decisionUnsignedDocument", "Label": "Decision document", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "tribunalDocumentsWithMetadata", "Label": "Tribunal documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata","SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "unsgnDecisionDocumentWithMetadata", "Label": "Decision documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata","SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "signDecisionDocumentWithMetadata", "Label": "Decision documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata","SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "addCaseNoteLabel", "Label": "Enter the details of the case note", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "addCaseNoteSubject", "Label": "Subject", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "addCaseNoteDescription", "Label": "Case note", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "addCaseNoteDocument", "Label": "Upload a document", "FieldType": "Document", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "addCaseNoteLink", "Label": "[Add case note](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/addCaseNote)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "caseNotes", "Label": "Case notes", "FieldType": "Collection", "FieldTypeParameter": "caseNote", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "sendDirectionLabel", "Label": " ", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "sendDirectionDescription", "Label": "Explain the direction you are issuing", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "sendDirectionList", "Label": "Who are you giving direction to?", "FieldType": "FixedList", "FieldTypeParameter": "directionToList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "dateOfCompliance", "Label": "By what date must they comply?", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "dateTimeDirectionCreated", "Label": " ", "FieldType": "DateTime", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "dateTimeDirectionModified", "Label": " ", "FieldType": "DateTime", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "sendANewDirectionLink", "Label": "[Send a new direction](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/sendBailDirection)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "changeADirectionDueDateLink", "Label": "[Change a direction due date](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/changeBailDirectionDueDate)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "directions", "Label": "Directions", "FieldType": "Collection", "FieldTypeParameter": "direction", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "lastModifiedDirection", "Label": " ", "FieldType": "direction", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "changeBailDirectionLabel", "Label": "Select the direction you want to update.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "bailDirectionList", "Label": "Direction", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "bailDirectionEditLabel", "Label": "Enter the new direction due date. Ensure you are amending the correct direction.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "bailDirectionEditExplanation", "Label": "Explanation", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "bailDirectionEditParties", "Label": "Parties", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "bailDirectionEditDateSent", "Label": "Date Sent", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "bailDirectionEditDateDue", "Label": "Date Due", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "recordDecisionType", "Label": "Decision", "FieldType": "FixedList", "FieldTypeParameter": "recordDecisionTypeList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "decisionDetailsTitle", "Label": "![]()\n## Decision details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "decisionDetailsDate", "Label": "Decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "recordUnsignedDecisionType", "Label": "Decision", "FieldType": "FixedList", "FieldTypeParameter": "recordDecisionTypeList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "decisionUnsignedDetailsTitle", "Label": "![]()\n## Decision details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "decisionUnsignedDetailsDate", "Label": "Decision date", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "applicantDocumentsWithMetadata", "Label": "Applicant documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "declarationOnDecision", "Label": "Click Continue to move this application from the Conditional grant state to the Decided state. Once the application is moved to decided, no further action will be required.", "FieldType": "Label", "FieldTypeParameter": "declarationOnSubmit", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "endApplicationLabel", "Label": "Select the outcome that has led to the end of this application and provide the reasons for the outcome.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "endApplicationReasons", "Label": "Reasons", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "endApplicationOutcome", "Label": "Outcome", "FieldType": "FixedRadioList", "FieldTypeParameter": "endApplicationOutcomeList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "endApplicationDate", "Label": "Date application ended", "FieldType": "Date", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "endApplicationDetailsTitle", "Label": "![]()\n## Ended application details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "currentUser", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "lastFileUploadedBy", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "uploadDocumentsLabel", "Label": "Any document you upload will be visible to all parties in the documents tab", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "uploadDocumentsSuppliedBy", "Label": "Documents supplied by", "FieldType": "FixedRadioList", "FieldTypeParameter": "uploadDocumentsSuppliedByList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "uploadDocumentsGuidelines", "Label": "#### Files should be:\n\n* a maximum of 100MB in size (larger files must be split)\n* labelled clearly, e.g. applicant-name-additional-evidence.pdf", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "uploadDocuments", "Label": "Upload documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithDescription", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "editDocumentsReason", "Label": " ", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "outcomeDate", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "outcomeState", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "priorApplications1", "Label": "Prior Applications", "FieldType": "Collection", "FieldTypeParameter": "priorApplication","SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "previousApplicationsTabLabel", "Label": "[View previous applications](/case/IA/Bail/${[CASE_REFERENCE]}/trigger/viewPreviousApplications)", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "previousApplicationList", "Label": "Select previous application", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppDecisionDetailsLabel", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppHearingDetails", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppApplicantDocsDetails", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppHearingReqDetails", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppSubmissionDetails", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppPersonalInfoDetails", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppDirectionDetails", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppApplicantInfo", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppFinancialCondCommitment", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppFinancialCondSupporter1", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppFinancialCondSupporter2", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppFinancialCondSupporter3", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppFinancialCondSupporter4", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppGroundsForBail", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppLegalRepDetails", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppProbationOffenderManager", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppProbationOffenderManagerLabel", "Label": "${prevAppProbationOffenderManager}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppIdLabel", "Label": "# Bail Application ${prevAppId}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppDecisionLabel", "Label": "${prevAppDecisionDetailsLabel}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppDocumentsLabel", "Label": "${prevAppApplicantDocsDetails}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppHearingLabel", "Label": "${prevAppHearingDetails}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppHearingReqLabel", "Label": "${prevAppHearingReqDetails}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppSubmissionLabel", "Label": "${prevAppSubmissionDetails}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppPersonalInfoLabel", "Label": "${prevAppPersonalInfoDetails}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppDirectionsLabel", "Label": "${prevAppDirectionDetails}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppApplicantInfoLabel", "Label": "${prevAppApplicantInfo}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppFinancialCondCommitmentLabel", "Label": "${prevAppFinancialCondCommitment}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppFinancialCondSupporter1Label", "Label": "${prevAppFinancialCondSupporter1}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppFinancialCondSupporter2Label", "Label": "${prevAppFinancialCondSupporter2}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppFinancialCondSupporter3Label", "Label": "${prevAppFinancialCondSupporter3}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppFinancialCondSupporter4Label", "Label": "${prevAppFinancialCondSupporter4}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppGroundsForBailLabel", "Label": "${prevAppGroundsForBail}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "prevAppLegalRepDetailsLabel", "Label": "${prevAppLegalRepDetails}", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "localAuthorityPolicy", "Label": "Organisation policy", "FieldType": "OrganisationPolicy", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "changeOrganisationRequestField", "Label": "Change Organisation Request", "FieldType": "ChangeOrganisationRequest", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "removeRepresentationDescription", "Label": "#### Once you've submitted this request\r\n- The legal representative will no longer have access to this case\r\n- If the case has been shared with other legal representatives, they will also lose access\r\n- If there are any cases linked to this case, they will not be affected", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "stopRepresentingDescription", "Label": "#### Once you've submitted this request\r\n- You will no longer have access to this case\r\n- If the case has been shared with any colleagues, they will also lose access\r\n- Linked appeals are not affected. If you want to stop representing a client on a linked appeal, you need to access the case and repeat this action.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "updateLegalRepCompany", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "updateLegalRepName", "Label": "Name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "updateLegalRepFamilyName", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "updateLegalRepEmail1", "HintText": "This is for correspondence only. You cannot change your sign-in email.", "Label": "Email", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "updateLegalRepPhone", "Label": "Phone number", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "updateLegalRepReference", "Label": "Own Reference", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "caseLinksFlag", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "maintainCaseLinksFlag", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "caseLinksTabTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "caseLinks", "Label": "Linked Cases", "FieldType": "Collection", "FieldTypeParameter": "CaseLink", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "LinkedCasesComponentLauncher", "Label": "Component Launcher (for displaying Linked Cases data)", "FieldType": "ComponentLauncher", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "caseFlagsTabTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "caseFlags", "Label": " ", "FieldType": "Flags", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "appellantLevelFlags", "Label": " ", "FieldType": "Flags", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "fcsLevelFlags", "Label": " ", "FieldType": "Collection","FieldTypeParameter": "Flags", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "flagLauncher", "Label": " ", "FieldType": "FlagLauncher", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "applicantInterpreterLanguageCategory", "Label": "What kind of interpreter will the applicant need?", "FieldType": "MultiSelectList", "FieldTypeParameter": "interpreterLanguageCategory", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "applicantInterpreterSpokenLanguage", "Label": "Tell us which spoken language is needed for the applicant", "FieldType": "interpreterSpokenLanguage", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "applicantInterpreterSignLanguage", "Label": "Tell us which sign language is needed for the applicant", "FieldType": "interpreterSignLanguage", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "fcsInterpreterYesNo", "Label": "Will any of the financial condition supporters require a spoken or sign language interpreter at the hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "fcsInterpreterLabel", "Label": "Select the Financial condition supporters that need a spoken or sign language interpreter and the kind of interpreter they need", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "fcs1InterpreterLanguageCategory", "Label": "What kind of interpreter does ${supporterGivenNames} ${supporterFamilyNames} need?", "FieldType": "MultiSelectList", "FieldTypeParameter": "interpreterLanguageCategory", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "fcs2InterpreterLanguageCategory", "Label": "What kind of interpreter does ${supporter2GivenNames} ${supporter2FamilyNames} need?", "FieldType": "MultiSelectList", "FieldTypeParameter": "interpreterLanguageCategory", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "fcs3InterpreterLanguageCategory", "Label": "What kind of interpreter does ${supporter3GivenNames} ${supporter3FamilyNames} need?", "FieldType": "MultiSelectList", "FieldTypeParameter": "interpreterLanguageCategory", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "fcs4InterpreterLanguageCategory", "Label": "What kind of interpreter does ${supporter4GivenNames} ${supporter4FamilyNames} need?", "FieldType": "MultiSelectList", "FieldTypeParameter": "interpreterLanguageCategory", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "fcs1InterpreterSpokenLanguage", "Label": "Which spoken language is needed for ${supporterGivenNames} ${supporterFamilyNames}", "FieldType": "interpreterSpokenLanguage", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "fcs1InterpreterSignLanguage", "Label": "Which sign language is needed for ${supporterGivenNames} ${supporterFamilyNames}", "FieldType": "interpreterSignLanguage", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "fcs2InterpreterSpokenLanguage", "Label": "Which spoken language is needed for ${supporter2GivenNames} ${supporter2FamilyNames}", "FieldType": "interpreterSpokenLanguage", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "fcs2InterpreterSignLanguage", "Label": "Which sign language is needed for ${supporter2GivenNames} ${supporter2FamilyNames}", "FieldType": "interpreterSignLanguage", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "fcs3InterpreterSpokenLanguage", "Label": "Which spoken language is needed for ${supporter3GivenNames} ${supporter3FamilyNames}", "FieldType": "interpreterSpokenLanguage", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "fcs3InterpreterSignLanguage", "Label": "Which sign language is needed for ${supporter3GivenNames} ${supporter3FamilyNames}", "FieldType": "interpreterSignLanguage", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "fcs4InterpreterSpokenLanguage", "Label": "Which spoken language is needed for ${supporter4GivenNames} ${supporter4FamilyNames}", "FieldType": "interpreterSpokenLanguage", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "fcs4InterpreterSignLanguage", "Label": "Which sign language is needed for ${supporter4GivenNames} ${supporter4FamilyNames}", "FieldType": "interpreterSignLanguage", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "legalRepIndividualPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "legalRepOrganisationPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter1PartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter2PartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter3PartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "supporter4PartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "isDetentionLocationCorrect", "Label": "Have you verified if the Applicant's place of detention is correct?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "interpreterDetails", "Label": "Interpreter details", "FieldType": "Collection", "FieldTypeParameter": "interpreterDetails", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "interpreterDetailsTitle", "Label": "![]()\r\n## Interpreter details", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "interpreterBookingStatusTitle", "Label": "![]()\r\n## Interpreter booking status", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "interpreterBookingStatusDescription", "Label": "The booking status of interpreters can be managed here. After updating an interpreters status you must update the hearing via the Hearings tab. This information will then be visible in List Assist.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantInterpreterSpokenLanguageBooking", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantInterpreterSpokenLanguageBookingStatus", "Label": "${applicantInterpreterSpokenLanguageBooking}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantInterpreterSignLanguageBooking", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "applicantInterpreterSignLanguageBookingStatus", "Label": "${applicantInterpreterSignLanguageBooking}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSpokenLanguageBooking1", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSpokenLanguageBookingStatus1", "Label": "${fcsInterpreterSpokenLanguageBooking1}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSpokenLanguageBooking2", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSpokenLanguageBookingStatus2", "Label": "${fcsInterpreterSpokenLanguageBooking2}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSpokenLanguageBooking3", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSpokenLanguageBookingStatus3", "Label": "${fcsInterpreterSpokenLanguageBooking3}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSpokenLanguageBooking4", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSpokenLanguageBookingStatus4", "Label": "${fcsInterpreterSpokenLanguageBooking4}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSignLanguageBooking1", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSignLanguageBookingStatus1", "Label": "${fcsInterpreterSignLanguageBooking1}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSignLanguageBooking2", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSignLanguageBookingStatus2", "Label": "${fcsInterpreterSignLanguageBooking2}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSignLanguageBooking3", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSignLanguageBookingStatus3", "Label": "${fcsInterpreterSignLanguageBooking3}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSignLanguageBooking4", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "fcsInterpreterSignLanguageBookingStatus4", "Label": "${fcsInterpreterSignLanguageBooking4}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "listCaseHearingTitle", "Label": "Add the hearing details below.", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "listingEvent", "Label": "Listing event", "FieldType": "FixedList", "FieldTypeParameter": "listingEventList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "listingLocation", "Label": "Location", "FieldType": "FixedList", "FieldTypeParameter": "hearingLocationList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "refDataListingLocation", "Label": "Listing location", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "isRemoteHearing", "Label": "Will the hearing be held remotely?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "listingHearingDuration", "Label": "Length in minutes", "FieldType": "Number", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "listingHearingDate", "Label": "Date and time", "FieldType": "DateTime", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "refDataListingLocationDetail", "Label": "Ref data listing location details", "FieldType": "refDataListingLocationDetail", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hearingDocuments", "Label": "Hearing documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "currentHearingId", "Label": "Current Hearing ID", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "hearingIdList", "Label": "List of hearing IDs associated with case", "FieldType": "Collection", "FieldTypeParameter": "Text", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "hearingDecisionList", "Label": "List of hearing IDs and decisions associated with case", "FieldType": "Collection", "FieldTypeParameter": "hearingDecision", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "adminSelectImaStatus", "Label": "Is the applicant detained under the Illegal Migration Act 2023?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "hoSelectImaStatus", "Label": "Is the applicant detained under the Illegal Migration Act 2023?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "adminHasImaStatus", "Label": "Detained under Illegal Migration Act 2023", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hoHasImaStatus", "Label": "Detained under Illegal Migration Act 2023", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "isImaEnabled", "Label": "Feature toggle field to be populated in the backend", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "isBailsLocationReferenceDataEnabled", "Label": "Bails location ref data feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hearingCentreRefData", "Label": "Hearing centre", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "selectedHearingCentreRefData", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hasActiveInterpreterFlag", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hasCaseBeenForcedToHearing", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "reasonToForceCaseToHearing", "Label": "Reasons to force the case progression", "FieldType": "TextArea", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "uploadHearingRecordingTitle", "Label": "#### Files should be:\r\n- Files must be no more than 500Mb in size\r\n- You can upload mp3 files\r\n- Before uploading a file, give it a meaningful file name. For example, hearing-recording -JSmith.mp3\r\n\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "hearingRecordingDocuments", "Label": "Hearing recording document", "FieldType": "Collection", "FieldTypeParameter": "hearingRecordingDocument", "SecurityClassification": "PUBLIC"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "lastEditApplicationNotificationDate", "Label": " ", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "notificationsTabTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "notifications", "Label": "Notifications", "FieldType": "Collection", "FieldTypeParameter": "notification", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "notificationStoreScheduleDate", "Label": " ", "FieldType": "Date",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "caseNameHmctsInternal", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "SearchCriteria", "Label": " ", "FieldType": "SearchCriteria", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "searchParties", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "parties", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "caseManagementLocation", "Label": "Case management location", "FieldType": "caseManagementLocation", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "caseManagementLocationRefData", "Label": "Case management location", "FieldType": "caseManagementLocationRefData", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "caseManagementCategory", "Label": "Case management category", "FieldType": "DynamicList",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "staffLocation", "Label": "Staff Location", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "staffLocationId", "Label": "Staff Location Id", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "TTL", "Label": " ", "FieldType": "TTL", "SecurityClassification": "PUBLIC", "Searchable": "N"}
+]
