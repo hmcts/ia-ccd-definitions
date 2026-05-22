@@ -4785,8 +4785,17 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_reviewHearingRequirements_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_reviewHearingRequirements.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_reviewHearingRequirements_aip",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_reviewHearingRequirements.svg)\r\n\r\n## Do this next\r\nYou can view the hearing requirements and any requests for additional adjustments in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).<br><br>If you need more information, [direct the appellant to answer clarifying questions](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitClarifyingQuestionAnswers).<br><br>If you do not need more information, [review and record](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewHearingRequirements) the hearing requirements and any additional adjustments.",
+    "Label": "## Do this next\r\nYou can view the hearing requirements and any requests for additional adjustments in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).<br><br>If you need more information, [direct the appellant to answer clarifying questions](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitClarifyingQuestionAnswers).<br><br>If you do not need more information, [review and record](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewHearingRequirements) the hearing requirements and any additional adjustments.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4795,7 +4804,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_reviewHearingRequirements",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_reviewHearingRequirements.svg)\r\n\r\n## Do this next\r\nYou can view the hearing requirements and any requests for additional adjustments in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).<br><br>You should contact the appellant if you need more information.<br><br>You should then [review and submit](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewHearingRequirements) the hearing requirements and any additional adjustments.",
+    "Label": "## Do this next\r\nYou can view the hearing requirements and any requests for additional adjustments in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).<br><br>You should contact the appellant if you need more information.<br><br>You should then [review and submit](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewHearingRequirements) the hearing requirements and any additional adjustments.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4813,7 +4822,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_reviewHearingRequirements",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Listing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_reviewHearingRequirements.svg)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will agree what adjustments the Tribunal will make.",
+    "Label": "## What happens next\r\nThe Tribunal Caseworker will agree what adjustments the Tribunal will make.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -7061,11 +7070,11 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeReferenceNumberBeforeEdit", "Label": "Internal flag managed by API for Home Office reference number before edit", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellantApiResponseStatus", "Label": "Home Office appellant API HTTP status", "FieldType": "Number", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellantUan", "Label": "Home Office appellant UAN", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellantClaimDate", "Label": "Home Office appellant claim date", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellantDecisionDate", "Label": "Home Office appellant decision date", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellantDecisionLetterDate", "Label": "Home Office appellant decision letter date", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellants", "Label": "Home Office appellants", "FieldType": "Collection", "FieldTypeParameter": "homeOfficeAppellant", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellantsSerialisedInternalUseOnly", "Label": "Do not display - internal use only", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "upperTribunalDocuments", "Label": "Upper Tribunal documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stitchingStatusUpperTribunal", "Label": "Internal flag managed by API to identify if upper tribunal bundling stitching is complete", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
