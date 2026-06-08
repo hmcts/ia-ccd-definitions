@@ -4201,7 +4201,16 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_aip_caseUnderReview_stf24w",
+    "ID": "progress_caseOfficer_aip_caseUnderReview_hearing_stf24w",
+    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request hearing requirements.\r\n\r\n[Request hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_admin_caseUnderReview_hearing_stf24w",
     "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request hearing requirements.\r\n\r\n[Request hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
@@ -4211,6 +4220,15 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_aip_caseUnderReview_no_hearing_stf24w",
+    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request respondent review.\r\n\r\n[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_admin_caseUnderReview_no_hearing_stf24w",
     "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request respondent review.\r\n\r\n[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
