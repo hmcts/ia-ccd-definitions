@@ -1122,8 +1122,26 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_lr_caseBuilding_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 4 of 11 stages - the Case building stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_caseBuilding.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_caseBuilding_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Case building stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_lr_caseBuilding_stf24w.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_caseBuilding",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 4 of 11 stages - the Case building stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_caseBuilding.svg)\r\n\r\n## Do this next\r\nThe respondent evidence is now available in the documents tab. You now need to build your case.\r\n\r\n[Build your case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/buildCase)",
+    "Label": "## Do this next\r\nThe respondent evidence is now available in the documents tab. You now need to build your case.\r\n\r\n[Build your case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/buildCase)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -1132,7 +1150,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_caseBuilding_readyForSubmission",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 4 of 11 stages - the Case building stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_caseBuilding.svg)\r\n\r\n## Do this next\r\nIf you're ready for your case to be reviewed, [submit your case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitCase).\r\n\r\nIf you're not yet ready for your case to be reviewed, continue to [build your case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/buildCase).",
+    "Label": "## Do this next\r\nIf you're ready for your case to be reviewed, [submit your case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitCase).\r\n\r\nIf you're not yet ready for your case to be reviewed, continue to [build your case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/buildCase).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
