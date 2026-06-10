@@ -1149,6 +1149,15 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_legalRepresentative_caseBuilding_stf24w",
+    "Label": "## Do this next\r\nThe respondent evidence is available in the documents tab. You now need to build your case.\r\n\r\n[Build your case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/buildCase)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_caseBuilding_readyForSubmission",
     "Label": "## Do this next\r\nIf you're ready for your case to be reviewed, [submit your case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitCase).\r\n\r\nIf you're not yet ready for your case to be reviewed, continue to [build your case](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/buildCase).",
     "FieldType": "Label",
