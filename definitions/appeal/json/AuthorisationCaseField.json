@@ -12352,6 +12352,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantPinInPost", "UserRole": "ia_specific_access_admin_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantPinInPost", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantPinInPost", "UserRole": "ia_specific_access_legal_ops_profile", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantPinInPost", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantPinInPost", "UserRole": "caseworker-ia-internal", "CRUD": "CRUD"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prevJourneyType", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prevJourneyType", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRU"},
@@ -15612,7 +15614,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "maintainCaseLinksFlag", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "caseLinksTabTitle", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "LinkedCasesComponentLauncher", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "appellantPinInPost", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "prevJourneyType", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "s94bStatus", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "ftpaList", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
@@ -16147,6 +16148,9 @@
 
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseFieldID": "caseIdList", "UserRole": "caseworker-ia-internal", "CRUD": "CRUD"},
   {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseFieldID": "caseIdList", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseFieldID": "generatePipEmail", "UserRole": "caseworker-ia-internal", "CRUD": "CRUD"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Asylum", "CaseFieldID": "generatePipEmail", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "TTL", "UserRole": "cft-ttl-manager", "CRUD": "CRU"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseFieldID": "TTL", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "R"},
