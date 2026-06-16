@@ -4238,7 +4238,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_respondentReview",
-    "Label": "## Current progress of the case\n\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview.svg)\n\n## What happens next\nThe Tribunal Caseworker will review the Home Office response.",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview.svg)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will review the Home Office response.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4247,7 +4247,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_respondentReview",
-    "Label": "## Current progress of the case\n\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview.svg)\n\n## What happens next\nThe Tribunal Caseworker will review the Home Office response.",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview.svg)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will review the Home Office response.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -6496,7 +6496,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonToForceCaseToCaseUnderReview", "Label": "Reasons to force the case progression", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "forceCaseToSubmitHearingRequirementsTitle", "Label": "# Force case to submit hearing requirements\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reasonToForceCaseToSubmitHearingRequirements", "Label": "Reasons to force the case progression", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "forceCaseToPrepareForHearingTitle", "Label": "# Force case to prepare for hearing\r\n", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateLegalRepCompany", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateLegalRepName", "Label": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateLegalRepFamilyName", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
