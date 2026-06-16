@@ -6927,7 +6927,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "entryClearanceDecisionTitle", "Label": " ", "FieldType": "Label",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "entryClearanceDecisionLetterTitle", "Label": " ", "FieldType": "Label",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "gwfReferenceNumberTitle", "Label": "You can find the Global Web Form reference and the date the letter was sent on the appellant's Home Office decision letter.","FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "gwfReferenceNumberTitle", "Label": "You can find the Home Office reference and the date the letter was sent on the appellant's Home Office decision letter.","FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "gwfReferenceNumber", "Label": "Home Office UAN or GWF reference", "HintText": "Enter the 16-digit UAN reference (four groups of four digits) or the 9-digit GWF reference (including the GWF prefix) exactly as it appears in the decision letter. This can often be found in the 'How to appeal' section.", "FieldType": "Text", "RegularExpression": "([0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}|GWF[0-9]{9}|.*)", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {
     "LiveFrom": "02/01/2018",
