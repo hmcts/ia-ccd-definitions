@@ -18,7 +18,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "checklistOutOfCountry", "Label": " ", "FieldType": "checklistOutOfCountry", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeDecisionTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeReferenceNumberTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeReferenceNumber", "Label": "Home Office UAN or GWF reference", "HintText": "Enter the 16-digit UAN reference (four groups of four digits) or the 9-digit GWF reference (including the GWF prefix) exactly as it appears in the decision letter. This can often be found in the 'How to appeal' section.", "FieldType": "Text", "RegularExpression": "([0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}|GWF[0-9]{9}|.*)", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeReferenceNumber", "Label": "Home Office UAN or GWF reference", "HintText": "Enter the 16-digit UAN reference (four groups of four digits) or the 9-digit GWF reference (including the GWF prefix) in the decision letter", "FieldType": "Text", "RegularExpression": "([0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}|GWF[0-9]{9}|.*)", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {
     "LiveFrom": "02/01/2018",
     "CaseTypeID": "Asylum",
@@ -43,7 +43,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeDecisionEnvelopeImage", "Label": "![Envelope showing the date the Home Office decision letter was sent stamped in the top-right corner](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_decision_envelope.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealSubmissionDate", "Label": "Appeal submitted", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantBasicDetailsTitle", "Label": "You should enter the details exactly as they appear on the decision letter. This can often be found in the 'How to appeal' section.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantBasicDetailsTitle", "Label": " \r\nEnter the appellant's basic details.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantTitle", "Label": "Title", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantGivenNames", "Label": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantFamilyName", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
