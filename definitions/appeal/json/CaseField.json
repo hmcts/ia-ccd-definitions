@@ -89,8 +89,8 @@
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
   },
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "email", "Label": "Appellant's email address", "FieldType": "Text", "RegularExpression":  "^([a-zA-Z0-9\\_\\-\\.]+)@([a-zA-Z0-9\\_\\-\\.]+)\\.([a-zA-Z]{2,5})$", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "emailRetype", "Label": "Retype appellant's email address", "FieldType": "Text", "RegularExpression":  "^([a-zA-Z0-9\\_\\-\\.]+)@([a-zA-Z0-9\\_\\-\\.]+)\\.([a-zA-Z]{2,5})$", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "email", "Label": "Appellant's email address", "FieldType": "Email", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "emailRetype", "Label": "Retype appellant's email address", "FieldType": "Email", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
