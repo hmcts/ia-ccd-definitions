@@ -4480,8 +4480,35 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_submitHearingRequirements_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_submitHearingRequirements_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_submitHearingRequirements_stf24w.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_submitHearingRequirements",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.svg)\r\n\r\n## Do this next\r\nThe Tribunal will: \r\n- check that the Home Office response complies with the Procedural Rules and Practice Directions\r\n- inform you of any issues\r\n\r\nProviding there are no issues, the response will be shared with the appellant.<br>\r\n\r\nAll parties will be notified when the Hearing Notice is ready.<br><br>",
+    "Label": "## Do this next\r\nThe Tribunal will: \r\n- check that the Home Office response complies with the Procedural Rules and Practice Directions\r\n- inform you of any issues\r\n\r\nProviding there are no issues, the response will be shared with the appellant.<br>\r\n\r\nAll parties will be notified when the Hearing Notice is ready.<br><br>",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_submitHearingRequirements_stf24w",
+    "Label": "## Do this next\r\nThe Tribunal will: \r\n- check that the Home Office response complies with the Procedural Rules and Practice Directions\r\n- inform you of any issues\r\n\r\nProviding there are no issues, the response will be shared with the appellant.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4490,7 +4517,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_submitHearingRequirements_ra",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.svg)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case has been listed.<br/><br/><br/>",
+    "Label": "## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case has been listed.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4760,7 +4787,16 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_submitHearingRequirements",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.svg)\r\n\r\n## What happens next\r\nThe appellant has been directed to submit their hearing requirements.\r\n\r\nIf the appellant does not comply by the date indicated in the direction, you can proceed to a hearing without requirements.<br/><br/><br/>",
+    "Label": "## What happens next\r\nThe appellant has been directed to submit their hearing requirements.\r\n\r\nIf the appellant does not comply by the date indicated in the direction, you can proceed to a hearing without requirements.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_submitHearingRequirements_stf24w",
+    "Label": "## What happens next\r\nThe appellant has been directed to submit their hearing requirements.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4769,7 +4805,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_submitHearingRequirements_ra",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.svg)\r\n\r\n## What happens next\r\nThe appellant has been directed to submit any new hearing requirements. If the appellant does not comply by the date indicated in the direction, you should direct the listing team to [list without hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/listCaseWithoutHearingRequirements).<br/><br/><br/>",
+    "Label": "## What happens next\r\nThe appellant has been directed to submit any new hearing requirements. If the appellant does not comply by the date indicated in the direction, you should direct the listing team to [list without hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/listCaseWithoutHearingRequirements).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4778,7 +4814,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_submitHearingRequirements",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.svg)\r\n\r\n## What happens next\r\nThe appellant will submit their hearing requirements.",
+    "Label": "## What happens next\r\nThe appellant will submit their hearing requirements.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4787,7 +4823,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_submitHearingRequirements_ra",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.svg)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case has been listed.<br/><br/><br/>",
+    "Label": "## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case has been listed.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4796,7 +4832,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_submitHearingRequirements",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.svg)\r\n\r\n## What happens next\r\nThe appellant will submit their hearing requirements.",
+    "Label": "## What happens next\r\nThe appellant will submit their hearing requirements.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4805,7 +4841,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_submitHearingRequirements_ra",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_submitHearingRequirements.svg)\r\n\r\n## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case is ready to be listed.<br/><br/><br/>",
+    "Label": "## What happens next\r\nThe appeal is being reheard. A Tribunal Caseworker will review any instructions from the Judge and you will be notified when the case is ready to be listed.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -6000,8 +6036,35 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_lr_submitHearingRequirements_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_submitHearingRequirements.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_submitHearingRequirements_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_lr_submitHearingRequirements_stf24w.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_legalRep_submitHearingRequirements",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_submitHearingRequirements.svg)\r\n\r\n## Do this next\r\nThe appeal is now going to a hearing. You need to [submit the appellant's hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/draftHearingRequirements).",
+    "Label": "## Do this next\r\nThe appeal is now going to a hearing. You need to [submit the appellant's hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/draftHearingRequirements).",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_legalRep_submitHearingRequirements_stf24w",
+    "Label": "## Do this next\r\nYou have built the case, you now need to [submit the appellant's hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/draftHearingRequirements).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -6010,7 +6073,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRep_submitHearingRequirements_ra",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_submitHearingRequirements.svg)\r\n\r\n## Do this next\r\nThe appeal is being reheard. If the appellant's hearing requirements have changed, you should [submit new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/draftHearingRequirements).<br><br><br>",
+    "Label": "## Do this next\r\nThe appeal is being reheard. If the appellant's hearing requirements have changed, you should [submit new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/draftHearingRequirements).<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
