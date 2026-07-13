@@ -2,6 +2,7 @@
 
 # Get the raw filename from the input (which could be an absolute or relative path)
 INPUT_FILE="${1:-../target/appeal/xlsx/ccd-appeal-config-${CCD_ENV:-dev}.xlsx}"
+IS_BAIL="${2:-false}"
 FILENAME=$(basename "${INPUT_FILE}")
 
 # Check if the input is an absolute path or a relative path
@@ -16,5 +17,8 @@ fi
 echo "Generating Excel file: ${INPUT_FILE}"
 # Ensure the directory exists
 mkdir -p $(dirname "${INPUT_FILE}")
-
-pushd ccd-definition-processor && yarn json2xlsx -D ../target/appeal/json -o "${OUTPUT_FILE}" && popd
+if [[ "${IS_BAIL}" == "true" ]]; then
+  pushd ccd-definition-processor && yarn json2xlsx -D ../target/bail/json -o "${OUTPUT_FILE}" && popd
+else
+  pushd ccd-definition-processor && yarn json2xlsx -D ../target/appeal/json -o "${OUTPUT_FILE}" && popd
+fi
