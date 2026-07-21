@@ -949,6 +949,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "appealResponseAvailable", "TabFieldDisplayOrder": 90, "FieldShowCondition": "appealResponseAvailable=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "appellantNameForDisplay", "TabFieldDisplayOrder": 100},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "appealType", "TabFieldDisplayOrder": 110},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hoRightOfAppeal", "TabFieldDisplayOrder": 115, "FieldShowCondition": "homeOfficeAppellants!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "appealGroundsForDisplay", "TabFieldDisplayOrder": 120},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hasNewMatters", "TabFieldDisplayOrder": 130},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "newMatters", "TabFieldDisplayOrder": 140},
