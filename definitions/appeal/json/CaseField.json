@@ -5934,12 +5934,29 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealStatus", "Label": "Status of appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reinstateAppealDate", "Label": "Date reinstated", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reinstateAppealReason", "Label": "Reason for reinstating", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_preHearing_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_preHearing.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_preHearing_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_lr_preHearing_stf24w.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_preHearing",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_preHearing.svg)\r\n\r\n## Do this next\r\nYou can now view the hearing bundle in the documents tab.\r\n\r\n[Go to the documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents)",
+    "Label": "## Do this next\r\nYou can now view the hearing bundle in the documents tab.\r\n\r\n[Go to the documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
