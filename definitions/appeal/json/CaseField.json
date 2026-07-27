@@ -1250,8 +1250,26 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_lr_prepareForHearing_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_listed.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_prepareForHearing_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_lr_respondentReview_appeal_response_stf24w.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_prepareForHearing",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_listed.svg)\r\n\r\n## Do this next\r\nThe case has now been listed and the hearing details are ready to view in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).\r\n\r\n The Tribunal will generate the hearing bundle, you'll be notified when this is ready to view.<br/><br/><br/>",
+    "Label": "## Do this next\r\nThe case has now been listed and the hearing details are ready to view in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).\r\n\r\n The Tribunal will generate the hearing bundle, you'll be notified when this is ready to view.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5966,7 +5984,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_finalBundling",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_listed.svg)\r\n\r\n## Do this next\r\nThe case has now been listed. Go to the documents tab to see the Hearing notice, which includes the hearing details.\r\n\r\n[Go to the documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents)",
+    "Label": "## Do this next\r\nThe case has now been listed. Go to the documents tab to see the Hearing notice, which includes the hearing details.\r\n\r\n[Go to the documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
