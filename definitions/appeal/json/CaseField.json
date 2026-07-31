@@ -9073,6 +9073,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrDetailsTitle", "Label": "![]()\r\n## Non-Legal Representative Details", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrDetails", "Label": "Non-Legal Representative Details", "FieldType": "nlrDetails", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousNlrDetails", "Label": "Previous Non-Legal Representative Details", "FieldType": "nlrDetails", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasNonLegalRep", "Label": "Has a non-legal representative been requested?", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isSponsorSameAsNlr", "Label": "Are the sponsor and the non-legal representative the same person?", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
