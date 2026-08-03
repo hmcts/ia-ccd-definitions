@@ -4455,6 +4455,15 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_respondentReview_appealResponseAvailable_24WeekDecisionWithoutHearing",
+    "Label": "## Do this next\r\nCheck the response uploaded by the respondent.\r\n\r\nIf it complies with the Procedure Rules and Practice Directions and this case has a decision with a hearing, select [Force case - Prepare for hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/forceCaseToPrepareForHearing)\r\n\r\nIf this case has a decision without a hearing then select [Decision without a hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/decisionWithoutHearing)\r\n\r\nIf it does not comply, [direct the respondent to make the appropriate changes](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestResponseAmend).<br><br><br>",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_respondentReview_appealResponseAvailable_detained",
     "Label": "## Do this next\r\nCheck the response uploaded by the respondent.\r\n\r\nIf it complies with the Procedure Rules and Practice Directions, Select \"Force case - hearing reqs\" from the Next step dropdown.\r\n\r\nIf it does not comply, [direct the respondent to make the appropriate changes](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestResponseAmend).<br><br><br>",
     "FieldType": "Label",
