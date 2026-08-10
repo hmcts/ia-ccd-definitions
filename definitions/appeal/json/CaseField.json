@@ -5041,7 +5041,43 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_listing_stf24w",
-    "Label": "## What happens next\nThe listing team will now list the case.",
+    "Label": "## What happens next\r\nThe listing team will now list the case.",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_listing_no_hearing_stf24w",
+    "Label": "## Do this next\r\nThe appellant has chosen to have a decision without a hearing, so this will be allocated to a Judge at a later date.\r\n\r\nYou must now [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_adminOfficer_listing_no_hearing_stf24w",
+    "Label": "## What happens next\r\nThe appellant has chosen to have a decision without a hearing, so this will be allocated to a Judge at a later date.\r\n\r\nThe Legal Officer will request the respondent's evidence.",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_judge_listing_no_hearing_stf24w",
+    "Label": "## What happens next\r\nThe appellant has chosen to have a decision without a hearing, so this will be allocated to a Judge at a later date.\r\n\r\nThe Legal Officer will request the respondent's evidence.",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_homeOfficeAll_listing_no_hearing_stf24w",
+    "Label": "## What happens next\r\nA new appeal has been submitted. A Legal Officer is reviewing the appeal and will be in touch if further action is required.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
