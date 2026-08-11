@@ -79,7 +79,7 @@
   {"LiveFrom": "01/01/2018", "ID": "application", "ListElementCode": "applicationDecisionReason", "FieldType": "TextArea", "ElementLabel": "Reason of decision", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "ID": "application", "ListElementCode": "applicationDateOfDecision", "FieldType": "Date", "ElementLabel": "Date of decision", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "ID": "application", "ListElementCode": "applicationStatus", "FieldType": "Text", "ElementLabel": "Status", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-  {"LiveFrom": "01/01/2018", "ID": "application", "ListElementCode": "applicationFor24w", "FieldType": "YesOrNo", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "FieldShowCondition": "applicationType=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "application", "ListElementCode": "refusalOfRemoval24wDocument", "FieldType": "Document", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "FieldShowCondition": "refusalOfRemoval24wDocument=\"*\"", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "hoursAndMinutes", "ListElementCode": "hours", "FieldType": "Text", "ElementLabel": "Hours", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "hoursAndMinutes", "ListElementCode": "minutes", "FieldType": "Text", "ElementLabel": "Minutes", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "hoursMinutes", "ListElementCode": "hours", "FieldType": "Number", "ElementLabel": "Hours", "SecurityClassification": "PUBLIC", "Searchable": "N"},
