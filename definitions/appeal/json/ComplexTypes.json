@@ -79,7 +79,6 @@
   {"LiveFrom": "01/01/2018", "ID": "application", "ListElementCode": "applicationDecisionReason", "FieldType": "TextArea", "ElementLabel": "Reason of decision", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "ID": "application", "ListElementCode": "applicationDateOfDecision", "FieldType": "Date", "ElementLabel": "Date of decision", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "ID": "application", "ListElementCode": "applicationStatus", "FieldType": "Text", "ElementLabel": "Status", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-  {"LiveFrom": "01/01/2018", "ID": "application", "ListElementCode": "refusalOfRemoval24wDocument", "FieldType": "Document", "ElementLabel": "Decision notice document", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "hoursAndMinutes", "ListElementCode": "hours", "FieldType": "Text", "ElementLabel": "Hours", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "hoursAndMinutes", "ListElementCode": "minutes", "FieldType": "Text", "ElementLabel": "Minutes", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "hoursMinutes", "ListElementCode": "hours", "FieldType": "Number", "ElementLabel": "Hours", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -227,6 +226,7 @@
   {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "decisionReason", "FieldType": "Text", "ElementLabel": "Reasons for decision", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "decisionDate", "FieldType": "Date", "ElementLabel": "Date of decision", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "decisionMaker", "FieldType": "Text", "ElementLabel": "Decision maker", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "ID": "makeAnApplication", "ListElementCode": "refusalOfRemoval24wDocument", "FieldType": "Document", "ElementLabel": "Decision notice document", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "attendingJudge", "FieldType": "Text", "ElementLabel": "The Judge", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "previousHearing", "ListElementCode": "attendingAppellant", "FieldType": "Text", "ElementLabel": "The appellant", "SecurityClassification": "PUBLIC", "Searchable": "N"},
