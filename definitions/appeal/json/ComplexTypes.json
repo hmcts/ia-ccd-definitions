@@ -359,6 +359,15 @@
   {"LiveFrom": "01/01/2018", "ID": "prisonNOMSComplexType", "ListElementCode": "prison", "FieldType": "Text", "ElementLabel": "What is the appellant's NOMS number?", "SecurityClassification": "PUBLIC"},
   {"LiveFrom": "01/01/2018", "ID": "otherDetentionFacilityComplexType", "ListElementCode": "other", "FieldType": "Text", "ElementLabel": "Enter the name of the detention facility", "SecurityClassification": "PUBLIC"},
 
+  {"LiveFrom": "01/01/2018", "ID": "nlrDetails", "ListElementCode": "givenNames", "FieldType": "Text", "ElementLabel": "Given names", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "nlrDetails", "ListElementCode": "familyName", "FieldType": "Text", "ElementLabel": "Family name", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "nlrDetails", "ListElementCode": "emailAddress", "FieldType": "Email", "ElementLabel": "Email Address", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "nlrDetails", "ListElementCode": "phoneNumber", "FieldType": "Text", "ElementLabel": "Phone number", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "nlrDetails", "ListElementCode": "sameAsSponsor", "FieldType": "YesOrNo", "ElementLabel": "Is same as sponsor", "FieldShowCondition": "emailAddress=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "nlrDetails", "ListElementCode": "addressUk", "FieldType": "AddressUK", "ElementLabel": "Address", "FieldShowCondition": "sameAsSponsor=\"Yes\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "nlrDetails", "ListElementCode": "address", "FieldType": "TextArea", "ElementLabel": "Address", "FieldShowCondition": "sameAsSponsor!=\"Yes\"", "SecurityClassification": "PUBLIC"},
+  {"LiveFrom": "01/01/2018", "ID": "nlrDetails", "ListElementCode": "idamId", "FieldType": "Text", "ElementLabel": "Idam ID", "FieldShowCondition": "emailAddress=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC"},
+
   {"LiveFrom": "01/01/2018", "ID": "statutoryTimeframe24WeeksHistory", "ListElementCode": "status", "FieldType": "YesOrNo", "ElementLabel": "Status", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "statutoryTimeframe24WeeksHistory", "ListElementCode": "reason", "FieldType": "Text", "ElementLabel": "Reason", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "statutoryTimeframe24WeeksHistory", "ListElementCode": "user", "FieldType": "Text", "ElementLabel": "User", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -377,7 +386,7 @@
 
   {"LiveFrom": "01/01/2018", "ID": "statutoryTimeframe24Weeks", "ListElementCode": "history", "FieldType": "Collection", "FieldTypeParameter": "statutoryTimeframe24WeeksHistory", "ElementLabel": "History", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "statutoryTimeframe24Weeks", "ListElementCode": "homeOfficeResponse", "FieldType": "homeOfficeStatutoryTimeframeDto", "ElementLabel": "Home Office response", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  
+
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "familyName", "ElementLabel": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "givenNames", "ElementLabel": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "dateOfBirth", "ElementLabel": "Date of birth", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
