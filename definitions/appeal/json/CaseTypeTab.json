@@ -1064,13 +1064,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "outOfTimeDecisionDocument", "TabFieldDisplayOrder":653},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "previousOutOfTimeDecisionDetails", "TabFieldDisplayOrder":654},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "nlrDetailsTitle", "TabFieldDisplayOrder": 655, "FieldShowCondition": "hasNonLegalRep=\"Yes\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hasSponsor", "TabFieldDisplayOrder": 85, "FieldShowCondition": "hasNonLegalRep=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hasNonLegalRep", "TabFieldDisplayOrder": 656, "FieldShowCondition": "hasNonLegalRep=\"Yes\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "isSponsorSameAsNlr", "TabFieldDisplayOrder": 657, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND hasSponsor=\"Yes\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hasNonLegalRepJoined", "TabFieldDisplayOrder": 658, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND hasNonLegalRepJoined=\"*\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "nlrDetails", "TabFieldDisplayOrder": 659, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND nlrDetails=\"*\""},
-
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "TabLabel": "Appellant", "TabDisplayOrder": 3, "CaseFieldID": "appellantTabTitle", "TabFieldDisplayOrder": 1},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "journeyType", "TabFieldDisplayOrder": 2, "FieldShowCondition": "journeyType=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
@@ -1108,12 +1101,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "internalAppellantEmail", "TabFieldDisplayOrder": 70, "FieldShowCondition": "isAdmin=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "internalAppellantMobileNumber", "TabFieldDisplayOrder": 75, "FieldShowCondition": "isAdmin=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantInUk", "TabFieldDisplayOrder": 80, "FieldShowCondition": "isOutOfCountryEnabled=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantPhoneNumber", "TabFieldDisplayOrder": 81, "FieldShowCondition": "journeyType=\"aip\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantEmailAddress", "TabFieldDisplayOrder": 82, "FieldShowCondition": "journeyType=\"aip\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "hasSponsor", "TabFieldDisplayOrder": 85, "FieldShowCondition": "isOutOfCountryEnabled=\"Yes\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "sponsorDetailsTitle", "TabFieldDisplayOrder": 86, "FieldShowCondition": "hasSponsor=\"Yes\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "hasNonLegalRep", "TabFieldDisplayOrder": 87, "FieldShowCondition": "hasSponsor=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "isSponsorSameAsNlr", "TabFieldDisplayOrder": 88, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND hasSponsor=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "hasSponsor", "TabFieldDisplayOrder": 85, "FieldShowCondition": "isOutOfCountryEnabled=\"Yes\" AND appellantInUk!=\"Yes\" AND hasSponsor=\"No\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "sponsorContactPreference", "TabFieldDisplayOrder": 90},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "adminJSponsorContactPreference", "TabFieldDisplayOrder": 90},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "sponsorNameForDisplay", "TabFieldDisplayOrder": 95, "FieldShowCondition": "hasSponsor=\"Yes\""},
@@ -1125,6 +1113,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "aipSponsorEmailForDisplay", "TabFieldDisplayOrder": 125, "FieldShowCondition": "journeyType=\"aip\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "aipSponsorMobileNumberForDisplay", "TabFieldDisplayOrder": 126, "FieldShowCondition": "journeyType=\"aip\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "sponsorAuthorisation", "TabFieldDisplayOrder": 130, "FieldShowCondition": "hasSponsor=\"Yes\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantPhoneNumber", "TabFieldDisplayOrder": 135, "FieldShowCondition": "journeyType=\"aip\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "appellantEmailAddress", "TabFieldDisplayOrder": 136, "FieldShowCondition": "journeyType=\"aip\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "hasAddedLegalRepDetails", "TabFieldDisplayOrder": 137, "FieldShowCondition": "journeyType=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum",
@@ -1224,7 +1214,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "caseFlags", "TabFieldDisplayOrder": 2, "FieldShowCondition": "caseFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "appellantLevelFlags", "TabFieldDisplayOrder": 3, "FieldShowCondition": "appellantLevelFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "witnessLevelFlags", "TabFieldDisplayOrder": 3, "FieldShowCondition": "witnessLevelFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "nlrLevelFlags", "TabFieldDisplayOrder": 3, "FieldShowCondition": "nlrLevelFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "interpreterLevelFlags", "TabFieldDisplayOrder": 3, "FieldShowCondition": "interpreterLevelFlags=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseFlags", "CaseFieldID": "flagLauncher", "DisplayContextParameter": "#ARGUMENT(READ)", "TabFieldDisplayOrder": 4},
 
@@ -1338,18 +1328,6 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "witness10InterpreterSignLanguage", "TabFieldDisplayOrder": 54, "FieldShowCondition": "isAnyWitnessInterpreterRequired=\"Yes\" AND witness10InterpreterSignLanguage=\"*\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "isHearingRoomNeeded", "TabFieldDisplayOrder": 55},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "isHearingLoopNeeded", "TabFieldDisplayOrder": 56},
-
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "hasNonLegalRep", "TabFieldDisplayOrder": 57, "FieldShowCondition": "hasNonLegalRep=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nlrHearingRequirementsTabTitle", "TabFieldDisplayOrder": 58, "FieldShowCondition": "hasNonLegalRep=\"Yes\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nlrDetails", "TabFieldDisplayOrder": 59, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND nlrDetails=\"*\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nlrAttending", "TabFieldDisplayOrder": 60, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND nlrAttending=\"*\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nlrAttendingOutsideUk", "TabFieldDisplayOrder": 61, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND nlrAttendingOutsideUk=\"*\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "isNlrInterpreterRequired", "TabFieldDisplayOrder": 62, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND isNlrInterpreterRequired=\"*\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nlrInterpreterLanguageCategory", "TabFieldDisplayOrder": 63, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND isNlrInterpreterRequired=\"Yes\" AND nlrInterpreterLanguageCategory=\"*\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nlrInterpreterSpokenLanguage", "TabFieldDisplayOrder": 64, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND isNlrInterpreterRequired=\"Yes\" AND nlrInterpreterSpokenLanguage=\"*\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nlrInterpreterSignLanguage", "TabFieldDisplayOrder": 65, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND isNlrInterpreterRequired=\"Yes\" AND nlrInterpreterSignLanguage=\"*\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nlrNeedsStepFreeAccess", "TabFieldDisplayOrder": 66, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND nlrNeedsStepFreeAccess=\"*\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "nlrNeedsHearingLoop", "TabFieldDisplayOrder": 67, "FieldShowCondition": "hasNonLegalRep=\"Yes\" AND nlrNeedsHearingLoop=\"*\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "additionalAdjustmentsTitle", "TabFieldDisplayOrder": 70, "FieldShowCondition": "reviewedHearingRequirements!=\"Yes\" AND caseListedWithoutHearingRequirements!=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "hearing", "CaseFieldID": "remoteVideoCall", "TabFieldDisplayOrder": 71, "FieldShowCondition": "isOutOfCountryEnabled=\"Yes\" AND remoteVideoCall=\"*\" AND reviewedHearingRequirements!=\"Yes\""},
