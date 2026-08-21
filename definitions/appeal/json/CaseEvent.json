@@ -3143,7 +3143,7 @@
     "CaseTypeID": "Asylum",
     "ID": "sendLateTimelineNotice",
     "Name": "Send timetabling directions",
-    "Description": "Send timetabling directions out when the 24w flag has been added after the case review has been completed",
+    "Description": "Send timetabling directions when the 24w flag has been added after case review has been completed",
     "DisplayOrder": 127,
     "PreConditionState(s)": "awaitingRespondentEvidence;awaitingClarifyingQuestionsAnswers;clarifyingQuestionsAnswersSubmitted;listing",
     "PostConditionState": "*",
