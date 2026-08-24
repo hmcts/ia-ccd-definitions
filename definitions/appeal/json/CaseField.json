@@ -4806,8 +4806,26 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_decision_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_decision_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_decision_stf24w.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nThe Judge is writing up the Decision and Reasons document, you'll be notified when this is ready to view.</br></br>",
+    "Label": "## Do this next\r\nThe Judge is writing up the Decision and Reasons document, you'll be notified when this is ready to view.</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5320,7 +5338,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_pre_doc_gen_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## What happens next\r\nThe judge will complete the Decision and Reasons document and upload it to the service.\r\n\r\nBoth parties will be notified when it's available to view and download from the Documents tab.<br/></br>",
+    "Label": "## What happens next\r\nThe judge will complete the Decision and Reasons document and upload it to the service.\r\n\r\nBoth parties will be notified when it's available to view and download from the Documents tab.<br/></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5329,7 +5347,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_pre_doc_gen_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\n[Prepare the Decision and Reasons document](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateDecisionAndReasons)\r\n",
+    "Label": "## Do this next\r\n[Prepare the Decision and Reasons document](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateDecisionAndReasons)\r\n",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5338,7 +5356,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_post_doc_gen_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## What happens next\r\nThe judge will complete the Decision and Reasons document and upload it to the service.\r\n\r\nBoth parties will be notified when it's available to view and download from the Documents tab.<br/></br>",
+    "Label": "## What happens next\r\nThe judge will complete the Decision and Reasons document and upload it to the service.\r\n\r\nBoth parties will be notified when it's available to view and download from the Documents tab.<br/></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5347,7 +5365,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_post_doc_gen_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nGo to the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents) to download and complete the Decision and Reasons document.\r\n\r\n You should then [upload and send](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/sendDecisionAndReasons) the completed document.\r\n\r\n",
+    "Label": "## Do this next\r\nGo to the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents) to download and complete the Decision and Reasons document.\r\n\r\n You should then [upload and send](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/sendDecisionAndReasons) the completed document.\r\n\r\n",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5518,7 +5536,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_pre_hearing_details_recorded_admin_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
+    "Label": "## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5527,7 +5545,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_pre_hearing_details_recorded_admin_decision_integrated",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
+    "Label": "## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5536,7 +5554,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_pre_hearing_details_recorded_admin_decision_integrated_rd",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
+    "Label": "## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5545,7 +5563,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_decision_without_hearing_pre_hearing_request_admin_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nSubmit a hearing request in the [Hearings tab](/cases/case-details/${[CASE_REFERENCE]}/hearings)",
+    "Label": "## Do this next\r\nSubmit a hearing request in the [Hearings tab](/cases/case-details/${[CASE_REFERENCE]}/hearings)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5554,7 +5572,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_decisionWithoutHearing_preHearing_request_admin_decision_rd",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nSubmit a hearing request in the [Hearings tab](/cases/case-details/${[CASE_REFERENCE]}/hearings)",
+    "Label": "## Do this next\r\nSubmit a hearing request in the [Hearings tab](/cases/case-details/${[CASE_REFERENCE]}/hearings)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5563,7 +5581,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_decision_without_hearing_post_hearing_request_admin_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
+    "Label": "## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5572,7 +5590,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_decisionWithoutHearing_postHearing_request_admin_decision_rd",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
+    "Label": "## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5581,7 +5599,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_post_hearing_details_recorded_admin_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nYou don't need to do any more on this case.",
+    "Label": "## Do this next\r\nYou don't need to do any more on this case.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -6225,8 +6243,26 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_lr_decision_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_decision.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_decision_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_lr_decision_stf24w.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_decision.svg)\r\n\r\n## Do this next\r\nThe judge is writing the decision and reasons. You will be notified when it is available to view.",
+    "Label": "## Do this next\r\nThe judge is writing the decision and reasons. You will be notified when it is available to view.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -9212,7 +9248,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_updatedBundle_in_progress_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
+    "Label": "## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC",
     "Searchable": "N"
