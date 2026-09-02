@@ -7571,6 +7571,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellantDecisionLetterDate", "Label": "Home Office appellant decision letter date", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellants", "Label": "Home Office appellants", "FieldType": "Collection", "FieldTypeParameter": "homeOfficeAppellant", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellantsSerialisedInternalUseOnly", "Label": "Do not display - internal use only", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasBeenValidatedByNewHomeOfficeApi", "Label": "Do not display - internal use only", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "upperTribunalDocuments", "Label": "Upper Tribunal documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stitchingStatusUpperTribunal", "Label": "Internal flag managed by API to identify if upper tribunal bundling stitching is complete", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
