@@ -7391,13 +7391,13 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "entryClearanceDecisionTitle", "Label": " ", "FieldType": "Label",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "entryClearanceDecisionLetterTitle", "Label": " ", "FieldType": "Label",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "gwfReferenceNumberTitle", "Label": "You can find the Global Web Form reference and the date the letter was sent on the appellant's Home Office decision letter.","FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "gwfReferenceNumber", "Label": "Home Office UAN or GWF reference", "HintText": "Enter the 16-digit UAN reference (four groups of four digits) or the 9-digit GWF reference (including the GWF prefix) in the decision letter", "FieldType": "Text", "RegularExpression": "([0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}|GWF[0-9]{9}|.*)", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "gwfReferenceNumberTitle", "Label": "You can find the Home Office reference and the date the letter was sent on the appellant's Home Office decision letter.","FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "gwfReferenceNumber", "Label": "Home Office UAN or GWF reference", "HintText": "Enter the 16-digit UAN reference (four groups of four digits) or the 9-digit GWF reference (including the GWF prefix) exactly as it appears in the decision letter. This can often be found in the 'How to appeal' section.", "FieldType": "Text", "RegularExpression": "([0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}|GWF[0-9]{9}|.*)", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {
     "LiveFrom": "02/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "gwfReferenceNumberTips",
-    "Label": "Advice for entering the correct number:\n\n- You should enter the reference number exactly as it appears on the decision letter.  This can often be found in the 'How to appeal' section.\n- Your UAN reference will be a 16-digit number, for example 1234-1234-1234-1234; you should include all the numbers with the dashes as they appear\n- Your GWF reference will be a 9-digit number starting with GWF, for example GWF123456789",
+    "Label": "Advice for entering the correct number:\n\n- You should enter the reference number exactly as it appears on the decision letter. This can often be found in the 'How to appeal' section.\n- Your UAN reference will be a 16-digit number, for example 1234-1234-1234-1234; you should include all the numbers with the dashes as they appear\n- Your GWF reference will be a 9-digit number starting with GWF, for example GWF123456789",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC",
     "Searchable": "N"
