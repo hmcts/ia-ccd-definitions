@@ -5193,6 +5193,15 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_lr_reviewHearingRequirements_stf24w_2",
+    "Label": "## Do this next\r\nThe case officer is reviewing the hearing requirements. Once the requirements have been agreed with the Tribunal, the case will be ready for respondent review.",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_reviewHearingRequirements_aip",
     "Label": "## Do this next\r\nYou can view the hearing requirements and any requests for additional adjustments in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).<br><br>If you need more information, [direct the appellant to answer clarifying questions](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitClarifyingQuestionAnswers).<br><br>If you do not need more information, [review and record](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewHearingRequirements) the hearing requirements and any additional adjustments.",
     "FieldType": "Label",
@@ -5221,6 +5230,15 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_reviewHearingRequirements_stf24w",
+    "Label": "## Do this next\r\nYou can view the hearing requirements and any requests for additional adjustments in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).<br><br>You should contact the appellant if you need more information.<br><br>You should then [review and submit](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewHearingRequirements) the hearing requirements and any additional adjustments.",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_reviewHearingRequirements_stf24w_2",
     "Label": "## Do this next\r\nYou can view the hearing requirements and any requests for additional adjustments in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).<br><br>You should contact the appellant if you need more information.<br><br>You should then [review and submit](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewHearingRequirements) the hearing requirements and any additional adjustments.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
