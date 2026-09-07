@@ -119,8 +119,12 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "endAppeal", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "endAppeal", "UserRole": "citizen", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "sendPaymentReminderNotification", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseEventID": "sendPaymentReminderNotification", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseEventID": "sendPaymentReminderNotification", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "endAppealAutomatically", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "endAppealAutomatically", "UserRole": "citizen", "CRUD": "R"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseEventID": "endAppealAutomatically", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseEventID": "endAppealAutomatically", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadAdditionalEvidenceHomeOffice", "UserRole": "caseworker-ia-homeofficeapc", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadAdditionalEvidenceHomeOffice", "UserRole": "caseworker-ia-homeofficelart", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "uploadAdditionalEvidenceHomeOffice", "UserRole": "caseworker-ia-respondentofficer", "CRUD": "CRUD"},
@@ -261,7 +265,11 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "createCaseLink", "UserRole": "ia_caselinks_profile", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "maintainCaseLinks", "UserRole": "ia_caselinks_profile", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "createCaseLink", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "createCaseLink", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "createCaseLink", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "maintainCaseLinks", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "maintainCaseLinks", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "maintainCaseLinks", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "editAppealAfterSubmit", "UserRole": "caseworker-ia-iacjudge", "CRUD": "CRUD"},
@@ -306,8 +314,12 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "requestNewHearingRequirements", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseEventID": "nocRequest", "UserRole": "caseworker-caa", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseEventID": "nocRequest", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseEventID": "nocRequest", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseEventID": "applyNocDecision", "UserRole": "caseworker-approver", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseEventID": "applyNocDecision", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2021", "CaseTypeID": "Asylum", "CaseEventID": "applyNocDecision", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "removeRepresentation", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "removeRepresentation", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
@@ -359,6 +371,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "generateServiceRequest", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "pipActivation", "UserRole": "citizen", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "pipActivation", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "pipActivation", "UserRole": "caseworker-ia-caseofficer", "CRUD": "R"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "updateS94bStatus", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "migrateToStrategicCaseFlags", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
