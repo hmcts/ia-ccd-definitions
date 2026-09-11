@@ -1885,7 +1885,7 @@
     "DisplayOrder": 54,
     "PreConditionState(s)": "appealSubmitted;awaitingRespondentEvidence;listing",
     "PostConditionState": "*",
-    "EventEnablingCondition": "appealOutOfCountry=\"No\"",
+    "EventEnablingCondition": "appealOutOfCountry=\"No\" AND hasBeenValidatedByNewHomeOfficeApi!=\"Yes\"",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
     "RetriesTimeoutAboutToStartEvent": "1,1,1,1",
     "CallBackURLAboutToSubmitEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToSubmit",
