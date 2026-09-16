@@ -990,6 +990,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "appealResponseAvailable", "TabFieldDisplayOrder": 90, "FieldShowCondition": "appealResponseAvailable=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "appellantNameForDisplay", "TabFieldDisplayOrder": 100},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "appealType", "TabFieldDisplayOrder": 110},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hoRightOfAppeal", "TabFieldDisplayOrder": 115, "FieldShowCondition": "hoRightOfAppeal!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "appealGroundsForDisplay", "TabFieldDisplayOrder": 120},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hasNewMatters", "TabFieldDisplayOrder": 130},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "newMatters", "TabFieldDisplayOrder": 140},
@@ -1066,6 +1067,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "amountLeftToPay", "TabFieldDisplayOrder": 511},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "remissionDecisionReason", "TabFieldDisplayOrder": 512},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "previousRemissionDetails", "TabFieldDisplayOrder": 520},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hoApprovedRemissionTitle", "TabFieldDisplayOrder": 525, "FieldShowCondition": "hoAsylumSupport!=\"\" OR hoFeeWaiver!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hoAsylumSupport", "TabFieldDisplayOrder": 526, "FieldShowCondition": "hoAsylumSupport!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "hoFeeWaiver", "TabFieldDisplayOrder": 527, "FieldShowCondition": "hoFeeWaiver!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "feeUpdateDetailsTitle", "TabFieldDisplayOrder": 600, "FieldShowCondition":  "feeUpdateReason!=\"\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "feeUpdateTribunalAction", "TabFieldDisplayOrder": 601, "FieldShowCondition":  "feeUpdateDetailsTitle=\"DUMMY_FIELD_TO_HIDE\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "appeal", "CaseFieldID": "feeUpdateReason", "TabFieldDisplayOrder": 612},
@@ -1168,6 +1172,8 @@
 
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "previousRepresentations", "TabFieldDisplayOrder": 210},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "homeOfficeAppellantLanguage", "TabFieldDisplayOrder": 215, "FieldShowCondition": "homeOfficeAppellantLanguage!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "hoInterpreterRequired", "TabFieldDisplayOrder": 216, "FieldShowCondition": "hoInterpreterRequired!=\"\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "TabLabel": "Documents", "TabDisplayOrder": 4, "CaseFieldID": "documentsTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "journeyType", "TabFieldDisplayOrder": 9, "FieldShowCondition": "journeyType=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
