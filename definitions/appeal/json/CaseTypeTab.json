@@ -112,6 +112,9 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "doThisNowUpdateLegalRepDetails", "TabFieldDisplayOrder": 6, "FieldShowCondition": "changeOrganisationRequestField!=\"\" AND isAdmin!=\"Yes\""},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "appellantHasNotTakenOverCase", "TabFieldDisplayOrder": 6, "FieldShowCondition": "changeOrganisationRequestField!=\"\" AND journeyType!=\"aip\" AND isAdmin!=\"Yes\""},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "doThisNowEditAppellantPersonalData", "TabFieldDisplayOrder": 6, "FieldShowCondition": "homeOfficeReferenceNumber!=\"*\" AND gwfReferenceNumber!=\"*\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "missingAppellantPersonalData", "TabFieldDisplayOrder": 6, "FieldShowCondition": "homeOfficeReferenceNumber!=\"*\" AND gwfReferenceNumber!=\"*\""},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "notifications_turned_off_banner", "TabFieldDisplayOrder": 7, "FieldShowCondition": "isNotificationTurnedOff=\"Yes\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "overview", "CaseFieldID": "journey_type_aip_manual_detained", "TabFieldDisplayOrder": 7, "FieldShowCondition": "isAdmin=\"Yes\" AND appellantsRepresentation=\"Yes\" AND isAriaMigrated!=\"Yes\" AND appellantInDetention=\"Yes\" AND s94bStatus!=\"Yes\" AND isRehydratedAppeal!=\"Yes\""},
