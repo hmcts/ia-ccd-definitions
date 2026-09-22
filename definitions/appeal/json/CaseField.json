@@ -7557,24 +7557,6 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "doThisNowEditAppellantPersonalData",
-    "Label": "![Important message: Do this now. The appeal is missing a Home Office reference number or a GWF reference. Select Edit personal data from the Next step dropdown and enter the appellant's personal data. Until this is done, the missing information will be omitted from any future documents.](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/tribunal_doThisNow_editAppellantPersonalData.svg)\r\n\r\n",
-    "FieldType": "Label",
-    "SecurityClassification":"PUBLIC",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
-    "ID": "missingAppellantPersonalData",
-    "Label": "![Important message: The appeal is missing a Home Office reference number or a GWF reference. Please do not attempt to progress this case until a member of the tribunal has updated this, else the missing information will be omitted from documents.](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/legalRepHomeOffice_missingAppellantPersonalData.svg)\r\n\r\n",
-    "FieldType": "Label",
-    "SecurityClassification":"PUBLIC",
-    "Searchable": "N"
-  },
-  {
-    "LiveFrom": "01/01/2018",
-    "CaseTypeID": "Asylum",
     "ID": "hoAppellantDetailsNotFoundAdvice",
     "Label": "Review the details submitted to the Tribunal by the appellant and select the matching appellant from the list.",
     "FieldType": "Label",
