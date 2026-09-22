@@ -228,3 +228,4 @@ yarn generate-all
 ### Configuration
 
 The configuration for different environments is stored in `package.json` under the `config` section. For dynamic environments like `preview` and `mirrord`, only the AAC URL is stored in the configuration, while the service URL is constructed dynamically by the script.
+

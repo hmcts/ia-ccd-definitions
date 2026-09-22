@@ -23,7 +23,7 @@
     "LiveFrom": "02/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "homeOfficeReferenceNumberTips",
-    "Label": "Advice for entering the correct number:\n\n- You should enter the reference number exactly as it appears on the decision letter.  This can often be found in the 'How to appeal' section.\n- Your UAN reference will be a 16-digit number, for example 1234-1234-1234-1234; you should include all the numbers with the dashes as they appear\n- Your GWF reference will be a 9-digit number starting with GWF, for example GWF123456789",
+    "Label": "Advice for entering the correct number:\n\n- You should enter the reference number exactly as it appears on the decision letter. This can often be found in the 'How to appeal' section.\n- Your UAN reference will be a 16-digit number, for example 1234-1234-1234-1234; you should include all the numbers with the dashes as they appear\n- Your GWF reference will be a 9-digit number starting with GWF, for example GWF123456789",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC",
     "Searchable": "N"
@@ -44,6 +44,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeDecisionEnvelopeImage", "Label": "![Envelope showing the date the Home Office decision letter was sent stamped in the top-right corner](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_decision_envelope.svg)", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealSubmissionDate", "Label": "Appeal submitted", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantBasicDetailsTitle", "Label": "You should enter the details exactly as they appear on the decision letter. This can often be found in the 'How to appeal' section.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantBasicDetailsTips", "Label": "- Do not enter any names that do not appear on the decision letter", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantTitle", "Label": "Title", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantGivenNames", "Label": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantFamilyName", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
@@ -170,7 +171,7 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepGivenName", "Label": "Given name", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepFamilyNamePaperJ", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepEmail", "Label": "Email", "FieldType": "Text", "RegularExpression":  "^([a-zA-Z0-9\\_\\-\\.]+)@([a-zA-Z0-9\\_\\-\\.]+)\\.([a-zA-Z]{2,5})$", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepEmail", "Label": "Email", "FieldType": "Text", "RegularExpression":  "^([a-zA-Z0-9\\_\\-\\.]+)@([a-zA-Z0-9\\_\\-\\.]+)\\.([a-zA-Z]+)$", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepRefNumberPaperJ", "Label": "Legal representative reference", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepCompanyPaperJ", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepHasAddress", "Label": "Does the legal representative have a UK address?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -343,7 +344,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_finalBundling_in_new",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.svg)\r\n\r\n## What to do next\r\nThe hearing bundle is being generated. You will soon be able to view the hearing bundle in the documents tab.\r\n\r\nYou and the other parties will be notified when the hearing bundle is available.\r\n\r\nIf the bundle fails to generate, you will be notified and need to generate the bundle again.</br></br>",
+    "Label": "## What to do next\r\nThe hearing bundle is being generated. You will soon be able to view the hearing bundle in the documents tab.\r\n\r\nYou and the other parties will be notified when the hearing bundle is available.\r\n\r\nIf the bundle fails to generate, you will be notified and need to generate the bundle again.</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -419,6 +420,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sendDirectionActionAvailable", "Label": "Internal flag managed by API to enable/disable sendDirectionAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadHomeOfficeBundleActionAvailable", "Label": "Internal flag managed by API to enable/disable uploadHomeOfficeBundleAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadHomeOfficeBundleAvailable", "Label": "Internal flag managed by API to enable/disable uploadHomeOfficeBundleAction validation (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "shouldHideRequestRespondentEvidence", "Label": "Internal flag managed by API to enable/disable requestRespondentEvidence event for stf24w cases", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadedHomeOfficeBundleDocs", "Label": "Already uploaded files:", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadHomeOfficeAppealResponseActionAvailable", "Label": "Internal flag managed by API to enable/disable uploadHomeOfficeAppealResponseAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadedHomeOfficeAppealResponseDocs", "Label": "Already uploaded files:", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -1248,8 +1250,44 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_lr_prepareForHearing_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_listed.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_prepareForHearing_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_lr_respondentReview_appeal_response_stf24w.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_prepareForHearing",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_listed.svg)\r\n\r\n## Do this next\r\nThe case has now been listed and the hearing details are ready to view in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).\r\n\r\n The Tribunal will generate the hearing bundle, you'll be notified when this is ready to view.<br/><br/><br/>",
+    "Label": "## Do this next\r\nThe case has now been listed and the hearing details are ready to view in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).\r\n\r\n The Tribunal will generate the hearing bundle, you'll be notified when this is ready to view.<br/><br/><br/>",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_respondentReview_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_respondentReview_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 8 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_lr_respondentReview_stf24w.svg)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -1258,7 +1296,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_respondentReview",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview.svg)\r\n\r\n## Do this next\r\nThe case has now been sent to the respondent for review.\r\n\r\nWhen they've reviewed the case, we'll add their response to the documents tab. You'll get an email letting you know when it's there.\r\n\r\nIf you want to reply to the response, you should contact the Tribunal by the date indicated in the direction. If you don't respond, the case will proceed to a hearing.",
+    "Label": "## Do this next\r\nThe case has now been sent to the respondent for review.\r\n\r\nWhen they've reviewed the case, we'll add their response to the documents tab. You'll get an email letting you know when it's there.\r\n\r\nIf you want to reply to the response, you should contact the Tribunal by the date indicated in the direction. If you don't respond, the case will proceed to a hearing.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -1267,7 +1305,25 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_respondentReview_stf24w",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview.svg)\r\n\r\n## Do this next\r\nThe case has now been sent to the respondent for review.\r\n\r\nWhen they've reviewed the case, we'll add their response to the documents tab. You'll get an email letting you know when it's there.",
+    "Label": "## Do this next\r\nThe case has now been sent to the respondent for review.\r\n\r\nWhen they've reviewed the case, we'll add their response to the documents tab. You'll get an email letting you know when it's there.",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_respondentReview_appeal_response_timeline",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview_appeal_response.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_respondentReview_appeal_response_timeline_stf24w",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_lr_respondentReview_appeal_response_stf24w.svg)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -1276,7 +1332,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_respondentReview_appeal_response",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_respondentReview_appeal_response.svg)\r\n\r\n## Do this next\r\nThe Home Office is proceeding with the case and you've been directed to review their response in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n If you want to respond to the Home Office, you should contact the Tribunal by the date indicated in the direction or the case will automatically proceed to a hearing.\r\n\r\nIf you want to continue the appeal without responding, you can [proceed to a hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature). If not, you should apply to the Tribunal to withdraw the appeal.",
+    "Label": "## Do this next\r\nThe Home Office is proceeding with the case and you've been directed to review their response in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n If you want to respond to the Home Office, you should contact the Tribunal by the date indicated in the direction or the case will automatically proceed to a hearing.\r\n\r\nIf you want to continue the appeal without responding, you can [proceed to a hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature). If not, you should apply to the Tribunal to withdraw the appeal.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3385,7 +3441,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_ho_validation_detained",
-    "Label": "## Do this next\r\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. Create a listing task if a CMR is required for this detained appeal.</br></br>If a CMR is not required for this detained appeal and the appeal looks valid, you must tell the respondent to supply their evidence.",
+    "Label": "## Do this next\r\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. Create a listing task if a CMR is required for this detained appeal.\n\nIf a CMR is not required for this detained appeal and the appeal looks valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3394,7 +3450,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_validated_detained",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. Create a listing task if a CMR is required for this detained appeal.</br></br>If a CMR is not required for this detained appeal and the appeal looks valid, you must tell the respondent to supply their evidence.",
+    "Label": "## Do this next\r\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. Create a listing task if a CMR is required for this detained appeal.\n\nIf a CMR is not required for this detained appeal and the appeal looks valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3403,7 +3459,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3421,7 +3477,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained_c1",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. Create a listing task if a [CMR is required for this detained appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateListCmrTask).</br></br> If a CMR is not required for this detained appeal and the appeal looks valid, you must tell the respondent to supply their evidence\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. Create a listing task if a [CMR is required for this detained appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateListCmrTask).\n\nIf a CMR is not required for this detained appeal and the appeal looks valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3430,7 +3486,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained_c2",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. Create a listing task if a [CMR is required for this detained appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateListCmrTask).</br></br> If a CMR is not required for this detained appeal and the appeal looks valid, you must tell the respondent to supply their evidence\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. Create a listing task if a [CMR is required for this detained appeal](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateListCmrTask).\n\nIf a CMR is not required for this detained appeal and the appeal looks valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3439,7 +3495,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained_cmr_c1",
-    "Label": "## Do this next\r\nYou must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3448,7 +3504,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_dc_ea_hu_eu_detained_cmr_c2",
-    "Label": "## Do this next\r\nYou must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3457,7 +3513,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_ooc_appealSubmitted",
-    "Label": "## Do this next\r\nYou must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3484,7 +3540,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_validation",
-    "Label": "## Do this next\r\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. If the appeal looks valid, you must tell the respondent to supply their evidence.",
+    "Label": "## Do this next\r\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3493,7 +3549,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_validated",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3511,7 +3567,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_validation_dc_ea_hu",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3529,7 +3585,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_old_cases",
-    "Label": "## Do this next\r\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. If the appeal looks valid, you must tell the respondent to supply their evidence.",
+    "Label": "## Do this next\r\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3538,7 +3594,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_validated_old_cases",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3556,7 +3612,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_ooc_appealSubmitted_oc",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3636,6 +3692,24 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_outOfTime_message_two",
+    "Label": "![Attention: This appeal has been submitted out of time. You must review the appeal in the documents tab and decide if it can proceed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_outOfTimeBox.png)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_outOfTime_message_three",
+    "Label": "![Attention: This appeal has been submitted out of time. You must review the appeal in the documents tab and decide if it can proceed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_outOfTimeBox.png)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_timeline",
     "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 1 of 11 stages - the Appeal submitted stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealSubmitted.svg)",
     "FieldType": "Label",
@@ -3655,7 +3729,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_old",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3673,7 +3747,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3691,7 +3765,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_oc",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3718,7 +3792,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_home_office_old",
-    "Label": "## Do this next\r\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. If the appeal looks valid, you must tell the respondent to supply their evidence.",
+    "Label": "## Do this next\r\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3727,7 +3801,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_validated_old",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3745,7 +3819,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_appealSubmitted_inTime",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3763,7 +3837,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_home_office",
-    "Label": "## Do this next\r\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. If the appeal looks valid, you must tell the respondent to supply their evidence.",
+    "Label": "## Do this next\r\nYou must review the appeal data and cross reference it with Home Office data in the Validation tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3772,7 +3846,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_validated",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3790,7 +3864,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_outOfTime_appealSubmitted_home_office_oc",
-    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal looks valid, you must tell the respondent to supply their evidence.\n\n[Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence).",
+    "Label": "## Do this next\r\nYou must review the appeal in the documents tab. If the appeal is valid, you must run the [Complete case review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/completeCaseReview) event which will validate the case and then run the [Request respondent evidence](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentEvidence) event to tell the respondent to supply their evidence.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4228,8 +4302,62 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_caseUnderReview_hearing_stf24w",
+    "Label": "## Do this next\r\n\r\nThe appellant has submitted their built case. You must now check the case. If it complies with the procedure rules and practice directions, send it to the Appellant/Legal Rep to request hearing requirements.\r\n\r\n[Request hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature)\r\n\r\nIf the appellant needs to make any changes, you can direct them to edit the case.\r\n\r\n[Request case edit](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestCaseEdit)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_caseUnderReview_no_hearing_stf24w",
+    "Label": "## Do this next\r\n\r\nThe appellant has submitted their built case. You must now check the case. If it complies with the procedure rules and practice directions, send it to the Respondent to request respondent review.\r\n\r\n[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview)\r\n\r\nIf the appellant needs to make any changes, you can direct them to edit the case.\r\n\r\n[Request case edit](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestCaseEdit)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_aip_caseUnderReview",
     "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\n If you believe the case is ready to proceed you should [direct the respondent to review it](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview).\r\n\r\n If you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\n You can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_aip_caseUnderReview_hearing_stf24w",
+    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request hearing requirements.\r\n\r\n[Request hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_admin_caseUnderReview_hearing_stf24w",
+    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request hearing requirements.\r\n\r\n[Request hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_aip_caseUnderReview_no_hearing_stf24w",
+    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request respondent review.\r\n\r\n[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_admin_caseUnderReview_no_hearing_stf24w",
+    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request respondent review.\r\n\r\n[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4273,8 +4401,8 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_caseOfficer_respondentReview",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview.svg)\r\n\r\n## Do this next\r\nUpload the Home Office's appeal response as soon as you receive it.\r\n\r\n[Add appeal response](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/addAppealResponse)",
+    "ID": "progress_respondentReview_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview.svg)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4282,8 +4410,8 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_judge_respondentReview",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview.svg)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will review the Home Office response.",
+    "ID": "progress_respondentReview_caseOfficer_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse.svg)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4291,8 +4419,35 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
-    "ID": "progress_adminOfficer_respondentReview",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview.svg)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will review the Home Office response.",
+    "ID": "progress_respondentReview_homeOffice_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_respondentReview_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_respondentReview_stf24w.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_respondentReview_caseOfficer_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_respondentReview_stf24w.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_respondentReview_homeOffice_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_respondentReview_stf24w.svg)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4301,7 +4456,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_respondentReview_appealResponseAvailable",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse.svg)\r\n\r\n## Do this next\r\nCheck the response uploaded by the respondent.\r\n\r\nIf it complies with the Procedure Rules and Practice Directions, [direct the appellant to review the Home Office response](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestResponseReview).\r\n\r\nIf it does not comply, [direct the respondent to make the appropriate changes](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestResponseAmend).<br><br><br>",
+    "Label": "## Do this next\r\nCheck the response uploaded by the respondent.\r\n\r\nIf it complies with the Procedure Rules and Practice Directions, [direct the appellant to review the Home Office response](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestResponseReview).\r\n\r\nIf it does not comply, [direct the respondent to make the appropriate changes](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestResponseAmend).<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4310,7 +4465,16 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_respondentReview_appealResponseAvailable_24WeekPA",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse.svg)\r\n\r\n## Do this next\r\nCheck the response uploaded by the respondent.\r\n\r\nIf it complies with the Procedure Rules and Practice Directions and this case has a decision with a hearing, select [Force case - Prepare for hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/forceCaseToPrepareForHearing)\r\n\r\nIf this case has a decision without a hearing then select [Decision without a hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/decisionWithoutHearing)\r\n\r\nIf it does not comply, [direct the respondent to make the appropriate changes](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestResponseAmend).<br><br><br>",
+    "Label": "## Do this next\r\nCheck the response uploaded by the respondent.\r\n\r\nIf it complies with the Procedure Rules and Practice Directions and this case has a decision with a hearing, select [Force case - Prepare for hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/forceCaseToPrepareForHearing)\r\n\r\nIf this case has a decision without a hearing then select [Decision without a hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/decisionWithoutHearing)\r\n\r\nIf it does not comply, [direct the respondent to make the appropriate changes](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestResponseAmend).<br><br><br>",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_respondentReview_appealResponseAvailable_24WDWoH",
+    "Label": "## Do this next\r\nCheck the response uploaded by the respondent.\r\n\r\nIf it complies with the Procedure Rules and Practice Directions and this case has a decision with a hearing, select [Force case - Prepare for hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/forceCaseToPrepareForHearing)\r\n\r\nIf this case has a decision without a hearing then select [Decision without a hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/decisionWithoutHearing)\r\n\r\nIf it does not comply, [direct the respondent to make the appropriate changes](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestResponseAmend).<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4319,7 +4483,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_respondentReview_appealResponseAvailable_detained",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse.svg)\r\n\r\n## Do this next\r\nCheck the response uploaded by the respondent.\r\n\r\nIf it complies with the Procedure Rules and Practice Directions, Select \"Force case - hearing reqs\" from the Next step dropdown.\r\n\r\nIf it does not comply, [direct the respondent to make the appropriate changes](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestResponseAmend).<br><br><br>",
+    "Label": "## Do this next\r\nCheck the response uploaded by the respondent.\r\n\r\nIf it complies with the Procedure Rules and Practice Directions, Select \"Force case - hearing reqs\" from the Next step dropdown.\r\n\r\nIf it does not comply, [direct the respondent to make the appropriate changes](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestResponseAmend).<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4328,7 +4492,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_respondentReview_appealResponseAvailable",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse.svg)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will review the Home Office response.",
+    "Label": "## What happens next\r\nThe Tribunal Caseworker will review the Home Office response.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4337,7 +4501,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_respondentReview_appealResponseAvailable",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse.svg)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will review the Home Office response.",
+    "Label": "## What happens next\r\nThe Tribunal Caseworker will review the Home Office response.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4346,7 +4510,25 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_respondentReview_awaitingResponseAmend",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse.svg)\r\n\r\n## Do this next\r\nThe respondent has been directed to make changes with their response. You'll be notified when the revised response has been uploaded.<br><br><br>",
+    "Label": "## Do this next\r\nThe respondent has been directed to make changes with their response. You'll be notified when the revised response has been uploaded.<br><br><br>",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_respondentReview_respondentReviewStarted_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReviewStarted.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_respondentReview_respondentReviewStarted_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 7 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_respondentReview_respondentReviewStarted_stf24w.svg)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4355,7 +4537,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_respondentReview_awaitingResponseAmend",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_amendResponse.svg)\r\n\r\n## What happens next\r\nThe Home Office will review the case submitted by the appellant.",
+    "Label": "## What happens next\r\nThe Home Office will review the case submitted by the appellant.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4364,7 +4546,25 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_respondentReview_awaitingResponseAmend",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_amendResponse.svg)\r\n\r\n## What happens next\r\nThe Home Office will review the case submitted by the appellant.",
+    "Label": "## What happens next\r\nThe Home Office will review the case submitted by the appellant.",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_respondentReview_appealResponseAvailable_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_appealResponseAvailable.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_respondentReview_appealResponseAvailable_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 8 of 11 stages - the Prepare for hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_respondentReview_appealResponseAvailable_stf24w.svg)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4373,7 +4573,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_respondentReview_awaitingResponseReview",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_appealResponseAvailable.svg)\r\n\r\n## What happens next\r\nThe appellant has been directed to review the Home Office response.\n\nIf they do not respond by the direction due date, the case automatically proceeds to a hearing.<br><br><br>",
+    "Label": "## What happens next\r\nThe appellant has been directed to review the Home Office response.\n\nIf they do not respond by the direction due date, the case automatically proceeds to a hearing.<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4382,7 +4582,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_respondentReview_awaitingResponseReview",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_appealResponseAvailable.svg)\r\n\r\n## What happens next\r\nThe appellant has been directed to review the Home Office response.\n\nIf they do not respond by the direction due date, the case automatically proceeds to a hearing.<br><br><br>",
+    "Label": "## What happens next\r\nThe appellant has been directed to review the Home Office response.\n\nIf they do not respond by the direction due date, the case automatically proceeds to a hearing.<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4391,7 +4591,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_respondentReview_awaitingResponseReview",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_appealResponseAvailable.svg)\r\n\r\n## What happens next\r\nThe appellant has been directed to review the Home Office response.\n\nIf they do not respond by the direction due date, the case automatically proceeds to a hearing.<br><br><br>",
+    "Label": "## What happens next\r\nThe appellant has been directed to review the Home Office response.\n\nIf they do not respond by the direction due date, the case automatically proceeds to a hearing.<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4400,7 +4600,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeLart_respondentReview",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse.svg)\r\n\r\n## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nReview the documents and [add the Home Office's response](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadHomeOfficeAppealResponse), or [make an application to withdraw](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/makeAnApplication/makeAnApplicationmakeAnApplicationTypes).",
+    "Label": "## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nReview the documents and [add the Home Office's response](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadHomeOfficeAppealResponse), or [make an application to withdraw](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/makeAnApplication/makeAnApplicationmakeAnApplicationTypes).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4409,7 +4609,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeGeneric_respondentReview",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse.svg)\r\n\r\n## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nReview the documents and [add the Home Office's response](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadHomeOfficeAppealResponse), or [make an application to withdraw](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/makeAnApplication/makeAnApplicationmakeAnApplicationTypes).",
+    "Label": "## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nReview the documents and [add the Home Office's response](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadHomeOfficeAppealResponse), or [make an application to withdraw](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/makeAnApplication/makeAnApplicationmakeAnApplicationTypes).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4418,7 +4618,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeApc_respondentReview",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse.svg)\r\n\r\n## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br>",
+    "Label": "## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4427,7 +4627,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficePou_respondentReview",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_submittedResponse.svg)\r\n\r\n## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br>",
+    "Label": "## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4436,7 +4636,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_respondentReviewStarted",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview.svg)\r\n\r\n## Do this next\r\nThe respondent is reviewing the case, you'll be notified when their response has been uploaded.",
+    "Label": "## Do this next\r\nThe respondent is reviewing the case, you'll be notified when their response has been uploaded.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4445,7 +4645,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_respondentReviewStarted",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReviewStarted.svg)\r\n\r\n## What happens next\r\nThe Home Office will review the case submitted by the appellant.",
+    "Label": "## What happens next\r\nThe Home Office will review the case submitted by the appellant.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4454,7 +4654,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_respondentReviewStarted",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 5 of 11 stages - the Respondent review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReviewStarted.svg)\r\n\r\n## What happens next\r\nThe Home Office will review the case submitted by the appellant.",
+    "Label": "## What happens next\r\nThe Home Office will review the case submitted by the appellant.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4463,7 +4663,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_appealResponseUploaded",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_appealResponseAvailable.svg)\r\n\r\n## Do this next\r\nThe Tribunal will:</br>\r\n\r\n&#8226; check that the Home Office response complies with the Procedure Rules and Practice Directions</br>\r\n\r\n&#8226; inform you of any issues </br></br>\r\n\r\nProviding there are no issues, the response will be shared with the appellant.<br>\r\n\r\nAll parties will be notified when the Hearing Notice is ready.</br></br>",
+    "Label": "## Do this next\r\nThe Tribunal will:</br>\r\n\r\n&#8226; check that the Home Office response complies with the Procedure Rules and Practice Directions</br>\r\n\r\n&#8226; inform you of any issues </br></br>\r\n\r\nProviding there are no issues, the response will be shared with the appellant.<br>\r\n\r\nAll parties will be notified when the Hearing Notice is ready.</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4472,7 +4672,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_appealResponseUploaded_stf24w",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 11 stages - the Submit hearing requirements stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_respondentReview_appealResponseAvailable.svg)\r\n\r\n## Do this next\r\nThe Tribunal will:</br>\r\n\r\n&#8226; check that the Home Office response complies with the Procedure Rules and Practice Directions</br>\r\n\r\n&#8226; inform you of any issues </br></br>\r\n\r\nProviding there are no issues, the response will be shared with the appellant.</br></br>",
+    "Label": "## Do this next\r\nThe Tribunal will:</br>\r\n\r\n&#8226; check that the Home Office response complies with the Procedure Rules and Practice Directions</br>\r\n\r\n&#8226; inform you of any issues </br></br>\r\n\r\nProviding there are no issues, the response will be shared with the appellant.</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4552,8 +4752,44 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_prepareForHearing_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 8 of 11 stages - the Prepare for hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_prepareForHearing.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_prepareForHearing_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 8 of 11 stages - the Prepare for hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_prepareForHearing_stf24w.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_listed",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 8 of 11 stages - the Prepare for hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_prepareForHearing.svg)\r\n\r\n## Do this next\r\nThe case has now been listed and the hearing details are ready to view in the [Hearing tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).</br>\r\n\r\nThe Tribunal will generate the hearing bundle, you'll be notified when this is ready to view.\r\n</br></br>",
+    "Label": "## Do this next\r\nThe case has now been listed and the hearing details are ready to view in the [Hearing tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).</br>\r\n\r\nThe Tribunal will generate the hearing bundle, you'll be notified when this is ready to view.\r\n</br></br>",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_preHearing_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 10 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_preHearing.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_preHearing_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 10 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_preHearing_stf24w.svg)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4562,7 +4798,25 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_preHearing",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 10 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_preHearing.svg)\r\n\r\n## Do this next\r\nThe hearing bundle is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br></br>",
+    "Label": "## Do this next\r\nThe hearing bundle is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br></br>",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_decision_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_decision_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_decision_stf24w.svg)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4571,7 +4825,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nThe Judge is writing up the Decision and Reasons document, you'll be notified when this is ready to view.</br></br>",
+    "Label": "## Do this next\r\nThe Judge is writing up the Decision and Reasons document, you'll be notified when this is ready to view.</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4930,6 +5184,24 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_lr_reviewHearingRequirements_stf24w",
+    "Label": "## What happens next\r\nThe case officer is reviewing the hearing requirements. Once the requirements have been agreed with the Tribunal, the case will be ready for respondent review.",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_hearingRequirementsReviewed_stf24w",
+    "Label": "## What happens next\r\nThe case officer has reviewed the hearing requirements and the case is now with the respondent for review.",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_reviewHearingRequirements_aip",
     "Label": "## Do this next\r\nYou can view the hearing requirements and any requests for additional adjustments in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).<br><br>If you need more information, [direct the appellant to answer clarifying questions](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/submitClarifyingQuestionAnswers).<br><br>If you do not need more information, [review and record](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewHearingRequirements) the hearing requirements and any additional adjustments.",
     "FieldType": "Label",
@@ -4957,6 +5229,24 @@
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_reviewHearingRequirements_stf24w",
+    "Label": "## Do this next\r\nYou can view the hearing requirements and any requests for additional adjustments in the [Hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).<br><br>You should contact the appellant if you need more information.<br><br>You should then [review and submit](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewHearingRequirements) the hearing requirements and any additional adjustments.",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_caseOfficer_hearingRequirementsReviewed_stf24w",
+    "Label": "## Do this next\r\n\r\nThe hearing requirements have been reviewed and recorded. You must now [Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
     "ID": "progress_judge_reviewHearingRequirements",
     "Label": "## What happens next\r\nThe Tribunal Caseworker will agree what adjustments the Tribunal will make.",
     "FieldType": "Label",
@@ -4967,7 +5257,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_prepareForHearing",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 8 of 11 stages - the Prepare for hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_prepareForHearing.svg)\r\n\r\n## Do this next\r\nYou must create a case summary for the judge to use at the hearing.\r\n\r\n[Create case summary](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/createCaseSummary)",
+    "Label": "## Do this next\r\nYou must create a case summary for the judge to use at the hearing.\r\n\r\n[Create case summary](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/createCaseSummary)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4976,7 +5266,25 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_prepareForHearing",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 8 of 11 stages - the Prepare for hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_prepareForHearing.svg)\r\n\r\n## What happens next\r\nThe Notice of Hearing will be sent to all parties.",
+    "Label": "## What happens next\r\nThe Notice of Hearing will be sent to all parties.",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_finalBundling_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_finalBundling_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_finalBundling_stf24w.svg)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4985,7 +5293,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_finalBundling",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.svg)\r\n\r\n## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing. You should first review the documents in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n If you happy with the documents, [generate the hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle).\r\n\n\nIf you want to add or remove any documents, you can [customise hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/customiseHearingBundle)",
+    "Label": "## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing. You should first review the documents in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n If you happy with the documents, [generate the hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle).\r\n\n\nIf you want to add or remove any documents, you can [customise hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/customiseHearingBundle)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4994,7 +5302,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_reheard_finalBundling",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.svg)\r\n\r\n## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing. You should first review the documents in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n If you happy with the documents, [generate the hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle).\r\n\n\nIf you want to add or remove any documents, you can [customise hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/customiseHearingBundle)",
+    "Label": "## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing. You should first review the documents in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n If you happy with the documents, [generate the hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle).\r\n\n\nIf you want to add or remove any documents, you can [customise hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/customiseHearingBundle)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5003,7 +5311,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_stitching_failed",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.svg)\r\n\r\n## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing.\r\n\r\n[Generate hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle)",
+    "Label": "## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing.\r\n\r\n[Generate hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5012,7 +5320,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_finalBundling_in_progress",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.svg)\r\n\r\n## What to do next\r\nThe hearing bundle is being generated. You will soon be able to view the hearing bundle in the documents tab.\r\n\r\nYou and the other parties will be notified when the hearing bundle is available.\r\n\r\nIf the bundle fails to generate, you will be notified and need to generate the bundle again.</br></br>",
+    "Label": "## What to do next\r\nThe hearing bundle is being generated. You will soon be able to view the hearing bundle in the documents tab.\r\n\r\nYou and the other parties will be notified when the hearing bundle is available.\r\n\r\nIf the bundle fails to generate, you will be notified and need to generate the bundle again.</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5021,7 +5329,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_finalBundling",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.svg)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will generate a hearing bundle for all parties to use at the hearing.",
+    "Label": "## What happens next\r\nThe Tribunal Caseworker will generate a hearing bundle for all parties to use at the hearing.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5030,7 +5338,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_preHearing",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 10 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_preHearing.svg)\r\n\r\n## Do this next\r\nYou can start to create the decision and reasons document.\r\n\r\n[Start decision and reasons](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/decisionAndReasonsStarted/decisionAndReasonsStartedcaseIntroduction)",
+    "Label": "## Do this next\r\nYou can start to create the decision and reasons document.\r\n\r\n[Start decision and reasons](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/decisionAndReasonsStarted/decisionAndReasonsStartedcaseIntroduction)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5039,7 +5347,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_preHearing",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 10 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_preHearing.svg)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will set up the Decision and Reasons document.",
+    "Label": "## What happens next\r\nThe Tribunal Caseworker will set up the Decision and Reasons document.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5048,7 +5356,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_pre_doc_gen_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## What happens next\r\nThe judge will complete the Decision and Reasons document and upload it to the service.\r\n\r\nBoth parties will be notified when it's available to view and download from the Documents tab.<br/></br>",
+    "Label": "## What happens next\r\nThe judge will complete the Decision and Reasons document and upload it to the service.\r\n\r\nBoth parties will be notified when it's available to view and download from the Documents tab.<br/></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5057,7 +5365,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_pre_doc_gen_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\n[Prepare the Decision and Reasons document](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateDecisionAndReasons)\r\n",
+    "Label": "## Do this next\r\n[Prepare the Decision and Reasons document](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateDecisionAndReasons)\r\n",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5066,7 +5374,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_post_doc_gen_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## What happens next\r\nThe judge will complete the Decision and Reasons document and upload it to the service.\r\n\r\nBoth parties will be notified when it's available to view and download from the Documents tab.<br/></br>",
+    "Label": "## What happens next\r\nThe judge will complete the Decision and Reasons document and upload it to the service.\r\n\r\nBoth parties will be notified when it's available to view and download from the Documents tab.<br/></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5075,7 +5383,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_post_doc_gen_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nGo to the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents) to download and complete the Decision and Reasons document.\r\n\r\n You should then [upload and send](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/sendDecisionAndReasons) the completed document.\r\n\r\n",
+    "Label": "## Do this next\r\nGo to the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents) to download and complete the Decision and Reasons document.\r\n\r\n You should then [upload and send](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/sendDecisionAndReasons) the completed document.\r\n\r\n",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5210,7 +5518,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_prepareForHearing",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 8 of 11 stages - the Prepare for hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_prepareForHearing.svg)\r\n\r\n## What happens next\r\nThe Notice of Hearing will be sent to all parties.<br>\r\n\r\n<br/><br/>",
+    "Label": "## What happens next\r\nThe Notice of Hearing will be sent to all parties.<br>\r\n\r\n<br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5228,7 +5536,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_finalBundling",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Final bundling stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_finalBundling.svg)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will generate a hearing bundle for all parties to use at the hearing.\r\n\r\n<br/><br/>",
+    "Label": "## What happens next\r\nThe Tribunal Caseworker will generate a hearing bundle for all parties to use at the hearing.\r\n\r\n<br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5237,7 +5545,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_preHearing",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 10 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_preHearing.svg)\r\n\r\n## What happens next\r\nThe Tribunal Caseworker will generate the Decision and Reasons document.\r\n\r\n<br/><br/>",
+    "Label": "## What happens next\r\nThe Tribunal Caseworker will generate the Decision and Reasons document.\r\n\r\n<br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5246,7 +5554,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_pre_hearing_details_recorded_admin_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
+    "Label": "## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5255,7 +5563,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_pre_hearing_details_recorded_admin_decision_integrated",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
+    "Label": "## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5264,7 +5572,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_pre_hearing_details_recorded_admin_decision_integrated_rd",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
+    "Label": "## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5273,7 +5581,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_decision_without_hearing_pre_hearing_request_admin_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nSubmit a hearing request in the [Hearings tab](/cases/case-details/${[CASE_REFERENCE]}/hearings)",
+    "Label": "## Do this next\r\nSubmit a hearing request in the [Hearings tab](/cases/case-details/${[CASE_REFERENCE]}/hearings)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5282,7 +5590,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_decisionWithoutHearing_preHearing_request_admin_decision_rd",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nSubmit a hearing request in the [Hearings tab](/cases/case-details/${[CASE_REFERENCE]}/hearings)",
+    "Label": "## Do this next\r\nSubmit a hearing request in the [Hearings tab](/cases/case-details/${[CASE_REFERENCE]}/hearings)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5291,7 +5599,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_decision_without_hearing_post_hearing_request_admin_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
+    "Label": "## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5300,7 +5608,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_decisionWithoutHearing_postHearing_request_admin_decision_rd",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
+    "Label": "## Do this next\r\nRecord the attendees and duration of the hearing.\r\n\r\n[Record attendees and duration](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordAttendeesAndDuration)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5309,7 +5617,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_post_hearing_details_recorded_admin_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## Do this next\r\nYou don't need to do any more on this case.",
+    "Label": "## Do this next\r\nYou don't need to do any more on this case.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5803,6 +6111,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealDetailsTitle", "Label": "![]()\r\n## Appeal details", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "submissionDetailsTitle", "Label": "![]()\r\n## Submission details", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantDetailsTitle", "Label": "![]()\r\n## Appellant's details", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorDetailsTitle", "Label": "![]()\r\n## Sponsor's details", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealDecisionAvailable", "Label": "Internal flag managed by API to identify if appeal decision is available.", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "uploadAddendumEvidenceActionAvailable", "Label": "Internal flag managed by API to enable/disable uploadAddendumEvidenceAction (inline action)", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "addendumEvidenceDocuments", "Label": "Evidence supplied after the hearing bundle", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -5914,12 +6223,29 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appealStatus", "Label": "Status of appeal", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reinstateAppealDate", "Label": "Date reinstated", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "reinstateAppealReason", "Label": "Reason for reinstating", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
-
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_preHearing_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_preHearing.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_preHearing_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_lr_preHearing_stf24w.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
   {
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_preHearing",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_preHearing.svg)\r\n\r\n## Do this next\r\nYou can now view the hearing bundle in the documents tab.\r\n\r\n[Go to the documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents)",
+    "Label": "## Do this next\r\nYou can now view the hearing bundle in the documents tab.\r\n\r\n[Go to the documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5928,7 +6254,25 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_finalBundling",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 9 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_listed.svg)\r\n\r\n## Do this next\r\nThe case has now been listed. Go to the documents tab to see the Hearing notice, which includes the hearing details.\r\n\r\n[Go to the documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents)",
+    "Label": "## Do this next\r\nThe case has now been listed. Go to the documents tab to see the Hearing notice, which includes the hearing details.\r\n\r\n[Go to the documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_decision_timeline",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_decision.svg)",
+    "FieldType": "Label",
+    "SecurityClassification":"PUBLIC",
+    "Searchable": "N"
+  },
+  {
+    "LiveFrom": "01/01/2018",
+    "CaseTypeID": "Asylum",
+    "ID": "progress_lr_decision_timeline_stf24w",
+    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_lr_decision_stf24w.svg)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5937,7 +6281,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/progress_legalRep_decision.svg)\r\n\r\n## Do this next\r\nThe judge is writing the decision and reasons. You will be notified when it is available to view.",
+    "Label": "## Do this next\r\nThe judge is writing the decision and reasons. You will be notified when it is available to view.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -6542,6 +6886,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "caseFlags", "Label": " ", "FieldType": "Flags", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantLevelFlags", "Label": " ", "FieldType": "Flags", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "witnessLevelFlags", "Label": " ", "FieldType": "Collection","FieldTypeParameter": "Flags", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrLevelFlags", "Label": " ", "FieldType": "Flags","FieldTypeParameter": "Flags", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "interpreterLevelFlags", "Label": " ", "FieldType": "Collection","FieldTypeParameter": "Flags", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "flagLauncher", "Label": " ", "FieldType": "FlagLauncher", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
@@ -6607,7 +6952,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateLegalRepCompany", "Label": "Company", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateLegalRepName", "Label": "Given names", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateLegalRepFamilyName", "Label": "Family name", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateLegalRepEmailAddress", "Label": "Email", "HintText": "This is for correspondence only. You cannot change your sign-in email.", "RegularExpression":  "^([a-zA-Z0-9\\_\\-\\.]+)@([a-zA-Z0-9\\_\\-\\.]+)\\.([a-zA-Z]{2,5})$", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateLegalRepEmailAddress", "Label": "Email", "HintText": "This is for correspondence only. You cannot change your sign-in email.", "RegularExpression":  "^([a-zA-Z0-9\\_\\-\\.]+)@([a-zA-Z0-9\\_\\-\\.]+)\\.([a-zA-Z]+)$", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateLegalRepMobilePhoneNumber", "Label": "Contact number", "FieldType": "PhoneUK", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "updateLegalRepReferenceNumber", "Label": "Own reference", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "adjournHearingWithoutDateReasonsTitle", "Label": "The hearing will be adjourned and a new hearing date can be added in the future.\r\nBoth parties will be notified and a Notice of Adjournment will be generated.", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -6660,6 +7005,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isReheardAppealEnabled", "Label": "isReheardAppealEnabled", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionHearingFeeOptionTitle", "Label": " ", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionHearingFeeOption", "Label": "How do you want the appeal to be decided?", "FieldType": "FixedRadioList", "FieldTypeParameter": "decisionHearingFeeOption", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "decisionHearingFeeHintText", "FieldType": "Label",  "Label": "#### Appeal fees have recently increased. If we received your appeal before 13 July 2026, you will pay the amount that was in force before the increase, even if the new fee shows in your record.", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingDecisionSelected", "Label": "How do you want the appeal to be decided?", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "makePayment", "Label": "# Make a payment", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "feeDescription", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -7059,7 +7405,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantOutOfCountryAddress", "Label": "Address", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "appellantSponsorTitle", "Label": " ", "FieldType": "Label",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasSponsor", "Label": "Does your client have a sponsor?", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasSponsor", "Label": "Does the appellant have a sponsor?", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "entryClearanceDecisionTitle", "Label": " ", "FieldType": "Label",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "entryClearanceDecisionLetterTitle", "Label": " ", "FieldType": "Label",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
@@ -7243,6 +7589,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellantDecisionLetterDate", "Label": "Home Office appellant decision letter date", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellants", "Label": "Home Office appellants", "FieldType": "Collection", "FieldTypeParameter": "homeOfficeAppellant", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "homeOfficeAppellantsSerialisedInternalUseOnly", "Label": "Do not display - internal use only", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasBeenValidatedByNewHomeOfficeApi", "Label": "Do not display - internal use only", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "upperTribunalDocuments", "Label": "Upper Tribunal documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stitchingStatusUpperTribunal", "Label": "Internal flag managed by API to identify if upper tribunal bundling stitching is complete", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -7477,6 +7824,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepIndividualPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "legalRepOrganisationPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "sponsorPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrPartyId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "epimsId", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
 
@@ -8874,6 +9222,32 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "revokeAccessDl", "Label": "Select user to revoke case access from", "FieldType": "DynamicRadioList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "joinAppealPin", "Label": " ", "FieldType": "pinInPost", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrDetailsTitle", "Label": "![]()\r\n## Non-Legal Representative Details", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrDetails", "Label": "Non-Legal Representative Details", "FieldType": "nlrDetails", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousNlrDetails", "Label": "Previous Non-Legal Representative Details", "FieldType": "nlrDetails", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasNonLegalRep", "Label": "Has a non-legal representative been requested?", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isSponsorSameAsNlr", "Label": "Are the sponsor and the non-legal representative the same person?", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasNonLegalRepJoined", "Label": "Has the non-legal representative joined the appeal?", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "shouldInviteNlrToIdam", "Label": " ", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasNlrSubmitted", "Label": " ", "FieldType": "YesOrNo",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrHearingRequirementsTabTitle", "Label": "![]()\r\n## Non-legal representative hearing requirements", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrAttending", "Label": "Will the non-legal representative be attending the hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrAttendingOutsideUk", "Label": "Will the non-legal representative be giving oral evidence from outside the United Kingdom?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrNeedsStepFreeAccess", "Label": "Does the non-legal representative need step-free access?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrNeedsHearingLoop", "Label": "Does the non-legal representative need a hearing loop?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isNlrInterpreterRequired", "Label": "Will the non-legal representative require a spoken or sign language interpreter at the hearing?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrInterpreterLanguageCategory", "Label": "What kind of interpreter does ${nlrDetails.givenNames} ${nlrDetails.familyName} need?", "FieldType": "MultiSelectList", "FieldTypeParameter": "interpreterLanguageCategory", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrInterpreterSpokenLanguage", "Label": "Which spoken language interpreter is needed for ${nlrDetails.givenNames} ${nlrDetails.familyName`}?", "FieldType": "interpreterSpokenLanguage", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrInterpreterSignLanguage", "Label": "Which sign language is needed for ${nlrDetails.givenNames} ${nlrDetails.familyName}?", "FieldType": "interpreterSignLanguage", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrInterpreterSpokenLanguageBooking", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrInterpreterSpokenLanguageBookingStatus", "Label": "${nlrInterpreterSpokenLanguageBooking}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrInterpreterSignLanguageBooking", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nlrInterpreterSignLanguageBookingStatus", "Label": "${nlrInterpreterSignLanguageBooking}", "FieldType": "FixedList", "FieldTypeParameter": "bookingStatus", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "oocAppealAdminJ", "Label": "What are the circumstances of the appellant's out of country appeal?", "FieldType": "FixedRadioList", "FieldTypeParameter": "oocAppealAdminJ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionRule31Changed", "Label": "Internal flag managed by API to check if decision is changed via Tribunal decision under rule 31", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
@@ -8913,7 +9287,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_updatedBundle_in_progress_preHearing",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 10 of 11 stages - the Pre hearing stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_preHearing.svg)\r\n\r\n## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
+    "Label": "## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC",
     "Searchable": "N"
@@ -8922,7 +9296,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_updatedBundle_in_progress_decision",
-    "Label": "## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 11 of 11 stages - the Decision stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_decision.svg)\r\n\r\n## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
+    "Label": "## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC",
     "Searchable": "N"
@@ -8988,8 +9362,15 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stf24wCurrentReasonAutoGenerated", "Label": "Reason", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stf24wHomeOfficeCohort", "Label": "Home Office Cohort", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "xuiBannerText", "Label": "XUI banner text", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stf24wCurrentStatusAutoGenerated", "Label": "STF 24 Weeks", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stf24wCurrentStatusAutoGenerated", "Label": "24 week statutory timeframe set on case?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stf24wPreviousStatusWasYesAutoGenerated", "Label": "STF 24 Weeks was Yes", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stf24wSetDate", "Label": "Date the appeal was transferred into STF24W", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "stf24wRemoveDate", "Label": "Date the appeal was transferred out of STF24W", "FieldType": "Date", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isRemovalOf24wApplicationRefused", "Label": "Is this refusal in respect to a 24 week removal decision?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removalOf24wDecisionReason", "Label": "Reason for removal of 24 week timeframe", "FieldType": "TextArea", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "removalOf24wDecisionDecisionMaker", "Label": "Name of decision maker", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "saveNotificationsToDataDate", "Label": " ", "FieldType": "Text",  "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "28/10/2025", "CaseTypeID": "Asylum", "ID": "sourceOfAppeal", "Label": "Source of appeal", "FieldType": "FixedRadioList", "FieldTypeParameter": "sourceOfAppeal", "SecurityClassification": "PUBLIC", "Searchable": "N"},
