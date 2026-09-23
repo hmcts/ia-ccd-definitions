@@ -1173,8 +1173,8 @@
 
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "previousRepresentations", "TabFieldDisplayOrder": 210},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "homeOfficeAppellantLanguage", "TabFieldDisplayOrder": 215, "FieldShowCondition": "homeOfficeAppellantLanguage!=\"\""},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "hoInterpreterRequired", "TabFieldDisplayOrder": 216, "FieldShowCondition": "hoInterpreterRequired!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "homeOfficeAppellantLanguage", "TabFieldDisplayOrder": 46, "FieldShowCondition": "homeOfficeAppellantLanguage!=\"\""},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "caseDetails", "CaseFieldID": "hoInterpreterRequired", "TabFieldDisplayOrder": 47, "FieldShowCondition": "hoInterpreterRequired!=\"\""},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "TabLabel": "Documents", "TabDisplayOrder": 4, "CaseFieldID": "documentsTabTitle", "TabFieldDisplayOrder": 1},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "TabID": "documents", "CaseFieldID": "journeyType", "TabFieldDisplayOrder": 9, "FieldShowCondition": "journeyType=\"DUMMY_VALUE_TO_HIDE_FIELD\""},
