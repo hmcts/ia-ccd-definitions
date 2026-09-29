@@ -3,7 +3,7 @@ properties([
   copyArtifactPermission('/HMCTS_a_to_c/ia-ccd-definitions/*'),
 ]);
 
-@Library("Infrastructure")
+@Library("Infrastructure@2.5.1")
 import uk.gov.hmcts.contino.GithubAPI
 
 def type = "nodejs"
