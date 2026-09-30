@@ -498,6 +498,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "cmrReListing", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "cmrReListing", "UserRole": "caseworker-wa-task-configuration", "CRUD": "CRUD"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "cmrHearingCancelled", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "generatePinInPost", "UserRole": "caseworker-ia-internal", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "generatePinInPost", "UserRole": "caseworker-ia-system", "CRUD": "CRUD"},
 
@@ -552,5 +553,10 @@
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceCaseToPrepareForHearing", "UserRole": "caseworker-ia-caseofficer", "CRUD": "CRUD"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceCaseToPrepareForHearing", "UserRole": "caseworker-ia-admofficer", "CRUD": "R"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceCaseToPrepareForHearing", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"}
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "forceCaseToPrepareForHearing", "UserRole": "caseworker-ia-iacjudge", "CRUD": "R"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "queryManagementRaiseQuery", "UserRole": "caseworker-ia-legalrep-solicitor", "CRUD": "CRUD"},
+
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "queryManagementRespondQuery", "UserRole": "caseworker-ia-admofficer", "CRUD": "CRUD"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "CaseEventID": "queryManagementRespondQuery", "UserRole": "ia_specific_access_ctsc_profile", "CRUD": "CRUD"}
 ]
