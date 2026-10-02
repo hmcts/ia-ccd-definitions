@@ -69,8 +69,23 @@ case $ENV in
     FILENAME="ccd-appeal-config-preview-pr${PR_NUMBER}.xlsx"
     FILENAME_BAIL="ccd-bail-config-preview-pr${PR_NUMBER}.xlsx"
     CCD_URL="https://ccd-definition-store-ia-case-api-pr-${PR_NUMBER}.preview.platform.hmcts.net"
-    GENERATE_CMD="yarn generate -e preview -p ${PR_NUMBER}"
+    GENERATE_CMD="corepack yarn generate -e preview -p ${PR_NUMBER}"
     TOKEN_ENV="aat"
+    az login --identity
+    ;;
+  aat)
+    FILENAME="ccd-appeal-config-aat.xlsx"
+    CCD_URL="http://ccd-definition-store-api-aat.service.core-compute-aat.internal"
+    GENERATE_CMD="corepack yarn generate -e aat"
+    TOKEN_ENV="aat"
+    az login --identity
+    ;;
+  prod)
+    FILENAME="ccd-appeal-config-prod.xlsx"
+    CCD_URL="http://ia-case-api-prod.service.core-compute-prod.internal"
+    GENERATE_CMD="corepack yarn generate -e prod"
+    TOKEN_ENV="aat"
+    az login --identity
     ;;
   *)
     echo "Error: Unsupported environment: ${ENV}"
@@ -114,5 +129,5 @@ if [ ! -f "${OUTPUT_PATH_BAIL}" ]; then
 fi
 # Upload to CCD using the appropriate token environment
 echo "Uploading definition files to ${CCD_URL}..."
-bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}" 
-bin/utils/ccd-import-definition.sh -f "${FILENAME_BAIL}" -u "${CCD_URL}" -e "${TOKEN_ENV}"
+bin/utils/ccd-import-definition.sh -f "${FILENAME}" -u "${CCD_URL}" -e "${TOKEN_ENV}" # NOSONAR: variables do not contain sensitive data so should be ignored by SonarQube
+bin/utils/ccd-import-definition.sh -f "${FILENAME_BAIL}" -u "${CCD_URL}" -e "${TOKEN_ENV}" # NOSONAR: variables do not contain sensitive data so should be ignored by SonarQube
