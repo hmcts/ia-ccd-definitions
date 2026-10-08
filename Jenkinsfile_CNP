@@ -63,146 +63,37 @@ def secrets = [
   ]
 ]
 
-def archiveCoreCaseDataDefinitions() {
-  if (env.ENVIRONMENT == 'aat') {
-    echo "current environment is ${env.ENVIRONMENT}"
-    for (PROD_ENV in ["aat", "prod"]) {
-      echo "environment is ${PROD_ENV}"
-      dir("${WORKSPACE}") {
-        sh """
-          set -e
-          yarn generate-${PROD_ENV}
-        """
-      }
-
-      dir("${WORKSPACE}/target") {
-        steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-${PROD_ENV}.xlsx"
-      }
-    }
-
-  } else if (env.ENVIRONMENT == 'preview') {
+def uploadCoreCaseDataDefinitions(environmentString) {
+  node {
+    checkout scm
     dir("${WORKSPACE}") {
+      sh 'corepack yarn install'
+      sh 'corepack yarn setup'
+      ccdDefinitionFilePath = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${environmentString}.xlsx"
       sh """
-          set -e
-          yarn generate-preview
-      """
-    }
-
-    dir("${WORKSPACE}/target") {
-      steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview.xlsx"
-    }
-  } else {
-    dir("${WORKSPACE}") {
-      sh """
-          set -e
-          yarn generate-${env.ENVIRONMENT}
-        """
-    }
-
-    dir("${WORKSPACE}/target") {
-      steps.archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-${env.ENVIRONMENT}.xlsx"
-    }
-  }
-}
-
-def uploadCoreCaseDataDefinitions(env) {
-  dir("${WORKSPACE}") {
-    ccdDefinitionFilePath = "${WORKSPACE}/target/appeal/xlsx/ccd-appeal-config-${env}.xlsx"
-    sh """
       set -e
-      bin/utils/upload-ccd.sh -e ${env}
-    """
+      bin/utils/upload-ccd.sh -e ${environmentString}
+      """
+      steps.archiveArtifacts artifacts: "target/appeal/xlsx/ccd-appeal-config-${environmentString}.xlsx"
+    }
   }
 }
 
-pipeline {
-  agent any
-  
-  environment {
-    ENVIRONMENT = "preview"
-    NODE_TLS_REJECT_UNAUTHORIZED = "0"
-    PR_NUMBER = "${CHANGE_ID}"
-    DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-    CCD_DATA_STORE_URL = "https://ccd-data-store-api-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
-  }
-  
-  stages {
-    stage('Setup') {
-      steps {
-        script {
-          // Use corepack prepare to get the correct Yarn version without system-wide installation
-          sh 'corepack prepare yarn@3.4.1 --activate'
-          // Use corepack to run yarn commands
-          sh 'corepack yarn --version'
-          // Install dependencies first
-          sh 'corepack yarn install'
-          sh 'corepack yarn setup'
-        }
-      }
-    }
-    
-    stage('Validate JSON') {
-      when {
-        anyOf {
-          branch 'PR-*'
-          changeRequest()
-        }
-      }
-      steps {
-        script {
-          sh """
-            set -e
-            echo "Validating JSON definitions for PR ${CHANGE_ID}"
-            corepack yarn test
-          """
-        }
-      }
-    }
+withPipeline(type, product, component) {
+  loadVaultSecrets(secrets)
 
-    stage('Generate CCD Definition for PR') {
-      when {
-        anyOf {
-          branch 'PR-*'
-          changeRequest()
-        }
-      }
-      steps {
-        script {
-          env.PR_NUMBER = "${CHANGE_ID}"
-          sh """
-            set -e
-            echo "Generating CCD definition for PR ${CHANGE_ID}"
-            corepack yarn generate-preview
-          """
-        }
-      }
-      post {
-        always {
-          dir("${WORKSPACE}/target") {
-            archiveArtifacts artifacts: "appeal/xlsx/ccd-appeal-config-preview-pr${CHANGE_ID}.xlsx", allowEmptyArchive: true
-            echo "Pipeline completed for PR ${CHANGE_ID}"
-          }
-        }
-      }
-    }
+  onPR {
+    env.ENVIRONMENT = "preview"
+    env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
+    env.PR_NUMBER = "${CHANGE_ID}"
+    env.DEFINITION_STORE_URL_BASE = "https://ccd-definition-store-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
+    env.CCD_DATA_STORE_URL = "https://ccd-data-store-api-ia-ccd-definitions-pr-${CHANGE_ID}.preview.platform.hmcts.net"
 
-    // stage('Upload CCD Definition to PR Environment') {
-    //   when {
-    //     anyOf {
-    //       branch 'PR-*'
-    //       changeRequest()
-    //     }
-    //   }
-    //   steps {
-    //     script {
-    //       env.PR_NUMBER = "${CHANGE_ID}"
-    //       sh """
-    //         set -e
-    //         echo "Uploading CCD definition to PR ${CHANGE_ID} environment"
-    //         bin/utils/upload-ccd.sh -e preview -p ${CHANGE_ID}
-    //       """
-    //     }
-    //   }
-    // }
   }
-} 
+
+  afterSuccess('checkout') {
+    uploadCoreCaseDataDefinitions('aat')
+    uploadCoreCaseDataDefinitions('prod')
+  }
+
+}
