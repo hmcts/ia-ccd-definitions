@@ -71,8 +71,10 @@ CCD_ENV="${ENV}"
 # Get current branch for version (except for prod)
 if [[ "${ENV}" == "prod" ]]; then
   CCD_DEF_VERSION=""
+  INCLUDE_NON_PROD=false
 else
   CCD_DEF_VERSION=`git branch | grep '* ' | cut -c -16`
+  INCLUDE_NON_PROD=true
 fi
 
 # If mirrord environment and no username provided, get current user
@@ -136,11 +138,13 @@ fi
 
 # Generate the definition
 CCD_ENV="${CCD_ENV}" \
+INCLUDE_NON_PROD="${INCLUDE_NON_PROD}" \
 yarn copy-json && \
 CCD_ENV="${CCD_ENV}" \
 CCD_DEF_VERSION="${CCD_DEF_VERSION}" \
 CCD_DEF_IA_URL="${CCD_DEF_IA_URL}" \
 CCD_DEF_AAC_URL="${CCD_DEF_AAC_URL}" \
+INCLUDE_NON_PROD="${INCLUDE_NON_PROD}" \
 yarn generate-excel "${OUTPUT_FILE}"
 
 if [ $? -eq 0 ]; then
