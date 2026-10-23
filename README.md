@@ -192,6 +192,10 @@ The script dynamically constructs URLs based on the environment and parameters:
 The following npm scripts are available for convenience:
 
 ```bash
+# Alphabetically sorts the case events in the appeal JSON files by Name and then ID
+yarn orderEvents
+
+
 # Generate for dev environment
 yarn generate-dev
 
