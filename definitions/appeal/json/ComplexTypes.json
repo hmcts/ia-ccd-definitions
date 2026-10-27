@@ -340,6 +340,11 @@
   {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingID", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "ID": "hearingSchedule", "ListElementCode": "hearingDateTime", "FieldType": "DateTime", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
 
+  {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "hearingID", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "hearingActuals", "FieldType": "Collection", "FieldTypeParameter": "hearingActualsDetails", "ElementLabel": "", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingActualsDetails", "ListElementCode": "hearingStartTime", "FieldType": "DateTime", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingActualsDetails", "ListElementCode": "hearingEndTime", "FieldType": "DateTime", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionOutcomeType", "FieldType": "FixedRadioList", "FieldTypeParameter": "ftpaResidentJudgeDecisionOutcomeType", "ElementLabel": "The outcome of the application", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "ftpaApplications", "ListElementCode": "ftpaDecisionOutcomeTypeR35", "FieldType": "Text", "ElementLabel": "The outcome of the application", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "notification", "ListElementCode": "notificationId", "FieldType": "Text", "ElementLabel": "ID", "FieldShowCondition": "notificationId=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC", "Searchable": "N"},
