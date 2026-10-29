@@ -4324,7 +4324,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_caseUnderReview_no_hearing_stf24w",
-    "Label": "## Do this next\r\n\r\nThe appellant has submitted their built case. You must now check the case. If it complies with the procedure rules and practice directions, send it to the Respondent to request respondent review.\r\n\r\n[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview)\r\n\r\nIf the appellant needs to make any changes, you can direct them to edit the case.\r\n\r\n[Request case edit](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestCaseEdit)",
+    "Label": "## Do this next\r\n\r\nThe appellant has submitted their built case. You must now check it carefully and select one of the following:\r\n\r\nIf it complies with the procedure rules and practice directions, and the hearing can remain as listed:\r\n\r\n[Request hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature)\r\n\r\nIf it complies with the procedure rules and practice directions, and can be decided without a hearing, make a case note of your decision and send to admin for listing to edit the hearing and then:\r\n\r\n[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview)\r\n\r\nIf it does not comply, and the appellant needs to make changes to their case:\r\n\r\n[Request case edit](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestCaseEdit)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
