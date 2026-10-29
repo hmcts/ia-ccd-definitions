@@ -7941,6 +7941,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "previousAdjournmentDetails", "Label": "Previous adjournment details", "FieldType": "Collection", "FieldTypeParameter": "adjournmentDetail", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentAdjournmentDetail", "Label": " ", "FieldType": "adjournmentDetail", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearing", "Label": "Which hearing are you recording attendees and duration for?", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingWillNotBeRelisted", "Label": "Because the hearing will not be relisted immediately the listed hearing will be cancelled. Please select a reason for the cancellation.", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingReasonToCancel", "Label": "Cancellation reason", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
@@ -9251,6 +9253,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "latestReheardHearingDocuments", "Label": "Reheard hearing documents", "FieldType": "Collection", "FieldTypeParameter": "documentWithMetadata", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDecisionWithoutHearing", "Label": "Decision Without Hearing", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "nextHearingDetails", "Label": " ", "FieldType": "hearingSchedule", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearings", "Label": " ", "FieldType": "Collection", "FieldTypeParameter": "hearingDetails", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hasAddedLegalRepDetails", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "isDlrmFeeRefundEnabled", "Label": "Internal flag managed by API to check DLRM fee refund feature flag value", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "Y"},
