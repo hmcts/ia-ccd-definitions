@@ -678,8 +678,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRep_appealSubmitted_pa_pay_now_needs_service_request",
-    "Label": "## Do this next\r\nYou must now pay for this appeal. First [create a service request](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateServiceRequest), you can do this by selecting 'Create a service request' from the 'Next step' dropdown list. Then select 'Go'.<br/><br/><br/>",
-    "FieldType": "Label",
+    "Label": "## Do this next\r\nYou must now pay for this appeal. A payment service request will appear under the Service Request tab, which you can use to complete the payment.\nIf the service request does not appear within 15 minutes, create one manually by selecting ‘Create a service request’ from the ‘Next Step’ dropdown list, then select ‘Go’.<br/><br/><br/>","FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
   },
@@ -696,7 +695,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRep_appealSubmitted_pa_pay_later_needs_service_request",
-    "Label": "## Do this next\r\nYou have submitted your appeal. A tribunal caseworker will review your appeal.\n\nYou still have to pay for this appeal. First [create a service request](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateServiceRequest), you can do this by selecting 'Create a service request' from the 'Next step' dropdown list. Then select 'Go'.<br/><br/><br/>",
+    "Label": "## Do this next\nYou have submitted your appeal. A tribunal caseworker will review your appeal.\r\nYou still have to pay for this appeal. A payment service request will appear under the Service Request tab, which you can use to complete the payment.\nIf the service request does not appear within 15 minutes, create one manually by selecting ‘Create a service request’ from the ‘Next Step’ dropdown list, then select ‘Go’.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -714,7 +713,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRep_appealSubmitted_pa_remission_rejected",
-    "Label": "## Do this next\r\nYou have submitted your appeal. A Tribunal Caseworker will now review your appeal.\n\nYour remission application has been rejected.\n\nYou still have to pay for this appeal. First [create a service request](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateServiceRequest), you can do this by selecting 'Create a service request' from the 'Next step' dropdown list. Then select 'Go'.<br/><br/><br/>",
+    "Label": "## Do this next\r\nYou have submitted your appeal. A Tribunal Caseworker will now review your appeal.\n\nYour remission application has been rejected.\n\nYou still have to pay for this appeal. A payment service request will appear under the Service Request tab, which you can use to complete the payment.\nIf the service request does not appear within 15 minutes, create one manually by selecting ‘Create a service request’ from the ‘Next Step’ dropdown list, then select ‘Go’.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -885,7 +884,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_remissions_rejected_eaHu",
-    "Label": "## Do this next\r\nYour remission application has been rejected.\n\nYou must now pay for this appeal. First [create a service request](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateServiceRequest), you can do this by selecting 'Create a service request' from the 'Next step' dropdown list. Then select 'Go'.<br/><br/><br/>",
+    "Label": "## Do this next\r\nYour remission application has been rejected.\n\nYou must now pay for this appeal. A payment service request will appear under the Service Request tab, which you can use to complete the payment.\nIf the service request does not appear within 15 minutes, create one manually by selecting ‘Create a service request’ from the ‘Next Step’ dropdown list, then select ‘Go’.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -1092,7 +1091,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_pendingPayment_needs_service_request",
-    "Label": "## Do this next\r\nYou must now pay for this appeal. First [create a service request](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateServiceRequest), you can do this by selecting 'Create a service request' from the 'Next step' dropdown list. Then select 'Go'.<br/><br/><br/>",
+    "Label": "## Do this next\r\nYou must now pay for this appeal. A payment service request will appear under the Service Request tab, which you can use to complete the payment.\nIf the service request does not appear within 15 minutes, create one manually by selecting ‘Create a service request’ from the ‘Next Step’ dropdown list, then select ‘Go’.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
