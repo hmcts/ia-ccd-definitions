@@ -1326,5 +1326,12 @@
   {"LiveFrom": "01/01/2018", "ID": "pendingBailApplication", "ListElementCode": "NotSure", "ListElement": "I'm not sure", "DisplayOrder": 4},
 
   {"LiveFrom": "28/10/2025", "ID": "sourceOfAppeal", "ListElementCode": "paperForm", "ListElement": "Paper form", "DisplayOrder": 1},
-  {"LiveFrom": "28/10/2025", "ID": "sourceOfAppeal", "ListElementCode": "rehydratedAppeal", "ListElement": "Rehydrated appeal", "DisplayOrder": 2}
+  {"LiveFrom": "28/10/2025", "ID": "sourceOfAppeal", "ListElementCode": "rehydratedAppeal", "ListElement": "Rehydrated appeal", "DisplayOrder": 2},
+
+  {"LiveFrom": "28/10/2025", "ID": "hearingStageOptions", "ListElementCode": "substantive", "ListElement": "Substantive", "DisplayOrder": 1},
+  {"LiveFrom": "28/10/2025", "ID": "hearingStageOptions", "ListElementCode": "crm", "ListElement": "Interim", "DisplayOrder": 2},
+
+  {"LiveFrom": "28/10/2025", "ID": "hearingResultOptions", "ListElementCode": "heard", "ListElement": "Heard", "DisplayOrder": 1},
+  {"LiveFrom": "28/10/2025", "ID": "hearingResultOptions", "ListElementCode": "partHeard", "ListElement": "Part-heard, adjourned or postponed", "DisplayOrder": 1},
+  {"LiveFrom": "28/10/2025", "ID": "hearingResultOptions", "ListElementCode": "withdrawn", "ListElement": "Withdrawn, settled or vacated", "DisplayOrder": 2}
 ]
