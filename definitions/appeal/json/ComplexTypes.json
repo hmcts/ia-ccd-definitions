@@ -342,6 +342,9 @@
 
   {"LiveFrom": "01/01/2018", "ID": "hearingActualsDetails", "ListElementCode": "hearingStartTime", "FieldType": "DateTime", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "hearingActualsDetails", "ListElementCode": "hearingEndTime", "FieldType": "DateTime", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
+  {"LiveFrom": "01/01/2018", "ID": "hearingPause", "ListElementCode": "pauseStartTime", "FieldType": "Text", "ElementLabel": "Start pause", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingPause", "ListElementCode": "pauseEndTime", "FieldType": "Text", "ElementLabel": "End pause", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "hearingID", "FieldType": "Text", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "hearingDateTime", "FieldType": "DateTime", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "hearingDetails", "ListElementCode": "duration", "FieldType": "Number", "ElementLabel": " ", "SecurityClassification": "PUBLIC", "Searchable": "N"},
