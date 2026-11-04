@@ -36,6 +36,7 @@
     "decrypt": "node bin/decrypt.js",
     "copy-json": "bin/copy-json.sh",
     "setup": "bin/setup.sh",
+    "orderEvents": "node bin/order-case-events.js",
     "lint": "echo 'Linting skipped - no ESLint configured'",
     "validate:json": "node bin/json-validator.js",
     "check:auth-caseevent-dupes": "node bin/auth-caseevent-duplicate-checker.js",
