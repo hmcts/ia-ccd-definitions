@@ -7954,6 +7954,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingFinishTime", "Label": "Finish time", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationPausedTimeRequired", "Label": "Do you need paused time?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationPauses", "Label": "Pauses", "FieldType": "Collection", "FieldTypeParameter": "hearingPause", "Max": 1, "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingCancellationReason", "Label": "Hearing cancellation reason", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingPartHeardReason", "Label": "Hearing part heard reason", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingWillNotBeRelisted", "Label": "Because the hearing will not be relisted immediately the listed hearing will be cancelled. Please select a reason for the cancellation.", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingReasonToCancel", "Label": "Cancellation reason", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
