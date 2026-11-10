@@ -1329,12 +1329,14 @@
   {"LiveFrom": "28/10/2025", "ID": "sourceOfAppeal", "ListElementCode": "paperForm", "ListElement": "Paper form", "DisplayOrder": 1},
   {"LiveFrom": "28/10/2025", "ID": "sourceOfAppeal", "ListElementCode": "rehydratedAppeal", "ListElement": "Rehydrated appeal", "DisplayOrder": 2},
 
-  {"LiveFrom": "28/10/2025", "ID": "hearingStageOptions", "ListElementCode": "substantive", "ListElement": "Substantive", "DisplayOrder": 1},
-  {"LiveFrom": "28/10/2025", "ID": "hearingStageOptions", "ListElementCode": "crm", "ListElement": "CRM", "DisplayOrder": 2},
+  {"LiveFrom": "28/10/2025", "ID": "hearingStageOptions", "ListElementCode": "BFA1-CMR", "ListElement": "Case Management Review", "DisplayOrder": 1},
+  {"LiveFrom": "28/10/2025", "ID": "hearingStageOptions", "ListElementCode": "BFA1-COS", "ListElement": "Costs", "DisplayOrder": 2},
+  {"LiveFrom": "28/10/2025", "ID": "hearingStageOptions", "ListElementCode": "BFA1-BAI", "ListElement": "Bail", "DisplayOrder": 1},
+  {"LiveFrom": "28/10/2025", "ID": "hearingStageOptions", "ListElementCode": "BFA1-SUB", "ListElement": "Substantive", "DisplayOrder": 2},
 
-  {"LiveFrom": "28/10/2025", "ID": "hearingResultOptions", "ListElementCode": "heard", "ListElement": "Heard", "DisplayOrder": 1},
-  {"LiveFrom": "28/10/2025", "ID": "hearingResultOptions", "ListElementCode": "partHeard", "ListElement": "Part-heard, adjourned or postponed", "DisplayOrder": 2},
-  {"LiveFrom": "28/10/2025", "ID": "hearingResultOptions", "ListElementCode": "withdrawn", "ListElement": "Withdrawn, settled or vacated", "DisplayOrder": 3},
+  {"LiveFrom": "28/10/2025", "ID": "hearingResultOptions", "ListElementCode": "COMPLETED", "ListElement": "Heard", "DisplayOrder": 1},
+  {"LiveFrom": "28/10/2025", "ID": "hearingResultOptions", "ListElementCode": "ADJOURNED", "ListElement": "Part-heard, adjourned or postponed", "DisplayOrder": 2},
+  {"LiveFrom": "28/10/2025", "ID": "hearingResultOptions", "ListElementCode": "CANCELLED", "ListElement": "Withdrawn, settled or vacated", "DisplayOrder": 3},
 
   {"LiveFrom": "28/10/2025", "ID": "hearingCancellationReasons", "ListElementCode": "withdrawn", "ListElement": "Withdrawn", "DisplayOrder": 1},
   {"LiveFrom": "28/10/2025", "ID": "hearingCancellationReasons", "ListElementCode": "other", "ListElement": "Other", "DisplayOrder": 2},
