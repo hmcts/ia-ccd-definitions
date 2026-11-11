@@ -407,6 +407,12 @@
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "hoFeeWaiver", "ElementLabel": "Home Office fee waiver", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "language", "ElementLabel": "Language", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "interpreterNeeded", "ElementLabel": "Interpreter needed", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "pp", "ElementLabel": "Person number", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"}
+  {"LiveFrom": "01/01/2018", "ID": "homeOfficeAppellant", "ListElementCode": "pp", "ElementLabel": "Person number", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingParticipant", "ListElementCode": "firstName", "FieldType": "Text", "ElementLabel": "First name", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingParticipant", "ListElementCode": "lastName", "FieldType": "Text", "ElementLabel": "Last name", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingParticipant", "ListElementCode": "role", "FieldType": "FixedList", "FieldTypeParameter": "hearingParticipantRole", "ElementLabel": "Role", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingParticipant", "ListElementCode": "attendanceType", "FieldType": "FixedList", "FieldTypeParameter": "hearingAttendanceType", "ElementLabel": "Attendance type", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingParticipant", "ListElementCode": "organisation", "FieldType": "Text", "ElementLabel": "Organisation (optional)", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "ID": "hearingParticipant", "ListElementCode": "partyId", "FieldType": "Text", "ElementLabel": " ", "FieldShowCondition": "partyId=\"DUMMY_VALUE_TO_HIDE_FIELD\"", "SecurityClassification": "PUBLIC", "RetainHiddenValue": "Y", "Searchable": "N"}
 
 ]
