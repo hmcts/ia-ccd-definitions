@@ -7942,8 +7942,10 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentAdjournmentDetail", "Label": " ", "FieldType": "adjournmentDetail", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearing", "Label": "Which hearing are you recording attendees and duration for?", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationCaseReference", "Label": "### Case reference\n${[CASE_REFERENCE]}", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingId", "Label": "Hearing ID", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingDate", "Label": "Hearing date", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingDateDisplay", "Label": "Hearing date", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationPaperHearing", "Label": "Paper hearing", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingMethods", "Label": "Hearing methods", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingStage", "Label": "Hearing stage", "FieldType": "FixedList", "FieldTypeParameter": "hearingStageOptions", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -7955,6 +7957,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationPausedTimeRequired", "Label": "Do you need paused time?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationPauseStart", "Label": "Start pause", "FieldType": "Text", "RegularExpression": "^([01]?[0-9]|2[0-3])(:[0-5][0-9])?$", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationPauseEnd", "Label": "End pause", "FieldType": "Text", "RegularExpression": "^([01]?[0-9]|2[0-3])(:[0-5][0-9])?$", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingDayRequired", "Label": "Was this hearing day required?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingCancellationReason", "Label": "Hearing cancellation reason", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingPartHeardReason", "Label": "Hearing part heard reason", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
