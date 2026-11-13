@@ -7942,7 +7942,7 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "currentAdjournmentDetail", "Label": " ", "FieldType": "adjournmentDetail", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearing", "Label": "Which hearing are you recording attendees and duration for?", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
-  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationCaseReference", "Label": "### Case reference\n${[CASE_REFERENCE]}", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationCaseReference", "Label": "### Case reference${[CASE_REFERENCE]}", "FieldType": "Label", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingId", "Label": "Hearing ID", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingDate", "Label": "Hearing date", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingDateDisplay", "Label": "Hearing date", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
@@ -7960,6 +7960,8 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingDayRequired", "Label": "Was this hearing day required?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingCancellationReason", "Label": "Hearing cancellation reason", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationHearingPartHeardReason", "Label": "Hearing part heard reason", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationParticipants", "Label": "Participants", "FieldType": "Collection", "FieldTypeParameter": "hearingParticipant", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "attendeesAndDurationParticipantsSource", "Label": " ", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingWillNotBeRelisted", "Label": "Because the hearing will not be relisted immediately the listed hearing will be cancelled. Please select a reason for the cancellation.", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Asylum", "ID": "hearingReasonToCancel", "Label": "Cancellation reason", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
