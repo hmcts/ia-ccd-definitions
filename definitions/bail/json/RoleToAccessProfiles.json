@@ -63,6 +63,42 @@
     "CaseAccessCategories": ""
   },
   {
+    "RoleName" : "idam:caseworker-ras-validation",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-ras-validation",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "judge",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-ia-iacjudge,ia_bail_caselinks_profile,ia_bail_caseflags_profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "hearing-judge",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-ia-iacjudge,ia_bail_caselinks_profile,ia_bail_caseflags_profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
+    "RoleName" : "fee-paid-judge",
+    "Authorisation": "",
+    "CaseTypeID": "Bail",
+    "AccessProfiles": "caseworker-ia-iacjudge,ia_bail_caselinks_profile,ia_bail_caseflags_profile",
+    "ReadOnly": "N",
+    "Disabled": "F",
+    "CaseAccessCategories": ""
+  },
+  {
     "RoleName": "idam:caseworker-caa",
     "Authorisation": "",
     "CaseTypeID": "Bail",

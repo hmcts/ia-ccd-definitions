@@ -648,5 +648,25 @@
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "staffLocation", "Label": "Staff Location", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "staffLocationId", "Label": "Staff Location Id", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
 
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationHearingsAvailable", "Label": " ", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationHearing", "Label": "Which hearing are you recording attendees and duration for?", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationCaseReference", "Label": "Case reference", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationHearingId", "Label": "Hearing ID", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationHearingDate", "Label": "Hearing date", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationHearingDateDisplay", "Label": "Hearing date", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationPaperHearing", "Label": "Paper hearing", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationHearingMethods", "Label": "Hearing methods", "FieldType": "Text", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationHearingStage", "Label": "Hearing stage", "FieldType": "FixedList", "FieldTypeParameter": "hearingStageOptions", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationHearingResult", "Label": "Hearing result", "FieldType": "FixedRadioList", "FieldTypeParameter": "hearingResultOptions", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationHearingCancellationReason", "Label": "Hearing cancellation reason", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationHearingPartHeardReason", "Label": "Hearing part heard reason", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationDateOfHearing", "Label": "Hearing date", "FieldType": "DynamicList", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationHearingDayRequired", "Label": "Was this hearing day required?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationStartTime", "Label": "Start time", "FieldType": "Text", "RegularExpression": "^([01]?[0-9]|2[0-3])(:[0-5][0-9])?$", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationFinishTime", "Label": "Finish time", "FieldType": "Text", "RegularExpression": "^([01]?[0-9]|2[0-3])(:[0-5][0-9])?$", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationPausedTimeRequired", "Label": "Do you need paused time?", "FieldType": "YesOrNo", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationPauseStart", "Label": "Start pause", "FieldType": "Text", "RegularExpression": "^([01]?[0-9]|2[0-3])(:[0-5][0-9])?$", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+  {"LiveFrom": "10/02/2022", "CaseTypeID": "Bail", "ID": "attendeesAndDurationPauseEnd", "Label": "End pause", "FieldType": "Text", "RegularExpression": "^([01]?[0-9]|2[0-3])(:[0-5][0-9])?$", "SecurityClassification": "PUBLIC", "Searchable": "N"},
+
   {"LiveFrom": "01/01/2018", "CaseTypeID": "Bail", "ID": "TTL", "Label": " ", "FieldType": "TTL", "SecurityClassification": "PUBLIC", "Searchable": "N"}
 ]
