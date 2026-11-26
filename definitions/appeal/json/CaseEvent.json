@@ -1770,6 +1770,8 @@
     "CaseTypeID": "Asylum",
     "ID": "recordAdjournmentDetails",
     "Name": "Record adjournment details",
+    "Description": "Record adjournment details",
+    "DisplayOrder": 279,
     "PreConditionState(s)": "prepareForHearing;finalBundling;preHearing;decision;respondentReview;awaitingRespondentEvidence;caseBuilding;caseUnderReview;submitHearingRequirements;awaitingReasonsForAppeal;reasonsForAppealSubmitted;clarifyingQuestionsAnswersSubmitted;awaitingClarifyingQuestionsAnswers",
     "PostConditionState": "*",
     "CallBackURLAboutToStartEvent": "${CCD_DEF_IA_URL}/asylum/ccdAboutToStart",
