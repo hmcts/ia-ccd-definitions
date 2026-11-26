@@ -1011,7 +1011,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_paymentPending_remission",
-    "Label": "## Do this next\r\nAn appeal has been submitted with a remission application. You need to review the remission details in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Appeal).\r\n\r\nIf you need more information to make a decision, you can contact the appellant.\r\n\r\nYou then need to [record your remission decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordRemissionDecision).",
+    "Label": "## Do this next\r\nAn appeal has been submitted with a remission application. You need to review the remission details in the [appeal tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Appeal).\r\n\r\nIf you need more information to make a decision, you can contact the appellant.\r\n\r\nYou then need to [record your remission decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordRemissionDecision).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -1029,7 +1029,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_paymentPending_aip_manual",
-    "Label": "## Do this next\r\nAn appeal has been submitted with a remission application. You need to review the remission details in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Appeal).\r\n\r\nIf you need more information to make a decision, you can contact the appellant.\r\n\r\nYou then need to [record your remission decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordRemissionDecision).",
+    "Label": "## Do this next\r\nAn appeal has been submitted with a remission application. You need to review the remission details in the [appeal tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Appeal).\r\n\r\nIf you need more information to make a decision, you can contact the appellant.\r\n\r\nYou then need to [record your remission decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/recordRemissionDecision).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -1344,7 +1344,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_respondentReview_appeal_response",
-    "Label": "## Do this next\r\nThe Home Office is proceeding with the case and you've been directed to review their response in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n If you want to respond to the Home Office, you should contact the Tribunal by the date indicated in the direction or the case will automatically proceed to a hearing.\r\n\r\nIf you want to continue the appeal without responding, you can [proceed to a hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature). If not, you should apply to the Tribunal to withdraw the appeal.",
+    "Label": "## Do this next\r\nThe Home Office is proceeding with the case and you've been directed to review their response in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).\r\n\r\n If you want to respond to the Home Office, you should contact the Tribunal by the date indicated in the direction or the case will automatically proceed to a hearing.\r\n\r\nIf you want to continue the appeal without responding, you can [proceed to a hearing](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature). If not, you should apply to the Tribunal to withdraw the appeal.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -1407,7 +1407,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_ftpa_appellant_in_progress",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal in progress](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaInProgress.png)\r\n\r\n## What happens next\r\nThe First-tier Tribunal will consider the application and make a decision shortly. The application is available to view in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA).<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal in progress](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaInProgress.png)\r\n\r\n## What happens next\r\nThe First-tier Tribunal will consider the application and make a decision shortly. The application is available to view in the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -1841,7 +1841,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_case_allowed_homeOfficeApc_ftpa_appellant_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe appeal has been allowed. The Decision and Reasons document is available in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe appeal has been allowed. The Decision and Reasons document is available in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -1850,7 +1850,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_case_allowed_homeOfficeLart_ftpa_appellant_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe appeal has been allowed. The Decision and Reasons document is available in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe appeal has been allowed. The Decision and Reasons document is available in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -2113,7 +2113,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_case_allowed_homeOfficeApc_ftpa_appellant_not_admitted",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been allowed. The Decision and Reasons document is available in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br></br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been allowed. The Decision and Reasons document is available in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).</br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -2122,7 +2122,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_case_allowed_homeOfficeLart_ftpa_appellant_not_admitted",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been allowed. The Decision and Reasons document is available in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br></br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## What happens next\r\nThe appeal has been allowed. The Decision and Reasons document is available in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).</br></br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -2194,7 +2194,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_ftpa_submitted",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal in progress](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaInProgress.png)\r\n\r\n## Do this next\r\nReview the application for permission to appeal in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA). When you are ready, [record the application decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/decideFtpaApplication).\r\n## If the application should be treated in a different way\r\n You can remove the case from the FTPA process when recording the application decision. A Judge will then update the Tribunal decision.\n## If you are pursuing a rule 35 decision to be set aside\n This can only be done by a Resident Judge. You must send the Notice of Intention to Set Aside to both parties offline and await any objections before recording the application decision. <br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal in progress](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaInProgress.png)\r\n\r\n## Do this next\r\nReview the application for permission to appeal in the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA). When you are ready, [record the application decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/decideFtpaApplication).\r\n## If the application should be treated in a different way\r\n You can remove the case from the FTPA process when recording the application decision. A Judge will then update the Tribunal decision.\n## If you are pursuing a rule 35 decision to be set aside\n This can only be done by a Resident Judge. You must send the Notice of Intention to Set Aside to both parties offline and await any objections before recording the application decision. <br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -2644,7 +2644,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_appellant_reheard_rule_32",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nCheck the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA) and follow any instructions the judge has made to the Tribunal. Once you've done this you should record the length of the hearing.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nCheck the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA) and follow any instructions the judge has made to the Tribunal. Once you've done this you should record the length of the hearing.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -2653,7 +2653,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_appellant_reheard_rule_32_ra",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -2734,7 +2734,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_respondent_reheard_rule_32",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nCheck the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA) and follow any instructions the judge has made to the Tribunal. Once you've done this you should record the length of the hearing.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nCheck the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA) and follow any instructions the judge has made to the Tribunal. Once you've done this you should record the length of the hearing.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -2743,7 +2743,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_respondent_reheard_rule_32_ra",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -2824,7 +2824,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_appellant_reheard_rule_35",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nCheck the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA) and follow any instructions the judge has made to the Tribunal. Once you've done this you should record the length of the hearing.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nCheck the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA) and follow any instructions the judge has made to the Tribunal. Once you've done this you should record the length of the hearing.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -2833,7 +2833,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_appellant_reheard_rule_35_ra",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -2914,7 +2914,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_respondent_reheard_rule_35",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nCheck the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA) and follow any instructions the judge has made to the Tribunal. Once you've done this you should record the length of the hearing.<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nCheck the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA) and follow any instructions the judge has made to the Tribunal. Once you've done this you should record the length of the hearing.<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -2923,7 +2923,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_rj_ftpa_respondent_reheard_rule_35_ra",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3282,7 +3282,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_final_decision_reheard_rule_32_ra",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -3291,7 +3291,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_final_decision_reheard_rule_35_ra",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: The decision has been set aside and this appeal will be reheard](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_reheard.png)\r\n\r\n## Do this next\r\nThe appeal is being reheard. First check the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA) and follow any instructions the Judge has made to the Tribunal.\r\n\r\nYou should then direct the appellant to [submit any new requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestNewHearingRequirements).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4020,7 +4020,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeApc_awaitingRespondentEvidence",
-    "Label": "## Do this next\r\nAn appeal against the Home Office decision in this case has been submitted. You can view the appeal form in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nIf you accept that there is a right of appeal you should [upload the Home Office bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadHomeOfficeBundle).\r\n\r\nIf you consider the appeal is not valid, you should contact the Tribunal and the appellant with your reasons.<br><br><br>",
+    "Label": "## Do this next\r\nAn appeal against the Home Office decision in this case has been submitted. You can view the appeal form in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).\r\n\r\nIf you accept that there is a right of appeal you should [upload the Home Office bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadHomeOfficeBundle).\r\n\r\nIf you consider the appeal is not valid, you should contact the Tribunal and the appellant with your reasons.<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4029,7 +4029,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeLart_awaitingRespondentEvidence",
-    "Label": "## Do this next\r\nAn appeal against the Home Office decision in this case has been submitted. You can view the appeal form in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).<br><br><br>",
+    "Label": "## Do this next\r\nAn appeal against the Home Office decision in this case has been submitted. You can view the appeal form in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4038,7 +4038,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficePou_awaitingRespondentEvidence",
-    "Label": "## Do this next\r\nAn appeal against the Home Office decision in this case has been submitted. You can view the appeal form in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).<br><br><br>",
+    "Label": "## Do this next\r\nAn appeal against the Home Office decision in this case has been submitted. You can view the appeal form in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4047,7 +4047,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeGeneric_awaitingRespondentEvidence",
-    "Label": "## Do this next\r\nAn appeal against the Home Office decision in this case has been submitted. You can view the appeal form in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nIf you accept that there is a right of appeal you should [upload the Home Office bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadHomeOfficeBundle).\r\n\r\nIf you consider the appeal is not valid, you should contact the Tribunal and the appellant with your reasons.<br><br><br>",
+    "Label": "## Do this next\r\nAn appeal against the Home Office decision in this case has been submitted. You can view the appeal form in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).\r\n\r\nIf you accept that there is a right of appeal you should [upload the Home Office bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadHomeOfficeBundle).\r\n\r\nIf you consider the appeal is not valid, you should contact the Tribunal and the appellant with your reasons.<br><br><br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"},
@@ -4333,7 +4333,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_aip_caseUnderReview",
-    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\n If you believe the case is ready to proceed you should [direct the respondent to review it](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview).\r\n\r\n If you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\n You can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
+    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\n If you believe the case is ready to proceed you should [direct the respondent to review it](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview).\r\n\r\n If you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\n You can do this from the [directions tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#directions).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4342,7 +4342,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_aip_caseUnderReview_hearing_stf24w",
-    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request hearing requirements.\r\n\r\n[Request hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
+    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request hearing requirements.\r\n\r\n[Request hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#directions).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4351,7 +4351,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_admin_caseUnderReview_hearing_stf24w",
-    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request hearing requirements.\r\n\r\n[Request hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
+    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request hearing requirements.\r\n\r\n[Request hearing requirements](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestHearingRequirementsFeature)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#directions).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4360,7 +4360,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_aip_caseUnderReview_no_hearing_stf24w",
-    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request respondent review.\r\n\r\n[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
+    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request respondent review.\r\n\r\n[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#directions).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4369,7 +4369,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_admin_caseUnderReview_no_hearing_stf24w",
-    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/case/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request respondent review.\r\n\r\n[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).",
+    "Label": "## Do this next\r\n\r\nReview the appellant's case in the [appeal tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#documents).\r\n\r\nIf you believe the case is ready to proceed you should send it to the Appellant/Legal Rep to request respondent review.\r\n\r\n[Request respondent review](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/requestRespondentReview)\r\n\r\nIf you don't think it is ready, you should direct the appellant to answer clarifying questions or attend a case management appointment.\r\n\r\nYou can do this from the [directions tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#directions).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4612,7 +4612,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeLart_respondentReview",
-    "Label": "## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nReview the documents and [add the Home Office's response](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadHomeOfficeAppealResponse), or [make an application to withdraw](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/makeAnApplication/makeAnApplicationmakeAnApplicationTypes).",
+    "Label": "## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).\r\n\r\nReview the documents and [add the Home Office's response](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadHomeOfficeAppealResponse), or [make an application to withdraw](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/makeAnApplication/makeAnApplicationmakeAnApplicationTypes).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4621,7 +4621,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeGeneric_respondentReview",
-    "Label": "## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nReview the documents and [add the Home Office's response](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadHomeOfficeAppealResponse), or [make an application to withdraw](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/makeAnApplication/makeAnApplicationmakeAnApplicationTypes).",
+    "Label": "## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).\r\n\r\nReview the documents and [add the Home Office's response](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/uploadHomeOfficeAppealResponse), or [make an application to withdraw](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/makeAnApplication/makeAnApplicationmakeAnApplicationTypes).",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4630,7 +4630,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeApc_respondentReview",
-    "Label": "## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br>",
+    "Label": "## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).</br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4639,7 +4639,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficePou_respondentReview",
-    "Label": "## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br>",
+    "Label": "## Do this next\r\nThe Appeal Skeleton Argument is ready to view in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).</br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4828,7 +4828,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_preHearing",
-    "Label": "## Do this next\r\nThe hearing bundle is ready to view in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br></br>",
+    "Label": "## Do this next\r\nThe hearing bundle is ready to view in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4864,7 +4864,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeApc_decided_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe appeal has been dismissed. The Decision and Reasons document is available in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe appeal has been dismissed. The Decision and Reasons document is available in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4873,7 +4873,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeApc_decided_allowed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe appeal has been allowed. The Decision and Reasons document is available in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe appeal has been allowed. The Decision and Reasons document is available in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4882,7 +4882,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeLart_decided_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe appeal has been dismissed. The Decision and Reasons document is available in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe appeal has been dismissed. The Decision and Reasons document is available in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4891,7 +4891,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeLart_decided_allowed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe appeal has been allowed. The Decision and Reasons document is available in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe appeal has been allowed. The Decision and Reasons document is available in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4972,7 +4972,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeAll_ftpa_respondent_in_progress",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal in progress](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaInProgress.png)\r\n\r\n## What happens next\r\nThe First-tier Tribunal will consider the application and make a decision shortly.\r\nThe application is available to view in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA).<br/><br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: First-tier permission to appeal in progress](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaInProgress.png)\r\n\r\n## What happens next\r\nThe First-tier Tribunal will consider the application and make a decision shortly.\r\nThe application is available to view in the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4981,7 +4981,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeLart_ftpa_appellant_submitted_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe appeal has been decided. The Decision and Reasons document is available in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe appeal has been decided. The Decision and Reasons document is available in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4990,7 +4990,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeLart_ftpa_appellant_submitted_allowed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe appeal has been decided. The Decision and Reasons document is available in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe appeal has been decided. The Decision and Reasons document is available in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -4999,7 +4999,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeApc_ftpa_appellant_submitted_dismissed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe appeal has been decided. The Decision and Reasons document is available in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been dismissed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_dismissed.png)\r\n\r\n## Do this next\r\nThe appeal has been decided. The Decision and Reasons document is available in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5008,7 +5008,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_homeOfficeApc_ftpa_appellant_submitted_allowed",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe appeal has been decided. The Decision and Reasons document is available in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been allowed](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/appeal_allowed.png)\r\n\r\n## Do this next\r\nThe appeal has been decided. The Decision and Reasons document is available in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).</br></br>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5341,7 +5341,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_finalBundling",
-    "Label": "## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing. You should first review the documents in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n If you happy with the documents, [generate the hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle).\r\n\n\nIf you want to add or remove any documents, you can [customise hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/customiseHearingBundle)",
+    "Label": "## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing. You should first review the documents in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).\r\n\r\n If you happy with the documents, [generate the hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle).\r\n\n\nIf you want to add or remove any documents, you can [customise hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/customiseHearingBundle)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5350,7 +5350,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_reheard_finalBundling",
-    "Label": "## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing. You should first review the documents in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n If you happy with the documents, [generate the hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle).\r\n\n\nIf you want to add or remove any documents, you can [customise hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/customiseHearingBundle)",
+    "Label": "## Do this next\r\nYou must create a hearing bundle for all parties to use in the hearing. You should first review the documents in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).\r\n\r\n If you happy with the documents, [generate the hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/generateHearingBundle).\r\n\n\nIf you want to add or remove any documents, you can [customise hearing bundle](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/customiseHearingBundle)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5431,7 +5431,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_post_doc_gen_decision",
-    "Label": "## Do this next\r\nGo to the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents) to download and complete the Decision and Reasons document.\r\n\r\n You should then [upload and send](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/sendDecisionAndReasons) the completed document.\r\n\r\n",
+    "Label": "## Do this next\r\nGo to the [Documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents) to download and complete the Decision and Reasons document.\r\n\r\n You should then [upload and send](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/sendDecisionAndReasons) the completed document.\r\n\r\n",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5557,7 +5557,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_adminOfficer_listing_feature_ra",
-    "Label": "## Do this next\r\nThe appeal is being reheard. Review any Tribunal notes in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#FTPA) and check the [hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment) for the agreed hearing requirements. When the case has been listed in Aria, you should [list the case here](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/listCase).\r\n\r\n",
+    "Label": "## Do this next\r\nThe appeal is being reheard. Review any Tribunal notes in the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA) and check the [hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment) for the agreed hearing requirements. When the case has been listed in Aria, you should [list the case here](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/listCase).\r\n\r\n",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5755,7 +5755,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_aip_cmaRequirementsSubmitted",
-    "Label": "## Do this next\r\n You can view the case management appointment requirements and any requests for additional adjustments in the [hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).\r\n\r\n If you need more information, direct the appellant to answer clarifying questions. You can do this from the [directions tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#directions).\r\n\r\nIf you do not need more information, you should [review and record](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewCmaRequirements) the appointment requirements and any additional requests.",
+    "Label": "## Do this next\r\n You can view the case management appointment requirements and any requests for additional adjustments in the [hearing and appointment tab](/case/IA/Asylum/${[CASE_REFERENCE]}#Hearing%20and%20appointment).\r\n\r\n If you need more information, direct the appellant to answer clarifying questions. You can do this from the [directions tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#directions).\r\n\r\nIf you do not need more information, you should [review and record](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/reviewCmaRequirements) the appointment requirements and any additional requests.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5800,7 +5800,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_rj_ftpa_appellant_remade_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5836,7 +5836,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_rj_ftpa_appellant_remade_rule_31",
-    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
+    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5845,7 +5845,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_rj_ftpa_respondent_remade_rule_31",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5881,7 +5881,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_rj_ftpa_respondent_remade_rule_31",
-    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
+    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5890,7 +5890,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_rj_ftpa_appellant_remade_rule_32_dlrm",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5926,7 +5926,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_rj_ftpa_appellant_remade_rule_32_dlrm",
-    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
+    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5935,7 +5935,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_judge_rj_ftpa_respondent_remade_rule_32_dlrm",
-    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
+    "Label": "## Current progress of the case\r\n\r\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\r\n\r\n## Do this next\r\nThe appeal was removed from the FTPA process. See the  details in the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA).\r\n\r\nWhen you are ready, [update the appeal decision](/case/IA/Asylum/${[CASE_REFERENCE]}/trigger/updateTribunalDecision).<br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -5971,7 +5971,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_rj_ftpa_respondent_remade_rule_32_dlrm",
-    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/case/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
+    "Label": "## Current progress of the case\n\n![Removed from FTPA process](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/ftpaRule31Rule32.svg)\n\n## What happens next\nAn application for permission to appeal to the Upper Tribunal was removed from the FTPA process\n\nand will be decided separately. See the  reasons for this decision in the [FTPA tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#FTPA).<br/><br/>The Tribunal will contact you when the application has been decided. <br/><br/>",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -6293,7 +6293,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_preHearing",
-    "Label": "## Do this next\r\nYou can now view the hearing bundle in the documents tab.\r\n\r\n[Go to the documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents)",
+    "Label": "## Do this next\r\nYou can now view the hearing bundle in the documents tab.\r\n\r\n[Go to the documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -6302,7 +6302,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_finalBundling",
-    "Label": "## Do this next\r\nThe case has now been listed. Go to the documents tab to see the Hearing notice, which includes the hearing details.\r\n\r\n[Go to the documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents)",
+    "Label": "## Do this next\r\nThe case has now been listed. Go to the documents tab to see the Hearing notice, which includes the hearing details.\r\n\r\n[Go to the documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents)",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -8963,7 +8963,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_legalRepresentative_respondentReview_ada_suitability_pending",
-    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_appealResponseUploaded${adaSuffix}.svg)\r\n\r\n## Do this next\r\nThe Home Office has reviewed its decision, You can access the Home Office review in the [documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\n A judge will now review the case and determine if it is suitable to continue as an accelerated detained appeal. You will be notified when a decision has been made.",
+    "Label": "# Overview\r\n\r\n## Current progress of the case\r\n\r\n![Progress map showing that the appeal is now at stage 6 of 9 stages - the ADA suitability review stage](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/homeOffice_appealResponseUploaded${adaSuffix}.svg)\r\n\r\n## Do this next\r\nThe Home Office has reviewed its decision, You can access the Home Office review in the [documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).\r\n\r\n A judge will now review the case and determine if it is suitable to continue as an accelerated detained appeal. You will be notified when a decision has been made.",
     "FieldType": "Label",
     "SecurityClassification":"PUBLIC",
     "Searchable": "N"
@@ -9356,7 +9356,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_updatedBundle_in_progress_preHearing",
-    "Label": "## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
+    "Label": "## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC",
     "Searchable": "N"
@@ -9365,7 +9365,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_updatedBundle_in_progress_decision",
-    "Label": "## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
+    "Label": "## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC",
     "Searchable": "N"
@@ -9374,7 +9374,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_updatedBundle_in_progress_adjourned",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: The hearing has been adjourned](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_hearing_adjourned.png)\r\n\r\n## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: The hearing has been adjourned](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_hearing_adjourned.png)\r\n\r\n## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC",
     "Searchable": "N"
@@ -9383,7 +9383,7 @@
     "LiveFrom": "01/01/2018",
     "CaseTypeID": "Asylum",
     "ID": "progress_caseOfficer_updatedBundle_in_progress_appealTakenOffline",
-    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been removed from the online service](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealRemoved.png)\r\n\r\n## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/case/IA/Asylum/${[CASE_REFERENCE]}/#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
+    "Label": "## Current progress of the case\r\n\r\n![Attention: This appeal has been removed from the online service](https://raw.githubusercontent.com/hmcts/ia-appeal-frontend/master/app/assets/images/caseOfficer_appealRemoved.png)\r\n\r\n## What happens next\r\nThe updated hearing bundle is being generated. You will soon be able to view and download it in the [Documents tab](/cases/case-details/IA/Asylum/${[CASE_REFERENCE]}#Documents).\r\n\r\nWe will send you a notification if the updated bundle fails to generate.</br></br>",
     "FieldType": "Label",
     "SecurityClassification": "PUBLIC",
     "Searchable": "N"
